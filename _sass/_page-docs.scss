@@ -1,0 +1,213 @@
+.docs {
+    margin: 1.5rem 0 0;
+    padding: 0 0 3rem;
+    @include clearfix;
+    @include underlined;
+}
+
+.docs-toc-toggle {
+    display: block;
+    padding: 0.75rem;
+    margin: 0 0 0.75rem;
+    border-radius: 0.25rem;
+    background: $color-green-500;
+    color: $color-white;
+    font-weight: 700;
+    text-align: center;
+    @media (min-width: 720px) {
+        display: none;
+    }
+}
+
+.docs-sidebar {
+    display: none;
+    float: left;
+    width: 100%;
+    margin: 1.5rem 0;
+    padding: 0;
+    @media (min-width: 720px) {
+        display: block;
+        width: 21rem;
+        margin: 0;
+        padding: 0 1.5rem 0 0;
+    }
+}
+
+.docs-sidebar__heading {
+    display: block;
+    padding: 1.5rem 0 0;
+}
+
+.docs-sidebar__list {
+    margin: -0.75rem 0 0 0;
+    padding: 0;
+    list-style: none;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    li {
+        display: block;
+        font-weight: 700;
+    }
+    a {
+        display: block;
+        padding: 1.5rem 0 0;
+        background-image: none;
+        color: $color-green-600;
+        &:hover, &:focus {
+            color: $color-green-500;
+        }
+    }
+    li li {
+        padding: 0 0 0 0.75rem;
+        font-weight: 400;
+        a {
+            padding: 0 0 0 0.375rem;
+        }
+    }
+}
+
+.docs-content {
+    float: left;
+    width: 100%;
+    blockquote {
+        box-sizing: border-box;
+        padding-left: 1.5rem;
+        border-left: 0.75rem solid $color-blue-grey-100;
+        max-width: 100%;
+    }
+    h1 {
+        padding: 0 0 1.5rem;
+        @include underlined;
+    }
+    h2 {
+        margin-top: 3rem;
+        font-size: 1.5rem;
+        font-weight: $font-heading-weight;
+        line-height: 3rem;
+    }
+    h3 {
+        margin-top: 3rem;
+        font-size: 1.25rem;
+        font-weight: $font-heading-weight;
+        line-height: 1.5rem;
+    }
+    h1, h2, h3 {
+        width: 100%;
+        max-width: 100%;
+    }
+    p, ul, ol {
+        max-width: 100%;
+        margin: 1.5rem 0;
+    }
+    li {
+        ul, ol {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    img {
+        width: auto;
+        margin: 1.5rem auto;
+        max-width: 100%;
+    }
+    table {
+        box-sizing: border-box;
+        margin: 0;
+        display: block;
+        overflow-x: auto;
+    }
+    @media (min-width: 720px) {
+        width: calc(100% - 21rem);
+    }
+}
+
+.docs-lead {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100% !important;
+    padding: 1.5rem;
+    background: $color-blue-grey-800;
+    border-radius: 0.25rem;
+    color: $color-white;
+    @media (min-width: 1000px) {
+        padding: 3rem 9rem 3rem 3rem;
+        background-image: url('https://geteventstore.com/images/ouro.svg');
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        font-size: 1.25rem;
+    }
+    a {
+        background-image: linear-gradient(0deg, $color-green-500 0%, $color-green-500 50%, transparent 50%, transparent 100%);
+    }
+}
+
+.docs-lead--bottom {
+    @extend .docs-lead;
+    background-color: $color-grey-200;
+    color: $color-blue-grey-800;
+}
+
+.docs-sidebar__heading, .docs-sidebar__version {
+    display: block;
+    position: relative;
+}
+
+.collapsed {
+    cursor: pointer;
+    & + ul {
+        display: none;
+    }
+}
+
+.expanded {
+    cursor: pointer;
+    & + ul {
+        display: block;
+    }
+}
+
+.docs-sidebar__heading.collapsed, .docs-sidebar__version.collapsed {
+    &:before {
+        @media (min-width: 720px) {
+            content: " ";
+            height: 1rem;
+            width: 1rem;
+            position: absolute;
+            top: 1.625rem;
+            left: -1.25rem;
+            background-image: url('../images/carrot-right.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+}
+
+.docs-sidebar__heading.expanded, .docs-sidebar__version.expanded {
+    &:before {
+        @media (min-width: 720px) {
+            content: " ";
+            height: 1rem;
+            width: 1rem;
+            position: absolute;
+            top: 1.625rem;
+            left: -1.25rem;
+            background-image: url('../images/carrot-down.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+}
+
+.docs-sidebar__version.expanded, .docs-sidebar__version.collapsed {
+    &:before {
+        @media (min-width: 720px) {
+            top: 0.125rem !important;
+        }
+    }
+}

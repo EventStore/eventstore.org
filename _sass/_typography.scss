@@ -1,0 +1,45 @@
+.lead {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+
+.call-to-action {
+	margin: 3rem auto;
+	text-align: center;
+}
+
+.btn {
+	display: inline-block;
+	height: 3rem;
+	padding: 0.75rem 1.5rem;
+	border: 1px solid $color-green-600;
+	border-radius: 0.25rem;
+	font-weight: $font-heading-weight;
+}
+
+.btn--primary {
+	background: $color-green-600;
+	color: $color-white;
+	&:focus, &:hover {
+		background: $color-green-500;
+		color: $color-white;
+		border-color: $color-green-500;
+	}
+}
+
+.btn--secondary {
+	background: transparent;
+	color: $color-green-600;
+	&:focus, &:hover {
+		color: $color-green-500;
+		border-color: $color-green-500;
+	}
+}
+
+.download-buttons {
+    a {
+        display: block;
+        text-align: center;
+        margin: 0.75rem 0;
+    }
+}

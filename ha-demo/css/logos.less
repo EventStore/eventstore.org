@@ -1,0 +1,36 @@
+img.preview {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0 0 1em;
+	padding: 1em;
+	&.full {
+		padding: 0em;
+	}
+}
+
+.plaindark {
+	background: #222;
+}
+
+.plainlight {
+	background: #f3f3f3;
+}
+
+.download-logos-button {
+	display: inline-block;
+	margin: 1.5em 0 0;
+	padding: 0.5em 1em;
+	background: @green;
+	color: @white;
+	border-radius: 0.25em;
+	text-align: center;
+	&:hover, &:focus {
+		background: @dark-green;
+		color: @white;
+	}
+}
+
+.actual-bullets {
+	list-style: disc;
+	margin: 1em 0 0 2em;
+}

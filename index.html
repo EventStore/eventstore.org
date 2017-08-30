@@ -1,0 +1,55 @@
+---
+title: "Homepage"
+---
+
+{% include header.html %}
+	<div class="page-header page-header--homepage">
+        <div class="inner-container">
+			<h1>The open-source, functional database with Complex Event Processing in JavaScript.</h1>
+            <span class="c2a">
+                <a href="http://docs.geteventstore.com/introduction/latest" class="btn btn--primary">Get started with Event Store</a>
+                <a href="/support/" class="btn btn--secondary">Get Commercial Support</a>
+            </span>
+		</div>
+    </div>
+    <div class="feature-section">
+        <div class="inner-container">
+            <ul class="feature-list">
+                <li class="feature-list__item">
+                    <h2><img src="/images/eventstore.svg" alt="Event sourcing icon"> Event Sourcing</h2>
+                    <p>Event Store stores your data as a series of immutable events over time, making it easy to build event-sourced applications. <a href="http://docs.geteventstore.com/introduction">Learn more about event sourcing in our documentation.</a></p>
+                </li>
+                <li class="feature-list__item">
+                    <h2><img src="/images/opensource.svg" alt="Open source icon"> Open Source</h2>
+                    <p>Event Store is licensed under a 3-clause BSD license, whether it runs on a single node or as a high availability cluster. Commercial support services are available.</p>
+                </li>
+                <li class="feature-list__item">
+                    <h2><img src="/images/ha.svg" alt="High availability icon"> High Availability</h2>
+                    <p>Event Store can run as a cluster of nodes containing the same data, which remains available for writes provided at least half the nodes are alive and connected.<!--  See HA in action at <a href="http://ha.geteventstore.com/showcase">ha.geteventstore.com</a>. --></p>
+                </li>
+            </ul>
+            <ul class="feature-list">
+                <li class="feature-list__item">
+                    <h2><img src="/images/clients.svg" alt="Client interfaces icon"> Client Interfaces</h2>
+                    <p>Event Store has a native HTTP interface based on the AtomPub protocol which is plenty fast enough for the majority of use cases. For high-performance use, there are native drivers for .NET, Akka and Erlang.</p>
+                </li>
+                <li class="feature-list__item">
+                    <h2><img src="/images/projections.svg" alt="Projections icon"> Projections</h2>
+                    <p>Projections allow you to react to events as they are written, and to create new events when interesting combinations occur. You can use the same model for writing temporal correlation queries that run over historical data and on into the future.</p>
+                </li>
+                <li class="feature-list__item">
+                    <h2><img src="/images/performance.svg" alt="Performance icon"> Great Performance</h2>
+                    <p>Whilst performance depends on configuration and use patterns, we’ve benchmarked Event Store at around 15,000 writes per second and 50,000 reads per second!</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="users-section">
+        <div class="inner-container">
+            <div class="users">
+                <p>Event Store is used in production around the world.</p>
+                <img src="/images/users.svg" alt="Logos for CERN, JustGiving, Bath ASU, OBB, Jet, Xero and The World Bank">
+            </div>
+        </div>
+    </div>
+{% include footer.html %}

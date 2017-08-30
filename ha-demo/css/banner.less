@@ -1,0 +1,64 @@
+.banner {
+	background: @black;
+	color: @off-white;
+	-webkit-font-smoothing: antialiased;
+	h1 {
+		font-weight: 700;
+	}
+	&.homepage {
+		background-image: url('../img/ouro-banner.svg');
+		background-position: bottom center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		text-align: center;
+		h1 {
+			margin: 1.5em 0 1em;
+		}
+	}
+}
+
+.homepage-button-group {
+	display: inline-block;
+	padding-bottom: 4.5em;
+	li {
+		display: inline-block;
+		padding: 1em 0.5em;
+		color: @grey;
+		a {
+			display: inline-block;
+			color: @off-white;
+			font-weight: 400;
+			&:hover, &:focus {
+				color: @white;
+			}
+		}
+	}
+}
+
+.download-button {
+	width: 100%;
+	padding: 0 !important;
+	a {
+		display: inline-block;
+		padding: 1em !important;
+		background: @green !important;
+		color: @white !important;
+		font-size: 20pt;
+		line-height: 1.2;
+		font-weight: 700 !important;
+		border-radius: 5px;
+	}
+	span.icon-download {
+		display: inline-block;
+		margin-right: 0.5em;
+	}
+}
+
+@media screen and (max-width: 1200px), screen and (max-device-width: 1200px) {
+	.banner {
+		background-image: none !important;
+		.column, .columns {
+			width: 100% !important;
+		}
+	}
+}

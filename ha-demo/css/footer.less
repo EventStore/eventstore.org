@@ -1,0 +1,30 @@
+.footer {
+	padding: 3em 0 3em;
+	background: @white;
+	border-top: 1px solid darken(@off-white,5%);
+	color: @grey;
+	font-size: 10pt;
+}
+
+.footer-menu {
+	text-align: right;
+	li {
+		display: inline-block;
+		margin: 0 0 0 0.5em;
+	}
+}
+
+@media screen and (max-width: 720px), screen and (max-device-width: 720px) and (orientation: portrait) {
+	.footer {
+		.column, .columns {
+			width: 100%;
+			text-align: center;
+		}
+	}
+	.footer-menu {
+		text-align: center;
+		li {
+			margin: 0 0.25em;
+		}
+	}
+}

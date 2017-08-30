@@ -1,0 +1,47 @@
+@mixin shadowbox($bg: $color-green-500, $fg: $color-white) {
+	background: $bg;
+	@if $bg != $color-white {
+		border-radius: 0.25rem;
+	}
+	color: $fg;
+	@if $bg == $color-white {
+		border-radius: 0.25rem;
+        border: 1px solid $color-grey-200;
+	}
+}
+
+@mixin clearfix {
+	&:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin underlined {
+    background-image: linear-gradient(0deg, $color-grey-200 0%, $color-grey-200 50%, transparent 50%, transparent 100%);
+    background-position: bottom left;
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-size: 1px 1px;
+    }
+}
+
+%clearfix {
+    &:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+}
+
+.inner-container {
+    box-sizing: border-box;
+    max-width: 74rem;
+    margin: 0 auto;
+    padding: 0 0.75rem;
+    @media (min-width: 720px) {
+        padding: 0 1.5rem;
+    }
+}

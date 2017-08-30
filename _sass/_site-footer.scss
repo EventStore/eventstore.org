@@ -1,0 +1,50 @@
+.site-footer {
+    margin: 1.5rem 0 0;
+    padding: 0 0 1.5rem;
+    color: $color-blue-grey-700;
+    text-align: center;
+    @include clearfix;
+    a {
+        color: $color-blue-grey-700;
+        &:focus, &:hover {
+            color: $color-blue-grey-800;
+        }
+    }
+}
+
+.footer__copyright {
+	float: left;
+	display: inline-block;
+	margin: 0;
+}
+
+.footer__menu {
+	float: right;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	@include clearfix;
+}
+
+.footer__menu__item {
+	float: left;
+	display: inline-block;
+	margin: 0 0 0 0.75rem;
+	@include clearfix;
+}
+
+@media (max-width: 800px), (max-device-width: 800px) {
+    .footer__copyright, .footer__menu {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .footer__menu {
+        margin: 0 0.75rem 0 0;
+    }
+    .footer__menu__item {
+        float: none;
+    }
+}

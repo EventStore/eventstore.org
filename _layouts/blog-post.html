@@ -1,0 +1,28 @@
+{% include header.html %}
+    <div class="page-title">
+        <div class="inner-container">
+            <h1>Developer Blog</h1>
+        </div>
+    </div>
+    <div class="page-section page-section--post-list">
+        <div class="inner-container">
+            <article class="blog-post">
+                <header>
+                    <h1>{{ page.title }}</h1>
+                    <time datetime="{{ page.date | date_to_xml_schema }}">{{ page.date | date_to_long_string }}</time>
+                </header>
+                {{ content }}
+            </article>
+            <ul class="post-list">
+            {% for post in site.posts %}
+                <li class="post-list__item">
+                    <a href="{{ post.url }}">
+                        <h2>{{ post.title }}</h2>
+                        <time datetime="{{ post.date | date_to_xml_schema }}">{{ post.date | date_to_long_string }}</time>
+                    </a>
+                </li>
+            {% endfor %}
+            </ul>
+		</div>
+	</div>
+{% include footer.html %}

@@ -1,0 +1,36 @@
+.media {
+	width: 35rem;
+	margin: 3rem auto;
+	@include clearfix;
+	img {
+		width: 7.5rem;
+		height: 7.5rem;
+	}
+	p, h2 {
+		width: 26rem;
+		margin: 0;
+	}
+	p {
+		margin: 1.5rem 0 0;
+	}
+}
+
+.media--left {
+	@extend .media;
+	img {
+		float: left;
+	}
+	p, h2 {
+		float: right;
+	}
+}
+
+.media--right {
+	@extend .media;
+	img {
+		float: right;
+	}
+	p, h2 {
+		float: left;
+	}	
+}

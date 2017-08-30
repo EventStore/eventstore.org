@@ -1,0 +1,96 @@
+.site-banner {
+    margin: 0 0 1.5rem;
+    font-family: Roboto;
+    line-height: 1.5rem;
+    -webkit-font-variant-ligatures: common-ligatures;
+            font-variant-ligatures: common-ligatures;
+    background: $color-green-500;
+    .inner-container {
+        @media (min-width: 720px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+.site-logo {
+    margin: 0;
+    font-size: inherit;
+    line-height: 1rem;
+    a {
+        display: inline-block;
+        padding: 0.75rem 0;
+        @media (min-width: 720px) {
+            padding: 1.5rem 0;
+        }
+    }
+    img {
+        height: 2rem;
+    }
+}
+
+.site-navigation-toggle {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem 1.5rem;
+    color: $color-white;
+    &:focus, &:hover {
+        color: $color-green-600;
+    }
+    @media (min-width: 720px) {
+        display: none;
+    }
+}
+
+.site-navigation {
+    display: none;
+    margin: 0;
+    padding: 0;
+    background: $color-green-500;
+    @media (min-width: 720px) {
+        display: block;
+    }
+    @media (min-width: 720px) {
+        background: none;
+        list-style: none;
+        overflow-x: auto;
+    }
+}
+
+.site-navigation__item {
+    display: block;
+    padding: 0;
+    background-image: linear-gradient(0deg, transparent 0%, transparent 50%, $color-green-600 50%, $color-green-600 100%);
+    background-repeat: repeat-x;
+    background-position: top;
+    background-size: 2px 2px;
+    &:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-size: 1px 1px;
+    }
+    a {
+        display: block;
+        padding: 0.75rem;
+        color: $color-white;
+        &:focus, &:hover {
+            color: $color-grey-200;
+        }
+    }
+    @media (min-width: 720px) {
+        float: left;
+        display: inline-block;
+        background-image: none;
+        margin: 0 0 0 0.75rem;
+        a {
+            padding: 1.5rem 0;
+        }
+    }
+}

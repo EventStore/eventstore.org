@@ -1,0 +1,36 @@
+.contribution-stats {
+    @include clearfix;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contribution-stats__stat {
+    display: inline-block;
+    float: left;
+    width: 50%;
+    min-width: 10rem;
+    margin: 0;
+    text-align: center;
+    @media (min-width: 400px) {
+        width: 50%;
+    }
+    @media (min-width: 500px) {
+        width: 33.333%;
+    }
+    @media (min-width: 1000px) {
+        width: 16.666%;
+    }
+    .value {
+        display: block;
+        color: $color-grey-200;
+        font-size: 2.25rem;
+        font-weight: $font-heading-weight;
+        line-height: 3rem;
+    }
+    .label {
+        display: block;
+        font-size: 0.75rem;
+        line-height: 1.5rem;
+    }
+}

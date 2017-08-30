@@ -1,0 +1,119 @@
+---
+title: "Community"
+description: "A hub for Event Store’s amazing developer community."
+---
+
+{% include header.html %}
+    <div class="page-title">
+		<div class="inner-container">
+				<h1>{{ page.title }}</h1>
+		</div>
+    </div>
+    <div class="page-section--banner">
+        <div class="inner-container">
+            <div class="page-section__half">
+                <p class="lead">Our <strong>developer community</strong> is important to us. It gives us a place to grow and provides <strong>vital feedback</strong> and input to help us make Event Store a <strong>great product</strong>.</p>
+            </div>
+            <div class="page-section__half">
+                <span class="community-intro-placeholder">&nbsp;</span>
+            </div>
+        </div>
+    </div>
+    <div class="inner-container">
+        <div class="page-section">
+            <div class="page-section__major">
+                <ul class="discussion-icons">
+                    <li class="discussion-icons__item--google-group"><a href="https://groups.google.com/forum/#!forum/event-store">Google Group</a></li>
+                    <li class="discussion-icons__item--github"><a href="https://github.com/eventstore/eventstore/issues">GitHub Issues</a></li>
+                    <li class="discussion-icons__item--twitter"><a href="https://twitter.com/geteventstore">Twitter</a></li>
+                </ul>
+            </div>
+            <div class="page-section__minor">
+                <h2>Join the Discussion</h2>
+                <p>Event Store has an active <a href="https://groups.google.com/forum/#!forum/event-store">Google Group</a> with <strong>new posts every day</strong>. This is the best place to share your questions and answers with the community.</p>
+            </div>
+        </div>
+    </div>
+    <div class="inner-container">
+        <div class="page-section">
+            <ul class="contribution-stats">
+                {% for stat in site.data.stats.stats %}
+                <li class="contribution-stats__stat">
+                    <span class="value">{{ stat.value }}</span>
+                    <span class="label">{{ stat.key }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="inner-container">
+        <div class="page-section">
+            <div class="page-section__minor">
+                <h2>Attend an Event</h2>
+                <p><strong>We attend events all over the world. Come say hi!</strong> If there’s an event you think would be interesting to Event Store users that isn’t listed here, please let us know.</p>
+                <p>We have stickers and other goodies ready to send out to anyone who is planning to talk about Event Store at an event.</p>
+                <p><a href="https://twitter.com/geteventstore" class="btn btn--primary">Send us a Tweet</a></p>
+            </div>
+            <div class="page-section__major">
+                <ul class="events">
+                    {% for event in site.data.events.events %}
+                    <li class="events__item">
+                        <h3 class="event-title"><a href="{{ event.url }}"><span class="flag-icon flag-icon-{{ event.countrycode }} flag-icon-squared"></span> {{ event.name }}</a></h3>
+                        <p class="event-info">{{ event.info }}</p>
+                    </li>
+                    {% endfor %}
+                    <li class="events__item--showpast">
+                        {% assign count = '0' %}
+                        {% for event in site.data.events.pastevents %}
+                            {% capture count %}{{ count | plus: '1' }}{% endcapture %}
+                        {% endfor %}
+                        <a href="javascript:void(0)" class="pastevents-toggle"><span class="pastevents-toggle__label">Show</span> {{count}} Past Events</a>
+                    </li>
+                    {% for event in site.data.events.pastevents %}
+                    <li class="events__item--past">
+                        <h3 class="event-title"><a href="{{ event.url }}"><span class="flag-icon flag-icon-{{ event.countrycode }} flag-icon-squared"></span> {{ event.name }}</a></h3>
+                        <p class="event-info">{{ event.info }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="inner-container">
+        <div class="page-section">
+            <h2>Resources</h2>
+            <section class="resource-section">
+                <h3 class="resource-section__title">Blogs</h3>
+                <ul class="resource-list">
+                    {% for resource in site.data.resources.blogs %}
+                    <li class="resource-list__item"><a href="{{ resource.url }}">{{ resource.name }}{% if resource.flag == "new" %} <span class="new-label">New!</span>{% endif %}</a></li>
+                    {% endfor %}
+                </ul>
+            </section>
+            <section class="resource-section">
+                <h3 class="resource-section__title">Videos</h3>
+                <ul class="resource-list">
+                    {% for resource in site.data.resources.videos %}
+                    <li class="resource-list__item"><a href="{{ resource.url }}">{{ resource.name }}{% if resource.flag == "new" %} <span class="new-label">New!</span>{% endif %}</a></li>
+                    {% endfor %}
+                </ul>
+            </section>
+            <section class="resource-section">
+                <h3 class="resource-section__title">Third-Party Projects</h3>
+                <ul class="resource-list">
+                    {% for resource in site.data.resources.projects %}
+                    <li class="resource-list__item"><a href="{{ resource.url }}">{{ resource.name }}{% if resource.flag == "new" %} <span class="new-label">New!</span>{% endif %}</a></li>
+                    {% endfor %}
+                </ul>
+            </section>
+            <section class="resource-section">
+                <h3 class="resource-section__title">Goodies</h3>
+                <ul class="resource-list">
+                    {% for resource in site.data.resources.goodies %}
+                    <li class="resource-list__item"><a href="{{ resource.url }}">{{ resource.name }}{% if resource.flag == "new" %} <span class="new-label">New!</span>{% endif %}</a></li>
+                    {% endfor %}
+                </ul>
+            </section>
+        </div>
+    </div>
+{% include footer.html %}

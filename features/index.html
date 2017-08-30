@@ -1,0 +1,52 @@
+---
+title: "Features"
+description: "What makes Event Store the right database for your application."
+---
+
+{% include header.html %}
+    <div class="container">
+		<div class="page-header page-header--features">
+			<h1>{{ page.title }}</h1>
+		</div>
+		<div class="page-main">
+			<div class="media--left">
+				<img src="/images/eventstore.svg">
+				<h2>Event-sourcing</h2>
+				<p>Event Store stores your data as a series of immutable events over time, making it easy to build event-sourced applications. <a href="http://docs.geteventstore.com/introduction">Learn more about event sourcing in our documentation.</a></p>
+			</div>
+			<div class="media--left">
+				<img src="/images/projections.svg">
+				<h2>Projections</h2>
+				<p>Projections allow you to react to events as they are written, and to create new events when interesting combinations occur. You can use the same model for writing temporal correlation queries that run over historical data and on into the future.</p>
+			</div>
+			<div class="media--left">
+				<img src="/images/opensource.svg">
+				<h2>Open Source License</h2>
+				<p>Event Store is licensed under a 3-clause BSD license, whether it runs on a single node or as a high availability cluster. Commercial support services are available.</p>
+			</div>
+			<div class="media--left">
+				<img src="/images/clients.svg">
+				<h2>Client Interfaces</h2>
+				<p>Event Store has a native HTTP interface based on the AtomPub protocol which is plenty fast enough for the majority of use cases. For high-performance use, there are native drivers for .NET, Akka and Erlang.</p>
+			</div>
+			<div class="media--left">
+				<img src="/images/ha.svg">
+				<h2>High Availability</h2>
+				<p>Event Store can run as a cluster of nodes containing the same data, which remains available for writes provided at least half the nodes are alive and connected. See HA in action at <a href="http://ha.geteventstore.com/showcase">ha.geteventstore.com</a>.</p>
+			</div>
+			<div class="media--left">
+				<img src="/images/performance.svg">
+				<h2>Great Performance</h2>
+				<p>Whilst performance depends on configuration and use patterns, we’ve benchmarked Event Store at around 15,000 writes per second and 50,000 reads per second!</p>
+			</div>
+			<div class="media--left">
+				<img src="/images/platforms.svg">
+				<h2>Runs on Windows, Linux or macOS</h2>
+				<p>Event Store is written in C++, C# and JavaScript. The server runs on Mono or the .NET CLR, on Windows, Linux or macOS</p>
+			</div>
+			<p class="call-to-action">
+				<a href="/downloads" class="btn btn--primary">Download and use Event Store today</a>
+			</p>
+		</div>
+	</div>
+{% include footer.html %}

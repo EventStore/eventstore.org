@@ -1,0 +1,41 @@
+// Edit these variables
+
+@grid-width: 100%;
+@gutter: 20px;
+
+
+.container {
+	max-width: @grid-width;
+	margin: 0 auto;
+	padding: 0 @gutter;
+}
+
+.row {
+	width: 100%;
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.column, .columns {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: inline-block;
+	float: left;
+	padding: 0 @gutter / 2;
+}
+
+.one    { width: 8.33333% }
+.two    { width: 16.66666% }
+.three  { width: 25% }
+.four   { width: 33.33333% }
+.five   { width: 41.66666% }
+.six    { width: 50% }
+.seven  { width: 58.33333% }
+.eight  { width: 66.66666% }
+.nine   { width: 75% }
+.ten    { width: 83.33333% }
+.eleven { width: 91.66666% }
+.twelve { width: 100% }

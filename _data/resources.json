@@ -1,0 +1,43 @@
+{
+    "blogs":[
+        {
+            "name": "Event Store Blog",
+            "url": "https://geteventstore.com/blog"
+        }
+    ],
+    "videos": [
+        {
+            "name": "Event Store as a Read Model",
+            "url": "https://skillsmatter.com/skillscasts/3836-event-store-as-a-read-model"
+        },
+        {
+            "name": "DDD CQRS Course",
+            "url": "http://www.viddler.com/v/dc528842"
+        }
+    ],
+    "projects": [
+        {
+            "name": "Ray Rutjes’ PHP Client",
+            "url": "https://github.com/rayrutjes/php-geteventstore-client",
+            "flag": "new"
+        },
+        {
+            "name": "YoEight’s Haskell TCP Client",
+            "url": "https://github.com/YoEight/eventstore",
+        },
+        {
+            "name": "Arkency’s Ruby HTTP Connector",
+            "url": "https://github.com/arkency/http_eventstore",
+        }
+    ],
+    "goodies": [
+        {
+            "name": "Event Store Logos and Images",
+            "url": "https://github.com/EventStore/Brand"
+        },
+        {
+            "name": "Papercraft Ouro Template",
+            "url": "https://geteventstore.com/downloads/papercraft-ouro.pdf"
+        }
+    ]
+}

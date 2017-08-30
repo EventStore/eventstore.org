@@ -1,0 +1,60 @@
+---
+title: "Get in Touch"
+description: "Contact us to discuss any questions you may have."
+---
+
+{% include header.html %}
+    <div class="container">
+		<div class="page-header page-header--support">
+			<h1>{{ page.title }}</h1>
+            <p>We’re always happy to discuss your requirements for Event Store. Drop us an email here and we’ll get back to you.</p>
+		</div>
+		<div class="page-main">
+            <style>
+                .sf-form {
+                    max-width: 35rem;
+                    margin: 1.5rem auto;
+                    padding: 1.5rem;
+                    background: #F9F9F9;
+                }
+                .sf-form label {
+                    display: block;
+                    font-size: 0.75rem;
+                    line-height: 1.5rem;
+                }
+                .sf-form input[type="text"], .sf-form input[type="email"], .sf-form textarea {
+                    width: 100%;
+                    padding: 0.375rem;
+                    font-family: inherit;
+                    font-size: inherit;
+                    font-weight: inherit;
+                    background: white;
+                    border: 1px solid #D3DBE3;
+                }
+                .sf-form input[type="submit"] {
+                    font-family: inherit;
+                    font-size: inherit;
+                    font-weight: inherit;
+                }
+            </style>
+            <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" class="sf-form">
+                <h2>Send Us a Message</h2>
+                <input type=hidden name="oid" value="00Dw0000000mEn1">
+                <input type=hidden name="retURL" value="https://geteventstore.com">
+                <label for="first_name">First Name</label>
+                <input id="first_name" maxlength="40" name="first_name" type="text">
+                <label for="last_name">Last Name</label>
+                <input id="last_name" maxlength="80" name="last_name" type="text">
+                <label for="email">Email</label>
+                <input  id="email" maxlength="80" name="email" type="email">
+                <label for="company">Company</label>
+                <input  id="company" maxlength="40" name="company" type="text">
+                <label for="city">City</label>
+                <input  id="city" maxlength="40" name="city" type="text">
+                <label for="00Nw0000005zPnM">Your Message</label>
+                <textarea id="00Nw0000005zPnM" name="00Nw0000005zPnM" rows="5" type="text" wrap="soft"></textarea>
+                <input type="submit" name="submit" class="btn btn--primary" value="Submit">
+            </form>
+		</div>
+	</div>
+{% include footer.html %}
