@@ -22,7 +22,7 @@ The release notes for 3.4.0 are listed below, along with the release notes for 3
 - [#762](https://github.com/EventStore/EventStore/pull/762) **(All Platforms)** Move usages of dates to Utc Now from Now.
 - [#759](https://github.com/EventStore/EventStore/pull/759) **(All Platforms)** Introduce a new role (ops) which has permissions to perform scavenge, monitor through the web UI as well as shutting down event store nodes. With this a new default user will be introduced called `ops`.
 - [#749](https://github.com/EventStore/EventStore/pull/749) **(All Platforms)** Set a sane default for message timeouts (10 seconds) (Competing Consumers).
-- [#737](https://github.com/EventStore/EventStore/pull/737) **(All Platforms)** Add HTTP Competing Consumers. Documentation can be found [here](https://eventstore.org/docs/http-api/3.4.0/competing-consumers/)
+- [#737](https://github.com/EventStore/EventStore/pull/737) **(All Platforms)** Add HTTP Competing Consumers. Documentation can be found [here](https://eventstore.org/docs/http-api/3.4.0/competing-consumers)
 
 ## Event Store UI 3.4.0 release notes
 
