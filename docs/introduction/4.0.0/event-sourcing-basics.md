@@ -293,7 +293,7 @@ These functions are then chained over the event stream resulting at the end with
 
 - [DDD CQRS Video](https://www.youtube.com/watch?v=whCk1Q87_ZI)
 - [Event Sourcing](http://martinfowler.com/eaaDev/EventSourcing.html)
-- [Getting Started](../)
+- [Getting Started](..)
 
  [1]: ../img/structural-model.png "A simplified structural model of an order"
  [2]: ../img/transactional-model.png "Transactional view of an order"

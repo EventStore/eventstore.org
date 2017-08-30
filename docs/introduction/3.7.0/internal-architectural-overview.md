@@ -9,7 +9,7 @@ version: "3.7.0"
 
 ## Messaging
 
-The overall architecture style of the Event Store is [SEDA (Staged Event Driven Architecture)](http://www.eecs.harvard.edu/~mdw/proj/seda/). Messages flow forward through queues internally (including the Transaction File which is also a queue). There are communication end points that flow forward through series of queues to be processed. All operations are purely asynchronous. The core processing is handled on a single thread reading requests off of a single concurrent queue.
+The overall architecture style of the Event Store is [SEDA (Staged Event Driven Architecture)](http://www.eecs.harvard.edu/~mdw/proj/seda). Messages flow forward through queues internally (including the Transaction File which is also a queue). There are communication end points that flow forward through series of queues to be processed. All operations are purely asynchronous. The core processing is handled on a single thread reading requests off of a single concurrent queue.
 
 Messages first flow through a state machine that represents the state of the node. As an example in a distributed scenario you are not always allowed to write (slaves will forward not write themselves) or if you are still initializing you are not allowed to read. Each request is also handled by a state machine that manages the lifecycle of that request including time outs and acknowledgements throughout the cluster.
 

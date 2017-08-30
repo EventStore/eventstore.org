@@ -22,7 +22,7 @@ To get maximum performance from the connection, it is recommended that it be use
 
 ## Quick Start
 
-The code below shows how to connect to an Event Store server, write to a stream, and read back the events. For more detailed information, read the full pages for [Connecting to a Server](./connecting-to-a-server/), [Reading Events](./reading-events/) and [Writing to a Stream](./writing-to-a-stream/)
+The code below shows how to connect to an Event Store server, write to a stream, and read back the events. For more detailed information, read the full pages for [Connecting to a Server](./connecting-to-a-server), [Reading Events](./reading-events) and [Writing to a Stream](./writing-to-a-stream)
 
 ``` csharp
 var connection = 

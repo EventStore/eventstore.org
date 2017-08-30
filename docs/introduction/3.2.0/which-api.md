@@ -37,7 +37,7 @@ The other interface is HTTP-based. In particular it is based upon the [AtomPub p
 
 ### Supported Clients
 
-- [HTTP API](/http-api)
+- [HTTP API](/docs/http-api)
 
 ### Community Developed Clients
 

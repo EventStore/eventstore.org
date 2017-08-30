@@ -27,7 +27,7 @@ passwd evenStore
 ```
 
 ### Attach a data drive ###
-If you want to persist EventStore data, it is recommended to add a new data disk to the virtual machine. The following guideline should help you in this situation: [http://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-how-to-attach-disk/](http://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-how-to-attach-disk/)
+If you want to persist EventStore data, it is recommended to add a new data disk to the virtual machine. The following guideline should help you in this situation: [http://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-how-to-attach-disk/](http://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-how-to-attach-disk)
 
 After following the guideline, you should end up with a mount `/datadrive`
 
@@ -97,7 +97,7 @@ sudo apt-get install gcc
    ```bash
    su - eventStore
    cd /datadrive
-   wget http://download.geteventstore.com/binaries/EventStore-OSS-Linux-v3.0.0.tar.gz
+   wget https://eventstore.org/downloads//EventStore-OSS-Linux-v3.0.0.tar.gz
    tar -xzvf EventStore-OSS-Linux-v3.0.0.tar.gz
    rm EventStore-OSS-Linux-v3.0.0.tar.gz
    cd EventStore-OSS-Linux-v3.0.0

@@ -1,4 +1,4 @@
-Projections has a RESTful API that you can run and monitor your projections from your own code if you want. This document goes through how that API works. If you want to get into further code examples the [esquery tool](esquery) and the padmin tools also use this API to run and monitor the status of projections and queries. For the purposes of this document all examples will be done using [curl](http://curl.haxx.se/)
+Projections has a RESTful API that you can run and monitor your projections from your own code if you want. This document goes through how that API works. If you want to get into further code examples the [esquery tool](esquery) and the padmin tools also use this API to run and monitor the status of projections and queries. For the purposes of this document all examples will be done using [curl](http://curl.haxx.se)
 
 ###Running a Query###
 

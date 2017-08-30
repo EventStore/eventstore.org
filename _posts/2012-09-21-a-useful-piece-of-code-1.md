@@ -13,8 +13,8 @@ Today let’s take a look at a namespace most people have probably overlooked in
 
 There are three hash implementations sitting here:
 
-- **[Murmur2Unsafe](https://github.com/EventStore/EventStore/blob/2ccaa5676525e2ebf7e5e8efa1d518732e00759e/src/EventStore.Core/Index/Hashes/Murmur2Unsafe.cs)** – This is an unsafe C# implementation of the version [2 murmur hash](http://en.wikipedia.org/wiki/MurmurHash) Murmur2 gets a shout out to [Davy Landman](http://landman-code.blogspot.com/) though we don’t use it at this time.
+- **[Murmur2Unsafe](https://github.com/EventStore/EventStore/blob/2ccaa5676525e2ebf7e5e8efa1d518732e00759e/src/EventStore.Core/Index/Hashes/Murmur2Unsafe.cs)** – This is an unsafe C# implementation of the version [2 murmur hash](http://en.wikipedia.org/wiki/MurmurHash) Murmur2 gets a shout out to [Davy Landman](http://landman-code.blogspot.com) though we don’t use it at this time.
 - **[Murmur3AUnsafe](https://github.com/EventStore/EventStore/blob/2ccaa5676525e2ebf7e5e8efa1d518732e00759e/src/EventStore.Core/Index/Hashes/Murmur3AUnsafe.cs)** – This is an unsafe C# implementation of the version [3a murmurhash](http://en.wikipedia.org/wiki/MurmurHash).
-- **[XXHashUnsafe](https://github.com/EventStore/EventStore/blob/2ccaa5676525e2ebf7e5e8efa1d518732e00759e/src/EventStore.Core/Index/Hashes/XXHashUnsafe.cs)** – This is an unsafe C# implementation of the [XXHash](http://code.google.com/p/xxhash/).
+- **[XXHashUnsafe](https://github.com/EventStore/EventStore/blob/2ccaa5676525e2ebf7e5e8efa1d518732e00759e/src/EventStore.Core/Index/Hashes/XXHashUnsafe.cs)** – This is an unsafe C# implementation of the [XXHash](http://code.google.com/p/xxhash).
 
 All three are solid implementations of hash functions. At present we use XXHashUnsafe for the hash inside of the read index.

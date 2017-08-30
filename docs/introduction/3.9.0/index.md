@@ -11,12 +11,12 @@ version: "3.9.0"
 This document describes how to get started with the Event Store providing you are interested in using Atom as your primary interface. We will cover installation of the Event Store and taking you through the basic operation such as writing to a stream, reading from a stream, and subscribing to a stream.
 
 <span class="note--warning">
-This setup is intended as an experimental setup or for a developer’s machine. It is not intended to describe a production setup. This document assumes that you also have [cURL](http://curl.haxx.se/) installed on your machine.
+This setup is intended as an experimental setup or for a developer’s machine. It is not intended to describe a production setup. This document assumes that you also have [cURL](http://curl.haxx.se) installed on your machine.
 </span>
 
 ## Installation
 
-To start go to [https://geteventstore.com/downloads](https://geteventstore.com/downloads) and download the binaries into a folder. For this document it is assumed that you are in Windows. If you are in linux or in another environment the Event Store likely works there but you will have to follow further instructions for setup.
+To start go to [/downloads](/downloads) and download the binaries into a folder. For this document it is assumed that you are in Windows. If you are in linux or in another environment the Event Store likely works there but you will have to follow further instructions for setup.
 
 Once you have the zip file unzipped open up an administrator console. `cd` into the directory where you have installed the Event Store. On the command line enter:
 
@@ -24,13 +24,13 @@ Once you have the zip file unzipped open up an administrator console. `cd` into 
 EventStore.ClusterNode.exe --db ./db --log ./logs
 ```
 
-This will start the EventStore and will put the database in the path `./db` and the logs in `./logs`. You can view further command line arguments in the [server docs](/server) (there are many!). It is important to note that it is being run in an admin context because it will start a HTTP server through http.sys. If you were to be running in a more permanent situation you would probably want to provide for an ACL in windows such as:
+This will start the EventStore and will put the database in the path `./db` and the logs in `./logs`. You can view further command line arguments in the [server docs](/docs/server) (there are many!). It is important to note that it is being run in an admin context because it will start a HTTP server through http.sys. If you were to be running in a more permanent situation you would probably want to provide for an ACL in windows such as:
 
 ```
 netsh http add urlacl url=http://+:2113/ user=DOMAIN\username
 ```
 
-The Event Store should be now up and running on your machine. You can browse to [http://127.0.0.1:2113/](http://127.0.0.1:2113/) to see the admin console. The console will ask for a username and password. By default it is `admin:changeit`.
+The Event Store should be now up and running on your machine. You can browse to [http://127.0.0.1:2113/](http://127.0.0.1:2113) to see the admin console. The console will ask for a username and password. By default it is `admin:changeit`.
 
 ## Writing Events to an Event Stream
 
@@ -79,7 +79,7 @@ Keep-Alive: timeout=15,max=100
 
 If you go to your UI after this command and to the *Streams* tab. You will see your stream has recently been created. If you post to a stream that doesn’t exist the Event Store will create it. You can then click on it to get an HTML representation of your stream (or you can navigate directly to [http://127.0.0.1:2113/web/index.html#/streams/newstream](http://127.0.0.1:2113/web/index.html#/streams/newstream)).
 
-You can also setup Access Control Lists (see [server docs](/server/latest)) on your streams by changing the metadata of the stream.
+You can also setup Access Control Lists (see [server docs](/docs/server/latest)) on your streams by changing the metadata of the stream.
 
 ## Reading From a Stream
 
@@ -156,7 +156,7 @@ Keep-Alive: timeout=15,max=100
 }
 ```
 
-This will return our event that we had originally posted. You can also get your event as XML (set `Accept: text/xml`). In order to read a single page feed we would just get the feed and then iterate through the event links executing gets. This may feel inefficient at first but remember the event URIs and most of the page URIs are infinitely cachable. We can also get the events in the feed itself if prefered by using `?embed=body`. There is further discussion on this [here](/http-api/latest/reading-streams).
+This will return our event that we had originally posted. You can also get your event as XML (set `Accept: text/xml`). In order to read a single page feed we would just get the feed and then iterate through the event links executing gets. This may feel inefficient at first but remember the event URIs and most of the page URIs are infinitely cachable. We can also get the events in the feed itself if prefered by using `?embed=body`. There is further discussion on this [here](/docs/http-api/latest/reading-streams).
 
 Sometimes however your feed may span more than one atom page. In this case you will have to page through the feed. This is done by following the relation links in the feed. To read a feed from the beginning to the end you would go to the *last* link and then continue to read the *previous* page. You can also do more of a twitter style follow and start from now and take the last say 50 to display by using *first* then *next*.
 

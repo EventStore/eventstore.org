@@ -13,7 +13,7 @@ First, create a private key and self-signed certificate request (Note: This is o
 
 ```
 openssl req \
-  -x509 -sha256 -nodes -days 365 -subj "/CN=geteventstore.com" \
+  -x509 -sha256 -nodes -days 365 -subj "/CN=eventstore.org" \
   -newkey rsa:2048 -keyout geteventstore.pem -out geteventstore.csr
 ```
 
@@ -54,7 +54,7 @@ ExtSecureTcpPort: 1115
 Connect to Event Store using the Event Store .NET Client.
 
 ```csharp
-var settings = ConnectionSettings.Create().UseSslConnection("geteventstore.com", true);
+var settings = ConnectionSettings.Create().UseSslConnection("eventstore.org", true);
 
 using (var conn = EventStoreConnection.Create(settings, new IPEndPoint(IPAddress.Loopback, 1115)))
 {
