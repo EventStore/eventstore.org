@@ -1,0 +1,60 @@
+<ul class="docs-sidebar__list">
+    <li><a href="/">Documentation Home</a></li>
+
+    {% for section in site.top_level_sections %}
+        {% if page.section == section %}
+            {% assign sectionClass = "expanded" %}
+        {% else %}
+            {% assign sectionClass = "collapsed" %}
+        {% endif %}
+
+        {% if section == "Introduction" %}
+            {% assign sectionClass = "expanded" %}
+        {% endif %}
+
+        <li>
+            <span onclick="$(this).toggleClass('expanded collapsed');" class="docs-sidebar__heading {{ sectionClass }}">{{ section }}</span>
+            <ul>
+            {% if page.section == ".NET API" %}
+                {% assign viewing_server_version = site.latest_versions.server %}
+                {% assign viewing_dotnet_version = page.version %}
+            {% else %}
+                {% if page.version %}
+                    {% assign viewing_server_version = page.version %}
+                {% else %}
+                    {% assign viewing_server_version = site.latest_versions.server %}
+                {% endif %}
+                {% assign viewing_dotnet_version = site.latest_versions.dotnet-api %}
+            {% endif %}
+
+            {% assign pages = site.pages | where:"section",section | where:"exclude_from_sidebar", false %}
+            
+            {% assign pinnedItems = pages| where:"pinned", true | sort: "title" %}
+            {% assign normalItems = pages | where:"pinned", false | sort: "title"  %}
+
+            {% for item in pinnedItems %}
+                {% if item.section == ".NET API" and item.version == viewing_dotnet_version %}
+                    <li>
+                        <a href="{{ item.url }}">{{ item.title }}</a>
+                    </li>
+                {% elsif item.section != ".NET API" and item.version == viewing_server_version %}
+                    <li>
+                        <a href="{{ item.url }}">{{ item.title }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            {% for item in normalItems %}
+                {% if item.section == ".NET API" and item.version == viewing_dotnet_version %}
+                    <li>
+                        <a href="{{ item.url }}">{{ item.title }}</a>
+                    </li>
+                {% elsif item.section != ".NET API" and item.version == viewing_server_version %}
+                    <li>
+                        <a href="{{ item.url }}">{{ item.title }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+        </li>        
+    {% endfor %}
+</ul>

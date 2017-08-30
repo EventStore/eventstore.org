@@ -1,0 +1,44 @@
+{% include header.html %}
+<div class="page-title">
+    <div class="inner-container">
+        <h1>Documentation</h1>
+        {% if page.section == ".NET API" %}
+        <label>.NET API Version : <select onchange="location=this.options[this.selectedIndex].value">
+                {% for version in site.all_dotnet_versions %}
+                <option value="/docs/dotnet-api/{{version}}" {%if version == page.version %}selected="true" {% endif %}>{{ version }}</option>
+                {% endfor %}
+            </select>
+        </label>
+        {% else %}
+        <label>Version : <select onchange="location=this.options[this.selectedIndex].value">
+                {% for version in site.all_versions %}
+                <option value="/docs/introduction/{{version}}" {%if version == page.version %}selected="true" {% endif %}>{{ version }}</option>
+                {% endfor %}
+            </select>
+        </label>
+        {% endif %}
+
+        <div style="float:right;">
+            <form action="/docs/search" method="get">
+              <input type="text" id="header-search-box" name="query" placeholder="Search">
+              <input type="submit" value="Go">
+            </form>
+        </div>
+    </div>
+</div>
+<div class="docs">
+    <div class="inner-container">
+        <a href="#" class="docs-toc-toggle">Show Table of Contents</a>
+        <aside class="docs-sidebar">
+            {% include docs-sidebar.html %}
+        </aside>
+        <div class="docs-content">
+            <h1>{{ page.title }}</h1>
+            {{ content }}
+            {% if page.title != "Documentation" %}
+            <p class="docs-lead">Event Store docs are hosted on <a href="https://github.com/eventstore/docs.geteventstore.com">GitHub</a>. The repository is public and it’s open to issues and pull requests. Contributions, corrections and feedback are all welcome.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% include footer.html %}
