@@ -5,7 +5,7 @@ author: "Greg Young"
 layout: blog-post
 ---
 
-Version 2.0 binaries are now available for download at [geteventstore.com/downloads](/downloads)</a>.
+Version 2.0 binaries are now available for download at [eventstore.org/downloads](/downloads)</a>.
 
 The new version is fully compatible with all database files from old versions no data upgrade is required. With the addition of security you will likely get asked for a username/password, the default is admin:changeit.
 

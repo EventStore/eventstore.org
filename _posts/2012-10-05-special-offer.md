@@ -16,4 +16,4 @@ The specific terms of the offer are as follows:
 
 Invoices will be issued upon receipt of order and must be paid within 30 days. Appliances will be shipped upon payment of invoices. We’ll even pop a t-shirt and some Ouro stickers in too.
 
-Contact [sales@geteventstore.com](mailto:sales@geteventstore.com).
+Contact [sales@eventstore.org](mailto:sales@eventstore.org).

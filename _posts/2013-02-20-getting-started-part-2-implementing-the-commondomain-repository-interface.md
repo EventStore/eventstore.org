@@ -13,7 +13,7 @@ layout: blog-post
 
 <strike>Jon Oliver’s</strike>* <strike>excellent</strike>** [CommonDomain](https://github.com/joliver/CommonDomain) project has been around for some time, and many developers have built systems either using it directly or using it as inspiration for their own Aggregate + Event Sourcing base classes and repository interfaces. In this post, we’ll look at implementing the `IRepository` interface using the Event Store for storage.
 
-The purpose of this is to provide a sample implementation that you can customise according to the specific needs of your system rather than to provide framework code - for this reason we don't intend to provide a NuGet package of it! The code, along with some integration tests and the necessary supporting files, are available in the [GitHub repository for this blog series](http://github.com/EventStore/getting-started-with-event-store).
+The purpose of this is to provide a sample implementation that you can customise according to the specific needs of your system rather than to provide framework code - for this reason we don't intend to provide a NuGet package of it! The code, along with some integration tests and the necessary supporting files, are available in the [GitHub repository for this blog series](https://github.com/eventstore/getting-started-with-event-store).
 
 ## The Interface
 
@@ -35,7 +35,7 @@ It’s contained in the CommonDomain.Persistence assembly which is available eit
 Before we jump into reading or writing, let’s take a look at our dependencies. The constructor in our implementation looks like this:
 
 ```csharp
-public GetEventStoreRepository(EventStoreConnection eventStoreConnection, Func<Type, Guid, string> aggregateIdToStreamName)
+public geteventstoreRepository(EventStoreConnection eventStoreConnection, Func<Type, Guid, string> aggregateIdToStreamName)
 {
     _eventStoreConnection = eventStoreConnection;
     _aggregateIdToStreamName = aggregateIdToStreamName;
@@ -148,10 +148,10 @@ public TAggregate GetById<TAggregate>(Guid id, int version) where TAggregate : c
 
         if (currentSlice.Status == SliceReadStatus.StreamNotFound)
             throw new AggregateNotFoundException(id, typeof (TAggregate));
-                
+
         if (currentSlice.Status == SliceReadStatus.StreamDeleted)
             throw new AggregateDeletedException(id, typeof (TAggregate));
-                
+
         sliceStart = currentSlice.NextEventNumber;
 
         foreach (var evnt in currentSlice.Events)
@@ -163,7 +163,7 @@ public TAggregate GetById<TAggregate>(Guid id, int version) where TAggregate : c
 
     return aggregate;
 }
-        
+
 private static TAggregate ConstructAggregate<TAggregate>()
 {
     return (TAggregate)Activator.CreateInstance(typeof(TAggregate), true);

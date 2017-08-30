@@ -7,13 +7,13 @@ layout: blog-post
 
 As we prepare to release Event Store 2.0.0 binaries (the source code was just merged to the master branch over on [GitHub](http://github.com/EventStore/EventStore)), we also will be opening up access to one of the test environments that we’ve been using for our commercial high availability clustered product, Event Store HA.
 
-We get many questions asking how the clustered version behaves during network partitions and server failures – [now you can see for yourself](http://ha.geteventstore.com)!
+We get many questions asking how the clustered version behaves during network partitions and server failures – [now you can see for yourself](https://eventstore.org)!
 
 <figure>
 	<img src="/images/blog-ha-setup.jpg">
 </figure>
 
-The cluster in the picture above is now [connected to the web](http://ha.geteventstore.com) to allow people to see a cluster in action, as well as some of the testing we perform on them. This particular cluster is running a power outage test (and has been for some time). We can also test network partitions both of which the cluster can easily handle.
+The cluster in the picture above is now [connected to the web](https://eventstore.org) to allow people to see a cluster in action, as well as some of the testing we perform on them. This particular cluster is running a power outage test (and has been for some time). We can also test network partitions both of which the cluster can easily handle.
 
 We pull the power on a node programmatically using the device seen here:
 

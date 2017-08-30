@@ -6,7 +6,7 @@ layout: blog-post
 
 Event Store 3.7.0 is now released! This release contains a number of improvements and bug fixes, as well as a rather large update to the Embedded Client. The next release will mainly focus on improving the stability of projections in preparation for version 4.0.
 
-Included in this release is a fix for an issue affecting scavenges where Event Store failed to write scavenge status updates to the scavenge history stream, which resulted in errors in the logs. We have added a new command to the Event Store CLI tool which will clean up the scavenge streams and remove this error. If you were affected by this issue, get the updated tool from the [downloads page](https://geteventstore.com/downloads/).
+Included in this release is a fix for an issue affecting scavenges where Event Store failed to write scavenge status updates to the scavenge history stream, which resulted in errors in the logs. We have added a new command to the Event Store CLI tool which will clean up the scavenge streams and remove this error. If you were affected by this issue, get the updated tool from the [downloads page](/downloads).
 
 There is also an accompanying update to the .NET Client API and the Embedded Client. These are now in the NuGet gallery.
 

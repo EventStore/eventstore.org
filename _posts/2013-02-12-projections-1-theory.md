@@ -5,7 +5,7 @@ author: "Greg Young"
 layout: blog-post
 ---
 
-Over at [geteventstore.com](https://geteventstore.com) we have 1.0’d the Event Store as an Event Store (i.e. storing/retrieving events/multinode version/etc) but in the process we did not release projections. They are still marked as experimental. Projections are however getting close to ready so its time to write a bit about them as the official documentation takes shape.
+Over at [eventstore.org](https://eventstore.org) we have 1.0’d the Event Store as an Event Store (i.e. storing/retrieving events/multinode version/etc) but in the process we did not release projections. They are still marked as experimental. Projections are however getting close to ready so its time to write a bit about them as the official documentation takes shape.
 
 Through the series we will get fairly deep into their usage but for many the best way to understand them to understand the underlying theory so let’s start there.
 

@@ -11,7 +11,7 @@ to!)</a>, we decided it would be a good
 idea to run a short series of articles describing some of the new features and
 changes for those who haven't seen them. If there are things you want to know
 about in particular, please get in touch on Twitter,
-<a href="https://twitter.com/GetEventStore">@GetEventStore</a></p>
+<a href="https://twitter.com/geteventstore">@geteventstore</a></p>
 
 ##Where did SingleNode go?
 
@@ -25,4 +25,4 @@ We originally developed Event Store to run on Windows or Linux, via .NET or Mono
 
 Consequently we recently put some effort into statically linking Mono, not only on Linux but also on macOS (which previously required building from source in order to run 64 bit Mono). Fortunately Mono has a relatively nice way of making a bundle and then statically linking the framework so that the only external system dependency is `glibc`. Hopefully there'll be something this nice for making Windows binaries one day!
 
-You can check out the statically linked packages by [downloading Event Store v3.0.0-rc9](https://geteventstore.com/downloads/) for Linux or macOS. For those interested in how to bundle and statically link Mono, the [scripts are part of our open-source repository](https://github.com/EventStore/EventStore/blob/dev/scripts/package-mono/package-mono.sh#L115-121)!
+You can check out the statically linked packages by [downloading Event Store v3.0.0-rc9](https://eventstore.org/downloads) for Linux or macOS. For those interested in how to bundle and statically link Mono, the [scripts are part of our open-source repository](https://github.com/EventStore/EventStore/blob/dev/scripts/package-mono/package-mono.sh#L115-121)!

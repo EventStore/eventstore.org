@@ -20,7 +20,3 @@ There will be plenty of people from the community there, as well as much of the
 Event Store team, and we are sure there will be lots of good discussions.
 Afterwards there will be a bit of a celebration with free food/beer and, of
 course, some ouro-themed goodies!
-
-If you'd like to come along, please register (for free!) via EventBrite so we
-know how much food and beer to buy - you can find more information and the sign
-up page [here](https://geteventstore.com/two-years-on/)!
