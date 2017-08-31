@@ -27,7 +27,7 @@ As the Event Store itself is handling all security requests it will have all inf
 
 ### Hybrid Option
 
-Even if using a reverse proxy in a trusted solution, as above, you can support external authentication from the Event Store itself. This can be done by turning on the trusted intermediary option in your config. This allows the intermediary to write a header with the user information that the Event Store will use. There is further discussion on this in the [HTTP headers section](../../../http-api/Optional-Http-Headers).
+Even if using a reverse proxy in a trusted solution, as above, you can support external authentication from the Event Store itself. This can be done by turning on the trusted intermediary option in your config. This allows the intermediary to write a header with the user information that the Event Store will use. There is further discussion on this in the [HTTP headers section](/docs/http-api/latest/optional-http-headers).
 
 ## Security with SSL
 

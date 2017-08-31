@@ -7,7 +7,7 @@ section: ".NET API"
 version: "3.6.0"
 ---
 
-This document walks through the .NET client API for setting up and consuming competing consumer subscription groups. For an overview on competing consumers and how they relate to other subscription types please see [the overview document](../../../introduction/competing-consumers).
+This document walks through the .NET client API for setting up and consuming competing consumer subscription groups. For an overview on competing consumers and how they relate to other subscription types please see [the overview document](/docs/introduction/latest/competing-consumers).
 
 # Methods
 

@@ -7,7 +7,7 @@ section: "HTTP API"
 version: "3.9.0"
 ---
 
-This document walks through the HTTP API for setting up and consuming competing consumer subscription groups. For an overview on competing consumers and how they relate to other subscription types please see the [overview document](../../../introduction/competing-consumers).
+This document walks through the HTTP API for setting up and consuming competing consumer subscription groups. For an overview on competing consumers and how they relate to other subscription types please see the [overview document](/docs/introduction/latest/competing-consumers).
 
 <span class="note">
 The Administration UI includes a *Competing Consumers* section where a user is able to create, update, delete and view subscriptions and their statusses.

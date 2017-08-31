@@ -9,7 +9,7 @@ version: "3.8.0"
 
 ## What is it?
 
-With the addition of [Competing Consumers](../../../introduction/competing-consumers) which is essentially another way of reading streams, the need arose to expose these different methods to consumers.
+With the addition of [Competing Consumers](/docs/introduction/latest/competing-consumers) which is essentially another way of reading streams, the need arose to expose these different methods to consumers.
 
 The introduction of the description document has some benefits
 
