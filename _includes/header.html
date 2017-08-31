@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta name="description" content="{% if page.description == null %}{{ site.description }}{% else %}{{ page.description }}{% endif %}">
-    <link rel="preconnect" href="//fonts.googleapis.com">
-    <link rel="preconnect" href="//code.jquery.com">
-    <link rel="preconnect" href="//www.google-analytics.com">
+    <meta content="{% if page.description == null %}{{ site.description }}{% else %}{{ page.description }}{% endif %}" name="description">
+    <link href="//fonts.googleapis.com" rel="preconnect">
+    <link href="//code.jquery.com" rel="preconnect">
+    <link href="//www.google-analytics.com" rel="preconnect">
     <title>{% if page.title != "Homepage" %}{{ page.title }} – {% endif %}{{ site.name }}</title>
-    <link rel="stylesheet" href="/css/main12.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic|Source+Code+Pro:400,700">
-    <link rel="alternate" type="application/rss+xml" title="Event Store" href="https://eventstore.org/blog/feed/index.xml">
+    <link href="/css/main12.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic|Source+Code+Pro:400,700" rel="stylesheet">
+    <link href="https://eventstore.org/blog/feed/index.xml" rel="alternate" title="Event Store" type="application/rss+xml">
 </head>
 
 <body>
