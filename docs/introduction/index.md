@@ -1,4 +1,4 @@
 ---
-layout: redirect
+layout: docs-redirect
 version: latest
 ---
