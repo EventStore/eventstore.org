@@ -166,7 +166,7 @@ Keep-Alive: timeout=15,max=100
 }
 ```
 
-This will return our event that we had originally posted. You can also get your event as XML (set `Accept: text/xml`). In order to read a single page feed we would just get the feed and then iterate through the event links executing gets. This may feel inefficient at first but remember the event URIs and most of the page URIs are infinitely cachable. We can also get the events in the feed itself if prefered by using `?embed=body`. There is further discussion on this [here](/docs/http-api/latest/reading-streams).
+This will return our event that we had originally posted. You can also get your event as XML (set `Accept: text/xml`). In order to read a single page feed we would just get the feed and then iterate through the event links executing gets. This may feel inefficient at first but remember the event URIs and most of the page URIs are infinitely cacheable. We can also get the events in the feed itself if prefered by using `?embed=body`. There is further discussion on this [here](/docs/http-api/latest/reading-streams).
 
 Sometimes however your feed may span more than one atom page. In this case you will have to page through the feed. This is done by following the relation links in the feed. To read a feed from the beginning to the end you would go to the *last* link and then continue to read the *previous* page. You can also do more of a twitter style follow and start from now and take the last say 50 to display by using *first* then *next*.
 

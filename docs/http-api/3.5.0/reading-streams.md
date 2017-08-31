@@ -396,7 +396,7 @@ Keep-Alive: timeout=15,max=100
 
 You would then follow its “previous” link until you got back to the head of the document. This is the general way of reading back a stream. Once at the end you can continue reading events as they happen by polling the previous link and you will get events in near real time as they happen.
 
-It is also important to note that all links with the exception of the head link are fully cachable as seen in the HTTP header `Cache-Control: max-age=31536000, public`. This is very important when discussing intermediaries and performance as if you commonly replay a stream it probably is coming off of your hard drive.
+It is also important to note that all links with the exception of the head link are fully cacheable as seen in the HTTP header `Cache-Control: max-age=31536000, public`. This is very important when discussing intermediaries and performance as if you commonly replay a stream it probably is coming off of your hard drive.
 
 It is also important to note that you should **never** bookmark links aside from the head of the stream resource. You should always be following links to get to things. We may in the future change how our internal linkings are working. If you bookmark things other than the head you will break in these scenarios.
 

@@ -114,7 +114,7 @@ The accepted content types for GET requests are currently:
 - `application/xml`
 - `application/atom+xml`
 - `application/json`
-- `application/vnd.eventstore.atom+json` 
+- `application/vnd.eventstore.atom+json`
 - `text/xml`
 - `text/html`
 
@@ -397,7 +397,7 @@ Keep-Alive: timeout=15,max=100
 
 You would then follow its “previous” link until you got back to the head of the document. This is the general way of reading back a stream. Once at the end you can continue reading events as they happen by polling the previous link and you will get events in near real time as they happen.
 
-It is also important to note that all links with the exception of the head link are fully cachable as seen in the HTTP header `Cache-Control: max-age=31536000, public`. This is very important when discussing intermediaries and performance as if you commonly replay a stream it probably is coming off of your hard drive.
+It is also important to note that all links with the exception of the head link are fully cacheable as seen in the HTTP header `Cache-Control: max-age=31536000, public`. This is very important when discussing intermediaries and performance as if you commonly replay a stream it probably is coming off of your hard drive.
 
 It is also important to note that you should **never** bookmark links aside from the head of the stream resource. You should always be following links to get to things. We may in the future change how our internal linkings are working. If you bookmark things other than the head you will break in these scenarios.
 
@@ -491,7 +491,7 @@ Keep-Alive: timeout=15,max=100
 <SNIP>
 ```
 
-The server has told us in the headers that the ETag for this content is `ETag: "180;248368668"`. We can use this in our next request if we are polling the stream for changes. We will put it in the header If-None-Match. This tells the server to check if the response will be the one we already know. 
+The server has told us in the headers that the ETag for this content is `ETag: "180;248368668"`. We can use this in our next request if we are polling the stream for changes. We will put it in the header If-None-Match. This tells the server to check if the response will be the one we already know.
 
 ```
 curl -i http://127.0.0.1:2113/streams/account-28 -H "Accept:application/vnd.eventstore.atom+json" -H "If-None-Match:180;248368668"
@@ -739,4 +739,4 @@ Keep-Alive: timeout=15,max=100
    </entry>
 </feed>
 ```
-There are two other modes are just variants of body. There is PrettyBody which will try to reformat the JSON to make it “pretty to read” and there is TryHarder that will work even harder to try to parse and reformat JSON from an event to allow it to be returned in the feed. These do not however include further information, they are focused on what the feed looks like. 
+There are two other modes are just variants of body. There is PrettyBody which will try to reformat the JSON to make it “pretty to read” and there is TryHarder that will work even harder to try to parse and reformat JSON from an event to allow it to be returned in the feed. These do not however include further information, they are focused on what the feed looks like.

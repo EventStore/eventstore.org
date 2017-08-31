@@ -174,7 +174,7 @@ The StreamMetadata being passed here has a builder that can be accessed via Stre
         </tr>
         <tr>
             <td><code>SetCacheControl(TimeSpan cacheControl)</code></td>
-            <td>The amount of time for which the stream head is cachable.</td>
+            <td>The amount of time for which the stream head is cacheable.</td>
         </tr>
         <tr>
             <td><code>SetReadRoles(string[] roles)</code></td>

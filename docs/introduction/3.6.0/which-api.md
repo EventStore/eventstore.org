@@ -59,7 +59,7 @@ In addition, the number of writes per second which can be supported is often dra
 
 ### AtomPub is more scalable for large numbers of subscribers.
 
-This is due to the ability to use intermediary caching with Atom feeds. Most URIs handed out by the Event Store point to immutable data and are therefore infinitely cachable. Therefore on a replay of a projection much of the data required is likely to be available on a local or intermediary cache. This can also lead to lower network traffic.
+This is due to the ability to use intermediary caching with Atom feeds. Most URIs handed out by the Event Store point to immutable data and are therefore infinitely cacheable. Therefore on a replay of a projection much of the data required is likely to be available on a local or intermediary cache. This can also lead to lower network traffic.
 
 Atom will also tend to operate better in a large heterogenous environment where you have callers from many different platforms. This is especially true if you have to integrate with many teams/external vendors. Atom is an industry standard and well documented protocol that you can point them to where as the TCP protocol is a custom protocol they would need to understand.
 

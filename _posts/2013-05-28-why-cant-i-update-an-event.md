@@ -27,7 +27,7 @@ If we prevent an event from ever being updated, what would the cachability of th
 
 Imagine you have a projection updating into a SQL table that has been running for the past eight weeks. You make a change and need to restart it (replaying from event 0). When the replay occurs and it requests events from the Event Store where do they likely come from? Your hard drive! You don't make requests to the Event Store for them.
 
-Beyond the events being infinitely cachable if you look through our atom implementation in fact every single request we serve with the exception of the head uri (http://somewhere.com/streams/{stream}) is also infinitely cachable. In other words when you want to reread $all (say for 5m events) you will hit exactly one non-cachable request!
+Beyond the events being infinitely cacheable if you look through our atom implementation in fact every single request we serve with the exception of the head uri (http://somewhere.com/streams/{stream}) is also infinitely cacheable. In other words when you want to reread $all (say for 5m events) you will hit exactly one non-cacheable request!
 
 This is very important when we start talking about scalability and performance. The Event Store can pretty easily serve 3-5k atom requests/second on a laptop (per node in clustered version) but how many will actually get to the Event Store? In order to scale you focus on commoditized reverse proxies in front of the Event Store not scaling the Event Store itself. nginx or varnish can easily saturate your network, just drop them in front only head calls make it through (and there is even a setting per stream to allow caching for x seconds of head links).
 
@@ -35,7 +35,7 @@ This is often a hard lesson to learn for developers. More often than not you sho
 
 This also affects performance of replays for subscribers as you can place proxies near the subscribers (local http cache is a great start!). This is especially true for say an occasionally connected system. Gmail uses this trick to provide "offlining out of the box" for web apps. Since much of the data will already be in the http cache your hits will be hitting it, in many cases you can build say a mobile app with no further support.
 
-Over Atom if we allowed updates, NO uris could be cachable!
+Over Atom if we allowed updates, NO uris could be cacheable!
 
 ## This is all cool but I actually need to update!
 
