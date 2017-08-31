@@ -43,7 +43,7 @@ There will likely be additions in the future for protobufs and bson.
 
 ## Examples (JSON)
 
-Below are examples of [writing](../writing-to-a-stream) an event to a stream, as well as [reading](../reading-streams) both a stream, and an event, for more details on these check out their individual pages. All of the below example use json however by setting the correct content types then the examples would apply to xml as well.
+Below are examples of [writing](../writing-to-a-stream) an event to a stream, as well as [reading](../reading-streams) both a stream, and an event, for more details on these check out their individual pages. All of the below example use JSON however by setting the correct content types then the examples would apply to xml as well.
 
 ### Writing an event to a stream.
 
@@ -209,7 +209,7 @@ Keep-Alive: timeout=15,max=100
 
 ## Examples (XML)
 
-Below are examples of [writing](../writing-to-a-stream) an event to a stream, as well as [reading](../reading-streams) both a stream, and an event, for more details on these check out their individual pages. All of the below example use json however by setting the correct content types then the examples would apply to xml as well.
+Below are examples of [writing](../writing-to-a-stream) an event to a stream, as well as [reading](../reading-streams) both a stream, and an event, for more details on these check out their individual pages. All of the below example use JSON however by setting the correct content types then the examples would apply to xml as well.
 
 ### Writing an event to a stream.
 

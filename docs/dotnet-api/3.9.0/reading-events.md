@@ -179,7 +179,7 @@ To ensure that the Event Store server follows link events when reading, ensure t
         </tr>
         <tr>
             <td><code>bool IsJson</code></td>
-            <td>Indicates whether the content was internally marked as json</td>
+            <td>Indicates whether the content was internally marked as JSON</td>
         </tr>
         <tr>
             <td><code>DateTime Created</code></td>

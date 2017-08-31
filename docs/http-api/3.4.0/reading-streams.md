@@ -693,7 +693,7 @@ Keep-Alive: timeout=15,max=100
 }
 ```
 
-If you try this in XML then no additional data is embedded, as embedding is only supported with json.
+If you try this in XML then no additional data is embedded, as embedding is only supported with JSON.
 
 ```
 curl -i -H "Accept:application/atom+xml" "http://127.0.0.1:2113/streams/newstream2?embed=body"
