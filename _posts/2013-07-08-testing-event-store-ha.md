@@ -7,7 +7,7 @@ layout: blog-post
 
 As we prepare to release Event Store 2.0.0 binaries (the source code was just merged to the master branch over on [GitHub](http://github.com/EventStore/EventStore)), we also will be opening up access to one of the test environments that we’ve been using for our commercial high availability clustered product, Event Store HA.
 
-We get many questions asking how the clustered version behaves during network partitions and server failures – [now you can see for yourself](https://eventstore.org)!
+We get many questions asking how the clustered version behaves during network partitions and server failures – [now you can see for yourself](/)!
 
 <figure>
 	<img src="/images/blog-ha-setup.jpg">
