@@ -35,4 +35,4 @@ If you find anything else, please <a href="https://groups.google.com/forum/#!for
 
 The big feature we're working on next is a complete new UI. Our friend Jakub Gutkowski has made an excellent start with this, and we're hoping to get it out soon (no-one knows our current UI sucks as much as we do!). We also hope to have projections out of beta soon.
 
-If you have any feedback at all on the release candidate, please let us know either on the <a href="https://groups.google.com/forum/#!forum/event-store">Google group</a> or on <a href="https://twitter.com/geteventstore">Twitter</a>!
+If you have any feedback at all on the release candidate, please let us know either on the <a href="https://groups.google.com/forum/#!forum/event-store">Google group</a> or on <a href="https://twitter.com/eventstore">Twitter</a>!

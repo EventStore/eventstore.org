@@ -15,6 +15,6 @@ Better still, we’ll pay for you to get there up to a value of £650! Alternati
 
 To get you started quickly, we’ll shortly be putting up a binary of the latest development branch of Event Store. This includes a load of goodies which we’ll be discussing over this week.
 
-The deadline for submissions either via a repository on GitHub or by email is 11th January 2013 and we’ll announce a winner soon after that – tweet [@geteventstore](https://twitter.com/geteventstore) to let us know where your repository is. All submissions must be open sourced.
+The deadline for submissions either via a repository on GitHub or by email is 11th January 2013 and we’ll announce a winner soon after that – tweet [@eventstore](https://twitter.com/eventstore) to let us know where your repository is. All submissions must be open sourced.
 
 Merry Christmas!

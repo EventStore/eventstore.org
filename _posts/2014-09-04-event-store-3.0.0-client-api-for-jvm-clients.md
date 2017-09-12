@@ -11,7 +11,7 @@ to!)</a>, we decided it would be a good
 idea to run a short series of articles describing some of the new features and
 changes for those who haven't seen them. If there are things you want to know
 about in particular, please get in touch on Twitter,
-<a href="https://twitter.com/geteventstore">@geteventstore</a></p>
+<a href="https://twitter.com/eventstore">@eventstore</a></p>
 
 ##Using Event Store From JVM Languages
 
