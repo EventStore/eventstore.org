@@ -5,7 +5,7 @@ author: "James Nugent"
 layout: blog-post
 ---
 
-Hot on the heels of version 3.0.0, which was released at our Birthday Party in London on September 17th, 2014, we're pleased to announce a service release of Event Store, version 3.0.1. This fixes a number of small bugs and updates the bundled version of the uder interface. The release notes are below.
+Hot on the heels of version 3.0.0, which was released at our Birthday Party in London on September 17th, 2014, we’re pleased to announce a service release of Event Store, version 3.0.1. This fixes a number of small bugs and updates the bundled version of the uder interface. The release notes are below.
 
 ###Event Store Server
 

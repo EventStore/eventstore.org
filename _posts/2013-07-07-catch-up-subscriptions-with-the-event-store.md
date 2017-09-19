@@ -7,7 +7,7 @@ layout: blog-post
 
 We have had many questions about how to use the catch-up subscriptions in the C# Event Store Client API. In this post I'll build out a simple example of a console application which receives a callback each time an event is written to the built-in statistics stream.
 
-Contrary to what some have thought, catch-up subscriptions are implemented as part of the client, and have been available in the client API version 1.1.0 which has been on NuGet for some time. As we're coming up to a big release which changes some aspects of the client API, I'll build out this sample for both the version currently available on NuGet, and then in the next post for the version which can be built from the development branch and will shortly be available as part of version 2 of Event Store.
+Contrary to what some have thought, catch-up subscriptions are implemented as part of the client, and have been available in the client API version 1.1.0 which has been on NuGet for some time. As we’re coming up to a big release which changes some aspects of the client API, I'll build out this sample for both the version currently available on NuGet, and then in the next post for the version which can be built from the development branch and will shortly be available as part of version 2 of Event Store.
 
 We’ll first take a look at using the current stable release, which is server version 1.0.1 and client API 1.1.0.
 
@@ -19,7 +19,7 @@ In order to make the server generate statistics at a rate that’s interesting t
 EventStore.SingleNode.exe --db .\catchupsubscriptions --stats-period-sec 2
 ```
 
-This will set up a new database in `.\catchupsubscriptions`, and write an event to the statistics stream every two seconds. Since we’re not specifying an IP address to bind to, the Event Store will bind to the loopback address on the default ports of `1113` for TCP and `2113` for HTTP. Also, since we're running a version 1 server and not specifying `--run-projections`, we won't be able to use them, which is fine for our current purposes.
+This will set up a new database in `.\catchupsubscriptions`, and write an event to the statistics stream every two seconds. Since we’re not specifying an IP address to bind to, the Event Store will bind to the loopback address on the default ports of `1113` for TCP and `2113` for HTTP. Also, since we’re running a version 1 server and not specifying `--run-projections`, we won’t be able to use them, which is fine for our current purposes.
 
 The statistics stream will be named `$stats-127.0.0.1:2113`.
 

@@ -61,7 +61,7 @@ There are ways to roll back which we are happy to discuss if you have run into a
 
 The existing client libraries are still compatible with Event Store 4.0.0 with some caveats. Even though the existing client libraries will still work, they will not return the correct Event Numbers if the number is greater than int.MaxValue. This means that the libraries will have an integer overflow.
 
-The TCP protocol which uses google protocol buffers have had it's event_number types changed from int32 to int64. This means that given that you don't have event numbers larger than int.MaxValue the event numbers that are sent across the wire to your older client should work just fine.
+The TCP protocol which uses google protocol buffers have had it's event_number types changed from int32 to int64. This means that given that you don’t have event numbers larger than int.MaxValue the event numbers that are sent across the wire to your older client should work just fine.
 
 There are some behaviour to take into consideration which we will address next
 

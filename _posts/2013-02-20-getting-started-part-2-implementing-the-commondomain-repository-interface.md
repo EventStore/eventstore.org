@@ -13,7 +13,7 @@ layout: blog-post
 
 <strike>Jon Oliver’s</strike>* <strike>excellent</strike>** [CommonDomain](https://github.com/joliver/CommonDomain) project has been around for some time, and many developers have built systems either using it directly or using it as inspiration for their own Aggregate + Event Sourcing base classes and repository interfaces. In this post, we’ll look at implementing the `IRepository` interface using the Event Store for storage.
 
-The purpose of this is to provide a sample implementation that you can customise according to the specific needs of your system rather than to provide framework code - for this reason we don't intend to provide a NuGet package of it! The code, along with some integration tests and the necessary supporting files, are available in the [GitHub repository for this blog series](https://github.com/eventstore/getting-started-with-event-store).
+The purpose of this is to provide a sample implementation that you can customise according to the specific needs of your system rather than to provide framework code - for this reason we don’t intend to provide a NuGet package of it! The code, along with some integration tests and the necessary supporting files, are available in the [GitHub repository for this blog series](https://github.com/eventstore/getting-started-with-event-store).
 
 ## The Interface
 
@@ -110,10 +110,10 @@ private static EventData ToEventData(Guid eventId, object evnt, IDictionary<stri
 Much of this code is straightforward, although there are a few points of interest:
 
 - We save the Commit ID in the metadata for every event saved.
-- The CLR type of the aggregate which produced the event as a header is stored as a header. This isn't strictly speaking necessary - you might choose to just store the type name without the assembly qualification, for example, or may choose not to bother storing this at all.
+- The CLR type of the aggregate which produced the event as a header is stored as a header. This isn’t strictly speaking necessary - you might choose to just store the type name without the assembly qualification, for example, or may choose not to bother storing this at all.
 - We use the `Action&lt;IDictionary&lt;string, object&gt;&gt;` to add any custom headers.
 - `_aggregateIdToStreamName` is used to work out which stream we should write to.
-- The expected version of the aggregate is calculated from the original version (as stored in `aggregate.Version`) and the number of events to be saved. This allows optimistic concurrency to work inside the Event Store. If we don't expect the stream to exist, we use `ExpectedVersion.NoStream`.
+- The expected version of the aggregate is calculated from the original version (as stored in `aggregate.Version`) and the number of events to be saved. This allows optimistic concurrency to work inside the Event Store. If we don’t expect the stream to exist, we use `ExpectedVersion.NoStream`.
 - We switch which writing methods we use on the Event Store Client API according to whether or not the number of events we have to same exceeds the page size threshold we choose (500 in this case). Events written using AppendToStream will be written atomically, as we need here. If we'd need more than one call to stay within our page size, we use the `connection.StartTransaction, transaction.Write, transaction.Commit` set of methods to ensure the events are written atomically.
 - Events are serialized without the CLR type information embedded in the JSON (this is set up in the SerializerSettings). Instead, the CLR type name for each event is saved as metadata with it.
 

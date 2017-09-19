@@ -173,7 +173,7 @@ This information is then posted to the stream.
 oruo@ouroboros:> curl -i -d @data.txt http://127.0.0.1:2113/streams/$users/metadata --user admin:changeit -H "Content-Type: application/vnd.eventstore.events+json"
 ```
 
-You don't need to write with the vnd.eventstore.events+json media type you can write to it as a normal stream
+You don’t need to write with the vnd.eventstore.events+json media type you can write to it as a normal stream
 
 ```http
 HTTP/1.1 201 Created

@@ -5,7 +5,7 @@ author: "James Nugent"
 layout: blog-post
 ---
 
-We had a question on Twitter about whether events stored in the Event Store have to implement any interfaces or inherit from a base class or similar. Fundamentally, the Event Store doesn't care what you store inside it - you are responsible for serialization. The remainder of this post talks about the TCP Client API.
+We had a question on Twitter about whether events stored in the Event Store have to implement any interfaces or inherit from a base class or similar. Fundamentally, the Event Store doesn’t care what you store inside it - you are responsible for serialization. The remainder of this post talks about the TCP Client API.
 
 The reading methods on EventStoreConnection return an EventStreamSlice object, which contains an array of RecordedEvent objects (which are also used for the subscription callbacks). The important part of RecordedEvent looks like this:
 

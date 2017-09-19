@@ -18,7 +18,7 @@ The Event Store is compliant with the [Atom 1.0 Specification](http://tools.ietf
 | NET (BCL)   | `System.ServiceModel.SyndicationServices`                                                                                                                        |
 | JVM         | [http://java-source.net/open-source/rss-rdf-tools](http://java-source.net/open-source/rss-rdf-tools)                                                              |
 | PHP         | [http://simplepie.org/](http://simplepie.org) or [https://github.com/fguillot/picoFeed](https://github.com/fguillot/picoFeed) |
-| Ruby        | [http://simple-rss.rubyforge.org](http://simple-rss.rubyforge.org)                                                                                                |
+| Ruby        | [https://rubygems.org/gems/simple-rss/](https://rubygems.org/gems/simple-rss/)                                                                                                |
 | Clojure     | [https://github.com/scsibug/feedparser-clj](https://github.com/scsibug/feedparser-clj)                                                                            |
 | Go          | [https://github.com/jteeuwen/go-pkg-rss](https://github.com/jteeuwen/go-pkg-rss)                                                                                  |
 | Python      | [http://code.google.com/p/feedparser/](http://code.google.com/p/feedparser)                                                                                      |

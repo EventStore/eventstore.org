@@ -402,7 +402,7 @@ The following options are available when building an Embedded Node
         </tr>
         <tr>
             <td><code>DontAddInterfacePrefixes()</code></td>
-            <td>Don't add the interface prefixes (e.g. If the External IP is set to the Loopback address, we'll add http://localhost:2113/ as a prefix) </td>
+            <td>Don’t add the interface prefixes (e.g. If the External IP is set to the Loopback address, we'll add http://localhost:2113/ as a prefix) </td>
         </tr>
         <tr>
             <td><code>WithInternalHeartbeatInterval(TimeSpan heartbeatInterval)</code></td>

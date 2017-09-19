@@ -11,4 +11,4 @@ Along with this there are some other changes in regard to ACLs. We have allowed 
 
 There was also a small problem with the chat sample. It was sending the wrong accept header (`vnd.eventstore.atom+json` instead of `application/vnd.eventstore.atom+json`). The chat sample and related browser hosted projection code is now working.
 
-We have also added some code to bomb out if run in mono versions that we really don't think you should be running in (like 2.6 with Boehm GC!). These can be overridden using the `--force` command line parameter if you really want to run in such environments.
+We have also added some code to bomb out if run in mono versions that we really don’t think you should be running in (like 2.6 with Boehm GC!). These can be overridden using the `--force` command line parameter if you really want to run in such environments.

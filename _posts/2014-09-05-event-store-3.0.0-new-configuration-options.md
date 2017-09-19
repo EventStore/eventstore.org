@@ -5,13 +5,7 @@ author: "James Nugent"
 layout: blog-post
 ---
 
-<p class="lead">As we gear up to launch version 3.0.0 of Event Store <a href="/two-years-on">at our annual birthday
-party (which you should totally come
-to!)</a>, we decided it would be a good
-idea to run a short series of articles describing some of the new features and
-changes for those who haven't seen them. If there are things you want to know
-about in particular, please get in touch on Twitter,
-<a href="https://twitter.com/eventstore">@eventstore</a></p>
+<p class="lead">As we gear up to launch version 3.0.0 of Event Store at our annual birthday party (which you should totally come to!), we decided it would be a good idea to run a short series of articles describing some of the new features and changes for those who haven’t seen them. If there are things you want to know about in particular, please get in touch on Twitter, <a href="https://twitter.com/eventstore">@eventstore</a></p>
 
 ##Configuration Changes
 
@@ -53,7 +47,7 @@ the point it would output the configuration and then exits.
 ###Configuration Formats
 
 The configuration file format for versions 1 and 2 (and v3-rc2) of Event Store
-was JSON. However, this was a particularly nasty file format which didn't allow
+was JSON. However, this was a particularly nasty file format which didn’t allow
 inline comments and caused Windows users issues with paths. As of v3-rc9, the
 configuration file format has been changed to YAML, which is more suitable for
 configuration.

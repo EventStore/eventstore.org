@@ -21,7 +21,7 @@ You can subscribe to any stream, including system streams (e.g. `$stats-127.0.0.
 To represent events delivered over a subscription, we have a type named `ResolvedEvent`. The same `ResolvedEvent` type is used for all types of subscription in the .NET Client API, and is fairly straightforward:
 
 - **`RecordedEvent Event`** - If the event is a normal (i.e. non-link) event, the event will be contained in here. If the event is a link event, and `IsResolved` is true, this will contain the event which is the target of the link.
-- **`RecordedEvent Link`** - If the event read is a link event, this will contain the link event itself. If the event isn't a link event, this will be null.
+- **`RecordedEvent Link`** - If the event read is a link event, this will contain the link event itself. If the event isn’t a link event, this will be null.
 - **`bool IsResolved`** - Indicates whether or not a link event has been resolved.
 - **`RecordedEvent OriginalEvent`** - Always returns the event which caused the subscription to fire. In the case of a link event, it will contain the link, in the case of a normal event, it will contain the normal event.
 - **`Position? OriginalPosition`** - For events received "live" over a subscription, this contains the logical position in the transaction file to which the event was written (note, for link events this will be the position of the link itself, not the position of the target of the link).

@@ -28,7 +28,7 @@ The code below shows how to connect to an Event Store server, write to a stream,
 var connection = 
     EventStoreConnection.Create(new IPEndPoint(IPAddress.Loopback, 1113));
 
-// Don't forget to tell the connection to connect!
+// Don’t forget to tell the connection to connect!
 connection.ConnectAsync().Wait();
 
 var myEvent = new EventData(Guid.NewGuid(), "testEvent", false,

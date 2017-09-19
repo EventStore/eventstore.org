@@ -16,7 +16,7 @@ There is also an accompanying update to the .NET Client API and the Embedded Cli
 - [#794](https://github.com/EventStore/EventStore/pull/794) **(All Platforms)** Adds logging for http requests and responses. Enabled via the LogHttpRequests option.
 - [#799](https://github.com/EventStore/EventStore/pull/799) **(All Platforms)** Shows statistics about replicas in a cluster.
 - [#808](https://github.com/EventStore/EventStore/pull/808) **(All Platforms)** External TCP service will now use the correct heartbeat interval.
-- [#809](https://github.com/EventStore/EventStore/pull/809) **(All Platforms)** Projections routes will now return 404 if projections aren't enabled. Was previously timing out.
+- [#809](https://github.com/EventStore/EventStore/pull/809) **(All Platforms)** Projections routes will now return 404 if projections aren’t enabled. Was previously timing out.
 - [#811](https://github.com/EventStore/EventStore/pull/811) **(All Platforms)** Add Trusted Writes to TCP. This enables nodes to send writes over the internal TCP connection if the user is a trusted user. In this case, system.
 - [#813](https://github.com/EventStore/EventStore/pull/813) **(All Platforms)** Projections will no longer get stuck in preparing in failover/takeover scenarios.
 - [#816](https://github.com/EventStore/EventStore/pull/816) **(All Platforms)** Fix incorrect arguments in verbose logging in the client API.

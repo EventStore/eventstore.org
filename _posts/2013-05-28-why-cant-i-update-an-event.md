@@ -25,7 +25,7 @@ These are the primary reasons why the Event Store does not support an update ope
 
 If we prevent an event from ever being updated, what would the cachability of that event be? Yes it would be infinite. The Event Store supports a RESTful API (ATOM). All events served from the event store have infinite cachability, what does that mean?
 
-Imagine you have a projection updating into a SQL table that has been running for the past eight weeks. You make a change and need to restart it (replaying from event 0). When the replay occurs and it requests events from the Event Store where do they likely come from? Your hard drive! You don't make requests to the Event Store for them.
+Imagine you have a projection updating into a SQL table that has been running for the past eight weeks. You make a change and need to restart it (replaying from event 0). When the replay occurs and it requests events from the Event Store where do they likely come from? Your hard drive! You don’t make requests to the Event Store for them.
 
 Beyond the events being infinitely cacheable if you look through our atom implementation in fact every single request we serve with the exception of the head uri (http://somewhere.com/streams/{stream}) is also infinitely cacheable. In other words when you want to reread $all (say for 5m events) you will hit exactly one non-cacheable request!
 

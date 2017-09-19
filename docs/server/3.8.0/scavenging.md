@@ -7,7 +7,7 @@ section: "Server"
 version: "3.8.0"
 ---
 
-When you delete events or streams in Event Store, they aren't removed immediately. In order for these events to be permanently deleted you will need to run a scavenge on your database.
+When you delete events or streams in Event Store, they aren’t removed immediately. In order for these events to be permanently deleted you will need to run a scavenge on your database.
 
 Simply put, a scavenge reclaims disk space by rewriting your database chunks minus the events that should be deleted, and then deleting the old chunks. Once a scavenge has been run, any deleted events cannot be recovered.
 

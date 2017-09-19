@@ -5,7 +5,7 @@ author: "James Nugent"
 layout: blog-post
 ---
 
-*As we gear up to launch version 3.0.0 of Event Store, we decided it would be a good idea to run a short series of articles describing some of the new features and changes for those who haven't seen them. If there are things you want to know about in particular, please get in touch on Twitter, [@eventstore](https://twitter.com/eventstore)!*
+*As we gear up to launch version 3.0.0 of Event Store, we decided it would be a good idea to run a short series of articles describing some of the new features and changes for those who haven’t seen them. If there are things you want to know about in particular, please get in touch on Twitter, [@eventstore](https://twitter.com/eventstore)!*
 
 ##New Media Types and Headers
 
@@ -72,7 +72,7 @@ Content-Length: 30
 
 Some clients have issues creating UUIDs client side. This causes issues when
 trying to make use of the idempotent writing features of the Event Store, since
-there can't be a unique ID on the events if there's no method of generating
+there can’t be a unique ID on the events if there's no method of generating
 UUIDs. To make this easier, we've implemented a redirect-to-idempotent-URI
 pattern.
 

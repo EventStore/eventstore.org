@@ -18,13 +18,13 @@ There is also an accompanying update to the .NET Client API and the Embedded Cli
 - [#925](https://github.com/EventStore/EventStore/pull/925) **(All Platforms)** Wait for subsystems to initialise before publishing the system ready message.
 - [#934](https://github.com/EventStore/EventStore/pull/934) **(All Platforms)** (Projections) Add RunProjections method for backwards compatibility for clients upgrading to the embedded client pre 4.0.
 - [#935](https://github.com/EventStore/EventStore/pull/935) **(All Platforms)** Change the config file default option to correctly reflect its source.
-- [#937](https://github.com/EventStore/EventStore/pull/937) **(All Platforms)** Ensure persistent subscription checkpoint version doesn't get corrupted when an error occurs while writing a checkpoint.
+- [#937](https://github.com/EventStore/EventStore/pull/937) **(All Platforms)** Ensure persistent subscription checkpoint version doesn’t get corrupted when an error occurs while writing a checkpoint.
 - [#938](https://github.com/EventStore/EventStore/pull/938) **(All Platforms)** (Projections) Only initialise projections when the core worker readers are ready.
 - [#951](https://github.com/EventStore/EventStore/pull/951) **(All Platforms)** Fixed an error caused by the ContentType header on a forwarded http message being null.
 - [#953](https://github.com/EventStore/EventStore/pull/953) **(All Platforms)** (Projections) Fixed complete TF position required error.
 - [#956](https://github.com/EventStore/EventStore/pull/956) **(All Platforms)** (HTTP API) Use the advertised IP address to build the atom links, if they are set.
 - [#959](https://github.com/EventStore/EventStore/pull/959) **(All Platforms)** (HTTP API) Return the current version on a WrongExpectedVersion response over HTTP.
-- [#962](https://github.com/EventStore/EventStore/pull/962) **(All Platforms)** Fixed an issue where we weren't retrying on the writes of scavenge statuses.
+- [#962](https://github.com/EventStore/EventStore/pull/962) **(All Platforms)** Fixed an issue where we weren’t retrying on the writes of scavenge statuses.
 
 ## .NET Embedded Client 3.7.0 release notes
 

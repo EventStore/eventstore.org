@@ -31,7 +31,7 @@ first
 ```
 
 By default the `$by_category` projection will link existing events from a stream id with a name such as `account-1` to a stream called `$ce-account`.
-The separator as well as where to split the stream id is configurable. You can edit the projection and provide your own values if the defaults don't fit your particular scenario.
+The separator as well as where to split the stream id is configurable. You can edit the projection and provide your own values if the defaults don’t fit your particular scenario.
 
 The first parameter specifies how the separator will be used and the possible values for that parameter is first or last. The separator can be any character.
 
@@ -63,7 +63,7 @@ first
 ```
 
 By default the `$stream_by_category` projection will link existing events from a stream id with a name such as `account-1` to a stream called `$category-account`.
-The separator as well as where to split the stream id is configurable. You can edit the projection and provide your own values if the defaults don't fit your particular scenario.
+The separator as well as where to split the stream id is configurable. You can edit the projection and provide your own values if the defaults don’t fit your particular scenario.
 
 The first parameter specifies how the separator will be used and the possible values for that parameter is first or last. The separator can be any character.
 

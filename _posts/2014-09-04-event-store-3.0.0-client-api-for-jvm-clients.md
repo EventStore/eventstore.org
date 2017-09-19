@@ -5,17 +5,11 @@ author: "James Nugent"
 layout: blog-post
 ---
 
-<p class="lead">As we gear up to launch version 3.0.0 of Event Store <a href="/two-years-on">at our annual birthday
-party (which you should totally come
-to!)</a>, we decided it would be a good
-idea to run a short series of articles describing some of the new features and
-changes for those who haven't seen them. If there are things you want to know
-about in particular, please get in touch on Twitter,
-<a href="https://twitter.com/eventstore">@eventstore</a></p>
+<p class="lead">As we gear up to launch version 3.0.0 of Event Store at our annual birthday party (which you should totally come to!), we decided it would be a good idea to run a short series of articles describing some of the new features and changes for those who haven’t seen them. If there are things you want to know about in particular, please get in touch on Twitter, <a href="https://twitter.com/eventstore">@eventstore</a></p>
 
 ##Using Event Store From JVM Languages
 
-One of the reasons the Event Store has an HTTP API is to make it possible to talk from any platform capable of making HTTP requests. However, there are some things that we currently can't do over HTTP (at least until HTTP 2.0 is "done"!) - for example, push subscriptions to streams, though the long polling mechanism can approximate this.
+One of the reasons the Event Store has an HTTP API is to make it possible to talk from any platform capable of making HTTP requests. However, there are some things that we currently can’t do over HTTP (at least until HTTP 2.0 is "done"!) - for example, push subscriptions to streams, though the long polling mechanism can approximate this.
 
 The `master` branch of the repository supports the current stable v2.0.1 release, however v3.0.0-rc2 support is available on a branch, and the final release of v3.0.0 will be supported by the release date.
 
