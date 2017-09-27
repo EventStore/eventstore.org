@@ -1,8 +1,12 @@
 [
     {
         "os": "ubuntu-16.04",
-        "currentVersion": "4.0.2",
+        "currentVersion": "4.0.3",
         "downloads": [
+            {
+                "version": "4.0.3",
+                "url": "https://eventstore.org/downloads/EventStore-OSS-Ubuntu-16.04-v4.0.3.tar.gz"
+            },
             {
                 "version": "4.0.2",
                 "url": "https://eventstore.org/downloads/EventStore-OSS-Ubuntu-16.04-v4.0.2.tar.gz"
@@ -23,8 +27,12 @@
     },
     {
         "os": "ubuntu-14.04",
-        "currentVersion": "4.0.2",
+        "currentVersion": "4.0.3",
         "downloads": [
+            {
+                "version": "4.0.3",
+                "url": "https://eventstore.org/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.3.tar.gz"
+            },
             {
                 "version": "4.0.2",
                 "url": "https://eventstore.org/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.2.tar.gz"
@@ -283,8 +291,12 @@
     },
     {
         "os": "win",
-        "currentVersion": "4.0.2",
+        "currentVersion": "4.0.3",
         "downloads": [
+            {
+                "version": "4.0.3",
+                "url": "https://eventstore.org/downloads/EventStore-OSS-Win-v4.0.3.zip"
+            },
             {
                 "version": "4.0.2",
                 "url": "https://eventstore.org/downloads/EventStore-OSS-Win-v4.0.2.zip"
