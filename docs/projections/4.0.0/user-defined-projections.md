@@ -28,7 +28,7 @@ fromStream('account-1') //selector
 		}
 	},
 	myEventType: function(state, evnt){
-		s.count += 1;
+		state.count += 1;
 	}
 })
 .transformBy(function(state){ //transformation
