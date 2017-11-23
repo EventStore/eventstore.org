@@ -194,7 +194,7 @@ To ensure that the Event Store server follows link events when reading, ensure t
 
 ## Reading a single event
 
-The `ReadSingleEventAsync` method reads a single event from a stream at a specified position. This is the simplest case of reading events, but is still useful for situations such as reading the last event in the stream to be used as a starting point for a subscription. This function accepts three parameters:
+The `ReadEventAsync` method reads a single event from a stream at a specified position. This is the simplest case of reading events, but is still useful for situations such as reading the last event in the stream to be used as a starting point for a subscription. This function accepts three parameters:
 
 <table>
     <thead>
