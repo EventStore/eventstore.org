@@ -75,7 +75,7 @@ The members on `EventData` are:
         </tr>
         <tr>
             <td><code>string Type</code></td>
-            <td>The name of the event type. This can be used later for pattern matching in projections, so should be a “friendly” name rather than a CLR type name, for example.</code></td>
+            <td>The name of the event type. This can be used later for pattern matching in projections, so should be a “friendly” name rather than a CLR type name, for example.</td>
         </tr>
         <tr>
             <td><code>bool IsJson</code></td>
