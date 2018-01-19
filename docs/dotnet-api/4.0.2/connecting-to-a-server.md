@@ -207,6 +207,11 @@ The following values can be set using the connection string.
             <td>A URI in format described above to connect to</td>
             <td>The URI to connect to</td>
         </tr>
+        <tr>
+            <td>PreferRandomNode</td>
+            <td>true/false</td>
+            <td>Option to prefer a randomly selected node. This helps with distributing load from multiple clients across the nodes in a cluster</td>
+        </tr>
     </tbody>
 </table>
 
