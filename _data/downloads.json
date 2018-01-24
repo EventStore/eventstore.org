@@ -1,8 +1,16 @@
 [
     {
         "os": "ubuntu-16.04",
-        "currentVersion": "4.0.3",
+        "currentVersion": "4.1.0",
         "downloads": [
+            {
+                "version": "4.1.0",
+                "url": "https://eventstore.org/downloads/EventStore-OSS-Ubuntu-16.04-v4.1.0.tar.gz"
+            },
+            {
+                "version": "4.0.3-hotfix1",
+                "url": "https://eventstore.org/downloads/EventStore-OSS-Ubuntu-16.04-v4.0.3-hotfix1.tar.gz"
+            },
             {
                 "version": "4.0.3",
                 "url": "https://eventstore.org/downloads/EventStore-OSS-Ubuntu-16.04-v4.0.3.tar.gz"
@@ -27,8 +35,16 @@
     },
     {
         "os": "ubuntu-14.04",
-        "currentVersion": "4.0.3",
+        "currentVersion": "4.1.0",
         "downloads": [
+            {
+                "version": "4.1.0",
+                "url": "https://eventstore.org/downloads/EventStore-OSS-Ubuntu-14.04-v4.1.0.tar.gz"
+            },
+            {
+                "version": "4.0.3-hotfix1",
+                "url": "https://eventstore.org/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.3-hotfix1.tar.gz"
+            },
             {
                 "version": "4.0.3",
                 "url": "https://eventstore.org/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.3.tar.gz"
@@ -291,8 +307,16 @@
     },
     {
         "os": "win",
-        "currentVersion": "4.0.3",
+        "currentVersion": "4.1.0",
         "downloads": [
+            {
+                "version": "4.1.0",
+                "url": "https://eventstore.org/downloads/EventStore-OSS-Win-v4.1.0.zip"
+            },
+            {
+                "version": "4.0.3-hotfix1",
+                "url": "https://eventstore.org/downloads/EventStore-OSS-Win-v4.0.3-hotfix1.zip"
+            },
             {
                 "version": "4.0.3",
                 "url": "https://eventstore.org/downloads/EventStore-OSS-Win-v4.0.3.zip"
