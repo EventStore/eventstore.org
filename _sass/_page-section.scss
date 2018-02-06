@@ -437,6 +437,18 @@
     background-image: none;
 }
 
+.users {
+    border-bottom: none;
+    text-align: center;
+    img {
+        width: 100%;
+        @media (min-width: 800px) {
+            padding: 1.5rem 0 4.5rem;
+            width: 75%;
+        }
+    }
+}
+
 .c2a-section {
     a {
         display: block;
