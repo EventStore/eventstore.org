@@ -43,7 +43,7 @@ The other interface is HTTP-based. In particular it is based upon the [AtomPub p
 ### Community Developed Clients
 
 - [Ruby](https://github.com/arkency/http_eventstore)
-- [Go](https://github.com/jetbasrawi/go.geteventstore)
+- [Go](https://github.com/vectorhacker/goro)
 
 <span class="note">
 Feel free to add more! Being listed as a community client does not imply official support.
