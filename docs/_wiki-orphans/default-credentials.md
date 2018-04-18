@@ -1,1 +1,0 @@
-When installing the Event Store a default user is created. This user is `admin` and the password is `changeit`. It is highly recommended that you change the password of this user.  This can be done through the web ui in the Users or MyAccount areas (for 2.0.x).
