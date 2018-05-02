@@ -2,9 +2,8 @@
 title: "Downloads"
 description: "Download Event Store binaries for Windows, Linux or macOS."
 ---
-
 <style>
-    .download-buttons a {
+ .download-buttons a {
         display: block;
         margin: 0 0 0.75rem;
         text-align: center;
@@ -37,150 +36,455 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         }
     }
 </style>
-
 {% include header.html %}
-    <div class="page-title">
-        <div class="inner-container">
-            <h1>{{ page.title }}</h1>
-        </div>
-    </div>
-    <div class="page-section--support-banner">
-        <div class="inner-container">
-            <div class="page-section__half download-icon-container">
-                <img class="download-icon" src="/images/download.svg" alt="Download icon">
-            </div>
-            <div class="page-section__half">
-                <p class="call-to-action download-buttons" id="current_release">
-                    <a href="/downloads/EventStore-OSS-Win-v4.1.0.zip" class="btn btn--primary">Get Event Store 4.1.0 for Windows</a>
-                    <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.1.0.tar.gz" class="btn btn--primary">Get Event Store 4.1.0 for Ubuntu 14.04</a>
-                    <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.1.0.tar.gz" class="btn btn--primary">Get Event Store 4.1.0 for Ubuntu 14.04 (without mono statically linked)</a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="page-section--banner">
-        <div class="inner-container">
-            <p class="lead">Download the latest Event Store binaries for your chosen platform here. If you’d like to browse the source code or contribute, check out the <a href="https://github.com/eventstore/eventstore">GitHub repository</a>.</p>
-            <p class="lead">We have package repositories for a variety of Linux distributions which you can use to install and update Event Store. Follow the <a href="/docs/server/installing-from-debian-repositories/">instructions to install via a package repository</a>.</p>
-        </div>
-    </div>
-    <div class="page-section">
-        <div class="inner-container">
-            <div class="page-section__half">
-                <div class="downloads__other">
-                    <h2>Client APIs</h2>
-                    <p>The .NET client API is available either as part of the packages or on NuGet. The package name is <a href="http://nuget.org/packages/EventStore.Client">EventStore.Client</a>.</p>
-                    <p>The JVM client using Akka is available on GitHub or Maven. The repository is <a href="https://github.com/EventStore/EventStore.JVM">EventStore.JVM</a>.</p>
-                </div>
-            </div>
-            <div class="page-section__half">
-                <div class="downloads__previous-versions">
-                    <h2>Previous Versions of Event Store</h2>
-                    <h3>Event Store 4</h3>
-                    <table id="previous_releases">
-                        <tbody>
-                            <tr>
-                                <td>Event Store 4.0.3 (hotfix)</td>
-                                <td><a href="/downloads/EventStore-OSS-Win-v4.0.3-hotfix1.zip">Windows</a></td>
-                                <td><a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.3-hotfix1.tar.gz">Ubuntu 14.04</a><br /><br />
-                                <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.0.3-hotfix1.tar.gz">Ubuntu 14.04 (Mono)</a></td>
-                            </tr>
-                            <tr>
-                                <td>Event Store 4.0.3</td>
-                                <td><a href="/downloads/EventStore-OSS-Win-v4.0.3.zip">Windows</a></td>
-                                <td><a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.3.tar.gz">Ubuntu 14.04</a><br /><br />
-                                <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.0.3.tar.gz">Ubuntu 14.04 (Mono)</a></td>
-                            </tr>
-                            <tr>
-                                <td>Event Store 4.0.2</td>
-                                <td><a href="/downloads/EventStore-OSS-Win-v4.0.2.zip">Windows</a></td>
-                                <td><a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.2.tar.gz">Ubuntu 14.04</a><br /><br />
-                                <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.0.2.tar.gz">Ubuntu 14.04 (Mono)</a></td>
-                            </tr>
-                            <tr>
-                                <td>Event Store 4.0.1 (hotfix)</td>
-                                <td><a href="/downloads/EventStore-OSS-Win-v4.0.1-hotfix4.zip">Windows</a></td>
-                                <td><a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.1-hotfix4.tar.gz">Ubuntu 14.04</a><br /><br />
-                                <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.0.1-hotfix4.tar.gz">Ubuntu 14.04 (Mono)</a></td>
-                            </tr>
-                            <tr>
-                                <td>Event Store 4.0.1</td>
-                                <td><a href="/downloads/EventStore-OSS-Win-v4.0.1.zip">Windows</a></td>
-                                <td><a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.1.tar.gz">Ubuntu 14.04</a><br /><br />
-                                <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.0.1.tar.gz">Ubuntu 14.04 (Mono)</a></td>
-                            </tr>
-                            <tr>
-                                <td>Event Store 4.0.0</td>
-                                <td><a href="/downloads/EventStore-OSS-Win-v4.0.0.zip">Windows</a></td>
-                                <td><a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.0.tar.gz">Ubuntu 14.04</a><br /><br />
-                                <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.0.0.tar.gz">Ubuntu 14.04 (Mono)</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <h3>Event Store 3</h3>
-                    <p>When upgrading to v3.0.x from v2 with an existing database, it is necessary to stop all projections which are running in v2 before upgrading, and restart them when the upgrade is complete.</p>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>Event Store 3.9.4</td>
-                                <td><a href="/downloads/EventStore-OSS-Win-v3.9.4.zip">Windows</a></td>
-                                <td><a href="/downloads/EventStore-OSS-Ubuntu-14.04-v3.9.4.tar.gz">Ubuntu 14.04</a><br /><br />
-                                <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v3.9.4.tar.gz">Ubuntu 14.04 (Mono)</a></td>
-                                <td><a href="/downloads/EventStore-OSS-MacOSX-v3.9.4.tar.gz">macOS</a><br /><br />
-                                <a href="/downloads/EventStore-OSS-Mono-MacOSX-v3.9.4.tar.gz">macOS (Mono)</a></td>
-                            </tr>
-                            <tr>
-                                <td>Event Store 3.9.3</td>
-                                <td><a href="/downloads/EventStore-OSS-Win-v3.9.3.zip">Windows</a></td>
-                                <td><a href="/downloads/EventStore-OSS-Ubuntu-14.04-v3.9.3.tar.gz">Ubuntu 14.04</a><br /><br />
-                                <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v3.9.3.tar.gz">Ubuntu 14.04 (Mono)</a></td>
-                                <td><a href="/downloads/EventStore-OSS-MacOSX-v3.9.3.tar.gz">macOS</a><br /><br />
-                                <a href="/downloads/EventStore-OSS-Mono-MacOSX-v3.9.3.tar.gz">macOS (Mono)</a></td>
-                            </tr>
-                            <tr>
-                                <td>Event Store 3.9.2</td>
-                                <td><a href="/downloads/EventStore-OSS-Win-v3.9.2.zip">Windows</a></td>
-                                <td><a href="/downloads/EventStore-OSS-Ubuntu-14.04-v3.9.2.tar.gz">Ubuntu 14.04</a><br /><br />
-                                <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v3.9.2.tar.gz">Ubuntu 14.04 (Mono)</a></td>
-                                <td><a href="/downloads/EventStore-OSS-MacOSX-v3.9.2.tar.gz">macOS</a><br /><br />
-                                <a href="/downloads/EventStore-OSS-Mono-MacOSX-v3.9.2.tar.gz">macOS (Mono)</a></td>
-                            </tr>
-                            <tr>
-                                <td>Event Store 3.9.1</td>
-                                <td><a href="/downloads/EventStore-OSS-Win-v3.9.1.zip">Windows</a></td>
-                                <td><a href="/downloads/EventStore-OSS-Ubuntu-14.04-v3.9.1.tar.gz">Ubuntu 14.04</a><br /><br />
-                                <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v3.9.1.tar.gz">Ubuntu 14.04 (Mono)</a></td>
-                                <td><a href="/downloads/EventStore-OSS-MacOSX-v3.9.1.tar.gz">macOS</a><br /><br />
-                                <a href="/downloads/EventStore-OSS-Mono-MacOSX-v3.9.1.tar.gz">macOS (Mono)</a></td>
-                            </tr>
-                            <tr>
-                                <td>Event Store 3.9.0</td>
-                                <td><a href="/downloads/EventStore-OSS-Win-v3.9.0.zip">Windows</a></td>
-                                <td><a href="/downloads/EventStore-OSS-Ubuntu-14.04-v3.9.0.tar.gz">Ubuntu 14.04</a><br /><br />
-                                <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v3.9.0.tar.gz">Ubuntu 14.04 (Mono)</a></td>
-                                <td><a href="/downloads/EventStore-OSS-MacOSX-v3.9.0.tar.gz">macOS</a><br /><br />
-                                <a href="/downloads/EventStore-OSS-Mono-MacOSX-v3.9.0.tar.gz">macOS (Mono)</a></td>
-                            </tr>
-                            <tr>
-                                <td>Event Store 3.8.1</td>
-                                <td><a href="/downloads/EventStore-OSS-Win-v3.8.1.zip">Windows</a></td>
-                                <td><a href="/downloads/EventStore-OSS-Ubuntu-14.04-v3.8.1.tar.gz">Ubuntu 14.04</a><br /><br />
-                                <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v3.8.1.tar.gz">Ubuntu 14.04 (Mono)</a></td>
-                                <td><a href="/downloads/EventStore-OSS-MacOSX-v3.8.1.tar.gz">macOS</a><br /><br />
-                                <a href="/downloads/EventStore-OSS-Mono-MacOSX-v3.8.1.tar.gz">macOS (Mono)</a></td>
-                            </tr>
-                            <tr>
-                                <td>Event Store 3.8.0</td>
-                                <td><a href="/downloads/EventStore-OSS-Win-v3.8.0.zip">Windows</a></td>
-                                <td><a href="/downloads/EventStore-OSS-Ubuntu-14.04-v3.8.0.tar.gz">Ubuntu 14.04</a><br /><br />
-                                <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v3.8.0.tar.gz">Ubuntu 14.04 (Mono)</a></td>
-                                <td><a href="/downloads/EventStore-OSS-MacOSX-v3.8.0.tar.gz">macOS</a><br /><br />
-                                <a href="/downloads/EventStore-OSS-Mono-MacOSX-v3.8.0.tar.gz">macOS (Mono)</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="page-title">
+ <div class="inner-container">
+  <h1>
+   {{ page.title }}
+  </h1>
+ </div>
+</div>
+<div class="page-section--support-banner">
+ <div class="inner-container">
+  <div class="page-section__half download-icon-container">
+   <img alt="Download icon" class="download-icon" src="/images/download.svg"/>
+  </div>
+  <div class="page-section__half">
+   <p class="call-to-action download-buttons" id="current_release">
+    <a class="btn btn--primary" href="/downloads/EventStore-OSS-Win-v4.1.1.zip">
+     Get EventStore 4.1.1 for Windows
+    </a>
+    <a class="btn btn--primary" href="/downloads/EventStore-OSS-Ubuntu-16.04-v4.1.1.tar.gz">
+     Get EventStore 4.1.1 for Ubuntu 16.04
+    </a>
+    <a class="btn btn--primary" href="/downloads/EventStore-OSS-Mono-Ubuntu-16.04-v4.1.1.tar.gz">
+     Get EventStore 4.1.1 for Ubuntu 16.04 (without mono statically linked)
+    </a>
+    <a class="btn btn--primary" href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.1.1.tar.gz">
+     Get EventStore 4.1.1 for Ubuntu 14.04
+    </a>
+    <a class="btn btn--primary" href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.1.1.tar.gz">
+     Get EventStore 4.1.1 for Ubuntu 14.04 (without mono statically linked)
+    </a>
+   </p>
+  </div>
+ </div>
+</div>
+<div class="page-section--banner">
+ <div class="inner-container">
+  <p class="lead">
+   Download the latest Event Store binaries for your chosen platform here. If you’d like to browse the source code or contribute, check out the
+   <a href="https://github.com/eventstore/eventstore">
+    GitHub repository
+   </a>
+   .
+  </p>
+  <p class="lead">
+   We have package repositories for a variety of Linux distributions which you can use to install and update Event Store. Follow the
+   <a href="/docs/server/installing-from-debian-repositories/">
+    instructions to install via a package repository
+   </a>
+   .
+  </p>
+ </div>
+</div>
+<div class="page-section">
+ <div class="inner-container">
+  <div class="page-section__half">
+   <div class="downloads__other">
+    <h2>
+     Client APIs
+    </h2>
+    <p>
+     The .NET client API is available either as part of the packages or on NuGet. The package name is
+     <a href="http://nuget.org/packages/EventStore.Client">
+      EventStore.Client
+     </a>
+     .
+    </p>
+    <p>
+     The JVM client using Akka is available on GitHub or Maven. The repository is
+     <a href="https://github.com/EventStore/EventStore.JVM">
+      EventStore.JVM
+     </a>
+     .
+    </p>
+   </div>
+  </div>
+  <div class="page-section__half">
+   <div class="downloads__previous-versions">
+    <h2>
+     Previous Versions of Event Store
+    </h2>
+    <h3>
+     Event Store 4
+    </h3>
+    <table id="previous_releases">
+     <tbody>
+      <tr>
+       <td>
+        Event Store 4.1.0
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Win-v4.1.0.zip">
+         Windows
+        </a>
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.1.0.tar.gz">
+         Ubuntu 14.04
+        </a>
+        <br/>
+        <br/>
+        <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.1.0.tar.gz">
+         Ubuntu 14.04 (Mono)
+        </a>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Event Store 4.0.3 (hotfix)
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Win-v4.0.3-hotfix1.zip">
+         Windows
+        </a>
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.3-hotfix1.tar.gz">
+         Ubuntu 14.04
+        </a>
+        <br/>
+        <br/>
+        <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.0.3-hotfix1.tar.gz">
+         Ubuntu 14.04 (Mono)
+        </a>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Event Store 4.0.3
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Win-v4.0.3.zip">
+         Windows
+        </a>
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.3.tar.gz">
+         Ubuntu 14.04
+        </a>
+        <br/>
+        <br/>
+        <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.0.3.tar.gz">
+         Ubuntu 14.04 (Mono)
+        </a>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Event Store 4.0.2
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Win-v4.0.2.zip">
+         Windows
+        </a>
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.2.tar.gz">
+         Ubuntu 14.04
+        </a>
+        <br/>
+        <br/>
+        <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.0.2.tar.gz">
+         Ubuntu 14.04 (Mono)
+        </a>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Event Store 4.0.1 (hotfix)
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Win-v4.0.1-hotfix4.zip">
+         Windows
+        </a>
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.1-hotfix4.tar.gz">
+         Ubuntu 14.04
+        </a>
+        <br/>
+        <br/>
+        <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.0.1-hotfix4.tar.gz">
+         Ubuntu 14.04 (Mono)
+        </a>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Event Store 4.0.1
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Win-v4.0.1.zip">
+         Windows
+        </a>
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.1.tar.gz">
+         Ubuntu 14.04
+        </a>
+        <br/>
+        <br/>
+        <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.0.1.tar.gz">
+         Ubuntu 14.04 (Mono)
+        </a>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Event Store 4.0.0
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Win-v4.0.0.zip">
+         Windows
+        </a>
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.0.tar.gz">
+         Ubuntu 14.04
+        </a>
+        <br/>
+        <br/>
+        <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.0.0.tar.gz">
+         Ubuntu 14.04 (Mono)
+        </a>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+    <h3>
+     Event Store 3
+    </h3>
+    <p>
+     When upgrading to v3.0.x from v2 with an existing database, it is necessary to stop all projections which are running in v2 before upgrading, and restart them when the upgrade is complete.
+    </p>
+    <table>
+     <tbody>
+      <tr>
+       <td>
+        Event Store 3.9.4
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Win-v3.9.4.zip">
+         Windows
+        </a>
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v3.9.4.tar.gz">
+         Ubuntu 14.04
+        </a>
+        <br/>
+        <br/>
+        <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v3.9.4.tar.gz">
+         Ubuntu 14.04 (Mono)
+        </a>
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-MacOSX-v3.9.4.tar.gz">
+         macOS
+        </a>
+        <br/>
+        <br/>
+        <a href="/downloads/EventStore-OSS-Mono-MacOSX-v3.9.4.tar.gz">
+         macOS (Mono)
+        </a>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Event Store 3.9.3
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Win-v3.9.3.zip">
+         Windows
+        </a>
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v3.9.3.tar.gz">
+         Ubuntu 14.04
+        </a>
+        <br/>
+        <br/>
+        <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v3.9.3.tar.gz">
+         Ubuntu 14.04 (Mono)
+        </a>
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-MacOSX-v3.9.3.tar.gz">
+         macOS
+        </a>
+        <br/>
+        <br/>
+        <a href="/downloads/EventStore-OSS-Mono-MacOSX-v3.9.3.tar.gz">
+         macOS (Mono)
+        </a>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Event Store 3.9.2
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Win-v3.9.2.zip">
+         Windows
+        </a>
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v3.9.2.tar.gz">
+         Ubuntu 14.04
+        </a>
+        <br/>
+        <br/>
+        <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v3.9.2.tar.gz">
+         Ubuntu 14.04 (Mono)
+        </a>
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-MacOSX-v3.9.2.tar.gz">
+         macOS
+        </a>
+        <br/>
+        <br/>
+        <a href="/downloads/EventStore-OSS-Mono-MacOSX-v3.9.2.tar.gz">
+         macOS (Mono)
+        </a>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Event Store 3.9.1
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Win-v3.9.1.zip">
+         Windows
+        </a>
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v3.9.1.tar.gz">
+         Ubuntu 14.04
+        </a>
+        <br/>
+        <br/>
+        <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v3.9.1.tar.gz">
+         Ubuntu 14.04 (Mono)
+        </a>
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-MacOSX-v3.9.1.tar.gz">
+         macOS
+        </a>
+        <br/>
+        <br/>
+        <a href="/downloads/EventStore-OSS-Mono-MacOSX-v3.9.1.tar.gz">
+         macOS (Mono)
+        </a>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Event Store 3.9.0
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Win-v3.9.0.zip">
+         Windows
+        </a>
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v3.9.0.tar.gz">
+         Ubuntu 14.04
+        </a>
+        <br/>
+        <br/>
+        <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v3.9.0.tar.gz">
+         Ubuntu 14.04 (Mono)
+        </a>
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-MacOSX-v3.9.0.tar.gz">
+         macOS
+        </a>
+        <br/>
+        <br/>
+        <a href="/downloads/EventStore-OSS-Mono-MacOSX-v3.9.0.tar.gz">
+         macOS (Mono)
+        </a>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Event Store 3.8.1
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Win-v3.8.1.zip">
+         Windows
+        </a>
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v3.8.1.tar.gz">
+         Ubuntu 14.04
+        </a>
+        <br/>
+        <br/>
+        <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v3.8.1.tar.gz">
+         Ubuntu 14.04 (Mono)
+        </a>
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-MacOSX-v3.8.1.tar.gz">
+         macOS
+        </a>
+        <br/>
+        <br/>
+        <a href="/downloads/EventStore-OSS-Mono-MacOSX-v3.8.1.tar.gz">
+         macOS (Mono)
+        </a>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Event Store 3.8.0
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Win-v3.8.0.zip">
+         Windows
+        </a>
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v3.8.0.tar.gz">
+         Ubuntu 14.04
+        </a>
+        <br/>
+        <br/>
+        <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v3.8.0.tar.gz">
+         Ubuntu 14.04 (Mono)
+        </a>
+       </td>
+       <td>
+        <a href="/downloads/EventStore-OSS-MacOSX-v3.8.0.tar.gz">
+         macOS
+        </a>
+        <br/>
+        <br/>
+        <a href="/downloads/EventStore-OSS-Mono-MacOSX-v3.8.0.tar.gz">
+         macOS (Mono)
+        </a>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+ </div>
+</div>
 {% include footer.html %}
