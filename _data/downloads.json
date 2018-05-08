@@ -1,7 +1,13 @@
 [
     {
-        "os": "ubuntu-18.04",
-        "downloads" : []
+        "currentVersion": "4.1.1",
+        "downloads" : [
+            {
+                "version": "4.1.1",
+                "url": "https://eventstore.org/downloads/EventStore-OSS-Ubuntu-18.04-v4.1.1.tar.gz"
+            }
+        ],
+        "os": "ubuntu-18.04"
     },
     {
         "currentVersion": "4.1.1",
