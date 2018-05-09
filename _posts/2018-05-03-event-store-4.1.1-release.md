@@ -7,6 +7,7 @@ layout: blog-post
 We are excited to announce that Event Store 4.1.1 has just been released! It is available for the following operating systems:
 
 - Windows (via Chocolatey)
+- Ubuntu 18.04 (via packagecloud)
 - Ubuntu 16.04 (via packagecloud)
 - Ubuntu 14.04 (via packagecloud)
 
