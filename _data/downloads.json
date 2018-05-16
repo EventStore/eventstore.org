@@ -1,17 +1,24 @@
 [
     {
-        "currentVersion": "4.1.1",
-        "downloads" : [
+        "downloads": [
+            {
+                "version": "4.1.1-hotfix1",
+                "url": "https://eventstore.org/downloads/EventStore-OSS-Ubuntu-18.04-v4.1.1-hotfix1.tar.gz"
+            },
             {
                 "version": "4.1.1",
                 "url": "https://eventstore.org/downloads/EventStore-OSS-Ubuntu-18.04-v4.1.1.tar.gz"
             }
         ],
-        "os": "ubuntu-18.04"
+        "os": "ubuntu-18.04",
+        "currentVersion": "4.1.1-hotfix1"
     },
     {
-        "currentVersion": "4.1.1",
         "downloads": [
+            {
+                "version": "4.1.1-hotfix1",
+                "url": "https://eventstore.org/downloads/EventStore-OSS-Ubuntu-16.04-v4.1.1-hotfix1.tar.gz"
+            },
             {
                 "version": "4.1.1",
                 "url": "https://eventstore.org/downloads/EventStore-OSS-Ubuntu-16.04-v4.1.1.tar.gz"
@@ -45,11 +52,15 @@
                 "url": "https://eventstore.org/downloads/EventStore-OSS-Ubuntu-16.04-v4.0.0.tar.gz"
             }
         ],
-        "os": "ubuntu-16.04"
+        "os": "ubuntu-16.04",
+        "currentVersion": "4.1.1-hotfix1"
     },
     {
-        "currentVersion": "4.1.1",
         "downloads": [
+            {
+                "version": "4.1.1-hotfix1",
+                "url": "https://eventstore.org/downloads/EventStore-OSS-Ubuntu-14.04-v4.1.1-hotfix1.tar.gz"
+            },
             {
                 "version": "4.1.1",
                 "url": "https://eventstore.org/downloads/EventStore-OSS-Ubuntu-14.04-v4.1.1.tar.gz"
@@ -207,10 +218,10 @@
                 "url": "https://eventstore.org/downloads/EventStore-OSS-Linux-v1.0.0.tar.gz"
             }
         ],
-        "os": "ubuntu-14.04"
+        "os": "ubuntu-14.04",
+        "currentVersion": "4.1.1-hotfix1"
     },
     {
-        "currentVersion": "3.9.4",
         "downloads": [
             {
                 "version": "3.9.4",
@@ -321,11 +332,15 @@
                 "url": "https://eventstore.org/downloads/EventStore-OSS-Mac-v3.0.0-rc2.tar.gz"
             }
         ],
-        "os": "osx-10.10"
+        "os": "osx-10.10",
+        "currentVersion": "3.9.4"
     },
     {
-        "currentVersion": "4.1.1",
         "downloads": [
+            {
+                "version": "4.1.1-hotfix1",
+                "url": "https://eventstore.org/downloads/EventStore-OSS-Win-v4.1.1-hotfix1.zip"
+            },
             {
                 "version": "4.1.1",
                 "url": "https://eventstore.org/downloads/EventStore-OSS-Win-v4.1.1.zip"
@@ -479,6 +494,7 @@
                 "url": "https://eventstore.org/downloads/EventStore-OSS-Win-v1.0.0.zip"
             }
         ],
-        "os": "win"
+        "os": "win",
+        "currentVersion": "4.1.1-hotfix1"
     }
 ]
