@@ -4,17 +4,17 @@ author: "Shaan Nobee"
 layout: blog-post
 ---
 
-A hotfix for Event Store 4.1.1 has been released to fix the following issue:
+We have released a hotfix for Event Store 4.1.1 to fix the following issue:
 https://github.com/EventStore/EventStore/issues/1627
 
-The hotfix can be downloaded for :
+You can download the hotfix for:
 - Windows (via Chocolatey)
 - Ubuntu 18.04 (via packagecloud)
 - Ubuntu 16.04 (via packagecloud)
 - Ubuntu 14.04 (via packagecloud)
 
 **Issue:**  
-Due to a mis-configuration, logging is being done synchronously on version 4.1.1  
+Due to a misconfiguration, logs are written synchronously in version 4.1.1
 
 **Event Store versions affected:**  
 4.1.1 only  
