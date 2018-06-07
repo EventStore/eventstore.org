@@ -433,19 +433,16 @@
 }
 
 .users-section {
-    background: $color-blue-grey-100;
+    background: $color-blue-grey-50;
     background-image: none;
 }
 
 .users {
     border-bottom: none;
+    padding: 6rem 0;
     text-align: center;
     img {
         width: 100%;
-        @media (min-width: 800px) {
-            padding: 1.5rem 0 4.5rem;
-            width: 75%;
-        }
     }
 }
 
