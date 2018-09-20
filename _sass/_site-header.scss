@@ -39,7 +39,7 @@
     padding: 1rem 1.5rem;
     color: $color-white;
     &:focus, &:hover {
-        color: $color-green-600;
+        color: $color-white !important;
     }
     @media (min-width: 720px) {
         display: none;
@@ -58,6 +58,9 @@
         background: none;
         list-style: none;
         overflow-x: auto;
+    }
+    &.is-open {
+        display: block !important;
     }
 }
 

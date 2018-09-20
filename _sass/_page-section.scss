@@ -299,7 +299,7 @@
     a {
         background: $color-blue-300;
         @media (min-width: 720px) {
-            background-image: url('../images/github.svg');
+            background-image: url('/images/github.svg');
             background-position: center 2.25rem;
             background-repeat: no-repeat;
             background-size: 6rem;
@@ -312,7 +312,7 @@
     a {
         background: $color-blue-300;
         @media (min-width: 720px) {
-            background-image: url('../images/google-new.svg');
+            background-image: url('/images/google-new.svg');
             background-position: center 2.25rem;
             background-repeat: no-repeat;
             background-size: 4rem;
@@ -325,7 +325,7 @@
     a {
         background: $color-blue-300;
         @media (min-width: 720px) {
-            background-image: url('../images/twitter.svg');
+            background-image: url('/images/twitter.svg');
             background-position: center 2.25rem;
             background-repeat: no-repeat;
             background-size: 6rem;
