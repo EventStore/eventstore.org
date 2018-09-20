@@ -5,7 +5,7 @@
 }
 
 html {
-    font-size: 0.875 * $font-base-size;
+    font-size: $font-base-size;
     @media (min-width: 720px) {
         font-size: $font-base-size;
     }
