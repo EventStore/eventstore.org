@@ -4,9 +4,9 @@
 var cacheName = 'eventstore.org:{{ site.time | date: "%s" }}';
 var cacheFiles = [
     '/',
-    '/offline',
-    '/docs/getting-started',
-    '/docs/support'
+    '/offline/',
+    '/docs/getting-started/',
+    '/support/'
 ];
 
 self.addEventListener('install', function(event) {
@@ -25,7 +25,7 @@ self.addEventListener('fetch', function(event) {
             }
             return fetch(event.request);
         }).catch(function() {
-            return caches.match('/offline');
+            return caches.match('/offline/');
         })
     );
 });
