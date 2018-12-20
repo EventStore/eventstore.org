@@ -4,39 +4,133 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
 ---
 <style>
  .download-buttons a {
-        display: block;
-        margin: 0 0 0.75rem;
-        text-align: center;
-    }
-    .download-icon-container {
-        text-align: center;
-    }
-    .download-icon {
-        height: 6rem;
-    }
-    .downloads__previous-versions table {
-        width: 100%;
-    }
-    .page-section--banner .lead {
-        max-width: 54rem;
-        margin: 1.5rem auto !important;
-        text-align: center;
-    }
-    @media (min-width: 720px) {
-        .download-icon-container {
-            margin: 3rem 0 0;
-            text-align: left;
-            text-indent: 3rem;
-        }
-        .download-icon {
-            height: 18rem;
-        }
-        .downloads__other {
-            margin-right: 4.5rem;
-        }
-    }
+  display: block;
+  margin: 0 0 0.75rem;
+  text-align: center;
+ }
+
+ .download-icon-container {
+  text-align: center;
+ }
+
+ .download-icon {
+  height: 6rem;
+ }
+
+ .downloads__previous-versions table {
+  width: 100%;
+ }
+
+ .page-section--banner .lead {
+  max-width: 54rem;
+  margin: 1.5rem auto !important;
+  text-align: center;
+ }
+
+ @media (min-width: 720px) {
+  .download-icon-container {
+   margin: 3rem 0 0;
+   text-align: left;
+   text-indent: 3rem;
+  }
+
+  .download-icon {
+   height: 10rem;
+  }
+
+  .downloads__other {
+   margin-right: 4.5rem;
+  }
+ }
+ .noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+ .page-section__mini {
+  color: black;
+ }
+ 
+ .stable_class {
+  background-color: #43A047;
+  color: white;
+  display: inline !important;
+  border-right: 0 !important;
+  border-top-right-radius:  0!important;
+     border-bottom-right-radius:  0!important;
+ }
+ .stable_class:hover{
+  cursor: pointer;
+ }
+ .pre-release_class {
+  background-color: rgba(255, 255, 255, .4);
+  color: #43A047;
+  display: inline !important;
+  border-left: 0 !important;
+  border-top-left-radius: 0!important;
+     border-bottom-left-radius: 0!important;
+ }
+ .pre-release_class:hover{
+  cursor: pointer;
+ }
+ #download_container h1{
+  color: black;
+  text-align: left;
+  margin-left: 25px;
+ }
+ #download_container h2{
+  font-size: 2em;
+ }
+
+.hiddenradio {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+ #stable_id:checked ~ .pre-release-list{
+  display: none;
+ }
+
+ #release_id:checked ~ .stable-list{
+  display: none;
+ }
+ #release_id:checked ~ .pre-release_class{
+  background-color: #43A047;
+color: white;
+ }
+ #release_id:checked ~ .stable_class{
+background-color: rgba(255, 255, 255, .4);
+color: #43A047;
+}
+ .download-button{
+  display: block;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 10px;
+  text-align: center;
+ }
+ .page-section--banner{
+  margin-bottom: 25px;
+ }
+       
+ 
+
+
+ 
+ 
 </style>
 {% include header.html %}
+<script>
+//load download.json
+ //TODO: put in includes
+ var downloads = {{ site.data.downloads | jsonify }};
+</script>
+
 <div class="page-title">
  <div class="inner-container">
   <h1>
@@ -44,42 +138,7 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
   </h1>
  </div>
 </div>
-<div class="page-section--support-banner">
- <div class="inner-container">
-  <div class="page-section__half download-icon-container">
-   <img alt="Download icon" class="download-icon" src="/images/download.svg"/>
-  </div>
-  <div class="page-section__half">
-   <p class="call-to-action download-buttons" id="current_release">
-    <h1>
-     Get EventStore 4.1.1-hotfix1
-    </h1>
-    <a class="btn btn--primary" href="/downloads/EventStore-OSS-Win-v4.1.1-hotfix1.zip" style="display:block; float: left; width: 100%; margin-left: 0%;  margin-bottom: 10px; text-align: center;">
-     Windows
-    </a>
-    <a class="btn btn--primary" href="/downloads/EventStore-OSS-Ubuntu-18.04-v4.1.1-hotfix1.tar.gz" style="display:block; float: left; width: 48%; margin-left: 0%;  margin-bottom: 10px; text-align: center;">
-     Ubuntu 18.04
-    </a>
-    <a class="btn btn--secondary" href="/downloads/EventStore-OSS-Mono-Ubuntu-18.04-v4.1.1-hotfix1.tar.gz" style="display:block; float: left; width: 48%; margin-left: 4%;  margin-bottom: 10px; text-align: center;">
-     Ubuntu 18.04 (without mono)
-    </a>
-    <a class="btn btn--primary" href="/downloads/EventStore-OSS-Ubuntu-16.04-v4.1.1-hotfix1.tar.gz" style="display:block; float: left; width: 48%; margin-left: 0%;  margin-bottom: 10px; text-align: center;">
-     Ubuntu 16.04
-    </a>
-    <a class="btn btn--secondary" href="/downloads/EventStore-OSS-Mono-Ubuntu-16.04-v4.1.1-hotfix1.tar.gz" style="display:block; float: left; width: 48%; margin-left: 4%;  margin-bottom: 10px; text-align: center;">
-     Ubuntu 16.04 (without mono)
-    </a>
-    <a class="btn btn--primary" href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.1.1-hotfix1.tar.gz" style="display:block; float: left; width: 48%; margin-left: 0%;  margin-bottom: 10px; text-align: center;">
-     Ubuntu 14.04
-    </a>
-    <a class="btn btn--secondary" href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.1.1-hotfix1.tar.gz" style="display:block; float: left; width: 48%; margin-left: 4%;  margin-bottom: 10px; text-align: center;">
-     Ubuntu 14.04 (without mono)
-    </a>
-   </p>
-  </div>
- </div>
-</div>
-<div class="page-section--banner">
+<div class="page-section">
  <div class="inner-container">
   <p class="lead">
    Download the latest Event Store binaries for your chosen platform here. If you’d like to browse the source code or contribute, check out the
@@ -88,6 +147,189 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
    </a>
    .
   </p>
+ </div>
+</div>
+<div id="download_container" class="inner-container" style="text-align: center; margin-bottom: 50px;">
+ <br>
+ <input class="hiddenradio" type="radio" id="stable_id" checked="checked" name="fake_radio" />
+ <input class="hiddenradio" type="radio" id="release_id" name="fake_radio" />
+ <label for="stable_id" class="btn stable_class noselect" style="max-width: 200px; width: 48%;  margin-bottom: 10px; text-align: center;">
+  Stable
+ </label>
+ <label for="release_id" class="btn pre-release_class noselect" style="max-width: 200px; width: 48%;  margin-bottom: 10px; text-align: center;">
+  Pre-Release
+ </label>
+ <p></p>
+</div>
+<script>
+
+ function createDownloadButton(downloadLink, text) {
+  var btn = document.createElement("a");
+  btn.setAttribute("class", "btn btn--primary  download-button");
+  btn.setAttribute("href", downloadLink);
+  btn.append(text);
+  return btn;
+ }
+
+ function createMiniSection(name, buttons) {
+  var miniSection = document.createElement("div");
+  miniSection.setAttribute("class", "page-section__mini");
+  var container = document.createElement("div");
+  var header = document.createElement("h2");
+  header.append(name);
+  container.appendChild(header);
+  for (i in buttons) {
+   container.appendChild(buttons[i]);
+  }
+
+  miniSection.appendChild(container);
+  return miniSection;
+
+ }
+
+ function createEmptyMiniSection() {
+  var miniSection = document.createElement("div");
+  miniSection.setAttribute("class", "page-section__mini");
+  var placeholder = document.createElement("img");
+  placeholder.setAttribute("alt", "Download icon");
+  placeholder.setAttribute("class", "download-icon");
+  placeholder.setAttribute("src", "/images/download.svg");
+  var container = document.createElement("div");
+  container.appendChild(placeholder);
+  miniSection.appendChild(container);
+  return miniSection;
+ }
+
+ function createPageSection_3(version, customClass, miniSection1, miniSection2, miniSection3) {
+  var pageSection = document.createElement("div");
+  pageSection.setAttribute("class", "page-section--banner " + customClass);
+  var header = document.createElement("h1");
+  header.append("EventStore "+version);
+  pageSection.appendChild(header);
+  var innerContainer = document.createElement("div");
+  innerContainer.setAttribute("class", "inner-container");
+  innerContainer.appendChild(miniSection1);
+  innerContainer.appendChild(miniSection2);
+  innerContainer.appendChild(miniSection3);
+  pageSection.appendChild(innerContainer);
+  return pageSection;
+ }
+ 
+ function createDownloadSections(containerId, customClass, versions, onEmptyMessage) {
+  if(versions.length==0){
+   var container = document.createElement("div");
+   container.setAttribute("class",customClass);
+   container.append(onEmptyMessage);
+   document.getElementById(containerId).append(container);
+   return;
+  }
+  for (i in versions) {
+   var version = versions[i];
+   var osCount = 0;
+   var miniSections = [];
+   console.log(version);
+   
+   var osList = ["Windows","Linux","Mac"];
+   for (osIndex in osList) {
+    var os = osList[osIndex];
+    if(downloads[version][os] === undefined) continue;
+    
+    var downloadButtons = [];
+    for (i in downloads[version][os]) {
+     downloadButtons.push(
+      createDownloadButton(
+       downloads[version][os][i].url,
+       downloads[version][os][i].name)
+     );
+    }
+    var miniSection = createMiniSection(os, downloadButtons);
+    miniSections.push(miniSection);
+    osCount++;
+   }
+   var page_section;
+   if (osCount == 2) {
+    page_section = createPageSection_3(version, customClass, miniSections[0], miniSections[1], createEmptyMiniSection());
+   } else if (osCount == 3) {
+    var page_section = createPageSection_3(version, customClass, miniSections[0], miniSections[1], miniSections[2]);
+   }
+   document.getElementById(containerId).append(page_section);
+  }
+    } 
+ 
+ function getMajorVersion(version) {
+  major = version.split(".")[0];
+  return parseInt(major);
+ }
+
+ function isStable(version) {
+  return version.indexOf("-rc") == -1 && version.indexOf("-alpha") == -1 && version.indexOf("-beta") == -1;
+ }
+
+ function getMajorMinorPatchVersion(version) {
+  return version.split("-")[0];
+ }
+
+ var currentStableVersion;
+ var previousStableVersion;
+
+ var nextPreReleaseVersion;
+ var currentPreReleaseVersion;
+ var previousPreReleaseVersion;
+
+ stableVersions = [];
+ preReleaseVersions = [];
+ for (version in downloads) {
+  if (isStable(version))
+   stableVersions.push(version);
+  else preReleaseVersions.push(version);
+
+ }
+ stableVersions.sort();
+ stableVersions.reverse();
+ currentStableVersion = stableVersions[0];
+ for (i in stableVersions) {
+  if (getMajorVersion(stableVersions[i]) == getMajorVersion(currentStableVersion) - 1) {
+   previousStableVersion = stableVersions[i];
+   break;
+  }
+ }
+
+ preReleaseVersions.sort();
+ preReleaseVersions.reverse();
+
+ for (i in preReleaseVersions) {
+  var version = preReleaseVersions[i];
+  if (currentStableVersion !== undefined
+   && nextPreReleaseVersion === undefined
+   && getMajorVersion(version) == getMajorVersion(currentStableVersion) + 1) {
+   nextPreReleaseVersion = version;
+  } else if (currentStableVersion !== undefined
+   && currentPreReleaseVersion === undefined
+   && getMajorVersion(version) == getMajorVersion(currentStableVersion)
+   && getMajorMinorPatchVersion(version) > getMajorMinorPatchVersion(currentStableVersion)) {
+   currentPreReleaseVersion = version;
+  } else if (previousStableVersion !== undefined
+      && previousPreReleaseVersion === undefined
+      && getMajorVersion(version) == getMajorVersion(previousStableVersion) 
+      && getMajorMinorPatchVersion(version) > getMajorMinorPatchVersion(previousStableVersion)) {
+   previousPreReleaseVersion = version;
+  }
+ }
+ 
+ var selectedStableVersions = [];
+ if(currentStableVersion !== undefined) selectedStableVersions.push(currentStableVersion);
+ if(previousStableVersion !== undefined) selectedStableVersions.push(previousStableVersion);
+ 
+ var selectedPrereleaseVersions = [];
+ if (nextPreReleaseVersion !== undefined) selectedPrereleaseVersions.push(nextPreReleaseVersion);
+ if (currentPreReleaseVersion !== undefined) selectedPrereleaseVersions.push(currentPreReleaseVersion);
+ if (previousPreReleaseVersion !== undefined) selectedPrereleaseVersions.push(previousPreReleaseVersion);
+
+ createDownloadSections("download_container", "stable-list", selectedStableVersions,"");
+ createDownloadSections("download_container", "pre-release-list", selectedPrereleaseVersions,"No pre-release versions are available at this time.");
+</script>
+<div class="page-section">
+ <div class="inner-container">
   <p class="lead">
    We have package repositories for a variety of Linux distributions which you can use to install and update Event Store. Follow the
    <a href="/docs/server/installing-from-debian-repositories/">
@@ -143,8 +385,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-Ubuntu-18.04-v4.1.1.tar.gz">
          Ubuntu 18.04
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-Ubuntu-18.04-v4.1.1.tar.gz">
          Ubuntu 18.04 (Mono)
         </a>
@@ -153,8 +395,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-Ubuntu-16.04-v4.1.1.tar.gz">
          Ubuntu 16.04
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-Ubuntu-16.04-v4.1.1.tar.gz">
          Ubuntu 16.04 (Mono)
         </a>
@@ -163,8 +405,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.1.1.tar.gz">
          Ubuntu 14.04
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.1.1.tar.gz">
          Ubuntu 14.04 (Mono)
         </a>
@@ -183,8 +425,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.1.0.tar.gz">
          Ubuntu 14.04
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.1.0.tar.gz">
          Ubuntu 14.04 (Mono)
         </a>
@@ -203,8 +445,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.3-hotfix1.tar.gz">
          Ubuntu 14.04
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.0.3-hotfix1.tar.gz">
          Ubuntu 14.04 (Mono)
         </a>
@@ -223,8 +465,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.3.tar.gz">
          Ubuntu 14.04
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.0.3.tar.gz">
          Ubuntu 14.04 (Mono)
         </a>
@@ -243,8 +485,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.2.tar.gz">
          Ubuntu 14.04
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.0.2.tar.gz">
          Ubuntu 14.04 (Mono)
         </a>
@@ -263,8 +505,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.1-hotfix4.tar.gz">
          Ubuntu 14.04
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.0.1-hotfix4.tar.gz">
          Ubuntu 14.04 (Mono)
         </a>
@@ -283,8 +525,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.1.tar.gz">
          Ubuntu 14.04
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.0.1.tar.gz">
          Ubuntu 14.04 (Mono)
         </a>
@@ -303,8 +545,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v4.0.0.tar.gz">
          Ubuntu 14.04
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v4.0.0.tar.gz">
          Ubuntu 14.04 (Mono)
         </a>
@@ -333,8 +575,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v3.9.4.tar.gz">
          Ubuntu 14.04
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v3.9.4.tar.gz">
          Ubuntu 14.04 (Mono)
         </a>
@@ -343,8 +585,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-MacOSX-v3.9.4.tar.gz">
          macOS
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-MacOSX-v3.9.4.tar.gz">
          macOS (Mono)
         </a>
@@ -363,8 +605,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v3.9.3.tar.gz">
          Ubuntu 14.04
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v3.9.3.tar.gz">
          Ubuntu 14.04 (Mono)
         </a>
@@ -373,8 +615,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-MacOSX-v3.9.3.tar.gz">
          macOS
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-MacOSX-v3.9.3.tar.gz">
          macOS (Mono)
         </a>
@@ -393,8 +635,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v3.9.2.tar.gz">
          Ubuntu 14.04
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v3.9.2.tar.gz">
          Ubuntu 14.04 (Mono)
         </a>
@@ -403,8 +645,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-MacOSX-v3.9.2.tar.gz">
          macOS
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-MacOSX-v3.9.2.tar.gz">
          macOS (Mono)
         </a>
@@ -423,8 +665,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v3.9.1.tar.gz">
          Ubuntu 14.04
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v3.9.1.tar.gz">
          Ubuntu 14.04 (Mono)
         </a>
@@ -433,8 +675,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-MacOSX-v3.9.1.tar.gz">
          macOS
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-MacOSX-v3.9.1.tar.gz">
          macOS (Mono)
         </a>
@@ -453,8 +695,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v3.9.0.tar.gz">
          Ubuntu 14.04
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v3.9.0.tar.gz">
          Ubuntu 14.04 (Mono)
         </a>
@@ -463,8 +705,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-MacOSX-v3.9.0.tar.gz">
          macOS
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-MacOSX-v3.9.0.tar.gz">
          macOS (Mono)
         </a>
@@ -483,8 +725,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v3.8.1.tar.gz">
          Ubuntu 14.04
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v3.8.1.tar.gz">
          Ubuntu 14.04 (Mono)
         </a>
@@ -493,8 +735,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-MacOSX-v3.8.1.tar.gz">
          macOS
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-MacOSX-v3.8.1.tar.gz">
          macOS (Mono)
         </a>
@@ -513,8 +755,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-Ubuntu-14.04-v3.8.0.tar.gz">
          Ubuntu 14.04
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-Ubuntu-14.04-v3.8.0.tar.gz">
          Ubuntu 14.04 (Mono)
         </a>
@@ -523,8 +765,8 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
         <a href="/downloads/EventStore-OSS-MacOSX-v3.8.0.tar.gz">
          macOS
         </a>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <a href="/downloads/EventStore-OSS-Mono-MacOSX-v3.8.0.tar.gz">
          macOS (Mono)
         </a>
@@ -537,3 +779,4 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
  </div>
 </div>
 {% include footer.html %}
+
