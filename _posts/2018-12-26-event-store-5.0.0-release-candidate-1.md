@@ -54,7 +54,8 @@ A new config option has been added: `InitializationThreads` to specify number of
 A new config option has been added: `ReduceFileCachePressure` that disables the `FileOptions.RandomAccess` cache flag when opening chunk files. This is particularly worth a try if the Windows File Cache is holding up a huge amount of memory.
 * [#1632,1633](https://github.com/EventStore/EventStore/pull/1633) - **(Scavenging)** Add ability to interrupt a scavenge by doing an HTTP DELETE request to `/admin/scavenge/{scavengeId}`.
 * [#1636](https://github.com/EventStore/EventStore/pull/1636) - **(Scavenging)** Add ability to start a scavenge from a chunk number by doing an HTTP POST request to `/admin/scavenge?startFromChunk=chunkNumber`.
-* [#1638](https://github.com/EventStore/EventStore/pull/1638) - **(Scavenging)** Add a scavenge operation to the index (PTables) which is launched automatically after chunk files have been scavenged.
+* [#1638](https://github.com/EventStore/EventStore/pull/1638) - **(Scavenging)** Add a scavenge operation to the index (PTables) which is launched automatically after chunk files have been scavenged.  
+This PR also allows the user to specify the number of threads used for a DB scavenge by doing an HTTP POST request to `/admin/scavenge?startFromChunk=chunkNumber&threads=numThreads`
 * [#1623](https://github.com/EventStore/EventStore/pull/1623) - **(Persistent Subscriptions)** Add a `PersistentSubscriptionsManager` class to the Client API. This wrapper around the HTTP API allows a developer to easily control persistent subscriptions.
 
 
