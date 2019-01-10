@@ -23,7 +23,6 @@ This release candidate contains all the [changes in 5.0.0 RC 1](https://eventsto
 By adding `StructuredLog: True` to your config or launching EventStore with `--structured-log`, your logs and stats files will magically turn into JSON which can easily be ingested into your log aggregation platform for analysis. Each line written to the logs/stats file is a serialized JSON string.
 * **[Commercial]** Correlation/Causation ID visualization  
 This feature allows you to visualize event flows if you use the correlation/causation ID pattern. The `$by_correlation_id` projection must be turned on for this feature to work. To access this feature, you can go to the "Visualize" tab in the web UI menu.
-
 * [#1813](https://github.com/EventStore/EventStore/pull/1813) - **(Server)** Referenced Environment Variables (thanks to [@hanxinimm](https://github.com/hanxinimm)!)  
 EventStore has for a long time supported setting configuration parameters through Environment Variables. For example, setting the environment variable `EVENTSTORE_EXT_IP=172.16.12.34` when launching the node is equivalent to adding `ExtIP: 172.16.12.34` to your config file.  
 With this change, you can now reference another environment variable by setting the value to `${env:REFERENCED_ENV_VAR}`. For instance, if you're on [Azure Service Fabric](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-overview) some [predefined environment variables](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-environment-variables-reference) exist. You could thus set `EVENTSTORE_EXT_IP=${env:Fabric_NodeIPOrFQDN}` to easily reference the node's IP address.
@@ -40,7 +39,6 @@ When `--reader-threads-count` is increased, the object pool size was not scaled 
 * [#1801](https://github.com/EventStore/EventStore/pull/1801) - **(Test Client)** Use `testclient.conf` for the EventStore test client instead of `eventstore.conf`
 * [#211](https://github.com/EventStore/EventStore.UI/pull/211) - **(UI)** Fix bug in `ProjectionService.js -> updateQuery()` causing the `source` to be set to `emit` value when an empty string is passed as `source`
 * [#1799](https://github.com/EventStore/EventStore/pull/1799) - **(Server)** Fix assembly information for `EventStore.Native` and `EventStore.Rags`
-
 * **[Packaging]** Bundle missing mono shared libraries in native packages: `libmono-btls-shared`, `libmono-system-native`
 * **[Packaging/Performance]** Add `--optimize=inline` mono runtime optimization to native packages
 
