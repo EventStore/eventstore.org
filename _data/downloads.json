@@ -103,6 +103,54 @@
             }
         ]
     }, 
+    "5.0.0": {
+        "Windows": [
+            {
+                "url": "https://eventstore.org/downloads/win/EventStore-OSS-Win-v5.0.0.zip", 
+                "name": "Windows 64-bit (.NET 4.7.1+)"
+            }
+        ], 
+        "Mac": [
+            {
+                "url": "https://eventstore.org/downloads/macos/EventStore-OSS-MacOS-macOS-v5.0.0.tar.gz", 
+                "name": "macOS 10.9+ (tarball)"
+            }, 
+            {
+                "url": "https://eventstore.org/downloads/macos/macOS/eventstore-oss-5.0.0.macOS.pkg", 
+                "name": "macOS 10.9+ (.pkg)"
+            }
+        ], 
+        "Linux": [
+            {
+                "url": "https://eventstore.org/downloads/ubuntu/trusty/eventstore-oss_5.0.0-1_amd64.deb", 
+                "name": "Ubuntu 14.04 64-bit (.deb)"
+            }, 
+            {
+                "url": "https://eventstore.org/downloads/ubuntu/xenial/eventstore-oss_5.0.0-1_amd64.deb", 
+                "name": "Ubuntu 16.04 64-bit (.deb)"
+            }, 
+            {
+                "url": "https://eventstore.org/downloads/ubuntu/bionic/eventstore-oss_5.0.0-1_amd64.deb", 
+                "name": "Ubuntu 18.04 64-bit (.deb)"
+            }, 
+            {
+                "url": "https://eventstore.org/downloads/ubuntu/EventStore-OSS-Linux-Ubuntu-14.04-v5.0.0.tar.gz", 
+                "name": "Ubuntu 14.04 64-bit (tarball)"
+            }, 
+            {
+                "url": "https://eventstore.org/downloads/ubuntu/EventStore-OSS-Linux-Ubuntu-16.04-v5.0.0.tar.gz", 
+                "name": "Ubuntu 16.04 64-bit (tarball)"
+            }, 
+            {
+                "url": "https://eventstore.org/downloads/ubuntu/EventStore-OSS-Linux-Ubuntu-18.04-v5.0.0.tar.gz", 
+                "name": "Ubuntu 18.04 64-bit (tarball)"
+            }, 
+            {
+                "url": "https://eventstore.org/downloads/el7/EventStore-OSS-Linux-Mono-v5.0.0.tar.gz", 
+                "name": "Linux 64-bit (mono 5.16.0.220)"
+            }
+        ]
+    }, 
     "4.1.1-hotfix1": {
         "Windows": [
             {
