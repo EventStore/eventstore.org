@@ -18,6 +18,39 @@ It's been some months since our last stable release of EventStore as we've inves
 
 There are some significant breaking changes, so we've decided to bump up the version to 5. EventStore's policy is to support the two latest major versions. Thus, as from now on, we will no longer support v3 and will continue to support v4 by providing important bug fixes. We, however, recommend all our users to upgrade to v5 to benefit from all the stability and performance improvements as well as the new features.
 
+## Where can I get the packages?
+
+Downloads are available on our [website](https://eventstore.org/downloads/).
+
+The packages can be installed using the following instructions.
+
+**Ubuntu 14.04/16.04/18.04** (via [packagecloud](https://packagecloud.io/EventStore/EventStore-OSS))
+
+```
+curl -s https://packagecloud.io/install/repositories/EventStore/EventStore-OSS/script.deb.sh | sudo bash
+sudo apt-get install eventstore-oss=5.0.0-1
+```
+
+**Windows** (via [Chocolatey](https://chocolatey.org/packages/eventstore-oss/5.0.0-rc1))
+
+```
+choco install eventstore-oss -version 5.0.0
+```
+
+**Client Packages**  
+
+[EventStore Client](https://www.nuget.org/packages/EventStore.Client/)  
+We highly discourage using EventStore.Client version 5.0.0 due to a severe bug mentioned in the bug fixes section. Please use version 5.0.1.
+```
+dotnet add package EventStore.Client --version 5.0.1
+```
+
+[EventStore Embedded Client](https://www.nuget.org/packages/EventStore.Client.Embedded/)
+
+```
+dotnet add package EventStore.Client.Embedded --version 5.0.0
+```
+
 ## Highlights
 
 - The [EventStore Client API](https://www.nuget.org/packages/EventStore.Client/) now also targets the `netstandard2.0` framework. This means that the client can be consumed by .NET Core 2.0+ projects. We previously had a separate [.NET Core client](https://www.nuget.org/packages/EventStore.ClientAPI.NetCore/). This is the first step in the effort to migrate EventStore towards .NET Core. We are also planning to migrate the server in the near future.
@@ -146,40 +179,7 @@ A new config option has been added: `ReduceFileCachePressure` that disables the 
 * [#1643](https://github.com/EventStore/EventStore/pull/1643) - **(Server)** Clean up persistent subscription logging (thanks to [@lscpike](https://github.com/lscpike)!)
 * [#1629](https://github.com/EventStore/EventStore/pull/1629) - **(Server)** Clean up scavenge log (thanks to [@lscpike](https://github.com/lscpike)!)
 
-## Where can I get the packages?
-
-Downloads are available on our [website](https://eventstore.org/downloads/).
-
-The packages can be installed using the following instructions.
-
-**Ubuntu 14.04/16.04/18.04** (via [packagecloud](https://packagecloud.io/EventStore/EventStore-OSS))
-
-```
-curl -s https://packagecloud.io/install/repositories/EventStore/EventStore-OSS/script.deb.sh | sudo bash
-sudo apt-get install eventstore-oss=5.0.0-1
-```
-
-**Windows** (via [Chocolatey](https://chocolatey.org/packages/eventstore-oss/5.0.0-rc1))
-
-```
-choco install eventstore-oss -version 5.0.0
-```
-
-**Client Packages**  
-
-[EventStore Client](https://www.nuget.org/packages/EventStore.Client/)  
-We highly discourage using EventStore.Client version 5.0.0 due to a severe bug mentioned in the bug fixes section. Please use version 5.0.1.
-```
-dotnet add package EventStore.Client --version 5.0.1
-```
-
-[EventStore Embedded Client](https://www.nuget.org/packages/EventStore.Client.Embedded/)
-
-```
-dotnet add package EventStore.Client.Embedded --version 5.0.0
-```
-
-## Internal Improvements
+### Internal Improvements
 The following internal aspects of EventStore have been improved:
 - Several bugs have been fixed for better test stability.
 - As part of the effort to migrate the EventStore server to .NET Core, the first step has been to convert the project format to the new SDK format. The server now targets .NET Framework 4.7.1. This also enables us to use the .NET Core tooling which improves accessibility for open source contributors.
