@@ -28,7 +28,7 @@ There are some significant breaking changes, so we've decided to bump up the ver
 
 - Mono has been upgraded to 5.16.0.220 from version 4.6.2. This upgrade brings more stability to Linux builds as well as new features such as TLS 1.2 support. Please consult the [mono release notes](https://www.mono-project.com/docs/about-mono/releases/) for the full list of changes.
 
-- We are releasing macOS packages again. A `.pkg` installer and tarball package is currently available for download.
+- We are releasing macOS packages again. A `.pkg` installer and tarball package is currently available for download. A Homebrew package is also in progress.
 
 - The [EventStore Embedded Client](https://www.nuget.org/packages/EventStore.Client.Embedded/) now works on all platforms: Windows, Linux and macOS. It was previously limited to Windows only. Linux and macOS require an installation of mono 5.16.0.220.
 
