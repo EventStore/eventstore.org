@@ -75,7 +75,7 @@ By default, EventStore logs and stats will now be saved in the JSON format. Each
     * Level 8 - 256M index entries  
     ...
     * Level K - 2^K x 1M index entries
-* [#1774](https://github.com/EventStore/EventStore/pull/1774) - **(Projections)** Add a `FaultOutOfOrderProjections` option (default: `True`) to allow the user to specify if a projection should be faulted when there is a discontinuity in event ordering. For example, if a stream has a `$maxAge` or `$maxCount`, a projection processing this stream may not receive some events if they have already "expired". In case `FaultOutOfOrderProjections` is set to `False`, an error will simply be logged and the projection will continue processing events.
+* [#1774](https://github.com/EventStore/EventStore/pull/1774) - **(Projections)** Add a `FaultOutOfOrderProjections` option (default: `True`) to allow the user to specify if a projection should be faulted when there is a discontinuity in event ordering. For example, if a stream has a `$maxAge` or `$maxCount`, a projection processing this stream may not receive some events if they have already "expired". In case `FaultOutOfOrderProjections` is set to `False`, an error is logged and the projection will continue processing events.
 * [#1692](https://github.com/EventStore/EventStore/pull/1692) - **(Server)** Print which process is locking a file at critical places (Windows only, with admin privileges)
 * **[Commercial]** Correlation/Causation ID visualization  
 This feature allows you to visualize event flows if you use the correlation/causation ID pattern. The `$by_correlation_id` projection must be turned on for this feature to work. To access this feature, you can go to the `Visualize` tab in the Web UI menu.
