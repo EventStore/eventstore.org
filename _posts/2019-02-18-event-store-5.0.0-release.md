@@ -69,7 +69,7 @@ By default, EventStore logs and stats will now be saved in the JSON format. Each
     * Level 3 - 8M index entries
     * Level 4 - 16M index entries
     * Level 5 - 32M index entries  
-    --- Depending on your hardware configuration, merges can take several minutes as from this level, you can verify your logs to get a better idea of the amount of time taken ---
+ Depending on your hardware configuration, merges can take several minutes as from this level, you can verify your logs to get a better idea of the amount of time taken.
     * Level 6 - 64M index entries  
     * Level 7 - 128M index entries  
     * Level 8 - 256M index entries  
