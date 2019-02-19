@@ -35,7 +35,7 @@ There are some significant breaking changes, so we've decided to bump up the ver
 - Many new features, bug fixes and enhancements! Please consult the Changelog for more details.
 
 ## Upgrade Procedure
-If you're running an EventStore cluster, we recommend to upgrade to version 5.0.0 by doing a rolling upgrade from version 4.1.1-hotfix1 without downtime:
+If you're running an EventStore cluster, we recommend you upgrade to version 5.0.0 by doing a rolling upgrade from version 4.1.1-hotfix1 without downtime:
 - Stop a node, upgrade it and start it
 - It is preferable to start the upgrade with slave nodes first, then upgrade the master last to minimize the number of elections and client reconnections
 - Upgrade the clients (optional but recommended)
