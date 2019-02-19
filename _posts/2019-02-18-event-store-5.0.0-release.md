@@ -14,7 +14,7 @@ Event Store 5.0.0 is out! It is available for the following operating systems:
 - CentOS 7 (Commercial version)
 - Amazon Linux AMI (Commercial version)
 
-It's been a few long months since our last stable release of EventStore as we've invested time in increasing the stability of the server, providing higher quality builds and improving our user and developer experience.
+It's been some months since our last stable release of EventStore as we've invested time in increasing the stability of the server, providing higher quality builds and improving our user and developer experience.
 
 There are some significant breaking changes, so we have decided to bump up the version to 5. EventStore's policy is to support the two latest major versions. Thus, as from now on, we will no longer support v3 and will continue to support v4 by providing important bug fixes. We, however, recommend all our users to upgrade to v5 to benefit from all the stability and performance improvements as well as the new features.
 
