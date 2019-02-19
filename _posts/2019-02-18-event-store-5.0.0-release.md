@@ -54,17 +54,11 @@ dotnet add package EventStore.Client.Embedded --version 5.0.0
 ## Highlights
 
 - The [EventStore Client API](https://www.nuget.org/packages/EventStore.Client/) now also targets the `netstandard2.0` framework. This means that the client can be consumed by .NET Core 2.0+ projects. We previously had a separate [.NET Core client](https://www.nuget.org/packages/EventStore.ClientAPI.NetCore/). This is the first step in the effort to migrate EventStore towards .NET Core. We are also planning to migrate the server in the near future.
-
 - The [EventStore Client API](https://www.nuget.org/packages/EventStore.Client/) now also targets the `net452` framework. We previously targeted only the `net46` framework.
-
 - Google's V8 has been upgraded to version 7.0 from version 5.2. EventStore's projection library uses the V8 engine to execute Javascript code. This upgrade brings several performance optimizations to projections and the latest Javascript language features. Please consult [V8's blog](https://v8.dev/blog/) for the full list of changes.
-
 - Mono has been upgraded to 5.16.0.220 from version 4.6.2. This upgrade brings more stability to Linux builds as well as new features such as TLS 1.2 support. Please consult the [mono release notes](https://www.mono-project.com/docs/about-mono/releases/) for the full list of changes.
-
 - We are releasing macOS packages again. A `.pkg` installer and tarball package is currently available for download. A Homebrew package is also in progress.
-
 - The [EventStore Embedded Client](https://www.nuget.org/packages/EventStore.Client.Embedded/) now works on all platforms: Windows, Linux and macOS. It was previously limited to Windows only. Linux and macOS require an installation of mono 5.16.0.220.
-
 - Many new features, bug fixes and enhancements! Please consult the Changelog for more details.
 
 ## Upgrade Procedure
@@ -113,7 +107,6 @@ By default, EventStore logs and stats will now be saved in the JSON format. Each
 * **[Commercial]** Correlation/Causation ID visualization  
 This feature allows you to visualize event flows if you use the correlation/causation ID pattern. The `$by_correlation_id` projection must be turned on for this feature to work. To access this feature, you can go to the `Visualize` tab in the Web UI menu.
 [View screenshot](/images/visualize-correlation-causation.jpg)
-
 * **[Commercial/Windows]** Allow the EventStore Manager service to be installed or uninstalled in non-interactive mode. This is useful for unattended installation of EventStore through a powershell script.
 * **[Packaging]** The EventStore test client is now bundled in deb and rpm packages as `estestclient`
 
