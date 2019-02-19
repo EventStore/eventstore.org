@@ -20,7 +20,7 @@ There are some significant breaking changes, so we've decided to bump up the ver
 
 ## Highlights
 
-- The [EventStore Client API](https://www.nuget.org/packages/EventStore.Client/) now also targets the `netstandard2.0` framework. This means that the client can be consumed by .NET Core 2.0+ projects. We previously had a separate [.NET Core client](https://www.nuget.org/packages/EventStore.ClientAPI.NetCore/). This is the first part of the effort to migrate EventStore towards .NET Core. We are also planning to migrate the server in the near future.
+- The [EventStore Client API](https://www.nuget.org/packages/EventStore.Client/) now also targets the `netstandard2.0` framework. This means that the client can be consumed by .NET Core 2.0+ projects. We previously had a separate [.NET Core client](https://www.nuget.org/packages/EventStore.ClientAPI.NetCore/). This is the first step in the effort to migrate EventStore towards .NET Core. We are also planning to migrate the server in the near future.
 
 - The [EventStore Client API](https://www.nuget.org/packages/EventStore.Client/) now also targets the `net452` framework. We previously targeted only the `net46` framework.
 
