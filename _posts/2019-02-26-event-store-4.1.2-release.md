@@ -45,7 +45,7 @@ No client packages have been released.
 ### Bug Fixes
 * [#1640](https://github.com/EventStore/EventStore/pull/1640) - **(Server)** Fix latency issue in index committer service queue & off by one error when shutting down EventStore services
 * [#1644](https://github.com/EventStore/EventStore/pull/1644) - **(Server)** Fix bug in `MakeUrl()` where url is wrongly formed when query parameters are present. This would cause the UI to throw an error when opening the `Query` tab.
-* [#1653](https://github.com/EventStore/EventStore/pull/1653) - **(Server)** Fix off by one bug in TFChunkDB causing pre-last chunk file not to be verified
+* [#1653](https://github.com/EventStore/EventStore/pull/1653) - **(Server)** Fix bug in TFChunkDB causing pre-last chunk file not to be verified
 * [#1667](https://github.com/EventStore/EventStore/pull/1667) - **(Server)** Fix issue where promoting a user to administrator required a server restart before taking effect
 * [#1712](https://github.com/EventStore/EventStore/pull/1712) - **(Server)** Added max count to `$PersistentSubscriptionConfig` to limit the size of the stream. The stream size was previously unbounded.
 * [#1737](https://github.com/EventStore/EventStore/pull/1737) - **(Server)** Fixed `ObjectPoolMaxLimitReachedException` for many reader threads (thanks to [@MadKat13](https://github.com/MadKat13)!)  
