@@ -4,7 +4,7 @@ author: "Pieter Germishuys"
 layout: blog-post
 ---
 
-Event Store 3.4.0 is now released! The headline feature is the addition of the [HTTP API for “competing consumers”](/docs/http-api/3.4.0/competing-consumers), but there have been numerous other improvements and bug fixes. We have also moved from [self hosting](https://apt-oss.eventstore.org/index.html) our Event Store packages to hosting the packages on [packagecloud](https://packagecloud.io/EventStore/EventStore-OSS).
+Event Store 3.4.0 is now released! The headline feature is the addition of the [HTTP API for “competing consumers”](/docs/http-api/competing-consumers/), but there have been numerous other improvements and bug fixes. We have also moved from self hosting our Event Store packages to hosting the packages on [packagecloud](https://packagecloud.io/EventStore/EventStore-OSS).
 
 There is also an accompanying update to the .NET Client API and the Embedded Client. These are now in the NuGet gallery.
 
