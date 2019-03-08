@@ -14,7 +14,7 @@ a variety of ways to suit a range of different use cases - either from the
 command line, from a configuration file or from environment variables. The
 original code that handled this was particularly hairy, and has been subject to
 a complete rewrite in version 3 (thanks originally to a great open-source
-contribution by [Pieter](http://pieterg.com), who is now part of the Event
+contribution by Pieter, who is now part of the Event
 Store team!)
 
 This post will outline the user perspective on how configuration works and what
