@@ -3,22 +3,31 @@ layout: blog-post
 title: How to avoid Dirty Reads with Event Store
 author: Riccardo Di Nuzzo
 ---
-Dirty Reads are not common but are possible with the default configuration. In this article we'll discuss why and consider how to avoid them.
 
-In brief, when a write is sent to an Event Store cluster, the master will write the events and replicate them to the other nodes in the cluster. The master will then wait for a quorum of nodes (cluster_size/2 + 1) to acknowledge the write before considering the write successful.
+Dirty Reads are not common but are possible with the default Event Store configuration. In this article I discuss why they occur and how to avoid them.
 
-In other words in a cluster of 3 nodes the quorum is 2 nodes. Before the Master can send back the acknowledge to the client it needs to wait the confirmation of write from at least 1 Slave node. For that reason **it is possible that a client can read from the other node that is not updated yet with the latest write**. This situation is defined as “Dirty Read”.
+When a client sends a write to an Event Store cluster, the master writes the events and replicates them to the other nodes in the cluster. The master then waits for a quorum of nodes (cluster size/2 + 1) to acknowledge the write before considering the write successful.
 
-If you must ensure that a client will always read the latest version of your data then you can...
+For example, in a cluster of 3 nodes the quorum is 2 nodes. Before the Master can send back acknowledgement to the client, it needs to wait the confirmation of a write from at least 1 Slave node. Because of this, **it is possible that a client can read from the other node that is not yet updated with the latest write**. This situation is called a "Dirty Read".
 
-If you use the .net client api: use the connection setting\
-`PerformOnMasterOnly`
+If you need to ensure that a client always reads the latest version of your data then you can do the following.
 
-If your client doesn’t provides this method use the connection string setting \
-`require-master=true`
+## .NET Client
 
-In conclusion the possibility to get a Dirty Read depends on connection settings and if it can be read from any or read only from master.
+Use the `PerformOnMasterOnly` setting in your [connection string](docs/dotnet-api/connecting-to-a-server/index.html#creating-a-connection):
 
-Hope this helps
+```csharp
+var connectionString = "ConnectTo=tcp://admin:changeit@localhost:1113; PerformOnMasterOnly=True"
+```
 
-Riccardo
+If your client doesn't provides this method use the connection string setting `require-master=true`:
+
+```csharp
+
+```
+
+## HTTP Client
+
+TBD
+
+In conclusion the possibility of a Dirty Read depends on your connection settings and if the cluster can read from any node, or read only from master.
