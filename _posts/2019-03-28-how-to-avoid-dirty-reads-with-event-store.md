@@ -14,7 +14,7 @@ If you need to ensure that a client always reads the latest version of your data
 
 ## .NET Client
 
-Use the `PerformOnMasterOnly` setting in your [connection string](docs/dotnet-api/connecting-to-a-server/index.html#creating-a-connection):
+Use the `PerformOnMasterOnly` setting in your [connection string](/docs/dotnet-api/connecting-to-a-server/index.html#creating-a-connection):
 
 ```csharp
 var connectionString = "ConnectTo=tcp://admin:changeit@localhost:1113; PerformOnMasterOnly=True"
@@ -22,7 +22,7 @@ var connectionString = "ConnectTo=tcp://admin:changeit@localhost:1113; PerformOn
 
 ## HTTP Client
 
-If your client doesn't provide this method, use the [`ES-RequireMaster` HTTP header](docs/http-api/optional-http-headers/requires-master/index.html) via your client:
+If your client doesn't provide this method, use the [`ES-RequireMaster` HTTP header](/docs/http-api/optional-http-headers/requires-master/index.html) via your client:
 
 ```shell
 curl -i "http://127.0.0.1:32004/streams/newstream" -H "ES-RequireMaster: True"
