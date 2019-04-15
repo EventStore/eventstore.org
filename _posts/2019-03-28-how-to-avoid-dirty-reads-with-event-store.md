@@ -14,10 +14,10 @@ If you need to ensure that a client always reads the latest version of your data
 
 ## .NET Client
 
-Use the `PerformOnMasterOnly` setting in your [connection string](/docs/dotnet-api/connecting-to-a-server/index.html#creating-a-connection):
+Use the `PerformOnMasterOnly()` [builder method](/docs/dotnet-api/connecting-to-a-server/index.html#node-preference), or the `RequireMaster` setting in your [connection string](/docs/dotnet-api/connecting-to-a-server/index.html#creating-a-connection):
 
 ```csharp
-var connectionString = "ConnectTo=tcp://admin:changeit@localhost:1113; PerformOnMasterOnly=True"
+var connectionString = "ConnectTo=tcp://admin:changeit@localhost:1113; RequireMaster=True"
 ```
 
 ## HTTP Client
