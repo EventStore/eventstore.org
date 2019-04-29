@@ -5,7 +5,7 @@ author: "Greg Young"
 layout: blog-post
 ---
 
-Version 2.0 binaries are now available for download at [eventstore.org/downloads](/downloads)</a>.
+Version 2.0 binaries are now available for download at [eventstore.org/downloads](/downloads).
 
 The new version is fully compatible with all database files from old versions no data upgrade is required. With the addition of security you will likely get asked for a username/password, the default is admin:changeit.
 
@@ -14,7 +14,7 @@ The new version is fully compatible with all database files from old versions no
 - Authentication over HTTP using basic authentication
 - Authentication over TCP for built-in user accounts
 - Management of internal accounts and ACLs
-- Changed configuration now supports environmnet variables and config files
+- Changed configuration now supports environment variables and config files
 - Tcp client can now run over SSL
 - `$stream-created` events removed from streams
 - Stream metadata separated
