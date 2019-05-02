@@ -53,7 +53,7 @@ Please be aware that the index rebuild is a time-consuming process.
 If you would like to rebuild your indexes with minimal downtime, you can rebuild the indexes on a separate, faster node and then restore them to the original cluster.
 
 To do that, you would need to do the following :
-1. Back up the data of one of your nodes. You can find the backup steps [here](https://eventstore.org/docs/server/4.0.2/database-backup/).
+1. Back up the data of one of your nodes. You can find the backup steps [here](https://eventstore.org/docs/server/database-backup/).
 2. Copy the backed up database to a separate machine - for example, a fast dev machine. You do not need to copy the indexes.
 3. Ensure that the indexes have been deleted.
 4. Start up Event Store as a single node pointing to the backed up data.
@@ -89,7 +89,7 @@ Additionally, the issue where projections may be deleted if they take a few minu
 ## Event Store 4.1.0 release notes
 
 ## Event Store Server
- 
+
 - [#1447](https://github.com/EventStore/EventStore/pull/1447) - **(All Platforms)** - Add gzip & deflate support for Accept-Encoding HTTP header
 - [#1448](https://github.com/EventStore/EventStore/pull/1448) - **(All Platforms)** - Prevent reads of events that have not been replicated
 - [#1461](https://github.com/EventStore/EventStore/pull/1461) - **(All Platforms)** - Add traverse in scavenge to count the new chunk size in memory
