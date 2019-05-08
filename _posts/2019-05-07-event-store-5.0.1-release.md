@@ -13,7 +13,7 @@ Event Store 5.0.1 is out! It is available for the following operating systems:
 - CentOS 7 (Commercial version)
 - Amazon Linux AMI (Commercial version)
 
-This release comes packed with many critical bug fixes and we highly recommend our users to upgrade as soon as possible. We're also planning to roll out version 4.1.3 with a subset of these bug fixes within the next few days.
+This release comes with some critical bug fixes and we highly recommend our users to upgrade as soon as possible. We're also planning to roll out version 4.1.3 with a subset of these bug fixes within the next few days.
 
 ## Where can I get the packages?
 
