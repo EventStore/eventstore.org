@@ -108,6 +108,9 @@ This bug fix allows events having the `IsJson` property set to `false` to be pro
 * [#1918](https://github.com/EventStore/EventStore/pull/1918) - **(Scavenging)** Add regular file flushes whilst writing out scavenged chunk  (thanks to [@lscpike](http://github.com/lscpike)!)  
 * [#1886](https://github.com/EventStore/EventStore/pull/1886) - **(Subscriptions)** Fix issue where proto3 clients could not subscribe to $all
 * [#1887](https://github.com/EventStore/EventStore/pull/1887) - **(Windows)** Use absolute path as mutex name when starting up node
+* [#213](https://github.com/EventStore/EventStore.UI/pull/213) - **(UI)** Added Placeholder for password field in the login form
+* [#214](https://github.com/EventStore/EventStore.UI/pull/214) - **(UI)** Fix typo
+* [#219](https://github.com/EventStore/EventStore.UI/pull/219) - **(UI)** Parse $state parameters as ints in scavenge view
 
 ## How do I provide feedback?
 
