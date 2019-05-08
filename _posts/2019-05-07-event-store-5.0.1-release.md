@@ -53,7 +53,7 @@ The behaviour of the `$by_category`, `$by_correlation_id` and multi-stream JavaS
 1. Stop all projections. This will force the projections to write a checkpoint and when the node is restarted, events up to the checkpoint will not be processed again.
 2. Do a rolling upgrade as usual: Stop, upgrade and launch one node at a time starting with slave nodes, then the master.
 
-Not following Step 1 may cause your projections to fault with the following error and you will need to either reset the projection or manually adjust the checkpoint:
+If you do not follow Step 1, your projections may fault with the following error and you will need to either reset the projection or manually adjust the checkpoint:
 ```
 An event emitted in recovery for stream <stream> differs from the originally emitted event. Existing('<event type>', '<caused by tag>'). New('<event type>', '<caused by tag>')
 ```
