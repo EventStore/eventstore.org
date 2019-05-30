@@ -80,6 +80,8 @@ fromStream('quiz')
 
 ![Create projection](/images/count-quiz-entries-proj.png)
 
+By default Event Store disables the `trackemittedstreams` setting for projections. When enabled, an event written records the stream name (in `$projections-{projection_name}-emittedstreams`) of each event emitted by the projection. This means that write amplification is a possibility, as each event that the projection emits writes a separate event. As such, this option is not recommended for projections that emit a lot of events, and you should enable only where necessary.
+
 A Projection starts with a selector, in this case `fromStream('quiz')`, which pulls events from the specified stream. Find more details on projections selector options [in the documentation](/docs/projections/user-defined-projections/index.html#selectors).
 
 The second part of a projection is a set of filters, in this case a `.when` [filter](/docs/projections/user-defined-projections/index.html#filterstransformations) that matches the filter parameters you define within the filter.
