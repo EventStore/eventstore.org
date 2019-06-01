@@ -1,0 +1,1445 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Class SourceDefinitionBuilder
+   | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SourceDefinitionBuilder
+   | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder">
+  
+  
+  <h1 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder" class="text-break">Class SourceDefinitionBuilder
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SourceDefinitionBuilder</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="EventStore.Projections.Core.Messages.IQuerySources.html">IQuerySources</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Services.Processing.html">EventStore.Projections.Core.Services.Processing</a></h6>
+  <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
+  <h5 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class SourceDefinitionBuilder : object, IQuerySources</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder__ctor.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L20">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder__ctor_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.#ctor*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder__ctor" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.#ctor">SourceDefinitionBuilder()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SourceDefinitionBuilder()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_AllStreams.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.AllStreams%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L109">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_AllStreams_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.AllStreams*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_AllStreams" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.AllStreams">AllStreams</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AllStreams { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_ByCustomPartitions.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.ByCustomPartitions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L137">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_ByCustomPartitions_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.ByCustomPartitions*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_ByCustomPartitions" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.ByCustomPartitions">ByCustomPartitions</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ByCustomPartitions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_ByStreams.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.ByStreams%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L133">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_ByStreams_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.ByStreams*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_ByStreams" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.ByStreams">ByStreams</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ByStreams { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_CatalogStream.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.CatalogStream%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L121">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_CatalogStream_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.CatalogStream*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_CatalogStream" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.CatalogStream">CatalogStream</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CatalogStream { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_Categories.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.Categories%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L113">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_Categories_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.Categories*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_Categories" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.Categories">Categories</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] Categories { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_DefinesCatalogTransform.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.DefinesCatalogTransform%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L149">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_DefinesCatalogTransform_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.DefinesCatalogTransform*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_DefinesCatalogTransform" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.DefinesCatalogTransform">DefinesCatalogTransform</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DefinesCatalogTransform { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_DefinesFold.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.DefinesFold%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L157">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_DefinesFold_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.DefinesFold*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_DefinesFold" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.DefinesFold">DefinesFold</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DefinesFold { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_DefinesStateTransform.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.DefinesStateTransform%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L145">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_DefinesStateTransform_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.DefinesStateTransform*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_DefinesStateTransform" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.DefinesStateTransform">DefinesStateTransform</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DefinesStateTransform { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_DisableParallelismOption.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.DisableParallelismOption%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L169">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_DisableParallelismOption_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.DisableParallelismOption*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_DisableParallelismOption" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.DisableParallelismOption">DisableParallelismOption</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DisableParallelismOption { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_Events.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.Events%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L129">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_Events_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.Events*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_Events" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.Events">Events</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] Events { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_HandlesDeletedNotifications.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.HandlesDeletedNotifications%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L161">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_HandlesDeletedNotifications_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.HandlesDeletedNotifications*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_HandlesDeletedNotifications" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.HandlesDeletedNotifications">HandlesDeletedNotifications</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HandlesDeletedNotifications { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_IncludeLinksOption.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.IncludeLinksOption%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L165">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_IncludeLinksOption_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.IncludeLinksOption*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_IncludeLinksOption" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.IncludeLinksOption">IncludeLinksOption</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IncludeLinksOption { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_IsBiState.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.IsBiState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L189">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_IsBiState_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.IsBiState*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_IsBiState" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.IsBiState">IsBiState</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsBiState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_LimitingCommitPosition.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.LimitingCommitPosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L141">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_LimitingCommitPosition_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.LimitingCommitPosition*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_LimitingCommitPosition" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.LimitingCommitPosition">LimitingCommitPosition</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? LimitingCommitPosition { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_PartitionResultStreamNamePatternOption.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.PartitionResultStreamNamePatternOption%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L177">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_PartitionResultStreamNamePatternOption_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.PartitionResultStreamNamePatternOption*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_PartitionResultStreamNamePatternOption" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.PartitionResultStreamNamePatternOption">PartitionResultStreamNamePatternOption</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string PartitionResultStreamNamePatternOption { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_ProcessingLagOption.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.ProcessingLagOption%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L185">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_ProcessingLagOption_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.ProcessingLagOption*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_ProcessingLagOption" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.ProcessingLagOption">ProcessingLagOption</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? ProcessingLagOption { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_ProducesResults.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.ProducesResults%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L153">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_ProducesResults_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.ProducesResults*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_ProducesResults" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.ProducesResults">ProducesResults</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ProducesResults { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_ReorderEventsOption.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.ReorderEventsOption%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L181">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_ReorderEventsOption_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.ReorderEventsOption*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_ReorderEventsOption" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.ReorderEventsOption">ReorderEventsOption</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ReorderEventsOption { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_ResultStreamNameOption.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.ResultStreamNameOption%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L173">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_ResultStreamNameOption_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.ResultStreamNameOption*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_ResultStreamNameOption" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.ResultStreamNameOption">ResultStreamNameOption</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ResultStreamNameOption { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_Streams.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.Streams%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L117">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_Streams_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.Streams*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_Streams" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.Streams">Streams</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] Streams { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_AllEvents.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.AllEvents%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L44">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_AllEvents_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.AllEvents*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_AllEvents" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.AllEvents">AllEvents()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AllEvents()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_Build.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.Build%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L199">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_Build_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.Build*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_Build" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.Build">Build()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IQuerySources Build()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.IQuerySources.html">IQuerySources</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_From_Action_EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder__.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.From(Action%7BEventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L193">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_From_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.From*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_From_Action_EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder__" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.From(Action{EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder})">From(Action&lt;SourceDefinitionBuilder&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IQuerySources From(Action&lt;SourceDefinitionBuilder&gt; configure)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.html">SourceDefinitionBuilder</a>&gt;</td>
+        <td><span class="parametername">configure</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.IQuerySources.html">IQuerySources</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_FromAll.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.FromAll%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L24">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_FromAll_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.FromAll*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_FromAll" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.FromAll">FromAll()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FromAll()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_FromCatalogStream_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.FromCatalogStream(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L40">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_FromCatalogStream_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.FromCatalogStream*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_FromCatalogStream_System_String_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.FromCatalogStream(System.String)">FromCatalogStream(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FromCatalogStream(string catalogStream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">catalogStream</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_FromCategory_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.FromCategory(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L28">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_FromCategory_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.FromCategory*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_FromCategory_System_String_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.FromCategory(System.String)">FromCategory(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FromCategory(string categoryName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">categoryName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_FromStream_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.FromStream(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L34">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_FromStream_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.FromStream*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_FromStream_System_String_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.FromStream(System.String)">FromStream(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FromStream(string streamName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">streamName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_IncludeEvent_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.IncludeEvent(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L56">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_IncludeEvent_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.IncludeEvent*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_IncludeEvent_System_String_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.IncludeEvent(System.String)">IncludeEvent(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void IncludeEvent(string eventName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">eventName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_NoWhen.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.NoWhen%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L79">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_NoWhen_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.NoWhen*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_NoWhen" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.NoWhen">NoWhen()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void NoWhen()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetByCustomPartitions.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetByCustomPartitions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L66">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetByCustomPartitions_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetByCustomPartitions*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetByCustomPartitions" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetByCustomPartitions">SetByCustomPartitions()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetByCustomPartitions()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetByStream.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetByStream%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L62">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetByStream_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetByStream*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetByStream" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetByStream">SetByStream()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetByStream()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetDefinesStateTransform.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetDefinesStateTransform%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L70">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetDefinesStateTransform_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetDefinesStateTransform*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetDefinesStateTransform" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetDefinesStateTransform">SetDefinesStateTransform()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDefinesStateTransform()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetDisableParallelism_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetDisableParallelism(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L52">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetDisableParallelism_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetDisableParallelism*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetDisableParallelism_System_Boolean_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetDisableParallelism(System.Boolean)">SetDisableParallelism(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDisableParallelism(bool disableParallelism = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">disableParallelism</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetHandlesStreamDeletedNotifications_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetHandlesStreamDeletedNotifications(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L105">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetHandlesStreamDeletedNotifications_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetHandlesStreamDeletedNotifications*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetHandlesStreamDeletedNotifications_System_Boolean_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetHandlesStreamDeletedNotifications(System.Boolean)">SetHandlesStreamDeletedNotifications(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetHandlesStreamDeletedNotifications(bool value = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">value</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetIncludeLinks_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetIncludeLinks(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L48">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetIncludeLinks_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetIncludeLinks*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetIncludeLinks_System_Boolean_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetIncludeLinks(System.Boolean)">SetIncludeLinks(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetIncludeLinks(bool includeLinks = true)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">includeLinks</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetIsBiState_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetIsBiState(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L101">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetIsBiState_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetIsBiState*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetIsBiState_System_Boolean_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetIsBiState(System.Boolean)">SetIsBiState(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetIsBiState(bool isBiState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isBiState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetLimitingCommitPosition_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetLimitingCommitPosition(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L203">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetLimitingCommitPosition_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetLimitingCommitPosition*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetLimitingCommitPosition_System_Int64_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetLimitingCommitPosition(System.Int64)">SetLimitingCommitPosition(Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetLimitingCommitPosition(long limitingCommitPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">limitingCommitPosition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetOutputState.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetOutputState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L75">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetOutputState_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetOutputState*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetOutputState" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetOutputState">SetOutputState()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetOutputState()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetPartitionResultStreamNamePatternOption_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetPartitionResultStreamNamePatternOption(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L87">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetPartitionResultStreamNamePatternOption_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetPartitionResultStreamNamePatternOption*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetPartitionResultStreamNamePatternOption_System_String_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetPartitionResultStreamNamePatternOption(System.String)">SetPartitionResultStreamNamePatternOption(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPartitionResultStreamNamePatternOption(string partitionResultStreamNamePattern)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">partitionResultStreamNamePattern</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetProcessingLag_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetProcessingLag(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L97">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetProcessingLag_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetProcessingLag*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetProcessingLag_System_Int32_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetProcessingLag(System.Int32)">SetProcessingLag(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetProcessingLag(int processingLag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">processingLag</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetReorderEvents_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetReorderEvents(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L93">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetReorderEvents_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetReorderEvents*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetReorderEvents_System_Boolean_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetReorderEvents(System.Boolean)">SetReorderEvents(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetReorderEvents(bool reorderEvents)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">reorderEvents</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetResultStreamNameOption_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetResultStreamNameOption(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L83">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetResultStreamNameOption_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetResultStreamNameOption*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_SetResultStreamNameOption_System_String_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.SetResultStreamNameOption(System.String)">SetResultStreamNameOption(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetResultStreamNameOption(string resultStreamName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">resultStreamName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_EventStore_Projections_Core_Messages_IQuerySources_AllEvents.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.EventStore%23Projections%23Core%23Messages%23IQuerySources%23AllEvents%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L125">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_EventStore_Projections_Core_Messages_IQuerySources_AllEvents_" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.EventStore#Projections#Core#Messages#IQuerySources#AllEvents*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_EventStore_Projections_Core_Messages_IQuerySources_AllEvents" data-uid="EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder.EventStore#Projections#Core#Messages#IQuerySources#AllEvents">IQuerySources.AllEvents</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IQuerySources.AllEvents { get; }</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="EventStore.Projections.Core.Messages.IQuerySources.html">IQuerySources</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJson_System_Object_">Json.ToJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_Serialize__1___0_">ProtobufExtensions.Serialize&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_SerializeToArray__1___0_">ProtobufExtensions.SerializeToArray&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/SourceDefinitionBuilder.cs/#L7" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

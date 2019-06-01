@@ -1,0 +1,513 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Class FeedReader
+   | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class FeedReader
+   | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EventStore.Projections.Core.EventReaders.Feeds.FeedReader">
+  
+  
+  <h1 id="EventStore_Projections_Core_EventReaders_Feeds_FeedReader" data-uid="EventStore.Projections.Core.EventReaders.Feeds.FeedReader" class="text-break">Class FeedReader
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">FeedReader</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.CommittedEventReceived.html">EventReaderSubscriptionMessage.CommittedEventReceived</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.EofReached.html">EventReaderSubscriptionMessage.EofReached</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.PartitionEofReached.html">EventReaderSubscriptionMessage.PartitionEofReached</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.CheckpointSuggested.html">EventReaderSubscriptionMessage.CheckpointSuggested</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.NotAuthorized.html">EventReaderSubscriptionMessage.NotAuthorized</a>&gt;</div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.EventReaders.Feeds.html">EventStore.Projections.Core.EventReaders.Feeds</a></h6>
+  <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
+  <h5 id="EventStore_Projections_Core_EventReaders_Feeds_FeedReader_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class FeedReader : object, IHandle&lt;EventReaderSubscriptionMessage.CommittedEventReceived&gt;, IHandle&lt;EventReaderSubscriptionMessage.EofReached&gt;, IHandle&lt;EventReaderSubscriptionMessage.PartitionEofReached&gt;, IHandle&lt;EventReaderSubscriptionMessage.CheckpointSuggested&gt;, IHandle&lt;EventReaderSubscriptionMessage.NotAuthorized&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_EventReaders_Feeds_FeedReader__ctor_EventStore_Projections_Core_Services_PublishSubscribeDispatcher_Guid_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_Subscribe_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_ReaderSubscriptionManagementMessage_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessageBase__IPrincipal_EventStore_Projections_Core_Messages_QuerySourcesDefinition_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_Int32_Guid_EventStore_Core_Messaging_IEnvelope_EventStore_Core_Services_TimerService_ITimeProvider_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.EventReaders.Feeds.FeedReader.%23ctor(EventStore.Projections.Core.Services.PublishSubscribeDispatcher%7BGuid%2CEventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Subscribe%2CEventStore.Projections.Core.Messages.ReaderSubscriptionManagement.ReaderSubscriptionManagementMessage%2CEventStore.Projections.Core.Messages.EventReaderSubscriptionMessageBase%7D%2CIPrincipal%2CEventStore.Projections.Core.Messages.QuerySourcesDefinition%2CEventStore.Projections.Core.Services.Processing.CheckpointTag%2CSystem.Int32%2CGuid%2CEventStore.Core.Messaging.IEnvelope%2CEventStore.Core.Services.TimerService.ITimeProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/EventReaders/Feeds/FeedReader.cs/#L50">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_EventReaders_Feeds_FeedReader__ctor_" data-uid="EventStore.Projections.Core.EventReaders.Feeds.FeedReader.#ctor*"></a>
+  <h4 id="EventStore_Projections_Core_EventReaders_Feeds_FeedReader__ctor_EventStore_Projections_Core_Services_PublishSubscribeDispatcher_Guid_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_Subscribe_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_ReaderSubscriptionManagementMessage_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessageBase__IPrincipal_EventStore_Projections_Core_Messages_QuerySourcesDefinition_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_Int32_Guid_EventStore_Core_Messaging_IEnvelope_EventStore_Core_Services_TimerService_ITimeProvider_" data-uid="EventStore.Projections.Core.EventReaders.Feeds.FeedReader.#ctor(EventStore.Projections.Core.Services.PublishSubscribeDispatcher{Guid,EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Subscribe,EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.ReaderSubscriptionManagementMessage,EventStore.Projections.Core.Messages.EventReaderSubscriptionMessageBase},IPrincipal,EventStore.Projections.Core.Messages.QuerySourcesDefinition,EventStore.Projections.Core.Services.Processing.CheckpointTag,System.Int32,Guid,EventStore.Core.Messaging.IEnvelope,EventStore.Core.Services.TimerService.ITimeProvider)">FeedReader(PublishSubscribeDispatcher&lt;Guid, ReaderSubscriptionManagement.Subscribe, ReaderSubscriptionManagement.ReaderSubscriptionManagementMessage, EventReaderSubscriptionMessageBase&gt;, IPrincipal, QuerySourcesDefinition, CheckpointTag, Int32, Guid, IEnvelope, ITimeProvider)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FeedReader(PublishSubscribeDispatcher&lt;Guid, ReaderSubscriptionManagement.Subscribe, ReaderSubscriptionManagement.ReaderSubscriptionManagementMessage, EventReaderSubscriptionMessageBase&gt; subscriptionDispatcher, IPrincipal user, QuerySourcesDefinition querySource, CheckpointTag fromPosition, int maxEvents, Guid requestCorrelationId, IEnvelope replyEnvelope, ITimeProvider timeProvider)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.PublishSubscribeDispatcher-4.html">PublishSubscribeDispatcher</a>&lt;<span class="xref">Guid</span>, <a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Subscribe.html">ReaderSubscriptionManagement.Subscribe</a>, <a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.ReaderSubscriptionManagementMessage.html">ReaderSubscriptionManagement.ReaderSubscriptionManagementMessage</a>, <a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessageBase.html">EventReaderSubscriptionMessageBase</a>&gt;</td>
+        <td><span class="parametername">subscriptionDispatcher</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IPrincipal</span></td>
+        <td><span class="parametername">user</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.QuerySourcesDefinition.html">QuerySourcesDefinition</a></td>
+        <td><span class="parametername">querySource</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">fromPosition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maxEvents</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">requestCorrelationId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messaging.IEnvelope.html">IEnvelope</a></td>
+        <td><span class="parametername">replyEnvelope</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.TimerService.ITimeProvider.html">ITimeProvider</a></td>
+        <td><span class="parametername">timeProvider</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_EventReaders_Feeds_FeedReader_Create_EventStore_Projections_Core_Services_PublishSubscribeDispatcher_Guid_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_Subscribe_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_ReaderSubscriptionManagementMessage_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessageBase__EventStore_Projections_Core_Messages_EventReaders_Feeds_FeedReaderMessage_ReadPage_EventStore_Core_Services_TimerService_ITimeProvider_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.EventReaders.Feeds.FeedReader.Create(EventStore.Projections.Core.Services.PublishSubscribeDispatcher%7BGuid%2CEventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Subscribe%2CEventStore.Projections.Core.Messages.ReaderSubscriptionManagement.ReaderSubscriptionManagementMessage%2CEventStore.Projections.Core.Messages.EventReaderSubscriptionMessageBase%7D%2CEventStore.Projections.Core.Messages.EventReaders.Feeds.FeedReaderMessage.ReadPage%2CEventStore.Core.Services.TimerService.ITimeProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/EventReaders/Feeds/FeedReader.cs/#L39">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_EventReaders_Feeds_FeedReader_Create_" data-uid="EventStore.Projections.Core.EventReaders.Feeds.FeedReader.Create*"></a>
+  <h4 id="EventStore_Projections_Core_EventReaders_Feeds_FeedReader_Create_EventStore_Projections_Core_Services_PublishSubscribeDispatcher_Guid_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_Subscribe_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_ReaderSubscriptionManagementMessage_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessageBase__EventStore_Projections_Core_Messages_EventReaders_Feeds_FeedReaderMessage_ReadPage_EventStore_Core_Services_TimerService_ITimeProvider_" data-uid="EventStore.Projections.Core.EventReaders.Feeds.FeedReader.Create(EventStore.Projections.Core.Services.PublishSubscribeDispatcher{Guid,EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Subscribe,EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.ReaderSubscriptionManagementMessage,EventStore.Projections.Core.Messages.EventReaderSubscriptionMessageBase},EventStore.Projections.Core.Messages.EventReaders.Feeds.FeedReaderMessage.ReadPage,EventStore.Core.Services.TimerService.ITimeProvider)">Create(PublishSubscribeDispatcher&lt;Guid, ReaderSubscriptionManagement.Subscribe, ReaderSubscriptionManagement.ReaderSubscriptionManagementMessage, EventReaderSubscriptionMessageBase&gt;, FeedReaderMessage.ReadPage, ITimeProvider)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FeedReader Create(PublishSubscribeDispatcher&lt;Guid, ReaderSubscriptionManagement.Subscribe, ReaderSubscriptionManagement.ReaderSubscriptionManagementMessage, EventReaderSubscriptionMessageBase&gt; publishSubscribeDispatcher, FeedReaderMessage.ReadPage message, ITimeProvider timeProvider)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.PublishSubscribeDispatcher-4.html">PublishSubscribeDispatcher</a>&lt;<span class="xref">Guid</span>, <a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Subscribe.html">ReaderSubscriptionManagement.Subscribe</a>, <a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.ReaderSubscriptionManagementMessage.html">ReaderSubscriptionManagement.ReaderSubscriptionManagementMessage</a>, <a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessageBase.html">EventReaderSubscriptionMessageBase</a>&gt;</td>
+        <td><span class="parametername">publishSubscribeDispatcher</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.EventReaders.Feeds.FeedReaderMessage.ReadPage.html">FeedReaderMessage.ReadPage</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.TimerService.ITimeProvider.html">ITimeProvider</a></td>
+        <td><span class="parametername">timeProvider</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.EventReaders.Feeds.FeedReader.html">FeedReader</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_EventReaders_Feeds_FeedReader_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_CheckpointSuggested_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.EventReaders.Feeds.FeedReader.Handle(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.CheckpointSuggested)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/EventReaders/Feeds/FeedReader.cs/#L111">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_EventReaders_Feeds_FeedReader_Handle_" data-uid="EventStore.Projections.Core.EventReaders.Feeds.FeedReader.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_EventReaders_Feeds_FeedReader_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_CheckpointSuggested_" data-uid="EventStore.Projections.Core.EventReaders.Feeds.FeedReader.Handle(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.CheckpointSuggested)">Handle(EventReaderSubscriptionMessage.CheckpointSuggested)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(EventReaderSubscriptionMessage.CheckpointSuggested message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.CheckpointSuggested.html">EventReaderSubscriptionMessage.CheckpointSuggested</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_EventReaders_Feeds_FeedReader_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_CommittedEventReceived_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.EventReaders.Feeds.FeedReader.Handle(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.CommittedEventReceived)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/EventReaders/Feeds/FeedReader.cs/#L96">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_EventReaders_Feeds_FeedReader_Handle_" data-uid="EventStore.Projections.Core.EventReaders.Feeds.FeedReader.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_EventReaders_Feeds_FeedReader_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_CommittedEventReceived_" data-uid="EventStore.Projections.Core.EventReaders.Feeds.FeedReader.Handle(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.CommittedEventReceived)">Handle(EventReaderSubscriptionMessage.CommittedEventReceived)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(EventReaderSubscriptionMessage.CommittedEventReceived message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.CommittedEventReceived.html">EventReaderSubscriptionMessage.CommittedEventReceived</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_EventReaders_Feeds_FeedReader_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_EofReached_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.EventReaders.Feeds.FeedReader.Handle(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.EofReached)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/EventReaders/Feeds/FeedReader.cs/#L101">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_EventReaders_Feeds_FeedReader_Handle_" data-uid="EventStore.Projections.Core.EventReaders.Feeds.FeedReader.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_EventReaders_Feeds_FeedReader_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_EofReached_" data-uid="EventStore.Projections.Core.EventReaders.Feeds.FeedReader.Handle(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.EofReached)">Handle(EventReaderSubscriptionMessage.EofReached)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(EventReaderSubscriptionMessage.EofReached message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.EofReached.html">EventReaderSubscriptionMessage.EofReached</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_EventReaders_Feeds_FeedReader_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_NotAuthorized_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.EventReaders.Feeds.FeedReader.Handle(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.NotAuthorized)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/EventReaders/Feeds/FeedReader.cs/#L133">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_EventReaders_Feeds_FeedReader_Handle_" data-uid="EventStore.Projections.Core.EventReaders.Feeds.FeedReader.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_EventReaders_Feeds_FeedReader_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_NotAuthorized_" data-uid="EventStore.Projections.Core.EventReaders.Feeds.FeedReader.Handle(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.NotAuthorized)">Handle(EventReaderSubscriptionMessage.NotAuthorized)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(EventReaderSubscriptionMessage.NotAuthorized message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.NotAuthorized.html">EventReaderSubscriptionMessage.NotAuthorized</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_EventReaders_Feeds_FeedReader_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_PartitionEofReached_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.EventReaders.Feeds.FeedReader.Handle(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.PartitionEofReached)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/EventReaders/Feeds/FeedReader.cs/#L107">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_EventReaders_Feeds_FeedReader_Handle_" data-uid="EventStore.Projections.Core.EventReaders.Feeds.FeedReader.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_EventReaders_Feeds_FeedReader_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_PartitionEofReached_" data-uid="EventStore.Projections.Core.EventReaders.Feeds.FeedReader.Handle(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.PartitionEofReached)">Handle(EventReaderSubscriptionMessage.PartitionEofReached)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(EventReaderSubscriptionMessage.PartitionEofReached message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.PartitionEofReached.html">EventReaderSubscriptionMessage.PartitionEofReached</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_EventReaders_Feeds_FeedReader_Start.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.EventReaders.Feeds.FeedReader.Start%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/EventReaders/Feeds/FeedReader.cs/#L73">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_EventReaders_Feeds_FeedReader_Start_" data-uid="EventStore.Projections.Core.EventReaders.Feeds.FeedReader.Start*"></a>
+  <h4 id="EventStore_Projections_Core_EventReaders_Feeds_FeedReader_Start" data-uid="EventStore.Projections.Core.EventReaders.Feeds.FeedReader.Start">Start()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Start()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJson_System_Object_">Json.ToJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_Serialize__1___0_">ProtobufExtensions.Serialize&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_SerializeToArray__1___0_">ProtobufExtensions.SerializeToArray&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_EventReaders_Feeds_FeedReader.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.EventReaders.Feeds.FeedReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/EventReaders/Feeds/FeedReader.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

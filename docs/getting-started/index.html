@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Step 1 - Install, run, and write your first event | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Step 1 - Install, run, and write your first event | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+      <link rel="stylesheet" href="../styles/main12.css">
+        <link rel="stylesheet" href="../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="step-1---install-run-and-write-your-first-event">Step 1 - Install, run, and write your first event</h1>
+
+<p>This getting started guide shows you how to get started with Event Store using the Atom publishing protocol as the primary interface. </p>
+<div class="NOTE"><h5>Note</h5><p>The described is for development and evaluation of Event Store. It does not describe a production setup. The HTTP examples use cURL, but you can read Atom feeds with a wide variety of applications and languages.</p>
+</div>
+<p>This first step covers installation and running Event Store, and writing your first event.</p>
+<h2 id="install-and-run-event-store">Install and run Event Store</h2>
+<div class="NOTE"><h5>Note</h5><p>Unless you pass a database option with <code>--db</code>, Event Store writes to a new database created in the host system&#39;s temporary files path each time it is started. For more information on Command Line Arguments read <a href="../server/command-line-arguments/index.html">this guide</a>.</p>
+</div>
+<div class="tabGroup" id="tabgroup_Imwg03Et86">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_Imwg03Et86_tabid-1" role="tab" aria-controls="tabpanel_Imwg03Et86_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Windows</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_Imwg03Et86_tabid-2" role="tab" aria-controls="tabpanel_Imwg03Et86_tabid-2" data-tab="tabid-2" tabindex="-1">Linux</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_Imwg03Et86_tabid-3" role="tab" aria-controls="tabpanel_Imwg03Et86_tabid-3" data-tab="tabid-3" tabindex="-1">Docker</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_Imwg03Et86_tabid-k8" role="tab" aria-controls="tabpanel_Imwg03Et86_tabid-k8" data-tab="tabid-k8" tabindex="-1">Kubernetes</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_Imwg03Et86_tabid-macos" role="tab" aria-controls="tabpanel_Imwg03Et86_tabid-macos" data-tab="tabid-macos" tabindex="-1">macOS</a>
+</li>
+</ul>
+<section id="tabpanel_Imwg03Et86_tabid-1" role="tabpanel" data-tab="tabid-1">
+<p>The prerequisites for Installing on Windows are:</p>
+<ul>
+<li>NET Framework 4.0+</li>
+<li>Windows platform SDK with compilers (v7.1) or Visual C++ installed (Only required for a full build)</li>
+</ul>
+<p>Event Store has <a href="https://chocolatey.org/packages/eventstore-oss">Chocolatey packages</a> available that you can install with the following command:</p>
+<pre><code class="lang-powershell">choco install eventstore-oss
+</code></pre><p>You can also <a href="https://eventstore.org/downloads/">download</a> a binary, unzip the archive and run from the folder location with an administrator console:</p>
+<pre><code class="lang-powershell">EventStore.ClusterNode.exe --db ./db --log ./logs
+</code></pre><p>This command starts Event Store with the database stored at the path <em>./db</em> and the logs in <em>./logs</em>. You can view further command line arguments in the <a href="../server/index.html">server docs</a>.</p>
+<p>Event Store runs in an administration context because it starts an HTTP server through <code>http.sys</code>. For permanent or production instances you need to provide an ACL such as:</p>
+<pre><code class="lang-powershell">netsh http add urlacl url=http://+:2113/ user=DOMAIN\username
+</code></pre></section>
+<section id="tabpanel_Imwg03Et86_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+<p>The prerequisites for Installing on Linux are:</p>
+<ul>
+<li>We recommend <a href="https://www.mono-project.com/download/stable/">Mono 5.16.0</a>, but other versions may also work.</li>
+</ul>
+<p>Event Store has pre-built <a href="https://packagecloud.io/EventStore/EventStore-OSS">packages available for Debian-based distributions</a>, <a href="https://packagecloud.io/EventStore/EventStore-OSS/install#bash-rpm">manual instructions for distributions that use RPM</a>, or you can <a href="https://github.com/EventStore/EventStore#linux">build from source</a>. The final package name to install is <code>eventstore-oss</code>.</p>
+<p>If you installed from a pre-built package, start Event Store with:</p>
+<pre><code class="lang-bash">sudo systemctl start eventstore
+</code></pre><p>When you install the Event Store package, the service doesn&#39;t start by default. This is to allow you to change the configuration, located at <em>/etc/eventstore/eventstore.conf</em> and to prevent creating a default database.</p>
+<p>In all other cases you can run the Event Store binary or use our <em>run-node.sh</em> shell script which exports the environment variable <code>LD_LIBRARY_PATH</code> to include the installation path of Event Store, which is necessary if you are planning to use projections.</p>
+<pre><code class="lang-bash">./run-node.sh --db ./ESData
+</code></pre><div class="NOTE"><h5>Note</h5><p>We recommend that when using Linux you set the &#39;open file limit&#39; to a high number. The precise value depends on your use case, but at least between <code>30,000</code> and <code>60,000</code>.</p>
+</div>
+</section>
+<section id="tabpanel_Imwg03Et86_tabid-3" role="tabpanel" data-tab="tabid-3" aria-hidden="true" hidden="hidden">
+<p>Event Store has <a href="https://hub.docker.com/r/eventstore/eventstore/">a Docker image</a> available for any platform that supports Docker:</p>
+<pre><code class="lang-bash">docker run --name eventstore-node -it -p 2113:2113 -p 1113:1113 eventstore/eventstore
+</code></pre></section>
+<section id="tabpanel_Imwg03Et86_tabid-k8" role="tabpanel" data-tab="tabid-k8" aria-hidden="true" hidden="hidden">
+<p>Event Store has <a href="https://github.com/EventStore/EventStore.Charts">a Helm chart</a> available for installing Event Store on Kubernetes clusters:</p>
+<pre><code class="lang-bash">helm repo add eventstore https://eventstore.github.io/EventStore.Charts
+helm repo update
+helm install -n eventstore eventstore/eventstore
+</code></pre><div class="NOTE"><h5>Note</h5><p>Read <a href="https://github.com/EventStore/EventStore.Charts/blob/master/stable/eventstore/README.md">this guide</a> for more details on how to use the helm chart.
+Read <a href="../server/deploy-kubernetes-aks/index.html">this guide</a> for more details on using Kubernetes with AKS and this guide for more details on using Kubernetes with GKE.</p>
+</div>
+</section>
+<section id="tabpanel_Imwg03Et86_tabid-macos" role="tabpanel" data-tab="tabid-macos" aria-hidden="true" hidden="hidden">
+<p>Event Store has a macOS package <a href="https://eventstore.org/downloads/">you can download</a> and install, and we maintain a Homebrew Cask formula you can install:</p>
+<pre><code class="lang-shell">brew cask install eventstore
+</code></pre><p>In each case you can run Event Store with the <code>eventstore</code> command, and stop it with <code>Ctrl+c</code>. To use the default database location you need to use <code>sudo</code>, or you can change the location with the <code>--db</code> parameter.</p>
+</section>
+</div>
+<h2 id="interacting-with-an-event-store-server">Interacting with an Event Store Server</h2>
+<p>There are three ways to interact with Event Store:</p>
+<ol>
+<li><a href="../server/admin-ui/index.html">With the Admin UI</a>.</li>
+<li><a href="../http-api/index.html">With the HTTP API</a>.</li>
+<li>With a Client API, which you need to install first. Our documentation covers the <a href="../dotnet-api/index.html">.NET Core client API</a> and the <a href="https://github.com/EventStore/EventStore.JVM">JVM client</a> but <a href="which-api-sdk/index.html">others</a> are available.</li>
+</ol>
+<div class="tabGroup" id="tabgroup_dfgfloIX5I">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_dfgfloIX5I_tabid-dotnet-client" role="tab" aria-controls="tabpanel_dfgfloIX5I_tabid-dotnet-client" data-tab="tabid-dotnet-client" tabindex="0" aria-selected="true">.NET Client</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_dfgfloIX5I_tabid-jvm-client" role="tab" aria-controls="tabpanel_dfgfloIX5I_tabid-jvm-client" data-tab="tabid-jvm-client" tabindex="-1">JVM Client</a>
+</li>
+</ul>
+<section id="tabpanel_dfgfloIX5I_tabid-dotnet-client" role="tabpanel" data-tab="tabid-dotnet-client">
+<p><a href="https://www.nuget.org/packages/EventStore.ClientAPI.NetCore/">Install the .NET Core client API</a> using your preferred method, add it to your project:</p>
+<pre><code class="lang-shell">dotnet add package EventStore.Client
+</code></pre><p>And require it in your code:</p>
+<pre><code class="lang-csharp">using EventStore.ClientAPI;
+</code></pre></section>
+<section id="tabpanel_dfgfloIX5I_tabid-jvm-client" role="tabpanel" data-tab="tabid-jvm-client" aria-hidden="true" hidden="hidden">
+<p><a href="https://github.com/EventStore/EventStore.JVM#setup">Add the JVM client</a> using Maven:</p>
+<pre><code class="lang-xml">&lt;dependency&gt;
+    &lt;groupId&gt;com.geteventstore&lt;/groupId&gt;
+    &lt;artifactId&gt;eventstore-client_2.12&lt;/artifactId&gt;
+    &lt;version&gt;5.0.8&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre><p>And require it in your code:</p>
+<pre><code class="lang-java">import eventstore.*;
+</code></pre></section>
+</div>
+<h2 id="connecting-to-event-store">Connecting to Event Store</h2>
+<p>If you want to use the Admin UI or the HTTP API, then you use port <code>2113</code>. For example, <a href="http://127.0.0.1:2113/">http://127.0.0.1:2113/</a> in your web browser, or <code>curl -i http://127.0.0.1:2113</code> for the HTTP API.</p>
+<div class="TIP"><h5>Tip</h5><p>The default username and password is <code>admin:changeit</code></p>
+</div>
+<p><img src="../images/es-web-admin-dashboard.png" alt="The Admin UI Dashboard"></p>
+<p>To use a client API, you use port <code>1113</code> and create a connection:</p>
+<div class="tabGroup" id="tabgroup_dfgfloIX5I-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_dfgfloIX5I-1_tabid-dotnet-client-connect" role="tab" aria-controls="tabpanel_dfgfloIX5I-1_tabid-dotnet-client-connect" data-tab="tabid-dotnet-client-connect" tabindex="0" aria-selected="true">.NET Client</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_dfgfloIX5I-1_tabid-jvm-client-connect" role="tab" aria-controls="tabpanel_dfgfloIX5I-1_tabid-jvm-client-connect" data-tab="tabid-jvm-client-connect" tabindex="-1">JVM Client</a>
+</li>
+</ul>
+<section id="tabpanel_dfgfloIX5I-1_tabid-dotnet-client-connect" role="tabpanel" data-tab="tabid-dotnet-client-connect">
+<p>When using the .NET client, you also need to give the connection a name.</p>
+<!-- Can not find reference ~/code-examples/dotnet-client/Program.cs -->
+<div class="NEXT"><h5>Next Steps</h5><p>In this example we used the <a href="#EventStore.ClientAPI.EventStoreConnection.Create(System.String,System.String)"><code>EventStoreConnection.Create()</code></a> overloaded method but <a href="#EventStore.ClientAPI.EventStoreConnection">others are available</a>.</p>
+</div>
+</section>
+<section id="tabpanel_dfgfloIX5I-1_tabid-jvm-client-connect" role="tabpanel" data-tab="tabid-jvm-client-connect" aria-hidden="true" hidden="hidden">
+<!-- Can not find reference ~/code-examples/jvm-client//WriteEventExample.java -->
+<div class="NOTE"><h5>Note</h5><p>For our JVM examples we use <a href="https://akka.io">akka</a>, a toolkit for building highly concurrent and distributed JVM applications.</p>
+</div>
+</section>
+</div>
+<h2 id="writing-events-to-an-event-stream">Writing Events to an Event Stream</h2>
+<p>Event Store operates on a concept of Event Streams, and the first operation we look at is how to write to a stream. If you are Event Sourcing a domain model, a stream equates to an aggregate function. Event Store can handle hundreds of millions of streams, so create as many as you need.</p>
+<p>If you post to a stream that doesn&#39;t exist, Event Store creates it before adding the events.</p>
+<p>You can write events using the Admin UI by clicking the <em>Stream Browser</em> tab, the <em>Add Event</em> button, filling in the form with relevant values and clicking the <em>Add</em> button at the bottom of the page.</p>
+<p><img src="../images/getting-started-add-event.gif" alt="Creating an event with the Admin UI interface"></p>
+<p>Open a text editor, copy and paste the following event definition, and save it as <em>event.json</em>.</p>
+<pre><code class="lang-json" name="getting-started-write-event-json" title="The contents of event.json">[
+  {
+    &quot;eventId&quot;: &quot;fbf4a1a1-b4a3-4dfe-a01f-ec52c34e16e4&quot;,
+    &quot;eventType&quot;: &quot;event-type&quot;,
+    &quot;data&quot;: {
+      &quot;a&quot;: &quot;1&quot;
+    }
+  }
+]
+</code></pre><div class="tabGroup" id="tabgroup_dfgfloIX5I-2">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_dfgfloIX5I-2_tabid-4" role="tab" aria-controls="tabpanel_dfgfloIX5I-2_tabid-4" data-tab="tabid-4" tabindex="0" aria-selected="true">HTTP API</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_dfgfloIX5I-2_tabid-5" role="tab" aria-controls="tabpanel_dfgfloIX5I-2_tabid-5" data-tab="tabid-5" tabindex="-1">.NET API</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_dfgfloIX5I-2_tabid-6" role="tab" aria-controls="tabpanel_dfgfloIX5I-2_tabid-6" data-tab="tabid-6" tabindex="-1">JVM Client</a>
+</li>
+</ul>
+<section id="tabpanel_dfgfloIX5I-2_tabid-4" role="tabpanel" data-tab="tabid-4">
+<p>Use the following cURL command, passing the name of the stream and the events to write:</p>
+<pre><code class="lang-bash" name="getting-started-write-event-request">curl -i -d &quot;@event.json&quot; &quot;http://127.0.0.1:2113/streams/newstream&quot; -H &quot;Content-Type:application/vnd.eventstore.events+json&quot;
+</code></pre><div class="NEXT"><h5>Next Steps</h5><p>Read <a href="../http-api/creating-writing-a-stream/index.html">this guide</a> for more information on how to write events with the HTTP API.</p>
+</div>
+<div class="NOTE"><h5>Note</h5><p>You can also post events to the HTTP API as XML, by changing the <code>Content-Type</code> header to <code>XML</code>.</p>
+</div>
+</section>
+<section id="tabpanel_dfgfloIX5I-2_tabid-5" role="tabpanel" data-tab="tabid-5" aria-hidden="true" hidden="hidden">
+<p>To use the .NET API, use the following method, passing the name of the stream, the version, and the events to write:</p>
+<!-- Can not find reference ~/code-examples/dotnet-client/Program.cs -->
+<div class="NEXT"><h5>Next Steps</h5><p>Read <a href="../http-api/creating-writing-a-stream/index.html">this guide</a> for more information on how to write events with the .NET API. We don&#39;t cover version checking in this guide, but you can read more in <a href="../dotnet-api/optimistic-concurrency-and-idempotence/index.html">the optimistic concurrency guide</a>.</p>
+</div>
+</section>
+<section id="tabpanel_dfgfloIX5I-2_tabid-6" role="tabpanel" data-tab="tabid-6" aria-hidden="true" hidden="hidden">
+<p>To use the JVM Client, use the following method, passing the name of the stream, the version, and the events to write:</p>
+<!-- Can not find reference ~/code-examples/jvm-client/WriteEventExample.java -->
+</section>
+</div>
+<h2 id="next-step">Next Step</h2>
+<p>In this first part of our getting started guide you learned how to install and run Event Store and write your first event. The next part covers reading events from a stream.</p>
+<ul>
+<li><a href="reading-subscribing-events/index.html">Step 2 - Read events from a stream and subscribe to changes</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/getting-started/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

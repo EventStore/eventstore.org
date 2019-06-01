@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Streams | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Streams | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="streams">Streams</h1>
+
+<h2 id="writing-to-a-stream">Writing to a Stream</h2>
+<p>You can use the client API to write one or more events to a stream atomically. You do this by appending the events to the stream in one operation, or by starting a transaction on the stream, writing events in one or more operations in that transaction, and then committing the transaction.</p>
+<p>You can make an optimistic concurrency check during the write by specifying the version at which you expect the stream to be. Identical write operations are idempotent if the optimistic concurrency check is not disabled. You can find more information on optimistic concurrency and idempotence <a href="../optimistic-concurrency-and-idempotence/index.html">here</a>.</p>
+<h3 id="appending-to-a-stream-in-a-single-write">Appending to a stream in a single write</h3>
+<pre><code class="lang-csharp">Task&lt;WriteResult&gt; AppendToStreamAsync(string stream, long expectedVersion, IEnumerable&lt;EventData&gt; events)
+</code></pre><pre><code class="lang-csharp">Task&lt;WriteResult&gt; AppendToStreamAsync(string stream, long expectedVersion, params EventData[] events)
+</code></pre><h3 id="using-a-transaction-to-append-to-a-stream-across-multiple-writes">Using a transaction to append to a stream across multiple writes</h3>
+<h4 id="on-eventstoreconnection">On <code>EventStoreConnection</code></h4>
+<pre><code class="lang-csharp">Task&lt;EventStoreTransaction&gt; StartTransactionAsync(string stream, long expectedVersion)
+</code></pre><pre><code class="lang-csharp">EventStoreTransaction ContinueTransaction(long transactionId)
+</code></pre><h4 id="on-eventstoretransaction">On <code>EventStoreTransaction</code></h4>
+<pre><code class="lang-csharp">Task WriteAsync(IEnumerable&lt;EventData&gt; events)
+</code></pre><pre><code class="lang-csharp">Task WriteAsync(params EventData[] events)
+</code></pre><pre><code class="lang-csharp">Task CommitAsync()
+</code></pre><pre><code class="lang-csharp">void Rollback()
+</code></pre><h2 id="eventdata">EventData</h2>
+<p>The writing methods all use a type named <code>EventData</code> to represent an event to be stored. Instances of <code>EventData</code> are immutable.</p>
+<p>Event Store does not have any built-in serialisation, so the body and metadata for each event are represented in <code>EventData</code> as a <code>byte[]</code>.</p>
+<p>The members on <code>EventData</code> are:</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Guid EventId</code></td>
+<td>A unique identifier representing this event. Event Store uses this for idempotency if you write the same event twice you should use the same identifier both times.</td>
+</tr>
+<tr>
+<td><code>string Type</code></td>
+<td>The name of the event type. You can use this for pattern matching in projections, so should be a &quot;friendly&quot; name rather than a CLR type name, for example.</td>
+</tr>
+<tr>
+<td><code>bool IsJson</code></td>
+<td>If the data and metadata fields are serialized as JSON, you should set this to <code>true</code>. Setting this to <code>true</code> will cause the projections framework to attempt to deserialize the data and metadata later.</td>
+</tr>
+<tr>
+<td><code>byte[] Data</code></td>
+<td>The serialized data representing the event to be stored.</td>
+</tr>
+<tr>
+<td><code>byte[] Metadata</code></td>
+<td>The serialized data representing metadata about the event to be stored.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="append-to-a-stream-in-a-single-write">Append to a stream in a single write</h2>
+<p>The <code>AppendToStreamAsync</code> method writes events atomically to the end of a stream, working in an asynchronous manner.</p>
+<p>The parameters are:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string stream</code></td>
+<td>The name of the stream to which to append.</td>
+</tr>
+<tr>
+<td><code>long expectedVersion</code></td>
+<td>The version at which you expect the stream to be in order that an optimistic concurrency check can be performed. This should either be a positive integer, or one of the constants <code>ExpectedVersion.NoStream</code>, <code>ExpectedVersion.EmptyStream</code>, or to disable the check, <code>ExpectedVersion.Any</code>. See <a href="../optimistic-concurrency-and-idempotence/index.html">here</a> for a broader discussion of this.</td>
+</tr>
+<tr>
+<td><code>IEnumerable&lt;EventData&gt; events</code></td>
+<td>The events to append. There is also an overload of each method which takes the events as a <code>params</code> array.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="deleting-a-stream">Deleting a Stream</h2>
+<h3 id="soft-delete">Soft Delete</h3>
+<pre><code class="lang-csharp">Task&lt;DeleteResult&gt; DeleteStreamAsync(string stream, long expectedVersion, UserCredentials userCredentials = null);
+</code></pre><!-- TODO: Need a better explanation -->
+<p>By default when you delete a stream, Event Store soft deletes it. You can recreate the stream by appending new events to it. If you try to read a soft deleted stream you receive an error response.</p>
+<h3 id="hard-delete">Hard Delete</h3>
+<p>You can hard delete a stream.</p>
+<div class="WARNING"><h5>Warning</h5><p>A hard delete is permanent and the stream is not removed during a scavenge. If you hard delete a stream, you cannot recreate the stream.</p>
+</div>
+<pre><code class="lang-csharp">Task&lt;DeleteResult&gt; DeleteStreamAsync(string stream, long expectedVersion, bool hardDelete, UserCredentials userCredentials = null);
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/dotnet-api/streams.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

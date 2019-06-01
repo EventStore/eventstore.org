@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Deploy with Kubernetes to Azure Cloud AKS | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Deploy with Kubernetes to Azure Cloud AKS | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="deploy-with-kubernetes-to-azure-cloud-aks">Deploy with Kubernetes to Azure Cloud AKS</h1>
+
+<p>This guide is to show how to use <a href="https://github.com/EventStore/EventStore.Charts">the official Event Store Helm Chart</a> to
+interactively deploy an Event Store Cluster in Kubernetes Azure Cloud
+AKS service.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Install the following utilities in your development machine.</p>
+<ul>
+<li><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl">Kubectl</a></li>
+<li><a href="https://github.com/helm/helm/releases">Helm</a></li>
+<li><a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest">The Azure CLI</a></li>
+</ul>
+<h2 id="configuration-steps">Configuration steps</h2>
+<p>Login in your Azure Cloud account using the az cli, this triggers 2 factor authentication that launches your default browser to select account credentials.</p>
+<pre><code class="lang-shell">az login
+</code></pre><p>Create a new resource group:</p>
+<pre><code class="lang-shell">az group create -n {resourcegroupname} -l {location-compatible-with-aks}
+</code></pre><p>Create a Kubernetes cluster with 3 nodes. This command accept parameters such as the version of Kubernetes you want installed. For this tutorial we use the default options.</p>
+<pre><code class="lang-shell">az aks create -n {clustername} -g {resourcegroupname} -c 3
+</code></pre><p>The command (after some delay) returns a JSON object with details of the new Kubernetes cluster. Use the command below to return a list of all Kubernetes clusters in your Azure account:</p>
+<pre><code class="lang-shell">az aks list -o table
+</code></pre><p>We recommend kubectl for managing resources in the Kubernetes cluster. Set the current context for kubectl and merge it with any existing configuration in your existing config file:</p>
+<pre><code class="lang-shell">az aks get-credentials -n {clustername} -g {groupname}
+</code></pre><p>Get the list of nodes using kubectl:</p>
+<pre><code class="lang-shell">kubectl get nodes
+</code></pre><p>To use the Kubernetes dashboard you need to change the Role Base Access Control enabled by default on Azure AKS.</p>
+<p>Create a <em>rbac-config.yaml</em> file containing the following yaml:</p>
+<pre><code class="lang-yaml">apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  name: kubernetes-dashboard
+  labels:
+    k8s-app: kubernetes-dashboard
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: kubernetes-dashboard
+  namespace: kube-system
+</code></pre><p>Create a deployment for this <code>ClusterRoleBinding</code> object</p>
+<pre><code class="lang-shell">kubectl create -f ./rbac-config.yaml
+</code></pre><p>To access the dashboard you can now use the <code>browse</code> command. This command is a wrapper around the <code>proxy</code> command of kubectl. It creates a local web server with a tunnel to the cluster hosted in Azure AKS web server</p>
+<pre><code class="lang-shell">az aks browse -n {clustername} -g {groupname}
+</code></pre><h4 id="deploy-event-store-cluster-with-helm">Deploy Event Store Cluster with Helm</h4>
+<p>Helm is the package manager for Kubernetes. After you&#39;ve created a new Kubernetes cluster you need to configure Helm for your local helm CLI to connect to a configured service account on the server side. The service account used by Helm is called Tiller. Give Tiller access to the cluster and initialise it with the following commands:</p>
+<pre><code class="lang-shell">kubectl -n kube-system create serviceaccount tiller
+kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
+helm init --service-account tiller
+</code></pre><p>You can then check if the <code>tiller-deploy-xxxx</code> pod is running</p>
+<pre><code class="lang-shell">kubectl -n kube-system get pod
+</code></pre><p>Now deploy the Event Store cluster using the official Helm Chart with the following commands:</p>
+<pre><code class="lang-shell">helm repo add eventstore https://eventstore.github.io/EventStore.Charts
+helm repo update
+helm install -n eventstore eventstore/eventstore --set persistence.enabled=true
+</code></pre><p>The Event Store cluster is now deployed and available in a couple of
+minutes. The default cluster size in the Helm Chart is set to 3 so this results in a 3 node Event Store cluster over the 3 nodes Kubernetes
+cluster. The setting <code>persistence.enable=true</code> uses a
+<code>PersistentVolumeClaim</code> on your Kubernetes cluster to claim dynamically
+persistent storage volumes. You can configure this to use
+statically defined volumes if required.</p>
+<h4 id="upgrade-the-event-store-cluster-with-a-newer-version">Upgrade the Event Store cluster with a newer version</h4>
+<p>Verify your current Event Store cluster</p>
+<pre><code class="lang-shell">helm status eventstore
+</code></pre><p>Fork the official Helm Chart Event Store repository and change the
+version of the image in the chart <em>values.yaml</em>.</p>
+<p>Then run the command in the same directory as the chart:</p>
+<pre><code class="lang-shell">helm upgrade eventstore . --set persistence.enabled=true
+</code></pre><p>The upgrade command silently upgrades all the pods one by one
+without downtime. Helm takes care of attaching the existing volumes
+to the new pods during the upgrade.</p>
+<h4 id="rollback-to-a-previous-version">Rollback to a previous version</h4>
+<p>To rollback to a previous version, first use the following command to
+display the history</p>
+<pre><code class="lang-shell">helm history eventstore
+</code></pre><p>And the following command to rollback to a specific revision</p>
+<pre><code class="lang-shell">helm rollback eventstore 1
+</code></pre><h4 id="delete-resources">Delete resources</h4>
+<p>To delete all resources associated with the EventStore installation use the following command:</p>
+<pre><code class="lang-shell">az aks delete -n {clustername} -g {groupname}
+az group delete -n {groupname}
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/server/deploy-kubernetes-aks.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

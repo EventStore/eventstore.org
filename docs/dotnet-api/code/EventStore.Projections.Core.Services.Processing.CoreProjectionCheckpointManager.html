@@ -1,0 +1,1375 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Class CoreProjectionCheckpointManager
+   | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CoreProjectionCheckpointManager
+   | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager">
+  
+  
+  <h1 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager" class="text-break">Class CoreProjectionCheckpointManager
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">CoreProjectionCheckpointManager</span></div>
+      <div class="level2"><a class="xref" href="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.html">DefaultCheckpointManager</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="EventStore.Projections.Core.Messages.IProjectionCheckpointManager.html">IProjectionCheckpointManager</a></div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<span class="xref">CoreProjectionProcessingMessage.ReadyForCheckpoint</span>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<span class="xref">CoreProjectionProcessingMessage.RestartRequested</span>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<span class="xref">CoreProjectionProcessingMessage.Failed</span>&gt;</div>
+    <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.ICoreProjectionCheckpointManager.html">ICoreProjectionCheckpointManager</a></div>
+    <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.IEmittedEventWriter.html">IEmittedEventWriter</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Services.Processing.html">EventStore.Projections.Core.Services.Processing</a></h6>
+  <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
+  <h5 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class CoreProjectionCheckpointManager : object, IProjectionCheckpointManager, IHandle&lt;CoreProjectionProcessingMessage.ReadyForCheckpoint&gt;, IHandle&lt;CoreProjectionProcessingMessage.RestartRequested&gt;, IHandle&lt;CoreProjectionProcessingMessage.Failed&gt;, ICoreProjectionCheckpointManager, IEmittedEventWriter</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__ctor_EventStore_Core_Bus_IPublisher_Guid_EventStore_Projections_Core_Services_ProjectionConfig_System_String_EventStore_Projections_Core_Services_Processing_PositionTagger_EventStore_Projections_Core_Services_Processing_ProjectionNamesBuilder_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.%23ctor(EventStore.Core.Bus.IPublisher%2CGuid%2CEventStore.Projections.Core.Services.ProjectionConfig%2CSystem.String%2CEventStore.Projections.Core.Services.Processing.PositionTagger%2CEventStore.Projections.Core.Services.Processing.ProjectionNamesBuilder%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L38">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__ctor_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.#ctor*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__ctor_EventStore_Core_Bus_IPublisher_Guid_EventStore_Projections_Core_Services_ProjectionConfig_System_String_EventStore_Projections_Core_Services_Processing_PositionTagger_EventStore_Projections_Core_Services_Processing_ProjectionNamesBuilder_System_Boolean_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.#ctor(EventStore.Core.Bus.IPublisher,Guid,EventStore.Projections.Core.Services.ProjectionConfig,System.String,EventStore.Projections.Core.Services.Processing.PositionTagger,EventStore.Projections.Core.Services.Processing.ProjectionNamesBuilder,System.Boolean)">CoreProjectionCheckpointManager(IPublisher, Guid, ProjectionConfig, String, PositionTagger, ProjectionNamesBuilder, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected CoreProjectionCheckpointManager(IPublisher publisher, Guid projectionCorrelationId, ProjectionConfig projectionConfig, string name, PositionTagger positionTagger, ProjectionNamesBuilder namingBuilder, bool usePersistentCheckpoints)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
+        <td><span class="parametername">publisher</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">projectionCorrelationId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.ProjectionConfig.html">ProjectionConfig</a></td>
+        <td><span class="parametername">projectionConfig</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.PositionTagger.html">PositionTagger</a></td>
+        <td><span class="parametername">positionTagger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ProjectionNamesBuilder.html">ProjectionNamesBuilder</a></td>
+        <td><span class="parametername">namingBuilder</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">usePersistentCheckpoints</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__currentCheckpoint.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager._currentCheckpoint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L22">View Source</a>
+  </span>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__currentCheckpoint" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager._currentCheckpoint">_currentCheckpoint</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ProjectionCheckpoint _currentCheckpoint</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ProjectionCheckpoint.html">ProjectionCheckpoint</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__logger.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager._logger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L13">View Source</a>
+  </span>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__logger" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager._logger">_logger</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly ILogger _logger</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Common.Log.ILogger.html">ILogger</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__namingBuilder.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager._namingBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L11">View Source</a>
+  </span>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__namingBuilder" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager._namingBuilder">_namingBuilder</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly ProjectionNamesBuilder _namingBuilder</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ProjectionNamesBuilder.html">ProjectionNamesBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__projectionConfig.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager._projectionConfig%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L12">View Source</a>
+  </span>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__projectionConfig" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager._projectionConfig">_projectionConfig</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly ProjectionConfig _projectionConfig</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.ProjectionConfig.html">ProjectionConfig</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__publisher.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager._publisher%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L17">View Source</a>
+  </span>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__publisher" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager._publisher">_publisher</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly IPublisher _publisher</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__stopped.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager._stopped%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L34">View Source</a>
+  </span>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__stopped" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager._stopped">_stopped</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool _stopped</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__stopping.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager._stopping%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L33">View Source</a>
+  </span>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__stopping" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager._stopping">_stopping</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool _stopping</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_LastProcessedEventPosition.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.LastProcessedEventPosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L232">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_LastProcessedEventPosition_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.LastProcessedEventPosition*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_LastProcessedEventPosition" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.LastProcessedEventPosition">LastProcessedEventPosition</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CheckpointTag LastProcessedEventPosition { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_BeginLoadPartitionStateAt_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_Action_EventStore_Projections_Core_Services_Processing_PartitionState__.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.BeginLoadPartitionStateAt(System.String%2CEventStore.Projections.Core.Services.Processing.CheckpointTag%2CAction%7BEventStore.Projections.Core.Services.Processing.PartitionState%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L79">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_BeginLoadPartitionStateAt_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.BeginLoadPartitionStateAt*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_BeginLoadPartitionStateAt_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_Action_EventStore_Projections_Core_Services_Processing_PartitionState__" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.BeginLoadPartitionStateAt(System.String,EventStore.Projections.Core.Services.Processing.CheckpointTag,Action{EventStore.Projections.Core.Services.Processing.PartitionState})">BeginLoadPartitionStateAt(String, CheckpointTag, Action&lt;PartitionState&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void BeginLoadPartitionStateAt(string statePartition, CheckpointTag requestedStateCheckpointTag, Action&lt;PartitionState&gt; loadCompleted)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">statePartition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">requestedStateCheckpointTag</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.Projections.Core.Services.Processing.PartitionState.html">PartitionState</a>&gt;</td>
+        <td><span class="parametername">loadCompleted</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_BeginLoadPrerecordedEvents_EventStore_Projections_Core_Services_Processing_CheckpointTag_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.BeginLoadPrerecordedEvents(EventStore.Projections.Core.Services.Processing.CheckpointTag)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L364">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_BeginLoadPrerecordedEvents_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.BeginLoadPrerecordedEvents*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_BeginLoadPrerecordedEvents_EventStore_Projections_Core_Services_Processing_CheckpointTag_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.BeginLoadPrerecordedEvents(EventStore.Projections.Core.Services.Processing.CheckpointTag)">BeginLoadPrerecordedEvents(CheckpointTag)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void BeginLoadPrerecordedEvents(CheckpointTag checkpointTag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">checkpointTag</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_BeginWriteCheckpoint_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.BeginWriteCheckpoint(EventStore.Projections.Core.Services.Processing.CheckpointTag%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L68">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_BeginWriteCheckpoint_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.BeginWriteCheckpoint*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_BeginWriteCheckpoint_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_String_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.BeginWriteCheckpoint(EventStore.Projections.Core.Services.Processing.CheckpointTag,System.String)">BeginWriteCheckpoint(CheckpointTag, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void BeginWriteCheckpoint(CheckpointTag requestedCheckpointPosition, string requestedCheckpointState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">requestedCheckpointPosition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">requestedCheckpointState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_CapturePartitionStateUpdated_System_String_EventStore_Projections_Core_Services_Processing_PartitionState_EventStore_Projections_Core_Services_Processing_PartitionState_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.CapturePartitionStateUpdated(System.String%2CEventStore.Projections.Core.Services.Processing.PartitionState%2CEventStore.Projections.Core.Services.Processing.PartitionState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L71">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_CapturePartitionStateUpdated_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.CapturePartitionStateUpdated*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_CapturePartitionStateUpdated_System_String_EventStore_Projections_Core_Services_Processing_PartitionState_EventStore_Projections_Core_Services_Processing_PartitionState_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.CapturePartitionStateUpdated(System.String,EventStore.Projections.Core.Services.Processing.PartitionState,EventStore.Projections.Core.Services.Processing.PartitionState)">CapturePartitionStateUpdated(String, PartitionState, PartitionState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void CapturePartitionStateUpdated(string partition, PartitionState oldState, PartitionState newState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">partition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.PartitionState.html">PartitionState</a></td>
+        <td><span class="parametername">oldState</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.PartitionState.html">PartitionState</a></td>
+        <td><span class="parametername">newState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_CheckpointSuggested_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_Single_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.CheckpointSuggested(EventStore.Projections.Core.Services.Processing.CheckpointTag%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L214">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_CheckpointSuggested_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.CheckpointSuggested*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_CheckpointSuggested_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_Single_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.CheckpointSuggested(EventStore.Projections.Core.Services.Processing.CheckpointTag,System.Single)">CheckpointSuggested(CheckpointTag, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CheckpointSuggested(CheckpointTag checkpointTag, float progress)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">checkpointTag</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">progress</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_CheckpointWritten_EventStore_Projections_Core_Services_Processing_CheckpointTag_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.CheckpointWritten(EventStore.Projections.Core.Services.Processing.CheckpointTag)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L348">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_CheckpointWritten_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.CheckpointWritten*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_CheckpointWritten_EventStore_Projections_Core_Services_Processing_CheckpointTag_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.CheckpointWritten(EventStore.Projections.Core.Services.Processing.CheckpointTag)">CheckpointWritten(CheckpointTag)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void CheckpointWritten(CheckpointTag lastCompletedCheckpointPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">lastCompletedCheckpointPosition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_CreateProjectionCheckpoint_EventStore_Projections_Core_Services_Processing_CheckpointTag_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.CreateProjectionCheckpoint(EventStore.Projections.Core.Services.Processing.CheckpointTag)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L66">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_CreateProjectionCheckpoint_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.CreateProjectionCheckpoint*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_CreateProjectionCheckpoint_EventStore_Projections_Core_Services_Processing_CheckpointTag_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.CreateProjectionCheckpoint(EventStore.Projections.Core.Services.Processing.CheckpointTag)">CreateProjectionCheckpoint(CheckpointTag)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract ProjectionCheckpoint CreateProjectionCheckpoint(CheckpointTag checkpointPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">checkpointPosition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ProjectionCheckpoint.html">ProjectionCheckpoint</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_EmitPartitionCheckpoints.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.EmitPartitionCheckpoints%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L74">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_EmitPartitionCheckpoints_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.EmitPartitionCheckpoints*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_EmitPartitionCheckpoints" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.EmitPartitionCheckpoints">EmitPartitionCheckpoints()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void EmitPartitionCheckpoints()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_EnsureStarted.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.EnsureStarted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L289">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_EnsureStarted_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.EnsureStarted*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_EnsureStarted" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.EnsureStarted">EnsureStarted()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void EnsureStarted()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_EventProcessed_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_Single_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.EventProcessed(EventStore.Projections.Core.Services.Processing.CheckpointTag%2CSystem.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L180">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_EventProcessed_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.EventProcessed*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_EventProcessed_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_Single_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.EventProcessed(EventStore.Projections.Core.Services.Processing.CheckpointTag,System.Single)">EventProcessed(CheckpointTag, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EventProcessed(CheckpointTag checkpointTag, float progress)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">checkpointTag</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">progress</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_EventsEmitted_EventStore_Projections_Core_Services_Processing_EmittedEventEnvelope___Guid_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.EventsEmitted(EventStore.Projections.Core.Services.Processing.EmittedEventEnvelope%5B%5D%2CGuid%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L192">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_EventsEmitted_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.EventsEmitted*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_EventsEmitted_EventStore_Projections_Core_Services_Processing_EmittedEventEnvelope___Guid_System_String_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.EventsEmitted(EventStore.Projections.Core.Services.Processing.EmittedEventEnvelope[],Guid,System.String)">EventsEmitted(EmittedEventEnvelope[], Guid, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EventsEmitted(EmittedEventEnvelope[] scheduledWrites, Guid causedBy, string correlationId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.EmittedEventEnvelope.html">EmittedEventEnvelope</a>[]</td>
+        <td><span class="parametername">scheduledWrites</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">causedBy</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">correlationId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_GetStatistics_EventStore_Projections_Core_Services_ProjectionStatistics_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.GetStatistics(EventStore.Projections.Core.Services.ProjectionStatistics)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L140">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_GetStatistics_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.GetStatistics*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_GetStatistics_EventStore_Projections_Core_Services_ProjectionStatistics_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.GetStatistics(EventStore.Projections.Core.Services.ProjectionStatistics)">GetStatistics(ProjectionStatistics)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void GetStatistics(ProjectionStatistics info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.ProjectionStatistics.html">ProjectionStatistics</a></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Handle_CoreProjectionProcessingMessage_Failed_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Handle(CoreProjectionProcessingMessage.Failed)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L258">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Handle_CoreProjectionProcessingMessage_Failed_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Handle(CoreProjectionProcessingMessage.Failed)">Handle(CoreProjectionProcessingMessage.Failed)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(CoreProjectionProcessingMessage.Failed message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CoreProjectionProcessingMessage.Failed</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Handle_CoreProjectionProcessingMessage_ReadyForCheckpoint_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Handle(CoreProjectionProcessingMessage.ReadyForCheckpoint)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L237">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Handle_CoreProjectionProcessingMessage_ReadyForCheckpoint_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Handle(CoreProjectionProcessingMessage.ReadyForCheckpoint)">Handle(CoreProjectionProcessingMessage.ReadyForCheckpoint)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(CoreProjectionProcessingMessage.ReadyForCheckpoint message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CoreProjectionProcessingMessage.ReadyForCheckpoint</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Handle_CoreProjectionProcessingMessage_RestartRequested_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Handle(CoreProjectionProcessingMessage.RestartRequested)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L252">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Handle_CoreProjectionProcessingMessage_RestartRequested_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Handle(CoreProjectionProcessingMessage.RestartRequested)">Handle(CoreProjectionProcessingMessage.RestartRequested)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(CoreProjectionProcessingMessage.RestartRequested message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CoreProjectionProcessingMessage.RestartRequested</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Initialize.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Initialize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L84">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Initialize_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Initialize*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Initialize" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Initialize()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_PartitionCompleted_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.PartitionCompleted(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L82">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_PartitionCompleted_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.PartitionCompleted*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_PartitionCompleted_System_String_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.PartitionCompleted(System.String)">PartitionCompleted(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void PartitionCompleted(string partition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">partition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_PrerecordedEventsLoaded_EventStore_Projections_Core_Services_Processing_CheckpointTag_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.PrerecordedEventsLoaded(EventStore.Projections.Core.Services.Processing.CheckpointTag)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L264">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_PrerecordedEventsLoaded_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.PrerecordedEventsLoaded*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_PrerecordedEventsLoaded_EventStore_Projections_Core_Services_Processing_CheckpointTag_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.PrerecordedEventsLoaded(EventStore.Projections.Core.Services.Processing.CheckpointTag)">PrerecordedEventsLoaded(CheckpointTag)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void PrerecordedEventsLoaded(CheckpointTag checkpointTag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">checkpointTag</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Progress_System_Single_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Progress(System.Single)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L226">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Progress_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Progress*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Progress_System_Single_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Progress(System.Single)">Progress(Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Progress(float progress)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">progress</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_RecordEventOrder_EventStore_Projections_Core_Services_Processing_ResolvedEvent_EventStore_Projections_Core_Services_Processing_CheckpointTag_Action_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.RecordEventOrder(EventStore.Projections.Core.Services.Processing.ResolvedEvent%2CEventStore.Projections.Core.Services.Processing.CheckpointTag%2CAction)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L76">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_RecordEventOrder_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.RecordEventOrder*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_RecordEventOrder_EventStore_Projections_Core_Services_Processing_ResolvedEvent_EventStore_Projections_Core_Services_Processing_CheckpointTag_Action_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.RecordEventOrder(EventStore.Projections.Core.Services.Processing.ResolvedEvent,EventStore.Projections.Core.Services.Processing.CheckpointTag,Action)">RecordEventOrder(ResolvedEvent, CheckpointTag, Action)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void RecordEventOrder(ResolvedEvent resolvedEvent, CheckpointTag orderCheckpointTag, Action committed)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ResolvedEvent.html">ResolvedEvent</a></td>
+        <td><span class="parametername">resolvedEvent</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">orderCheckpointTag</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span></td>
+        <td><span class="parametername">committed</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_RequestRestart_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.RequestRestart(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L338">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_RequestRestart_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.RequestRestart*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_RequestRestart_System_String_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.RequestRestart(System.String)">RequestRestart(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void RequestRestart(string reason)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">reason</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_SendPrerecordedEvent_EventStore_Core_Data_ResolvedEvent_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.SendPrerecordedEvent(EventStore.Core.Data.ResolvedEvent%2CEventStore.Projections.Core.Services.Processing.CheckpointTag%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L326">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_SendPrerecordedEvent_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.SendPrerecordedEvent*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_SendPrerecordedEvent_EventStore_Core_Data_ResolvedEvent_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_Int64_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.SendPrerecordedEvent(EventStore.Core.Data.ResolvedEvent,EventStore.Projections.Core.Services.Processing.CheckpointTag,System.Int64)">SendPrerecordedEvent(ResolvedEvent, CheckpointTag, Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SendPrerecordedEvent(ResolvedEvent pair, CheckpointTag positionTag, long prerecordedEventMessageSequenceNumber)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Data.ResolvedEvent.html">ResolvedEvent</a></td>
+        <td><span class="parametername">pair</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">positionTag</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">prerecordedEventMessageSequenceNumber</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Start_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Projections_Core_Services_Processing_PartitionState_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Start(EventStore.Projections.Core.Services.Processing.CheckpointTag%2CEventStore.Projections.Core.Services.Processing.PartitionState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L103">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Start_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Start*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Start_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Projections_Core_Services_Processing_PartitionState_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Start(EventStore.Projections.Core.Services.Processing.CheckpointTag,EventStore.Projections.Core.Services.Processing.PartitionState)">Start(CheckpointTag, PartitionState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Start(CheckpointTag checkpointTag, PartitionState rootPartitionState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">checkpointTag</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.PartitionState.html">PartitionState</a></td>
+        <td><span class="parametername">rootPartitionState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_StateUpdated_System_String_EventStore_Projections_Core_Services_Processing_PartitionState_EventStore_Projections_Core_Services_Processing_PartitionState_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.StateUpdated(System.String%2CEventStore.Projections.Core.Services.Processing.PartitionState%2CEventStore.Projections.Core.Services.Processing.PartitionState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L161">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_StateUpdated_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.StateUpdated*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_StateUpdated_System_String_EventStore_Projections_Core_Services_Processing_PartitionState_EventStore_Projections_Core_Services_Processing_PartitionState_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.StateUpdated(System.String,EventStore.Projections.Core.Services.Processing.PartitionState,EventStore.Projections.Core.Services.Processing.PartitionState)">StateUpdated(String, PartitionState, PartitionState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StateUpdated(string partition, PartitionState oldState, PartitionState newState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">partition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.PartitionState.html">PartitionState</a></td>
+        <td><span class="parametername">oldState</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.PartitionState.html">PartitionState</a></td>
+        <td><span class="parametername">newState</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Stopped.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Stopped%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L128">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Stopped_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Stopped*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Stopped" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Stopped">Stopped()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Stopped()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Stopping.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Stopping%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L120">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Stopping_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Stopping*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Stopping" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.Stopping">Stopping()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Stopping()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="EventStore.Projections.Core.Messages.IProjectionCheckpointManager.html">IProjectionCheckpointManager</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.ICoreProjectionCheckpointManager.html">ICoreProjectionCheckpointManager</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.IEmittedEventWriter.html">IEmittedEventWriter</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJson_System_Object_">Json.ToJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_Serialize__1___0_">ProtobufExtensions.Serialize&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_SerializeToArray__1___0_">ProtobufExtensions.SerializeToArray&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointManager.cs/#L8" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

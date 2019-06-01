@@ -1,0 +1,600 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Stats and Debug Information | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Stats and Debug Information | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="stats-and-debug-information">Stats and Debug Information</h1>
+
+<p>Event Store has a lot of debug and statistics information available about a cluster you can find with the following request:</p>
+<div class="tabGroup" id="tabgroup_wyQWDLPtxP">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_wyQWDLPtxP_tabid-stats-bash" role="tab" aria-controls="tabpanel_wyQWDLPtxP_tabid-stats-bash" data-tab="tabid-stats-bash" tabindex="0" aria-selected="true">HTTP API</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_wyQWDLPtxP_tabid-stats-response" role="tab" aria-controls="tabpanel_wyQWDLPtxP_tabid-stats-response" data-tab="tabid-stats-response" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_wyQWDLPtxP_tabid-stats-bash" role="tabpanel" data-tab="tabid-stats-bash">
+<pre><code class="lang-bash" name="server-stats">curl -i -X GET &quot;http://127.0.0.1:2113/stats&quot; -u &quot;admin:changeit&quot;
+</code></pre></section>
+<section id="tabpanel_wyQWDLPtxP_tabid-stats-response" role="tabpanel" data-tab="tabid-stats-response" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-bash" name="server-stats-response">HTTP/1.1 200 OK
+Access-Control-Allow-Methods: GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position, ES-CurrentVersion
+Cache-Control: max-age=1, public
+Vary: Accept
+Content-Type: application/json; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Thu, 06 Dec 2018 09:39:21 GMT
+Content-Length: 12664
+Keep-Alive: timeout=15,max=100
+
+{
+  &quot;proc&quot;: {
+    &quot;startTime&quot;: &quot;2018-12-06T09:33:13.0000000Z&quot;,
+    &quot;id&quot;: 1,
+    &quot;mem&quot;: 84639744,
+    &quot;cpu&quot;: 9.739911,
+    &quot;cpuScaled&quot;: 4.86995554,
+    &quot;threadsCount&quot;: 25,
+    &quot;contentionsRate&quot;: 57.86452,
+    &quot;thrownExceptionsRate&quot;: 0.0,
+    &quot;gc&quot;: {
+      &quot;allocationSpeed&quot;: 0.0,
+      &quot;gen0ItemsCount&quot;: 14,
+      &quot;gen0Size&quot;: 0,
+      &quot;gen1ItemsCount&quot;: 1,
+      &quot;gen1Size&quot;: 0,
+      &quot;gen2ItemsCount&quot;: 0,
+      &quot;gen2Size&quot;: 0,
+      &quot;largeHeapSize&quot;: 0,
+      &quot;timeInGc&quot;: 0.0,
+      &quot;totalBytesInHeaps&quot;: 0
+    },
+    &quot;diskIo&quot;: {
+      &quot;readBytes&quot;: 30879744,
+      &quot;writtenBytes&quot;: 987136,
+      &quot;readOps&quot;: 75895,
+      &quot;writeOps&quot;: 726
+    },
+    &quot;tcp&quot;: {
+      &quot;connections&quot;: 0,
+      &quot;receivingSpeed&quot;: 0.0,
+      &quot;sendingSpeed&quot;: 0.0,
+      &quot;inSend&quot;: 0,
+      &quot;measureTime&quot;: &quot;00:00:29.5561630&quot;,
+      &quot;pendingReceived&quot;: 0,
+      &quot;pendingSend&quot;: 0,
+      &quot;receivedBytesSinceLastRun&quot;: 0,
+      &quot;receivedBytesTotal&quot;: 0,
+      &quot;sentBytesSinceLastRun&quot;: 0,
+      &quot;sentBytesTotal&quot;: 0
+    }
+  },
+  &quot;sys&quot;: {
+    &quot;cpu&quot;: 8.282546,
+    &quot;freeMem&quot;: 375517184,
+    &quot;drive&quot;: {
+      &quot;/var/lib/eventstore&quot;: {
+        &quot;availableBytes&quot;: 13525999616,
+        &quot;totalBytes&quot;: 15679725568,
+        &quot;usage&quot;: &quot;13%&quot;,
+        &quot;usedBytes&quot;: 2153725952
+      }
+    }
+  },
+  &quot;es&quot;: {
+    &quot;checksum&quot;: 205117,
+    &quot;checksumNonFlushed&quot;: 205117,
+    &quot;queue&quot;: {
+      &quot;index Committer&quot;: {
+        &quot;queueName&quot;: &quot;Index Committer&quot;,
+        &quot;groupName&quot;: &quot;&quot;,
+        &quot;avgItemsPerSecond&quot;: 0,
+        &quot;avgProcessingTime&quot;: 29590.349000000002,
+        &quot;currentIdleTime&quot;: null,
+        &quot;currentItemProcessingTime&quot;: &quot;0:00:06:06.3938445&quot;,
+        &quot;idleTimePercent&quot;: 0.0,
+        &quot;length&quot;: 0,
+        &quot;lengthCurrentTryPeak&quot;: 0,
+        &quot;lengthLifetimePeak&quot;: 0,
+        &quot;totalItemsProcessed&quot;: 60,
+        &quot;inProgressMessage&quot;: &quot;&lt;none&gt;&quot;,
+        &quot;lastProcessedMessage&quot;: &quot;CommitAck&quot;
+      },
+      &quot;mainQueue&quot;: {
+        &quot;queueName&quot;: &quot;MainQueue&quot;,
+        &quot;groupName&quot;: &quot;&quot;,
+        &quot;avgItemsPerSecond&quot;: 13,
+        &quot;avgProcessingTime&quot;: 0.012954452926208651,
+        &quot;currentIdleTime&quot;: &quot;0:00:00:00.0290638&quot;,
+        &quot;currentItemProcessingTime&quot;: null,
+        &quot;idleTimePercent&quot;: 99.982804190417681,
+        &quot;length&quot;: 0,
+        &quot;lengthCurrentTryPeak&quot;: 5,
+        &quot;lengthLifetimePeak&quot;: 14,
+        &quot;totalItemsProcessed&quot;: 6366,
+        &quot;inProgressMessage&quot;: &quot;&lt;none&gt;&quot;,
+        &quot;lastProcessedMessage&quot;: &quot;Schedule&quot;
+      },
+      &quot;monitoringQueue&quot;: {
+        &quot;queueName&quot;: &quot;MonitoringQueue&quot;,
+        &quot;groupName&quot;: &quot;&quot;,
+        &quot;avgItemsPerSecond&quot;: 0,
+        &quot;avgProcessingTime&quot;: 584.2229,
+        &quot;currentIdleTime&quot;: null,
+        &quot;currentItemProcessingTime&quot;: &quot;0:00:00:00.5484086&quot;,
+        &quot;idleTimePercent&quot;: 98.025629883927763,
+        &quot;length&quot;: 0,
+        &quot;lengthCurrentTryPeak&quot;: 0,
+        &quot;lengthLifetimePeak&quot;: 1,
+        &quot;totalItemsProcessed&quot;: 25,
+        &quot;inProgressMessage&quot;: &quot;GetFreshStats&quot;,
+        &quot;lastProcessedMessage&quot;: &quot;GetFreshStats&quot;
+      },
+      &quot;projection Core #0&quot;: {
+        &quot;queueName&quot;: &quot;Projection Core #0&quot;,
+        &quot;groupName&quot;: &quot;Projection Core&quot;,
+        &quot;avgItemsPerSecond&quot;: 0,
+        &quot;avgProcessingTime&quot;: 0.00966,
+        &quot;currentIdleTime&quot;: &quot;0:00:00:29.5815685&quot;,
+        &quot;currentItemProcessingTime&quot;: null,
+        &quot;idleTimePercent&quot;: 99.999673204215767,
+        &quot;length&quot;: 0,
+        &quot;lengthCurrentTryPeak&quot;: 2,
+        &quot;lengthLifetimePeak&quot;: 22,
+        &quot;totalItemsProcessed&quot;: 871,
+        &quot;inProgressMessage&quot;: &quot;&lt;none&gt;&quot;,
+        &quot;lastProcessedMessage&quot;: &quot;EventReaderIdle&quot;
+      },
+      &quot;projection Core #1&quot;: {
+        &quot;queueName&quot;: &quot;Projection Core #1&quot;,
+        &quot;groupName&quot;: &quot;Projection Core&quot;,
+        &quot;avgItemsPerSecond&quot;: 0,
+        &quot;avgProcessingTime&quot;: 0.01033,
+        &quot;currentIdleTime&quot;: &quot;0:00:00:29.5815941&quot;,
+        &quot;currentItemProcessingTime&quot;: null,
+        &quot;idleTimePercent&quot;: 99.999651237588822,
+        &quot;length&quot;: 0,
+        &quot;lengthCurrentTryPeak&quot;: 2,
+        &quot;lengthLifetimePeak&quot;: 15,
+        &quot;totalItemsProcessed&quot;: 505,
+        &quot;inProgressMessage&quot;: &quot;&lt;none&gt;&quot;,
+        &quot;lastProcessedMessage&quot;: &quot;EventReaderIdle&quot;
+      },
+      &quot;projection Core #2&quot;: {
+        &quot;queueName&quot;: &quot;Projection Core #2&quot;,
+        &quot;groupName&quot;: &quot;Projection Core&quot;,
+        &quot;avgItemsPerSecond&quot;: 0,
+        &quot;avgProcessingTime&quot;: 0.010700000000000001,
+        &quot;currentIdleTime&quot;: &quot;0:00:00:29.5816107&quot;,
+        &quot;currentItemProcessingTime&quot;: null,
+        &quot;idleTimePercent&quot;: 99.999638057613979,
+        &quot;length&quot;: 0,
+        &quot;lengthCurrentTryPeak&quot;: 2,
+        &quot;lengthLifetimePeak&quot;: 53,
+        &quot;totalItemsProcessed&quot;: 2897,
+        &quot;inProgressMessage&quot;: &quot;&lt;none&gt;&quot;,
+        &quot;lastProcessedMessage&quot;: &quot;EventReaderIdle&quot;
+      },
+      &quot;projections Master&quot;: {
+        &quot;queueName&quot;: &quot;Projections Master&quot;,
+        &quot;groupName&quot;: &quot;&quot;,
+        &quot;avgItemsPerSecond&quot;: 19,
+        &quot;avgProcessingTime&quot;: 0.0076020905923344945,
+        &quot;currentIdleTime&quot;: &quot;0:00:00:00.0398806&quot;,
+        &quot;currentItemProcessingTime&quot;: null,
+        &quot;idleTimePercent&quot;: 99.9850336301286,
+        &quot;length&quot;: 0,
+        &quot;lengthCurrentTryPeak&quot;: 0,
+        &quot;lengthLifetimePeak&quot;: 12,
+        &quot;totalItemsProcessed&quot;: 7285,
+        &quot;inProgressMessage&quot;: &quot;&lt;none&gt;&quot;,
+        &quot;lastProcessedMessage&quot;: &quot;Schedule&quot;
+      },
+      &quot;storage Chaser&quot;: {
+        &quot;queueName&quot;: &quot;Storage Chaser&quot;,
+        &quot;groupName&quot;: &quot;&quot;,
+        &quot;avgItemsPerSecond&quot;: 104,
+        &quot;avgProcessingTime&quot;: 0.00693448498546981,
+        &quot;currentIdleTime&quot;: &quot;0:00:00:00.0012769&quot;,
+        &quot;currentItemProcessingTime&quot;: null,
+        &quot;idleTimePercent&quot;: 99.926313794228051,
+        &quot;length&quot;: 0,
+        &quot;lengthCurrentTryPeak&quot;: 0,
+        &quot;lengthLifetimePeak&quot;: 0,
+        &quot;totalItemsProcessed&quot;: 38228,
+        &quot;inProgressMessage&quot;: &quot;&lt;none&gt;&quot;,
+        &quot;lastProcessedMessage&quot;: &quot;ChaserCheckpointFlush&quot;
+      },
+      &quot;storageReaderQueue #1&quot;: {
+        &quot;queueName&quot;: &quot;StorageReaderQueue #1&quot;,
+        &quot;groupName&quot;: &quot;StorageReaderQueue&quot;,
+        &quot;avgItemsPerSecond&quot;: 0,
+        &quot;avgProcessingTime&quot;: 0.19243333333333335,
+        &quot;currentIdleTime&quot;: &quot;0:00:00:00.5597500&quot;,
+        &quot;currentItemProcessingTime&quot;: null,
+        &quot;idleTimePercent&quot;: 99.994147076653874,
+        &quot;length&quot;: 0,
+        &quot;lengthCurrentTryPeak&quot;: 0,
+        &quot;lengthLifetimePeak&quot;: 1,
+        &quot;totalItemsProcessed&quot;: 274,
+        &quot;inProgressMessage&quot;: &quot;&lt;none&gt;&quot;,
+        &quot;lastProcessedMessage&quot;: &quot;ReadStreamEventsBackward&quot;
+      },
+      &quot;storageReaderQueue #2&quot;: {
+        &quot;queueName&quot;: &quot;StorageReaderQueue #2&quot;,
+        &quot;groupName&quot;: &quot;StorageReaderQueue&quot;,
+        &quot;avgItemsPerSecond&quot;: 0,
+        &quot;avgProcessingTime&quot;: 0.11274545454545454,
+        &quot;currentIdleTime&quot;: &quot;0:00:00:00.0290949&quot;,
+        &quot;currentItemProcessingTime&quot;: null,
+        &quot;idleTimePercent&quot;: 99.995787138839844,
+        &quot;length&quot;: 0,
+        &quot;lengthCurrentTryPeak&quot;: 0,
+        &quot;lengthLifetimePeak&quot;: 1,
+        &quot;totalItemsProcessed&quot;: 280,
+        &quot;inProgressMessage&quot;: &quot;&lt;none&gt;&quot;,
+        &quot;lastProcessedMessage&quot;: &quot;ReadStreamEventsForward&quot;
+      },
+      &quot;storageReaderQueue #3&quot;: {
+        &quot;queueName&quot;: &quot;StorageReaderQueue #3&quot;,
+        &quot;groupName&quot;: &quot;StorageReaderQueue&quot;,
+        &quot;avgItemsPerSecond&quot;: 0,
+        &quot;avgProcessingTime&quot;: 0.0953888888888889,
+        &quot;currentIdleTime&quot;: &quot;0:00:00:02.0327931&quot;,
+        &quot;currentItemProcessingTime&quot;: null,
+        &quot;idleTimePercent&quot;: 99.9970993914555,
+        &quot;length&quot;: 0,
+        &quot;lengthCurrentTryPeak&quot;: 0,
+        &quot;lengthLifetimePeak&quot;: 1,
+        &quot;totalItemsProcessed&quot;: 262,
+        &quot;inProgressMessage&quot;: &quot;&lt;none&gt;&quot;,
+        &quot;lastProcessedMessage&quot;: &quot;ReadStreamEventsForward&quot;
+      },
+      &quot;storageReaderQueue #4&quot;: {
+        &quot;queueName&quot;: &quot;StorageReaderQueue #4&quot;,
+        &quot;groupName&quot;: &quot;StorageReaderQueue&quot;,
+        &quot;avgItemsPerSecond&quot;: 0,
+        &quot;avgProcessingTime&quot;: 0.087377777777777776,
+        &quot;currentIdleTime&quot;: &quot;0:00:00:01.0318977&quot;,
+        &quot;currentItemProcessingTime&quot;: null,
+        &quot;idleTimePercent&quot;: 99.997328182310355,
+        &quot;length&quot;: 0,
+        &quot;lengthCurrentTryPeak&quot;: 0,
+        &quot;lengthLifetimePeak&quot;: 1,
+        &quot;totalItemsProcessed&quot;: 282,
+        &quot;inProgressMessage&quot;: &quot;&lt;none&gt;&quot;,
+        &quot;lastProcessedMessage&quot;: &quot;ReadStreamEventsForward&quot;
+      },
+      &quot;storageWriterQueue&quot;: {
+        &quot;queueName&quot;: &quot;StorageWriterQueue&quot;,
+        &quot;groupName&quot;: &quot;&quot;,
+        &quot;avgItemsPerSecond&quot;: 0,
+        &quot;avgProcessingTime&quot;: 4.42,
+        &quot;currentIdleTime&quot;: &quot;0:00:00:29.5843498&quot;,
+        &quot;currentItemProcessingTime&quot;: null,
+        &quot;idleTimePercent&quot;: 99.985062693918209,
+        &quot;length&quot;: 0,
+        &quot;lengthCurrentTryPeak&quot;: 0,
+        &quot;lengthLifetimePeak&quot;: 2,
+        &quot;totalItemsProcessed&quot;: 65,
+        &quot;inProgressMessage&quot;: &quot;&lt;none&gt;&quot;,
+        &quot;lastProcessedMessage&quot;: &quot;WritePrepares&quot;
+      },
+      &quot;subscriptions&quot;: {
+        &quot;queueName&quot;: &quot;Subscriptions&quot;,
+        &quot;groupName&quot;: &quot;&quot;,
+        &quot;avgItemsPerSecond&quot;: 1,
+        &quot;avgProcessingTime&quot;: 0.022990322580645161,
+        &quot;currentIdleTime&quot;: &quot;0:00:00:00.0293309&quot;,
+        &quot;currentItemProcessingTime&quot;: null,
+        &quot;idleTimePercent&quot;: 99.997594823346091,
+        &quot;length&quot;: 0,
+        &quot;lengthCurrentTryPeak&quot;: 0,
+        &quot;lengthLifetimePeak&quot;: 10,
+        &quot;totalItemsProcessed&quot;: 436,
+        &quot;inProgressMessage&quot;: &quot;&lt;none&gt;&quot;,
+        &quot;lastProcessedMessage&quot;: &quot;CheckPollTimeout&quot;
+      },
+      &quot;timer&quot;: {
+        &quot;queueName&quot;: &quot;Timer&quot;,
+        &quot;groupName&quot;: &quot;&quot;,
+        &quot;avgItemsPerSecond&quot;: 32,
+        &quot;avgProcessingTime&quot;: 0.024676409185803758,
+        &quot;currentIdleTime&quot;: &quot;0:00:00:00.0093879&quot;,
+        &quot;currentItemProcessingTime&quot;: null,
+        &quot;idleTimePercent&quot;: 99.918283810581556,
+        &quot;length&quot;: 9,
+        &quot;lengthCurrentTryPeak&quot;: 15,
+        &quot;lengthLifetimePeak&quot;: 614,
+        &quot;totalItemsProcessed&quot;: 12915,
+        &quot;inProgressMessage&quot;: &quot;&lt;none&gt;&quot;,
+        &quot;lastProcessedMessage&quot;: &quot;ExecuteScheduledTasks&quot;
+      },
+      &quot;worker #1&quot;: {
+        &quot;queueName&quot;: &quot;Worker #1&quot;,
+        &quot;groupName&quot;: &quot;Workers&quot;,
+        &quot;avgItemsPerSecond&quot;: 1,
+        &quot;avgProcessingTime&quot;: 0.18848333333333334,
+        &quot;currentIdleTime&quot;: &quot;0:00:00:00.0295425&quot;,
+        &quot;currentItemProcessingTime&quot;: null,
+        &quot;idleTimePercent&quot;: 99.973144953850138,
+        &quot;length&quot;: 0,
+        &quot;lengthCurrentTryPeak&quot;: 1,
+        &quot;lengthLifetimePeak&quot;: 1,
+        &quot;totalItemsProcessed&quot;: 520,
+        &quot;inProgressMessage&quot;: &quot;&lt;none&gt;&quot;,
+        &quot;lastProcessedMessage&quot;: &quot;PurgeTimedOutRequests&quot;
+      },
+      &quot;worker #2&quot;: {
+        &quot;queueName&quot;: &quot;Worker #2&quot;,
+        &quot;groupName&quot;: &quot;Workers&quot;,
+        &quot;avgItemsPerSecond&quot;: 1,
+        &quot;avgProcessingTime&quot;: 0.2823279069767442,
+        &quot;currentIdleTime&quot;: &quot;0:00:00:00.0295030&quot;,
+        &quot;currentItemProcessingTime&quot;: null,
+        &quot;idleTimePercent&quot;: 99.958977493122433,
+        &quot;length&quot;: 0,
+        &quot;lengthCurrentTryPeak&quot;: 1,
+        &quot;lengthLifetimePeak&quot;: 1,
+        &quot;totalItemsProcessed&quot;: 516,
+        &quot;inProgressMessage&quot;: &quot;&lt;none&gt;&quot;,
+        &quot;lastProcessedMessage&quot;: &quot;PurgeTimedOutRequests&quot;
+      },
+      &quot;worker #3&quot;: {
+        &quot;queueName&quot;: &quot;Worker #3&quot;,
+        &quot;groupName&quot;: &quot;Workers&quot;,
+        &quot;avgItemsPerSecond&quot;: 1,
+        &quot;avgProcessingTime&quot;: 0.018606976744186047,
+        &quot;currentIdleTime&quot;: &quot;0:00:00:00.0294627&quot;,
+        &quot;currentItemProcessingTime&quot;: null,
+        &quot;idleTimePercent&quot;: 99.997299118709734,
+        &quot;length&quot;: 0,
+        &quot;lengthCurrentTryPeak&quot;: 1,
+        &quot;lengthLifetimePeak&quot;: 1,
+        &quot;totalItemsProcessed&quot;: 517,
+        &quot;inProgressMessage&quot;: &quot;&lt;none&gt;&quot;,
+        &quot;lastProcessedMessage&quot;: &quot;PurgeTimedOutRequests&quot;
+      },
+      &quot;worker #4&quot;: {
+        &quot;queueName&quot;: &quot;Worker #4&quot;,
+        &quot;groupName&quot;: &quot;Workers&quot;,
+        &quot;avgItemsPerSecond&quot;: 1,
+        &quot;avgProcessingTime&quot;: 0.013951162790697674,
+        &quot;currentIdleTime&quot;: &quot;0:00:00:00.0292979&quot;,
+        &quot;currentItemProcessingTime&quot;: null,
+        &quot;idleTimePercent&quot;: 99.997871940733575,
+        &quot;length&quot;: 0,
+        &quot;lengthCurrentTryPeak&quot;: 1,
+        &quot;lengthLifetimePeak&quot;: 1,
+        &quot;totalItemsProcessed&quot;: 517,
+        &quot;inProgressMessage&quot;: &quot;&lt;none&gt;&quot;,
+        &quot;lastProcessedMessage&quot;: &quot;PurgeTimedOutRequests&quot;
+      },
+      &quot;worker #5&quot;: {
+        &quot;queueName&quot;: &quot;Worker #5&quot;,
+        &quot;groupName&quot;: &quot;Workers&quot;,
+        &quot;avgItemsPerSecond&quot;: 1,
+        &quot;avgProcessingTime&quot;: 0.00796046511627907,
+        &quot;currentIdleTime&quot;: &quot;0:00:00:00.0290928&quot;,
+        &quot;currentItemProcessingTime&quot;: null,
+        &quot;idleTimePercent&quot;: 99.998844217454163,
+        &quot;length&quot;: 0,
+        &quot;lengthCurrentTryPeak&quot;: 1,
+        &quot;lengthLifetimePeak&quot;: 1,
+        &quot;totalItemsProcessed&quot;: 517,
+        &quot;inProgressMessage&quot;: &quot;&lt;none&gt;&quot;,
+        &quot;lastProcessedMessage&quot;: &quot;ReadStreamEventsForwardCompleted&quot;
+      }
+    },
+    &quot;writer&quot;: {
+      &quot;lastFlushSize&quot;: 17025,
+      &quot;lastFlushDelayMs&quot;: 4.2292,
+      &quot;meanFlushSize&quot;: 4018,
+      &quot;meanFlushDelayMs&quot;: 2.6562450980392156,
+      &quot;maxFlushSize&quot;: 17025,
+      &quot;maxFlushDelayMs&quot;: 6.9021,
+      &quot;queuedFlushMessages&quot;: 0
+    },
+    &quot;readIndex&quot;: {
+      &quot;cachedRecord&quot;: 306,
+      &quot;notCachedRecord&quot;: 0,
+      &quot;cachedStreamInfo&quot;: 3012,
+      &quot;notCachedStreamInfo&quot;: 90,
+      &quot;cachedTransInfo&quot;: 0,
+      &quot;notCachedTransInfo&quot;: 0
+    }
+  }
+}%
+</code></pre></section>
+</div>
+<p>This returns a lot of information that you can filter using the sub-path of the stat:</p>
+<div class="tabGroup" id="tabgroup_wyQWDLPtxP-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_wyQWDLPtxP-1_tabid-stats-sub-bash" role="tab" aria-controls="tabpanel_wyQWDLPtxP-1_tabid-stats-sub-bash" data-tab="tabid-stats-sub-bash" tabindex="0" aria-selected="true">HTTP API</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_wyQWDLPtxP-1_tabid-stats-sub-response" role="tab" aria-controls="tabpanel_wyQWDLPtxP-1_tabid-stats-sub-response" data-tab="tabid-stats-sub-response" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_wyQWDLPtxP-1_tabid-stats-sub-bash" role="tabpanel" data-tab="tabid-stats-sub-bash">
+<pre><code class="lang-bash" name="server-stats-sub">curl -i -X GET &quot;http://127.0.0.1:2113/stats/proc/tcp&quot; -u &quot;admin:changeit&quot;
+</code></pre></section>
+<section id="tabpanel_wyQWDLPtxP-1_tabid-stats-sub-response" role="tabpanel" data-tab="tabid-stats-sub-response" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-bash" name="server-stats-sub-response">HTTP/1.1 200 OK
+Access-Control-Allow-Methods: GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position, ES-CurrentVersion
+Cache-Control: max-age=1, public
+Vary: Accept
+Content-Type: application/json; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Thu, 06 Dec 2018 10:03:55 GMT
+Content-Length: 280
+Keep-Alive: timeout=15,max=100
+
+{
+  &quot;connections&quot;: 0,
+  &quot;receivingSpeed&quot;: 0.0,
+  &quot;sendingSpeed&quot;: 0.0,
+  &quot;inSend&quot;: 0,
+  &quot;measureTime&quot;: &quot;00:00:05.0223780&quot;,
+  &quot;pendingReceived&quot;: 0,
+  &quot;pendingSend&quot;: 0,
+  &quot;receivedBytesSinceLastRun&quot;: 0,
+  &quot;receivedBytesTotal&quot;: 0,
+  &quot;sentBytesSinceLastRun&quot;: 0,
+  &quot;sentBytesTotal&quot;: 0
+}%
+</code></pre></section>
+</div>
+<p>You can find more information on what each stat returns by searching for it in the <a href="../dotnet-api/code/toc.yml">code documentation</a>.</p>
+<!-- TODO: Make this better, embed --></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/server/stats-debug.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

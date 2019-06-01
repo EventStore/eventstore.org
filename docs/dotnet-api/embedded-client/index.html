@@ -1,0 +1,562 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Embedded Client | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Embedded Client | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="embedded-client">Embedded Client</h1>
+
+<h2 id="embeddedvnodebuilder">EmbeddedVNodeBuilder</h2>
+<p>The <code>EmbeddedVNodeBuilder</code> class sets up and builds an Event Store node. You can configure your node through methods provided by the <code>EmbeddedVNodeBuilder</code> class.</p>
+<div class="NOTE"><h5>Note</h5><p>The builder used for the <code>EmbeddedVNodeBuilder</code> is the same Event Store uses internally to create the <code>ClusterNode</code>, see <em>EventStore.ClusterNode.Program.cs</em> for more examples on how to use it.</p>
+</div>
+<h2 id="building-a-node">Building a node</h2>
+<p>You have two options when you start creating a node, <code>EmbeddedVNodeBuilder.AsSingleNode()</code> or <code>EmbeddedVNodeBuilder.AsClusterMember(clusterSize)</code>, which will create a single node or a cluster node respectively. After creating the builder, you can configure the node through the methods provided by the <code>EmbeddedVNodeBuilder</code>. These are listed below.</p>
+<p>Once you have configured the node, build it with <code>EmbeddedVNodeBuilder.Build()</code> which returns the configured <code>ClusterVNode</code>.</p>
+<p>Start the node with <code>ClusterVNode.StartAndWaitUntilReady()</code> or <code>ClusterVNode.Start()</code>. <code>ClusterVNode.StartAndWaitUntilReady()</code> returns a task that completes once the node has started and all subsystems have finished loading.</p>
+<p>For example, to build a single node with default options :</p>
+<pre><code class="lang-csharp">var nodeBuilder = EmbeddedVNodeBuilder.AsSingleNode()
+                                      .OnDefaultEndpoints()
+                                      .RunInMemory();
+var node = nodeBuilder.Build();
+node.StartAndWaitUntilReady().Wait();
+</code></pre><p>To build a node to be part of a cluster with custom endpoints and gossip seeds:</p>
+<pre><code class="lang-csharp">var nodeBuilder = EmbeddedVNodeBuilder.AsClusterMember(3)
+                      .RunOnDisk(&quot;node1db&quot;)
+                      .WithInternalHttpOn(new IPEndPoint(IPAddress.Loopback, 1112))
+                      .WithExternalHttpOn(new IPEndPoint(IPAddress.Loopback, 1113))
+                      .WithExternalTcpOn(new IPEndPoint(IPAddress.Loopback, 1114))
+                      .WithInternalTcpOn(new IPEndPoint(IPAddress.Loopback, 1115))
+                      .DisableDnsDiscovery()
+                      .WithGossipSeeds(new IPEndPoint[]
+                      {
+                          new IPEndPoint(IPAddress.Loopback, 2112),
+                          new IPEndPoint(IPAddress.Loopback, 3112)
+                      });
+var node = nodeBuilder.Build();
+node.Start();
+</code></pre><div class="WARNING"><h5>Warning</h5><p>When running an embedded cluster, the task returned by <code>StartAndWaitUntilReady()</code> only completes on the master node.</p>
+</div>
+<h2 id="connecting-to-an-embedded-node">Connecting to an embedded node</h2>
+<p>You can connect to an embedded Event Store node with the <code>EmbeddedEventStoreConnection</code> class. Calling <code>EmbeddedEventStoreConnection.Create(ClusterVNode)</code> returns an <code>IEventStoreConnection</code> configured to connect to your embedded node. From there you can use the connection as normal in the .NET Client.</p>
+<pre><code class="lang-csharp">using(var embeddedConn = EmbeddedEventStoreConnection.Create(node))
+{
+    embeddedConn.ConnectAsync().Wait();
+    embeddedConn.AppendToStreamAsync(&quot;testStream&quot;, ExpectedVersion.Any,
+                    new EventData(Guid.NewGuid(), &quot;eventType&quot;, true,
+                    Encoding.UTF8.GetBytes(&quot;{\&quot;Foo\&quot;:\&quot;Bar\&quot;}&quot;), null)).Wait();
+}
+</code></pre><h2 id="logging-with-an-embedded-node">Logging with an embedded node</h2>
+<p>To enable logging for an embedded node, you need to initialize the <code>LogManager</code> and ensure that you configure the logger with a <code>log.config</code> file in your configuration directory.</p>
+<p>To initialize the <code>LogManager</code>, call this before building the nodes:</p>
+<pre><code class="lang-csharp">LogManager.Init(logComponentName, logDirectory, logConfigurationDirectory);
+</code></pre><h2 id="embeddedvnodebuilder-options">EmbeddedVNodeBuilder options</h2>
+<p>The following options are available when building an Embedded Node.</p>
+<h3 id="application-options">Application Options</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AsSingleNode()</code></td>
+<td>Returns a builder set to construct options for a single node instance</td>
+</tr>
+<tr>
+<td><code>AsClusterMember(int clusterSize)</code></td>
+<td>Returns a builder set to construct options for a cluster node instance with a cluster size</td>
+</tr>
+<tr>
+<td><code>DisableHTTPCaching()</code></td>
+<td>Disable HTTP Caching</td>
+</tr>
+<tr>
+<td><code>WithWorkerThreads(int count)</code></td>
+<td>Sets the number of worker threads to use in shared threadpool</td>
+</tr>
+<tr>
+<td><code>WithStatsPeriod(TimeSpan statsPeriod)</code></td>
+<td>Sets the period between statistics gathers</td>
+</tr>
+<tr>
+<td><code>EnableLoggingOfHttpRequests()</code></td>
+<td>Enable logging of HTTP requests and responses before they are processed</td>
+</tr>
+<tr>
+<td><code>EnableHistograms()</code></td>
+<td>Enable the tracking of histograms, typically used for debugging</td>
+</tr>
+<tr>
+<td><code>EnableTrustedAuth()</code></td>
+<td>Enable trusted authentication by an intermediary in the HTTP</td>
+</tr>
+</tbody>
+</table>
+<h3 id="certificate-options">Certificate options</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>WithServerCertificateFromFile(string path, string password)</code></td>
+<td>Sets the Server SSL Certificate loaded from a file</td>
+</tr>
+<tr>
+<td><code>WithServerCertificate(X509Certificate2 sslCertificate)</code></td>
+<td>Sets the Server SSL Certificate</td>
+</tr>
+<tr>
+<td><code>WithServerCertificateFromStore(StoreLocation storeLocation, StoreName storeName, string certificateSubjectName, string certificateThumbprint)</code></td>
+<td>Sets the Server SSL Certificate loaded from a certificate store</td>
+</tr>
+<tr>
+<td><code>WithServerCertificateFromStore(StoreName storeName, string certificateSubjectName, string certificateThumbprint)</code></td>
+<td>Sets the Server SSL Certificate loaded from a certificate store</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cluster-options">Cluster options</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>WithClusterGossipPort(int port)</code></td>
+<td>Sets the internal gossip port (used when using cluster DNS, this should point to a known port gossip will be running on)</td>
+</tr>
+<tr>
+<td><code>WithGossipSeeds(params IPEndPoint[] endpoints)</code></td>
+<td>Sets the gossip seeds this node should talk to</td>
+</tr>
+<tr>
+<td><code>WithClusterDnsName(string name)</code></td>
+<td>Sets the DNS name used for the discovery of other cluster nodes</td>
+</tr>
+<tr>
+<td><code>DisableDnsDiscovery()</code></td>
+<td>Disable DNS discovery for the cluster</td>
+</tr>
+<tr>
+<td><code>WithGossipInterval(TimeSpan gossipInterval)</code></td>
+<td>Sets the gossip interval</td>
+</tr>
+<tr>
+<td><code>WithGossipAllowedTimeDifference(TimeSpan gossipAllowedDifference)</code></td>
+<td>Sets the allowed gossip time difference</td>
+</tr>
+<tr>
+<td><code>WithGossipTimeout(TimeSpan gossipTimeout)</code></td>
+<td>Sets the gossip timeout</td>
+</tr>
+<tr>
+<td><code>WithPrepareTimeout(TimeSpan prepareTimeout)</code></td>
+<td>Sets the prepare timeout</td>
+</tr>
+<tr>
+<td><code>WithCommitTimeout(TimeSpan commitTimeout)</code></td>
+<td>Sets the commit timeout</td>
+</tr>
+<tr>
+<td><code>WithPrepareCount(int prepareCount)</code></td>
+<td>Sets the number of nodes which must acknowledge prepares.</td>
+</tr>
+<tr>
+<td><code>WithCommitCount(int commitCount)</code></td>
+<td>Sets the number of nodes which must acknowledge commits before acknowledging to a client.</td>
+</tr>
+<tr>
+<td><code>WithNodePriority(int nodePriority)</code></td>
+<td>Sets the node priority used during master election</td>
+</tr>
+</tbody>
+</table>
+<h3 id="database-options">Database options</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>RunInMemory()</code></td>
+<td>Sets the builder to run in memory</td>
+</tr>
+<tr>
+<td><code>RunOnDisk(string path)</code></td>
+<td>Sets the builder to write database files to the specified path</td>
+</tr>
+<tr>
+<td><code>MaximumMemoryTableSizeOf(int size)</code></td>
+<td>Sets the maximum size a memtable is allowed to reach (in count) before moved to be a ptable</td>
+</tr>
+<tr>
+<td><code>DoNotVerifyDbHashes()</code></td>
+<td>Marks that the existing database files should not be checked for checksums on startup.</td>
+</tr>
+<tr>
+<td><code>VerifyDbHashes()</code></td>
+<td>Marks that the existing database files should be checked for checksums on startup.</td>
+</tr>
+<tr>
+<td><code>WithMinFlushDelay(TimeSpan minFlushDelay)</code></td>
+<td>Sets the minimum flush delay</td>
+</tr>
+<tr>
+<td><code>DisableScavengeMerging()</code></td>
+<td>Disables the merging of chunks when scavenge is running</td>
+</tr>
+<tr>
+<td><code>WithScavengeHistoryMaxAge(int scavengeHistoryMaxAge)</code></td>
+<td>The number of days to keep scavenge history (Default: 30)</td>
+</tr>
+<tr>
+<td><code>WithIndexPath(string indexPath)</code></td>
+<td>Sets the path the index should be loaded or saved to</td>
+</tr>
+<tr>
+<td><code>WithIndexCacheDepth(int indexCacheDepth)</code></td>
+<td>Sets the depth to cache for the mid point cache in index</td>
+</tr>
+<tr>
+<td><code>WithUnsafeIgnoreHardDelete()</code></td>
+<td>Disables Hard Deletes (UNSAFE: use to remove hard deletes)</td>
+</tr>
+<tr>
+<td><code>WithUnsafeDisableFlushToDisk()</code></td>
+<td>Disables Hard Deletes (UNSAFE: use to remove hard deletes)</td>
+</tr>
+<tr>
+<td><code>WithBetterOrdering()</code></td>
+<td>Enable queue affinity on reads during write process to try to get better ordering.</td>
+</tr>
+<tr>
+<td><code>WithTfChunkSize(int chunkSize)</code></td>
+<td>Sets the transaction file chunk size. Default is <code>TFConsts.ChunkSize</code></td>
+</tr>
+<tr>
+<td><code>WithTfCachedChunks(int cachedChunks)</code></td>
+<td>The number of chunks to cache in unmanaged memory. Default is <code>TFConsts.ChunksCacheSize</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="interface-options">Interface options</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>OnDefaultEndpoints()</code></td>
+<td>Sets the default endpoints on localhost (1113 tcp, 2113 http)</td>
+</tr>
+<tr>
+<td><code>AdvertiseInternalIPAs(IPAddress intIpAdvertiseAs)</code></td>
+<td>Sets up the Internal IP to advertise</td>
+</tr>
+<tr>
+<td><code>AdvertiseExternalIPAs(IPAddress extIpAdvertiseAs)</code></td>
+<td>Sets up the External IP to advertise</td>
+</tr>
+<tr>
+<td><code>AdvertiseInternalHttpPortAs(int intHttpPortAdvertiseAs)</code></td>
+<td>Sets up the Internal HTTP port to advertise</td>
+</tr>
+<tr>
+<td><code>AdvertiseExternalHttpPortAs(int extHttpPortAdvertiseAs)</code></td>
+<td>Sets up the External HTTP port to advertise</td>
+</tr>
+<tr>
+<td><code>AdvertiseInternalSecureTCPPortAs(int intSecureTcpPortAdvertiseAs)</code></td>
+<td>Sets up the Internal Secure TCP port to advertise</td>
+</tr>
+<tr>
+<td><code>AdvertiseExternalSecureTCPPortAs(int extSecureTcpPortAdvertiseAs)</code></td>
+<td>Sets up the External Secure TCP port to advertise</td>
+</tr>
+<tr>
+<td><code>AdvertiseInternalTCPPortAs(int intTcpPortAdvertiseAs)</code></td>
+<td>Sets up the Internal TCP port to advertise</td>
+</tr>
+<tr>
+<td><code>AdvertiseExternalTCPPortAs(int extTcpPortAdvertiseAs)</code></td>
+<td>Sets up the External TCP port to advertise</td>
+</tr>
+<tr>
+<td><code>WithInternalHttpOn(IPEndPoint endpoint)</code></td>
+<td>Sets the internal HTTP endpoint to the specified value</td>
+</tr>
+<tr>
+<td><code>WithExternalHttpOn(IPEndPoint endpoint)</code></td>
+<td>Sets the external HTTP endpoint to the specified value</td>
+</tr>
+<tr>
+<td><code>WithInternalTcpOn(IPEndPoint endpoint)</code></td>
+<td>Sets the internal TCP endpoint to the specified value</td>
+</tr>
+<tr>
+<td><code>WithInternalSecureTcpOn(IPEndPoint endpoint)</code></td>
+<td>Sets the internal secure TCP endpoint to the specified value</td>
+</tr>
+<tr>
+<td><code>WithExternalTcpOn(IPEndPoint endpoint)</code></td>
+<td>Sets the external TCP endpoint to the specified value</td>
+</tr>
+<tr>
+<td><code>WithExternalSecureTcpOn(IPEndPoint endpoint)</code></td>
+<td>Sets the external secure TCP endpoint to the specified value</td>
+</tr>
+<tr>
+<td><code>EnableSsl()</code></td>
+<td>Sets that SSL should be used on connections</td>
+</tr>
+<tr>
+<td><code>WithSslTargetHost(string targetHost)</code></td>
+<td>Sets the target host of the server&#39;s SSL certificate.</td>
+</tr>
+<tr>
+<td><code>ValidateSslServer()</code></td>
+<td>Sets whether to validate that the server&#39;s certificate is trusted.</td>
+</tr>
+<tr>
+<td><code>NoGossipOnPublicInterface()</code></td>
+<td>Disables gossip on the public (client) interface</td>
+</tr>
+<tr>
+<td><code>NoAdminOnPublicInterface()</code></td>
+<td>Disables the admin interface on the public (client) interface</td>
+</tr>
+<tr>
+<td><code>NoStatsOnPublicInterface()</code></td>
+<td>Disables statistics screens on the public (client) interface</td>
+</tr>
+<tr>
+<td><code>AddInternalHttpPrefix(string prefix)</code></td>
+<td>Adds a HTTP prefix for the internal HTTP endpoint</td>
+</tr>
+<tr>
+<td><code>AddExternalHttpPrefix(string prefix)</code></td>
+<td>Adds a HTTP prefix for the external HTTP endpoint</td>
+</tr>
+<tr>
+<td><code>DontAddInterfacePrefixes()</code></td>
+<td>Don&#39;t add the interface prefixes (e.g. If the External IP is set to the Loopback address, add <a href="http://localhost:2113/">http://localhost:2113/</a> as a prefix)</td>
+</tr>
+<tr>
+<td><code>WithInternalHeartbeatInterval(TimeSpan heartbeatInterval)</code></td>
+<td>Sets the heartbeat interval for the internal network interface.</td>
+</tr>
+<tr>
+<td><code>WithExternalHeartbeatInterval(TimeSpan heartbeatInterval)</code></td>
+<td>Sets the heartbeat interval for the external network interface.</td>
+</tr>
+<tr>
+<td><code>WithInternalHeartbeatTimeout(TimeSpan heartbeatTimeout)</code></td>
+<td>Sets the heartbeat timeout for the internal network interface.</td>
+</tr>
+<tr>
+<td><code>WithExternalHeartbeatTimeout(TimeSpan heartbeatTimeout)</code></td>
+<td>Sets the heartbeat timeout for the external network interface.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="projections-options">Projections options</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>StartStandardProjections()</code></td>
+<td>Start standard projections.</td>
+</tr>
+<tr>
+<td><code>RunProjections(ProjectionType projectionType, int numberOfThreads = Opts.ProjectionThreadsDefault)</code></td>
+<td>Sets the mode and the number of threads on which to run projections.</td>
+</tr>
+<tr>
+<td><code>RunProjections(ClientAPI.Embedded.ProjectionsMode projectionsMode, int numberOfThreads = Opts.ProjectionThreadsDefault)</code></td>
+<td>Sets the mode and the number of threads on which to run projections.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="embeddedeventstoreconnection">EmbeddedEventStoreConnection</h2>
+<p>The following methods are available on <code>EmbeddedEventStoreConnection</code> for connecting to an embedded node.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Create(ClusterVNode eventStore, string connectionName = null)</code></td>
+<td>Creates a new embedded <code>IEventStoreConnection</code> to a single node with default connection settings</td>
+</tr>
+<tr>
+<td><code>Create(ClusterVNode eventStore, ConnectionSettings connectionSettings, string connectionName = null)</code></td>
+<td>Creates a new embedded <code>IEventStoreConnection</code> to a single node using specific <code>ConnectionSettings</code></td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/dotnet-api/embedded-client.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

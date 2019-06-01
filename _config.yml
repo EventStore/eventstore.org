@@ -1,8 +1,12 @@
 name: "Event Store"
 description: "The stream database written from the ground up for event sourcing."
-url: "https://eventstore.org"
+url: "https://preview.eventstore.org"
 permalink: /blog/:year:month:day/:title/
+include:
+    - docs
 exclude: [CNAME]
+include:
+    - _redirects
 sass:
     sass_dir: _sass
     style: compressed

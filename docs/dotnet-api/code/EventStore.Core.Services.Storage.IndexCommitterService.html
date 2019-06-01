@@ -1,0 +1,678 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Class IndexCommitterService
+   | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class IndexCommitterService
+   | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EventStore.Core.Services.Storage.IndexCommitterService">
+  
+  
+  <h1 id="EventStore_Core_Services_Storage_IndexCommitterService" data-uid="EventStore.Core.Services.Storage.IndexCommitterService" class="text-break">Class IndexCommitterService
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">IndexCommitterService</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="EventStore.Core.Services.Storage.IIndexCommitterService.html">IIndexCommitterService</a></div>
+    <div><a class="xref" href="EventStore.Core.Bus.IMonitoredQueue.html">IMonitoredQueue</a></div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.SystemMessage.StateChangeMessage.html">SystemMessage.StateChangeMessage</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.SystemMessage.BecomeShuttingDown.html">SystemMessage.BecomeShuttingDown</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.StorageMessage.CommitAck.html">StorageMessage.CommitAck</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.MergeIndexes.html">ClientMessage.MergeIndexes</a>&gt;</div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.Storage.html">EventStore.Core.Services.Storage</a></h6>
+  <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
+  <h5 id="EventStore_Core_Services_Storage_IndexCommitterService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class IndexCommitterService : object, IIndexCommitterService, IMonitoredQueue, IHandle&lt;SystemMessage.StateChangeMessage&gt;, IHandle&lt;SystemMessage.BecomeShuttingDown&gt;, IHandle&lt;StorageMessage.CommitAck&gt;, IHandle&lt;ClientMessage.MergeIndexes&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_IndexCommitterService__ctor_EventStore_Core_Services_Storage_ReaderIndex_IIndexCommitter_EventStore_Core_Bus_IPublisher_EventStore_Core_TransactionLog_Checkpoint_ICheckpoint_EventStore_Core_TransactionLog_Checkpoint_ICheckpoint_System_Int32_EventStore_Core_Index_ITableIndex_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.IndexCommitterService.%23ctor(EventStore.Core.Services.Storage.ReaderIndex.IIndexCommitter%2CEventStore.Core.Bus.IPublisher%2CEventStore.Core.TransactionLog.Checkpoint.ICheckpoint%2CEventStore.Core.TransactionLog.Checkpoint.ICheckpoint%2CSystem.Int32%2CEventStore.Core.Index.ITableIndex)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/IndexCommitterService.cs/#L65">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_IndexCommitterService__ctor_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.#ctor*"></a>
+  <h4 id="EventStore_Core_Services_Storage_IndexCommitterService__ctor_EventStore_Core_Services_Storage_ReaderIndex_IIndexCommitter_EventStore_Core_Bus_IPublisher_EventStore_Core_TransactionLog_Checkpoint_ICheckpoint_EventStore_Core_TransactionLog_Checkpoint_ICheckpoint_System_Int32_EventStore_Core_Index_ITableIndex_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.#ctor(EventStore.Core.Services.Storage.ReaderIndex.IIndexCommitter,EventStore.Core.Bus.IPublisher,EventStore.Core.TransactionLog.Checkpoint.ICheckpoint,EventStore.Core.TransactionLog.Checkpoint.ICheckpoint,System.Int32,EventStore.Core.Index.ITableIndex)">IndexCommitterService(IIndexCommitter, IPublisher, ICheckpoint, ICheckpoint, Int32, ITableIndex)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IndexCommitterService(IIndexCommitter indexCommitter, IPublisher publisher, ICheckpoint replicationCheckpoint, ICheckpoint writerCheckpoint, int commitCount, ITableIndex tableIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.Storage.ReaderIndex.IIndexCommitter.html">IIndexCommitter</a></td>
+        <td><span class="parametername">indexCommitter</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
+        <td><span class="parametername">publisher</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.TransactionLog.Checkpoint.ICheckpoint.html">ICheckpoint</a></td>
+        <td><span class="parametername">replicationCheckpoint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.TransactionLog.Checkpoint.ICheckpoint.html">ICheckpoint</a></td>
+        <td><span class="parametername">writerCheckpoint</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">commitCount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Index.ITableIndex.html">ITableIndex</a></td>
+        <td><span class="parametername">tableIndex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_IndexCommitterService_Name.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.IndexCommitterService.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/IndexCommitterService.cs/#L44">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_IndexCommitterService_Name_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.Name*"></a>
+  <h4 id="EventStore_Core_Services_Storage_IndexCommitterService_Name" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.Name">Name</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_IndexCommitterService_Task.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.IndexCommitterService.Task%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/IndexCommitterService.cs/#L61">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_IndexCommitterService_Task_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.Task*"></a>
+  <h4 id="EventStore_Core_Services_Storage_IndexCommitterService_Task" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.Task">Task</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task Task { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_IndexCommitterService_AddPendingCommit_EventStore_Core_TransactionLog_LogRecords_CommitLogRecord_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.IndexCommitterService.AddPendingCommit(EventStore.Core.TransactionLog.LogRecords.CommitLogRecord%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/IndexCommitterService.cs/#L181">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_IndexCommitterService_AddPendingCommit_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.AddPendingCommit*"></a>
+  <h4 id="EventStore_Core_Services_Storage_IndexCommitterService_AddPendingCommit_EventStore_Core_TransactionLog_LogRecords_CommitLogRecord_System_Int64_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.AddPendingCommit(EventStore.Core.TransactionLog.LogRecords.CommitLogRecord,System.Int64)">AddPendingCommit(CommitLogRecord, Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddPendingCommit(CommitLogRecord commit, long postPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.TransactionLog.LogRecords.CommitLogRecord.html">CommitLogRecord</a></td>
+        <td><span class="parametername">commit</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">postPosition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_IndexCommitterService_AddPendingPrepare_EventStore_Core_TransactionLog_LogRecords_PrepareLogRecord___System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.IndexCommitterService.AddPendingPrepare(EventStore.Core.TransactionLog.LogRecords.PrepareLogRecord%5B%5D%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/IndexCommitterService.cs/#L163">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_IndexCommitterService_AddPendingPrepare_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.AddPendingPrepare*"></a>
+  <h4 id="EventStore_Core_Services_Storage_IndexCommitterService_AddPendingPrepare_EventStore_Core_TransactionLog_LogRecords_PrepareLogRecord___System_Int64_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.AddPendingPrepare(EventStore.Core.TransactionLog.LogRecords.PrepareLogRecord[],System.Int64)">AddPendingPrepare(PrepareLogRecord[], Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddPendingPrepare(PrepareLogRecord[] prepares, long postPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.TransactionLog.LogRecords.PrepareLogRecord.html">PrepareLogRecord</a>[]</td>
+        <td><span class="parametername">prepares</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">postPosition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_IndexCommitterService_GetCommitLastEventNumber_EventStore_Core_TransactionLog_LogRecords_CommitLogRecord_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.IndexCommitterService.GetCommitLastEventNumber(EventStore.Core.TransactionLog.LogRecords.CommitLogRecord)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/IndexCommitterService.cs/#L159">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_IndexCommitterService_GetCommitLastEventNumber_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.GetCommitLastEventNumber*"></a>
+  <h4 id="EventStore_Core_Services_Storage_IndexCommitterService_GetCommitLastEventNumber_EventStore_Core_TransactionLog_LogRecords_CommitLogRecord_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.GetCommitLastEventNumber(EventStore.Core.TransactionLog.LogRecords.CommitLogRecord)">GetCommitLastEventNumber(CommitLogRecord)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long GetCommitLastEventNumber(CommitLogRecord commit)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.TransactionLog.LogRecords.CommitLogRecord.html">CommitLogRecord</a></td>
+        <td><span class="parametername">commit</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_IndexCommitterService_GetStatistics.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.IndexCommitterService.GetStatistics%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/IndexCommitterService.cs/#L250">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_IndexCommitterService_GetStatistics_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.GetStatistics*"></a>
+  <h4 id="EventStore_Core_Services_Storage_IndexCommitterService_GetStatistics" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.GetStatistics">GetStatistics()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QueueStats GetStatistics()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.Monitoring.Stats.QueueStats.html">QueueStats</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_IndexCommitterService_Handle_EventStore_Core_Messages_ClientMessage_MergeIndexes_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.IndexCommitterService.Handle(EventStore.Core.Messages.ClientMessage.MergeIndexes)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/IndexCommitterService.cs/#L401">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_IndexCommitterService_Handle_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_Storage_IndexCommitterService_Handle_EventStore_Core_Messages_ClientMessage_MergeIndexes_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.Handle(EventStore.Core.Messages.ClientMessage.MergeIndexes)">Handle(ClientMessage.MergeIndexes)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.MergeIndexes message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.ClientMessage.MergeIndexes.html">ClientMessage.MergeIndexes</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_IndexCommitterService_Handle_EventStore_Core_Messages_StorageMessage_CommitAck_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.IndexCommitterService.Handle(EventStore.Core.Messages.StorageMessage.CommitAck)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/IndexCommitterService.cs/#L214">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_IndexCommitterService_Handle_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_Storage_IndexCommitterService_Handle_EventStore_Core_Messages_StorageMessage_CommitAck_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.Handle(EventStore.Core.Messages.StorageMessage.CommitAck)">Handle(StorageMessage.CommitAck)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(StorageMessage.CommitAck message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.StorageMessage.CommitAck.html">StorageMessage.CommitAck</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_IndexCommitterService_Handle_EventStore_Core_Messages_SystemMessage_BecomeShuttingDown_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.IndexCommitterService.Handle(EventStore.Core.Messages.SystemMessage.BecomeShuttingDown)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/IndexCommitterService.cs/#L210">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_IndexCommitterService_Handle_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_Storage_IndexCommitterService_Handle_EventStore_Core_Messages_SystemMessage_BecomeShuttingDown_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.Handle(EventStore.Core.Messages.SystemMessage.BecomeShuttingDown)">Handle(SystemMessage.BecomeShuttingDown)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(SystemMessage.BecomeShuttingDown message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.SystemMessage.BecomeShuttingDown.html">SystemMessage.BecomeShuttingDown</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_IndexCommitterService_Handle_EventStore_Core_Messages_SystemMessage_StateChangeMessage_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.IndexCommitterService.Handle(EventStore.Core.Messages.SystemMessage.StateChangeMessage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/IndexCommitterService.cs/#L197">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_IndexCommitterService_Handle_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_Storage_IndexCommitterService_Handle_EventStore_Core_Messages_SystemMessage_StateChangeMessage_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.Handle(EventStore.Core.Messages.SystemMessage.StateChangeMessage)">Handle(SystemMessage.StateChangeMessage)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(SystemMessage.StateChangeMessage msg)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.SystemMessage.StateChangeMessage.html">SystemMessage.StateChangeMessage</a></td>
+        <td><span class="parametername">msg</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_IndexCommitterService_HandleReplicatedQueue.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.IndexCommitterService.HandleReplicatedQueue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/IndexCommitterService.cs/#L93">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_IndexCommitterService_HandleReplicatedQueue_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.HandleReplicatedQueue*"></a>
+  <h4 id="EventStore_Core_Services_Storage_IndexCommitterService_HandleReplicatedQueue" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.HandleReplicatedQueue">HandleReplicatedQueue()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleReplicatedQueue()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_IndexCommitterService_Init_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.IndexCommitterService.Init(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/IndexCommitterService.cs/#L81">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_IndexCommitterService_Init_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.Init*"></a>
+  <h4 id="EventStore_Core_Services_Storage_IndexCommitterService_Init_System_Int64_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.Init(System.Int64)">Init(Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Init(long checkpointPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">checkpointPosition</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_IndexCommitterService_Stop.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.IndexCommitterService.Stop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/IndexCommitterService.cs/#L89">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_IndexCommitterService_Stop_" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.Stop*"></a>
+  <h4 id="EventStore_Core_Services_Storage_IndexCommitterService_Stop" data-uid="EventStore.Core.Services.Storage.IndexCommitterService.Stop">Stop()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Stop()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Storage.IIndexCommitterService.html">IIndexCommitterService</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IMonitoredQueue.html">IMonitoredQueue</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJson_System_Object_">Json.ToJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_Serialize__1___0_">ProtobufExtensions.Serialize&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_SerializeToArray__1___0_">ProtobufExtensions.SerializeToArray&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_IndexCommitterService.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.IndexCommitterService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/IndexCommitterService.cs/#L27" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

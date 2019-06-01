@@ -1,0 +1,825 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Class ClusterVNodeBuilder
+   | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ClusterVNodeBuilder
+   | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EventStore.ClusterNode.ClusterVNodeBuilder">
+  
+  
+  <h1 id="EventStore_ClusterNode_ClusterVNodeBuilder" data-uid="EventStore.ClusterNode.ClusterVNodeBuilder" class="text-break">Class ClusterVNodeBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>Allows a client to build a <a class="xref" href="EventStore.Core.ClusterVNode.html">ClusterVNode</a> for use in EventStore.ClusterNode by specifying
+high level options rather than using the constructor of <a class="xref" href="EventStore.Core.ClusterVNode.html">ClusterVNode</a> directly.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="EventStore.Core.VNodeBuilder.html">VNodeBuilder</a></div>
+    <div class="level2"><span class="xref">ClusterVNodeBuilder</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__log">VNodeBuilder._log</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__chunkSize">VNodeBuilder._chunkSize</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__dbPath">VNodeBuilder._dbPath</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__chunksCacheSize">VNodeBuilder._chunksCacheSize</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__cachedChunks">VNodeBuilder._cachedChunks</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__inMemoryDb">VNodeBuilder._inMemoryDb</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__startStandardProjections">VNodeBuilder._startStandardProjections</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__disableHTTPCaching">VNodeBuilder._disableHTTPCaching</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__logHttpRequests">VNodeBuilder._logHttpRequests</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__enableHistograms">VNodeBuilder._enableHistograms</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__structuredLog">VNodeBuilder._structuredLog</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__internalTcp">VNodeBuilder._internalTcp</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__internalSecureTcp">VNodeBuilder._internalSecureTcp</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__externalTcp">VNodeBuilder._externalTcp</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__externalSecureTcp">VNodeBuilder._externalSecureTcp</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__internalHttp">VNodeBuilder._internalHttp</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__externalHttp">VNodeBuilder._externalHttp</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__intHttpPrefixes">VNodeBuilder._intHttpPrefixes</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__extHttpPrefixes">VNodeBuilder._extHttpPrefixes</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__addInterfacePrefixes">VNodeBuilder._addInterfacePrefixes</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__enableTrustedAuth">VNodeBuilder._enableTrustedAuth</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__certificate">VNodeBuilder._certificate</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__workerThreads">VNodeBuilder._workerThreads</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__discoverViaDns">VNodeBuilder._discoverViaDns</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__clusterDns">VNodeBuilder._clusterDns</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__gossipSeeds">VNodeBuilder._gossipSeeds</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__minFlushDelay">VNodeBuilder._minFlushDelay</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__clusterNodeCount">VNodeBuilder._clusterNodeCount</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__prepareAckCount">VNodeBuilder._prepareAckCount</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__commitAckCount">VNodeBuilder._commitAckCount</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__prepareTimeout">VNodeBuilder._prepareTimeout</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__commitTimeout">VNodeBuilder._commitTimeout</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__nodePriority">VNodeBuilder._nodePriority</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__useSsl">VNodeBuilder._useSsl</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__disableInsecureTCP">VNodeBuilder._disableInsecureTCP</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__sslTargetHost">VNodeBuilder._sslTargetHost</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__sslValidateServer">VNodeBuilder._sslValidateServer</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__statsPeriod">VNodeBuilder._statsPeriod</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__statsStorage">VNodeBuilder._statsStorage</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__authenticationProviderFactory">VNodeBuilder._authenticationProviderFactory</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__disableScavengeMerging">VNodeBuilder._disableScavengeMerging</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__scavengeHistoryMaxAge">VNodeBuilder._scavengeHistoryMaxAge</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__adminOnPublic">VNodeBuilder._adminOnPublic</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__statsOnPublic">VNodeBuilder._statsOnPublic</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__gossipOnPublic">VNodeBuilder._gossipOnPublic</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__gossipInterval">VNodeBuilder._gossipInterval</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__gossipAllowedTimeDifference">VNodeBuilder._gossipAllowedTimeDifference</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__gossipTimeout">VNodeBuilder._gossipTimeout</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__gossipAdvertiseInfo">VNodeBuilder._gossipAdvertiseInfo</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__intTcpHeartbeatTimeout">VNodeBuilder._intTcpHeartbeatTimeout</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__intTcpHeartbeatInterval">VNodeBuilder._intTcpHeartbeatInterval</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__extTcpHeartbeatTimeout">VNodeBuilder._extTcpHeartbeatTimeout</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__extTcpHeartbeatInterval">VNodeBuilder._extTcpHeartbeatInterval</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__connectionPendingSendBytesThreshold">VNodeBuilder._connectionPendingSendBytesThreshold</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__skipVerifyDbHashes">VNodeBuilder._skipVerifyDbHashes</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__maxMemtableSize">VNodeBuilder._maxMemtableSize</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__hashCollisionReadLimit">VNodeBuilder._hashCollisionReadLimit</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__subsystems">VNodeBuilder._subsystems</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__clusterGossipPort">VNodeBuilder._clusterGossipPort</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__readerThreadsCount">VNodeBuilder._readerThreadsCount</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__unbuffered">VNodeBuilder._unbuffered</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__writethrough">VNodeBuilder._writethrough</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__chunkInitialReaderCount">VNodeBuilder._chunkInitialReaderCount</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__index">VNodeBuilder._index</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__skipIndexVerify">VNodeBuilder._skipIndexVerify</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__indexCacheDepth">VNodeBuilder._indexCacheDepth</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__optimizeIndexMerge">VNodeBuilder._optimizeIndexMerge</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__unsafeIgnoreHardDelete">VNodeBuilder._unsafeIgnoreHardDelete</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__unsafeDisableFlushToDisk">VNodeBuilder._unsafeDisableFlushToDisk</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__betterOrdering">VNodeBuilder._betterOrdering</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__projectionType">VNodeBuilder._projectionType</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__projectionsThreads">VNodeBuilder._projectionsThreads</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__projectionsQueryExpiry">VNodeBuilder._projectionsQueryExpiry</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__faultOutOfOrderProjections">VNodeBuilder._faultOutOfOrderProjections</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__db">VNodeBuilder._db</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__vNodeSettings">VNodeBuilder._vNodeSettings</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__dbConfig">VNodeBuilder._dbConfig</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__indexBitnessVersion">VNodeBuilder._indexBitnessVersion</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__alwaysKeepScavenged">VNodeBuilder._alwaysKeepScavenged</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder__skipIndexScanOnReads">VNodeBuilder._skipIndexScanOnReads</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithSingleNodeSettings">VNodeBuilder.WithSingleNodeSettings()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithClusterNodeSettings_System_Int32_">VNodeBuilder.WithClusterNodeSettings(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithStructuredLogging_System_Boolean_">VNodeBuilder.WithStructuredLogging(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_StartStandardProjections">VNodeBuilder.StartStandardProjections()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_DisableHTTPCaching">VNodeBuilder.DisableHTTPCaching()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_RunProjections_EventStore_Common_Options_ProjectionType_System_Int32_System_Boolean_">VNodeBuilder.RunProjections(ProjectionType, Int32, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithProjectionQueryExpirationOf_TimeSpan_">VNodeBuilder.WithProjectionQueryExpirationOf(TimeSpan)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_AddCustomSubsystem_EventStore_Core_ISubsystem_">VNodeBuilder.AddCustomSubsystem(ISubsystem)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_RunInMemory">VNodeBuilder.RunInMemory()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_RunOnDisk_System_String_">VNodeBuilder.RunOnDisk(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_OnDefaultEndpoints">VNodeBuilder.OnDefaultEndpoints()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_AdvertiseInternalIPAs_IPAddress_">VNodeBuilder.AdvertiseInternalIPAs(IPAddress)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_AdvertiseExternalIPAs_IPAddress_">VNodeBuilder.AdvertiseExternalIPAs(IPAddress)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_AdvertiseInternalHttpPortAs_System_Int32_">VNodeBuilder.AdvertiseInternalHttpPortAs(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_HavingReaderThreads_System_Int32_">VNodeBuilder.HavingReaderThreads(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_AdvertiseExternalHttpPortAs_System_Int32_">VNodeBuilder.AdvertiseExternalHttpPortAs(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_AdvertiseInternalSecureTCPPortAs_System_Int32_">VNodeBuilder.AdvertiseInternalSecureTCPPortAs(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_AdvertiseExternalSecureTCPPortAs_System_Int32_">VNodeBuilder.AdvertiseExternalSecureTCPPortAs(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_AdvertiseInternalTCPPortAs_System_Int32_">VNodeBuilder.AdvertiseInternalTCPPortAs(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_GossipAsSingleNode">VNodeBuilder.GossipAsSingleNode()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_AdvertiseExternalTCPPortAs_System_Int32_">VNodeBuilder.AdvertiseExternalTCPPortAs(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithClusterGossipPort_System_Int32_">VNodeBuilder.WithClusterGossipPort(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithInternalHttpOn_IPEndPoint_">VNodeBuilder.WithInternalHttpOn(IPEndPoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithExternalHttpOn_IPEndPoint_">VNodeBuilder.WithExternalHttpOn(IPEndPoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithInternalTcpOn_IPEndPoint_">VNodeBuilder.WithInternalTcpOn(IPEndPoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithInternalSecureTcpOn_IPEndPoint_">VNodeBuilder.WithInternalSecureTcpOn(IPEndPoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithExternalTcpOn_IPEndPoint_">VNodeBuilder.WithExternalTcpOn(IPEndPoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithExternalSecureTcpOn_IPEndPoint_">VNodeBuilder.WithExternalSecureTcpOn(IPEndPoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_EnableSsl">VNodeBuilder.EnableSsl()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_DisableInsecureTCP">VNodeBuilder.DisableInsecureTCP()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithSslTargetHost_System_String_">VNodeBuilder.WithSslTargetHost(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_ValidateSslServer">VNodeBuilder.ValidateSslServer()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithGossipSeeds_IPEndPoint___">VNodeBuilder.WithGossipSeeds(IPEndPoint[])</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_MaximumMemoryTableSizeOf_System_Int32_">VNodeBuilder.MaximumMemoryTableSizeOf(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithHashCollisionReadLimitOf_System_Int32_">VNodeBuilder.WithHashCollisionReadLimitOf(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_DoNotVerifyDbHashes">VNodeBuilder.DoNotVerifyDbHashes()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_NoGossipOnPublicInterface">VNodeBuilder.NoGossipOnPublicInterface()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_NoAdminOnPublicInterface">VNodeBuilder.NoAdminOnPublicInterface()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_NoStatsOnPublicInterface">VNodeBuilder.NoStatsOnPublicInterface()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_VerifyDbHashes">VNodeBuilder.VerifyDbHashes()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithClusterDnsName_System_String_">VNodeBuilder.WithClusterDnsName(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_DisableDnsDiscovery">VNodeBuilder.DisableDnsDiscovery()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithWorkerThreads_System_Int32_">VNodeBuilder.WithWorkerThreads(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_AddInternalHttpPrefix_System_String_">VNodeBuilder.AddInternalHttpPrefix(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_AddExternalHttpPrefix_System_String_">VNodeBuilder.AddExternalHttpPrefix(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_DontAddInterfacePrefixes">VNodeBuilder.DontAddInterfacePrefixes()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithServerCertificateFromFile_System_String_System_String_">VNodeBuilder.WithServerCertificateFromFile(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithInternalHeartbeatInterval_TimeSpan_">VNodeBuilder.WithInternalHeartbeatInterval(TimeSpan)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithExternalHeartbeatInterval_TimeSpan_">VNodeBuilder.WithExternalHeartbeatInterval(TimeSpan)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithInternalHeartbeatTimeout_TimeSpan_">VNodeBuilder.WithInternalHeartbeatTimeout(TimeSpan)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithExternalHeartbeatTimeout_TimeSpan_">VNodeBuilder.WithExternalHeartbeatTimeout(TimeSpan)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithConnectionPendingSendBytesThreshold_System_Int32_">VNodeBuilder.WithConnectionPendingSendBytesThreshold(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithGossipInterval_TimeSpan_">VNodeBuilder.WithGossipInterval(TimeSpan)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithGossipAllowedTimeDifference_TimeSpan_">VNodeBuilder.WithGossipAllowedTimeDifference(TimeSpan)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithGossipTimeout_TimeSpan_">VNodeBuilder.WithGossipTimeout(TimeSpan)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithMinFlushDelay_TimeSpan_">VNodeBuilder.WithMinFlushDelay(TimeSpan)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithPrepareTimeout_TimeSpan_">VNodeBuilder.WithPrepareTimeout(TimeSpan)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithCommitTimeout_TimeSpan_">VNodeBuilder.WithCommitTimeout(TimeSpan)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithStatsPeriod_TimeSpan_">VNodeBuilder.WithStatsPeriod(TimeSpan)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithStatsStorage_EventStore_Core_Services_Monitoring_StatsStorage_">VNodeBuilder.WithStatsStorage(StatsStorage)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithPrepareCount_System_Int32_">VNodeBuilder.WithPrepareCount(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithCommitCount_System_Int32_">VNodeBuilder.WithCommitCount(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithNodePriority_System_Int32_">VNodeBuilder.WithNodePriority(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_DisableScavengeMerging">VNodeBuilder.DisableScavengeMerging()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithScavengeHistoryMaxAge_System_Int32_">VNodeBuilder.WithScavengeHistoryMaxAge(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithIndexPath_System_String_">VNodeBuilder.WithIndexPath(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_EnableLoggingOfHttpRequests">VNodeBuilder.EnableLoggingOfHttpRequests()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_EnableHistograms">VNodeBuilder.EnableHistograms()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithIndexVerification_System_Boolean_">VNodeBuilder.WithIndexVerification(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithIndexCacheDepth_System_Int32_">VNodeBuilder.WithIndexCacheDepth(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithIndexMergeOptimization_System_Boolean_">VNodeBuilder.WithIndexMergeOptimization(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithUnsafeIgnoreHardDelete">VNodeBuilder.WithUnsafeIgnoreHardDelete()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithUnsafeDisableFlushToDisk">VNodeBuilder.WithUnsafeDisableFlushToDisk()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithBetterOrdering">VNodeBuilder.WithBetterOrdering()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_EnableTrustedAuth">VNodeBuilder.EnableTrustedAuth()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithAuthenticationProvider_EventStore_Core_Authentication_IAuthenticationProviderFactory_">VNodeBuilder.WithAuthenticationProvider(IAuthenticationProviderFactory)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_EnableUnbuffered">VNodeBuilder.EnableUnbuffered()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_EnableWriteThrough">VNodeBuilder.EnableWriteThrough()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithChunkInitialReaderCount_System_Int32_">VNodeBuilder.WithChunkInitialReaderCount(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithInitializationThreads_System_Int32_">VNodeBuilder.WithInitializationThreads(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithMaxAutoMergeIndexLevel_System_Int32_">VNodeBuilder.WithMaxAutoMergeIndexLevel(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithServerCertificate_X509Certificate2_">VNodeBuilder.WithServerCertificate(X509Certificate2)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithServerCertificateFromStore_StoreLocation_StoreName_System_String_System_String_">VNodeBuilder.WithServerCertificateFromStore(StoreLocation, StoreName, String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithServerCertificateFromStore_StoreName_System_String_System_String_">VNodeBuilder.WithServerCertificateFromStore(StoreName, String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithTfChunkSize_System_Int32_">VNodeBuilder.WithTfChunkSize(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithTfChunksCacheSize_System_Int64_">VNodeBuilder.WithTfChunksCacheSize(Int64)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithTfCachedChunks_System_Int32_">VNodeBuilder.WithTfCachedChunks(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_WithIndexBitnessVersion_System_Byte_">VNodeBuilder.WithIndexBitnessVersion(Byte)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_AlwaysKeepScavenged">VNodeBuilder.AlwaysKeepScavenged()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_SkipIndexScanOnReads">VNodeBuilder.SkipIndexScanOnReads()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_ReduceFileCachePressure">VNodeBuilder.ReduceFileCachePressure()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_Build_EventStore_Common_Options_IOptions_EventStore_Core_Services_PersistentSubscription_ConsumerStrategy_IPersistentSubscriptionConsumerStrategyFactory___">VNodeBuilder.Build(IOptions, IPersistentSubscriptionConsumerStrategyFactory[])</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.ClusterNode.html">EventStore.ClusterNode</a></h6>
+  <h6><strong>Assembly</strong>: EventStore.ClusterNode.dll</h6>
+  <h5 id="EventStore_ClusterNode_ClusterVNodeBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ClusterVNodeBuilder : VNodeBuilder</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterVNodeBuilder__ctor.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterVNodeBuilder.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterVNodeBuilder.cs/#L10">View Source</a>
+  </span>
+  <a id="EventStore_ClusterNode_ClusterVNodeBuilder__ctor_" data-uid="EventStore.ClusterNode.ClusterVNodeBuilder.#ctor*"></a>
+  <h4 id="EventStore_ClusterNode_ClusterVNodeBuilder__ctor" data-uid="EventStore.ClusterNode.ClusterVNodeBuilder.#ctor">ClusterVNodeBuilder()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ClusterVNodeBuilder()</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterVNodeBuilder_AsClusterMember_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterVNodeBuilder.AsClusterMember(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterVNodeBuilder.cs/#L26">View Source</a>
+  </span>
+  <a id="EventStore_ClusterNode_ClusterVNodeBuilder_AsClusterMember_" data-uid="EventStore.ClusterNode.ClusterVNodeBuilder.AsClusterMember*"></a>
+  <h4 id="EventStore_ClusterNode_ClusterVNodeBuilder_AsClusterMember_System_Int32_" data-uid="EventStore.ClusterNode.ClusterVNodeBuilder.AsClusterMember(System.Int32)">AsClusterMember(Int32)</h4>
+  <div class="markdown level1 summary"><p>Returns a builder set to construct options for a cluster node instance with a cluster size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ClusterVNodeBuilder AsClusterMember(int clusterSize)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">clusterSize</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClusterNode.ClusterVNodeBuilder.html">ClusterVNodeBuilder</a></td>
+        <td><p>A <a class="xref" href="EventStore.Core.VNodeBuilder.html">VNodeBuilder</a> with the options set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterVNodeBuilder_AsSingleNode.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterVNodeBuilder.AsSingleNode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterVNodeBuilder.cs/#L17">View Source</a>
+  </span>
+  <a id="EventStore_ClusterNode_ClusterVNodeBuilder_AsSingleNode_" data-uid="EventStore.ClusterNode.ClusterVNodeBuilder.AsSingleNode*"></a>
+  <h4 id="EventStore_ClusterNode_ClusterVNodeBuilder_AsSingleNode" data-uid="EventStore.ClusterNode.ClusterVNodeBuilder.AsSingleNode">AsSingleNode()</h4>
+  <div class="markdown level1 summary"><p>Returns a builder set to construct options for a single node instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ClusterVNodeBuilder AsSingleNode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClusterNode.ClusterVNodeBuilder.html">ClusterVNodeBuilder</a></td>
+        <td><p>A <a class="xref" href="EventStore.Core.VNodeBuilder.html">VNodeBuilder</a> with the options set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterVNodeBuilder_SetUpProjectionsIfNeeded.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterVNodeBuilder.SetUpProjectionsIfNeeded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterVNodeBuilder.cs/#L31">View Source</a>
+  </span>
+  <a id="EventStore_ClusterNode_ClusterVNodeBuilder_SetUpProjectionsIfNeeded_" data-uid="EventStore.ClusterNode.ClusterVNodeBuilder.SetUpProjectionsIfNeeded*"></a>
+  <h4 id="EventStore_ClusterNode_ClusterVNodeBuilder_SetUpProjectionsIfNeeded" data-uid="EventStore.ClusterNode.ClusterVNodeBuilder.SetUpProjectionsIfNeeded">SetUpProjectionsIfNeeded()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void SetUpProjectionsIfNeeded()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="EventStore.Core.VNodeBuilder.html#EventStore_Core_VNodeBuilder_SetUpProjectionsIfNeeded">VNodeBuilder.SetUpProjectionsIfNeeded()</a></div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJson_System_Object_">Json.ToJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_Serialize__1___0_">ProtobufExtensions.Serialize&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_SerializeToArray__1___0_">ProtobufExtensions.SerializeToArray&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterVNodeBuilder.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterVNodeBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterVNodeBuilder.cs/#L9" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

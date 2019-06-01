@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Admin UI | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Admin UI | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="admin-ui">Admin UI</h1>
+
+<p>The Event Store Admin UI is available at <em>SERVER_IP:2113</em> helps you interact with and manage a cluster in a visual way. This guide explains the tabs of the interface and what they do.</p>
+<h2 id="dashboard">Dashboard</h2>
+<p><img src="../../assets/wai-dashboard.png" alt="Web admin interface dashboard"></p>
+<p>The <em>Dashboard</em> tab shows an overview of active queues with associated statistics in the top half. The <em>+</em> icon indicates a queue group, click it to reveal the queues that are part of the group.</p>
+<p>The second half of the tab shows active connections to Event Store and information about them.</p>
+<p>Click the <em>Snapshot</em> button in the top right to output a snapshot of all queue statistics at the time you clicked the button.</p>
+<h2 id="stream-browser">Stream Browser</h2>
+<p><img src="../../assets/wai-stream-browser.png" alt="Web admin interface stream browser tab"></p>
+<p>The <em>Stream Browser</em> tab gives an overview of recently created and changed streams, clicking on an individual stream shows details about the individual stream.</p>
+<h3 id="event-stream-streamname">Event Stream &#39;streamname&#39;</h3>
+<p><img src="../../assets/wai-stream-details.png" alt="Web admin interface stream details"></p>
+<p>Each individual stream shows pages of the events in a stream with an overview of the event. Click the <em>Name</em> to see the EventId, and <em>JSON</em> to the see the event data. The buttons above change depending on what you are viewing in the interface. The <em>Back</em> button takes you to the parent screen.</p>
+<p>The buttons on the top right when you are viewing an event stream are:</p>
+<ul>
+<li><em>Pause</em>: Stop showing events arriving into this stream.</li>
+<li><em>Resume</em>: Resume showing events arriving into this stream.</li>
+<li><em>Edit ACL</em>: Edit <a href="../users-and-access-control-lists/index.html">the access control lists</a> for a stream.</li>
+<li><em>Add Event</em>: <a href="../../http-api/creating-writing-a-stream/index.html">Add a new event</a> to the stream.</li>
+<li><em>Delete</em>: <a href="../../http-api/deleting-a-stream/index.html">Delete a stream</a> to the stream.</li>
+<li><em>Query</em>:</li>
+</ul>
+<p>The buttons on the left above the events when you are viewing an event stream are:</p>
+<ul>
+<li><em>self</em>: Takes you to the overview of the stream.</li>
+<li><em>first</em>: Takes you to the first page of events in a stream.</li>
+<li><em>previous</em>: Takes you to the previous page of events in a stream.</li>
+<li><em>metadata</em>: Shows the metadata of a stream.<ul>
+<li>On the metadata screen, click <em>Add New Like This</em> to add a new event to the stream.</li>
+</ul>
+</li>
+</ul>
+<h2 id="projections">Projections</h2>
+<p><img src="../../assets/wai-projections.png" alt="Web admin interface projections tab"></p>
+<p>The <em>Projections</em> tab shows system and user created projections defined in Event Store, the buttons above the list do the following:</p>
+<ul>
+<li><em>Disable All</em>: Disable all running projections.</li>
+<li><em>Enable All</em>: Enable all stopped projections.</li>
+<li><em>Include Queries</em>:</li>
+<li><em>New Projection</em>: <a href="../../projections/user-defined-projections/index.html">Create a user-defined projection</a> with the Admin UI.</li>
+</ul>
+<p>Clicking an individual projection shows further details.</p>
+<p><img src="../../assets/wai-projection-details.jpg" alt="Web admin interface projection details"></p>
+<p>On the left is the projection definition, and on the right, the stats, results and state of the projection. The buttons above the details do the following:</p>
+<ul>
+<li><em>Start</em>: Start a stopped projection.</li>
+<li><em>Stop</em>: Stop a running projection.</li>
+<li><em>Edit</em>: Edit the projection definition.</li>
+<li><em>Config</em>: <a href="../../projections/projections-config/index.html">Set configuration options</a> for a projection.</li>
+<li><em>Debug</em>: Opens <a href="../../projections/debugging/index.html">the debugging interface</a> to debug what effect a projection is having on events.</li>
+<li><em>Delete</em>: Delete a projection.</li>
+<li><em>Reset</em>: Reset a projection.</li>
+<li><em>Back</em>: Returns you to the parent screen.</li>
+</ul>
+<h2 id="query">Query</h2>
+<p>The <em>Query</em> tab a code editor field where you can create transient and short-lived projections for quick analysis of your event streams.</p>
+<p><img src="../../assets/wai-query-details.png" alt="Web admin interface query details"></p>
+<h2 id="persistent-subscriptions">Persistent Subscriptions</h2>
+<p>The <em>Persistent Subscriptions</em> tab shows an overview of <a href="../../getting-started/reading-subscribing-events/index.html#persistent-subscriptions">persistent subscriptions</a> configured on streams. The button above the list do the following:</p>
+<ul>
+<li><em>New Subscription</em>: Create a new <a href="../../getting-started/reading-subscribing-events/index.html">subscriptions</a></li>
+</ul>
+<p>Clicking the <em>+</em> icon next to a stream name reveals the subscription name and more buttons. The <em>Back</em> button takes you to the parent screen. :</p>
+<ul>
+<li><em>Edit</em>: Edit the subscription.</li>
+<li><em>Delete</em>: Delete the subscription.</li>
+<li><em>Detail</em>: Shows the subscription configuration options.</li>
+<li><em>Replay Parked Messages</em>: Replay events in subscription to return state.</li>
+</ul>
+<h2 id="admin">Admin</h2>
+<p><img src="../../assets/wai-admin.png" alt="Web admin interface projections tab"></p>
+<p>The <em>Admin</em> tab shows sub systems enabled (currently only <a href="../../projections/index.html">projections</a>) on Event Store and <a href="../scavenging/index.html">scavenges</a> run. You can start a new scavenge operation by clicking the <em>Scavenge</em> button, and shut Event Store down by clicking the <em>Shutdown Server</em> button.</p>
+<h2 id="users">Users</h2>
+<p><img src="../../assets/wai-users.png" alt="Web admin interface projections tab"></p>
+<p>The <em>Users</em> tab shows <a href="../users-and-access-control-lists/index.html">the users defined in Event Store</a>, clicking an individual user shows a JSON representation of that users details.</p>
+<h2 id="log-out">Log Out</h2>
+<p>Logs you out of the Admin UI interface.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/server/admin-ui.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Configuring Projections | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Configuring Projections | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="configuring-projections">Configuring Projections</h1>
+
+<!-- TODO: And how do you change them? UI, .NET, HTTP etc -->
+<p>By changing these settings, you can lessen the amount of pressure projections put on an Event Store node or improve projection performance. You can change these settings on a case-by-case basis, and monitor potential improvements.</p>
+<div class="NOTE"><h5>Note</h5><p>You can only change the configuration of a stopped projection.</p>
+</div>
+<p>You change the configuration of a projection by setting the relevant key and value in a request, or when you create a projection with the web admin interface.</p>
+<p><img src="../../assets/wai-projection-config.jpg" alt="Web admin interface projections configuration screen"></p>
+<div class="tabGroup" id="tabgroup_91M2l1Hlsb">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_91M2l1Hlsb_tabid-5" role="tab" aria-controls="tabpanel_91M2l1Hlsb_tabid-5" data-tab="tabid-5" tabindex="0" aria-selected="true">HTTP API</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_91M2l1Hlsb_tabid-6" role="tab" aria-controls="tabpanel_91M2l1Hlsb_tabid-6" data-tab="tabid-6" tabindex="-1">.NET Client</a>
+</li>
+</ul>
+<section id="tabpanel_91M2l1Hlsb_tabid-5" role="tabpanel" data-tab="tabid-5">
+<!-- TODO: Further explanation here -->
+<pre><code class="lang-bash" name="getting-started-projections-create-projection">curl -i --data-binary &quot;@xbox-one-s-counter.json&quot; http://localhost:2113/projections/continuous?name=xbox-one-s-counter%26type=js%26enabled=true%26emit=true%26trackemittedstreams=true -u admin:changeit
+</code></pre></section>
+<section id="tabpanel_91M2l1Hlsb_tabid-6" role="tabpanel" data-tab="tabid-6" aria-hidden="true" hidden="hidden">
+<!-- TODO: Further explanation here -->
+<!-- Can not find reference ~/code-examples/dotnet-client/Program.cs -->
+<!-- ## [JVM Client](#tab/tabid-7) -->
+<!-- TODO: Exists? -->
+</section>
+</div>
+<h2 id="emit-options">Emit options</h2>
+<p>These options control how projections write events.</p>
+<p>In busy systems, projections can put a lot of extra pressure on the master node. This is especially true for Event Store servers that also have persistent subscriptions running, which only the master node can process. If you see a lot of commit timeouts and slow writes from your projections and other clients, then start with these settings.</p>
+<h3 id="emit-enabled">Emit Enabled</h3>
+<p>The <code>emit</code> boolean setting determines whether a projection can emit events and any projection that calls <code>emit()</code> or <code>linkTo()</code> requires it. If this option is not set and a projection attempts to emit events, you see an error message like the following:</p>
+<!-- TODO: Is it emit or emitenabled? Or are .NET and HTTP different -->
+<pre><code class="lang-bash">&#39;emit&#39; is not allowed by the projection/configuration/mode
+</code></pre><p>Event Store disables this setting by default, and is usually set when you create the projection and if you need the projection to emit events.</p>
+<h3 id="track-emitted-streams">Track Emitted Streams</h3>
+<p>The <code>trackemittedstreams</code> boolean setting enables tracking of a projection&#39;s emitted streams. It only has an affect if the projection has <code>EmitEnabled</code> enabled.</p>
+<p>Tracking emitted streams enables you to delete a projection and all the streams that it has created. You should only the setting if you intend to delete a projection and create new ones that project to the same stream.</p>
+<div class="WARNING"><h5>Warning</h5><p>By default Event Store disables the <code>trackemittedstreams</code> setting for projections. When enabled, an event written records the stream name (in <code>$projections-{projection_name}-emittedstreams</code>) of each event emitted by the projection. This means that write amplification is a possibility, as each event that the projection emits writes a separate event. As such, this option is not recommended for projections that emit a lot of events, and you should enable only where necessary.</p>
+</div>
+<div class="TIP"><h5>Tip</h5><p>Between Event Store versions 3.8.0 and 4.0.2, this option was enabled by default when a projection was created through the UI. If you have any projections created during this time frame, it&#39;s worth checking whether this option is enabled.</p>
+</div>
+<h3 id="max-allowed-writes-in-flight">Max Allowed Writes in Flight</h3>
+<!-- TODO: Why is this not in the GUI for new projection? -->
+<!-- TODO: Is the setting name correct? Especially in HTTP -->
+<p>The <code>AllowedInFlightMessages</code> setting sets the maximum number of writes to allow for a projection. Because a projection can write to multiple different streams, it&#39;s possible for the projection to send multiple writes at the same time. This option sets the number of concurrent writes that a projection can perform.</p>
+<p>By default, projections try to perform writes as quickly as they come. This can add a lot of pressure to a node, especially for projections that emit to many different streams. If you see your projections causing frequent commit timeouts or slow reads, you can try lowering this value to see if there is any improvement.</p>
+<div class="NOTE"><h5>Note</h5><p>Lower values may cause the projection to slow down as the number of writes are throttled, but the trade off for this is cleaner logs and fewer commit timeouts.</p>
+</div>
+<p>By default, this is unbounded, allowing a projection to write as fast as it can.</p>
+<h3 id="max-write-batch-length">Max Write Batch Length</h3>
+<!-- TODO: Why is this not in the GUI for new projection? -->
+<!-- TODO: Is the setting name correct? Especially in HTTP -->
+<p>The <code>MaxWriteBatchLength</code> setting sets the maximum number of events the projection can write in a batch at a time.
+The default for this option is 500.</p>
+<h2 id="checkpoint-options">Checkpoint options</h2>
+<p>Checkpoints store how far along a projection is in the streams it is processing from. There is a performance overhead with writing a checkpoint, as it does more than write an event, and writing them too often can slow projections down.</p>
+<p>We recommend you try other methods of improving projections before changing these values, as checkpoints are an important part of running projections.</p>
+<h3 id="checkpoint-after-ms">Checkpoint After Ms</h3>
+<p>The <code>CheckpointAfterMs</code> setting prevents a new checkpoint from being written within a certain time frame from the previous one.
+The setting is to keep a projection from writing too many checkpoints too quickly, something that can happen in a busy system.</p>
+<p>The default setting is 0 seconds, which means there is no limit to how quickly checkpoints can be written.</p>
+<h3 id="checkpoint-handled-threshold">Checkpoint Handled Threshold</h3>
+<p>The <code>CheckpointHandledThreshold</code> setting controls the number of events that a projection can handle before attempting to write a checkpoint. An event is considered handled if it actually passed through the projection&#39;s filter. If the projection is set to checkpoint every 4,000 events, but it only reads from the <code>foo</code> stream, the projection only checkpoints every 4,000 <code>foo</code> events.</p>
+<p>The default setting is 4,000 events.</p>
+<h3 id="checkpoint-unhandled-bytes-threshold">Checkpoint Unhandled Bytes Threshold</h3>
+<p>The <code>CheckpointUnhandledBytesThreshold</code> setting specifies the number of bytes a projection can process before attempting to write a checkpoint. Unhandled bytes are the events that are not processed by the projection itself.</p>
+<p>For example, if the projection reads from the <code>foo</code> stream, but writes from the <code>bar</code> stream comes through, a checkpoint is written after this number of bytes have been processed. This prevents the projection from having to read through a potentially large number of unrelated events again because none of them passed its filter.</p>
+<p>The default setting is 10mb.</p>
+<h2 id="processing-options">Processing options</h2>
+<h3 id="pending-events-threshold">Pending Events Threshold</h3>
+<p>The <code>PendingEventsThreshold</code> setting determines the number of events that can be pending before the projection is paused.
+Pausing the projection stops the projection from reading, allowing it to finish with the current events that are waiting to be processed. Once the pending queue has drained to half the threshold, the projection starts reading again.</p>
+<p>The default setting is 5000.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            <b>Since version:</b> 4.0.2
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/projections/projections-config.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

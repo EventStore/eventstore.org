@@ -1,0 +1,418 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Reading Events | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Reading Events | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="reading-events">Reading Events</h1>
+
+<p>You can use the client API to read events from a stream starting from either end of the stream. There is a method for each direction and one for reading a single event.</p>
+<h2 id="methods">Methods</h2>
+<!-- TODO: Do the same apply here as in HTTP API -->
+<h3 id="read-a-single-event">Read a single event</h3>
+<pre><code class="lang-csharp">Task&lt;EventReadResult&gt; ReadEventAsync(string stream, long eventNumber, bool resolveLinkTos);
+</code></pre><h3 id="read-a-specific-stream-forwards">Read a specific stream forwards</h3>
+<pre><code class="lang-csharp">Task&lt;StreamEventsSlice&gt; ReadStreamEventsForwardAsync(string stream, long start, int count, bool resolveLinkTos)
+</code></pre><h3 id="read-a-specific-stream-backwards">Read a specific stream backwards</h3>
+<pre><code class="lang-csharp">Task&lt;StreamEventsSlice&gt; ReadStreamEventsBackwardAsync(string stream, long start, int count, bool resolveLinkTos)
+</code></pre><h3 id="read-all-events-forwards">Read all events forwards</h3>
+<pre><code class="lang-csharp">Task&lt;AllEventsSlice&gt; ReadAllEventsForwardAsync(Position position, int maxCount, bool resolveLinkTos);
+</code></pre><h3 id="read-all-events-backwards">Read all events backwards</h3>
+<pre><code class="lang-csharp">Task&lt;AllEventsSlice&gt; ReadAllEventsBackwardAsync(Position position, int maxCount, bool resolveLinkTos);
+</code></pre><div class="NOTE"><h5>Note</h5><p>These methods also have an optional parameter which allows you to specify the <code>UserCredentials</code> to use for the request. If you don&#39;t supply any, the default credentials for the <code>EventStoreConnection</code> are used (<a href="../connecting-to-a-server/index.html#user-credentials">See Connecting to a Server - User Credentials</a>).</p>
+</div>
+<h2 id="streameventsslice">StreamEventsSlice</h2>
+<p>The reading methods for individual streams each return a <code>StreamEventsSlice</code>, which is immutable. The available members on <code>StreamEventsSlice</code> are:</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string Stream</code></td>
+<td>The name of the stream for the slice</td>
+</tr>
+<tr>
+<td><code>ReadDirection ReadDirection</code></td>
+<td>Either <code>ReadDirection.Forward</code> or <code>ReadDirection.Backward</code> depending on which method was used to read</td>
+</tr>
+<tr>
+<td><code>long FromEventNumber</code></td>
+<td>The sequence number of the first event in the stream</td>
+</tr>
+<tr>
+<td><code>long LastEventNumber</code></td>
+<td>The sequence number of the last event in the stream</td>
+</tr>
+<tr>
+<td><code>long NextEventNumber</code></td>
+<td>The sequence number from which the next read should be performed to continue reading the stream</td>
+</tr>
+<tr>
+<td><code>bool IsEndOfStream</code></td>
+<td>Whether this slice contained the end of the stream at the time it was created</td>
+</tr>
+<tr>
+<td><code>ResolvedEvent[] Events</code></td>
+<td>An array of the events read. See the description of how to interpret a <a href="index.html#resolvedevent">Resolved Events</a> below for more information on this</td>
+</tr>
+</tbody>
+</table>
+<h2 id="resolvedevent">ResolvedEvent</h2>
+<p>When you read events from a stream (or received over a subscription) you receive an instance of the <code>RecordedEvent</code> class packaged inside a <code>ResolvedEvent</code>.</p>
+<p>Event Store supports a special event type called &#39;Link Events&#39;. Think of these events as pointers to an event in another stream.</p>
+<p>In situations where the event you read is a link event, <code>ResolvedEvent</code> allows you to access both the link event itself, as well as the event it points to.</p>
+<p>The members of this class are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>RecordedEvent Event</code></td>
+<td>The event, or the resolved link event if this <code>ResolvedEvent</code> is a link event</td>
+</tr>
+<tr>
+<td><code>RecordedEvent Link</code></td>
+<td>The link event if this <code>ResolvedEvent</code> is a link event</td>
+</tr>
+<tr>
+<td><code>RecordedEvent OriginalEvent</code></td>
+<td>Returns the event read or which triggered the subscription. If this <code>ResolvedEvent</code> represents a link event, the link will be the <code>OriginalEvent</code>, otherwise it will be the event</td>
+</tr>
+<tr>
+<td><code>bool IsResolved</code></td>
+<td>Indicates whether this <code>ResolvedEvent</code> is a resolved link event</td>
+</tr>
+<tr>
+<td><code>Position? OriginalPosition</code></td>
+<td>The logical position of the <code>OriginalEvent</code></td>
+</tr>
+<tr>
+<td><code>string OriginalStreamId</code></td>
+<td>The stream name of the <code>OriginalEvent</code></td>
+</tr>
+<tr>
+<td><code>long OriginalEventNumber</code></td>
+<td>The event number in the stream of the <code>OriginalEvent</code></td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Note</h5><p>To ensure that the Event Store server follows link events when reading, ensure you set the <code>ResolveLinkTos</code> parameter to <code>true</code> when calling read methods.</p>
+</div>
+<h2 id="recordedevent">RecordedEvent</h2>
+<p><code>RecordedEvent</code> contains all the data about a specific event. Instances of this class are immutable, and expose the following members:</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string EventStreamId</code></td>
+<td>The Event Stream this event belongs to</td>
+</tr>
+<tr>
+<td><code>Guid EventId</code></td>
+<td>The Unique Identifier representing this event</td>
+</tr>
+<tr>
+<td><code>long EventNumber</code></td>
+<td>The number of this event in the stream</td>
+</tr>
+<tr>
+<td><code>string EventType</code></td>
+<td>The event type (supplied when writing)</td>
+</tr>
+<tr>
+<td><code>byte[] Data</code></td>
+<td>A byte array representing the data of this event</td>
+</tr>
+<tr>
+<td><code>byte[] Metadata</code></td>
+<td>A byte array representing the metadata associated with this event</td>
+</tr>
+<tr>
+<td><code>bool IsJson</code></td>
+<td>Indicates whether the content was internally marked as json</td>
+</tr>
+<tr>
+<td><code>DateTime Created</code></td>
+<td>A <code>datetime</code> representing when this event was created.</td>
+</tr>
+<tr>
+<td><code>long CreatedEpoch</code></td>
+<td>A long representing the milliseconds since the epoch when the was created.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="read-a-single-event-1">Read a single event</h2>
+<p>The <code>ReadEventAsync</code> method reads a single event from a stream at a specified position. This is the simplest case of reading events, but is still useful for situations such as reading the last event in the stream used as a starting point for a subscription. This function accepts three parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string stream</code></td>
+<td>The stream to read from</td>
+</tr>
+<tr>
+<td><code>long eventNumber</code></td>
+<td>The event number to read (use <code>StreamPosition.End</code> to read the last event in the stream)</td>
+</tr>
+<tr>
+<td><code>bool resolveLinkTos</code></td>
+<td>Determines whether any link events encountered in the stream will be resolved. See the discussion on <a href="index.html#resolvedevent">Resolved Events</a> for more information on this</td>
+</tr>
+</tbody>
+</table>
+<p>This method returns an instance of <code>EventReadResult</code> which indicates if the read was successful, and if so the <code>ResolvedEvent</code> that was read.</p>
+<h2 id="reading-a-stream-forwards">Reading a stream forwards</h2>
+<p>The <code>ReadStreamEventsForwardAsync</code> method reads the requested number of events in the order in which they were originally written to the stream from a nominated starting point in the stream.</p>
+<p>The parameters are:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string Stream</code></td>
+<td>The name of the stream to read</td>
+</tr>
+<tr>
+<td><code>long start</code></td>
+<td>The earliest event to read (inclusive). For the special case of the start of the stream, you should use the constant <code>StreamPosition.Start</code>.</td>
+</tr>
+<tr>
+<td><code>int count</code></td>
+<td>The maximum number of events to read in this request (assuming that many exist between the start specified and the end of the stream)</td>
+</tr>
+<tr>
+<td><code>bool resolveLinkTos</code></td>
+<td>Determines whether any link events encountered in the stream will be resolved. See the discussion on <a href="index.html#resolvedevent">Resolved Events</a> for more information on this</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-read-an-entire-stream-forwards-from-start-to-end">Example: Read an entire stream forwards from start to end</h3>
+<p>This example uses the <code>ReadStreamEventsForwardAsync</code> method in a loop to page through all events in a stream, reading 200 events at a time to build a list of all the events in the stream.</p>
+<pre><code class="lang-csharp">var streamEvents = new List&lt;ResolvedEvent&gt;();
+
+StreamEventsSlice currentSlice;
+var nextSliceStart = StreamPosition.Start;
+do
+{
+    currentSlice =
+    _eventStoreConnection.ReadStreamEventsForward(&quot;myStream&quot;, nextSliceStart,
+                                                  200, false)
+                                                  .Result;
+
+    nextSliceStart = currentSlice.NextEventNumber;
+
+    streamEvents.AddRange(currentSlice.Events);
+} while (!currentSlice.IsEndOfStream);
+</code></pre><div class="NOTE"><h5>Note</h5><p>It&#39;s unlikely that client code would need to build a list in this manner. It&#39;s far more likely that you would pass events into a left fold to derive the state of some object as of a given event.</p>
+</div>
+<h2 id="read-a-stream-backwards">Read a stream backwards</h2>
+<p>The <code>ReadStreamEventsBackwardAsync</code> method reads the requested number of events in the reverse order from that in which they were originally written to the stream from a specified starting point.</p>
+<p>The parameters are:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string Stream</code></td>
+<td>The name of the stream to read</td>
+</tr>
+<tr>
+<td><code>long start</code></td>
+<td>The latest event to read (inclusive). For the end of the stream use the constant <code>StreamPosition.End</code></td>
+</tr>
+<tr>
+<td><code>int count</code></td>
+<td>The maximum number of events to read in this request (assuming that many exist between the start specified and the start of the stream)</td>
+</tr>
+<tr>
+<td><code>bool resolveLinkTos</code></td>
+<td>Determines whether any link events encountered in the stream will be resolved. See the discussion on <a href="index.html#resolvedevent">Resolved Events</a> for more information on this</td>
+</tr>
+</tbody>
+</table>
+<h2 id="read-all-events">Read all events</h2>
+<p>Event Store allows you to read events across all streams using the <code>ReadAllEventsForwardAsync</code> and <code>ReadAllEventsBackwardsAsync</code> methods. These work in the same way as the regular read methods, but use an instance of the global log file <code>Position</code> to reference events rather than the simple integer stream position described previously.</p>
+<p>They also return an <code>AllEventsSlice</code> rather than a <code>StreamEventsSlice</code> which is the same except it uses global <code>Position</code>s rather than stream positions.</p>
+<h3 id="example-read-all-events-forward-from-start-to-end">Example: Read all events forward from start to end</h3>
+<pre><code class="lang-csharp">var allEvents = new List&lt;ResolvedEvent&gt;();
+
+AllEventsSlice currentSlice;
+var nextSliceStart = Position.Start;
+
+do
+{
+    currentSlice =
+        connection.ReadAllEventsForwardAsync(nextSliceStart, 200, false).Result;
+
+    nextSliceStart = currentSlice.NextPosition;
+
+    allEvents.AddRange(currentSlice.Events);
+} while (!currentSlice.IsEndOfStream);
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/dotnet-api/reading-events.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

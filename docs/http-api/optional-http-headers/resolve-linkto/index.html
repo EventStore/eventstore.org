@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Optional HTTP Headers: Resolve LinkTo | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Optional HTTP Headers: Resolve LinkTo | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+      <link rel="stylesheet" href="../../../styles/main12.css">
+        <link rel="stylesheet" href="../../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="optional-http-headers-resolve-linkto">Optional HTTP Headers: Resolve LinkTo</h1>
+
+<p>When using projections you can have links placed into another stream. By default Event Store always resolve <code>linkTo</code>s for you returning the event that points to the link. You can use the <code>ES-ResolveLinkTos: false</code> HTTP header to tell Event Store to return you the actual link and to not resolve it.</p>
+<p>You can see the differences in behaviour in the following cURL commands.</p>
+<div class="tabGroup" id="tabgroup_xBqfikQouR">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_xBqfikQouR_tabid-1" role="tab" aria-controls="tabpanel_xBqfikQouR_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_xBqfikQouR_tabid-2" role="tab" aria-controls="tabpanel_xBqfikQouR_tabid-2" data-tab="tabid-2" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_xBqfikQouR_tabid-1" role="tabpanel" data-tab="tabid-1">
+<pre><code class="lang-bash" name="http-api-resolve-links-request">curl -i http://127.0.0.1:2113/streams/shoppingCart-b989fe21-9469-4017-8d71-9820b8dd1167/0 -H &quot;accept:application/vnd.eventstore.atom+json&quot; -H &quot;ES-ResolveLinkTos: true&quot;
+</code></pre></section>
+<section id="tabpanel_xBqfikQouR_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-json" name="http-api-resolve-links-response">HTTP/1.1 200 OK
+Access-Control-Allow-Methods: GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position, ES-CurrentVersion
+Cache-Control: max-age=31536000, public
+Vary: Accept
+Content-Type: application/vnd.eventstore.atom+json; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Tue, 28 Aug 2018 13:13:49 GMT
+Content-Length: 918
+Keep-Alive: timeout=15,max=100
+
+{
+  &quot;title&quot;: &quot;0@shoppingCart-b989fe21-9469-4017-8d71-9820b8dd1167&quot;,
+  &quot;id&quot;: &quot;http://127.0.0.1:2113/streams/shoppingCart-b989fe21-9469-4017-8d71-9820b8dd1167/0&quot;,
+  &quot;updated&quot;: &quot;2018-08-28T12:56:15.263731Z&quot;,
+  &quot;author&quot;: {
+    &quot;name&quot;: &quot;EventStore&quot;
+  },
+  &quot;summary&quot;: &quot;ItemAdded&quot;,
+  &quot;content&quot;: {
+    &quot;eventStreamId&quot;: &quot;shoppingCart-b989fe21-9469-4017-8d71-9820b8dd1167&quot;,
+    &quot;eventNumber&quot;: 0,
+    &quot;eventType&quot;: &quot;ItemAdded&quot;,
+    &quot;eventId&quot;: &quot;b989fe21-9469-4017-8d71-9820b8dd1167&quot;,
+    &quot;data&quot;: {
+      &quot;Description&quot;: &quot;Xbox One Elite (Console)&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;TimeStamp&quot;: &quot;2016-12-23T10:00:00.9225401+01:00&quot;
+    }
+  },
+  &quot;links&quot;: [
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/shoppingCart-b989fe21-9469-4017-8d71-9820b8dd1167/0&quot;,
+      &quot;relation&quot;: &quot;edit&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/shoppingCart-b989fe21-9469-4017-8d71-9820b8dd1167/0&quot;,
+      &quot;relation&quot;: &quot;alternate&quot;
+    }
+  ]
+}
+</code></pre></section>
+</div>
+<div class="NOTE"><h5>Note</h5><p>The content links are pointing to the original projection stream. The linked events are resolved back to where they point. With the header set the links (or embedded content) instead point back to the actual <code>linkTo</code> events.</p>
+</div>
+<div class="tabGroup" id="tabgroup_xBqfikQouR-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_xBqfikQouR-1_tabid-3" role="tab" aria-controls="tabpanel_xBqfikQouR-1_tabid-3" data-tab="tabid-3" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_xBqfikQouR-1_tabid-4" role="tab" aria-controls="tabpanel_xBqfikQouR-1_tabid-4" data-tab="tabid-4" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_xBqfikQouR-1_tabid-3" role="tabpanel" data-tab="tabid-3">
+<pre><code class="lang-bash" name="http-api-resolve-links-false-request">curl -i http://127.0.0.1:2113/streams/shoppingCart-b989fe21-9469-4017-8d71-9820b8dd1167/0 -H &quot;accept:application/vnd.eventstore.atom+json&quot; -H &quot;ES-ResolveLinkTos: false&quot;
+</code></pre></section>
+<section id="tabpanel_xBqfikQouR-1_tabid-4" role="tabpanel" data-tab="tabid-4" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-json" name="http-api-resolve-links-false-response">HTTP/1.1 200 OK
+Access-Control-Allow-Methods: GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position, ES-CurrentVersion
+Cache-Control: max-age=31536000, public
+Vary: Accept
+Content-Type: application/vnd.eventstore.atom+json; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Tue, 28 Aug 2018 13:22:09 GMT
+Content-Length: 918
+Keep-Alive: timeout=15,max=100
+
+{
+  &quot;title&quot;: &quot;0@shoppingCart-b989fe21-9469-4017-8d71-9820b8dd1167&quot;,
+  &quot;id&quot;: &quot;http://127.0.0.1:2113/streams/shoppingCart-b989fe21-9469-4017-8d71-9820b8dd1167/0&quot;,
+  &quot;updated&quot;: &quot;2018-08-28T12:56:15.263731Z&quot;,
+  &quot;author&quot;: {
+    &quot;name&quot;: &quot;EventStore&quot;
+  },
+  &quot;summary&quot;: &quot;ItemAdded&quot;,
+  &quot;content&quot;: {
+    &quot;eventStreamId&quot;: &quot;shoppingCart-b989fe21-9469-4017-8d71-9820b8dd1167&quot;,
+    &quot;eventNumber&quot;: 0,
+    &quot;eventType&quot;: &quot;ItemAdded&quot;,
+    &quot;eventId&quot;: &quot;b989fe21-9469-4017-8d71-9820b8dd1167&quot;,
+    &quot;data&quot;: {
+      &quot;Description&quot;: &quot;Xbox One Elite (Console)&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;TimeStamp&quot;: &quot;2016-12-23T10:00:00.9225401+01:00&quot;
+    }
+  },
+  &quot;links&quot;: [
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/shoppingCart-b989fe21-9469-4017-8d71-9820b8dd1167/0&quot;,
+      &quot;relation&quot;: &quot;edit&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/shoppingCart-b989fe21-9469-4017-8d71-9820b8dd1167/0&quot;,
+      &quot;relation&quot;: &quot;alternate&quot;
+    }
+  ]
+}
+</code></pre></section>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/http-api/optional-http-headers/resolve-linkto.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

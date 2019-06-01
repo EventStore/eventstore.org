@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>System Stream and Event Types | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="System Stream and Event Types | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="system-stream-and-event-types">System Stream and Event Types</h1>
+
+<h2 id="persistentsubscriptionconfig"><code>$persistentSubscriptionConfig</code></h2>
+<p><code>$persistentSubscriptionConfig</code> is a special paged stream that contains all configuration events, for all persistent subscriptions. It uses the following system event types:</p>
+<ul>
+<li><code>PersistentConfig</code>: An event that records a configuration event, the event data contains:<ul>
+<li><code>version</code>: Version of event data</li>
+<li><code>updated</code>: Updated date</li>
+<li><code>updatedBy</code>: User who updated configuration</li>
+<li><code>maxCount</code>: The number of configuration events to save</li>
+<li><code>entries</code>: Configuration items set by event. Find more details of configuration items for <a href="../../dotnet-api/competing-consumers/index.html">the .NET API</a> and <a href="../../http-api/competing-consumers/index.html">the HTTP API</a>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="all"><code>$all</code></h2>
+<p><code>$all</code> is a special paged stream for all events. You can use the same paged form of reading described above to read all events for a node by pointing the stream at <em>/streams/$all</em>. As it&#39;s a stream like any other, you can perform all operations, except posting to it.</p>
+<h2 id="settings"><code>$settings</code></h2>
+<p>The <code>$settings</code> stream has a special ACL used as the default ACL. This stream controls the default ACL for streams without an ACL and also controls who can create streams in the system, the default state of these is shown below:</p>
+<pre><code class="lang-json">{
+  &quot;$userStreamAcl&quot;: {
+    &quot;$r&quot;: &quot;$all&quot;,
+    &quot;$w&quot;: &quot;$all&quot;,
+    &quot;$d&quot;: &quot;$all&quot;,
+    &quot;$mr&quot;: &quot;$all&quot;,
+    &quot;$mw&quot;: &quot;$all&quot;
+  },
+  &quot;$systemStreamAcl&quot;: {
+    &quot;$r&quot;: &quot;$admins&quot;,
+    &quot;$w&quot;: &quot;$admins&quot;,
+    &quot;$d&quot;: &quot;$admins&quot;,
+    &quot;$mr&quot;: &quot;$admins&quot;,
+    &quot;$mw&quot;: &quot;$admins&quot;
+  }
+}
+</code></pre><p>The <code>$userStreamAcl</code> controls the default ACL for user streams, while all system streams use the <code>$systemStreamAcl</code> as the default.</p>
+<div class="NOTE"><h5>Note</h5><p>The <code>$w</code> in <code>$userStreamAcl</code> also applies to the ability to create a stream. Members of <code>$admins</code> always have access to everything, you cannot remove this permission.</p>
+</div>
+<p>When you set a permission on a stream, it overrides the default values. However, it&#39;s not necessary to specify all permissions on a stream. It&#39;s only necessary to specify those which differ from the default.</p>
+<h2 id="stats"><code>$stats</code></h2>
+<p>Event Store has debug and statistics information available about a cluster in the <code>$stats</code> stream, find out more in <a href="../stats-debug/index.html">the stats guide</a>.</p>
+<h2 id="scavenges"><code>$scavenges</code></h2>
+<p><code>$scavenges</code> is a special paged stream for all scavenge related events. It uses the following system event types:</p>
+<ul>
+<li><code>$scavengeIndexInitialized</code>: An event that records the initialisation of the scavenge index.</li>
+<li><p><code>$scavengeStarted</code>: An event that records the beginning of a scavenge event, the event data contains:</p>
+<ul>
+<li><code>scavengeId</code>: Scavenge event ID</li>
+<li><code>nodeEndpoint</code>: Node address</li>
+</ul>
+</li>
+<li><p><code>$scavengeCompleted</code>: An event that records the completion of a scavenge event, the event data contains:</p>
+<ul>
+<li><code>scavengeId</code>: Scavenge event ID</li>
+<li><code>nodeEndpoint</code>: Node address</li>
+<li><code>result</code>: <code>Success</code>, <code>Failed</code>, <code>Stopped</code></li>
+<li><code>error</code>: Error details</li>
+<li><code>timeTaken</code>: Time taken for the scavenge event in milliseconds</li>
+<li><code>spaceSaved</code>: Space saved by scavenge event in bytes</li>
+</ul>
+</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/server/system-streams.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

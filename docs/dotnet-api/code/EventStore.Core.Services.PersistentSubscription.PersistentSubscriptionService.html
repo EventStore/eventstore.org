@@ -1,0 +1,891 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Class PersistentSubscriptionService
+   | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PersistentSubscriptionService
+   | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService">
+  
+  
+  <h1 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService" class="text-break">Class PersistentSubscriptionService
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PersistentSubscriptionService</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.SystemMessage.BecomeShuttingDown.html">SystemMessage.BecomeShuttingDown</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.TcpMessage.ConnectionClosed.html">TcpMessage.ConnectionClosed</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.SystemMessage.BecomeMaster.html">SystemMessage.BecomeMaster</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.SubscriptionMessage.PersistentSubscriptionTimerTick.html">SubscriptionMessage.PersistentSubscriptionTimerTick</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.ReplayAllParkedMessages.html">ClientMessage.ReplayAllParkedMessages</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.ReplayParkedMessage.html">ClientMessage.ReplayParkedMessage</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.SystemMessage.StateChangeMessage.html">SystemMessage.StateChangeMessage</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.ConnectToPersistentSubscription.html">ClientMessage.ConnectToPersistentSubscription</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.StorageMessage.EventCommitted.html">StorageMessage.EventCommitted</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.UnsubscribeFromStream.html">ClientMessage.UnsubscribeFromStream</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.PersistentSubscriptionAckEvents.html">ClientMessage.PersistentSubscriptionAckEvents</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.PersistentSubscriptionNackEvents.html">ClientMessage.PersistentSubscriptionNackEvents</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.CreatePersistentSubscription.html">ClientMessage.CreatePersistentSubscription</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.UpdatePersistentSubscription.html">ClientMessage.UpdatePersistentSubscription</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.DeletePersistentSubscription.html">ClientMessage.DeletePersistentSubscription</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.ReadNextNPersistentMessages.html">ClientMessage.ReadNextNPersistentMessages</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.MonitoringMessage.GetAllPersistentSubscriptionStats.html">MonitoringMessage.GetAllPersistentSubscriptionStats</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.MonitoringMessage.GetPersistentSubscriptionStats.html">MonitoringMessage.GetPersistentSubscriptionStats</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.MonitoringMessage.GetStreamPersistentSubscriptionStats.html">MonitoringMessage.GetStreamPersistentSubscriptionStats</a>&gt;</div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.PersistentSubscription.html">EventStore.Core.Services.PersistentSubscription</a></h6>
+  <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
+  <h5 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PersistentSubscriptionService : object, IHandle&lt;SystemMessage.BecomeShuttingDown&gt;, IHandle&lt;TcpMessage.ConnectionClosed&gt;, IHandle&lt;SystemMessage.BecomeMaster&gt;, IHandle&lt;SubscriptionMessage.PersistentSubscriptionTimerTick&gt;, IHandle&lt;ClientMessage.ReplayAllParkedMessages&gt;, IHandle&lt;ClientMessage.ReplayParkedMessage&gt;, IHandle&lt;SystemMessage.StateChangeMessage&gt;, IHandle&lt;ClientMessage.ConnectToPersistentSubscription&gt;, IHandle&lt;StorageMessage.EventCommitted&gt;, IHandle&lt;ClientMessage.UnsubscribeFromStream&gt;, IHandle&lt;ClientMessage.PersistentSubscriptionAckEvents&gt;, IHandle&lt;ClientMessage.PersistentSubscriptionNackEvents&gt;, IHandle&lt;ClientMessage.CreatePersistentSubscription&gt;, IHandle&lt;ClientMessage.UpdatePersistentSubscription&gt;, IHandle&lt;ClientMessage.DeletePersistentSubscription&gt;, IHandle&lt;ClientMessage.ReadNextNPersistentMessages&gt;, IHandle&lt;MonitoringMessage.GetAllPersistentSubscriptionStats&gt;, IHandle&lt;MonitoringMessage.GetPersistentSubscriptionStats&gt;, IHandle&lt;MonitoringMessage.GetStreamPersistentSubscriptionStats&gt;</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_ClientMessage_ConnectToPersistentSubscription_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.ClientMessage.ConnectToPersistentSubscription)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionService.cs/#L409">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_ClientMessage_ConnectToPersistentSubscription_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.ClientMessage.ConnectToPersistentSubscription)">Handle(ClientMessage.ConnectToPersistentSubscription)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.ConnectToPersistentSubscription message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.ClientMessage.ConnectToPersistentSubscription.html">ClientMessage.ConnectToPersistentSubscription</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_ClientMessage_CreatePersistentSubscription_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.ClientMessage.CreatePersistentSubscription)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionService.cs/#L126">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_ClientMessage_CreatePersistentSubscription_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.ClientMessage.CreatePersistentSubscription)">Handle(ClientMessage.CreatePersistentSubscription)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.CreatePersistentSubscription message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.ClientMessage.CreatePersistentSubscription.html">ClientMessage.CreatePersistentSubscription</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_ClientMessage_DeletePersistentSubscription_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.ClientMessage.DeletePersistentSubscription)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionService.cs/#L330">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_ClientMessage_DeletePersistentSubscription_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.ClientMessage.DeletePersistentSubscription)">Handle(ClientMessage.DeletePersistentSubscription)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.DeletePersistentSubscription message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.ClientMessage.DeletePersistentSubscription.html">ClientMessage.DeletePersistentSubscription</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_ClientMessage_PersistentSubscriptionAckEvents_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.ClientMessage.PersistentSubscriptionAckEvents)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionService.cs/#L499">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_ClientMessage_PersistentSubscriptionAckEvents_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.ClientMessage.PersistentSubscriptionAckEvents)">Handle(ClientMessage.PersistentSubscriptionAckEvents)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.PersistentSubscriptionAckEvents message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.ClientMessage.PersistentSubscriptionAckEvents.html">ClientMessage.PersistentSubscriptionAckEvents</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_ClientMessage_PersistentSubscriptionNackEvents_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.ClientMessage.PersistentSubscriptionNackEvents)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionService.cs/#L507">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_ClientMessage_PersistentSubscriptionNackEvents_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.ClientMessage.PersistentSubscriptionNackEvents)">Handle(ClientMessage.PersistentSubscriptionNackEvents)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.PersistentSubscriptionNackEvents message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.ClientMessage.PersistentSubscriptionNackEvents.html">ClientMessage.PersistentSubscriptionNackEvents</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_ClientMessage_ReadNextNPersistentMessages_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.ClientMessage.ReadNextNPersistentMessages)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionService.cs/#L516">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_ClientMessage_ReadNextNPersistentMessages_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.ClientMessage.ReadNextNPersistentMessages)">Handle(ClientMessage.ReadNextNPersistentMessages)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.ReadNextNPersistentMessages message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.ClientMessage.ReadNextNPersistentMessages.html">ClientMessage.ReadNextNPersistentMessages</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_ClientMessage_ReplayAllParkedMessages_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.ClientMessage.ReplayAllParkedMessages)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionService.cs/#L562">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_ClientMessage_ReplayAllParkedMessages_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.ClientMessage.ReplayAllParkedMessages)">Handle(ClientMessage.ReplayAllParkedMessages)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.ReplayAllParkedMessages message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.ClientMessage.ReplayAllParkedMessages.html">ClientMessage.ReplayAllParkedMessages</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_ClientMessage_ReplayParkedMessage_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.ClientMessage.ReplayParkedMessage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionService.cs/#L588">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_ClientMessage_ReplayParkedMessage_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.ClientMessage.ReplayParkedMessage)">Handle(ClientMessage.ReplayParkedMessage)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.ReplayParkedMessage message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.ClientMessage.ReplayParkedMessage.html">ClientMessage.ReplayParkedMessage</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_ClientMessage_UnsubscribeFromStream_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.ClientMessage.UnsubscribeFromStream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionService.cs/#L121">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_ClientMessage_UnsubscribeFromStream_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.ClientMessage.UnsubscribeFromStream)">Handle(ClientMessage.UnsubscribeFromStream)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.UnsubscribeFromStream message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.ClientMessage.UnsubscribeFromStream.html">ClientMessage.UnsubscribeFromStream</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_ClientMessage_UpdatePersistentSubscription_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.ClientMessage.UpdatePersistentSubscription)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionService.cs/#L209">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_ClientMessage_UpdatePersistentSubscription_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.ClientMessage.UpdatePersistentSubscription)">Handle(ClientMessage.UpdatePersistentSubscription)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.UpdatePersistentSubscription message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.ClientMessage.UpdatePersistentSubscription.html">ClientMessage.UpdatePersistentSubscription</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_MonitoringMessage_GetAllPersistentSubscriptionStats_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.MonitoringMessage.GetAllPersistentSubscriptionStats)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionService.cs/#L749">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_MonitoringMessage_GetAllPersistentSubscriptionStats_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.MonitoringMessage.GetAllPersistentSubscriptionStats)">Handle(MonitoringMessage.GetAllPersistentSubscriptionStats)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(MonitoringMessage.GetAllPersistentSubscriptionStats message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.MonitoringMessage.GetAllPersistentSubscriptionStats.html">MonitoringMessage.GetAllPersistentSubscriptionStats</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_MonitoringMessage_GetPersistentSubscriptionStats_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.MonitoringMessage.GetPersistentSubscriptionStats)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionService.cs/#L695">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_MonitoringMessage_GetPersistentSubscriptionStats_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.MonitoringMessage.GetPersistentSubscriptionStats)">Handle(MonitoringMessage.GetPersistentSubscriptionStats)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(MonitoringMessage.GetPersistentSubscriptionStats message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.MonitoringMessage.GetPersistentSubscriptionStats.html">MonitoringMessage.GetPersistentSubscriptionStats</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_MonitoringMessage_GetStreamPersistentSubscriptionStats_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.MonitoringMessage.GetStreamPersistentSubscriptionStats)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionService.cs/#L727">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_MonitoringMessage_GetStreamPersistentSubscriptionStats_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.MonitoringMessage.GetStreamPersistentSubscriptionStats)">Handle(MonitoringMessage.GetStreamPersistentSubscriptionStats)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(MonitoringMessage.GetStreamPersistentSubscriptionStats message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.MonitoringMessage.GetStreamPersistentSubscriptionStats.html">MonitoringMessage.GetStreamPersistentSubscriptionStats</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_StorageMessage_EventCommitted_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.StorageMessage.EventCommitted)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionService.cs/#L458">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_StorageMessage_EventCommitted_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.StorageMessage.EventCommitted)">Handle(StorageMessage.EventCommitted)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(StorageMessage.EventCommitted message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.StorageMessage.EventCommitted.html">StorageMessage.EventCommitted</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_SubscriptionMessage_PersistentSubscriptionTimerTick_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.SubscriptionMessage.PersistentSubscriptionTimerTick)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionService.cs/#L765">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_SubscriptionMessage_PersistentSubscriptionTimerTick_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.SubscriptionMessage.PersistentSubscriptionTimerTick)">Handle(SubscriptionMessage.PersistentSubscriptionTimerTick)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(SubscriptionMessage.PersistentSubscriptionTimerTick message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.SubscriptionMessage.PersistentSubscriptionTimerTick.html">SubscriptionMessage.PersistentSubscriptionTimerTick</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_SystemMessage_BecomeMaster_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.SystemMessage.BecomeMaster)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionService.cs/#L91">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_SystemMessage_BecomeMaster_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.SystemMessage.BecomeMaster)">Handle(SystemMessage.BecomeMaster)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(SystemMessage.BecomeMaster message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.SystemMessage.BecomeMaster.html">SystemMessage.BecomeMaster</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_SystemMessage_BecomeShuttingDown_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.SystemMessage.BecomeShuttingDown)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionService.cs/#L100">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_SystemMessage_BecomeShuttingDown_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.SystemMessage.BecomeShuttingDown)">Handle(SystemMessage.BecomeShuttingDown)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(SystemMessage.BecomeShuttingDown message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.SystemMessage.BecomeShuttingDown.html">SystemMessage.BecomeShuttingDown</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_SystemMessage_StateChangeMessage_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.SystemMessage.StateChangeMessage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionService.cs/#L82">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_SystemMessage_StateChangeMessage_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.SystemMessage.StateChangeMessage)">Handle(SystemMessage.StateChangeMessage)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(SystemMessage.StateChangeMessage message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.SystemMessage.StateChangeMessage.html">SystemMessage.StateChangeMessage</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_TcpMessage_ConnectionClosed_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.TcpMessage.ConnectionClosed)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionService.cs/#L399">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_Handle_EventStore_Core_Messages_TcpMessage_ConnectionClosed_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.Handle(EventStore.Core.Messages.TcpMessage.ConnectionClosed)">Handle(TcpMessage.ConnectionClosed)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(TcpMessage.ConnectionClosed message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.TcpMessage.ConnectionClosed.html">TcpMessage.ConnectionClosed</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_InitToEmpty.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.InitToEmpty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionService.cs/#L76">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_InitToEmpty_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.InitToEmpty*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService_InitToEmpty" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService.InitToEmpty">InitToEmpty()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitToEmpty()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJson_System_Object_">Json.ToJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_Serialize__1___0_">ProtobufExtensions.Serialize&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_SerializeToArray__1___0_">ProtobufExtensions.SerializeToArray&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionService.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionService.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

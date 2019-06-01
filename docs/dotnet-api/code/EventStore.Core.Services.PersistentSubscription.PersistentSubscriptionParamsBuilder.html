@@ -1,0 +1,1290 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Class PersistentSubscriptionParamsBuilder
+   | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PersistentSubscriptionParamsBuilder
+   | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder">
+  
+  
+  <h1 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder" class="text-break">Class PersistentSubscriptionParamsBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>Builds a <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParams.html">PersistentSubscriptionParams</a> object.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PersistentSubscriptionParamsBuilder</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.PersistentSubscription.html">EventStore.Core.Services.PersistentSubscription</a></h6>
+  <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
+  <h5 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PersistentSubscriptionParamsBuilder : object</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_CheckPointAfter_TimeSpan_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.CheckPointAfter(TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L214">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_CheckPointAfter_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.CheckPointAfter*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_CheckPointAfter_TimeSpan_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.CheckPointAfter(TimeSpan)">CheckPointAfter(TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Sets the time after which the subscription should be checkpointed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder CheckPointAfter(TimeSpan time)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="parametername">time</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_CreateFor_System_String_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.CreateFor(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L37">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_CreateFor_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.CreateFor*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_CreateFor_System_String_System_String_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.CreateFor(System.String,System.String)">CreateFor(String, String)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a> object</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PersistentSubscriptionParamsBuilder CreateFor(string streamName, string groupName)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">streamName</span></td>
+        <td><p>The name of the stream for the subscription</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td><p>The name of the group of the subscription</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td><p>a new <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a> object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_CustomConsumerStrategy_EventStore_Core_Services_PersistentSubscription_ConsumerStrategy_IPersistentSubscriptionConsumerStrategy_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.CustomConsumerStrategy(EventStore.Core.Services.PersistentSubscription.ConsumerStrategy.IPersistentSubscriptionConsumerStrategy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L176">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_CustomConsumerStrategy_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.CustomConsumerStrategy*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_CustomConsumerStrategy_EventStore_Core_Services_PersistentSubscription_ConsumerStrategy_IPersistentSubscriptionConsumerStrategy_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.CustomConsumerStrategy(EventStore.Core.Services.PersistentSubscription.ConsumerStrategy.IPersistentSubscriptionConsumerStrategy)">CustomConsumerStrategy(IPersistentSubscriptionConsumerStrategy)</h4>
+  <div class="markdown level1 summary"><p>Sets the consumer strategy to the one provided.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder CustomConsumerStrategy(IPersistentSubscriptionConsumerStrategy consumerStrategy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.ConsumerStrategy.IPersistentSubscriptionConsumerStrategy.html">IPersistentSubscriptionConsumerStrategy</a></td>
+        <td><span class="parametername">consumerStrategy</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_DoNotResolveLinkTos.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.DoNotResolveLinkTos%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L145">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_DoNotResolveLinkTos_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.DoNotResolveLinkTos*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_DoNotResolveLinkTos" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.DoNotResolveLinkTos">DoNotResolveLinkTos()</h4>
+  <div class="markdown level1 summary"><p>Sets the option to not resolve linktos on events that are found for this subscription.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder DoNotResolveLinkTos()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_DontTimeoutMessages.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.DontTimeoutMessages%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L205">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_DontTimeoutMessages_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.DontTimeoutMessages*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_DontTimeoutMessages" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.DontTimeoutMessages">DontTimeoutMessages()</h4>
+  <div class="markdown level1 summary"><p>Sets the timeout timespan to about 30k years.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder DontTimeoutMessages()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_MaximumToCheckPoint_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.MaximumToCheckPoint(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L232">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_MaximumToCheckPoint_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.MaximumToCheckPoint*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_MaximumToCheckPoint_System_Int32_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.MaximumToCheckPoint(System.Int32)">MaximumToCheckPoint(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the maximum number of items to checkpoint</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder MaximumToCheckPoint(int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_MinimumToCheckPoint_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.MinimumToCheckPoint(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L223">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_MinimumToCheckPoint_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.MinimumToCheckPoint*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_MinimumToCheckPoint_System_Int32_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.MinimumToCheckPoint(System.Int32)">MinimumToCheckPoint(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the minimum number of items to checkpoint</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder MinimumToCheckPoint(int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_PreferDispatchToSingle.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.PreferDispatchToSingle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L166">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_PreferDispatchToSingle_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.PreferDispatchToSingle*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_PreferDispatchToSingle" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.PreferDispatchToSingle">PreferDispatchToSingle()</h4>
+  <div class="markdown level1 summary"><p>If set the subscription will prefer if possible to dispatch only to a single of the connected
+clients. If however the buffer limits are reached on that client it will begin sending to other 
+clients.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder PreferDispatchToSingle()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_PreferRoundRobin.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.PreferRoundRobin%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L155">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_PreferRoundRobin_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.PreferRoundRobin*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_PreferRoundRobin" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.PreferRoundRobin">PreferRoundRobin()</h4>
+  <div class="markdown level1 summary"><p>If set the subscription will prefer if possible to round robin between the clients that
+are connected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder PreferRoundRobin()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_ResolveLinkTos.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.ResolveLinkTos%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L136">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_ResolveLinkTos_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.ResolveLinkTos*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_ResolveLinkTos" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.ResolveLinkTos">ResolveLinkTos()</h4>
+  <div class="markdown level1 summary"><p>Sets the option to resolve linktos on events that are found for this subscription.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder ResolveLinkTos()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_StartFrom_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.StartFrom(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L196">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_StartFrom_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.StartFrom*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_StartFrom_System_Int32_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.StartFrom(System.Int32)">StartFrom(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets that the subscription should start from a specified location of the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder StartFrom(int position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_StartFromBeginning.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.StartFromBeginning%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L187">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_StartFromBeginning_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.StartFromBeginning*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_StartFromBeginning" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.StartFromBeginning">StartFromBeginning()</h4>
+  <div class="markdown level1 summary"><p>Sets that the subscription should start from the beginning of the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder StartFromBeginning()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_StartFromCurrent.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.StartFromCurrent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L308">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_StartFromCurrent_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.StartFromCurrent*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_StartFromCurrent" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.StartFromCurrent">StartFromCurrent()</h4>
+  <div class="markdown level1 summary"><p>Sets that the subscription should start from where the stream is when the subscription is first connected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder StartFromCurrent()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithCheckpointReader_EventStore_Core_Services_PersistentSubscription_IPersistentSubscriptionCheckpointReader_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithCheckpointReader(EventStore.Core.Services.PersistentSubscription.IPersistentSubscriptionCheckpointReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L85">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithCheckpointReader_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithCheckpointReader*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithCheckpointReader_EventStore_Core_Services_PersistentSubscription_IPersistentSubscriptionCheckpointReader_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithCheckpointReader(EventStore.Core.Services.PersistentSubscription.IPersistentSubscriptionCheckpointReader)">WithCheckpointReader(IPersistentSubscriptionCheckpointReader)</h4>
+  <div class="markdown level1 summary"><p>Sets the checkpoint reader for the instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder WithCheckpointReader(IPersistentSubscriptionCheckpointReader reader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.IPersistentSubscriptionCheckpointReader.html">IPersistentSubscriptionCheckpointReader</a></td>
+        <td><span class="parametername">reader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithCheckpointWriter_EventStore_Core_Services_PersistentSubscription_IPersistentSubscriptionCheckpointWriter_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithCheckpointWriter(EventStore.Core.Services.PersistentSubscription.IPersistentSubscriptionCheckpointWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L106">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithCheckpointWriter_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithCheckpointWriter*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithCheckpointWriter_EventStore_Core_Services_PersistentSubscription_IPersistentSubscriptionCheckpointWriter_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithCheckpointWriter(EventStore.Core.Services.PersistentSubscription.IPersistentSubscriptionCheckpointWriter)">WithCheckpointWriter(IPersistentSubscriptionCheckpointWriter)</h4>
+  <div class="markdown level1 summary"><p>Sets the check point reader for the subscription</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder WithCheckpointWriter(IPersistentSubscriptionCheckpointWriter writer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.IPersistentSubscriptionCheckpointWriter.html">IPersistentSubscriptionCheckpointWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithEventLoader_EventStore_Core_Services_PersistentSubscription_IPersistentSubscriptionStreamReader_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithEventLoader(EventStore.Core.Services.PersistentSubscription.IPersistentSubscriptionStreamReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L117">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithEventLoader_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithEventLoader*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithEventLoader_EventStore_Core_Services_PersistentSubscription_IPersistentSubscriptionStreamReader_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithEventLoader(EventStore.Core.Services.PersistentSubscription.IPersistentSubscriptionStreamReader)">WithEventLoader(IPersistentSubscriptionStreamReader)</h4>
+  <div class="markdown level1 summary"><p>Sets the event loader for the subscription</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder WithEventLoader(IPersistentSubscriptionStreamReader loader)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.IPersistentSubscriptionStreamReader.html">IPersistentSubscriptionStreamReader</a></td>
+        <td><span class="parametername">loader</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithExtraStatistics.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithExtraStatistics%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L127">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithExtraStatistics_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithExtraStatistics*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithExtraStatistics" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithExtraStatistics">WithExtraStatistics()</h4>
+  <div class="markdown level1 summary"><p>Sets the option to include further latency statistics. These statistics have a cost and should not be used
+in high performance situations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder WithExtraStatistics()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithHistoryBufferSizeOf_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithHistoryBufferSizeOf(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L286">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithHistoryBufferSizeOf_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithHistoryBufferSizeOf*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithHistoryBufferSizeOf_System_Int32_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithHistoryBufferSizeOf(System.Int32)">WithHistoryBufferSizeOf(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the size of the read batch used when paging in history for the subscription
+sizes should not be too big ...</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder WithHistoryBufferSizeOf(int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithLiveBufferSizeOf_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithLiveBufferSizeOf(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L262">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithLiveBufferSizeOf_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithLiveBufferSizeOf*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithLiveBufferSizeOf_System_Int32_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithLiveBufferSizeOf(System.Int32)">WithLiveBufferSizeOf(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the size of the live buffer for the subscription. This is the buffer used 
+to cache messages while sending messages as they happen. The count is
+in terms of the number of messages to cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder WithLiveBufferSizeOf(int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithMaxRetriesOf_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithMaxRetriesOf(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L250">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithMaxRetriesOf_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithMaxRetriesOf*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithMaxRetriesOf_System_Int32_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithMaxRetriesOf(System.Int32)">WithMaxRetriesOf(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the number of times a message should be retried before being considered a bad message</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder WithMaxRetriesOf(int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithMessageParker_EventStore_Core_Services_PersistentSubscription_IPersistentSubscriptionMessageParker_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithMessageParker(EventStore.Core.Services.PersistentSubscription.IPersistentSubscriptionMessageParker)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L96">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithMessageParker_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithMessageParker*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithMessageParker_EventStore_Core_Services_PersistentSubscription_IPersistentSubscriptionMessageParker_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithMessageParker(EventStore.Core.Services.PersistentSubscription.IPersistentSubscriptionMessageParker)">WithMessageParker(IPersistentSubscriptionMessageParker)</h4>
+  <div class="markdown level1 summary"><p>Sets the message parker for the instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder WithMessageParker(IPersistentSubscriptionMessageParker parker)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.IPersistentSubscriptionMessageParker.html">IPersistentSubscriptionMessageParker</a></td>
+        <td><span class="parametername">parker</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithMessageTimeoutOf_TimeSpan_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithMessageTimeoutOf(TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L241">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithMessageTimeoutOf_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithMessageTimeoutOf*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithMessageTimeoutOf_TimeSpan_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithMessageTimeoutOf(TimeSpan)">WithMessageTimeoutOf(TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Sets the timeout for a message (will be retried if an ack is not received within this timespan)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder WithMessageTimeoutOf(TimeSpan timeout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithNamedConsumerStrategy_EventStore_Core_Services_PersistentSubscription_ConsumerStrategy_IPersistentSubscriptionConsumerStrategy_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithNamedConsumerStrategy(EventStore.Core.Services.PersistentSubscription.ConsumerStrategy.IPersistentSubscriptionConsumerStrategy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L297">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithNamedConsumerStrategy_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithNamedConsumerStrategy*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithNamedConsumerStrategy_EventStore_Core_Services_PersistentSubscription_ConsumerStrategy_IPersistentSubscriptionConsumerStrategy_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithNamedConsumerStrategy(EventStore.Core.Services.PersistentSubscription.ConsumerStrategy.IPersistentSubscriptionConsumerStrategy)">WithNamedConsumerStrategy(IPersistentSubscriptionConsumerStrategy)</h4>
+  <div class="markdown level1 summary"><p>Sets the size of the read batch used when paging in history for the subscription
+sizes should not be too big ...</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder WithNamedConsumerStrategy(IPersistentSubscriptionConsumerStrategy consumerStrategy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.ConsumerStrategy.IPersistentSubscriptionConsumerStrategy.html">IPersistentSubscriptionConsumerStrategy</a></td>
+        <td><span class="parametername">consumerStrategy</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithReadBatchOf_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithReadBatchOf(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L274">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithReadBatchOf_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithReadBatchOf*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_WithReadBatchOf_System_Int32_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.WithReadBatchOf(System.Int32)">WithReadBatchOf(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the size of the read batch used when paging in history for the subscription
+sizes should not be too big ...</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionParamsBuilder WithReadBatchOf(int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_op_Implicit_EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder__EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParams.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.op_Implicit(EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder)~EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParams%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L318">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_op_Implicit_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.op_Implicit*"></a>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder_op_Implicit_EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder__EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParams" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.op_Implicit(EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder)~EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParams">Implicit(PersistentSubscriptionParamsBuilder to PersistentSubscriptionParams)</h4>
+  <div class="markdown level1 summary"><p>Builds a <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParams.html">PersistentSubscriptionParams</a> object from a <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator PersistentSubscriptionParams(PersistentSubscriptionParamsBuilder builder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a> from which to build a <a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder.html">PersistentSubscriptionParamsBuilder</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParams.html">PersistentSubscriptionParams</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJson_System_Object_">Json.ToJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_Serialize__1___0_">ProtobufExtensions.Serialize&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_SerializeToArray__1___0_">ProtobufExtensions.SerializeToArray&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParamsBuilder.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParamsBuilder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionParamsBuilder.cs/#L9" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>
