@@ -17378,6 +17378,366 @@
       "source_relative_path": "http-api/swagger.json",
       "output": {
         ".html": {
+          "relative_path": "http-api/swagger.html",
+          "hash": "ZHx12ejh1ZZ7yR8Om5fnpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Streams.html",
+          "hash": "DClAX5KZqEW+Kwy/46gMXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Subscriptions.html",
+          "hash": "ZbT3a8l3k06p0eyPI18Y2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Projections.html",
+          "hash": "djaBSY5DOfzFOSqxL4pS0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Admin.html",
+          "hash": "t0MGtDjZA3y4KM17PaSxGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Info.html",
+          "hash": "j6wlX8OqUYd3ihGd+7W5kg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Users.html",
+          "hash": "w9focQY/9l5XbfRGclHJPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Stats.html",
+          "hash": "0yuygjIAsBfiZ5mK9b1QHw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Return Gossip details.html",
+          "hash": "XVAYmHF4KZadV+aYGGMfWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Update Gossip details.html",
+          "hash": "eNkuiYNSqClYnYiJeoIqag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Streams/Read a stream.html",
+          "hash": "hhe1J2GsNlSOOsW9Fp/FXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Streams/Write to a stream.html",
+          "hash": "7tPIGj+pO3AdXYwLOqZqaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Streams/Delete a stream.html",
+          "hash": "49d6rJNQcO68C69QQV8Mkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Streams/Alternative stream URL.html",
+          "hash": "TbxFSmCqFmFXNIjAxRBB0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Streams/Read stream event.html",
+          "hash": "gW1VNSm/YfRXxHylICvriQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Streams/Get {n} events.html",
+          "hash": "H3MWqef8yp9xJhQMXcRmNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Streams/Page back through events.html",
+          "hash": "bnI+VU9EEg7IxNk4EouoEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Streams/Page forward through events.html",
+          "hash": "se5x1DSuzy5U1RyPRrTLfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Streams/Read stream metadata.html",
+          "hash": "4q4b4Cz/p98OrqI5lTlK7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Streams/Update stream metadata.html",
+          "hash": "qc7/zPDQZSzuCfDgRDOIcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Streams/Get all events.html",
+          "hash": "TR8hPTOmejr0V0HOxjN2/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Subscriptions/Get all subscriptions.html",
+          "hash": "qYxcYJnnpZHuhuiXtDg7UQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Subscriptions/Get subscription stream information.html",
+          "hash": "1zdh7MuN0kzuXphlz3e7Vw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Subscriptions/Get subscription information.html",
+          "hash": "+RdRmIBx5nNLqF5cHqu4fQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Subscriptions/Get a stream.html",
+          "hash": "tOZfaj5awj2mN389U2Y0zA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Subscriptions/Update subscription.html",
+          "hash": "2f24HBz16cpZe3f1CwYaTQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Subscriptions/Create subscription.html",
+          "hash": "1bKH6dvCGAS6pWbsCRfOKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Subscriptions/Delete subscription.html",
+          "hash": "/hvPfBPvBLfnm0OEcMHrDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Subscriptions/Get {n} subscription events.html",
+          "hash": "qN8Umt5ObjWU1EicZBSJ5w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Subscriptions/Acknowledge a single message.html",
+          "hash": "gQnSkkeqH67o37t4vlwMNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
           "relative_path": "http-api/swagger/Subscriptions/Acknowledge multiple messages.html",
           "hash": "/nCm7vuOW7TXC7LDtlXhLw=="
         }
@@ -17884,366 +18244,6 @@
         ".html": {
           "relative_path": "http-api/swagger/Stats/Get specified stat.html",
           "hash": "NlYwEzoJs4EZPIVwMaVePA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger.html",
-          "hash": "ZHx12ejh1ZZ7yR8Om5fnpw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Streams.html",
-          "hash": "DClAX5KZqEW+Kwy/46gMXQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Subscriptions.html",
-          "hash": "ZbT3a8l3k06p0eyPI18Y2A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Projections.html",
-          "hash": "djaBSY5DOfzFOSqxL4pS0g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Admin.html",
-          "hash": "t0MGtDjZA3y4KM17PaSxGw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Info.html",
-          "hash": "j6wlX8OqUYd3ihGd+7W5kg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Users.html",
-          "hash": "w9focQY/9l5XbfRGclHJPQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Stats.html",
-          "hash": "0yuygjIAsBfiZ5mK9b1QHw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Return Gossip details.html",
-          "hash": "XVAYmHF4KZadV+aYGGMfWQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Update Gossip details.html",
-          "hash": "eNkuiYNSqClYnYiJeoIqag=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Streams/Read a stream.html",
-          "hash": "hhe1J2GsNlSOOsW9Fp/FXA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Streams/Write to a stream.html",
-          "hash": "7tPIGj+pO3AdXYwLOqZqaA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Streams/Delete a stream.html",
-          "hash": "49d6rJNQcO68C69QQV8Mkw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Streams/Alternative stream URL.html",
-          "hash": "TbxFSmCqFmFXNIjAxRBB0A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Streams/Read stream event.html",
-          "hash": "gW1VNSm/YfRXxHylICvriQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Streams/Get {n} events.html",
-          "hash": "H3MWqef8yp9xJhQMXcRmNg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Streams/Page back through events.html",
-          "hash": "bnI+VU9EEg7IxNk4EouoEg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Streams/Page forward through events.html",
-          "hash": "se5x1DSuzy5U1RyPRrTLfA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Streams/Read stream metadata.html",
-          "hash": "4q4b4Cz/p98OrqI5lTlK7Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Streams/Update stream metadata.html",
-          "hash": "qc7/zPDQZSzuCfDgRDOIcw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Streams/Get all events.html",
-          "hash": "TR8hPTOmejr0V0HOxjN2/w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Subscriptions/Get all subscriptions.html",
-          "hash": "qYxcYJnnpZHuhuiXtDg7UQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Subscriptions/Get subscription stream information.html",
-          "hash": "1zdh7MuN0kzuXphlz3e7Vw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Subscriptions/Get subscription information.html",
-          "hash": "+RdRmIBx5nNLqF5cHqu4fQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Subscriptions/Get a stream.html",
-          "hash": "tOZfaj5awj2mN389U2Y0zA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Subscriptions/Update subscription.html",
-          "hash": "2f24HBz16cpZe3f1CwYaTQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Subscriptions/Create subscription.html",
-          "hash": "1bKH6dvCGAS6pWbsCRfOKA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Subscriptions/Delete subscription.html",
-          "hash": "/hvPfBPvBLfnm0OEcMHrDg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Subscriptions/Get {n} subscription events.html",
-          "hash": "qN8Umt5ObjWU1EicZBSJ5w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Subscriptions/Acknowledge a single message.html",
-          "hash": "gQnSkkeqH67o37t4vlwMNA=="
         }
       },
       "is_incremental": false,
@@ -18800,12 +18800,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "server/stats-debug.md",
       "output": {
         ".html": {
           "relative_path": "server/stats-debug/index.html",
-          "hash": "ItIDJ+jCUayHMPwJSP61jg=="
+          "hash": "5MHG5zuGzXzohh2zJLyoDQ=="
         }
       },
       "is_incremental": false,
@@ -18862,9 +18865,9 @@
         "full_build_reason_code": "ForceRebuild"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
@@ -18876,11 +18879,10 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ResourceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 0,
+          "total_file_count": 70,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
@@ -18889,10 +18891,11 @@
           "total_file_count": 1315,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 70,
+          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }
