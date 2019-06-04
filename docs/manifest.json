@@ -18800,15 +18800,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "server/stats-debug.md",
       "output": {
         ".html": {
           "relative_path": "server/stats-debug/index.html",
-          "hash": "5MHG5zuGzXzohh2zJLyoDQ=="
+          "hash": "jFwekl7JyOoYNdPNXDYM6w=="
         }
       },
       "is_incremental": false,
@@ -18879,6 +18876,13 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
@@ -18889,13 +18893,6 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 1315,
-          "skipped_file_count": 0
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
           "skipped_file_count": 0
         }
       }
