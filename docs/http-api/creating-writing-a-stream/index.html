@@ -1,0 +1,467 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Creating and writing to a stream | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Creating and writing to a stream | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="creating-and-writing-to-a-stream">Creating and writing to a stream</h1>
+
+<p>You write to a stream over HTTP using a <code>POST</code> request to the resource of the stream. If the stream does not exist then the stream is implicitly created.</p>
+<h2 id="event-store-media-types">Event Store media types</h2>
+<p>Event Store supports a custom media type for posting events, <code>application/vnd.eventstore.events+json</code> or <code>application/vnd.eventstore.events+xml</code>. This format allows for extra functionality that posting events as <code>application/json</code> or <code>application/xml</code> does not. For example it allows you to post multiple events in a single batch.</p>
+<!-- TODO: And more? Why not use it? And why are these examples not using it? -->
+<p>The format represents data with the following jschema (<code>eventId</code> must be a UUID).</p>
+<pre><code class="lang-json">[
+    {
+      &quot;eventId&quot;    : &quot;string&quot;,
+      &quot;eventType&quot;  : &quot;string&quot;,
+      &quot;data&quot;       : &quot;object&quot;,
+      &quot;metadata&quot;   : &quot;object&quot;
+    }
+]
+</code></pre><h2 id="writing-a-single-event">Writing a single event</h2>
+<p>If you issue a <code>POST</code> request with data to a stream and the correct content type set it writes the event to the stream, and generates a <code>201</code> response from the server, giving you the location of the event. Using the following event, which <a href="../../code-examples/http-api/event.json">you can also download as a file</a>:</p>
+<pre><code class="lang-json" name="http-api-writing-single-event">{
+  &quot;a&quot;: &quot;1&quot;
+}
+</code></pre><p><code>POST</code> the following request to create a stream and add an event to it:</p>
+<div class="tabGroup" id="tabgroup_e5OAF5pzdi">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_e5OAF5pzdi_tabid-1" role="tab" aria-controls="tabpanel_e5OAF5pzdi_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_e5OAF5pzdi_tabid-2" role="tab" aria-controls="tabpanel_e5OAF5pzdi_tabid-2" data-tab="tabid-2" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_e5OAF5pzdi_tabid-1" role="tabpanel" data-tab="tabid-1">
+<pre><code class="lang-bash" name="http-api-write-event-request">curl -i -d &quot;@event.json&quot; &quot;http://127.0.0.1:2113/streams/newstream&quot; -H &quot;Content-Type:application/json&quot; -H &quot;ES-EventType: SomeEvent&quot; -H &quot;ES-EventId: C322E299-CB73-4B47-97C5-5054F920746E&quot;
+</code></pre></section>
+<section id="tabpanel_e5OAF5pzdi_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-json" name="http-api-write-event-response">HTTP/1.1 201 Created
+Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-PINGOTHER
+Access-Control-Allow-Origin: *
+Location: http://127.0.0.1:2113/streams/newstream/0
+Content-Type: text/plain; charset: utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Fri, 28 Jun 2013 12:17:59 GMT
+Content-Length: 0
+Keep-Alive: timeout=15,max=100
+</code></pre></section>
+</div>
+<p>Some clients may not be able to generate a unique identifier (or may not want to) for the event ID. You need this ID for idempotence purposes and Event Store can generate it for you.</p>
+<p>If you leave off the <code>ES-EventId</code> header you see different behavior:</p>
+<div class="tabGroup" id="tabgroup_e5OAF5pzdi-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_e5OAF5pzdi-1_tabid-3" role="tab" aria-controls="tabpanel_e5OAF5pzdi-1_tabid-3" data-tab="tabid-3" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_e5OAF5pzdi-1_tabid-4" role="tab" aria-controls="tabpanel_e5OAF5pzdi-1_tabid-4" data-tab="tabid-4" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_e5OAF5pzdi-1_tabid-3" role="tabpanel" data-tab="tabid-3">
+<pre><code class="lang-bash" name="http-api-write-event-no-id-request">curl -i -d &quot;@event.json&quot; &quot;http://127.0.0.1:2113/streams/newstream&quot; -H &quot;Content-Type:application/json&quot; -H &quot;ES-EventType: SomeEvent&quot;
+</code></pre></section>
+<section id="tabpanel_e5OAF5pzdi-1_tabid-4" role="tabpanel" data-tab="tabid-4" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-json" name="http-api-write-event-no-id-response">HTTP/1.1 307 Temporary Redirect
+Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position, ES-CurrentVersion
+Location: http://127.0.0.1:2113/streams/newstream/incoming/8a00e469-3a99-4517-a0b0-8dc662ffad9b
+Content-Type: text/plain; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Tue, 24 Jul 2018 14:42:44 GMT
+Content-Length: 28
+Keep-Alive: timeout=15,max=100
+
+Forwarding to idempotent URI%
+</code></pre></section>
+</div>
+<p>In this case Event Store has responded with a <code>307 Temporary Redirect</code>. The location points to another URI that you can post the event to. This new URI is idempotent for posting, even without an event ID.</p>
+<div class="tabGroup" id="tabgroup_e5OAF5pzdi-2">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_e5OAF5pzdi-2_tabid-5" role="tab" aria-controls="tabpanel_e5OAF5pzdi-2_tabid-5" data-tab="tabid-5" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_e5OAF5pzdi-2_tabid-6" role="tab" aria-controls="tabpanel_e5OAF5pzdi-2_tabid-6" data-tab="tabid-6" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_e5OAF5pzdi-2_tabid-5" role="tabpanel" data-tab="tabid-5">
+<pre><code class="lang-bash" name="http-api-write-event-follow-request">curl -i -d &quot;@event.json&quot; &quot;http://127.0.0.1:2113/streams/newstream/incoming/8a00e469-3a99-4517-a0b0-8dc662ffad9b&quot; -H &quot;Content-Type: application/json&quot; -H &quot;ES-EventType: SomeEvent&quot;
+</code></pre></section>
+<section id="tabpanel_e5OAF5pzdi-2_tabid-6" role="tabpanel" data-tab="tabid-6" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-json" name="http-api-write-event-follow-response">HTTP/1.1 201 Created
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position, ES-CurrentVersion
+Location: http://127.0.0.1:2113/streams/newstream/0
+Content-Type: text/plain; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Tue, 24 Jul 2018 14:46:10 GMT
+Content-Length: 0
+Keep-Alive: timeout=15,max=100
+</code></pre></section>
+</div>
+<p>It&#39;s generally recommended to include an event ID if possible as it results in fewer round trips between the client and the server.</p>
+<p>When posting to either the stream or to the returned redirect, clients must include the <code>EventType</code> header. If you forget to include the header you receive an error.</p>
+<div class="tabGroup" id="tabgroup_e5OAF5pzdi-3">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_e5OAF5pzdi-3_tabid-7" role="tab" aria-controls="tabpanel_e5OAF5pzdi-3_tabid-7" data-tab="tabid-7" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_e5OAF5pzdi-3_tabid-8" role="tab" aria-controls="tabpanel_e5OAF5pzdi-3_tabid-8" data-tab="tabid-8" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_e5OAF5pzdi-3_tabid-7" role="tabpanel" data-tab="tabid-7">
+<pre><code class="lang-bash" name="http-api-write-event-no-type-request">curl -i -d &quot;@event.json&quot; &quot;http://127.0.0.1:2113/streams/newstream&quot; -H &quot;Content-Type:application/json&quot;
+</code></pre></section>
+<section id="tabpanel_e5OAF5pzdi-3_tabid-8" role="tabpanel" data-tab="tabid-8" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-json" name="http-api-write-event-no-type-response">HTTP/1.1 400 Must include an event type with the request either in body or as ES-EventType header.
+Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position, ES-CurrentVersion
+Content-Type:
+Server: Mono-HTTPAPI/1.0
+Date: Tue, 24 Jul 2018 14:50:59 GMT
+Content-Length: 0
+Connection: close
+</code></pre></section>
+</div>
+<h2 id="batch-writes">Batch writes</h2>
+<p>You can include more than one write in a single post by placing multiple events inside of the array representing the events, including metadata.</p>
+<p>For example, the below has two events:</p>
+<pre><code class="lang-json" name="http-api-multiple-events">[
+    {
+        &quot;eventId&quot;: &quot;fbf4b1a1-b4a3-4dfe-a01f-ec52c34e16e4&quot;,
+        &quot;eventType&quot;: &quot;event-type&quot;,
+        &quot;data&quot;: {
+            &quot;a&quot;: &quot;1&quot;
+        }
+    },
+    {
+        &quot;eventId&quot;: &quot;0f9fad5b-d9cb-469f-a165-70867728951e&quot;,
+        &quot;eventType&quot;: &quot;event-type&quot;,
+        &quot;data&quot;: {
+            &quot;b&quot;: &quot;2&quot;
+        }
+    }
+]
+</code></pre><p>When you write multiple events in a single post, Event Store treats them transactionally, it writes all events together or fails.</p>
+<div class="tabGroup" id="tabgroup_e5OAF5pzdi-4">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_e5OAF5pzdi-4_tabid-17" role="tab" aria-controls="tabpanel_e5OAF5pzdi-4_tabid-17" data-tab="tabid-17" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_e5OAF5pzdi-4_tabid-18" role="tab" aria-controls="tabpanel_e5OAF5pzdi-4_tabid-18" data-tab="tabid-18" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_e5OAF5pzdi-4_tabid-17" role="tabpanel" data-tab="tabid-17">
+<pre><code class="lang-bash" name="http-api-write-multiple-events-request">curl -i -d &quot;@multiple-events.json&quot; &quot;http://127.0.0.1:2113/streams/newstream&quot; -H &quot;Content-Type:application/vnd.eventstore.events+json&quot;
+</code></pre></section>
+<section id="tabpanel_e5OAF5pzdi-4_tabid-18" role="tabpanel" data-tab="tabid-18" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-json" name="http-api-write-multiple-events-response">HTTP/1.1 201 Created
+Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-PINGOTHER
+Access-Control-Allow-Origin: *
+Location: http://127.0.0.1:2113/streams/newstream/1
+Content-Type: text/plain; charset: utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Fri, 28 Jun 2013 12:32:18 GMT
+Content-Length: 0
+Keep-Alive: timeout=15,max=100
+</code></pre></section>
+</div>
+<h3 id="appending-events">Appending events</h3>
+<p>To append events, issue a <code>POST</code> request to the same resource again and edit the <code>eventId</code>:</p>
+<pre><code class="lang-json" name="http-api-append-event">[
+    {
+        &quot;eventId&quot;: &quot;fbf4a1a1-b4a3-4dfe-a01f-ec52c34e16e5&quot;,
+        &quot;eventType&quot;: &quot;event-type&quot;,
+        &quot;data&quot;: {
+            &quot;b&quot;: &quot;2&quot;
+        }
+    }
+]
+</code></pre><div class="tabGroup" id="tabgroup_e5OAF5pzdi-5">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_e5OAF5pzdi-5_tabid-11" role="tab" aria-controls="tabpanel_e5OAF5pzdi-5_tabid-11" data-tab="tabid-11" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_e5OAF5pzdi-5_tabid-12" role="tab" aria-controls="tabpanel_e5OAF5pzdi-5_tabid-12" data-tab="tabid-12" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_e5OAF5pzdi-5_tabid-11" role="tabpanel" data-tab="tabid-11">
+<pre><code class="lang-bash" name="http-api-write-event-append-request">curl -i -d &quot;@event-append.json&quot; &quot;http://127.0.0.1:2113/streams/newstream&quot; -H &quot;Content-Type:application/vnd.eventstore.events+json&quot;
+</code></pre></section>
+<section id="tabpanel_e5OAF5pzdi-5_tabid-12" role="tabpanel" data-tab="tabid-12" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-json" name="http-api-write-event-append-response">HTTP/1.1 201 Created
+Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-PINGOTHER
+Access-Control-Allow-Origin: *
+Location: http://127.0.0.1:2113/streams/newstream/1
+Content-Type: text/plain; charset: utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Fri, 28 Jun 2013 12:32:18 GMT
+Content-Length: 0
+Keep-Alive: timeout=15,max=100
+</code></pre></section>
+</div>
+<h2 id="data-only-events">Data-only events</h2>
+<p>Version 3.7.0 of Event Store added support for the <code>application/octet-stream</code> content type to support data-only binary events. When creating these events, you need to provide the <code>ES-EventType</code> and <code>ES-EventId</code> headers and cannot have metadata associated with the event. In the example below <code>SGVsbG8gV29ybGQ=</code> is the data you <code>POST</code> to the stream:</p>
+<div class="tabGroup" id="tabgroup_e5OAF5pzdi-6">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_e5OAF5pzdi-6_tabid-13" role="tab" aria-controls="tabpanel_e5OAF5pzdi-6_tabid-13" data-tab="tabid-13" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_e5OAF5pzdi-6_tabid-14" role="tab" aria-controls="tabpanel_e5OAF5pzdi-6_tabid-14" data-tab="tabid-14" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_e5OAF5pzdi-6_tabid-13" role="tabpanel" data-tab="tabid-13">
+<pre><code class="lang-bash" name="http-api-write-event-data-request">curl -i -d &quot;SGVsbG8gV29ybGQ=&quot; &quot;http://127.0.0.1:2113/streams/newstream&quot; -H &quot;Content-Type:application/octet-stream&quot; -H &quot;ES-EventType:rawDataType&quot; -H &quot;ES-EventId:eeccf3ce-4f54-409d-8870-b35dd836cca6&quot;
+</code></pre></section>
+<section id="tabpanel_e5OAF5pzdi-6_tabid-14" role="tabpanel" data-tab="tabid-14" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-json" name="http-api-write-event-data-response">HTTP/1.1 201 Created
+Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTo, ES-ExpectedVersion
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position
+Location: http://127.0.0.1:2113/streams/newstream/0
+Content-Type: text/plain; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Mon, 27 Jun 2016 13:15:27 GMT
+Content-Length: 0
+Keep-Alive: timeout=15,max=100
+</code></pre></section>
+</div>
+<h2 id="expected-version-header">Expected version header</h2>
+<p>The expected version header represents the version of the stream you expect.</p>
+<p>For example if you write to a stream at version 1, then you expect it to be at version 1 next time you write. This can allow for optimistic locking when multiple applications are reading/writing to streams.</p>
+<p>If your expected version is not the current version you receive an HTTP status code of 400.</p>
+<div class="WARNING"><h5>Warning</h5><p>See the idempotency section below, if you post the same event twice it is idempotent and won&#39;t return a version error.</p>
+</div>
+<p>First write an event to a stream, setting a version:</p>
+<pre><code class="lang-json" name="http-api-append-event">[
+    {
+        &quot;eventId&quot;: &quot;fbf4b1a1-b4a3-4dfe-a01f-ec52c34e16e4&quot;,
+        &quot;eventType&quot;: &quot;event-type&quot;,
+        &quot;data&quot;: {
+            &quot;a&quot;: &quot;1&quot;
+        }
+    }
+]
+</code></pre><p><a href="../../code-examples/http-api/event-version.json">Download</a></p>
+<div class="tabGroup" id="tabgroup_e5OAF5pzdi-7">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_e5OAF5pzdi-7_tabid-15" role="tab" aria-controls="tabpanel_e5OAF5pzdi-7_tabid-15" data-tab="tabid-15" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_e5OAF5pzdi-7_tabid-16" role="tab" aria-controls="tabpanel_e5OAF5pzdi-7_tabid-16" data-tab="tabid-16" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_e5OAF5pzdi-7_tabid-15" role="tabpanel" data-tab="tabid-15">
+<pre><code class="lang-bash" name="http-api-write-event-version-request">curl -i -d @event-version.json &quot;http://127.0.0.1:2113/streams/newstream&quot; -H &quot;Content-Type:application/vnd.eventstore.events+json&quot; -H &quot;ES-CurrentVersion: 0&quot;
+</code></pre></section>
+<section id="tabpanel_e5OAF5pzdi-7_tabid-16" role="tabpanel" data-tab="tabid-16" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-json" name="http-api-write-event-version-response">HTTP/1.1 201 Created
+Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position, ES-CurrentVersion
+Location: http://127.0.0.1:2113/streams/newstream/2
+Content-Type: text/plain; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Tue, 14 Aug 2018 10:02:08 GMT
+Content-Length: 0
+Keep-Alive: timeout=15,max=100
+</code></pre></section>
+</div>
+<p>If you now write to the stream with the incorrect version, you receive an HTTP status code 400 error.</p>
+<div class="tabGroup" id="tabgroup_e5OAF5pzdi-8">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_e5OAF5pzdi-8_tabid-17" role="tab" aria-controls="tabpanel_e5OAF5pzdi-8_tabid-17" data-tab="tabid-17" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_e5OAF5pzdi-8_tabid-18" role="tab" aria-controls="tabpanel_e5OAF5pzdi-8_tabid-18" data-tab="tabid-18" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_e5OAF5pzdi-8_tabid-17" role="tabpanel" data-tab="tabid-17">
+<pre><code class="lang-bash" name="http-api-write-event-wrong-version-request">curl -i -d @event-version.json &quot;http://127.0.0.1:2113/streams/newstream&quot; -H &quot;Content-Type:application/vnd.eventstore.events+json&quot; -H &quot;ES-ExpectedVersion: 3&quot;
+</code></pre></section>
+<section id="tabpanel_e5OAF5pzdi-8_tabid-18" role="tabpanel" data-tab="tabid-18" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-json" name="http-api-write-event-wrong-version-response">HTTP/1.1 400 Wrong expected EventNumber
+Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position, ES-CurrentVersion
+ES-CurrentVersion: 0
+Content-Type: text/plain; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Tue, 14 Aug 2018 14:08:44 GMT
+Content-Length: 0
+Connection: close
+</code></pre></section>
+</div>
+<p>There are special values you can use in the expected version header:</p>
+<ul>
+<li><code>-2</code> states that this write should never conflict and should <strong>always</strong> succeed.</li>
+<li><code>-1</code> states that the stream should not exist at the time of the writing (this write creates it).</li>
+<li><code>0</code> states that the stream should exist but should be empty.</li>
+</ul>
+<h2 id="idempotency">Idempotency</h2>
+<p>Appends to streams are idempotent based upon the <code>EventId</code> assigned in your post. If you were to re-run the last command it returns the same value again.</p>
+<p>This is important behaviour as it&#39;s how you implement error handling. If you receive a timeout, broken connection, no answer, etc from your HTTP <code>POST</code> then it&#39;s your responsibility to retry the post. You must also keep the same UUID that you assigned to the event in the first <code>POST</code>.</p>
+<p>If you are using the expected version parameter with your post, then Event Store is 100% idempotent. If you use <code>-2</code> as your expected version value, Event Store does its best to keep events idempotent but cannot assure that everything is fully idempotent and you end up in &#39;at-least-once&#39; messaging. <a href="../optimistic-concurrency-and-idempotence/index.html">Read this guide</a> for more details on idempotency.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/http-api/creating-writing-a-stream.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

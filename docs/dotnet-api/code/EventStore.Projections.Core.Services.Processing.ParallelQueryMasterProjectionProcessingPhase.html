@@ -1,0 +1,885 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Class ParallelQueryMasterProjectionProcessingPhase
+   | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ParallelQueryMasterProjectionProcessingPhase
+   | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase">
+  
+  
+  <h1 id="EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase" data-uid="EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase" class="text-break">Class ParallelQueryMasterProjectionProcessingPhase
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html">EventSubscriptionBasedProjectionProcessingPhase</a></div>
+    <div class="level2"><span class="xref">ParallelQueryMasterProjectionProcessingPhase</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.IProjectionPhaseCompleter.html">IProjectionPhaseCompleter</a></div>
+    <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.IProjectionPhaseCheckpointManager.html">IProjectionPhaseCheckpointManager</a></div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.ProgressChanged.html">EventReaderSubscriptionMessage.ProgressChanged</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.SubscriptionStarted.html">EventReaderSubscriptionMessage.SubscriptionStarted</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.NotAuthorized.html">EventReaderSubscriptionMessage.NotAuthorized</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.EofReached.html">EventReaderSubscriptionMessage.EofReached</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.CheckpointSuggested.html">EventReaderSubscriptionMessage.CheckpointSuggested</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.ReaderAssignedReader.html">EventReaderSubscriptionMessage.ReaderAssignedReader</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.Failed.html">EventReaderSubscriptionMessage.Failed</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.IProjectionProcessingPhase.html">IProjectionProcessingPhase</a></div>
+    <div><span class="xref">IDisposable</span></div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.CoreProjectionManagementMessage.GetState.html">CoreProjectionManagementMessage.GetState</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.CoreProjectionManagementMessage.GetResult.html">CoreProjectionManagementMessage.GetResult</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<span class="xref">CoreProjectionProcessingMessage.PrerecordedEventsLoaded</span>&gt;</div>
+    <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.IProjectionPhaseStateManager.html">IProjectionPhaseStateManager</a></div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.CommittedEventReceived.html">EventReaderSubscriptionMessage.CommittedEventReceived</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.ISpoolStreamWorkItemContainer.html">ISpoolStreamWorkItemContainer</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__publisher">EventSubscriptionBasedProjectionProcessingPhase._publisher</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__coreProjection">EventSubscriptionBasedProjectionProcessingPhase._coreProjection</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__projectionCorrelationId">EventSubscriptionBasedProjectionProcessingPhase._projectionCorrelationId</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__checkpointManager">EventSubscriptionBasedProjectionProcessingPhase._checkpointManager</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__progressResultWriter">EventSubscriptionBasedProjectionProcessingPhase._progressResultWriter</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__projectionConfig">EventSubscriptionBasedProjectionProcessingPhase._projectionConfig</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__projectionName">EventSubscriptionBasedProjectionProcessingPhase._projectionName</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__logger">EventSubscriptionBasedProjectionProcessingPhase._logger</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__zeroCheckpointTag">EventSubscriptionBasedProjectionProcessingPhase._zeroCheckpointTag</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__processingQueue">EventSubscriptionBasedProjectionProcessingPhase._processingQueue</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__partitionStateCache">EventSubscriptionBasedProjectionProcessingPhase._partitionStateCache</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__subscriptionDispatcher">EventSubscriptionBasedProjectionProcessingPhase._subscriptionDispatcher</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__readerStrategy">EventSubscriptionBasedProjectionProcessingPhase._readerStrategy</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__resultWriter">EventSubscriptionBasedProjectionProcessingPhase._resultWriter</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__useCheckpoints">EventSubscriptionBasedProjectionProcessingPhase._useCheckpoints</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__expectedSubscriptionMessageSequenceNumber">EventSubscriptionBasedProjectionProcessingPhase._expectedSubscriptionMessageSequenceNumber</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__currentSubscriptionId">EventSubscriptionBasedProjectionProcessingPhase._currentSubscriptionId</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__subscribed">EventSubscriptionBasedProjectionProcessingPhase._subscribed</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__state">EventSubscriptionBasedProjectionProcessingPhase._state</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__stopOnEof">EventSubscriptionBasedProjectionProcessingPhase._stopOnEof</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__emittedStreamsTracker">EventSubscriptionBasedProjectionProcessingPhase._emittedStreamsTracker</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_UnlockAndForgetBefore_EventStore_Projections_Core_Services_Processing_CheckpointTag_">EventSubscriptionBasedProjectionProcessingPhase.UnlockAndForgetBefore(CheckpointTag)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_LastProcessedEventPosition">EventSubscriptionBasedProjectionProcessingPhase.LastProcessedEventPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_CheckpointManager">EventSubscriptionBasedProjectionProcessingPhase.CheckpointManager</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_EmittedStreamsTracker">EventSubscriptionBasedProjectionProcessingPhase.EmittedStreamsTracker</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_IsOutOfOrderSubscriptionMessage_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessageBase_">EventSubscriptionBasedProjectionProcessingPhase.IsOutOfOrderSubscriptionMessage(EventReaderSubscriptionMessageBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_RegisterSubscriptionMessage_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessageBase_">EventSubscriptionBasedProjectionProcessingPhase.RegisterSubscriptionMessage(EventReaderSubscriptionMessageBase)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_EnsureTickPending">EventSubscriptionBasedProjectionProcessingPhase.EnsureTickPending()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_ProcessEvent">EventSubscriptionBasedProjectionProcessingPhase.ProcessEvent()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_ProgressChanged_">EventSubscriptionBasedProjectionProcessingPhase.Handle(EventReaderSubscriptionMessage.ProgressChanged)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_SubscriptionStarted_">EventSubscriptionBasedProjectionProcessingPhase.Handle(EventReaderSubscriptionMessage.SubscriptionStarted)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_NotAuthorized_">EventSubscriptionBasedProjectionProcessingPhase.Handle(EventReaderSubscriptionMessage.NotAuthorized)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Unsubscribed">EventSubscriptionBasedProjectionProcessingPhase.Unsubscribed()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_EofReached_">EventSubscriptionBasedProjectionProcessingPhase.Handle(EventReaderSubscriptionMessage.EofReached)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_CheckpointSuggested_">EventSubscriptionBasedProjectionProcessingPhase.Handle(EventReaderSubscriptionMessage.CheckpointSuggested)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_EventStore_Projections_Core_Messages_CoreProjectionManagementMessage_GetState_">EventSubscriptionBasedProjectionProcessingPhase.Handle(CoreProjectionManagementMessage.GetState)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_EventStore_Projections_Core_Messages_CoreProjectionManagementMessage_GetResult_">EventSubscriptionBasedProjectionProcessingPhase.Handle(CoreProjectionManagementMessage.GetResult)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_Failed_">EventSubscriptionBasedProjectionProcessingPhase.Handle(EventReaderSubscriptionMessage.Failed)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_UnsubscribeFromPreRecordedOrderEvents">EventSubscriptionBasedProjectionProcessingPhase.UnsubscribeFromPreRecordedOrderEvents()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Subscribed_Guid_">EventSubscriptionBasedProjectionProcessingPhase.Subscribed(Guid)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_GetSubscriptionOptions">EventSubscriptionBasedProjectionProcessingPhase.GetSubscriptionOptions()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_SubscribeReaders_EventStore_Projections_Core_Services_Processing_CheckpointTag_">EventSubscriptionBasedProjectionProcessingPhase.SubscribeReaders(CheckpointTag)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_SubscribeToPreRecordedOrderEvents">EventSubscriptionBasedProjectionProcessingPhase.SubscribeToPreRecordedOrderEvents()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_CoreProjectionProcessingMessage_PrerecordedEventsLoaded_">EventSubscriptionBasedProjectionProcessingPhase.Handle(CoreProjectionProcessingMessage.PrerecordedEventsLoaded)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_AdjustTag_EventStore_Projections_Core_Services_Processing_CheckpointTag_">EventSubscriptionBasedProjectionProcessingPhase.AdjustTag(CheckpointTag)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_SetFaulting_System_String_Exception_">EventSubscriptionBasedProjectionProcessingPhase.SetFaulting(String, Exception)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_ValidateEmittedEvents_EventStore_Projections_Core_Services_Processing_EmittedEventEnvelope___">EventSubscriptionBasedProjectionProcessingPhase.ValidateEmittedEvents(EmittedEventEnvelope[])</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_InitializeFromCheckpoint_EventStore_Projections_Core_Services_Processing_CheckpointTag_">EventSubscriptionBasedProjectionProcessingPhase.InitializeFromCheckpoint(CheckpointTag)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_GetBufferedEventCount">EventSubscriptionBasedProjectionProcessingPhase.GetBufferedEventCount()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_GetStatus">EventSubscriptionBasedProjectionProcessingPhase.GetStatus()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_InternalCommittedEventProcessed_System_String_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_CommittedEventReceived_EventStore_Projections_Core_Services_Processing_EmittedEventEnvelope___EventStore_Projections_Core_Services_Processing_PartitionState_EventStore_Projections_Core_Services_Processing_PartitionState_">EventSubscriptionBasedProjectionProcessingPhase.InternalCommittedEventProcessed(String, EventReaderSubscriptionMessage.CommittedEventReceived, EmittedEventEnvelope[], PartitionState, PartitionState)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_InternalPartitionDeletedProcessed_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Projections_Core_Services_Processing_PartitionState_">EventSubscriptionBasedProjectionProcessingPhase.InternalPartitionDeletedProcessed(String, CheckpointTag, PartitionState)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_BeginGetPartitionStateAt_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_Action_EventStore_Projections_Core_Services_Processing_PartitionState__System_Boolean_">EventSubscriptionBasedProjectionProcessingPhase.BeginGetPartitionStateAt(String, CheckpointTag, Action&lt;PartitionState&gt;, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_FinalizeEventProcessing_EventStore_Projections_Core_Services_Processing_EventProcessedResult_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_Single_">EventSubscriptionBasedProjectionProcessingPhase.FinalizeEventProcessing(EventProcessedResult, CheckpointTag, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_EmitEofResult_System_String_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_Guid_System_String_">EventSubscriptionBasedProjectionProcessingPhase.EmitEofResult(String, String, CheckpointTag, Guid, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_RecordEventOrder_EventStore_Projections_Core_Services_Processing_ResolvedEvent_EventStore_Projections_Core_Services_Processing_CheckpointTag_Action_">EventSubscriptionBasedProjectionProcessingPhase.RecordEventOrder(ResolvedEvent, CheckpointTag, Action)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Complete">EventSubscriptionBasedProjectionProcessingPhase.Complete()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_SetCurrentCheckpointSuggestedWorkItem_EventStore_Projections_Core_Services_Processing_CheckpointSuggestedWorkItem_">EventSubscriptionBasedProjectionProcessingPhase.SetCurrentCheckpointSuggestedWorkItem(CheckpointSuggestedWorkItem)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_GetStatistics_EventStore_Projections_Core_Services_ProjectionStatistics_">EventSubscriptionBasedProjectionProcessingPhase.GetStatistics(ProjectionStatistics)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_MakeZeroCheckpointTag">EventSubscriptionBasedProjectionProcessingPhase.MakeZeroCheckpointTag()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_EnsureUnsubscribed">EventSubscriptionBasedProjectionProcessingPhase.EnsureUnsubscribed()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__subscriptionStartedAtLastCommitPosition">EventSubscriptionBasedProjectionProcessingPhase._subscriptionStartedAtLastCommitPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_ReaderAssignedReader_">EventSubscriptionBasedProjectionProcessingPhase.Handle(EventReaderSubscriptionMessage.ReaderAssignedReader)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_SetProjectionState_EventStore_Projections_Core_Services_Processing_PhaseState_">EventSubscriptionBasedProjectionProcessingPhase.SetProjectionState(PhaseState)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Services.Processing.html">EventStore.Projections.Core.Services.Processing</a></h6>
+  <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
+  <h5 id="EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ParallelQueryMasterProjectionProcessingPhase : EventSubscriptionBasedProjectionProcessingPhase, IProjectionPhaseCompleter, IProjectionPhaseCheckpointManager, IHandle&lt;EventReaderSubscriptionMessage.ProgressChanged&gt;, IHandle&lt;EventReaderSubscriptionMessage.SubscriptionStarted&gt;, IHandle&lt;EventReaderSubscriptionMessage.NotAuthorized&gt;, IHandle&lt;EventReaderSubscriptionMessage.EofReached&gt;, IHandle&lt;EventReaderSubscriptionMessage.CheckpointSuggested&gt;, IHandle&lt;EventReaderSubscriptionMessage.ReaderAssignedReader&gt;, IHandle&lt;EventReaderSubscriptionMessage.Failed&gt;, IProjectionProcessingPhase, IDisposable, IHandle&lt;CoreProjectionManagementMessage.GetState&gt;, IHandle&lt;CoreProjectionManagementMessage.GetResult&gt;, IHandle&lt;CoreProjectionProcessingMessage.PrerecordedEventsLoaded&gt;, IProjectionPhaseStateManager, IHandle&lt;EventReaderSubscriptionMessage.CommittedEventReceived&gt;, ISpoolStreamWorkItemContainer</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase__ctor_EventStore_Projections_Core_Services_Processing_CoreProjection_Guid_EventStore_Core_Bus_IPublisher_EventStore_Core_Bus_IPublisher_EventStore_Projections_Core_Services_ProjectionConfig_Action_EventStore_Projections_Core_Services_IProjectionStateHandler_EventStore_Projections_Core_Services_Processing_PartitionStateCache_System_String_EventStore_Common_Log_ILogger_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Projections_Core_Services_Processing_ICoreProjectionCheckpointManager_EventStore_Projections_Core_Services_ReaderSubscriptionDispatcher_EventStore_Projections_Core_Services_Processing_IReaderStrategy_EventStore_Projections_Core_Services_Processing_IResultWriter_System_Boolean_System_Boolean_EventStore_Projections_Core_Services_SpooledStreamReadingDispatcher_EventStore_Projections_Core_Services_Processing_IEmittedStreamsTracker_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.%23ctor(EventStore.Projections.Core.Services.Processing.CoreProjection%2CGuid%2CEventStore.Core.Bus.IPublisher%2CEventStore.Core.Bus.IPublisher%2CEventStore.Projections.Core.Services.ProjectionConfig%2CAction%2CEventStore.Projections.Core.Services.IProjectionStateHandler%2CEventStore.Projections.Core.Services.Processing.PartitionStateCache%2CSystem.String%2CEventStore.Common.Log.ILogger%2CEventStore.Projections.Core.Services.Processing.CheckpointTag%2CEventStore.Projections.Core.Services.Processing.ICoreProjectionCheckpointManager%2CEventStore.Projections.Core.Services.ReaderSubscriptionDispatcher%2CEventStore.Projections.Core.Services.Processing.IReaderStrategy%2CEventStore.Projections.Core.Services.Processing.IResultWriter%2CSystem.Boolean%2CSystem.Boolean%2CEventStore.Projections.Core.Services.SpooledStreamReadingDispatcher%2CEventStore.Projections.Core.Services.Processing.IEmittedStreamsTracker)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ParallelQueryMasterProjectionProcessingPhase.cs/#L23">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase__ctor_" data-uid="EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.#ctor*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase__ctor_EventStore_Projections_Core_Services_Processing_CoreProjection_Guid_EventStore_Core_Bus_IPublisher_EventStore_Core_Bus_IPublisher_EventStore_Projections_Core_Services_ProjectionConfig_Action_EventStore_Projections_Core_Services_IProjectionStateHandler_EventStore_Projections_Core_Services_Processing_PartitionStateCache_System_String_EventStore_Common_Log_ILogger_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Projections_Core_Services_Processing_ICoreProjectionCheckpointManager_EventStore_Projections_Core_Services_ReaderSubscriptionDispatcher_EventStore_Projections_Core_Services_Processing_IReaderStrategy_EventStore_Projections_Core_Services_Processing_IResultWriter_System_Boolean_System_Boolean_EventStore_Projections_Core_Services_SpooledStreamReadingDispatcher_EventStore_Projections_Core_Services_Processing_IEmittedStreamsTracker_" data-uid="EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.#ctor(EventStore.Projections.Core.Services.Processing.CoreProjection,Guid,EventStore.Core.Bus.IPublisher,EventStore.Core.Bus.IPublisher,EventStore.Projections.Core.Services.ProjectionConfig,Action,EventStore.Projections.Core.Services.IProjectionStateHandler,EventStore.Projections.Core.Services.Processing.PartitionStateCache,System.String,EventStore.Common.Log.ILogger,EventStore.Projections.Core.Services.Processing.CheckpointTag,EventStore.Projections.Core.Services.Processing.ICoreProjectionCheckpointManager,EventStore.Projections.Core.Services.ReaderSubscriptionDispatcher,EventStore.Projections.Core.Services.Processing.IReaderStrategy,EventStore.Projections.Core.Services.Processing.IResultWriter,System.Boolean,System.Boolean,EventStore.Projections.Core.Services.SpooledStreamReadingDispatcher,EventStore.Projections.Core.Services.Processing.IEmittedStreamsTracker)">ParallelQueryMasterProjectionProcessingPhase(CoreProjection, Guid, IPublisher, IPublisher, ProjectionConfig, Action, IProjectionStateHandler, PartitionStateCache, String, ILogger, CheckpointTag, ICoreProjectionCheckpointManager, ReaderSubscriptionDispatcher, IReaderStrategy, IResultWriter, Boolean, Boolean, SpooledStreamReadingDispatcher, IEmittedStreamsTracker)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ParallelQueryMasterProjectionProcessingPhase(CoreProjection coreProjection, Guid projectionCorrelationId, IPublisher publisher, IPublisher inputQueue, ProjectionConfig projectionConfig, Action updateStatistics, IProjectionStateHandler stateHandler, PartitionStateCache partitionStateCache, string name, ILogger logger, CheckpointTag zeroCheckpointTag, ICoreProjectionCheckpointManager checkpointManager, ReaderSubscriptionDispatcher subscriptionDispatcher, IReaderStrategy readerStrategy, IResultWriter resultWriter, bool checkpointsEnabled, bool stopOnEof, SpooledStreamReadingDispatcher spoolProcessingResponseDispatcher, IEmittedStreamsTracker emittedStreamsTracker)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjection.html">CoreProjection</a></td>
+        <td><span class="parametername">coreProjection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">projectionCorrelationId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
+        <td><span class="parametername">publisher</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
+        <td><span class="parametername">inputQueue</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.ProjectionConfig.html">ProjectionConfig</a></td>
+        <td><span class="parametername">projectionConfig</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span></td>
+        <td><span class="parametername">updateStatistics</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.IProjectionStateHandler.html">IProjectionStateHandler</a></td>
+        <td><span class="parametername">stateHandler</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.PartitionStateCache.html">PartitionStateCache</a></td>
+        <td><span class="parametername">partitionStateCache</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Common.Log.ILogger.html">ILogger</a></td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">zeroCheckpointTag</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ICoreProjectionCheckpointManager.html">ICoreProjectionCheckpointManager</a></td>
+        <td><span class="parametername">checkpointManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.ReaderSubscriptionDispatcher.html">ReaderSubscriptionDispatcher</a></td>
+        <td><span class="parametername">subscriptionDispatcher</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.IReaderStrategy.html">IReaderStrategy</a></td>
+        <td><span class="parametername">readerStrategy</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.IResultWriter.html">IResultWriter</a></td>
+        <td><span class="parametername">resultWriter</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">checkpointsEnabled</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">stopOnEof</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.SpooledStreamReadingDispatcher.html">SpooledStreamReadingDispatcher</a></td>
+        <td><span class="parametername">spoolProcessingResponseDispatcher</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.IEmittedStreamsTracker.html">IEmittedStreamsTracker</a></td>
+        <td><span class="parametername">emittedStreamsTracker</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase__maxScheduledSizePerWorker.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase._maxScheduledSizePerWorker%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ParallelQueryMasterProjectionProcessingPhase.cs/#L12">View Source</a>
+  </span>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase__maxScheduledSizePerWorker" data-uid="EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase._maxScheduledSizePerWorker">_maxScheduledSizePerWorker</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int _maxScheduledSizePerWorker = null</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase__maxUnmeasuredTasksPerWorker.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase._maxUnmeasuredTasksPerWorker%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ParallelQueryMasterProjectionProcessingPhase.cs/#L13">View Source</a>
+  </span>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase__maxUnmeasuredTasksPerWorker" data-uid="EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase._maxUnmeasuredTasksPerWorker">_maxUnmeasuredTasksPerWorker</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const int _maxUnmeasuredTasksPerWorker = null</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_AssignSlaves_EventStore_Projections_Core_Messages_SlaveProjectionCommunicationChannels_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.AssignSlaves(EventStore.Projections.Core.Messages.SlaveProjectionCommunicationChannels)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ParallelQueryMasterProjectionProcessingPhase.cs/#L75">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_AssignSlaves_" data-uid="EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.AssignSlaves*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_AssignSlaves_EventStore_Projections_Core_Messages_SlaveProjectionCommunicationChannels_" data-uid="EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.AssignSlaves(EventStore.Projections.Core.Messages.SlaveProjectionCommunicationChannels)">AssignSlaves(SlaveProjectionCommunicationChannels)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void AssignSlaves(SlaveProjectionCommunicationChannels slaveProjections)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.SlaveProjectionCommunicationChannels.html">SlaveProjectionCommunicationChannels</a></td>
+        <td><span class="parametername">slaveProjections</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_AssignSlaves_EventStore_Projections_Core_Messages_SlaveProjectionCommunicationChannels_">EventSubscriptionBasedProjectionProcessingPhase.AssignSlaves(SlaveProjectionCommunicationChannels)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_CompleteSpoolProcessingWorkItem_Guid_EventStore_Projections_Core_Services_Processing_CheckpointTag_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.CompleteSpoolProcessingWorkItem(Guid%2CEventStore.Projections.Core.Services.Processing.CheckpointTag)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ParallelQueryMasterProjectionProcessingPhase.cs/#L121">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_CompleteSpoolProcessingWorkItem_" data-uid="EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.CompleteSpoolProcessingWorkItem*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_CompleteSpoolProcessingWorkItem_Guid_EventStore_Projections_Core_Services_Processing_CheckpointTag_" data-uid="EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.CompleteSpoolProcessingWorkItem(Guid,EventStore.Projections.Core.Services.Processing.CheckpointTag)">CompleteSpoolProcessingWorkItem(Guid, CheckpointTag)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CompleteSpoolProcessingWorkItem(Guid correlationId, CheckpointTag position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">correlationId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_Dispose.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ParallelQueryMasterProjectionProcessingPhase.cs/#L72">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_Dispose_" data-uid="EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.Dispose*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_Dispose" data-uid="EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Dispose()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Dispose">EventSubscriptionBasedProjectionProcessingPhase.Dispose()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_CommittedEventReceived_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.Handle(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.CommittedEventReceived)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ParallelQueryMasterProjectionProcessingPhase.cs/#L89">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_CommittedEventReceived_" data-uid="EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.Handle(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.CommittedEventReceived)">Handle(EventReaderSubscriptionMessage.CommittedEventReceived)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(EventReaderSubscriptionMessage.CommittedEventReceived message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.CommittedEventReceived.html">EventReaderSubscriptionMessage.CommittedEventReceived</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_NewCheckpointStarted_EventStore_Projections_Core_Services_Processing_CheckpointTag_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.NewCheckpointStarted(EventStore.Projections.Core.Services.Processing.CheckpointTag)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ParallelQueryMasterProjectionProcessingPhase.cs/#L69">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_NewCheckpointStarted_" data-uid="EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.NewCheckpointStarted*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_NewCheckpointStarted_EventStore_Projections_Core_Services_Processing_CheckpointTag_" data-uid="EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.NewCheckpointStarted(EventStore.Projections.Core.Services.Processing.CheckpointTag)">NewCheckpointStarted(CheckpointTag)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void NewCheckpointStarted(CheckpointTag at)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">at</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_NewCheckpointStarted_EventStore_Projections_Core_Services_Processing_CheckpointTag_">EventSubscriptionBasedProjectionProcessingPhase.NewCheckpointStarted(CheckpointTag)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_Subscribe_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.Subscribe(EventStore.Projections.Core.Services.Processing.CheckpointTag%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ParallelQueryMasterProjectionProcessingPhase.cs/#L82">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_Subscribe_" data-uid="EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.Subscribe*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_Subscribe_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_Boolean_" data-uid="EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.Subscribe(EventStore.Projections.Core.Services.Processing.CheckpointTag,System.Boolean)">Subscribe(CheckpointTag, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Subscribe(CheckpointTag from, bool fromCheckpoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">from</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">fromCheckpoint</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Subscribe_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_Boolean_">EventSubscriptionBasedProjectionProcessingPhase.Subscribe(CheckpointTag, Boolean)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_TransformCatalogEvent_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Projections_Core_Services_Processing_ResolvedEvent_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.TransformCatalogEvent(EventStore.Projections.Core.Services.Processing.CheckpointTag%2CEventStore.Projections.Core.Services.Processing.ResolvedEvent)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ParallelQueryMasterProjectionProcessingPhase.cs/#L117">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_TransformCatalogEvent_" data-uid="EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.TransformCatalogEvent*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase_TransformCatalogEvent_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Projections_Core_Services_Processing_ResolvedEvent_" data-uid="EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.TransformCatalogEvent(EventStore.Projections.Core.Services.Processing.CheckpointTag,EventStore.Projections.Core.Services.Processing.ResolvedEvent)">TransformCatalogEvent(CheckpointTag, ResolvedEvent)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TransformCatalogEvent(CheckpointTag position, ResolvedEvent event)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">position</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ResolvedEvent.html">ResolvedEvent</a></td>
+        <td><span class="parametername">event</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.IProjectionPhaseCompleter.html">IProjectionPhaseCompleter</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.IProjectionPhaseCheckpointManager.html">IProjectionPhaseCheckpointManager</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.IProjectionProcessingPhase.html">IProjectionProcessingPhase</a>
+  </div>
+  <div>
+      <span class="xref">IDisposable</span>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.IProjectionPhaseStateManager.html">IProjectionPhaseStateManager</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.ISpoolStreamWorkItemContainer.html">ISpoolStreamWorkItemContainer</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJson_System_Object_">Json.ToJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_Serialize__1___0_">ProtobufExtensions.Serialize&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_SerializeToArray__1___0_">ProtobufExtensions.SerializeToArray&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ParallelQueryMasterProjectionProcessingPhase.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ParallelQueryMasterProjectionProcessingPhase.cs/#L8" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

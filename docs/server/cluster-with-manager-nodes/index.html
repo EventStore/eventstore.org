@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Setting up a Cluster with Manager Nodes | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Setting up a Cluster with Manager Nodes | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="setting-up-a-cluster-with-manager-nodes">Setting up a Cluster with Manager Nodes</h1>
+<!-- TODO: How much of this is also relevant to OSS? -->
+
+<p>High availability Event Store allows you to run more than one node as a cluster. There are two modes available for clustering:</p>
+<ul>
+<li><a href="../cluster-without-manager-nodes/index.html">With database nodes only</a> (open source and commercial)</li>
+<li>With manager nodes and database nodes (commercial only)</li>
+</ul>
+<p>This document covers setting up Event Store with manager nodes and database nodes.</p>
+<div class="TIP"><h5>Tip</h5><p>When setting up a cluster, you generally want an odd number of nodes as Event Store uses a quorum based algorithm to handle high availability. We recommended you define an odd number of nodes to avoid split brain problems.</p>
+<p>Common values for the ‘ClusterSize’ setting are 3 or 5 (to have a majority of 2 nodes and a majority of 3 nodes).</p>
+</div>
+<div class="NEXT"><h5>Next Steps</h5><p><a href="../node-roles/index.html">Read here</a> for more information on the roles available for nodes in an Event Store cluster.</p>
+</div>
+<h2 id="manager-nodes">Manager Nodes</h2>
+<p>Each physical (or virtual) machine in an Event Store cluster typically runs one manager node and one database node. It&#39;s also possible to have multiple database nodes per physical machine, running under one manager node.</p>
+<p>Manager nodes have a number of responsibilities:</p>
+<ul>
+<li>They are responsible for starting the database nodes and supervising them to ensure they rest in case of a crash or termination owing to abnormal circumstances. Event Store calls this the <em>watchdog</em> service.</li>
+<li>They communicate with other manager nodes to find cluster state, and relay that information to the database nodes under management.</li>
+<li>They provide a known endpoint for clients to connect to and discover cluster information.</li>
+<li>When running on Windows, manager nodes run as Windows services.</li>
+</ul>
+<h2 id="configuring-nodes">Configuring Nodes</h2>
+<p>Each database or manager node <a href="../command-line-arguments/index.html">can have a variety of configuration sources</a>. Each source has a priority and determines running configuration by evaluating each source and applying the option from the source with the highest priority.</p>
+<p>From lowest to highest priority, the sources of configuration are:</p>
+<ul>
+<li>Default settings.</li>
+<li>Settings specified in a configuration file written using YAML.</li>
+<li>Settings specified in environment variables.</li>
+<li>Settings specified as command line options to the node.</li>
+</ul>
+<p>You can check the configuration of a node by passing the <code>-WhatIf</code> flag to the process.</p>
+<h2 id="typical-deployment-topologies">Typical Deployment Topologies</h2>
+<p>Event Store clusters follow a &quot;shared nothing&quot; philosophy, meaning that clustering requires no shared disks for clustering to work. Instead, several database nodes store your data to ensure it isn&#39;t lost in case of a drive failure or a node crashing.</p>
+<p>Event Store uses a quorum-based replication model, in which a majority of nodes in the cluster must acknowledge that they committed a write to disk before acknowledging the write to the client. This means that to be able to tolerate the failure of <em>n</em> nodes, the cluster must be of size <em>(2n + 1)</em>. A three-database-node cluster can continue to accept writes if one node is unavailable. A five-database-node cluster can continue to accept writes if two nodes are unavailable, and so forth.</p>
+<p>A typical deployment topology consists of three physical machines, each running one manager node and one database node. Each of the physical machines may have two network interfaces, one for communicating with other cluster members, and one for serving clients. Although it may be preferable in some situations to run over two separate networks. It&#39;s also possible to use different TCP ports on one interface.</p>
+<h2 id="cluster-gossip">Cluster gossip</h2>
+<p>Event Store uses a quorum-based replication model. When working normally, a cluster has one database node known as a <em>master</em>, and the remaining nodes are <em>slaves</em>. The master node is responsible for coordinating writes while it is the master. Database nodes use a consensus algorithm to determine which database node should be master and which should be slaves. Event Store bases the decision as to which node should be the master on a number of factors (<a href="../command-line-arguments/index.html#cluster-options">some of which are configurable</a>).</p>
+<p>For database nodes to have this information available to them, the nodes gossip with other nodes in the cluster. Gossip runs over the internal (and optionally the external) HTTP interfaces of database nodes, and over both internal and external interfaces of manager nodes.</p>
+<h2 id="discovering-cluster-members">Discovering cluster members</h2>
+<p>Manager and database nodes need to know about one another to gossip. To start this process, you provide gossip seeds or the addresses where it can find other nodes, to each node. When running with manager nodes, it normally uses the following approach:</p>
+<ul>
+<li><p>On each physical machine, configure the database node(s) with a gossip seed of the internal HTTP interface of the manager running on the same physical machine.</p>
+</li>
+<li><p>Configure the managers to discover other managers in one of two ways:</p>
+<ul>
+<li>via a DNS entry and a well-known gossip port.</li>
+<li>via a list of other managers&#39; addresses.</li>
+</ul>
+</li>
+</ul>
+<p>The preferred method is via a DNS entry. To set this up, create a DNS entry for the cluster with an A record pointing to each member of the cluster. Each manager looks up other nodes in the cluster during the startup process based on the DNS name. Since DNS only provides information about addresses, you need to use a consistent TCP port across the cluster for gossip.</p>
+<!-- TODO: Should this be more practical? -->
+<h2 id="example-1---a-three-machine-cluster">Example 1 - A Three-Machine Cluster</h2>
+<p>This example shows the configuration for a three node cluster, running in the typical setup of one manager node and one database node per physical machine, with cluster discovery via DNS. Each machine has one network interface, therefore uses different ports for the internal and external traffic. All nodes, in this case, are running Windows, so the manager nodes run as Windows services.</p>
+<p>The important points for writing configuration files are:</p>
+<ul>
+<li>Node IP Addresses: 192.168.1.11, 192.168.1.12 and 192.168.13</li>
+<li>TCP ports: (defaults):<ul>
+<li>Manager Nodes:<ul>
+<li>Internal HTTP: 30777</li>
+<li>External HTTP: 30778</li>
+</ul>
+</li>
+<li>Database Nodes:<ul>
+<li>Internal TCP: 1112</li>
+<li>External TCP: 1113</li>
+<li>Internal HTTP: 2112</li>
+<li>External HTTP: 2113</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>DNS Entry Name: cluster1.eventstore.local</li>
+</ul>
+<p>To configure the cluster correctly, there are a number of steps to follow:</p>
+<ol>
+<li>Set up a DNS entry named <code>cluster1.eventstore.local</code> with an A record for each node.</li>
+<li>Write the database node configuration file for each machine.</li>
+<li>Write the manager node configuration file for each machine.</li>
+<li>Write the watchdog configuration file for each machine.</li>
+<li>Deploy Event Store and the configuration files to each machine.</li>
+<li>(<strong>Windows-specific</strong>) Add HTTP URL ACL entries to allow starting HTTP servers on the required HTTP ports.</li>
+<li>(<strong>Windows-specific</strong>) Install the manager as a service and start the service.</li>
+<li>(<strong>Linux-specific</strong>) Configure the manager as a daemon.</li>
+</ol>
+<h3 id="dns-entry">DNS entry</h3>
+<p>It depends on which DNS server you use, but the eventual lookup should read:</p>
+<pre><code class="lang-bash">$ nslookup cluster1.eventstore.local
+
+Server: 192.168.1.2
+Address:  192.168.1.2#53
+Name: cluster.eventstore.local
+Address:  192.168.1.11
+Name: cluster.eventstore.local
+Address:  192.168.1.12
+Name: cluster.eventstore.local
+Address:  192.168.1.13
+</code></pre><h3 id="database-node-configuration">Database Node Configuration</h3>
+<p>All three nodes are similar in configuration.</p>
+<p>The important configuration points are the:</p>
+<ul>
+<li>IP Addresses for internal and external interfaces.</li>
+<li>The ports for each endpoint.</li>
+<li>The location of the database file.</li>
+<li>The size of the cluster</li>
+<li>The endpoints from which to seed gossip (in this case the local manager).</li>
+</ul>
+<p>We assume that Event Store stores data on the _D:_ drive.</p>
+<p>You write the configuration files in YAML, and is the following for the first node:</p>
+<p>Filename: <em>database.yaml</em></p>
+<pre><code class="lang-yaml">Db: d:\es-data
+IntIp: 192.168.1.11
+ExtIp: 192.168.1.11
+IntTcpPort: 1112
+IntHttpPort: 2112
+ExtTcpPort: 1113
+ExtHttpPort: 2113
+DiscoverViaDns: false
+GossipSeed: [&#39;192.168.1.11:30777&#39;]
+ClusterSize: 3
+</code></pre><p>For each following node, the IP Addresses change, as does the gossip seed, since it is the manager running on the same physical machine as each node.</p>
+<h3 id="manager-configuration">Manager Configuration</h3>
+<p>Again, all three nodes are similar in configuration.</p>
+<p>The important configuration points are the:</p>
+<ul>
+<li>IP addresses for the internal and external interfaces.</li>
+<li>The ports for the HTTP endpoints.</li>
+<li>The log location.</li>
+<li>The DNS information about other nodes.</li>
+</ul>
+<p>Another important configuration item is which database nodes the manager is responsible for starting. You define this in a separate file (the watchdog configuration), the path to which you specify as <code>WatchdogConfig</code> in the manager configuration.</p>
+<p>You write the configuration files in YAML, and is the following for the first node:</p>
+<p>Filename: <em>manager.yaml</em></p>
+<pre><code class="lang-yaml">IntIp: 192.168.1.11
+ExtIp: 192.168.1.11
+IntHttpPort: 30777
+ExtHttpPort: 30778
+DiscoverViaDns: true
+ClusterDns: cluster1.eventstore.local
+ClusterGossipPort: 30777
+EnableWatchdog: true
+WatchdogConfig: c:\EventStore-Config\watchdog.esconfig
+Log: d:\manager-log
+</code></pre><h3 id="watchdog-configuration">Watchdog Configuration</h3>
+<p>The watchdog configuration file details which database nodes the manager is responsible for starting and supervising. Unlike the other configuration files, the manager configuration uses a custom format instead of YAML. Each node for which the manager is responsible has one line in the file, which starts with a <code>#</code> symbol and then details the command line options given to the database node when it starts it. Under normal circumstances, this is the path to the database node&#39;s configuration file.</p>
+<p>For the first node in the example cluster, the watchdog configuration file reads as follows:</p>
+<pre><code class="lang-text"># --config c:\EventStore-Config\database.yaml
+</code></pre><h3 id="deploying-event-store-software-and-configuration">Deploying Event Store software and configuration</h3>
+<p>With configuration files for each node written, you can now deploy Event Store and the configuration. Although it&#39;s possible to use relative paths when writing configuration files, it&#39;s preferable to use absolute paths to reduce the potential for confusion.</p>
+<p>In this example, Event Store is deployed on each node in _c:\EventStore-HA-v_, and the configuration files for that node are deployed into _C:\EventStore-Config_. No installation process is necessary, you unzip the packaged distribution into your preferred location.</p>
+<h3 id="adding-http-acl-entries-for-http-servers-windows-specific">Adding HTTP ACL entries for HTTP servers (Windows-Specific)</h3>
+<!-- TODO: Check this -->
+<p>To allow for non-elevated users to run HTTP servers on Windows, you must add entries to the access control list using <code>netsh</code>. By default, the manager node runs as <code>NT AUTHORITY\Local Service</code>, so this is the user who must have permission to run the HTTP server.</p>
+<p>The commands used to add these entries on node one are as follows (Run as an elevated user):</p>
+<pre><code class="lang-powershell"># Database Node Internal HTTP Interface
+netsh http add urlacl url=http://192.168.1.11:2112/ user=&quot;NT AUTHORITY\LOCAL SERVICE&quot;
+
+# Database Node External HTTP Interface
+netsh http add urlacl url=http://192.168.1.11:2113/ user=&quot;NT AUTHORITY\LOCAL SERVICE&quot;
+
+# Manager Node Internal HTTP Interface
+netsh http add urlacl url=http://192.168.1.11:30777/ user=&quot;NT AUTHORITY\LOCAL SERVICE&quot;
+
+# Manager Node External HTTP Interface
+netsh http add urlacl url=http://192.168.1.11:30778/ user=&quot;NT AUTHORITY\LOCAL SERVICE&quot;
+</code></pre><h3 id="configure-the-manager-node-as-a-service-windows-specific">Configure the Manager Node as a service (Windows-Specific)</h3>
+<p>You can install manager nodes as a Windows service so they can start on boot rather than running in interactive mode. Each manager service is given an instance name, which becomes the name of the service (and part of the description for easy identification). The service is installed by default with a startup type of &quot;Automatic (Delayed Start)&quot;.</p>
+<h4 id="installing-the-service">Installing the service</h4>
+<p>To install the manager node on machine 1, use the following command:</p>
+<pre><code class="lang-powershell">C:\EventStore-HA-v\&gt; EventStore.WindowsManager.exe install -InstanceName es-cluster1 -ManagerConfig C:\EventStore-Config\manager.yaml
+</code></pre><p>The service is then visible in the services list, with a description of &quot;Event Store Manager (es-cluster1)&quot;.</p>
+<h4 id="uninstalling-the-service">Uninstalling the service</h4>
+<p>To uninstall the manager node service, use the following command (where the instance name matches the name used during installation).</p>
+<pre><code class="lang-powershell">C:\EventStore-HA-v\&gt; EventStore.WindowsManager.exe uninstall -InstanceName es-cluster1
+</code></pre><h4 id="manually-starting-and-stopping-the-service">Manually starting and stopping the service</h4>
+<ul>
+<li>To start the manager node use the <code>net start es-cluster1</code> command.</li>
+<li>To stop the manager node use the <code>net stop es-cluster1</code> command.</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/server/cluster-with-manager-nodes.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

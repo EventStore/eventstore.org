@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Users and Access Control Lists | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Users and Access Control Lists | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="users-and-access-control-lists">Users and Access Control Lists</h1>
+
+<h2 id="default-users">Default Users</h2>
+<p>Event Store provides two default users, <code>$ops</code> and <code>$admin</code>.</p>
+<p><code>$admin</code> has full access to everything in Event Store. It can read and write to protected streams, which is any stream that starts with $, such as <code>$projections-master</code>. Protected streams are usually system streams, for example, <code>$projections-master</code> manages some of the projections&#39; states. The <code>$admin</code> user can also run operational commands, such as scavenges and shutdowns on Event Store.</p>
+<p><code>$ops</code> can run operational commands like the <code>$admin</code> user, but cannot read protected streams.</p>
+<h2 id="new-users">New Users</h2>
+<p>New users created in Event Store are standard users. They can&#39;t read protected streams or perform operations. If you add a user into the <code>$ops</code> or <code>$admins</code> group, they have the same level of access as those users.</p>
+<p>By default, any user can read any non-protected stream unless there is an ACL preventing that.</p>
+<h2 id="stream-acls">Stream ACLs</h2>
+<p>Event Store keeps the ACL of a stream in the streams <a href="../metadata-and-reserved-names/index.html">metadata</a> as JSON with the below definition:</p>
+<pre><code class="lang-json">{
+  &quot;$acl&quot;: {
+    &quot;$w&quot;: &quot;$admins&quot;,
+    &quot;$r&quot;: &quot;$all&quot;,
+    &quot;$d&quot;: &quot;$admins&quot;,
+    &quot;$mw&quot;: &quot;$admins&quot;,
+    &quot;$mr&quot;: &quot;$admins&quot;
+  }
+}
+</code></pre><p>These fields represent the following:</p>
+<ul>
+<li><code>$w</code> The permission to write to this stream.</li>
+<li><code>$r</code> The permission to read from this stream.</li>
+<li><code>$d</code> The permission to delete this stream.</li>
+<li><code>$mw</code> The permission to write the metadata associated with this stream.</li>
+<li><code>$mr</code> The permission to read the metadata associated with this stream.</li>
+</ul>
+<p>You can update these fields with either a single string or an array of strings representing users or groups (<code>$admins</code>, <code>$all</code>, or custom groups). It&#39;s possible to put an empty array into one of these fields, and this has the effect of removing all users from that permission.</p>
+<div class="NOTE"><h5>Note</h5><p>We recommend you don&#39;t give people access to <code>$mw</code> as then they can then change the ACL.</p>
+</div>
+<h3 id="example">Example</h3>
+<p>The ACL below would give <code>writer</code> read and write permission on the stream, while <code>reader</code> would have read permission on the stream. Only users in the <code>$admins</code> group would be able to delete the stream or read and write the metadata.</p>
+<div class="tabGroup" id="tabgroup_O8ucbqjusK">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_O8ucbqjusK_tabid-http" role="tab" aria-controls="tabpanel_O8ucbqjusK_tabid-http" data-tab="tabid-http" tabindex="0" aria-selected="true">HTTP API</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_O8ucbqjusK_tabid-8" role="tab" aria-controls="tabpanel_O8ucbqjusK_tabid-8" data-tab="tabid-8" tabindex="-1">Response</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_O8ucbqjusK_tabid-net" role="tab" aria-controls="tabpanel_O8ucbqjusK_tabid-net" data-tab="tabid-net" tabindex="-1">.NET API</a>
+</li>
+</ul>
+<section id="tabpanel_O8ucbqjusK_tabid-http" role="tabpanel" data-tab="tabid-http">
+<p>Inside a file named <em>metadata.json</em>:</p>
+<pre><code class="lang-json" name="http-api-metadata-json">[
+    {
+        &quot;eventId&quot;: &quot;7c314750-05e1-439f-b2eb-f5b0e019be72&quot;,
+        &quot;eventType&quot;: &quot;update-acl&quot;,
+        &quot;metadata&quot;: {
+            &quot;$acl&quot;: {
+                &quot;$w&quot;: &quot;writer&quot;,
+                &quot;$r&quot;: [
+                    &quot;reader&quot;,
+                    &quot;also-reader&quot;
+                ],
+                &quot;$d&quot;: &quot;$admins&quot;,
+                &quot;$mw&quot;: &quot;$admins&quot;,
+                &quot;$mr&quot;: &quot;$admins&quot;
+            }
+        }
+    }
+]
+</code></pre><pre><code class="lang-bash" name="http-api-update-metadata-request">curl -i -d @metadata.json http://127.0.0.1:2113/streams/newstream/metadata --user admin:changeit -H &quot;Content-Type: application/vnd.eventstore.events+json&quot;
+</code></pre></section>
+<section id="tabpanel_O8ucbqjusK_tabid-8" role="tabpanel" data-tab="tabid-8" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-json" name="http-api-update-metadata-response">HTTP/1.1 201 Created
+Access-Control-Allow-Methods: GET, POST, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position, ES-CurrentVersion
+Location: http://127.0.0.1:2113/streams/%24%24newstream/0
+Content-Type: text/plain; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Tue, 18 Sep 2018 09:38:56 GMT
+Content-Length: 0
+Keep-Alive: timeout=15,max=100
+</code></pre></section>
+<section id="tabpanel_O8ucbqjusK_tabid-net" role="tabpanel" data-tab="tabid-net" aria-hidden="true" hidden="hidden">
+<!-- TODO: Refactor into demo application -->
+<pre><code class="lang-csharp">StreamMetadata metadata = StreamMetadata.Build()
+    .SetCustomPropertyWithValueAsRawJsonString(&quot;customRawJson&quot;,
+        @&quot;{
+            &quot;&quot;$acl&quot;&quot;: {
+                &quot;&quot;$w&quot;&quot;: &quot;&quot;writer&quot;&quot;,
+                &quot;&quot;$r&quot;&quot;: [
+                    &quot;&quot;reader&quot;&quot;,
+                    &quot;&quot;also-reader&quot;&quot;
+                ],
+                &quot;&quot;$d&quot;&quot;: &quot;&quot;$admins&quot;&quot;,
+                &quot;&quot;$mw&quot;&quot;: &quot;&quot;$admins&quot;&quot;,
+                &quot;&quot;$mr&quot;&quot;: &quot;&quot;$admins&quot;&quot;
+    }}&quot;);
+conn.SetStreamMetadataAsync(streamName, ExpectedVersion.Any, metadata, adminCredentials);
+</code></pre></section>
+</div>
+<h2 id="default-acl">Default ACL</h2>
+<p>The <code>$settings</code> stream has a special ACL used as the default ACL. This stream controls the default ACL for streams without an ACL and also controls who can create streams in the system, the default state of these is shown below:</p>
+<pre><code class="lang-json">{
+  &quot;$userStreamAcl&quot;: {
+    &quot;$r&quot;: &quot;$all&quot;,
+    &quot;$w&quot;: &quot;$all&quot;,
+    &quot;$d&quot;: &quot;$all&quot;,
+    &quot;$mr&quot;: &quot;$all&quot;,
+    &quot;$mw&quot;: &quot;$all&quot;
+  },
+  &quot;$systemStreamAcl&quot;: {
+    &quot;$r&quot;: &quot;$admins&quot;,
+    &quot;$w&quot;: &quot;$admins&quot;,
+    &quot;$d&quot;: &quot;$admins&quot;,
+    &quot;$mr&quot;: &quot;$admins&quot;,
+    &quot;$mw&quot;: &quot;$admins&quot;
+  }
+}
+</code></pre><p>The <code>$userStreamAcl</code> controls the default ACL for user streams, while all system streams use the <code>$systemStreamAcl</code> as the default.</p>
+<div class="NOTE"><h5>Note</h5><p>The <code>$w</code> in <code>$userStreamAcl</code> also applies to the ability to create a stream. Members of <code>$admins</code> always have access to everything, you cannot remove this permission.</p>
+</div>
+<p>When you set a permission on a stream, it overrides the default values. However, it&#39;s not necessary to specify all permissions on a stream. It&#39;s only necessary to specify those which differ from the default.</p>
+<h3 id="example-1">Example</h3>
+<div class="NOTE"><h5>Note</h5><p>All these examples assume you have created a user named <code>ouro</code>. The examples also assume the password is <code>ouroboros</code>.</p>
+</div>
+<pre><code class="lang-json">{
+  &quot;$userStreamAcl&quot;: {
+    &quot;$r&quot;: &quot;$all&quot;,
+    &quot;$w&quot;: &quot;ouro&quot;,
+    &quot;$d&quot;: &quot;ouro&quot;,
+    &quot;$mr&quot;: &quot;ouro&quot;,
+    &quot;$mw&quot;: &quot;ouro&quot;
+  },
+  &quot;$systemStreamAcl&quot;: {
+    &quot;$r&quot;: &quot;$admins&quot;,
+    &quot;$w&quot;: &quot;$admins&quot;,
+    &quot;$d&quot;: &quot;$admins&quot;,
+    &quot;$mr&quot;: &quot;$admins&quot;,
+    &quot;$mw&quot;: &quot;$admins&quot;
+  }
+}
+</code></pre><p>This default ACL would give <code>ouro</code> and <code>$admins</code> create and write permissions on all streams, while everyone else can read from them. Be careful allowing default access to system streams to non-admins as they would also have access to <code>$settings</code> unless you specifically override it.</p>
+<div class="tabGroup" id="tabgroup_O8ucbqjusK-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_O8ucbqjusK-1_tabid-1" role="tab" aria-controls="tabpanel_O8ucbqjusK-1_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_O8ucbqjusK-1_tabid-2" role="tab" aria-controls="tabpanel_O8ucbqjusK-1_tabid-2" data-tab="tabid-2" tabindex="-1">Response</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_O8ucbqjusK-1_tabid-net2" role="tab" aria-controls="tabpanel_O8ucbqjusK-1_tabid-net2" data-tab="tabid-net2" tabindex="-1">.NET API</a>
+</li>
+</ul>
+<section id="tabpanel_O8ucbqjusK-1_tabid-1" role="tabpanel" data-tab="tabid-1">
+<pre><code class="lang-json" name="http-api-metadata-json">[
+    {
+        &quot;eventId&quot;: &quot;7c314750-05e1-439f-b2eb-f5b0e019be72&quot;,
+        &quot;eventType&quot;: &quot;update-default-acl&quot;,
+        &quot;metadata&quot;: {
+            &quot;$userStreamAcl&quot;: {
+                &quot;$r&quot;: &quot;$all&quot;,
+                &quot;$w&quot;: &quot;ouro&quot;,
+                &quot;$d&quot;: &quot;ouro&quot;,
+                &quot;$mr&quot;: &quot;ouro&quot;,
+                &quot;$mw&quot;: &quot;ouro&quot;
+            },
+            &quot;$systemStreamAcl&quot;: {
+                &quot;$r&quot;: &quot;$admins&quot;,
+                &quot;$w&quot;: &quot;$admins&quot;,
+                &quot;$d&quot;: &quot;$admins&quot;,
+                &quot;$mr&quot;: &quot;$admins&quot;,
+                &quot;$mw&quot;: &quot;$admins&quot;
+            }
+        }
+    }
+]
+</code></pre><pre><code class="lang-bash" name="http-api-update-metadata-request">curl -i -d @override-default.json http://127.0.0.1:2113/streams/%24settings/metadata --user admin:changeit -H &quot;Content-Type: application/vnd.eventstore.events+json&quot;
+</code></pre><div class="WARNING"><h5>Warning</h5><p>You should not copy/paste the UUID in the command line above but generate a new one or not provide one (you will be redirected to a URI with one as described in writing events in the HTTP API).</p>
+</div>
+</section>
+<section id="tabpanel_O8ucbqjusK-1_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-json" name="http-api-update-metadata-response">HTTP/1.1 201 Created
+Access-Control-Allow-Methods: GET, POST, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position, ES-CurrentVersion
+Location: http://127.0.0.1:2113/streams/%24%24%24users/0
+Content-Type: text/plain; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Thu, 23 Aug 2018 10:35:19 GMT
+Content-Length: 0
+Keep-Alive: timeout=15,max=100
+</code></pre></section>
+<section id="tabpanel_O8ucbqjusK-1_tabid-net2" role="tabpanel" data-tab="tabid-net2" aria-hidden="true" hidden="hidden">
+<!-- TODO: Refactor into demo application -->
+<pre><code class="lang-csharp">StreamMetadata metadata = StreamMetadata.Build()
+    .SetCustomPropertyWithValueAsRawJsonString(&quot;customRawJson&quot;,
+        @&quot;{
+            &quot;&quot;$userStreamAcl&quot;&quot;: {
+                &quot;&quot;$r&quot;&quot;: &quot;&quot;$all&quot;&quot;,
+                &quot;&quot;$w&quot;&quot;: &quot;&quot;ouro&quot;&quot;,
+                &quot;&quot;$d&quot;&quot;: &quot;&quot;ouro&quot;&quot;,
+                &quot;&quot;$mr&quot;&quot;: &quot;&quot;ouro&quot;&quot;,
+                &quot;&quot;$mw&quot;&quot;: &quot;&quot;ouro&quot;&quot;
+            },
+            &quot;&quot;$systemStreamAcl&quot;&quot;: {
+                &quot;&quot;$r&quot;&quot;: &quot;&quot;$admins&quot;&quot;,
+                &quot;&quot;$w&quot;&quot;: &quot;&quot;$admins&quot;&quot;,
+                &quot;&quot;$d&quot;&quot;: &quot;&quot;$admins&quot;&quot;,
+                &quot;&quot;$mr&quot;&quot;: &quot;&quot;$admins&quot;&quot;,
+                &quot;&quot;$mw&quot;&quot;: &quot;&quot;$admins&quot;&quot;
+            }
+    }}&quot;);
+conn.SetStreamMetadataAsync(&quot;%24settings&quot;, ExpectedVersion.Any, metadata, adminCredentials);
+</code></pre></section>
+</div>
+<p>If you try to access the <code>$settings</code> stream as an unauthorized user, Event Store returns a 401 response.</p>
+<div class="tabGroup" id="tabgroup_O8ucbqjusK-2">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_O8ucbqjusK-2_tabid-3" role="tab" aria-controls="tabpanel_O8ucbqjusK-2_tabid-3" data-tab="tabid-3" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_O8ucbqjusK-2_tabid-4" role="tab" aria-controls="tabpanel_O8ucbqjusK-2_tabid-4" data-tab="tabid-4" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_O8ucbqjusK-2_tabid-3" role="tabpanel" data-tab="tabid-3">
+<pre><code class="lang-bash">curl -i http://127.0.0.1:2113/streams/%24settings -u ouro:ouroboros
+</code></pre></section>
+<section id="tabpanel_O8ucbqjusK-2_tabid-4" role="tabpanel" data-tab="tabid-4" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-http">HTTP/1.1 401 Unauthorized
+Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTo, ES-ExpectedVersion
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position
+WWW-Authenticate: Basic realm=&quot;ES&quot;
+Content-Type: text/plain; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Mon, 02 Mar 2015 15:21:27 GMT
+Content-Length: 0
+Keep-Alive: timeout=15,max=100
+</code></pre></section>
+</div>
+<p>If you wanted to give <code>ouro</code> access by default to system streams, POST the following JSON:</p>
+<pre><code class="lang-json">{
+  &quot;$userStreamAcl&quot;: {
+    &quot;$r&quot;: &quot;$all&quot;,
+    &quot;$w&quot;: &quot;ouro&quot;,
+    &quot;$d&quot;: &quot;ouro&quot;,
+    &quot;$mr&quot;: &quot;ouro&quot;,
+    &quot;$mw&quot;: &quot;ouro&quot;
+  },
+  &quot;$systemStreamAcl&quot;: {
+    &quot;$r&quot;: [&quot;$admins&quot;, &quot;ouro&quot;],
+    &quot;$w&quot;: &quot;$admins&quot;,
+    &quot;$d&quot;: &quot;$admins&quot;,
+    &quot;$mr&quot;: &quot;$admins&quot;,
+    &quot;$mw&quot;: &quot;$admins&quot;
+  }
+}
+</code></pre><p>At which point ouro can read system streams by default:</p>
+<div class="tabGroup" id="tabgroup_O8ucbqjusK-3">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_O8ucbqjusK-3_tabid-5" role="tab" aria-controls="tabpanel_O8ucbqjusK-3_tabid-5" data-tab="tabid-5" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_O8ucbqjusK-3_tabid-6" role="tab" aria-controls="tabpanel_O8ucbqjusK-3_tabid-6" data-tab="tabid-6" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_O8ucbqjusK-3_tabid-5" role="tabpanel" data-tab="tabid-5">
+<pre><code class="lang-bash">curl -i http://127.0.0.1:2113/streams/%24settings -u ouro:ouroboros
+</code></pre></section>
+<section id="tabpanel_O8ucbqjusK-3_tabid-6" role="tabpanel" data-tab="tabid-6" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-http">HTTP/1.1 200 OK
+Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTo, ES-ExpectedVersion
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position
+Cache-Control: max-age=0, no-cache, must-revalidate
+Vary: Accept
+ETag: &quot;1;-1296467268&quot;
+Content-Type: application/atom+xml; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Mon, 02 Mar 2015 15:25:17 GMT
+Content-Length: 1286
+Keep-Alive: timeout=15,max=100
+</code></pre></section>
+</div>
+<p>You can also limit ACLs on particular streams which are then merged with the default ACLs.</p>
+<pre><code class="lang-json">{
+  &quot;$acl&quot;: {
+    &quot;$r&quot;: [&quot;reader&quot;, &quot;also-reader&quot;]
+  }
+}
+</code></pre><p>If you add the above to a stream&#39;s ACL, then it overrides the read permission on that stream to allow <code>reader</code> and <code>also-reader</code> to read streams, but not <code>ouro</code>, resulting in the effective ACL below.</p>
+<pre><code class="lang-json">{
+  &quot;$acl&quot;: {
+    &quot;$r&quot;: [&quot;reader&quot;, &quot;also-reader&quot;],
+    &quot;$w&quot;: &quot;ouro&quot;,
+    &quot;$d&quot;: &quot;ouro&quot;,
+    &quot;$mr&quot;: &quot;ouro&quot;,
+    &quot;$mw&quot;: &quot;ouro&quot;
+  }
+}
+</code></pre><div class="WARNING"><h5>Warning</h5><p>Caching is allowed on a stream if you have enabled it to be visible to <code>$all</code>. This is as a performance optimization to avoid having to set <code>cache=private</code> on all data. If people are bookmarking your URIs and they were cached by an intermediary then they may still be accessible after you change the permissions from <code>$all</code>. While clients should not be bookmarking URIs in this way, it&#39;s an important consideration.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/server/users-and-access-control-lists.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

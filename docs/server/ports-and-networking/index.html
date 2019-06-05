@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Ports and networking | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Ports and networking | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="ports-and-networking">Ports and networking</h1>
+
+<h2 id="single-node">Single Node</h2>
+<p>If you run Event Store as a single node, it only uses two ports. The first port is the external HTTP port, and the default value is <code>2113</code>. Event Store uses this port for both the client HTTP APIs and for the management HTTP interface.</p>
+<p>The second port used is the TCP interface for clients connecting over the client API, and the default for the port is <code>1113</code>.</p>
+<p>Event Store in Windows tries to add access via <code>http.sys</code> automatically for the <code>2113</code> port.</p>
+<p>You should ensure that these ports are open and allowed via a firewall.</p>
+<h2 id="cluster-node">Cluster Node</h2>
+<p>When running in cluster mode the networking for Event Store is more complex. Cluster mode requires 4 ports to run. The ports are for internal HTTP, internal TCP, external HTTP, and external TCP.</p>
+<!-- TODO: And they are? -->
+<p>The internal and external interfaces allow for separation of traffic. The internal network is where cluster communications runs, while the external interfaces is where client communications runs.</p>
+<p>This separation allows for more secure setups such as putting internal communications on a different network than external client communications. For example, you might want to allow clients over HTTP to talk directly to Event Store, and you can move internal communications to a separate network to ensure the management interface and internal operations are not accessible to external traffic.</p>
+<p>The external TCP and HTTP ports are similar to the HTTP and TCP ports of a single node deploy. Event Store runs client requests over the HTTP API through the external HTTP port. You can run without the management API on the external interface (internal only). The external and the internal interfaces support the gossip protocol.</p>
+<p>You can control whether the admin interface is available on the external HTTP interface using the <code>admin-on-ext</code> <a href="../command-line-arguments/index.html">option</a>. You can control whether gossip is enabled on external interfaces with the <code>gossip-on-ext</code> <a href="../command-line-arguments/index.html">option</a> (you normally want it enabled).</p>
+<p>You configure the internal TCP and HTTP ports in the same way as the external. All internal communications for the cluster happen over these interfaces. Elections and internal gossip happen over HTTP. Replication and forwarding of client requests happens over the TCP channel.</p>
+<p>When setting up a cluster the nodes must be able to reach each other over both the internal HTTP channel and the internal TCP channel. You should ensure that these ports are open on firewalls on the machines and between the machines.</p>
+<h2 id="heartbeat-timeouts">Heartbeat Timeouts</h2>
+<p>Event Store uses heartbeats over all TCP connections to discover dead clients and nodes. Setting heartbeat timeouts requires thought. Set them too short and you receive false positives, set them too long and discovery of dead clients and nodes is slower.</p>
+<p>Each heartbeat has two points of configuration. The first is the &#39;interval&#39;, this represents how often the system should consider a heartbeat. Event Store doesn&#39;t send a heartbeat for every interval. Event Store sends heartbeat requests if it has not heard from a node within the configured interval. On a busy cluster, you may never see any heartbeats.</p>
+<p>The second point of configuration is the &#39;timeout&#39;. This determines how long Event Store waits for a client or node to respond to a heartbeat request.</p>
+<p>Different environments need different values for these settings. While low numbers work well on a LAN they tend to not work well in the cloud. The defaults are likely fine on a LAN, for the cloud, consider setting:</p>
+<ul>
+<li>An interval of 5000ms.</li>
+<li>A timeout of 1000ms.</li>
+</ul>
+<div class="TIP"><h5>Tip</h5><p>If in doubt, choose higher numbers. This adds a small period of time to discover a dead client or node and is better than the alternative, which is false positives.</p>
+</div>
+<h2 id="advertise-as">Advertise As</h2>
+<p>Due to NAT, or other reasons a node may not be bound to the address it is reachable from other nodes. For example, the machine has an IP address of 192.168.1.13, but the node is visible to other nodes as 10.114.12.112.</p>
+<p>The <a href="../command-line-arguments/index.html">option</a> <code>advertise-as</code> allows you to tell the node that even though it is bound to a given address it should not gossip that address. Instead it uses the address that you tell it to use. In the example above you would configure&quot;</p>
+<pre><code class="lang-bash">--ext-ip 192.168.1.13 --advertise-as 10.114.12.112
+</code></pre><p>Or use the equivalent configuration via environment variables or a configuration file.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/server/ports-and-networking.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

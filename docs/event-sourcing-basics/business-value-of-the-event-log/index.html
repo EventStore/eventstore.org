@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Business Value of the Event Log | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Business Value of the Event Log | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="business-value-of-the-event-log">Business Value of the Event Log</h1>
+
+<div class="NOTE"><h5>Note</h5><p>The value of an event log is directly correlated with use cases that you would want to use Domain Driven Design in the first place. You should use Domain Driven Design in cases where the business derives competitive advantage. Domain Driven Design itself is difficult and expensive to apply, but a company will receive high ROI on the effort if the domain is complex and if they derive competitive advantage from it. Using an Event Log similarly will have high ROI when dealing with an area of competitive advantage but may have negative ROI in other places.</p>
+</div>
+<p>Storing only current state limits organizations to asking certain kinds of questions about the data. For example consider orders in the stock market. They can change for a few reasons. An order can change the volume to buy/sell, the trading system can automatically adjust the volume of an order, or a trade could occur lowering the volume available on the current order.</p>
+<p>If posed with a question regarding current liquidity, such as the price for a given number of shares in the market, it does not matter which of these changes occurred. It does not matter how the data got the way it was. It matters what it is at a given point in time. A vast majority of queries even in the business world are focused on the what labels to send customers mails, how much was sold in April, how many widgets are in the warehouse.</p>
+<p>There are however other types of queries that are becoming more and more popular in business. They focus on the how. Examples can commonly be seen in the buzzword “Business Intelligence”. Perhaps there is a correlation between people having done an action and their likelihood of purchasing some product? These types of questions generally focus on how something came into being as opposed to what it came out to be.</p>
+<p>It is best to go through an example. There is a development team at a large online retailer. In an iteration planning meeting a domain expert comes up with an idea. He believes that there is a correlation between people having added then removed an item from their cart and their likelihood of responding to suggestions of that product by purchasing it at a later point. The feature is added to the following iteration.</p>
+<p>The first hypothetical team is utilizing a stereotypical current state based mechanism for storing state. They plan that in this iteration they will add tracking of items via a fact table that are removed from carts. They plan for the next iteration that they will then build a report. The business will receive after the second iteration a report that can show them information back to the previous iteration when the team released the functionality that began tracking items being removed from carts.</p>
+<p>This is a very stereotypical process. At some organizations the report and the tracking may be released simultaneously but this is a relatively small detail in the handling. From a business perspective the domain experts are happy. They made a request of the team and the team was able to quickly fulfill the request. New functionality has been added in a quick and relatively painless way. The second team will however have quite a different result.</p>
+<p>The second team has been storing events; they represent their current state by building up off of a series of events. They just like the first team go through and add tracking of items removed from carts via a fact table but they also run this handler from the beginning of the event log to back populate all of the data from the time that the business started. They release the report in the same iteration and the report has data that dates back for years.</p>
+<p>The second team can do this because they have managed to store what the system actually did as opposed to what the current state of data is. It is possible to go back and look and interpret the old data in new and interesting ways. It was never considered to track what items were removed from carts or perhaps the number of times a user removes and items from their cart was considered important. These are both examples of new and interesting ways of looking at data.</p>
+<p><strong>As the events represent every action the system has undertaken any possible model describing the system can be built from the events.</strong></p>
+<p>Businesses regularly come up with new and interesting ways of looking at data. It is not possible with any level of confidence to predict how a business will want to look at today’s data in five years. The ability for the business to look at the data in the way that it wants in five years is of an unknown but possibly extremely high value; it has already been stated that this should be done in areas where the business derives its competitive advantage so it is relatively easy to reason that the ability to look at today’s data in an unexpected way could be a competitive advantage for the business. How do you value the possible success or failure of a company based upon an architectural decision now?</p>
+<p>How do software teams justify looking at their Magic 8 Ball to predict what the business will need in five or even ten years? Many try to use YAGNI (You Ain’t Gonna Need It) but YAGNI only applies when you actually know that you won’t need it. How can the dynamic world of business and how they may want to look at data in five or ten years be predicted?</p>
+<ul>
+<li>Is it more expensive to actually model every behavior in the system? <strong>Yes.</strong></li>
+<li>Is it more expensive in terms of disk cost and thought process to store every event in the system? <strong>Yes.</strong></li>
+</ul>
+<p><strong>Are these costs worth the ROI when the business derives a competitive advantage from the data?</strong></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/event-sourcing-basics/business-value-of-the-event-log.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

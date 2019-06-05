@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Step 2 - Read events from a stream and subscribe to changes | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Step 2 - Read events from a stream and subscribe to changes | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="step-2---read-events-from-a-stream-and-subscribe-to-changes">Step 2 - Read events from a stream and subscribe to changes</h1>
+
+<p>This getting started guide shows you how to get started with Event Store using the Atom publishing protocol as the primary interface. </p>
+<div class="NOTE"><h5>Note</h5><p>The described is for development and evaluation of Event Store. It does not describe a production setup. The HTTP examples use cURL, but you can read Atom feeds with a wide variety of applications and languages.</p>
+</div>
+<p>This second step covers reading events from a stream and subscribing to changes to events in a stream.</p>
+<h2 id="read-a-stream-of-events">Read a Stream of Events</h2>
+<p>Event Store exposes all streams as <a href="http://tools.ietf.org/html/rfc4287">atom feeds</a>, and you can read data from the stream by navigating to the <em>head URI</em> of the stream <a href="http://127.0.0.1:2113/streams/&lt;STREAM_ID">http://127.0.0.1:2113/streams/&lt;STREAM_ID</a>&gt; with cURL, or click the <em>Stream Browser</em> tab in the Admin UI and you see the stream you created in step 1.</p>
+<p><img src="../../images/es-web-admin-stream-browser.png" alt="The Admin UI Dashboard"></p>
+<div class="tabGroup" id="tabgroup_ewz4UtAAbO">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_ewz4UtAAbO_tabid-6" role="tab" aria-controls="tabpanel_ewz4UtAAbO_tabid-6" data-tab="tabid-6" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_ewz4UtAAbO_tabid-7" role="tab" aria-controls="tabpanel_ewz4UtAAbO_tabid-7" data-tab="tabid-7" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_ewz4UtAAbO_tabid-6" role="tabpanel" data-tab="tabid-6">
+<pre><code class="lang-bash" name="getting-started-read-stream-request">curl -i -H &quot;Accept:application/vnd.eventstore.atom+json&quot; &quot;http://127.0.0.1:2113/streams/newstream&quot;
+</code></pre><div class="NOTE"><h5>Note</h5><p>This returns the feed in JSON format, you can also use <code>Accept:application/atom+xml</code> if you prefer XML.</p>
+</div>
+</section>
+<section id="tabpanel_ewz4UtAAbO_tabid-7" role="tabpanel" data-tab="tabid-7" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-http" name="getting-started-read-stream-response">HTTP/1.1 200 OK
+Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position, ES-CurrentVersion
+Cache-Control: max-age=0, no-cache, must-revalidate
+Vary: Accept
+ETag: &quot;0;-2060438500&quot;
+Content-Type: application/vnd.eventstore.atom+json; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Fri, 15 Dec 2017 12:23:23 GMT
+Content-Length: 1262
+Keep-Alive: timeout=15,max=100
+
+{
+  &quot;title&quot;: &quot;Event stream &#39;newstream&#39;&quot;,
+  &quot;id&quot;: &quot;http://127.0.0.1:2113/streams/newstream&quot;,
+  &quot;updated&quot;: &quot;2017-12-15T12:19:32.021776Z&quot;,
+  &quot;streamId&quot;: &quot;newstream&quot;,
+  &quot;author&quot;: {
+    &quot;name&quot;: &quot;EventStore&quot;
+  },
+  &quot;headOfStream&quot;: true,
+  &quot;selfUrl&quot;: &quot;http://127.0.0.1:2113/streams/newstream&quot;,
+  &quot;eTag&quot;: &quot;0;-2060438500&quot;,
+  &quot;links&quot;: [
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream&quot;,
+      &quot;relation&quot;: &quot;self&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/head/backward/20&quot;,
+      &quot;relation&quot;: &quot;first&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/1/forward/20&quot;,
+      &quot;relation&quot;: &quot;previous&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/metadata&quot;,
+      &quot;relation&quot;: &quot;metadata&quot;
+    }
+  ],
+  &quot;entries&quot;: [
+    {
+      &quot;title&quot;: &quot;0@newstream&quot;,
+      &quot;id&quot;: &quot;http://127.0.0.1:2113/streams/newstream/0&quot;,
+      &quot;updated&quot;: &quot;2017-12-15T12:19:32.021776Z&quot;,
+      &quot;author&quot;: {
+        &quot;name&quot;: &quot;EventStore&quot;
+      },
+      &quot;summary&quot;: &quot;event-type&quot;,
+      &quot;links&quot;: [
+        {
+          &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/0&quot;,
+          &quot;relation&quot;: &quot;edit&quot;
+        },
+        {
+          &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/0&quot;,
+          &quot;relation&quot;: &quot;alternate&quot;
+        }
+      ]
+    }
+  ]
+}
+</code></pre></section>
+</div>
+<div class="tabGroup" id="tabgroup_ewz4UtAAbO-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_ewz4UtAAbO-1_tabid-dotnet-client" role="tab" aria-controls="tabpanel_ewz4UtAAbO-1_tabid-dotnet-client" data-tab="tabid-dotnet-client" tabindex="0" aria-selected="true">.NET Client API</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_ewz4UtAAbO-1_tabid-jvm-client" role="tab" aria-controls="tabpanel_ewz4UtAAbO-1_tabid-jvm-client" data-tab="tabid-jvm-client" tabindex="-1">JVM Client</a>
+</li>
+</ul>
+<section id="tabpanel_ewz4UtAAbO-1_tabid-dotnet-client" role="tabpanel" data-tab="tabid-dotnet-client">
+<p>To use the .NET API, use the following method passing the stream name, the start point in the stream, the number of events to read and whether to follow links to the event data:</p>
+<!-- Can not find reference ~/code-examples/dotnet-client/Program.cs -->
+<div class="NEXT"><h5>Next Steps</h5><p><a href="../../dotnet-api/reading-events/index.html">Read this guide</a> for more information on how to read events with the .NET API.</p>
+</div>
+</section>
+<section id="tabpanel_ewz4UtAAbO-1_tabid-jvm-client" role="tabpanel" data-tab="tabid-jvm-client" aria-hidden="true" hidden="hidden">
+<p>To use the JVM client, use the following method passing the stream name, the start point in the stream, and whether to follow links to the event data:</p>
+<!-- Can not find reference ~/code-examples/jvm-client/ReadEventExample.java -->
+</section>
+</div>
+<h2 id="read-a-single-event">Read a Single Event</h2>
+<p>The feed has a single item inside of it, the one you posted in <a href="../index.html">part 1</a>. You can see details of the event in the <em>Stream Browser</em> tab in the Admin UI by clicking a stream to see its events, and then clicking an event. Or with cURL, issue a <code>GET</code> to the <code>alternate</code> URI value from the response above.</p>
+<div class="tabGroup" id="tabgroup_ewz4UtAAbO-2">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_ewz4UtAAbO-2_tabid-8" role="tab" aria-controls="tabpanel_ewz4UtAAbO-2_tabid-8" data-tab="tabid-8" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_ewz4UtAAbO-2_tabid-9" role="tab" aria-controls="tabpanel_ewz4UtAAbO-2_tabid-9" data-tab="tabid-9" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_ewz4UtAAbO-2_tabid-8" role="tabpanel" data-tab="tabid-8">
+<pre><code class="lang-bash" name="getting-started-read-event-request">curl -i http://127.0.0.1:2113/streams/newstream/0 -H &quot;Accept: application/json&quot;
+</code></pre><div class="NOTE"><h5>Note</h5><p>You can also use <code>Accept: text/xml</code> if you prefer XML.</p>
+</div>
+</section>
+<section id="tabpanel_ewz4UtAAbO-2_tabid-9" role="tabpanel" data-tab="tabid-9" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-http" name="getting-started-read-event-response">HTTP/1.1 200 OK
+Access-Control-Allow-Methods: GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-PINGOTHER
+Access-Control-Allow-Origin: *
+Cache-Control: max-age=31536000, public
+Vary: Accept
+Content-Type: application/json; charset: utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Wed, 03 Jul 2013 11:09:12 GMT
+Content-Length: 14
+Keep-Alive: timeout=15,max=100
+
+{
+  &quot;a&quot;: &quot;1&quot;
+}
+</code></pre></section>
+</div>
+<div class="tabGroup" id="tabgroup_ewz4UtAAbO-3">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_ewz4UtAAbO-3_tabid-dotnet-read-event" role="tab" aria-controls="tabpanel_ewz4UtAAbO-3_tabid-dotnet-read-event" data-tab="tabid-dotnet-read-event" tabindex="0" aria-selected="true">.NET Client API</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_ewz4UtAAbO-3_tabid-jvm-read-event" role="tab" aria-controls="tabpanel_ewz4UtAAbO-3_tabid-jvm-read-event" data-tab="tabid-jvm-read-event" tabindex="-1">JVM Client</a>
+</li>
+</ul>
+<section id="tabpanel_ewz4UtAAbO-3_tabid-dotnet-read-event" role="tabpanel" data-tab="tabid-dotnet-read-event">
+<p>To use the .NET API, use the following method passing the stream name, the event you want to read and wether to return the event data:</p>
+<!-- Can not find reference ~/code-examples/dotnet-client/Program.cs -->
+</section>
+<section id="tabpanel_ewz4UtAAbO-3_tabid-jvm-read-event" role="tabpanel" data-tab="tabid-jvm-read-event" aria-hidden="true" hidden="hidden">
+<p>To use the Java client, use the following method passing the stream name, the event you want to read and if you want to also return the event data:</p>
+<!-- Can not find reference ~/code-examples/jvm-client/ReadEventExample.java -->
+</section>
+</div>
+<h2 id="paginating-through-events">Paginating through Events</h2>
+<p>For longer feeds of events than this example, you need to paginate through the feed, reading a certain number of events at a time.</p>
+<p>You can use the HTTP API <a href="../../http-api/reading-streams/index.html#feed-paging">to paginate</a> through the feed using <em>previous</em> and <em>next</em> links within the stream. Or you can <a href="../../dotnet-api/reading-events/index.html#example-read-an-entire-stream-forwards-from-start-to-end">use a read method</a> of the .NET API (and JVM client), to loop through events a certain number at a time.</p>
+<h2 id="subscribing-to-receive-stream-updates">Subscribing to Receive Stream Updates</h2>
+<p>A common operation is to subscribe to a stream and receive notifications for changes. As new events arrive, you continue following them.</p>
+<p>You can create subscriptions and watch events as they arrive under the <em>Persistent Subscriptions</em> tab, or use an API method:</p>
+<p><img src="../../images/getting-started-subscriptions.png" alt="Subscriptions in the Admin UI"></p>
+<div class="tabGroup" id="tabgroup_ewz4UtAAbO-4">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_ewz4UtAAbO-4_tabid-create-sub-http" role="tab" aria-controls="tabpanel_ewz4UtAAbO-4_tabid-create-sub-http" data-tab="tabid-create-sub-http" tabindex="0" aria-selected="true">HTTP API</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_ewz4UtAAbO-4_tabid-create-sub-dotnet" role="tab" aria-controls="tabpanel_ewz4UtAAbO-4_tabid-create-sub-dotnet" data-tab="tabid-create-sub-dotnet" tabindex="-1">.NET API</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_ewz4UtAAbO-4_tabid-create-sub-java" role="tab" aria-controls="tabpanel_ewz4UtAAbO-4_tabid-create-sub-java" data-tab="tabid-create-sub-java" tabindex="-1">JVM Client API</a>
+</li>
+</ul>
+<section id="tabpanel_ewz4UtAAbO-4_tabid-create-sub-http" role="tabpanel" data-tab="tabid-create-sub-http">
+<pre><code class="lang-bash" name="getting-started-create-subscription">curl -i -X PUT -d $&#39;{&quot;startFrom&quot;: 0,&quot;resolveLinktos&quot;: false}&#39; http://localhost:2113/subscriptions/newstream/examplegroup -u admin:changeit -H &quot;Content-Type: application/json&quot;
+</code></pre></section>
+<section id="tabpanel_ewz4UtAAbO-4_tabid-create-sub-dotnet" role="tabpanel" data-tab="tabid-create-sub-dotnet" aria-hidden="true" hidden="hidden">
+<!-- Can not find reference ~/code-examples/dotnet-client/Program.cs -->
+<div class="NEXT"><h5>Next Steps</h5><p>Find more details on the parameters used in the example above, read the API documentation for <a href="xref:EventStore.ClientAPI.PersistentSubscriptionSettings"><code>PersistentSubscriptionSettings</code></a>, <a href="xref:EventStore.ClientAPI.IEventStoreConnection.CreatePersistentSubscriptionAsync*"><code>CreatePersistentSubscriptionAsync</code></a> and <a href="xref:EventStore.ClientAPI.IEventStoreConnection.ConnectToPersistentSubscriptionAsync*"><code>ConnectToPersistentSubscription</code></a></p>
+</div>
+</section>
+<section id="tabpanel_ewz4UtAAbO-4_tabid-create-sub-java" role="tabpanel" data-tab="tabid-create-sub-java" aria-hidden="true" hidden="hidden">
+<!-- Can not find reference ~/code-examples/jvm-client/SubscriptionExample.java -->
+</section>
+</div>
+<!-- TODO: The dotnet example has reading events as they are added to subscription, HTTP does not, expand? -->
+<!-- TODO: And write more events, then what etc -->
+<p>There are three types of subscription patterns, useful in different situations.</p>
+<h3 id="volatile-subscriptions">Volatile Subscriptions</h3>
+<p>This subscription calls a given function for events written after establishing the subscription. They are useful when you need notification of new events with minimal latency, but where it&#39;s not necessary to process every event.</p>
+<!-- TODO: Example needed? -->
+<p>For example, if a stream has 100 events in it when a subscriber connects, the subscriber can expect to see event number 101 onwards until the time the subscription is closed or dropped.</p>
+<h3 id="catch-up-subscriptions">Catch-Up Subscriptions</h3>
+<p>This subscription specifies a starting point, in the form of an event number or transaction file position. You call the function for events from the starting point until the end of the stream, and then for subsequently written events.</p>
+<!-- TODO: Example needed? -->
+<p>For example, if you specify a starting point of 50 when a stream has 100 events, the subscriber can expect to see events 51 through 100, and then any events are subsequently written until you drop or close the subscription.</p>
+<h3 id="persistent-subscriptions">Persistent Subscriptions</h3>
+<div class="NOTE"><h5>Note</h5><p>Persistent subscriptions exist in version 3.2.0 and above of Event Store.</p>
+</div>
+<p>This subscription supports the &quot;<a href="https://docs.microsoft.com/en-us/azure/architecture/patterns/competing-consumers">competing consumers</a>&quot; messaging pattern and are useful when you need to distribute messages to many workers. Event Store saves the subscription state server-side and allows for at-least-once delivery guarantees across multiple consumers on the same stream. It is possible to have many groups of consumers compete on the same stream, with each group getting an at-least-once guarantee.</p>
+<!-- TODO: Example needed? -->
+<h2 id="next-step">Next Step</h2>
+<p>In this second part of our getting started guide you learned how to read events from a stream and subscribe to changes. The next part covers projections, used to give you continuous queries of your data.</p>
+<ul>
+<li><a href="../projections/index.html">Step 3 - Projections</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/getting-started/reading-subscribing-events.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

@@ -55,7 +55,7 @@ description: "Download Event Store binaries for Windows, Linux or macOS."
  .page-section__mini {
   color: black;
  }
- 
+
  .stable_class {
   background-color: #43A047;
   color: white;
@@ -117,12 +117,12 @@ color: #43A047;
  .page-section--banner{
   margin-bottom: 25px;
  }
-       
- 
 
 
- 
- 
+
+
+
+
 </style>
 {% include header.html %}
 <script>
@@ -214,7 +214,7 @@ color: #43A047;
   pageSection.appendChild(innerContainer);
   return pageSection;
  }
- 
+
  function createDownloadSections(containerId, customClass, versions, onEmptyMessage) {
   if(versions.length==0){
    var container = document.createElement("div");
@@ -227,12 +227,12 @@ color: #43A047;
    var version = versions[i];
    var osCount = 0;
    var miniSections = [];
-   
+
    var osList = ["Windows","Linux","Mac"];
    for (osIndex in osList) {
     var os = osList[osIndex];
     if(downloads[version][os] === undefined) continue;
-    
+
     var downloadButtons = [];
     for (i in downloads[version][os]) {
      downloadButtons.push(
@@ -253,8 +253,8 @@ color: #43A047;
    }
    document.getElementById(containerId).append(page_section);
   }
-    } 
- 
+    }
+
  function getMajorVersion(version) {
   major = version.split(".")[0];
   return parseInt(major);
@@ -309,16 +309,16 @@ color: #43A047;
    currentPreReleaseVersion = version;
   } else if (previousStableVersion !== undefined
       && previousPreReleaseVersion === undefined
-      && getMajorVersion(version) == getMajorVersion(previousStableVersion) 
+      && getMajorVersion(version) == getMajorVersion(previousStableVersion)
       && getMajorMinorPatchVersion(version) > getMajorMinorPatchVersion(previousStableVersion)) {
    previousPreReleaseVersion = version;
   }
  }
- 
+
  var selectedStableVersions = [];
  if(currentStableVersion !== undefined) selectedStableVersions.push(currentStableVersion);
  if(previousStableVersion !== undefined) selectedStableVersions.push(previousStableVersion);
- 
+
  var selectedPrereleaseVersions = [];
  if (nextPreReleaseVersion !== undefined) selectedPrereleaseVersions.push(nextPreReleaseVersion);
  if (currentPreReleaseVersion !== undefined) selectedPrereleaseVersions.push(currentPreReleaseVersion);

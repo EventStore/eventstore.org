@@ -1,0 +1,646 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Class IndexBackend
+   | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class IndexBackend
+   | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend">
+  
+  
+  <h1 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend" class="text-break">Class IndexBackend
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">IndexBackend</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="EventStore.Core.Services.Storage.ReaderIndex.IIndexBackend.html">IIndexBackend</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.Storage.ReaderIndex.html">EventStore.Core.Services.Storage.ReaderIndex</a></h6>
+  <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
+  <h5 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class IndexBackend : object, IIndexBackend</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend__ctor_EventStore_Core_DataStructures_ObjectPool_EventStore_Core_TransactionLog_ITransactionFileReader__System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.%23ctor(EventStore.Core.DataStructures.ObjectPool%7BEventStore.Core.TransactionLog.ITransactionFileReader%7D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L30">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend__ctor_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.#ctor*"></a>
+  <h4 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend__ctor_EventStore_Core_DataStructures_ObjectPool_EventStore_Core_TransactionLog_ITransactionFileReader__System_Int32_System_Int32_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.#ctor(EventStore.Core.DataStructures.ObjectPool{EventStore.Core.TransactionLog.ITransactionFileReader},System.Int32,System.Int32)">IndexBackend(ObjectPool&lt;ITransactionFileReader&gt;, Int32, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IndexBackend(ObjectPool&lt;ITransactionFileReader&gt; readers, int lastEventNumberCacheCapacity, int metadataCacheCapacity)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.DataStructures.ObjectPool-1.html">ObjectPool</a>&lt;<a class="xref" href="EventStore.Core.TransactionLog.ITransactionFileReader.html">ITransactionFileReader</a>&gt;</td>
+        <td><span class="parametername">readers</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">lastEventNumberCacheCapacity</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">metadataCacheCapacity</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_BorrowReader.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.BorrowReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L40">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_BorrowReader_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.BorrowReader*"></a>
+  <h4 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_BorrowReader" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.BorrowReader">BorrowReader()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TFReaderLease BorrowReader()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.TransactionLog.TFReaderLease.html">TFReaderLease</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_GetSystemSettings.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.GetSystemSettings%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L96">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_GetSystemSettings_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.GetSystemSettings*"></a>
+  <h4 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_GetSystemSettings" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.GetSystemSettings">GetSystemSettings()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SystemSettings GetSystemSettings()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Data.SystemSettings.html">SystemSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_SetSystemSettings_EventStore_Core_Data_SystemSettings_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.SetSystemSettings(EventStore.Core.Data.SystemSettings)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L92">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_SetSystemSettings_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.SetSystemSettings*"></a>
+  <h4 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_SetSystemSettings_EventStore_Core_Data_SystemSettings_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.SetSystemSettings(EventStore.Core.Data.SystemSettings)">SetSystemSettings(SystemSettings)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetSystemSettings(SystemSettings systemSettings)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Data.SystemSettings.html">SystemSettings</a></td>
+        <td><span class="parametername">systemSettings</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_TryGetStreamLastEventNumber_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.TryGetStreamLastEventNumber(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L44">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_TryGetStreamLastEventNumber_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.TryGetStreamLastEventNumber*"></a>
+  <h4 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_TryGetStreamLastEventNumber_System_String_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.TryGetStreamLastEventNumber(System.String)">TryGetStreamLastEventNumber(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IndexBackend.EventNumberCached TryGetStreamLastEventNumber(string streamId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">streamId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.EventNumberCached.html">IndexBackend.EventNumberCached</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_TryGetStreamMetadata_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.TryGetStreamMetadata(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L50">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_TryGetStreamMetadata_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.TryGetStreamMetadata*"></a>
+  <h4 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_TryGetStreamMetadata_System_String_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.TryGetStreamMetadata(System.String)">TryGetStreamMetadata(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IndexBackend.MetadataCached TryGetStreamMetadata(string streamId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">streamId</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.MetadataCached.html">IndexBackend.MetadataCached</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_UpdateStreamLastEventNumber_System_Int32_System_String_System_Nullable_System_Int64__.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.UpdateStreamLastEventNumber(System.Int32%2CSystem.String%2CSystem.Nullable%7BSystem.Int64%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L56">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_UpdateStreamLastEventNumber_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.UpdateStreamLastEventNumber*"></a>
+  <h4 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_UpdateStreamLastEventNumber_System_Int32_System_String_System_Nullable_System_Int64__" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.UpdateStreamLastEventNumber(System.Int32,System.String,System.Nullable{System.Int64})">UpdateStreamLastEventNumber(Int32, String, Nullable&lt;Int64&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long? UpdateStreamLastEventNumber(int cacheVersion, string streamId, long? lastEventNumber)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">cacheVersion</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">streamId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td><span class="parametername">lastEventNumber</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_UpdateStreamMetadata_System_Int32_System_String_EventStore_Core_Data_StreamMetadata_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.UpdateStreamMetadata(System.Int32%2CSystem.String%2CEventStore.Core.Data.StreamMetadata)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L67">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_UpdateStreamMetadata_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.UpdateStreamMetadata*"></a>
+  <h4 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_UpdateStreamMetadata_System_Int32_System_String_EventStore_Core_Data_StreamMetadata_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.UpdateStreamMetadata(System.Int32,System.String,EventStore.Core.Data.StreamMetadata)">UpdateStreamMetadata(Int32, String, StreamMetadata)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadata UpdateStreamMetadata(int cacheVersion, string streamId, StreamMetadata metadata)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">cacheVersion</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">streamId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Data.StreamMetadata.html">StreamMetadata</a></td>
+        <td><span class="parametername">metadata</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Data.StreamMetadata.html">StreamMetadata</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_EventStore_Core_Services_Storage_ReaderIndex_IIndexBackend_SetStreamLastEventNumber_System_String_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.EventStore%23Core%23Services%23Storage%23ReaderIndex%23IIndexBackend%23SetStreamLastEventNumber(System.String%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L76">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_EventStore_Core_Services_Storage_ReaderIndex_IIndexBackend_SetStreamLastEventNumber_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.EventStore#Core#Services#Storage#ReaderIndex#IIndexBackend#SetStreamLastEventNumber*"></a>
+  <h4 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_EventStore_Core_Services_Storage_ReaderIndex_IIndexBackend_SetStreamLastEventNumber_System_String_System_Int64_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.EventStore#Core#Services#Storage#ReaderIndex#IIndexBackend#SetStreamLastEventNumber(System.String,System.Int64)">IIndexBackend.SetStreamLastEventNumber(String, Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long? IIndexBackend.SetStreamLastEventNumber(string streamId, long lastEventNumber)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">streamId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">lastEventNumber</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_EventStore_Core_Services_Storage_ReaderIndex_IIndexBackend_SetStreamMetadata_System_String_EventStore_Core_Data_StreamMetadata_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.EventStore%23Core%23Services%23Storage%23ReaderIndex%23IIndexBackend%23SetStreamMetadata(System.String%2CEventStore.Core.Data.StreamMetadata)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L84">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_EventStore_Core_Services_Storage_ReaderIndex_IIndexBackend_SetStreamMetadata_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.EventStore#Core#Services#Storage#ReaderIndex#IIndexBackend#SetStreamMetadata*"></a>
+  <h4 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_EventStore_Core_Services_Storage_ReaderIndex_IIndexBackend_SetStreamMetadata_System_String_EventStore_Core_Data_StreamMetadata_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.EventStore#Core#Services#Storage#ReaderIndex#IIndexBackend#SetStreamMetadata(System.String,EventStore.Core.Data.StreamMetadata)">IIndexBackend.SetStreamMetadata(String, StreamMetadata)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">StreamMetadata IIndexBackend.SetStreamMetadata(string streamId, StreamMetadata metadata)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">streamId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Data.StreamMetadata.html">StreamMetadata</a></td>
+        <td><span class="parametername">metadata</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Data.StreamMetadata.html">StreamMetadata</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Storage.ReaderIndex.IIndexBackend.html">IIndexBackend</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJson_System_Object_">Json.ToJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_Serialize__1___0_">ProtobufExtensions.Serialize&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_SerializeToArray__1___0_">ProtobufExtensions.SerializeToArray&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L24" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

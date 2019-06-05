@@ -1,0 +1,490 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Class QueuedHandlerThreadPool
+   | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class QueuedHandlerThreadPool
+   | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EventStore.Core.Bus.QueuedHandlerThreadPool">
+  
+  
+  <h1 id="EventStore_Core_Bus_QueuedHandlerThreadPool" data-uid="EventStore.Core.Bus.QueuedHandlerThreadPool" class="text-break">Class QueuedHandlerThreadPool
+  </h1>
+  <div class="markdown level0 summary"><p>Lightweight in-memory queue with a separate thread in which it passes messages
+to the consumer. It also tracks statistics about the message processing to help
+in identifying bottlenecks</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">QueuedHandlerThreadPool</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="EventStore.Core.Bus.IQueuedHandler.html">IQueuedHandler</a></div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messaging.Message.html">Message</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></div>
+    <div><a class="xref" href="EventStore.Core.Bus.IMonitoredQueue.html">IMonitoredQueue</a></div>
+    <div><a class="xref" href="EventStore.Core.Bus.IThreadSafePublisher.html">IThreadSafePublisher</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Bus.html">EventStore.Core.Bus</a></h6>
+  <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
+  <h5 id="EventStore_Core_Bus_QueuedHandlerThreadPool_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class QueuedHandlerThreadPool : object, IQueuedHandler, IHandle&lt;Message&gt;, IPublisher, IMonitoredQueue, IThreadSafePublisher</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueuedHandlerThreadPool__ctor_EventStore_Core_Bus_IHandle_EventStore_Core_Messaging_Message__System_String_System_Boolean_System_Nullable_TimeSpan__System_Nullable_TimeSpan__System_String_.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueuedHandlerThreadPool.%23ctor(EventStore.Core.Bus.IHandle%7BEventStore.Core.Messaging.Message%7D%2CSystem.String%2CSystem.Boolean%2CSystem.Nullable%7BTimeSpan%7D%2CSystem.Nullable%7BTimeSpan%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueuedHandlerThreadPool.cs/#L50">View Source</a>
+  </span>
+  <a id="EventStore_Core_Bus_QueuedHandlerThreadPool__ctor_" data-uid="EventStore.Core.Bus.QueuedHandlerThreadPool.#ctor*"></a>
+  <h4 id="EventStore_Core_Bus_QueuedHandlerThreadPool__ctor_EventStore_Core_Bus_IHandle_EventStore_Core_Messaging_Message__System_String_System_Boolean_System_Nullable_TimeSpan__System_Nullable_TimeSpan__System_String_" data-uid="EventStore.Core.Bus.QueuedHandlerThreadPool.#ctor(EventStore.Core.Bus.IHandle{EventStore.Core.Messaging.Message},System.String,System.Boolean,System.Nullable{TimeSpan},System.Nullable{TimeSpan},System.String)">QueuedHandlerThreadPool(IHandle&lt;Message&gt;, String, Boolean, Nullable&lt;TimeSpan&gt;, Nullable&lt;TimeSpan&gt;, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QueuedHandlerThreadPool(IHandle&lt;Message&gt; consumer, string name, bool watchSlowMsg = true, TimeSpan? slowMsgThreshold = null, TimeSpan? threadStopWaitTimeout = null, string groupName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messaging.Message.html">Message</a>&gt;</td>
+        <td><span class="parametername">consumer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">watchSlowMsg</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">TimeSpan</span>&gt;</td>
+        <td><span class="parametername">slowMsgThreshold</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">TimeSpan</span>&gt;</td>
+        <td><span class="parametername">threadStopWaitTimeout</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">groupName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueuedHandlerThreadPool_MessageCount.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueuedHandlerThreadPool.MessageCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueuedHandlerThreadPool.cs/#L21">View Source</a>
+  </span>
+  <a id="EventStore_Core_Bus_QueuedHandlerThreadPool_MessageCount_" data-uid="EventStore.Core.Bus.QueuedHandlerThreadPool.MessageCount*"></a>
+  <h4 id="EventStore_Core_Bus_QueuedHandlerThreadPool_MessageCount" data-uid="EventStore.Core.Bus.QueuedHandlerThreadPool.MessageCount">MessageCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MessageCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueuedHandlerThreadPool_Name.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueuedHandlerThreadPool.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueuedHandlerThreadPool.cs/#L25">View Source</a>
+  </span>
+  <a id="EventStore_Core_Bus_QueuedHandlerThreadPool_Name_" data-uid="EventStore.Core.Bus.QueuedHandlerThreadPool.Name*"></a>
+  <h4 id="EventStore_Core_Bus_QueuedHandlerThreadPool_Name" data-uid="EventStore.Core.Bus.QueuedHandlerThreadPool.Name">Name</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueuedHandlerThreadPool_GetStatistics.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueuedHandlerThreadPool.GetStatistics%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueuedHandlerThreadPool.cs/#L179">View Source</a>
+  </span>
+  <a id="EventStore_Core_Bus_QueuedHandlerThreadPool_GetStatistics_" data-uid="EventStore.Core.Bus.QueuedHandlerThreadPool.GetStatistics*"></a>
+  <h4 id="EventStore_Core_Bus_QueuedHandlerThreadPool_GetStatistics" data-uid="EventStore.Core.Bus.QueuedHandlerThreadPool.GetStatistics">GetStatistics()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QueueStats GetStatistics()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.Monitoring.Stats.QueueStats.html">QueueStats</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueuedHandlerThreadPool_Handle_EventStore_Core_Messaging_Message_.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueuedHandlerThreadPool.Handle(EventStore.Core.Messaging.Message)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueuedHandlerThreadPool.cs/#L175">View Source</a>
+  </span>
+  <a id="EventStore_Core_Bus_QueuedHandlerThreadPool_Handle_" data-uid="EventStore.Core.Bus.QueuedHandlerThreadPool.Handle*"></a>
+  <h4 id="EventStore_Core_Bus_QueuedHandlerThreadPool_Handle_EventStore_Core_Messaging_Message_" data-uid="EventStore.Core.Bus.QueuedHandlerThreadPool.Handle(EventStore.Core.Messaging.Message)">Handle(Message)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(Message message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messaging.Message.html">Message</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueuedHandlerThreadPool_Publish_EventStore_Core_Messaging_Message_.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueuedHandlerThreadPool.Publish(EventStore.Core.Messaging.Message)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueuedHandlerThreadPool.cs/#L165">View Source</a>
+  </span>
+  <a id="EventStore_Core_Bus_QueuedHandlerThreadPool_Publish_" data-uid="EventStore.Core.Bus.QueuedHandlerThreadPool.Publish*"></a>
+  <h4 id="EventStore_Core_Bus_QueuedHandlerThreadPool_Publish_EventStore_Core_Messaging_Message_" data-uid="EventStore.Core.Bus.QueuedHandlerThreadPool.Publish(EventStore.Core.Messaging.Message)">Publish(Message)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Publish(Message message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messaging.Message.html">Message</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueuedHandlerThreadPool_RequestStop.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueuedHandlerThreadPool.RequestStop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueuedHandlerThreadPool.cs/#L82">View Source</a>
+  </span>
+  <a id="EventStore_Core_Bus_QueuedHandlerThreadPool_RequestStop_" data-uid="EventStore.Core.Bus.QueuedHandlerThreadPool.RequestStop*"></a>
+  <h4 id="EventStore_Core_Bus_QueuedHandlerThreadPool_RequestStop" data-uid="EventStore.Core.Bus.QueuedHandlerThreadPool.RequestStop">RequestStop()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RequestStop()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueuedHandlerThreadPool_Start.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueuedHandlerThreadPool.Start%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueuedHandlerThreadPool.cs/#L69">View Source</a>
+  </span>
+  <a id="EventStore_Core_Bus_QueuedHandlerThreadPool_Start_" data-uid="EventStore.Core.Bus.QueuedHandlerThreadPool.Start*"></a>
+  <h4 id="EventStore_Core_Bus_QueuedHandlerThreadPool_Start" data-uid="EventStore.Core.Bus.QueuedHandlerThreadPool.Start">Start()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task Start()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueuedHandlerThreadPool_Stop.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueuedHandlerThreadPool.Stop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueuedHandlerThreadPool.cs/#L74">View Source</a>
+  </span>
+  <a id="EventStore_Core_Bus_QueuedHandlerThreadPool_Stop_" data-uid="EventStore.Core.Bus.QueuedHandlerThreadPool.Stop*"></a>
+  <h4 id="EventStore_Core_Bus_QueuedHandlerThreadPool_Stop" data-uid="EventStore.Core.Bus.QueuedHandlerThreadPool.Stop">Stop()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Stop()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IQueuedHandler.html">IQueuedHandler</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IMonitoredQueue.html">IMonitoredQueue</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IThreadSafePublisher.html">IThreadSafePublisher</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJson_System_Object_">Json.ToJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_Serialize__1___0_">ProtobufExtensions.Serialize&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_SerializeToArray__1___0_">ProtobufExtensions.SerializeToArray&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueuedHandlerThreadPool.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueuedHandlerThreadPool%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueuedHandlerThreadPool.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

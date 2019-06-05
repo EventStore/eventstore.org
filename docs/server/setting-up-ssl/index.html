@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Setting up SSL | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Setting up SSL | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="setting-up-ssl">Setting up SSL</h1>
+
+<h2 id="setting-up-ssl-on-windows">Setting up SSL on Windows</h2>
+<p>The steps to set up SSL on Windows are as follows.</p>
+<p>First, create a certificate using powershell, and copy the thumbprint from the output</p>
+<pre><code class="lang-powershell">New-SelfSignedCertificate -DnsName eventstore.org, localhost -CertStoreLocation cert:\CurrentUser\My
+</code></pre><p>To trust the new certificate, the certificate you have to import the certificate into the Trusted Root Certification Authorities:</p>
+<ol>
+<li>Press <em>WindowsKey + R</em>, and enter &#39;certmgr.msc&#39;.</li>
+</ol>
+<p><img src="../../images/ssl-step1.png" alt="Open certmgr.msc"></p>
+<ol>
+<li>Navigate to <em>Certificates -&gt; Current User -&gt; Personal -&gt; Certificates</em>.</li>
+<li>Locate the certificate &#39;eventstore.org&#39;.</li>
+</ol>
+<p><img src="../../images/ssl-step2.png" alt="Find certificate"></p>
+<ol>
+<li><em>Right click</em> on the certificate and click on <em>All Tasks -&gt; Export</em>. Follow the prompts.</li>
+</ol>
+<p><img src="../../images/ssl-step3.png" alt="Export certificate"></p>
+<ol>
+<li>Navigate to <em>Certificates -&gt; Current User -&gt; Trusted Root Certification Authorities -&gt; Certificates</em>.</li>
+<li><em>Right click</em> on the Certificates folder menu item and click <em>All Tasks -&gt; Import</em>. Follow the prompts.</li>
+</ol>
+<p><img src="../../images/ssl-step4.png" alt="Find certificate"></p>
+<p>Start Event Store with the following configuration in <a href="../command-line-arguments/index.html#yaml-files">a configuration file</a>:</p>
+<pre><code class="lang-yaml">CertificateStoreLocation: CurrentUser
+CertificateStoreName: My
+CertificateThumbPrint: {Insert Thumb Print from Step 1}
+CertificateSubjectName: CN=eventstore.org
+ExtSecureTcpPort: 1115
+</code></pre><p>Connect to Event Store:</p>
+<div class="tabGroup" id="tabgroup_7SLl7afSdP">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_7SLl7afSdP_tabid-6" role="tab" aria-controls="tabpanel_7SLl7afSdP_tabid-6" data-tab="tabid-6" tabindex="0" aria-selected="true">.NET API</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_7SLl7afSdP_tabid-7" role="tab" aria-controls="tabpanel_7SLl7afSdP_tabid-7" data-tab="tabid-7" tabindex="-1">HTTP API</a>
+</li>
+</ul>
+<section id="tabpanel_7SLl7afSdP_tabid-6" role="tabpanel" data-tab="tabid-6">
+<pre><code class="lang-csharp">var settings = ConnectionSettings.Create().UseSslConnection(&quot;eventstore.org&quot;, true);
+
+using (var conn = EventStoreConnection.Create(settings, new IPEndPoint(IPAddress.Loopback, 1115)))
+{
+    conn.ConnectAsync().Wait();
+}
+</code></pre></section>
+<section id="tabpanel_7SLl7afSdP_tabid-7" role="tabpanel" data-tab="tabid-7" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-bash">curl -vk --cert &lt;PATH_TO_CERT&gt; --key &lt;PATH_TO_KEY&gt; -i -d &quot;@event.json&quot; &quot;http://127.0.0.1:2113/streams/newstream&quot; -H &quot;Content-Type:application/vnd.eventstore.events+json&quot;
+</code></pre></section>
+</div>
+<h2 id="setting-up-ssl-on-linux">Setting up SSL on Linux</h2>
+<div class="NOTE"><h5>Note</h5><p>This guide uses the latest Ubuntu LTS (18.04)</p>
+</div>
+<p>First, create a private key and self-signed certificate request (This is only for testing purposes)</p>
+<pre><code class="lang-bash">openssl req \
+  -x509 -sha256 -nodes -days 365 -subj &quot;/CN=eventstore.org&quot; \
+  -newkey rsa:2048 -keyout eventstore.pem -out eventstore.csr
+</code></pre><p>Export a p12 file from the certificate request. You use this when starting Event Store:</p>
+<pre><code class="lang-bash">openssl pkcs12 -export -inkey eventstore.pem -in eventstore.csr -out eventstore.p12
+</code></pre><p>You need to add the certificate to Ubuntu&#39;s trusted certificates. Copy the cert to the <em>ca-certificates</em> folder and update the certificates:</p>
+<pre><code class="lang-bash">sudo cp eventstore.csr /usr/local/share/ca-certificates/eventstore.crt
+
+sudo update-ca-certificates
+</code></pre><p>The mono framework has its own separate certificate store which you need to sync with the changes you made to Ubuntu&#39;s certificates.</p>
+<p>You first need to install <code>mono-devel</code>:</p>
+<pre><code class="lang-bash">sudo apt-get install mono-devel
+</code></pre><p>This process installs <code>cert-sync</code>, which you use to update mono&#39;s certificate store with the new certificate:</p>
+<pre><code class="lang-bash">sudo cert-sync eventstore.csr
+</code></pre><p>Start Event Store with the following configuration in <a href="../command-line-arguments/index.html#yaml-files">a configuration file</a>:</p>
+<pre><code class="lang-yaml">CertificateFile: eventstore.p12
+ExtSecureTcpPort: 1115
+</code></pre><p>Connect to Event Store:</p>
+<div class="tabGroup" id="tabgroup_7SLl7afSdP-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_7SLl7afSdP-1_tabid-8" role="tab" aria-controls="tabpanel_7SLl7afSdP-1_tabid-8" data-tab="tabid-8" tabindex="0" aria-selected="true">.NET API</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_7SLl7afSdP-1_tabid-9" role="tab" aria-controls="tabpanel_7SLl7afSdP-1_tabid-9" data-tab="tabid-9" tabindex="-1">HTTP API</a>
+</li>
+</ul>
+<section id="tabpanel_7SLl7afSdP-1_tabid-8" role="tabpanel" data-tab="tabid-8">
+<pre><code class="lang-csharp">var settings = ConnectionSettings.Create().UseSslConnection(&quot;eventstore.org&quot;, true);
+
+using (var conn = EventStoreConnection.Create(settings, new IPEndPoint(IPAddress.Loopback, 1115)))
+{
+    conn.ConnectAsync().Wait();
+}
+</code></pre></section>
+<section id="tabpanel_7SLl7afSdP-1_tabid-9" role="tabpanel" data-tab="tabid-9" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-bash">curl -vk --cert &lt;PATH_TO_CERT&gt; --key &lt;PATH_TO_KEY&gt; -i -d &quot;@event.json&quot; &quot;http://127.0.0.1:2113/streams/newstream&quot; -H &quot;Content-Type:application/vnd.eventstore.events+json&quot;
+</code></pre></section>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/server/setting-up-ssl.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

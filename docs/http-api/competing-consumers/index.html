@@ -1,0 +1,762 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Competing Consumers | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Competing Consumers | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="competing-consumers">Competing Consumers</h1>
+
+<p>This document explains how to use HTTP API for setting up and consuming competing consumer subscription groups. For an overview on competing consumers and how they relate to other subscription types please see our <a href="../../getting-started/reading-subscribing-events/index.html">getting started guide</a>.</p>
+<div class="NOTE"><h5>Note</h5><p>The Administration UI includes a <em>Competing Consumers</em> section where you are able to create, update, delete and view subscriptions and their statuses.</p>
+</div>
+<h2 id="creating-a-persistent-subscription">Creating a Persistent Subscription</h2>
+<p>Before interacting with a subscription group, you need to create one. You receive an error if you try to create a subscription group more than once. This requires <a href="../security/index.html">admin permissions</a>.</p>
+<!-- TODO: File inclusion for the below? -->
+<table>
+<thead>
+<tr>
+<th>URI</th>
+<th>Supported Content Types</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/subscriptions/{stream}/{subscription_name}</code></td>
+<td><code>application/json</code></td>
+<td>PUT</td>
+</tr>
+</tbody>
+</table>
+<h3 id="query-parameters">Query Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>stream</code></td>
+<td>The stream the persistent subscription is on.</td>
+</tr>
+<tr>
+<td><code>subscription_name</code></td>
+<td>The name of the subscription group.</td>
+</tr>
+</tbody>
+</table>
+<p>Body</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>resolveLinktos</code></td>
+<td>Tells the subscription to resolve link events.</td>
+</tr>
+<tr>
+<td><code>startFrom</code></td>
+<td>Start the subscription from the position-of the event in the stream.</td>
+</tr>
+<tr>
+<td><code>extraStatistics</code></td>
+<td>Tells the backend to measure timings on the clients so statistics will contain histograms of them.</td>
+</tr>
+<tr>
+<td><code>checkPointAfterMilliseconds</code></td>
+<td>The amount of time the system should try to checkpoint after.</td>
+</tr>
+<tr>
+<td><code>liveBufferSize</code></td>
+<td>The size of the live buffer (in memory) before resorting to paging.</td>
+</tr>
+<tr>
+<td><code>readBatchSize</code></td>
+<td>The size of the read batch when in paging mode.</td>
+</tr>
+<tr>
+<td><code>bufferSize</code></td>
+<td>The number of messages that should be buffered when in paging mode.</td>
+</tr>
+<tr>
+<td><code>maxCheckPointCount</code></td>
+<td>The maximum number of messages not checkpointed before forcing a checkpoint.</td>
+</tr>
+<tr>
+<td><code>maxRetryCount</code></td>
+<td>Sets the number of times a message should be retried before considered a bad message.</td>
+</tr>
+<tr>
+<td><code>maxSubscriberCount</code></td>
+<td>Sets the maximum number of allowed subscribers.</td>
+</tr>
+<tr>
+<td><code>messageTimeoutMilliseconds</code></td>
+<td>Sets the timeout for a client before the message will be retried.</td>
+</tr>
+<tr>
+<td><code>minCheckPointCount</code></td>
+<td>The minimum number of messages to write a checkpoint for.</td>
+</tr>
+<tr>
+<td><code>namedConsumerStrategy</code></td>
+<td>RoundRobin/DispatchToSingle/Pinned</td>
+</tr>
+</tbody>
+</table>
+<h2 id="updating-a-persistent-subscription">Updating a Persistent Subscription</h2>
+<p>You can edit the settings of an existing subscription while it is running. This drops the current subscribers and resets the subscription internally. This requires admin permissions.</p>
+<table>
+<thead>
+<tr>
+<th>URI</th>
+<th>Supported Content Types</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/subscriptions/{stream}/{subscription_name}</code></td>
+<td><code>application/json</code></td>
+<td>POST</td>
+</tr>
+</tbody>
+</table>
+<p>Query Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>stream</code></td>
+<td>The stream to the persistent subscription is on.</td>
+</tr>
+<tr>
+<td><code>subscription_name</code></td>
+<td>The name of the subscription group.</td>
+</tr>
+</tbody>
+</table>
+<p>Body</p>
+<p><em>Same parameters as &quot;Creating a Persistent Subscription&quot;</em></p>
+<h2 id="deleting-a-persistent-subscription">Deleting a Persistent Subscription</h2>
+<table>
+<thead>
+<tr>
+<th>URI</th>
+<th>Supported Content Types</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/subscriptions/{stream}/{subscription_name}</code></td>
+<td><code>application/json</code></td>
+<td>DELETE</td>
+</tr>
+</tbody>
+</table>
+<h3 id="query-parameters-1">Query Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>stream</code></td>
+<td>The stream to the persistent subscription is on.</td>
+</tr>
+<tr>
+<td><code>subscription_name</code></td>
+<td>The name of the subscription group.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reading-a-stream-via-a-persistent-subscription">Reading a stream via a Persistent Subscription</h2>
+<p>By default, reading a stream via a persistent subscription returns a single event per request and does not embed the event properties as part of the response.</p>
+<table>
+<thead>
+<tr>
+<th>URI</th>
+<th>Supported Content Types</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/subscriptions/{stream}/{subscription_name} /subscriptions/{stream}/{subscription_name}?embed={embed} /subscriptions/{stream}/{subscription}/{count}?embed={embed}</code></td>
+<td><code>application/vnd.eventstore.competingatom+xml application/vnd.eventstore.competingatom+json</code></td>
+<td>GET</td>
+</tr>
+</tbody>
+</table>
+<h3 id="query-parameters-2">Query Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>stream</code></td>
+<td>The stream the persistent subscription is on.</td>
+</tr>
+<tr>
+<td><code>subscription_name</code></td>
+<td>The name of the subscription group.</td>
+</tr>
+<tr>
+<td><code>count</code></td>
+<td>How many events to return for the request.</td>
+</tr>
+<tr>
+<td><code>embed</code></td>
+<td><code>None</code>, <code>Content</code>, <code>Rich</code>, <code>Body</code>, <code>PrettyBody</code>, <code>TryHarder</code></td>
+</tr>
+</tbody>
+</table>
+<p>Read <a href="../reading-streams/index.html">Reading Streams</a> for information on the different embed levels.</p>
+<h3 id="response">Response</h3>
+<pre><code class="lang-json">{
+  &quot;title&quot;: &quot;All Events Persistent Subscription&quot;,
+  &quot;id&quot;: &quot;http://localhost:2113/subscriptions/newstream/competing_consumers_group1&quot;,
+  &quot;updated&quot;: &quot;2015-12-02T09:17:48.556545Z&quot;,
+  &quot;author&quot;: {
+    &quot;name&quot;: &quot;EventStore&quot;
+  },
+  &quot;headOfStream&quot;: false,
+  &quot;links&quot;: [
+    {
+      &quot;uri&quot;: &quot;http://localhost:2113/subscriptions/newstream/competing_consumers_group1/ack%3Fids=c322e299-cb73-4b47-97c5-5054f920746f&quot;,
+      &quot;relation&quot;: &quot;ackAll&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://localhost:2113/subscriptions/newstream/competing_consumers_group1/nack%3Fids=c322e299-cb73-4b47-97c5-5054f920746f&quot;,
+      &quot;relation&quot;: &quot;nackAll&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://localhost:2113/subscriptions/newstream/competing_consumers_group1/1%3Fembed=None&quot;,
+      &quot;relation&quot;: &quot;previous&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://localhost:2113/subscriptions/newstream/competing_consumers_group1&quot;,
+      &quot;relation&quot;: &quot;self&quot;
+    }
+  ],
+  &quot;entries&quot;: [
+    {
+      &quot;title&quot;: &quot;1@newstream&quot;,
+      &quot;id&quot;: &quot;http://localhost:2113/streams/newstream/1&quot;,
+      &quot;updated&quot;: &quot;2015-12-02T09:17:48.556545Z&quot;,
+      &quot;author&quot;: {
+        &quot;name&quot;: &quot;EventStore&quot;
+      },
+      &quot;summary&quot;: &quot;SomeEvent&quot;,
+      &quot;links&quot;: [
+        {
+          &quot;uri&quot;: &quot;http://localhost:2113/streams/newstream/1&quot;,
+          &quot;relation&quot;: &quot;edit&quot;
+        },
+        {
+          &quot;uri&quot;: &quot;http://localhost:2113/streams/newstream/1&quot;,
+          &quot;relation&quot;: &quot;alternate&quot;
+        },
+        {
+          &quot;uri&quot;: &quot;http://localhost:2113/subscriptions/newstream/competing_consumers_group1/ack/c322e299-cb73-4b47-97c5-5054f920746f&quot;,
+          &quot;relation&quot;: &quot;ack&quot;
+        },
+        {
+          &quot;uri&quot;: &quot;http://localhost:2113/subscriptions/newstream/competing_consumers_group1/nack/c322e299-cb73-4b47-97c5-5054f920746f&quot;,
+          &quot;relation&quot;: &quot;nack&quot;
+        }
+      ]
+    }
+  ]
+}
+</code></pre><h2 id="acknowledgements">Acknowledgements</h2>
+<p>Clients must acknowledge (or not acknowledge) messages in the competing consumer model. If the client fails to respond in the given timeout period, the message is retried. You should use the <code>rel</code> links in the feed for acknowledgements not bookmark URIs as they are subject to change in future versions.</p>
+<p>For example:</p>
+<pre><code class="lang-http">{
+  &quot;uri&quot;: &quot;http://localhost:2113/subscriptions/newstream/competing_consumers_group1/ack/c322e299-cb73-4b47-97c5-5054f920746f&quot;,
+  &quot;relation&quot;: &quot;ack&quot;
+}
+</code></pre><h3 id="ack-multiple-messages">Ack multiple messages</h3>
+<table>
+<thead>
+<tr>
+<th>URI</th>
+<th>Supported Content Types</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/subscriptions/{stream}/{subscription_name}/ack?ids={messageids}</code></td>
+<td><code>application/json</code></td>
+<td>POST</td>
+</tr>
+</tbody>
+</table>
+<h4 id="query-parameters-3">Query Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>stream</code></td>
+<td>The stream the persistent subscription is on.</td>
+</tr>
+<tr>
+<td><code>subscription_name</code></td>
+<td>The name of the subscription group.</td>
+</tr>
+<tr>
+<td><code>messageids</code></td>
+<td>The ids of the messages that needs to be acked</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ack-a-single-message">Ack a single message</h3>
+<table>
+<thead>
+<tr>
+<th>URI</th>
+<th>Supported Content Types</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/subscriptions/{stream}/{subscription_name}/ack/{messageid}</code></td>
+<td><code>application/json</code></td>
+<td>POST</td>
+</tr>
+</tbody>
+</table>
+<h4 id="query-parameters-4">Query Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>stream</code></td>
+<td>The stream to the persistent subscription is on.</td>
+</tr>
+<tr>
+<td><code>subscription_name</code></td>
+<td>The name of the subscription group.</td>
+</tr>
+<tr>
+<td><code>messageid</code></td>
+<td>The id of the message that needs to be acked</td>
+</tr>
+</tbody>
+</table>
+<!-- Has this been explained? -->
+<h3 id="nack-multiple-messages">Nack multiple messages</h3>
+<table>
+<thead>
+<tr>
+<th>URI</th>
+<th>Supported Content Types</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/subscriptions/{stream}/{subscription_name}/nack?ids={messageids}?action={action}</code></td>
+<td><code>application/json</code></td>
+<td>POST</td>
+</tr>
+</tbody>
+</table>
+<h4 id="query-parameters-5">Query Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>stream</code></td>
+<td>The stream to the persistent subscription is on.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>subscription_name</code></td>
+<td>The name of the subscription group.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>action</code></td>
+<td><ul><li><strong>Park</strong>: Don&#39;t retry the message, park it until a request is sent to reply the parked messages<li><strong>Retry</strong>: Retry the message<li><strong>Skip</strong>: Discard the message<li><strong>Stop</strong>: Stop the subscription</li></li></li></li></ul></td>
+<td></td>
+</tr>
+<tr>
+<td><code>messageid</code></td>
+<td>The id of the message that needs to be acked</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="nack-a-single-message">Nack a single message</h3>
+<table>
+<thead>
+<tr>
+<th>URI</th>
+<th>Supported Content Types</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/subscriptions/{stream}/{subscription_name}/nack/{messageid}?action={action}</code></td>
+<td><code>application/json</code></td>
+<td>POST</td>
+</tr>
+</tbody>
+</table>
+<h2 id="replaying-parked-messages">Replaying parked messages</h2>
+<table>
+<thead>
+<tr>
+<th>URI</th>
+<th>Supported Content Types</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/subscriptions/{stream}/{subscription_name}/replayParked</code></td>
+<td><code>application/json</code></td>
+<td>POST</td>
+</tr>
+</tbody>
+</table>
+<h2 id="getting-information-for-all-subscriptions">Getting information for all subscriptions</h2>
+<table>
+<thead>
+<tr>
+<th>URI</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/subscriptions</code></td>
+<td>GET</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-1">Response</h3>
+<pre><code class="lang-json">[
+  {
+    &quot;links&quot;: [
+      {
+        &quot;href&quot;: &quot;http://localhost:2113/subscriptions/newstream/competing_consumers_group1/info&quot;,
+        &quot;rel&quot;: &quot;detail&quot;
+      }
+    ],
+    &quot;eventStreamId&quot;: &quot;newstream&quot;,
+    &quot;groupName&quot;: &quot;competing_consumers_group1&quot;,
+    &quot;parkedMessageUri&quot;: &quot;http://localhost:2113/streams/$persistentsubscription-newstream::competing_consumers_group1-parked&quot;,
+    &quot;getMessagesUri&quot;: &quot;http://localhost:2113/subscriptions/newstream/competing_consumers_group1/1&quot;,
+    &quot;status&quot;: &quot;Live&quot;,
+    &quot;averageItemsPerSecond&quot;: 0.0,
+    &quot;totalItemsProcessed&quot;: 0,
+    &quot;lastProcessedEventNumber&quot;: -1,
+    &quot;lastKnownEventNumber&quot;: 5,
+    &quot;connectionCount&quot;: 0,
+    &quot;totalInFlightMessages&quot;: 0
+  },
+  {
+    &quot;links&quot;: [
+      {
+        &quot;href&quot;: &quot;http://localhost:2113/subscriptions/another_newstream/competing_consumers_group1/info&quot;,
+        &quot;rel&quot;: &quot;detail&quot;
+      }
+    ],
+    &quot;eventStreamId&quot;: &quot;another_newstream&quot;,
+    &quot;groupName&quot;: &quot;competing_consumers_group1&quot;,
+    &quot;parkedMessageUri&quot;: &quot;http://localhost:2113/streams/$persistentsubscription-another_newstream::competing_consumers_group1-parked&quot;,
+    &quot;getMessagesUri&quot;: &quot;http://localhost:2113/subscriptions/another_newstream/competing_consumers_group1/1&quot;,
+    &quot;status&quot;: &quot;Live&quot;,
+    &quot;averageItemsPerSecond&quot;: 0.0,
+    &quot;totalItemsProcessed&quot;: 0,
+    &quot;lastProcessedEventNumber&quot;: -1,
+    &quot;lastKnownEventNumber&quot;: -1,
+    &quot;connectionCount&quot;: 0,
+    &quot;totalInFlightMessages&quot;: 0
+  }
+]
+</code></pre><h2 id="getting-information-about-the-subscriptions-for-a-stream">Getting information about the subscriptions for a stream</h2>
+<table>
+<thead>
+<tr>
+<th>URI</th>
+<th>Supported Content Types</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/subscriptions/{stream}</code></td>
+<td><code>application/json</code></td>
+<td>GET</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-2">Response</h3>
+<pre><code class="lang-json">[
+  {
+    &quot;links&quot;: [
+      {
+        &quot;href&quot;: &quot;http://localhost:2113/subscriptions/newstream/competing_consumers_group1/info&quot;,
+        &quot;rel&quot;: &quot;detail&quot;
+      }
+    ],
+    &quot;eventStreamId&quot;: &quot;newstream&quot;,
+    &quot;groupName&quot;: &quot;competing_consumers_group1&quot;,
+    &quot;parkedMessageUri&quot;: &quot;http://localhost:2113/streams/$persistentsubscription-newstream::competing_consumers_group1-parked&quot;,
+    &quot;getMessagesUri&quot;: &quot;http://localhost:2113/subscriptions/newstream/competing_consumers_group1/1&quot;,
+    &quot;status&quot;: &quot;Live&quot;,
+    &quot;averageItemsPerSecond&quot;: 0.0,
+    &quot;totalItemsProcessed&quot;: 0,
+    &quot;lastProcessedEventNumber&quot;: -1,
+    &quot;lastKnownEventNumber&quot;: 5,
+    &quot;connectionCount&quot;: 0,
+    &quot;totalInFlightMessages&quot;: 0
+  }
+]
+</code></pre><h2 id="getting-information-about-a-specific-subscription">Getting information about a specific subscription</h2>
+<table>
+<thead>
+<tr>
+<th>URI</th>
+<th>Supported Content Types</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/subscriptions/{stream}/{subscription_name}/info</code></td>
+<td><code>application/json</code></td>
+<td>GET</td>
+</tr>
+</tbody>
+</table>
+<h3 id="response-3">Response</h3>
+<pre><code class="lang-json">{
+  &quot;links&quot;: [
+    {
+      &quot;href&quot;: &quot;http://localhost:2113/subscriptions/newstream/competing_consumers_group1/info&quot;,
+      &quot;rel&quot;: &quot;detail&quot;
+    },
+    {
+      &quot;href&quot;: &quot;http://localhost:2113/subscriptions/newstream/competing_consumers_group1/replayParked&quot;,
+      &quot;rel&quot;: &quot;replayParked&quot;
+    }
+  ],
+  &quot;config&quot;: {
+    &quot;resolveLinktos&quot;: false,
+    &quot;startFrom&quot;: 0,
+    &quot;messageTimeoutMilliseconds&quot;: 10000,
+    &quot;extraStatistics&quot;: false,
+    &quot;maxRetryCount&quot;: 10,
+    &quot;liveBufferSize&quot;: 500,
+    &quot;bufferSize&quot;: 500,
+    &quot;readBatchSize&quot;: 20,
+    &quot;preferRoundRobin&quot;: true,
+    &quot;checkPointAfterMilliseconds&quot;: 1000,
+    &quot;minCheckPointCount&quot;: 10,
+    &quot;maxCheckPointCount&quot;: 500,
+    &quot;maxSubscriberCount&quot;: 10,
+    &quot;namedConsumerStrategy&quot;: &quot;RoundRobin&quot;
+  },
+  &quot;eventStreamId&quot;: &quot;newstream&quot;,
+  &quot;groupName&quot;: &quot;competing_consumers_group1&quot;,
+  &quot;status&quot;: &quot;Live&quot;,
+  &quot;averageItemsPerSecond&quot;: 0.0,
+  &quot;parkedMessageUri&quot;: &quot;http://localhost:2113/streams/$persistentsubscription-newstream::competing_consumers_group1-parked&quot;,
+  &quot;getMessagesUri&quot;: &quot;http://localhost:2113/subscriptions/newstream/competing_consumers_group1/1&quot;,
+  &quot;totalItemsProcessed&quot;: 0,
+  &quot;countSinceLastMeasurement&quot;: 0,
+  &quot;lastProcessedEventNumber&quot;: -1,
+  &quot;lastKnownEventNumber&quot;: 5,
+  &quot;readBufferCount&quot;: 6,
+  &quot;liveBufferCount&quot;: 5,
+  &quot;retryBufferCount&quot;: 0,
+  &quot;totalInFlightMessages&quot;: 0,
+  &quot;connections&quot;: []
+}
+</code></pre><!-- TODO: Is this better as a general subscriptions page? -->
+<!-- TODO: Somehow get this better integrated with API docs -->
+<!-- TODO: Still to do -->
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/http-api/competing-consumers.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

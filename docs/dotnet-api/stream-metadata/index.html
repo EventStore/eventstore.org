@@ -1,0 +1,323 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Stream Metadata | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Stream Metadata | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="stream-metadata">Stream Metadata</h1>
+
+<p>Every stream in Event Store has metadata associated with it. Internally, the metadata includes information such as the ACL of the stream and the maximum count and age for the events in the stream. Client code can also put information into stream metadata for use with projections or through the client API.</p>
+<p>A common use of this information is to store associated details about an event that is not part of the event. Examples of these are:</p>
+<ul>
+<li>&quot;which user wrote the event?&quot;</li>
+<li>&quot;Which application server were they talking to?&quot;</li>
+<li>&quot;From what IP address did the request come from?&quot;</li>
+</ul>
+<p>This information is not part of the actual event but is metadata associated with the event. Event Store stores stream metadata as JSON, and you can access it over the HTTP APIs.</p>
+<h2 id="methods">Methods</h2>
+<h3 id="read-stream-metadata">Read Stream Metadata</h3>
+<!-- TODO: Link or embed to ref docs -->
+<pre><code class="lang-csharp">Task&lt;StreamMetadataResult&gt; GetStreamMetadataAsync(string stream, UserCredentials userCredentials = null)
+</code></pre><pre><code class="lang-csharp">Task&lt;RawStreamMetadataResult&gt; GetStreamMetadataAsRawBytesAsync(string stream, UserCredentials userCredentials = null)
+</code></pre><h3 id="write-stream-metadata">Write Stream Metadata</h3>
+<!-- TODO: Link or embed to ref docs -->
+<pre><code class="lang-csharp">Task&lt;WriteResult&gt; SetStreamMetadataAsync(string stream, long expectedMetastreamVersion, StreamMetadata metadata, UserCredentials userCredentials = null)
+</code></pre><pre><code class="lang-csharp">Task&lt;WriteResult&gt; SetStreamMetadataAsync(string stream, long expectedMetastreamVersion, byte[] metadata, UserCredentials userCredentials = null)
+</code></pre><h2 id="read-stream-metadata-1">Read Stream Metadata</h2>
+<p>To read stream metadata over the .NET API you can use methods found on the <code>EventStoreConnection</code>. You can use the <code>GetStreamMetadata</code> methods in two ways. The first is to return a fluent interface over the stream metadata, and the second is to return you the raw JSON of the stream metadata.</p>
+<pre><code class="lang-csharp">Task&lt;StreamMetadataResult&gt; GetStreamMetadataAsync(string stream, UserCredentials userCredentials = null)
+</code></pre><p>This returns a <code>StreamMetadataResult</code>. The fields on this result are:</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string Stream</code></td>
+<td>The name of the stream</td>
+</tr>
+<tr>
+<td><code>bool IsStreamDeleted</code></td>
+<td><code>true</code> is the stream is deleted, <code>false</code> otherwise.</td>
+</tr>
+<tr>
+<td><code>long MetastreamVersion</code></td>
+<td>The version of the metastream format</td>
+</tr>
+<tr>
+<td><code>StreamMetadata Metadata</code></td>
+<td>A <code>StreamMetadata</code> object representing the metadata JSON</td>
+</tr>
+</tbody>
+</table>
+<p>You can then access the <code>StreamMetadata</code> via the <code>StreamMetadata</code> object. It contains typed fields for well known stream metadata entries.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>long? MaxAge</code></td>
+<td>The maximum age of events in the stream. Items older than this will be automatically removed.</td>
+</tr>
+<tr>
+<td><code>long? MaxCount</code></td>
+<td>The maximum count of events in the stream. When you have more than count the oldest will be removed.</td>
+</tr>
+<tr>
+<td><code>long? TruncateBefore</code></td>
+<td>When set says that items prior to event &#39;E&#39; can be truncated and will be removed.</td>
+</tr>
+<tr>
+<td><code>TimeSpan? CacheControl</code></td>
+<td>The head of a feed in the atom api is not cacheable. This allows you to specify a period of time you want it to be cacheable. Low numbers are best here (say 30-60 seconds) and introducing values here will introduce latency over the atom protocol if caching is occuring.</td>
+</tr>
+<tr>
+<td><code>StreamAcl Acl</code></td>
+<td>The access control list for this stream.</td>
+</tr>
+</tbody>
+</table>
+<p>If instead you want to work with raw JSON you can use the raw methods for stream metadata.</p>
+<pre><code class="lang-csharp">Task&lt;RawStreamMetadataResult&gt; GetStreamMetadataAsRawBytesAsync(string stream, UserCredentials userCredentials = null)
+</code></pre><p>This returns a <code>RawStreamMetadataResult</code>. The fields on this result are:</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string Stream</code></td>
+<td>The name of the stream</td>
+</tr>
+<tr>
+<td><code>bool IsStreamDeleted</code></td>
+<td>True is the stream is deleted, false otherwise.</td>
+</tr>
+<tr>
+<td><code>long MetastreamVersion</code></td>
+<td>The version of the metastream (see <a href="../optimistic-concurrency-and-idempotence/index.html">Expected Version</a>)</td>
+</tr>
+<tr>
+<td><code>byte[] Metadata</code></td>
+<td>The raw data of the metadata JSON</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Note</h5><p>If you enabled <a href="../dot-net/connecting-to-server.md#security">enabled security</a>, reading metadata may require that you pass credentials. By default it is only allowed for admins though you can change this via default ACLs. If you do not pass credentials and they are required you will receive an <code>AccessedDeniedException</code>.</p>
+</div>
+<h2 id="writing-metadata">Writing Metadata</h2>
+<p>You can write metadata in both a typed and a raw mechanism. When writing it is generally easier to use the typed mechanism. Both writing mechanisms support an <code>expectedVersion</code> which works the same as on any stream and you can use to control concurrency, read <a href="../optimistic-concurrency-and-idempotence/index.html">Expected Version</a> for further details.</p>
+<pre><code class="lang-csharp">Task&lt;WriteResult&gt; SetStreamMetadataAsync(string stream, long expectedMetastreamVersion, StreamMetadata metadata, UserCredentials userCredentials = null)
+</code></pre><p>The <code>StreamMetadata</code> passed above has a builder that you can access via the <code>StreamMetadata.Create()</code> method. The options available on the builder are:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SetMaxCount(long count)</code></td>
+<td>Sets the maximum count of events in the stream.</td>
+</tr>
+<tr>
+<td><code>SetMaxAge(TimeSpan age)</code></td>
+<td>Sets the maximum age of events in the stream.</td>
+</tr>
+<tr>
+<td><code>SetTruncateBefore(long seq)</code></td>
+<td>Sets the event number from which previous events can be scavenged.&lt;</td>
+</tr>
+<tr>
+<td><code>SetCacheControl(TimeSpan cacheControl)</code></td>
+<td>The amount of time the stream head is cachable.</td>
+</tr>
+<tr>
+<td><code>SetReadRoles(string[] roles)</code></td>
+<td>Sets the roles allowed to read the underlying stream.</td>
+</tr>
+<tr>
+<td><code>SetWriteRoles(string[] roles)</code></td>
+<td>Sets the roles allowed to write to the underlying stream.</td>
+</tr>
+<tr>
+<td><code>SetDeleteRoles(string[] roles)</code></td>
+<td>Sets the roles allowed to delete the underlying stream.</td>
+</tr>
+<tr>
+<td><code>SetMetadataReadRoles(string[] roles)</code></td>
+<td>Sets the roles allowed to read the metadata stream.</td>
+</tr>
+<tr>
+<td><code>SetMetadataWriteRoles(string[] roles)</code></td>
+<td>Sets the roles allowed to write the metadata stream. Be careful with this privilege as it gives all the privileges for a stream as that use can assign themselves any other privilege.</td>
+</tr>
+<tr>
+<td><code>SetCustomMetadata(string key, string value)</code></td>
+<td>The SetCustomMetadata method and overloads allow the setting of arbitrary custom fields into the stream metadata.</td>
+</tr>
+</tbody>
+</table>
+<p>You can add user-specified metadata via the <code>SetCustomMetadata</code> overloads. Some examples of good uses of user-specified metadata are:</p>
+<ul>
+<li>which adapter is responsible for populating a stream.</li>
+<li>which projection caused a stream to be created.</li>
+<li>a correlation ID of some business process.</li>
+</ul>
+<pre><code class="lang-csharp">Task&lt;WriteResult&gt; SetStreamMetadataAsync(string stream, long expectedMetastreamVersion, byte[] metadata, UserCredentials userCredentials = null)
+</code></pre><p>This method will put the data that is in metadata as the stream metadata. Metadata in this case can be anything in a vector of bytes. The server only understands JSON. Read <a href="../../server/users-and-access-control-lists/index.html">Access Control Lists</a> for more information on the format in JSON for access control lists.</p>
+<div class="NOTE"><h5>Note</h5><p>Writing metadata may require that you pass credentials if you have security enabled by default it is only allowed for admins though you can change this via default ACLs. If you do not pass credentials and they are required you will receive an <code>AccessedDeniedException</code>.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/dotnet-api/stream-metadata.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

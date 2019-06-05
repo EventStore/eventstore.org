@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Running Event Store | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Running Event Store | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+      <link rel="stylesheet" href="../styles/main12.css">
+        <link rel="stylesheet" href="../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="running-event-store">Running Event Store</h1>
+
+<p>Event Store runs as a server that clients can connect to either <a href="../http-api/index.html">over HTTP</a> or using <a href="../getting-started/which-api-sdk/index.html">one of the client APIs</a>. You can run both the open source and commercial versions as either a single node or a highly available cluster of nodes.</p>
+<p>We distribute an <a href="https://eventstore.org/downloads">open source version of Event Store</a> as a console application. There are separate distributions for Windows on .NET and Linux/macOS on Mono.</p>
+<h2 id="install-and-run-event-store">Install and run Event Store</h2>
+<div class="NOTE"><h5>Note</h5><p>Unless you pass a database option with <code>--db</code>, Event Store writes to a new database created in the host system&#39;s temporary files path each time it is started. For more information on Command Line Arguments read <a href="command-line-arguments/index.html">this guide</a>.</p>
+</div>
+<div class="tabGroup" id="tabgroup_Imwg03Et86">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_Imwg03Et86_tabid-1" role="tab" aria-controls="tabpanel_Imwg03Et86_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Windows</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_Imwg03Et86_tabid-2" role="tab" aria-controls="tabpanel_Imwg03Et86_tabid-2" data-tab="tabid-2" tabindex="-1">Linux</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_Imwg03Et86_tabid-3" role="tab" aria-controls="tabpanel_Imwg03Et86_tabid-3" data-tab="tabid-3" tabindex="-1">Docker</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_Imwg03Et86_tabid-k8" role="tab" aria-controls="tabpanel_Imwg03Et86_tabid-k8" data-tab="tabid-k8" tabindex="-1">Kubernetes</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_Imwg03Et86_tabid-macos" role="tab" aria-controls="tabpanel_Imwg03Et86_tabid-macos" data-tab="tabid-macos" tabindex="-1">macOS</a>
+</li>
+</ul>
+<section id="tabpanel_Imwg03Et86_tabid-1" role="tabpanel" data-tab="tabid-1">
+<p>The prerequisites for Installing on Windows are:</p>
+<ul>
+<li>NET Framework 4.0+</li>
+<li>Windows platform SDK with compilers (v7.1) or Visual C++ installed (Only required for a full build)</li>
+</ul>
+<p>Event Store has <a href="https://chocolatey.org/packages/eventstore-oss">Chocolatey packages</a> available that you can install with the following command:</p>
+<pre><code class="lang-powershell">choco install eventstore-oss
+</code></pre><p>You can also <a href="https://eventstore.org/downloads/">download</a> a binary, unzip the archive and run from the folder location with an administrator console:</p>
+<pre><code class="lang-powershell">EventStore.ClusterNode.exe --db ./db --log ./logs
+</code></pre><p>This command starts Event Store with the database stored at the path <em>./db</em> and the logs in <em>./logs</em>. You can view further command line arguments in the <a href="index.html">server docs</a>.</p>
+<p>Event Store runs in an administration context because it starts an HTTP server through <code>http.sys</code>. For permanent or production instances you need to provide an ACL such as:</p>
+<pre><code class="lang-powershell">netsh http add urlacl url=http://+:2113/ user=DOMAIN\username
+</code></pre></section>
+<section id="tabpanel_Imwg03Et86_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+<p>The prerequisites for Installing on Linux are:</p>
+<ul>
+<li>We recommend <a href="https://www.mono-project.com/download/stable/">Mono 5.16.0</a>, but other versions may also work.</li>
+</ul>
+<p>Event Store has pre-built <a href="https://packagecloud.io/EventStore/EventStore-OSS">packages available for Debian-based distributions</a>, <a href="https://packagecloud.io/EventStore/EventStore-OSS/install#bash-rpm">manual instructions for distributions that use RPM</a>, or you can <a href="https://github.com/EventStore/EventStore#linux">build from source</a>. The final package name to install is <code>eventstore-oss</code>.</p>
+<p>If you installed from a pre-built package, start Event Store with:</p>
+<pre><code class="lang-bash">sudo systemctl start eventstore
+</code></pre><p>When you install the Event Store package, the service doesn&#39;t start by default. This is to allow you to change the configuration, located at <em>/etc/eventstore/eventstore.conf</em> and to prevent creating a default database.</p>
+<p>In all other cases you can run the Event Store binary or use our <em>run-node.sh</em> shell script which exports the environment variable <code>LD_LIBRARY_PATH</code> to include the installation path of Event Store, which is necessary if you are planning to use projections.</p>
+<pre><code class="lang-bash">./run-node.sh --db ./ESData
+</code></pre><div class="NOTE"><h5>Note</h5><p>We recommend that when using Linux you set the &#39;open file limit&#39; to a high number. The precise value depends on your use case, but at least between <code>30,000</code> and <code>60,000</code>.</p>
+</div>
+</section>
+<section id="tabpanel_Imwg03Et86_tabid-3" role="tabpanel" data-tab="tabid-3" aria-hidden="true" hidden="hidden">
+<p>Event Store has <a href="https://hub.docker.com/r/eventstore/eventstore/">a Docker image</a> available for any platform that supports Docker:</p>
+<pre><code class="lang-bash">docker run --name eventstore-node -it -p 2113:2113 -p 1113:1113 eventstore/eventstore
+</code></pre></section>
+<section id="tabpanel_Imwg03Et86_tabid-k8" role="tabpanel" data-tab="tabid-k8" aria-hidden="true" hidden="hidden">
+<p>Event Store has <a href="https://github.com/EventStore/EventStore.Charts">a Helm chart</a> available for installing Event Store on Kubernetes clusters:</p>
+<pre><code class="lang-bash">helm repo add eventstore https://eventstore.github.io/EventStore.Charts
+helm repo update
+helm install -n eventstore eventstore/eventstore
+</code></pre><div class="NOTE"><h5>Note</h5><p>Read <a href="https://github.com/EventStore/EventStore.Charts/blob/master/stable/eventstore/README.md">this guide</a> for more details on how to use the helm chart.
+Read <a href="deploy-kubernetes-aks/index.html">this guide</a> for more details on using Kubernetes with AKS and this guide for more details on using Kubernetes with GKE.</p>
+</div>
+</section>
+<section id="tabpanel_Imwg03Et86_tabid-macos" role="tabpanel" data-tab="tabid-macos" aria-hidden="true" hidden="hidden">
+<p>Event Store has a macOS package <a href="https://eventstore.org/downloads/">you can download</a> and install, and we maintain a Homebrew Cask formula you can install:</p>
+<pre><code class="lang-shell">brew cask install eventstore
+</code></pre><p>In each case you can run Event Store with the <code>eventstore</code> command, and stop it with <code>Ctrl+c</code>. To use the default database location you need to use <code>sudo</code>, or you can change the location with the <code>--db</code> parameter.</p>
+</section>
+</div>
+<h2 id="solving-503-errors-from-the-admin-ui">Solving 503 errors from the Admin UI</h2>
+<p>There is a <a href="http://stackoverflow.com/questions/8142396/what-causes-a-httplistener-http-503-error">known issue</a> with the .NET <code>HTTPListener</code> class (which Event Store uses) and bad URL ACL registrations which can cause servers to return 503 errors for every request. If you see this, you can issue the following commands:</p>
+<pre><code class="lang-posh">netsh http show urlacl
+</code></pre><p>Look for an entry on the port you&#39;re trying to use (<code>2113</code> unless you&#39;ve specified a custom port), then issue:</p>
+<pre><code class="lang-posh">netsh http delete urlacl &lt;the entry you just found&gt;
+</code></pre><p>For example:</p>
+<pre><code class="lang-posh">netsh http delete urlacl http://+:2113/
+</code></pre><p>These steps should resolve the issue.</p>
+<h2 id="shutting-down-an-event-store-node">Shutting down an Event Store node</h2>
+<p>Event Store is designed to be safe by default, and it is expected that it will be shut down using <code>kill -9</code>. It is also possible to initiate a shutdown via the Admin UI, by clicking on the <em>Shutdown Server</em> button located on the <em>Admin</em> page. This may be useful if you do not have console access to the node or need to script initiating a shutdown.</p>
+<h2 id="securing-event-store">Securing Event Store</h2>
+<p>To secure Event Store, you can bind the server to the localhost interface and install a reverse proxy such as <a href="http://nginx.org">nginx</a> or <a href="https://www.varnish-cache.org">Varnish</a> on the public IP. Read <a href="setting-up-varnish-in-linux/index.html">this guide</a> for an example of setting up Event Store with Varnish.</p>
+<p>The reverse proxy is your public interface. Internally it handles the authentication and route requests to Event Store. Event Store is only accessible through the localhost adapter and is not exposed publicly. The locally running reverse proxy is allowed to cache responses, and because of this, reverse proxies are more performant than calling Event Store directly.</p>
+<p>Even if you use a reverse proxy, you can support external authentication from Event Store itself. You do this by enabling the <a href="../http-api/optional-http-headers/trusted-intermediary/index.html">ES-TrustedAuth</a> trusted intermediary option in your configuration. This allows the intermediary to write a header with the user information that Event Store uses.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/server/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

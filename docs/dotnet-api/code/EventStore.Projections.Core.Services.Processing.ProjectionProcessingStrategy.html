@@ -1,0 +1,738 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Class ProjectionProcessingStrategy
+   | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ProjectionProcessingStrategy
+   | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy">
+  
+  
+  <h1 id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy" class="text-break">Class ProjectionProcessingStrategy
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ProjectionProcessingStrategy</span></div>
+      <div class="level2"><a class="xref" href="EventStore.Projections.Core.Services.Processing.EventReaderBasedProjectionProcessingStrategy.html">EventReaderBasedProjectionProcessingStrategy</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Services.Processing.html">EventStore.Projections.Core.Services.Processing</a></h6>
+  <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
+  <h5 id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class ProjectionProcessingStrategy : object</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy__ctor_System_String_EventStore_Projections_Core_Services_Processing_ProjectionVersion_EventStore_Common_Log_ILogger_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.%23ctor(System.String%2CEventStore.Projections.Core.Services.Processing.ProjectionVersion%2CEventStore.Common.Log.ILogger)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ProjectionProcessingStrategy.cs/#L15">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy__ctor_" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.#ctor*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy__ctor_System_String_EventStore_Projections_Core_Services_Processing_ProjectionVersion_EventStore_Common_Log_ILogger_" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.#ctor(System.String,EventStore.Projections.Core.Services.Processing.ProjectionVersion,EventStore.Common.Log.ILogger)">ProjectionProcessingStrategy(String, ProjectionVersion, ILogger)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ProjectionProcessingStrategy(string name, ProjectionVersion projectionVersion, ILogger logger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ProjectionVersion.html">ProjectionVersion</a></td>
+        <td><span class="parametername">projectionVersion</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Common.Log.ILogger.html">ILogger</a></td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy__logger.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy._logger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ProjectionProcessingStrategy.cs/#L13">View Source</a>
+  </span>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy__logger" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy._logger">_logger</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly ILogger _logger</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Common.Log.ILogger.html">ILogger</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy__name.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy._name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ProjectionProcessingStrategy.cs/#L11">View Source</a>
+  </span>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy__name" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy._name">_name</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly string _name</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy__projectionVersion.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy._projectionVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ProjectionProcessingStrategy.cs/#L12">View Source</a>
+  </span>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy__projectionVersion" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy._projectionVersion">_projectionVersion</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly ProjectionVersion _projectionVersion</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ProjectionVersion.html">ProjectionVersion</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_Create_Guid_EventStore_Core_Bus_IPublisher_Guid_IPrincipal_EventStore_Core_Bus_IPublisher_EventStore_Core_Helpers_IODispatcher_EventStore_Projections_Core_Services_ReaderSubscriptionDispatcher_EventStore_Core_Services_TimerService_ITimeProvider_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.Create(Guid%2CEventStore.Core.Bus.IPublisher%2CGuid%2CIPrincipal%2CEventStore.Core.Bus.IPublisher%2CEventStore.Core.Helpers.IODispatcher%2CEventStore.Projections.Core.Services.ReaderSubscriptionDispatcher%2CEventStore.Core.Services.TimerService.ITimeProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ProjectionProcessingStrategy.cs/#L21">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_Create_" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.Create*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_Create_Guid_EventStore_Core_Bus_IPublisher_Guid_IPrincipal_EventStore_Core_Bus_IPublisher_EventStore_Core_Helpers_IODispatcher_EventStore_Projections_Core_Services_ReaderSubscriptionDispatcher_EventStore_Core_Services_TimerService_ITimeProvider_" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.Create(Guid,EventStore.Core.Bus.IPublisher,Guid,IPrincipal,EventStore.Core.Bus.IPublisher,EventStore.Core.Helpers.IODispatcher,EventStore.Projections.Core.Services.ReaderSubscriptionDispatcher,EventStore.Core.Services.TimerService.ITimeProvider)">Create(Guid, IPublisher, Guid, IPrincipal, IPublisher, IODispatcher, ReaderSubscriptionDispatcher, ITimeProvider)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CoreProjection Create(Guid projectionCorrelationId, IPublisher inputQueue, Guid workerId, IPrincipal runAs, IPublisher publisher, IODispatcher ioDispatcher, ReaderSubscriptionDispatcher subscriptionDispatcher, ITimeProvider timeProvider)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">projectionCorrelationId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
+        <td><span class="parametername">inputQueue</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">workerId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IPrincipal</span></td>
+        <td><span class="parametername">runAs</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
+        <td><span class="parametername">publisher</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Helpers.IODispatcher.html">IODispatcher</a></td>
+        <td><span class="parametername">ioDispatcher</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.ReaderSubscriptionDispatcher.html">ReaderSubscriptionDispatcher</a></td>
+        <td><span class="parametername">subscriptionDispatcher</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.TimerService.ITimeProvider.html">ITimeProvider</a></td>
+        <td><span class="parametername">timeProvider</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjection.html">CoreProjection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_CreateProcessingPhases_EventStore_Core_Bus_IPublisher_EventStore_Core_Bus_IPublisher_Guid_EventStore_Projections_Core_Services_Processing_PartitionStateCache_Action_EventStore_Projections_Core_Services_Processing_CoreProjection_EventStore_Projections_Core_Services_Processing_ProjectionNamesBuilder_EventStore_Core_Services_TimerService_ITimeProvider_EventStore_Core_Helpers_IODispatcher_EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointWriter_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.CreateProcessingPhases(EventStore.Core.Bus.IPublisher%2CEventStore.Core.Bus.IPublisher%2CGuid%2CEventStore.Projections.Core.Services.Processing.PartitionStateCache%2CAction%2CEventStore.Projections.Core.Services.Processing.CoreProjection%2CEventStore.Projections.Core.Services.Processing.ProjectionNamesBuilder%2CEventStore.Core.Services.TimerService.ITimeProvider%2CEventStore.Core.Helpers.IODispatcher%2CEventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ProjectionProcessingStrategy.cs/#L74">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_CreateProcessingPhases_" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.CreateProcessingPhases*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_CreateProcessingPhases_EventStore_Core_Bus_IPublisher_EventStore_Core_Bus_IPublisher_Guid_EventStore_Projections_Core_Services_Processing_PartitionStateCache_Action_EventStore_Projections_Core_Services_Processing_CoreProjection_EventStore_Projections_Core_Services_Processing_ProjectionNamesBuilder_EventStore_Core_Services_TimerService_ITimeProvider_EventStore_Core_Helpers_IODispatcher_EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointWriter_" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.CreateProcessingPhases(EventStore.Core.Bus.IPublisher,EventStore.Core.Bus.IPublisher,Guid,EventStore.Projections.Core.Services.Processing.PartitionStateCache,Action,EventStore.Projections.Core.Services.Processing.CoreProjection,EventStore.Projections.Core.Services.Processing.ProjectionNamesBuilder,EventStore.Core.Services.TimerService.ITimeProvider,EventStore.Core.Helpers.IODispatcher,EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointWriter)">CreateProcessingPhases(IPublisher, IPublisher, Guid, PartitionStateCache, Action, CoreProjection, ProjectionNamesBuilder, ITimeProvider, IODispatcher, CoreProjectionCheckpointWriter)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract IProjectionProcessingPhase[] CreateProcessingPhases(IPublisher publisher, IPublisher inputQueue, Guid projectionCorrelationId, PartitionStateCache partitionStateCache, Action updateStatistics, CoreProjection coreProjection, ProjectionNamesBuilder namingBuilder, ITimeProvider timeProvider, IODispatcher ioDispatcher, CoreProjectionCheckpointWriter coreProjectionCheckpointWriter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
+        <td><span class="parametername">publisher</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
+        <td><span class="parametername">inputQueue</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">projectionCorrelationId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.PartitionStateCache.html">PartitionStateCache</a></td>
+        <td><span class="parametername">partitionStateCache</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span></td>
+        <td><span class="parametername">updateStatistics</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjection.html">CoreProjection</a></td>
+        <td><span class="parametername">coreProjection</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ProjectionNamesBuilder.html">ProjectionNamesBuilder</a></td>
+        <td><span class="parametername">namingBuilder</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.TimerService.ITimeProvider.html">ITimeProvider</a></td>
+        <td><span class="parametername">timeProvider</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Helpers.IODispatcher.html">IODispatcher</a></td>
+        <td><span class="parametername">ioDispatcher</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointWriter.html">CoreProjectionCheckpointWriter</a></td>
+        <td><span class="parametername">coreProjectionCheckpointWriter</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.IProjectionProcessingPhase.html">IProjectionProcessingPhase</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_EnrichStatistics_EventStore_Projections_Core_Services_ProjectionStatistics_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.EnrichStatistics(EventStore.Projections.Core.Services.ProjectionStatistics)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ProjectionProcessingStrategy.cs/#L72">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_EnrichStatistics_" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.EnrichStatistics*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_EnrichStatistics_EventStore_Projections_Core_Services_ProjectionStatistics_" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.EnrichStatistics(EventStore.Projections.Core.Services.ProjectionStatistics)">EnrichStatistics(ProjectionStatistics)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void EnrichStatistics(ProjectionStatistics info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.ProjectionStatistics.html">ProjectionStatistics</a></td>
+        <td><span class="parametername">info</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_GetIsSlaveProjection.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.GetIsSlaveProjection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ProjectionProcessingStrategy.cs/#L71">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_GetIsSlaveProjection_" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.GetIsSlaveProjection*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_GetIsSlaveProjection" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.GetIsSlaveProjection">GetIsSlaveProjection()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool GetIsSlaveProjection()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_GetProducesRunningResults.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.GetProducesRunningResults%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ProjectionProcessingStrategy.cs/#L70">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_GetProducesRunningResults_" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.GetProducesRunningResults*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_GetProducesRunningResults" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.GetProducesRunningResults">GetProducesRunningResults()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool GetProducesRunningResults()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_GetRequiresRootPartition.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.GetRequiresRootPartition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ProjectionProcessingStrategy.cs/#L69">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_GetRequiresRootPartition_" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.GetRequiresRootPartition*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_GetRequiresRootPartition" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.GetRequiresRootPartition">GetRequiresRootPartition()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool GetRequiresRootPartition()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_GetSlaveProjections.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.GetSlaveProjections%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ProjectionProcessingStrategy.cs/#L86">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_GetSlaveProjections_" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.GetSlaveProjections*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_GetSlaveProjections" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.GetSlaveProjections">GetSlaveProjections()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract SlaveProjectionDefinitions GetSlaveProjections()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.html">SlaveProjectionDefinitions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_GetSourceDefinition.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.GetSourceDefinition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ProjectionProcessingStrategy.cs/#L65">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_GetSourceDefinition_" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.GetSourceDefinition*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_GetSourceDefinition" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.GetSourceDefinition">GetSourceDefinition()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract IQuerySources GetSourceDefinition()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.IQuerySources.html">IQuerySources</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_GetStopOnEof.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.GetStopOnEof%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ProjectionProcessingStrategy.cs/#L67">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_GetStopOnEof_" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.GetStopOnEof*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_GetStopOnEof" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.GetStopOnEof">GetStopOnEof()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool GetStopOnEof()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_GetUseCheckpoints.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.GetUseCheckpoints%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ProjectionProcessingStrategy.cs/#L68">View Source</a>
+  </span>
+  <a id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_GetUseCheckpoints_" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.GetUseCheckpoints*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy_GetUseCheckpoints" data-uid="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.GetUseCheckpoints">GetUseCheckpoints()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool GetUseCheckpoints()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJson_System_Object_">Json.ToJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_Serialize__1___0_">ProtobufExtensions.Serialize&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_SerializeToArray__1___0_">ProtobufExtensions.SerializeToArray&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ProjectionProcessingStrategy.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ProjectionProcessingStrategy.cs/#L10" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

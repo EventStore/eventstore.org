@@ -1,0 +1,895 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Reading Streams and Events | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Reading Streams and Events | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="reading-streams-and-events">Reading Streams and Events</h1>
+
+<h2 id="reading-a-stream">Reading a stream</h2>
+<p>Event Store exposes streams as a resource located at <em>http(s)://{yourdomain.com}:{port}/streams/{stream}</em>. If you issue a simple <code>GET</code> request to this resource, you receive a standard AtomFeed document as a response.</p>
+<div class="tabGroup" id="tabgroup_LGtvxSPeFV">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV_tabid-1" role="tab" aria-controls="tabpanel_LGtvxSPeFV_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV_tabid-2" role="tab" aria-controls="tabpanel_LGtvxSPeFV_tabid-2" data-tab="tabid-2" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_LGtvxSPeFV_tabid-1" role="tabpanel" data-tab="tabid-1">
+<pre><code class="lang-bash" name="getting-started-read-stream-request">curl -i -H &quot;Accept:application/vnd.eventstore.atom+json&quot; &quot;http://127.0.0.1:2113/streams/newstream&quot;
+</code></pre></section>
+<section id="tabpanel_LGtvxSPeFV_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-http" name="getting-started-read-stream-response">HTTP/1.1 200 OK
+Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position, ES-CurrentVersion
+Cache-Control: max-age=0, no-cache, must-revalidate
+Vary: Accept
+ETag: &quot;0;-2060438500&quot;
+Content-Type: application/vnd.eventstore.atom+json; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Fri, 15 Dec 2017 12:23:23 GMT
+Content-Length: 1262
+Keep-Alive: timeout=15,max=100
+
+{
+  &quot;title&quot;: &quot;Event stream &#39;newstream&#39;&quot;,
+  &quot;id&quot;: &quot;http://127.0.0.1:2113/streams/newstream&quot;,
+  &quot;updated&quot;: &quot;2017-12-15T12:19:32.021776Z&quot;,
+  &quot;streamId&quot;: &quot;newstream&quot;,
+  &quot;author&quot;: {
+    &quot;name&quot;: &quot;EventStore&quot;
+  },
+  &quot;headOfStream&quot;: true,
+  &quot;selfUrl&quot;: &quot;http://127.0.0.1:2113/streams/newstream&quot;,
+  &quot;eTag&quot;: &quot;0;-2060438500&quot;,
+  &quot;links&quot;: [
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream&quot;,
+      &quot;relation&quot;: &quot;self&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/head/backward/20&quot;,
+      &quot;relation&quot;: &quot;first&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/1/forward/20&quot;,
+      &quot;relation&quot;: &quot;previous&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/metadata&quot;,
+      &quot;relation&quot;: &quot;metadata&quot;
+    }
+  ],
+  &quot;entries&quot;: [
+    {
+      &quot;title&quot;: &quot;0@newstream&quot;,
+      &quot;id&quot;: &quot;http://127.0.0.1:2113/streams/newstream/0&quot;,
+      &quot;updated&quot;: &quot;2017-12-15T12:19:32.021776Z&quot;,
+      &quot;author&quot;: {
+        &quot;name&quot;: &quot;EventStore&quot;
+      },
+      &quot;summary&quot;: &quot;event-type&quot;,
+      &quot;links&quot;: [
+        {
+          &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/0&quot;,
+          &quot;relation&quot;: &quot;edit&quot;
+        },
+        {
+          &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/0&quot;,
+          &quot;relation&quot;: &quot;alternate&quot;
+        }
+      ]
+    }
+  ]
+}
+</code></pre></section>
+</div>
+<h2 id="reading-an-event-from-a-stream">Reading an event from a stream</h2>
+<p>The feed has one item in it, and if there are more than one, then items are sorted from newest to oldest.</p>
+<p>For each entry, there are a series of links to the actual events, <a href="#embedding-data-into-streams-in-json-format">we cover embedding data into a stream later</a>. To <code>GET</code> an event, follow the <code>alternate</code> link and set your <code>Accept</code> headers to the mime type you would like the event in.</p>
+<p>The accepted content types for <code>GET</code> requests are:</p>
+<ul>
+<li><code>application/xml</code></li>
+<li><code>application/atom+xml</code></li>
+<li><code>application/json</code></li>
+<li><code>application/vnd.eventstore.atom+json</code></li>
+<li><code>text/xml</code></li>
+<li><code>text/html</code></li>
+</ul>
+<p>The non-atom version of the event has fewer details about the event.</p>
+<div class="tabGroup" id="tabgroup_LGtvxSPeFV-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-1_tabid-3" role="tab" aria-controls="tabpanel_LGtvxSPeFV-1_tabid-3" data-tab="tabid-3" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-1_tabid-4" role="tab" aria-controls="tabpanel_LGtvxSPeFV-1_tabid-4" data-tab="tabid-4" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_LGtvxSPeFV-1_tabid-3" role="tabpanel" data-tab="tabid-3">
+<pre><code class="lang-bash" name="getting-started-read-event-request">curl -i http://127.0.0.1:2113/streams/newstream/0 -H &quot;Accept: application/json&quot;
+</code></pre></section>
+<section id="tabpanel_LGtvxSPeFV-1_tabid-4" role="tabpanel" data-tab="tabid-4" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-http" name="getting-started-read-event-response">HTTP/1.1 200 OK
+Access-Control-Allow-Methods: GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-PINGOTHER
+Access-Control-Allow-Origin: *
+Cache-Control: max-age=31536000, public
+Vary: Accept
+Content-Type: application/json; charset: utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Wed, 03 Jul 2013 11:09:12 GMT
+Content-Length: 14
+Keep-Alive: timeout=15,max=100
+
+{
+  &quot;a&quot;: &quot;1&quot;
+}
+</code></pre></section>
+</div>
+<h2 id="feed-paging">Feed Paging</h2>
+<p>The next step in understanding how to read a stream is the <code>first</code>/<code>last</code>/<code>previous</code>/<code>next</code> links within a stream. Event Store supplies these links so you can read through a stream, and they follow the pattern defined in <a href="http://tools.ietf.org/html/rfc5005">RFC 5005</a>.</p>
+<p>In the example above the server returned the following <code>links</code> as part of its result:</p>
+<pre><code class="lang-http" name="getting-started-read-event-response">&quot;links&quot;: [
+  {
+    &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream&quot;,
+    &quot;relation&quot;: &quot;self&quot;
+  },
+  {
+    &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/head/backward/20&quot;,
+    &quot;relation&quot;: &quot;first&quot;
+  },
+  {
+    &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/2/forward/20&quot;,
+    &quot;relation&quot;: &quot;previous&quot;
+  },
+  {
+    &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/metadata&quot;,
+    &quot;relation&quot;: &quot;metadata&quot;
+  }
+],
+</code></pre><p>This shows that there is not a <code>next</code> URL as all the information is in this request and that the URL requested is the first link. When dealing with these URLs, there are two ways of reading the data in the stream.</p>
+<ul>
+<li>You <code>GET</code> the <code>last</code> link and move backwards following <code>previous</code> links, or</li>
+<li>You <code>GET</code> the <code>first</code> link and follow the <code>next</code> links, and the final item will not have a <code>next</code> link.</li>
+</ul>
+<p>If you want to follow a live stream, then you keep following the <code>previous</code> links. When you reach the end of a stream, you receive an empty document with no entries or <code>previous</code> link. You then continue polling this URI (in the future a document will appear). You can see this by trying the <code>previous</code> link from the above feed.</p>
+<div class="tabGroup" id="tabgroup_LGtvxSPeFV-2">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-2_tabid-5" role="tab" aria-controls="tabpanel_LGtvxSPeFV-2_tabid-5" data-tab="tabid-5" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-2_tabid-6" role="tab" aria-controls="tabpanel_LGtvxSPeFV-2_tabid-6" data-tab="tabid-6" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_LGtvxSPeFV-2_tabid-5" role="tabpanel" data-tab="tabid-5">
+<pre><code class="lang-bash" name="getting-started-read-event-forwards-request">curl -i http://127.0.0.1:2113/streams/newstream/1/forward/20 -H &quot;Accept:application/vnd.eventstore.atom+json&quot;
+</code></pre></section>
+<section id="tabpanel_LGtvxSPeFV-2_tabid-6" role="tabpanel" data-tab="tabid-6" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-http" name="getting-started-read-event-forwards-response">HTTP/1.1 200 OK
+Access-Control-Allow-Methods: GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTo, ES-ExpectedVersion
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position
+Cache-Control: max-age=0, no-cache, must-revalidate
+Vary: Accept
+ETag: &quot;0;248368668&quot;
+Content-Type: application/vnd.eventstore.atom+json; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Fri, 13 Mar 2015 14:04:47 GMT
+Content-Length: 795
+Keep-Alive: timeout=15,max=100
+
+{
+  &quot;title&quot;: &quot;Event stream &#39;newstream&#39;&quot;,
+  &quot;id&quot;: &quot;&lt;http://127.0.0.1:2113/streams/newstream&quot;&gt;,
+  &quot;updated&quot;: &quot;0001-01-01T00:00:00Z&quot;,
+  &quot;streamId&quot;: &quot;newstream&quot;,
+  &quot;author&quot;: {
+    &quot;name&quot;: &quot;EventStore&quot;
+  },
+  &quot;headOfStream&quot;: false,
+  &quot;links&quot;: [
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream&quot;,
+      &quot;relation&quot;: &quot;self&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/head/backward/20&quot;,
+      &quot;relation&quot;: &quot;first&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/0/forward/20&quot;,
+      &quot;relation&quot;: &quot;last&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/0/backward/20&quot;,
+      &quot;relation&quot;: &quot;next&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/metadata&quot;,
+      &quot;relation&quot;: &quot;metadata&quot;
+    }
+  ],
+  &quot;entries&quot;: \[]
+}
+</code></pre></section>
+</div>
+<p>When parsing an atom subscription, the IDs of events always stay the same. This is important for figuring out if you are referring to the same event.</p>
+<h2 id="paging-through-events">Paging through events</h2>
+<p>Let&#39;s now try an example with more than a single page. First create the multiple events:</p>
+<div class="tabGroup" id="tabgroup_LGtvxSPeFV-3">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-3_tabid-1" role="tab" aria-controls="tabpanel_LGtvxSPeFV-3_tabid-1" data-tab="tabid-1" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-3_tabid-2" role="tab" aria-controls="tabpanel_LGtvxSPeFV-3_tabid-2" data-tab="tabid-2" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_LGtvxSPeFV-3_tabid-1" role="tabpanel" data-tab="tabid-1">
+<pre><code class="lang-bash" name="http-api-write-paging-events-request">curl -i -d &quot;@paging-events.json&quot; &quot;http://127.0.0.1:2113/streams/alphabet&quot; -H &quot;Content-Type:application/vnd.eventstore.events+json&quot;
+</code></pre></section>
+<section id="tabpanel_LGtvxSPeFV-3_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-http" name="http-api-write-paging-events-response">HTTP/1.1 100 Continue
+
+HTTP/1.1 201 Created
+Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position, ES-CurrentVersion
+Location: http://127.0.0.1:2113/streams/alphabet/0
+Content-Type: text/plain; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Tue, 21 Aug 2018 09:53:46 GMT
+Content-Length: 0
+Keep-Alive: timeout=15,max=100
+</code></pre></section>
+</div>
+<p>If you request the stream of events, you see a series of links above the events:</p>
+<div class="tabGroup" id="tabgroup_LGtvxSPeFV-4">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-4_tabid-3" role="tab" aria-controls="tabpanel_LGtvxSPeFV-4_tabid-3" data-tab="tabid-3" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-4_tabid-4" role="tab" aria-controls="tabpanel_LGtvxSPeFV-4_tabid-4" data-tab="tabid-4" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_LGtvxSPeFV-4_tabid-3" role="tabpanel" data-tab="tabid-3">
+<pre><code class="lang-bash" name="http-api-read-paging-events-request">curl -i http://127.0.0.1:2113/streams/alphabet -H &quot;Accept:application/vnd.eventstore.atom+json&quot;
+</code></pre></section>
+<section id="tabpanel_LGtvxSPeFV-4_tabid-4" role="tabpanel" data-tab="tabid-4" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-http" name="http-api-read-paging-events-response">HTTP/1.1 200 OK
+Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position, ES-CurrentVersion
+Cache-Control: max-age=0, no-cache, must-revalidate
+Vary: Accept
+ETag: &quot;26;-2060438500&quot;
+Content-Type: application/vnd.eventstore.atom+json; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Tue, 21 Aug 2018 10:12:31 GMT
+Content-Length: 10727
+Keep-Alive: timeout=15,max=100
+
+{
+  &quot;title&quot;: &quot;Event stream &#39;alphabet&#39;&quot;,
+  &quot;id&quot;: &quot;http://127.0.0.1:2113/streams/alphabet&quot;,
+  &quot;updated&quot;: &quot;2018-08-21T09:53:46.869815Z&quot;,
+  &quot;streamId&quot;: &quot;alphabet&quot;,
+  &quot;author&quot;: {
+    &quot;name&quot;: &quot;EventStore&quot;
+  },
+  &quot;headOfStream&quot;: true,
+  &quot;selfUrl&quot;: &quot;http://127.0.0.1:2113/streams/alphabet&quot;,
+  &quot;eTag&quot;: &quot;26;-2060438500&quot;,
+  &quot;links&quot;: [
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/alphabet&quot;,
+      &quot;relation&quot;: &quot;self&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/alphabet/head/backward/20&quot;,
+      &quot;relation&quot;: &quot;first&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/alphabet/0/forward/20&quot;,
+      &quot;relation&quot;: &quot;last&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/alphabet/6/backward/20&quot;,
+      &quot;relation&quot;: &quot;next&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/alphabet/27/forward/20&quot;,
+      &quot;relation&quot;: &quot;previous&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/alphabet/metadata&quot;,
+      &quot;relation&quot;: &quot;metadata&quot;
+    }
+  ],
+  &quot;entries&quot;: [
+  ]
+}
+</code></pre></section>
+</div>
+<p>Using the links in the stream of events, you can traverse through all the events in the stream by going to the <code>last</code> URL and following <code>previous</code> links, or by following <code>next</code> links from the <code>first</code> link.</p>
+<p>For example, if you request the <code>last</code> link from above:</p>
+<div class="tabGroup" id="tabgroup_LGtvxSPeFV-5">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-5_tabid-5" role="tab" aria-controls="tabpanel_LGtvxSPeFV-5_tabid-5" data-tab="tabid-5" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-5_tabid-6" role="tab" aria-controls="tabpanel_LGtvxSPeFV-5_tabid-6" data-tab="tabid-6" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_LGtvxSPeFV-5_tabid-5" role="tabpanel" data-tab="tabid-5">
+<pre><code class="lang-bash" name="http-api-read-last-link-request">curl -i http://127.0.0.1:2113/streams/alphabet/0/forward/20 -H &quot;Accept:application/vnd.eventstore.atom+json&quot;
+</code></pre></section>
+<section id="tabpanel_LGtvxSPeFV-5_tabid-6" role="tabpanel" data-tab="tabid-6" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-http" name="http-api-read-last-link-response">HTTP/1.1 200 OK
+Access-Control-Allow-Methods: GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position, ES-CurrentVersion
+Cache-Control: max-age=31536000, public
+Vary: Accept
+Content-Type: application/vnd.eventstore.atom+json; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Tue, 21 Aug 2018 10:24:28 GMT
+Content-Length: 10403
+Keep-Alive: timeout=15,max=100
+
+{
+  &quot;title&quot;: &quot;Event stream &#39;alphabet&#39;&quot;,
+  &quot;id&quot;: &quot;http://127.0.0.1:2113/streams/alphabet&quot;,
+  &quot;updated&quot;: &quot;2018-08-21T09:53:46.869716Z&quot;,
+  &quot;streamId&quot;: &quot;alphabet&quot;,
+  &quot;author&quot;: {
+    &quot;name&quot;: &quot;EventStore&quot;
+  },
+  &quot;headOfStream&quot;: false,
+  &quot;links&quot;: [
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/alphabet&quot;,
+      &quot;relation&quot;: &quot;self&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/alphabet/head/backward/20&quot;,
+      &quot;relation&quot;: &quot;first&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/alphabet/20/forward/20&quot;,
+      &quot;relation&quot;: &quot;previous&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/alphabet/metadata&quot;,
+      &quot;relation&quot;: &quot;metadata&quot;
+    }
+  ],
+  &quot;entries&quot;: [
+  ]
+}
+</code></pre></section>
+</div>
+<p>You then follow <code>previous</code> links until you are back to the head of the stream, where you can continue reading events in real time by polling the <code>previous</code> link.</p>
+<div class="NOTE"><h5>Note</h5><p>All links except the head link are fully cacheable as you can see in the HTTP header <code>Cache-Control: max-age=31536000, public</code>. This is important when discussing intermediaries and performance as you commonly replay a stream from storage. You should <strong>never</strong> bookmark links aside from the head of the stream resource, and always follow links. We may in the future change how internal links work, and bookmarking links other than the head may break.</p>
+</div>
+<h2 id="reading-all-events">Reading All Events</h2>
+<p><code>$all</code> is a special paged stream for all events. You can use the same paged form of reading described above to read all events for a node by pointing the stream at <em>/streams/$all</em>. As it&#39;s a stream like any other, you can perform all operations, except posting to it.</p>
+<div class="NOTE"><h5>Note</h5><p>To access the <code>$all</code> stream, you must use admin details, find more information on the <a href="../security/index.html">security</a> page.</p>
+</div>
+<div class="tabGroup" id="tabgroup_LGtvxSPeFV-6">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-6_tabid-13" role="tab" aria-controls="tabpanel_LGtvxSPeFV-6_tabid-13" data-tab="tabid-13" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-6_tabid-14" role="tab" aria-controls="tabpanel_LGtvxSPeFV-6_tabid-14" data-tab="tabid-14" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_LGtvxSPeFV-6_tabid-13" role="tabpanel" data-tab="tabid-13">
+<pre><code class="lang-bash" name="getting-started-read-all-events-request">curl -i http://127.0.0.1:2113/streams/%24all -H &quot;Accept:application/vnd.eventstore.atom+json&quot; -u admin:changeit
+</code></pre></section>
+<section id="tabpanel_LGtvxSPeFV-6_tabid-14" role="tabpanel" data-tab="tabid-14" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-http" name="getting-started-read-all-events-response">HTTP/1.1 200 OK
+Access-Control-Allow-Methods: POST, DELETE, GET, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTo, ES-ExpectedVersion
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position
+Cache-Control: max-age=0, no-cache, must-revalidate
+Vary: Accept
+ETag: &quot;25159393;248368668&quot;
+Content-Type: application/vnd.eventstore.atom+json; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Fri, 13 Mar 2015 16:19:09 GMT
+Content-Length: 12157
+Keep-Alive: timeout=15,max=100
+
+{
+  &quot;title&quot;: &quot;All events&quot;,
+  &quot;id&quot;: &quot;&lt;http://127.0.0.1:2113/streams/%24all&quot;&gt;,
+  &quot;updated&quot;: &quot;2015-03-13T16:19:06.548415Z&quot;,
+  &quot;author&quot;: {
+    &quot;name&quot;: &quot;EventStore&quot;
+  },
+  &quot;headOfStream&quot;: false,
+  &quot;links&quot;: [
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/%24all&quot;,
+      &quot;relation&quot;: &quot;self&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/%24all/head/backward/20&quot;,
+      &quot;relation&quot;: &quot;first&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/%24all/00000000000000000000000000000000/forward/20&quot;,
+      &quot;relation&quot;: &quot;last&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/%24all/00000000017BC0D000000000017BC0D0/backward/20&quot;,
+      &quot;relation&quot;: &quot;next&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/%24all/0000000001801EBF0000000001801EBF/forward/20&quot;,
+      &quot;relation&quot;: &quot;previous&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/%24all/metadata&quot;,
+      &quot;relation&quot;: &quot;metadata&quot;
+    }
+  ],
+  &quot;entries&quot;: []
+
+# TODO: Make complete
+</code></pre></section>
+</div>
+<h2 id="conditional-gets">Conditional Gets</h2>
+<p>The head link supports conditional <code>GET</code>s with the use of <a href="http://en.wikipedia.org/wiki/HTTP_ETag">ETAGS</a>, a well-known HTTP construct. You can include the ETAG of your last request and issue a conditional <code>GET</code> to the server. If nothing has changed, it won&#39;t return the full feed. For example the earlier request has an ETAG:</p>
+<div class="tabGroup" id="tabgroup_LGtvxSPeFV-7">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-7_tabid-15" role="tab" aria-controls="tabpanel_LGtvxSPeFV-7_tabid-15" data-tab="tabid-15" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-7_tabid-16" role="tab" aria-controls="tabpanel_LGtvxSPeFV-7_tabid-16" data-tab="tabid-16" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_LGtvxSPeFV-7_tabid-15" role="tabpanel" data-tab="tabid-15">
+<pre><code class="lang-bash" name="http-api-read-paging-events-request">curl -i http://127.0.0.1:2113/streams/alphabet -H &quot;Accept:application/vnd.eventstore.atom+json&quot;
+</code></pre></section>
+<section id="tabpanel_LGtvxSPeFV-7_tabid-16" role="tabpanel" data-tab="tabid-16" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-http" name="http-api-read-paging-events-response">ETag: &quot;26;-2060438500&quot;
+</code></pre></section>
+</div>
+<p>You can use this in your next request when polling the stream for changes by putting it in the <code>If-None-Match</code> header. This tells the server to check if the response is the one you already know and returning a &#39;304 not modified&#39; response. If the tags have changed, the server returns a &#39;200 OK&#39; response. You can use this method to optimise your application by not sending large streams if there are no changes.</p>
+<div class="tabGroup" id="tabgroup_LGtvxSPeFV-8">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-8_tabid-17" role="tab" aria-controls="tabpanel_LGtvxSPeFV-8_tabid-17" data-tab="tabid-17" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-8_tabid-18" role="tab" aria-controls="tabpanel_LGtvxSPeFV-8_tabid-18" data-tab="tabid-18" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_LGtvxSPeFV-8_tabid-17" role="tabpanel" data-tab="tabid-17">
+<pre><code class="lang-bash" name="http-api-etag-request">curl -i http://127.0.0.1:2113/streams/alphabet -H &quot;Accept:application/vnd.eventstore.atom+json&quot; -H &quot;If-None-Match:26;-2060438500&quot;
+</code></pre></section>
+<section id="tabpanel_LGtvxSPeFV-8_tabid-18" role="tabpanel" data-tab="tabid-18" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-http" name="http-api-etag-response">HTTP/1.1 304 Not Modified
+Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position, ES-CurrentVersion
+Content-Type: text/plain; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Tue, 21 Aug 2018 12:07:35 GMT
+Content-Length: 0
+Keep-Alive: timeout=15,max=100
+</code></pre></section>
+</div>
+<div class="NOTE"><h5>Note</h5><p>You create Etags using the version of the stream and the media type of the stream you are reading. You can&#39;t read an Etag from a stream in one media type and use it with another media type.</p>
+</div>
+<h2 id="embedding-data-into-streams-in-json-format">Embedding Data into Streams in JSON format</h2>
+<p>So far in this guide, the feeds returned have contained links that refer to the actual event data. This is normally a preferable mechanism for several reasons:</p>
+<ul>
+<li>They can be in a different media type than the feed, and you can negotiate them separately from the feed itself (e.g., the feed in JSON, the event in XML). You can cache the event data separately from the feed, and you can point it to different feeds. If you use a <code>linkTo()</code> in your <a href="../../projections/index.html">projection</a> this is what happens in your atom feeds.</li>
+<li>If you are using JSON, you can embed the events into the atom feed events. This can help cut down on the number of requests in some situations, but the messages are larger.</li>
+</ul>
+<p>There are ways of embedding events and further metadata into your stream by using the <code>embed=</code> parameter.</p>
+<h3 id="rich-embed-mode">Rich embed mode</h3>
+<p>The <code>rich</code> embed mode returns more properties about the event (<code>eventtype</code>, <code>streamid</code>, <code>position</code>, etc.) as you can see in the following request.</p>
+<div class="tabGroup" id="tabgroup_LGtvxSPeFV-9">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-9_tabid-19" role="tab" aria-controls="tabpanel_LGtvxSPeFV-9_tabid-19" data-tab="tabid-19" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-9_tabid-20" role="tab" aria-controls="tabpanel_LGtvxSPeFV-9_tabid-20" data-tab="tabid-20" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_LGtvxSPeFV-9_tabid-19" role="tabpanel" data-tab="tabid-19">
+<pre><code class="lang-bash" name="getting-started-read-stream-rich-request">curl -i -H &quot;Accept:application/vnd.eventstore.atom+json&quot; &quot;http://127.0.0.1:2113/streams/newstream?embed=rich&quot;
+</code></pre></section>
+<section id="tabpanel_LGtvxSPeFV-9_tabid-20" role="tabpanel" data-tab="tabid-20" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-http" name="getting-started-read-stream-rich-response">HTTP/1.1 200 OK
+Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTo, ES-ExpectedVersion
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position
+Cache-Control: max-age=0, no-cache, must-revalidate
+Vary: Accept
+ETag: &quot;0;248368668&quot;
+Content-Type: application/vnd.eventstore.atom+json; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Fri, 13 Mar 2015 16:30:57 GMT
+Content-Length: 1570
+Keep-Alive: timeout=15,max=100
+
+{
+  &quot;title&quot;: &quot;Event stream &#39;newstream&#39;&quot;,
+  &quot;id&quot;: &quot;&lt;http://127.0.0.1:2113/streams/newstream&quot;&gt;,
+  &quot;updated&quot;: &quot;2015-03-13T12:13:42.492473Z&quot;,
+  &quot;streamId&quot;: &quot;newstream&quot;,
+  &quot;author&quot;: {
+    &quot;name&quot;: &quot;EventStore&quot;
+  },
+  &quot;headOfStream&quot;: true,
+  &quot;selfUrl&quot;: &quot;&lt;http://127.0.0.1:2113/streams/newstream&quot;&gt;,
+  &quot;eTag&quot;: &quot;0;248368668&quot;,
+  &quot;links&quot;: [
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream&quot;,
+      &quot;relation&quot;: &quot;self&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/head/backward/20&quot;,
+      &quot;relation&quot;: &quot;first&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/1/forward/20&quot;,
+      &quot;relation&quot;: &quot;previous&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/metadata&quot;,
+      &quot;relation&quot;: &quot;metadata&quot;
+    }
+  ],
+  &quot;entries&quot;: [
+    {
+      &quot;eventId&quot;: &quot;fbf4a1a1-b4a3-4dfe-a01f-ec52c34e16e4&quot;,
+      &quot;eventType&quot;: &quot;event-type&quot;,
+      &quot;eventNumber&quot;: 0,
+      &quot;streamId&quot;: &quot;newstream&quot;,
+      &quot;isJson&quot;: true,
+      &quot;isMetaData&quot;: false,
+      &quot;isLinkMetaData&quot;: false,
+      &quot;positionEventNumber&quot;: 0,
+      &quot;positionStreamId&quot;: &quot;newstream&quot;,
+      &quot;title&quot;: &quot;0@newstream&quot;,
+      &quot;id&quot;: &quot;&lt;http://127.0.0.1:2113/streams/newstream/0&quot;&gt;,
+      &quot;updated&quot;: &quot;2015-03-13T12:13:42.492473Z&quot;,
+      &quot;author&quot;: {
+        &quot;name&quot;: &quot;EventStore&quot;
+      },
+      &quot;summary&quot;: &quot;event-type&quot;,
+      &quot;links&quot;: [
+        {
+          &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/0&quot;,
+          &quot;relation&quot;: &quot;edit&quot;
+        },
+        {
+          &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/0&quot;,
+          &quot;relation&quot;: &quot;alternate&quot;
+        }
+      ]
+    }
+  ]
+}
+</code></pre></section>
+</div>
+<h3 id="body-embed-mode">Body embed mode</h3>
+<p>The <code>body</code> embed mode returns the JSON/XML body of the events into the feed as well, depending on the type of the feed. You can see this in the request below:</p>
+<div class="tabGroup" id="tabgroup_LGtvxSPeFV-10">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-10_tabid-21" role="tab" aria-controls="tabpanel_LGtvxSPeFV-10_tabid-21" data-tab="tabid-21" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-10_tabid-22" role="tab" aria-controls="tabpanel_LGtvxSPeFV-10_tabid-22" data-tab="tabid-22" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_LGtvxSPeFV-10_tabid-21" role="tabpanel" data-tab="tabid-21">
+<pre><code class="lang-bash" name="getting-started-read-stream-body-request">curl -i -H &quot;Accept:application/vnd.eventstore.atom+json&quot; &quot;http://127.0.0.1:2113/streams/newstream?embed=body&quot;
+</code></pre></section>
+<section id="tabpanel_LGtvxSPeFV-10_tabid-22" role="tabpanel" data-tab="tabid-22" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-http" name="getting-started-read-stream-body-response">HTTP/1.1 200 OK
+Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTo, ES-ExpectedVersion
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position
+Cache-Control: max-age=0, no-cache, must-revalidate
+Vary: Accept
+ETag: &quot;0;248368668&quot;
+Content-Type: application/vnd.eventstore.atom+json; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Fri, 13 Mar 2015 16:32:06 GMT
+Content-Length: 1608
+Keep-Alive: timeout=15,max=100
+
+{
+  &quot;title&quot;: &quot;Event stream &#39;newstream&#39;&quot;,
+  &quot;id&quot;: &quot;&lt;http://127.0.0.1:2113/streams/newstream&quot;&gt;,
+  &quot;updated&quot;: &quot;2015-03-13T12:13:42.492473Z&quot;,
+  &quot;streamId&quot;: &quot;newstream&quot;,
+  &quot;author&quot;: {
+    &quot;name&quot;: &quot;EventStore&quot;
+  },
+  &quot;headOfStream&quot;: true,
+  &quot;selfUrl&quot;: &quot;&lt;http://127.0.0.1:2113/streams/newstream&quot;&gt;,
+  &quot;eTag&quot;: &quot;0;248368668&quot;,
+  &quot;links&quot;: [
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream&quot;,
+      &quot;relation&quot;: &quot;self&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/head/backward/20&quot;,
+      &quot;relation&quot;: &quot;first&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/1/forward/20&quot;,
+      &quot;relation&quot;: &quot;previous&quot;
+    },
+    {
+      &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/metadata&quot;,
+      &quot;relation&quot;: &quot;metadata&quot;
+    }
+  ],
+  &quot;entries&quot;: \[
+    {
+      &quot;eventId&quot;: &quot;fbf4a1a1-b4a3-4dfe-a01f-ec52c34e16e4&quot;,
+      &quot;eventType&quot;: &quot;event-type&quot;,
+      &quot;eventNumber&quot;: 0,
+      &quot;data&quot;: &quot;{\\n  &quot;a&quot;: &quot;1&quot;\\n}&quot;,
+      &quot;streamId&quot;: &quot;newstream&quot;,
+      &quot;isJson&quot;: true,
+      &quot;isMetaData&quot;: false,
+      &quot;isLinkMetaData&quot;: false,
+      &quot;positionEventNumber&quot;: 0,
+      &quot;positionStreamId&quot;: &quot;newstream&quot;,
+      &quot;title&quot;: &quot;0@newstream&quot;,
+      &quot;id&quot;: &quot;&lt;http://127.0.0.1:2113/streams/newstream/0&quot;&gt;,
+      &quot;updated&quot;: &quot;2015-03-13T12:13:42.492473Z&quot;,
+      &quot;author&quot;: {
+        &quot;name&quot;: &quot;EventStore&quot;
+      },
+      &quot;summary&quot;: &quot;event-type&quot;,
+      &quot;links&quot;: [
+        {
+          &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/0&quot;,
+          &quot;relation&quot;: &quot;edit&quot;
+        },
+        {
+          &quot;uri&quot;: &quot;http://127.0.0.1:2113/streams/newstream/0&quot;,
+          &quot;relation&quot;: &quot;alternate&quot;
+        }
+      ]
+    }
+  ]
+}
+</code></pre></section>
+</div>
+<h4 id="variants-of-body-embed-mode">Variants of body embed mode</h4>
+<p>Two other modes are variants of <code>body</code>:</p>
+<ul>
+<li><code>PrettyBody</code> tries to reformat the JSON to make it &quot;pretty to read&quot;.</li>
+<li><code>TryHarder</code> works harder to try to parse and reformat the JSON from an event to return it in the feed. These do not include further information and are focused on how the feed looks.</li>
+</ul>
+<h2 id="embedding-data-into-streams-in-xml-format">Embedding Data into Streams in XML format</h2>
+<p>The XML format embeds no additional data, as only JSON supports embedding.</p>
+<div class="tabGroup" id="tabgroup_LGtvxSPeFV-11">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-11_tabid-23" role="tab" aria-controls="tabpanel_LGtvxSPeFV-11_tabid-23" data-tab="tabid-23" tabindex="0" aria-selected="true">Request</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_LGtvxSPeFV-11_tabid-24" role="tab" aria-controls="tabpanel_LGtvxSPeFV-11_tabid-24" data-tab="tabid-24" tabindex="-1">Response</a>
+</li>
+</ul>
+<section id="tabpanel_LGtvxSPeFV-11_tabid-23" role="tabpanel" data-tab="tabid-23">
+<pre><code class="lang-bash" name="getting-started-read-stream-xml-request">curl -i -H &quot;Accept:application/atom+xml&quot; &quot;http://127.0.0.1:2113/streams/newstream?embed=body&quot;
+</code></pre></section>
+<section id="tabpanel_LGtvxSPeFV-11_tabid-24" role="tabpanel" data-tab="tabid-24" aria-hidden="true" hidden="hidden">
+<pre><code class="lang-http" name="getting-started-read-stream-xml-response">HTTP/1.1 200 OK
+Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTo, ES-ExpectedVersion
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Location, ES-Position
+Cache-Control: max-age=0, no-cache, must-revalidate
+Vary: Accept
+ETag: &quot;0;-1296467268&quot;
+Content-Type: application/atom+xml; charset=utf-8
+Server: Mono-HTTPAPI/1.0
+Date: Fri, 13 Mar 2015 16:32:56 GMT
+Content-Length: 929
+Keep-Alive: timeout=15,max=100
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot;&gt;
+   &lt;title&gt;Event stream &#39;newstream&#39;&lt;/title&gt;
+   &lt;id&gt;http://127.0.0.1:2113/streams/newstream&lt;/id&gt;
+   &lt;updated&gt;2013-06-29T15:12:53.570125Z&lt;/updated&gt;
+   &lt;author&gt;
+      &lt;name&gt;EventStore&lt;/name&gt;
+   &lt;/author&gt;
+   &lt;link href=&quot;http://127.0.0.1:2113/streams/newstream&quot; rel=&quot;self&quot; /&gt;
+   &lt;link href=&quot;http://127.0.0.1:2113/streams/newstream/head/backward/20&quot; rel=&quot;first&quot; /&gt;
+   &lt;link href=&quot;http://127.0.0.1:2113/streams/newstream/0/forward/20&quot; rel=&quot;last&quot; /&gt;
+   &lt;link href=&quot;http://127.0.0.1:2113/streams/newstream/1/forward/20&quot; rel=&quot;previous&quot; /&gt;
+   &lt;link href=&quot;http://127.0.0.1:2113/streams/newstream/metadata&quot; rel=&quot;metadata&quot; /&gt;
+   &lt;entry&gt;
+      &lt;title&gt;0@newstream&lt;/title&gt;
+      &lt;id&gt;http://127.0.0.1:2113/streams/newstream/0&lt;/id&gt;
+      &lt;updated&gt;2013-06-29T15:12:53.570125Z&lt;/updated&gt;
+      &lt;author&gt;
+         &lt;name&gt;EventStore&lt;/name&gt;
+      &lt;/author&gt;
+      &lt;summary&gt;event-type&lt;/summary&gt;
+      &lt;link href=&quot;http://127.0.0.1:2113/streams/newstream/0&quot; rel=&quot;edit&quot; /&gt;
+      &lt;link href=&quot;http://127.0.0.1:2113/streams/newstream/0&quot; rel=&quot;alternate&quot; /&gt;
+   &lt;/entry&gt;
+&lt;/feed&gt;
+</code></pre></section>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/http-api/reading-streams.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

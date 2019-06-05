@@ -1,0 +1,1056 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Class StorageWriterService
+   | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class StorageWriterService
+   | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EventStore.Core.Services.Storage.StorageWriterService">
+  
+  
+  <h1 id="EventStore_Core_Services_Storage_StorageWriterService" data-uid="EventStore.Core.Services.Storage.StorageWriterService" class="text-break">Class StorageWriterService
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">StorageWriterService</span></div>
+      <div class="level2"><a class="xref" href="EventStore.Core.Services.ClusterStorageWriterService.html">ClusterStorageWriterService</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.SystemMessage.SystemInit.html">SystemMessage.SystemInit</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.SystemMessage.StateChangeMessage.html">SystemMessage.StateChangeMessage</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.SystemMessage.WriteEpoch.html">SystemMessage.WriteEpoch</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.SystemMessage.WaitForChaserToCatchUp.html">SystemMessage.WaitForChaserToCatchUp</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.StorageMessage.WritePrepares.html">StorageMessage.WritePrepares</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.StorageMessage.WriteDelete.html">StorageMessage.WriteDelete</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.StorageMessage.WriteTransactionStart.html">StorageMessage.WriteTransactionStart</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.StorageMessage.WriteTransactionData.html">StorageMessage.WriteTransactionData</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.StorageMessage.WriteTransactionPrepare.html">StorageMessage.WriteTransactionPrepare</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.StorageMessage.WriteCommit.html">StorageMessage.WriteCommit</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.MonitoringMessage.InternalStatsRequest.html">MonitoringMessage.InternalStatsRequest</a>&gt;</div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.Storage.html">EventStore.Core.Services.Storage</a></h6>
+  <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
+  <h5 id="EventStore_Core_Services_Storage_StorageWriterService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class StorageWriterService : object, IHandle&lt;SystemMessage.SystemInit&gt;, IHandle&lt;SystemMessage.StateChangeMessage&gt;, IHandle&lt;SystemMessage.WriteEpoch&gt;, IHandle&lt;SystemMessage.WaitForChaserToCatchUp&gt;, IHandle&lt;StorageMessage.WritePrepares&gt;, IHandle&lt;StorageMessage.WriteDelete&gt;, IHandle&lt;StorageMessage.WriteTransactionStart&gt;, IHandle&lt;StorageMessage.WriteTransactionData&gt;, IHandle&lt;StorageMessage.WriteTransactionPrepare&gt;, IHandle&lt;StorageMessage.WriteCommit&gt;, IHandle&lt;MonitoringMessage.InternalStatsRequest&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService__ctor_EventStore_Core_Bus_IPublisher_EventStore_Core_Bus_ISubscriber_TimeSpan_EventStore_Core_TransactionLog_Chunks_TFChunkDb_EventStore_Core_TransactionLog_Chunks_TFChunkWriter_EventStore_Core_Services_Storage_ReaderIndex_IIndexWriter_EventStore_Core_Services_Storage_EpochManager_IEpochManager_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.%23ctor(EventStore.Core.Bus.IPublisher%2CEventStore.Core.Bus.ISubscriber%2CTimeSpan%2CEventStore.Core.TransactionLog.Chunks.TFChunkDb%2CEventStore.Core.TransactionLog.Chunks.TFChunkWriter%2CEventStore.Core.Services.Storage.ReaderIndex.IIndexWriter%2CEventStore.Core.Services.Storage.EpochManager.IEpochManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L77">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_StorageWriterService__ctor_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.#ctor*"></a>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService__ctor_EventStore_Core_Bus_IPublisher_EventStore_Core_Bus_ISubscriber_TimeSpan_EventStore_Core_TransactionLog_Chunks_TFChunkDb_EventStore_Core_TransactionLog_Chunks_TFChunkWriter_EventStore_Core_Services_Storage_ReaderIndex_IIndexWriter_EventStore_Core_Services_Storage_EpochManager_IEpochManager_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.#ctor(EventStore.Core.Bus.IPublisher,EventStore.Core.Bus.ISubscriber,TimeSpan,EventStore.Core.TransactionLog.Chunks.TFChunkDb,EventStore.Core.TransactionLog.Chunks.TFChunkWriter,EventStore.Core.Services.Storage.ReaderIndex.IIndexWriter,EventStore.Core.Services.Storage.EpochManager.IEpochManager)">StorageWriterService(IPublisher, ISubscriber, TimeSpan, TFChunkDb, TFChunkWriter, IIndexWriter, IEpochManager)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StorageWriterService(IPublisher bus, ISubscriber subscribeToBus, TimeSpan minFlushDelay, TFChunkDb db, TFChunkWriter writer, IIndexWriter indexWriter, IEpochManager epochManager)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
+        <td><span class="parametername">bus</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Bus.ISubscriber.html">ISubscriber</a></td>
+        <td><span class="parametername">subscribeToBus</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="parametername">minFlushDelay</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.TransactionLog.Chunks.TFChunkDb.html">TFChunkDb</a></td>
+        <td><span class="parametername">db</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.html">TFChunkWriter</a></td>
+        <td><span class="parametername">writer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.Storage.ReaderIndex.IIndexWriter.html">IIndexWriter</a></td>
+        <td><span class="parametername">indexWriter</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.Storage.EpochManager.IEpochManager.html">IEpochManager</a></td>
+        <td><span class="parametername">epochManager</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_BlockWriter.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.BlockWriter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L58">View Source</a>
+  </span>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_BlockWriter" data-uid="EventStore.Core.Services.Storage.StorageWriterService.BlockWriter">BlockWriter</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool BlockWriter</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_Bus.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.Bus%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L46">View Source</a>
+  </span>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_Bus" data-uid="EventStore.Core.Services.Storage.StorageWriterService.Bus">Bus</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly IPublisher Bus</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_Db.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.Db%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L41">View Source</a>
+  </span>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_Db" data-uid="EventStore.Core.Services.Storage.StorageWriterService.Db">Db</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly TFChunkDb Db</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.TransactionLog.Chunks.TFChunkDb.html">TFChunkDb</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_EpochManager.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.EpochManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L44">View Source</a>
+  </span>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_EpochManager" data-uid="EventStore.Core.Services.Storage.StorageWriterService.EpochManager">EpochManager</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly IEpochManager EpochManager</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.Storage.EpochManager.IEpochManager.html">IEpochManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_FlushMessagesInQueue.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.FlushMessagesInQueue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L56">View Source</a>
+  </span>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_FlushMessagesInQueue" data-uid="EventStore.Core.Services.Storage.StorageWriterService.FlushMessagesInQueue">FlushMessagesInQueue</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected int FlushMessagesInQueue</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_StorageWriterQueue.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.StorageWriterQueue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L48">View Source</a>
+  </span>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_StorageWriterQueue" data-uid="EventStore.Core.Services.Storage.StorageWriterService.StorageWriterQueue">StorageWriterQueue</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly IQueuedHandler StorageWriterQueue</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Bus.IQueuedHandler.html">IQueuedHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_TicksPerMs.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.TicksPerMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L38">View Source</a>
+  </span>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_TicksPerMs" data-uid="EventStore.Core.Services.Storage.StorageWriterService.TicksPerMs">TicksPerMs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static readonly int TicksPerMs</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_Writer.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.Writer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L42">View Source</a>
+  </span>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_Writer" data-uid="EventStore.Core.Services.Storage.StorageWriterService.Writer">Writer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly TFChunkWriter Writer</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.html">TFChunkWriter</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_Tasks.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.Tasks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L73">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_StorageWriterService_Tasks_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.Tasks*"></a>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_Tasks" data-uid="EventStore.Core.Services.Storage.StorageWriterService.Tasks">Tasks</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Task&gt; Tasks { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Task</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_Flush_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.Flush(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L598">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_StorageWriterService_Flush_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.Flush*"></a>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_Flush_System_Boolean_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.Flush(System.Boolean)">Flush(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool Flush(bool force = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">force</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_Handle_EventStore_Core_Messages_MonitoringMessage_InternalStatsRequest_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.Handle(EventStore.Core.Messages.MonitoringMessage.InternalStatsRequest)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L652">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_StorageWriterService_Handle_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_Handle_EventStore_Core_Messages_MonitoringMessage_InternalStatsRequest_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.Handle(EventStore.Core.Messages.MonitoringMessage.InternalStatsRequest)">Handle(MonitoringMessage.InternalStatsRequest)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(MonitoringMessage.InternalStatsRequest message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.MonitoringMessage.InternalStatsRequest.html">MonitoringMessage.InternalStatsRequest</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_Handle_EventStore_Core_Messages_SystemMessage_StateChangeMessage_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.Handle(EventStore.Core.Messages.SystemMessage.StateChangeMessage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L173">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_StorageWriterService_Handle_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.Handle*"></a>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_Handle_EventStore_Core_Messages_SystemMessage_StateChangeMessage_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.Handle(EventStore.Core.Messages.SystemMessage.StateChangeMessage)">Handle(SystemMessage.StateChangeMessage)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Handle(SystemMessage.StateChangeMessage message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.SystemMessage.StateChangeMessage.html">SystemMessage.StateChangeMessage</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_SoftUndeleteRawMeta_System_Byte___System_Int64_System_Byte____.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.SoftUndeleteRawMeta(System.Byte%5B%5D%2CSystem.Int64%2CSystem.Byte%5B%5D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L317">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_StorageWriterService_SoftUndeleteRawMeta_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.SoftUndeleteRawMeta*"></a>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_SoftUndeleteRawMeta_System_Byte___System_Int64_System_Byte____" data-uid="EventStore.Core.Services.Storage.StorageWriterService.SoftUndeleteRawMeta(System.Byte[],System.Int64,System.Byte[]@)">SoftUndeleteRawMeta(Byte[], Int64, out Byte[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SoftUndeleteRawMeta(byte[] rawMeta, long recreateFromEventNumber, out byte[] modifiedMeta)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">rawMeta</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">recreateFromEventNumber</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span>[]</td>
+        <td><span class="parametername">modifiedMeta</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_SubscribeToMessage__1.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.SubscribeToMessage%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L123">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_StorageWriterService_SubscribeToMessage_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.SubscribeToMessage*"></a>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_SubscribeToMessage__1" data-uid="EventStore.Core.Services.Storage.StorageWriterService.SubscribeToMessage``1">SubscribeToMessage&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SubscribeToMessage&lt;T&gt;()
+    where T : Message</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_StorageMessage_WriteCommit__Handle_EventStore_Core_Messages_StorageMessage_WriteCommit_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.EventStore%23Core%23Bus%23IHandle%7BEventStore%23Core%23Messages%23StorageMessage%23WriteCommit%7D%23Handle(EventStore.Core.Messages.StorageMessage.WriteCommit)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L479">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_StorageMessage_WriteCommit__Handle_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.EventStore#Core#Bus#IHandle{EventStore#Core#Messages#StorageMessage#WriteCommit}#Handle*"></a>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_StorageMessage_WriteCommit__Handle_EventStore_Core_Messages_StorageMessage_WriteCommit_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.EventStore#Core#Bus#IHandle{EventStore#Core#Messages#StorageMessage#WriteCommit}#Handle(EventStore.Core.Messages.StorageMessage.WriteCommit)">IHandle&lt;StorageMessage.WriteCommit&gt;.Handle(StorageMessage.WriteCommit)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IHandle&lt;StorageMessage.WriteCommit&gt;.Handle(StorageMessage.WriteCommit message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.StorageMessage.WriteCommit.html">StorageMessage.WriteCommit</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_StorageMessage_WriteDelete__Handle_EventStore_Core_Messages_StorageMessage_WriteDelete_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.EventStore%23Core%23Bus%23IHandle%7BEventStore%23Core%23Messages%23StorageMessage%23WriteDelete%7D%23Handle(EventStore.Core.Messages.StorageMessage.WriteDelete)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L335">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_StorageMessage_WriteDelete__Handle_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.EventStore#Core#Bus#IHandle{EventStore#Core#Messages#StorageMessage#WriteDelete}#Handle*"></a>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_StorageMessage_WriteDelete__Handle_EventStore_Core_Messages_StorageMessage_WriteDelete_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.EventStore#Core#Bus#IHandle{EventStore#Core#Messages#StorageMessage#WriteDelete}#Handle(EventStore.Core.Messages.StorageMessage.WriteDelete)">IHandle&lt;StorageMessage.WriteDelete&gt;.Handle(StorageMessage.WriteDelete)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IHandle&lt;StorageMessage.WriteDelete&gt;.Handle(StorageMessage.WriteDelete message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.StorageMessage.WriteDelete.html">StorageMessage.WriteDelete</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_StorageMessage_WritePrepares__Handle_EventStore_Core_Messages_StorageMessage_WritePrepares_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.EventStore%23Core%23Bus%23IHandle%7BEventStore%23Core%23Messages%23StorageMessage%23WritePrepares%7D%23Handle(EventStore.Core.Messages.StorageMessage.WritePrepares)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L223">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_StorageMessage_WritePrepares__Handle_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.EventStore#Core#Bus#IHandle{EventStore#Core#Messages#StorageMessage#WritePrepares}#Handle*"></a>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_StorageMessage_WritePrepares__Handle_EventStore_Core_Messages_StorageMessage_WritePrepares_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.EventStore#Core#Bus#IHandle{EventStore#Core#Messages#StorageMessage#WritePrepares}#Handle(EventStore.Core.Messages.StorageMessage.WritePrepares)">IHandle&lt;StorageMessage.WritePrepares&gt;.Handle(StorageMessage.WritePrepares)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IHandle&lt;StorageMessage.WritePrepares&gt;.Handle(StorageMessage.WritePrepares msg)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.StorageMessage.WritePrepares.html">StorageMessage.WritePrepares</a></td>
+        <td><span class="parametername">msg</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_StorageMessage_WriteTransactionData__Handle_EventStore_Core_Messages_StorageMessage_WriteTransactionData_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.EventStore%23Core%23Bus%23IHandle%7BEventStore%23Core%23Messages%23StorageMessage%23WriteTransactionData%7D%23Handle(EventStore.Core.Messages.StorageMessage.WriteTransactionData)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L402">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_StorageMessage_WriteTransactionData__Handle_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.EventStore#Core#Bus#IHandle{EventStore#Core#Messages#StorageMessage#WriteTransactionData}#Handle*"></a>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_StorageMessage_WriteTransactionData__Handle_EventStore_Core_Messages_StorageMessage_WriteTransactionData_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.EventStore#Core#Bus#IHandle{EventStore#Core#Messages#StorageMessage#WriteTransactionData}#Handle(EventStore.Core.Messages.StorageMessage.WriteTransactionData)">IHandle&lt;StorageMessage.WriteTransactionData&gt;.Handle(StorageMessage.WriteTransactionData)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IHandle&lt;StorageMessage.WriteTransactionData&gt;.Handle(StorageMessage.WriteTransactionData message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.StorageMessage.WriteTransactionData.html">StorageMessage.WriteTransactionData</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_StorageMessage_WriteTransactionPrepare__Handle_EventStore_Core_Messages_StorageMessage_WriteTransactionPrepare_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.EventStore%23Core%23Bus%23IHandle%7BEventStore%23Core%23Messages%23StorageMessage%23WriteTransactionPrepare%7D%23Handle(EventStore.Core.Messages.StorageMessage.WriteTransactionPrepare)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L441">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_StorageMessage_WriteTransactionPrepare__Handle_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.EventStore#Core#Bus#IHandle{EventStore#Core#Messages#StorageMessage#WriteTransactionPrepare}#Handle*"></a>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_StorageMessage_WriteTransactionPrepare__Handle_EventStore_Core_Messages_StorageMessage_WriteTransactionPrepare_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.EventStore#Core#Bus#IHandle{EventStore#Core#Messages#StorageMessage#WriteTransactionPrepare}#Handle(EventStore.Core.Messages.StorageMessage.WriteTransactionPrepare)">IHandle&lt;StorageMessage.WriteTransactionPrepare&gt;.Handle(StorageMessage.WriteTransactionPrepare)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IHandle&lt;StorageMessage.WriteTransactionPrepare&gt;.Handle(StorageMessage.WriteTransactionPrepare message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.StorageMessage.WriteTransactionPrepare.html">StorageMessage.WriteTransactionPrepare</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_StorageMessage_WriteTransactionStart__Handle_EventStore_Core_Messages_StorageMessage_WriteTransactionStart_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.EventStore%23Core%23Bus%23IHandle%7BEventStore%23Core%23Messages%23StorageMessage%23WriteTransactionStart%7D%23Handle(EventStore.Core.Messages.StorageMessage.WriteTransactionStart)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L379">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_StorageMessage_WriteTransactionStart__Handle_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.EventStore#Core#Bus#IHandle{EventStore#Core#Messages#StorageMessage#WriteTransactionStart}#Handle*"></a>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_StorageMessage_WriteTransactionStart__Handle_EventStore_Core_Messages_StorageMessage_WriteTransactionStart_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.EventStore#Core#Bus#IHandle{EventStore#Core#Messages#StorageMessage#WriteTransactionStart}#Handle(EventStore.Core.Messages.StorageMessage.WriteTransactionStart)">IHandle&lt;StorageMessage.WriteTransactionStart&gt;.Handle(StorageMessage.WriteTransactionStart)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IHandle&lt;StorageMessage.WriteTransactionStart&gt;.Handle(StorageMessage.WriteTransactionStart message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.StorageMessage.WriteTransactionStart.html">StorageMessage.WriteTransactionStart</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_SystemMessage_SystemInit__Handle_EventStore_Core_Messages_SystemMessage_SystemInit_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.EventStore%23Core%23Bus%23IHandle%7BEventStore%23Core%23Messages%23SystemMessage%23SystemInit%7D%23Handle(EventStore.Core.Messages.SystemMessage.SystemInit)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L169">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_SystemMessage_SystemInit__Handle_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.EventStore#Core#Bus#IHandle{EventStore#Core#Messages#SystemMessage#SystemInit}#Handle*"></a>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_SystemMessage_SystemInit__Handle_EventStore_Core_Messages_SystemMessage_SystemInit_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.EventStore#Core#Bus#IHandle{EventStore#Core#Messages#SystemMessage#SystemInit}#Handle(EventStore.Core.Messages.SystemMessage.SystemInit)">IHandle&lt;SystemMessage.SystemInit&gt;.Handle(SystemMessage.SystemInit)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IHandle&lt;SystemMessage.SystemInit&gt;.Handle(SystemMessage.SystemInit message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.SystemMessage.SystemInit.html">SystemMessage.SystemInit</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_SystemMessage_WaitForChaserToCatchUp__Handle_EventStore_Core_Messages_SystemMessage_WaitForChaserToCatchUp_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.EventStore%23Core%23Bus%23IHandle%7BEventStore%23Core%23Messages%23SystemMessage%23WaitForChaserToCatchUp%7D%23Handle(EventStore.Core.Messages.SystemMessage.WaitForChaserToCatchUp)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L198">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_SystemMessage_WaitForChaserToCatchUp__Handle_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.EventStore#Core#Bus#IHandle{EventStore#Core#Messages#SystemMessage#WaitForChaserToCatchUp}#Handle*"></a>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_SystemMessage_WaitForChaserToCatchUp__Handle_EventStore_Core_Messages_SystemMessage_WaitForChaserToCatchUp_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.EventStore#Core#Bus#IHandle{EventStore#Core#Messages#SystemMessage#WaitForChaserToCatchUp}#Handle(EventStore.Core.Messages.SystemMessage.WaitForChaserToCatchUp)">IHandle&lt;SystemMessage.WaitForChaserToCatchUp&gt;.Handle(SystemMessage.WaitForChaserToCatchUp)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IHandle&lt;SystemMessage.WaitForChaserToCatchUp&gt;.Handle(SystemMessage.WaitForChaserToCatchUp message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.SystemMessage.WaitForChaserToCatchUp.html">SystemMessage.WaitForChaserToCatchUp</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_SystemMessage_WriteEpoch__Handle_EventStore_Core_Messages_SystemMessage_WriteEpoch_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService.EventStore%23Core%23Bus%23IHandle%7BEventStore%23Core%23Messages%23SystemMessage%23WriteEpoch%7D%23Handle(EventStore.Core.Messages.SystemMessage.WriteEpoch)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L189">View Source</a>
+  </span>
+  <a id="EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_SystemMessage_WriteEpoch__Handle_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.EventStore#Core#Bus#IHandle{EventStore#Core#Messages#SystemMessage#WriteEpoch}#Handle*"></a>
+  <h4 id="EventStore_Core_Services_Storage_StorageWriterService_EventStore_Core_Bus_IHandle_EventStore_Core_Messages_SystemMessage_WriteEpoch__Handle_EventStore_Core_Messages_SystemMessage_WriteEpoch_" data-uid="EventStore.Core.Services.Storage.StorageWriterService.EventStore#Core#Bus#IHandle{EventStore#Core#Messages#SystemMessage#WriteEpoch}#Handle(EventStore.Core.Messages.SystemMessage.WriteEpoch)">IHandle&lt;SystemMessage.WriteEpoch&gt;.Handle(SystemMessage.WriteEpoch)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IHandle&lt;SystemMessage.WriteEpoch&gt;.Handle(SystemMessage.WriteEpoch message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Messages.SystemMessage.WriteEpoch.html">SystemMessage.WriteEpoch</a></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJson_System_Object_">Json.ToJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_Serialize__1___0_">ProtobufExtensions.Serialize&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_SerializeToArray__1___0_">ProtobufExtensions.SerializeToArray&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_StorageWriterService.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.StorageWriterService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/StorageWriterService.cs/#L25" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

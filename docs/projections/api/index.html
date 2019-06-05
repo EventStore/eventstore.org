@@ -1,0 +1,538 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>API | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="API | Event Store ">
+    <meta name="generator" content="docfx 2.42.4.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="api">API</h1>
+<!-- TODO: Do Something better with this? Or just link? -->
+
+<table>
+    <thead>
+        <tr>
+            <th>URI</th>
+            <th>Description</th>
+            <th>HTTP Verb</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>/projections/any</code></td>
+            <td>
+                Returns all known projections.
+            </td>
+            <td>
+                GET
+            </td>
+        </tr>
+        <tr>
+           <td><code>/projections/all-non-transient</code></td>
+           <td>
+               Returns all known non ad-hoc projections.
+           </td>
+           <td>
+               GET
+           </td>
+        </tr>
+        <tr>
+           <td><code>/projections/transient</code></td>
+           <td>
+               Returns all known ad-hoc projections.
+           </td>
+           <td>
+               GET
+           </td>
+        </tr>
+        <tr>
+           <td><code>/projections/onetime</code></td>
+           <td>
+                Returns all known one-time projections.
+           </td>
+           <td>
+               GET
+           </td>
+        </tr>
+        <tr>
+           <td><code>/projections/continuous</code></td>
+           <td>
+                Returns all known continuous projections.
+           </td>
+           <td>
+               GET
+           </td>
+        </tr>
+        <tr>
+           <td><code>/projections/transient?name={name}&amp;type={type}&amp;enabled={enabled}</code></td>
+           <td>
+                Create an ad-hoc projection.<br>
+                This type of projection runs until completion and automatically deleted afterwards.
+           </td>
+           <td>
+               POST
+           </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <h3>Parameters</h3>
+                <ul>
+                  <li>
+                      name: Name of the projection
+                  </li>
+                  <li>
+                      type: JS or Native. (JavaScript or native. At this time, Event Store only supports JavaScript)
+                  </li>
+                  <li>
+                      enabled: Enable the projection (true/false)
+                  </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+           <td><code>/projections/onetime?name={name}&amp;type={type}&amp;enabled={enabled}&amp;checkpoints={checkpoints}&amp;emit={emit}&amp;trackemittedstreams={trackemittedstreams}</code></td>
+           <td>
+                Create a one-time projection.<br>
+                This type of projection runs until completion and then stops.
+           </td>
+           <td>
+               POST
+           </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <h3>Parameters</h3>
+                <ul>
+                  <li>
+                      name: Name of the projection
+                  </li>
+                  <li>
+                  type: JS or Native. (JavaScript or native. At this time, Event Store only supports JavaScript)
+                  </li>
+                  <li>
+                      enabled: Enable the projection (true/false)
+                  </li>
+                  <li>
+                      checkpoints: Enable checkpoints (true/false)
+                  </li>
+                  <li>
+                      emit: Enable the ability for the projection to write to streams (true/false)
+                  </li>
+                  <li>
+                      trackemittedstreams: Write the name of the streams the projection is managing to a separate stream. $projections-{projection-name}-emittedstreams (true/false)
+                  </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+           <td><code>/projections/continuous?name={name}&amp;type={type}&amp;enabled={enabled}&amp;emit={emit}&amp;trackemittedstreams={trackemittedstreams}</code></td>
+           <td>
+                Create a continuous projection.<br>
+                This type of projection will, if enabled will continuously run unless disabled or an unrecoverable error is encountered.
+           </td>
+           <td>
+               POST
+           </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <h3>Parameters</h3>
+                <ul>
+                  <li>
+                      name: Name of the projection
+                  </li>
+                  <li>
+                  type: JS or Native. (JavaScript or native. At this time, Event Store only supports JavaScript)
+                  </li>
+                  <li>
+                      enabled: Enable the projection (true/false)
+                  </li>
+                  <li>
+                      emit: Allow the projection to write to streams (true/false)
+                  </li>
+                  <li>
+                      trackemittedstreams: Write the name of the streams the projection is managing to a separate stream. $projections-{projection-name}-emittedstreams (true/false)
+                  </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+           <td><code>/projection/{name}/query?config={config}</code></td>
+           <td>
+                Returns the definition query and if config is set to true, will return the configuration.
+           </td>
+           <td>
+               GET
+           </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <h3>Parameters</h3>
+                <ul>
+                  <li>
+                      name: Name of the projection
+                  </li>
+                  <li>
+                      config: Return the definition of the projection (true/false)
+                  </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+           <td><code>/projection/{name}/query?type={type}&amp;emit={emit}</code></td>
+           <td>
+                Update a projection&#39;s query.
+           </td>
+           <td>
+               PUT
+           </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <h3>Parameters</h3>
+                <ul>
+                  <li>
+                      name: Name of the projection
+                  </li>
+                  <li>
+                  type: JS or Native. (JavaScript or native. At this time, Event Store only supports JavaScript)
+                  </li>
+                  <li>
+                      emit: Allow the projection to write to streams (true/false)
+                  </li>
+                  <li>
+                      trackemittedstreams: Write the name of the streams the projection is managing to a separate stream. $projections-{projection-name}-emittedstreams (true/false)
+                  </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+           <td><code>/projection/{name}</code></td>
+           <td>
+                Returns information for a projection.
+           </td>
+           <td>
+               GET
+           </td>
+        </tr>
+        <tr>
+           <td><code>/projection/{name}?deleteStateStream={deleteStateStream}&amp;deleteCheckpointStream={deleteCheckpointStream}&amp;deleteEmittedStreams={deleteEmittedStreams}</code></td>
+           <td>
+                Delete a projection, optionally delete the streams that were created as part of the projection.
+           </td>
+           <td>
+               DELETE
+           </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <h3>Parameters</h3>
+                <ul>
+                  <li>
+                      name: Name of the projection
+                  </li>
+                  <li>
+                      deleteStateStream: Delete the state stream (true/false)
+                  </li>
+                  <li>
+                      deleteCheckpointStream: Delete the checkpoint stream (true/false)
+                  </li>
+                  <li>
+                      deleteEmittedStreams: Delete the emitted streams stream (true/false)
+                  </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+           <td><code>/projection/{name}/statistics</code></td>
+           <td>
+                Returns detailed information for a projection.
+           </td>
+           <td>
+               GET
+           </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+               <h3>Parameters</h3>
+               <ul>
+                 <li>
+                     name: Name of the projection
+                 </li>
+               </ul>
+           </td>
+        </tr>
+        <tr>
+           <td><code>/projection/{name}/state?partition={partition}</code></td>
+           <td>
+                Query for the state of a projection.
+           </td>
+           <td>
+               GET
+           </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+              <h3>Parameters</h3>
+               <ul>
+                 <li>
+                     name: Name of the projection
+                 </li>
+                 <li>
+                     partition: The partition
+                 </li>
+               </ul>
+           </td>
+        </tr>
+        <tr>
+           <td><code>/projection/{name}/result?partition={partition}</code></td>
+           <td>
+                Query for the result of a projection.
+           </td>
+           <td>
+               GET
+           </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+              <h3>Parameters</h3>
+               <ul>
+                 <li>
+                     name: Name of the projection
+                 </li>
+                 <li>
+                     partition: The partition
+                 </li>
+               </ul>
+           </td>
+        </tr>
+        <tr>
+           <td><code>/projection/{name}/command/disable?enableRunAs={enableRunAs}</code></td>
+           <td>
+                Disable a projection.
+           </td>
+           <td>
+               POST
+           </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+               <h3>Parameters</h3>
+               <ul>
+                 <li>
+                     name: Name of the projection
+                 </li>
+                 <li>
+                     enableRunAs: Enables the projection to run as the user who issued the request.
+                 </li>
+               </ul>
+           </td>
+        </tr>
+        <tr>
+           <td><code>/projection/{name}/command/enable?enableRunAs={enableRunAs}</code></td>
+           <td>
+                Enable a projection.
+           </td>
+           <td>
+               POST
+           </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+               <h3>Parameters</h3>
+               <ul>
+                 <li>
+                     name: Name of the projection
+                 </li>
+                 <li>
+                     enableRunAs: Enables the projection to run as the user who issued the request.
+                 </li>
+               </ul>
+           </td>
+        </tr>
+        <tr>
+           <td><code>/projection/{name}/command/reset?enableRunAs={enableRunAs}</code></td>
+           <td>
+                Reset a projection. (This will re-emit events, streams that are written to from the projection will also be soft deleted).
+           </td>
+           <td>
+               POST
+           </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+               <h3>Parameters</h3>
+               <ul>
+                 <li>
+                     name: Name of the projection
+                 </li>
+                 <li>
+                     enableRunAs: Enables the projection to run as the user who issued the request.
+                 </li>
+               </ul>
+           </td>
+        </tr>
+        <tr>
+           <td><code>/projection/{name}/command/abort?enableRunAs={enableRunAs}</code></td>
+           <td>
+                Abort a projection.
+           </td>
+           <td>
+               POST
+           </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+               <h3>Parameters</h3>
+               <ul>
+                 <li>
+                     name: Name of the projection
+                 </li>
+                 <li>
+                     enableRunAs: Enables the projection to run as the user who issued the request.
+                 </li>
+               </ul>
+           </td>
+        </tr>
+    </tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/projections/api.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>
