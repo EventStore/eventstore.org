@@ -9,11 +9,11 @@ In the [first post on projections](http://goodenoughsoftware.net/2013/02/12/proj
 
 To start with there is a very special stream inside of the event store. This stream represents statistics measurements that are happening internally. You can control how often they are taken via config. To find this stream in your system you can assuming you are bringing up a brand new node look at the “Streams” tab when going to whatever port you set for HTTP.
 
-*Hint: as projections are experimental as of the last release you need to enable them on the command line or in configuration when bringing up the Event Store. The command line is `--run-projections`.*
+_Hint: as projections are experimental as of the last release you need to enable them on the command line or in configuration when bringing up the Event Store. The command line is `--run-projections`._
 
 For me (the default) stream for statistics is `$stats-127.0.0.1:2113`. If you want to see statistics data you can point your browser to `127.0.0.1:2113/streams/$stats-127.0.0.1:2113` and view the data in the stream. You should see something that looks like this:
 
-![](http://gregfyoung.files.wordpress.com/2013/02/streamviewed.png)
+![](https://gregfyoung.files.wordpress.com/2013/02/streamviewed.png)
 
 If you click on one of the events you should be able to see the actual data from a statistics event entry. If you want to save some time you can see it [on my gist](https://gist.github.com/gregoryyoung/4944753). This is a JSON encoding of what the statistics measurement looks like. We are going to write a basic projection against that stream.
 
@@ -29,7 +29,7 @@ fromStream('$stats-127.0.0.1:2113').
     });
 ```
 
-*If you want to test this projection. Go to new projection and paste it in. Give it a name and select `emit enabled` and for mode put `continuous`. We will discuss in a later post what these things mean. The UI around this is currently being changed as well, we see its not the most intuitive.*
+_If you want to test this projection. Go to new projection and paste it in. Give it a name and select `emit enabled` and for mode put `continuous`. We will discuss in a later post what these things mean. The UI around this is currently being changed as well, we see its not the most intuitive._
 
 This is a very simple projection. Its not very interesting. We will get to doing more interesting ones shortly. What it does is it listens to your statistics stream. This is setup when it says `fromStream` this is says “listen to all events in stream `s`”. It then defines a function that will be passed all `$stats-collected` events which happen to be the ones we saw in the statistics stream above.
 
