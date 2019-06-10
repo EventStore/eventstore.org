@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -106,28 +107,49 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="EventStore.Core.TransactionLog.Checkpoint.ICheckpoint.html">ICheckpoint</a></div>
-    <div><span class="xref">IDisposable</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.TransactionLog.Checkpoint.html">EventStore.Core.TransactionLog.Checkpoint</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FileCheckpoint : object, ICheckpoint, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class FileCheckpoint : ICheckpoint, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint__ctor_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Checkpoint/FileCheckpoint.cs/#L19">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint__ctor_" data-uid="EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.#ctor*"></a>
   <h4 id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint__ctor_System_String_" data-uid="EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.#ctor(System.String)">FileCheckpoint(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public FileCheckpoint(string filename)</code></pre>
   </div>
@@ -148,20 +170,17 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint__ctor_System_String_System_String_System_Boolean_System_Boolean_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.%23ctor(System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Checkpoint/FileCheckpoint.cs/#L23">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint__ctor_" data-uid="EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.#ctor*"></a>
   <h4 id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint__ctor_System_String_System_String_System_Boolean_System_Boolean_System_Int64_" data-uid="EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.#ctor(System.String,System.String,System.Boolean,System.Boolean,System.Int64)">FileCheckpoint(String, String, Boolean, Boolean, Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public FileCheckpoint(string filename, string name, bool cached = false, bool mustExist = false, long initValue = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public FileCheckpoint(string filename, string name, bool cached = false, bool mustExist = false, long initValue = 0L)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -202,18 +221,15 @@
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_Name.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Checkpoint/FileCheckpoint.cs/#L57">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_Name_" data-uid="EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.Name*"></a>
   <h4 id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_Name" data-uid="EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.Name">Name</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
   </div>
@@ -222,75 +238,61 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_Close.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.Close%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Checkpoint/FileCheckpoint.cs/#L50">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_Close_" data-uid="EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.Close*"></a>
   <h4 id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_Close" data-uid="EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.Close">Close()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Close()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_Dispose.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Checkpoint/FileCheckpoint.cs/#L90">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_Dispose_" data-uid="EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.Dispose*"></a>
   <h4 id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_Dispose" data-uid="EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_Flush.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.Flush%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Checkpoint/FileCheckpoint.cs/#L65">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_Flush_" data-uid="EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.Flush*"></a>
   <h4 id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_Flush" data-uid="EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.Flush">Flush()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Flush()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_OnFlushed_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.OnFlushed(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Checkpoint/FileCheckpoint.cs/#L94">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_OnFlushed_" data-uid="EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.OnFlushed*"></a>
   <h4 id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_OnFlushed_System_Int64_" data-uid="EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.OnFlushed(System.Int64)">OnFlushed(Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void OnFlushed(long obj)</code></pre>
   </div>
@@ -311,18 +313,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_Read.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.Read%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Checkpoint/FileCheckpoint.cs/#L79">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_Read_" data-uid="EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.Read*"></a>
   <h4 id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_Read" data-uid="EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.Read">Read()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public long Read()</code></pre>
   </div>
@@ -341,18 +340,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_ReadNonFlushed.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.ReadNonFlushed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Checkpoint/FileCheckpoint.cs/#L83">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_ReadNonFlushed_" data-uid="EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.ReadNonFlushed*"></a>
   <h4 id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_ReadNonFlushed" data-uid="EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.ReadNonFlushed">ReadNonFlushed()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public long ReadNonFlushed()</code></pre>
   </div>
@@ -371,18 +367,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_Write_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.Write(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Checkpoint/FileCheckpoint.cs/#L61">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_Write_" data-uid="EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.Write*"></a>
   <h4 id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_Write_System_Int64_" data-uid="EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.Write(System.Int64)">Write(Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Write(long checkpoint)</code></pre>
   </div>
@@ -405,17 +398,14 @@
   </table>
   <h3 id="events">Events
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_Flushed.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.Flushed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Checkpoint/FileCheckpoint.cs/#L88">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint_Flushed" data-uid="EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint.Flushed">Flushed</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public event Action&lt;long&gt; Flushed</code></pre>
   </div>
@@ -424,13 +414,11 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Action</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
-        <td></td>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
       </tr>
     </tbody>
   </table>
@@ -439,7 +427,7 @@
       <a class="xref" href="EventStore.Core.TransactionLog.Checkpoint.ICheckpoint.html">ICheckpoint</a>
   </div>
   <div>
-      <span class="xref">IDisposable</span>
+      <span class="xref">System.IDisposable</span>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
@@ -466,12 +454,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Checkpoint_FileCheckpoint.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Checkpoint.FileCheckpoint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Checkpoint/FileCheckpoint.cs/#L7" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

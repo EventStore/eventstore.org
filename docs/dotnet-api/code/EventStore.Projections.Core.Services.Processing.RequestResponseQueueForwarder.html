@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -115,26 +116,47 @@
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStarted.html">ProjectionCoreServiceMessage.SubComponentStarted</a>&gt;</div>
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStopped.html">ProjectionCoreServiceMessage.SubComponentStopped</a>&gt;</div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Services.Processing.html">EventStore.Projections.Core.Services.Processing</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
   <h5 id="EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class RequestResponseQueueForwarder : object, IHandle&lt;ClientMessage.ReadEvent&gt;, IHandle&lt;ClientMessage.ReadStreamEventsBackward&gt;, IHandle&lt;ClientMessage.ReadStreamEventsForward&gt;, IHandle&lt;ClientMessage.ReadAllEventsForward&gt;, IHandle&lt;ClientMessage.WriteEvents&gt;, IHandle&lt;ClientMessage.DeleteStream&gt;, IHandle&lt;SystemMessage.SubSystemInitialized&gt;, IHandle&lt;ProjectionCoreServiceMessage.SubComponentStarted&gt;, IHandle&lt;ProjectionCoreServiceMessage.SubComponentStopped&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class RequestResponseQueueForwarder : IHandle&lt;ClientMessage.ReadEvent&gt;, IHandle&lt;ClientMessage.ReadStreamEventsBackward&gt;, IHandle&lt;ClientMessage.ReadStreamEventsForward&gt;, IHandle&lt;ClientMessage.ReadAllEventsForward&gt;, IHandle&lt;ClientMessage.WriteEvents&gt;, IHandle&lt;ClientMessage.DeleteStream&gt;, IHandle&lt;SystemMessage.SubSystemInitialized&gt;, IHandle&lt;ProjectionCoreServiceMessage.SubComponentStarted&gt;, IHandle&lt;ProjectionCoreServiceMessage.SubComponentStopped&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder__ctor_EventStore_Core_Bus_IPublisher_EventStore_Core_Bus_IPublisher_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.%23ctor(EventStore.Core.Bus.IPublisher%2CEventStore.Core.Bus.IPublisher)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/RequestResponseQueueForwarder.cs/#L19">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder__ctor_" data-uid="EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.#ctor*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder__ctor_EventStore_Core_Bus_IPublisher_EventStore_Core_Bus_IPublisher_" data-uid="EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.#ctor(EventStore.Core.Bus.IPublisher,EventStore.Core.Bus.IPublisher)">RequestResponseQueueForwarder(IPublisher, IPublisher)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public RequestResponseQueueForwarder(IPublisher inputQueue, IPublisher externalRequestQueue)</code></pre>
   </div>
@@ -162,18 +184,15 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_Handle_EventStore_Core_Messages_ClientMessage_DeleteStream_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.Handle(EventStore.Core.Messages.ClientMessage.DeleteStream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/RequestResponseQueueForwarder.cs/#L38">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_Handle_EventStore_Core_Messages_ClientMessage_DeleteStream_" data-uid="EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.Handle(EventStore.Core.Messages.ClientMessage.DeleteStream)">Handle(ClientMessage.DeleteStream)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.DeleteStream msg)</code></pre>
   </div>
@@ -194,18 +213,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_Handle_EventStore_Core_Messages_ClientMessage_ReadAllEventsForward_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.Handle(EventStore.Core.Messages.ClientMessage.ReadAllEventsForward)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/RequestResponseQueueForwarder.cs/#L61">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_Handle_EventStore_Core_Messages_ClientMessage_ReadAllEventsForward_" data-uid="EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.Handle(EventStore.Core.Messages.ClientMessage.ReadAllEventsForward)">Handle(ClientMessage.ReadAllEventsForward)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.ReadAllEventsForward msg)</code></pre>
   </div>
@@ -226,18 +242,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_Handle_EventStore_Core_Messages_ClientMessage_ReadEvent_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.Handle(EventStore.Core.Messages.ClientMessage.ReadEvent)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/RequestResponseQueueForwarder.cs/#L24">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_Handle_EventStore_Core_Messages_ClientMessage_ReadEvent_" data-uid="EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.Handle(EventStore.Core.Messages.ClientMessage.ReadEvent)">Handle(ClientMessage.ReadEvent)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.ReadEvent msg)</code></pre>
   </div>
@@ -258,18 +271,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_Handle_EventStore_Core_Messages_ClientMessage_ReadStreamEventsBackward_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.Handle(EventStore.Core.Messages.ClientMessage.ReadStreamEventsBackward)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/RequestResponseQueueForwarder.cs/#L45">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_Handle_EventStore_Core_Messages_ClientMessage_ReadStreamEventsBackward_" data-uid="EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.Handle(EventStore.Core.Messages.ClientMessage.ReadStreamEventsBackward)">Handle(ClientMessage.ReadStreamEventsBackward)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.ReadStreamEventsBackward msg)</code></pre>
   </div>
@@ -290,18 +300,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_Handle_EventStore_Core_Messages_ClientMessage_ReadStreamEventsForward_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.Handle(EventStore.Core.Messages.ClientMessage.ReadStreamEventsForward)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/RequestResponseQueueForwarder.cs/#L53">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_Handle_EventStore_Core_Messages_ClientMessage_ReadStreamEventsForward_" data-uid="EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.Handle(EventStore.Core.Messages.ClientMessage.ReadStreamEventsForward)">Handle(ClientMessage.ReadStreamEventsForward)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.ReadStreamEventsForward msg)</code></pre>
   </div>
@@ -322,18 +329,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_Handle_EventStore_Core_Messages_ClientMessage_WriteEvents_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.Handle(EventStore.Core.Messages.ClientMessage.WriteEvents)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/RequestResponseQueueForwarder.cs/#L31">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_Handle_EventStore_Core_Messages_ClientMessage_WriteEvents_" data-uid="EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.Handle(EventStore.Core.Messages.ClientMessage.WriteEvents)">Handle(ClientMessage.WriteEvents)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.WriteEvents msg)</code></pre>
   </div>
@@ -354,18 +358,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_Handle_EventStore_Core_Messages_SystemMessage_SubSystemInitialized_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.Handle(EventStore.Core.Messages.SystemMessage.SubSystemInitialized)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/RequestResponseQueueForwarder.cs/#L69">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_Handle_EventStore_Core_Messages_SystemMessage_SubSystemInitialized_" data-uid="EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.Handle(EventStore.Core.Messages.SystemMessage.SubSystemInitialized)">Handle(SystemMessage.SubSystemInitialized)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(SystemMessage.SubSystemInitialized msg)</code></pre>
   </div>
@@ -388,18 +389,15 @@
   </table>
   <h3 id="eii">Explicit Interface Implementations
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_EventStore_Core_Bus_IHandle_EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStarted__Handle_EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStarted_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.EventStore%23Core%23Bus%23IHandle%7BEventStore%23Projections%23Core%23Messages%23ProjectionCoreServiceMessage%23SubComponentStarted%7D%23Handle(EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStarted)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/RequestResponseQueueForwarder.cs/#L74">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_EventStore_Core_Bus_IHandle_EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStarted__Handle_" data-uid="EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.EventStore#Core#Bus#IHandle{EventStore#Projections#Core#Messages#ProjectionCoreServiceMessage#SubComponentStarted}#Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_EventStore_Core_Bus_IHandle_EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStarted__Handle_EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStarted_" data-uid="EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.EventStore#Core#Bus#IHandle{EventStore#Projections#Core#Messages#ProjectionCoreServiceMessage#SubComponentStarted}#Handle(EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStarted)">IHandle&lt;ProjectionCoreServiceMessage.SubComponentStarted&gt;.Handle(ProjectionCoreServiceMessage.SubComponentStarted)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void IHandle&lt;ProjectionCoreServiceMessage.SubComponentStarted&gt;.Handle(ProjectionCoreServiceMessage.SubComponentStarted message)</code></pre>
   </div>
@@ -420,18 +418,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_EventStore_Core_Bus_IHandle_EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStopped__Handle_EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStopped_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.EventStore%23Core%23Bus%23IHandle%7BEventStore%23Projections%23Core%23Messages%23ProjectionCoreServiceMessage%23SubComponentStopped%7D%23Handle(EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStopped)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/RequestResponseQueueForwarder.cs/#L81">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_EventStore_Core_Bus_IHandle_EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStopped__Handle_" data-uid="EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.EventStore#Core#Bus#IHandle{EventStore#Projections#Core#Messages#ProjectionCoreServiceMessage#SubComponentStopped}#Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder_EventStore_Core_Bus_IHandle_EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStopped__Handle_EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStopped_" data-uid="EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder.EventStore#Core#Bus#IHandle{EventStore#Projections#Core#Messages#ProjectionCoreServiceMessage#SubComponentStopped}#Handle(EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStopped)">IHandle&lt;ProjectionCoreServiceMessage.SubComponentStopped&gt;.Handle(ProjectionCoreServiceMessage.SubComponentStopped)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void IHandle&lt;ProjectionCoreServiceMessage.SubComponentStopped&gt;.Handle(ProjectionCoreServiceMessage.SubComponentStopped message)</code></pre>
   </div>
@@ -505,12 +500,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_RequestResponseQueueForwarder.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.RequestResponseQueueForwarder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/RequestResponseQueueForwarder.cs/#L7" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,371 +104,348 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">QuerySourcesDefinitionOptions</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Messages.html">EventStore.Projections.Core.Messages</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
   <h5 id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class QuerySourcesDefinitionOptions : object</code></pre>
+    <pre><code class="lang-csharp hljs">[DataContract]
+public class QuerySourcesDefinitionOptions</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_DefinesCatalogTransform.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.DefinesCatalogTransform%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/QuerySourcesDefinitionOptions.cs/#L16">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_DefinesCatalogTransform_" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.DefinesCatalogTransform*"></a>
   <h4 id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_DefinesCatalogTransform" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.DefinesCatalogTransform">DefinesCatalogTransform</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool DefinesCatalogTransform { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[DataMember(Name = &quot;definesCatalogTransform&quot;)]
+public bool DefinesCatalogTransform { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_DefinesFold.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.DefinesFold%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/QuerySourcesDefinitionOptions.cs/#L8">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_DefinesFold_" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.DefinesFold*"></a>
   <h4 id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_DefinesFold" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.DefinesFold">DefinesFold</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool DefinesFold { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[DataMember(Name = &quot;definesFold&quot;)]
+public bool DefinesFold { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_DefinesStateTransform.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.DefinesStateTransform%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/QuerySourcesDefinitionOptions.cs/#L13">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_DefinesStateTransform_" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.DefinesStateTransform*"></a>
   <h4 id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_DefinesStateTransform" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.DefinesStateTransform">DefinesStateTransform</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool DefinesStateTransform { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[DataMember(Name = &quot;definesStateTransform&quot;)]
+public bool DefinesStateTransform { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_DisableParallelism.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.DisableParallelism%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/QuerySourcesDefinitionOptions.cs/#L27">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_DisableParallelism_" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.DisableParallelism*"></a>
   <h4 id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_DisableParallelism" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.DisableParallelism">DisableParallelism</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool DisableParallelism { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[DataMember(Name = &quot;disableParallelism&quot;)]
+public bool DisableParallelism { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_HandlesDeletedNotifications.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.HandlesDeletedNotifications%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/QuerySourcesDefinitionOptions.cs/#L10">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_HandlesDeletedNotifications_" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.HandlesDeletedNotifications*"></a>
   <h4 id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_HandlesDeletedNotifications" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.HandlesDeletedNotifications">HandlesDeletedNotifications</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool HandlesDeletedNotifications { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[DataMember(Name = &quot;handlesDeletedNotifications&quot;)]
+public bool HandlesDeletedNotifications { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_IncludeLinks.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.IncludeLinks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/QuerySourcesDefinitionOptions.cs/#L25">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_IncludeLinks_" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.IncludeLinks*"></a>
   <h4 id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_IncludeLinks" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.IncludeLinks">IncludeLinks</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IncludeLinks { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[DataMember(Name = &quot;$includeLinks&quot;)]
+public bool IncludeLinks { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_IsBiState.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.IsBiState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/QuerySourcesDefinitionOptions.cs/#L34">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_IsBiState_" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.IsBiState*"></a>
   <h4 id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_IsBiState" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.IsBiState">IsBiState</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsBiState { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[DataMember(Name = &quot;biState&quot;)]
+public bool IsBiState { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_PartitionResultStreamNamePattern.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.PartitionResultStreamNamePattern%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/QuerySourcesDefinitionOptions.cs/#L22">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_PartitionResultStreamNamePattern_" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.PartitionResultStreamNamePattern*"></a>
   <h4 id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_PartitionResultStreamNamePattern" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.PartitionResultStreamNamePattern">PartitionResultStreamNamePattern</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string PartitionResultStreamNamePattern { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[DataMember(Name = &quot;partitionResultStreamNamePattern&quot;)]
+public string PartitionResultStreamNamePattern { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_ProcessingLag.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.ProcessingLag%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/QuerySourcesDefinitionOptions.cs/#L32">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_ProcessingLag_" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.ProcessingLag*"></a>
   <h4 id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_ProcessingLag" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.ProcessingLag">ProcessingLag</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int? ProcessingLag { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[DataMember(Name = &quot;processingLag&quot;)]
+public int? ProcessingLag { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_ProducesResults.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.ProducesResults%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/QuerySourcesDefinitionOptions.cs/#L6">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_ProducesResults_" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.ProducesResults*"></a>
   <h4 id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_ProducesResults" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.ProducesResults">ProducesResults</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool ProducesResults { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[DataMember(Name = &quot;producesResults&quot;)]
+public bool ProducesResults { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_ReorderEvents.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.ReorderEvents%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/QuerySourcesDefinitionOptions.cs/#L30">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_ReorderEvents_" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.ReorderEvents*"></a>
   <h4 id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_ReorderEvents" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.ReorderEvents">ReorderEvents</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool ReorderEvents { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[DataMember(Name = &quot;reorderEvents&quot;)]
+public bool ReorderEvents { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_ResultStreamName.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.ResultStreamName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/QuerySourcesDefinitionOptions.cs/#L19">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_ResultStreamName_" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.ResultStreamName*"></a>
   <h4 id="EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions_ResultStreamName" data-uid="EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions.ResultStreamName">ResultStreamName</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string ResultStreamName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[DataMember(Name = &quot;resultStreamName&quot;)]
+public string ResultStreamName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -496,12 +474,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_QuerySourcesDefinitionOptions.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.QuerySourcesDefinitionOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/QuerySourcesDefinitionOptions.cs/#L4" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

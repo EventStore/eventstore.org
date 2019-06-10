@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,6 +104,34 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">PreludeScript</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.v8.html">EventStore.Projections.Core.v8</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
   <h5 id="EventStore_Projections_Core_v8_PreludeScript_syntax">Syntax</h5>
@@ -111,18 +140,15 @@
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_v8_PreludeScript__ctor_System_String_System_String_Func_System_String_Tuple_System_String_System_String___Action_System_Int32_Action__Action_System_String_System_Object____.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.v8.PreludeScript.%23ctor(System.String%2CSystem.String%2CFunc%7BSystem.String%2CTuple%7BSystem.String%2CSystem.String%7D%7D%2CAction%7BSystem.Int32%2CAction%7D%2CAction%7BSystem.String%2CSystem.Object%5B%5D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/v8/PreludeScript.cs/#L33">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_v8_PreludeScript__ctor_" data-uid="EventStore.Projections.Core.v8.PreludeScript.#ctor*"></a>
-  <h4 id="EventStore_Projections_Core_v8_PreludeScript__ctor_System_String_System_String_Func_System_String_Tuple_System_String_System_String___Action_System_Int32_Action__Action_System_String_System_Object____" data-uid="EventStore.Projections.Core.v8.PreludeScript.#ctor(System.String,System.String,Func{System.String,Tuple{System.String,System.String}},Action{System.Int32,Action},Action{System.String,System.Object[]})">PreludeScript(String, String, Func&lt;String, Tuple&lt;String, String&gt;&gt;, Action&lt;Int32, Action&gt;, Action&lt;String, Object[]&gt;)</h4>
+  <h4 id="EventStore_Projections_Core_v8_PreludeScript__ctor_System_String_System_String_System_Func_System_String_System_Tuple_System_String_System_String___System_Action_System_Int32_System_Action__System_Action_System_String_System_Object____" data-uid="EventStore.Projections.Core.v8.PreludeScript.#ctor(System.String,System.String,System.Func{System.String,System.Tuple{System.String,System.String}},System.Action{System.Int32,System.Action},System.Action{System.String,System.Object[]})">PreludeScript(String, String, Func&lt;String, Tuple&lt;String, String&gt;&gt;, Action&lt;Int32, Action&gt;, Action&lt;String, Object[]&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public PreludeScript(string script, string fileName, Func&lt;string, Tuple&lt;string, string&gt;&gt; getModuleSourceAndFileName, Action&lt;int, Action&gt; cancelCallbackFactory, Action&lt;string, object[]&gt; logger = null)</code></pre>
   </div>
@@ -147,17 +173,17 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">Tuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Tuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td><span class="parametername">getModuleSourceAndFileName</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">Action</span>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Int32</span>, <span class="xref">System.Action</span>&gt;</td>
         <td><span class="parametername">cancelCallbackFactory</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>[]&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>[]&gt;</td>
         <td><span class="parametername">logger</span></td>
         <td></td>
       </tr>
@@ -165,18 +191,15 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_v8_PreludeScript_CancelTerminateExecution.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.v8.PreludeScript.CancelTerminateExecution%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/v8/PreludeScript.cs/#L159">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_v8_PreludeScript_CancelTerminateExecution_" data-uid="EventStore.Projections.Core.v8.PreludeScript.CancelTerminateExecution*"></a>
   <h4 id="EventStore_Projections_Core_v8_PreludeScript_CancelTerminateExecution" data-uid="EventStore.Projections.Core.v8.PreludeScript.CancelTerminateExecution">CancelTerminateExecution()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool CancelTerminateExecution()</code></pre>
   </div>
@@ -195,33 +218,27 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_v8_PreludeScript_Dispose.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.v8.PreludeScript.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/v8/PreludeScript.cs/#L106">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_v8_PreludeScript_Dispose_" data-uid="EventStore.Projections.Core.v8.PreludeScript.Dispose*"></a>
   <h4 id="EventStore_Projections_Core_v8_PreludeScript_Dispose" data-uid="EventStore.Projections.Core.v8.PreludeScript.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_v8_PreludeScript_GetHandle.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.v8.PreludeScript.GetHandle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/v8/PreludeScript.cs/#L111">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_v8_PreludeScript_GetHandle_" data-uid="EventStore.Projections.Core.v8.PreludeScript.GetHandle*"></a>
   <h4 id="EventStore_Projections_Core_v8_PreludeScript_GetHandle" data-uid="EventStore.Projections.Core.v8.PreludeScript.GetHandle">GetHandle()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IntPtr GetHandle()</code></pre>
   </div>
@@ -235,25 +252,26 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IntPtr</span></td>
+        <td><span class="xref">System.IntPtr</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_v8_PreludeScript_ScheduleTerminateExecution.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.v8.PreludeScript.ScheduleTerminateExecution%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/v8/PreludeScript.cs/#L141">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_v8_PreludeScript_ScheduleTerminateExecution_" data-uid="EventStore.Projections.Core.v8.PreludeScript.ScheduleTerminateExecution*"></a>
   <h4 id="EventStore_Projections_Core_v8_PreludeScript_ScheduleTerminateExecution" data-uid="EventStore.Projections.Core.v8.PreludeScript.ScheduleTerminateExecution">ScheduleTerminateExecution()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void ScheduleTerminateExecution()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
@@ -280,12 +298,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_v8_PreludeScript.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.v8.PreludeScript%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/v8/PreludeScript.cs/#L7" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

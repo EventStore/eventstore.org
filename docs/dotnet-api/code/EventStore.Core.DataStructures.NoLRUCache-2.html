@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -107,11 +108,35 @@
     <h5>Implements</h5>
     <div><a class="xref" href="EventStore.Core.DataStructures.ILRUCache-2.html">ILRUCache</a>&lt;TKey, TValue&gt;</div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.DataStructures.html">EventStore.Core.DataStructures</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_DataStructures_NoLRUCache_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class NoLRUCache&lt;TKey, TValue&gt; : object, ILRUCache&lt;TKey, TValue&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class NoLRUCache&lt;TKey, TValue&gt; : ILRUCache&lt;TKey, TValue&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -134,33 +159,27 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_DataStructures_NoLRUCache_2_Clear.md&amp;value=---%0Auid%3A%20EventStore.Core.DataStructures.NoLRUCache%602.Clear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/DataStructures/NoLRUCache.cs/#L5">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_DataStructures_NoLRUCache_2_Clear_" data-uid="EventStore.Core.DataStructures.NoLRUCache`2.Clear*"></a>
   <h4 id="EventStore_Core_DataStructures_NoLRUCache_2_Clear" data-uid="EventStore.Core.DataStructures.NoLRUCache`2.Clear">Clear()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_DataStructures_NoLRUCache_2_Put__0__1_.md&amp;value=---%0Auid%3A%20EventStore.Core.DataStructures.NoLRUCache%602.Put(%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/DataStructures/NoLRUCache.cs/#L13">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_DataStructures_NoLRUCache_2_Put_" data-uid="EventStore.Core.DataStructures.NoLRUCache`2.Put*"></a>
   <h4 id="EventStore_Core_DataStructures_NoLRUCache_2_Put__0__1_" data-uid="EventStore.Core.DataStructures.NoLRUCache`2.Put(`0,`1)">Put(TKey, TValue)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TValue Put(TKey key, TValue value)</code></pre>
   </div>
@@ -201,18 +220,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_DataStructures_NoLRUCache_2_Put__1__0___0_Func__0___0__1__Func__0__1___0__1__.md&amp;value=---%0Auid%3A%20EventStore.Core.DataStructures.NoLRUCache%602.Put%60%601(%600%2C%60%600%2CFunc%7B%600%2C%60%600%2C%601%7D%2CFunc%7B%600%2C%601%2C%60%600%2C%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/DataStructures/NoLRUCache.cs/#L17">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_DataStructures_NoLRUCache_2_Put_" data-uid="EventStore.Core.DataStructures.NoLRUCache`2.Put*"></a>
-  <h4 id="EventStore_Core_DataStructures_NoLRUCache_2_Put__1__0___0_Func__0___0__1__Func__0__1___0__1__" data-uid="EventStore.Core.DataStructures.NoLRUCache`2.Put``1(`0,``0,Func{`0,``0,`1},Func{`0,`1,``0,`1})">Put&lt;T&gt;(TKey, T, Func&lt;TKey, T, TValue&gt;, Func&lt;TKey, TValue, T, TValue&gt;)</h4>
+  <h4 id="EventStore_Core_DataStructures_NoLRUCache_2_Put__1__0___0_System_Func__0___0__1__System_Func__0__1___0__1__" data-uid="EventStore.Core.DataStructures.NoLRUCache`2.Put``1(`0,``0,System.Func{`0,``0,`1},System.Func{`0,`1,``0,`1})">Put&lt;T&gt;(TKey, T, Func&lt;TKey, T, TValue&gt;, Func&lt;TKey, TValue, T, TValue&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TValue Put&lt;T&gt;(TKey key, T userData, Func&lt;TKey, T, TValue&gt; addFactory, Func&lt;TKey, TValue, T, TValue&gt; updateFactory)</code></pre>
   </div>
@@ -237,12 +253,12 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;TKey, T, TValue&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;TKey, T, TValue&gt;</td>
         <td><span class="parametername">addFactory</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;TKey, TValue, T, TValue&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;TKey, TValue, T, TValue&gt;</td>
         <td><span class="parametername">updateFactory</span></td>
         <td></td>
       </tr>
@@ -278,18 +294,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_DataStructures_NoLRUCache_2_TryGet__0__1__.md&amp;value=---%0Auid%3A%20EventStore.Core.DataStructures.NoLRUCache%602.TryGet(%600%2C%601%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/DataStructures/NoLRUCache.cs/#L8">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_DataStructures_NoLRUCache_2_TryGet_" data-uid="EventStore.Core.DataStructures.NoLRUCache`2.TryGet*"></a>
   <h4 id="EventStore_Core_DataStructures_NoLRUCache_2_TryGet__0__1__" data-uid="EventStore.Core.DataStructures.NoLRUCache`2.TryGet(`0,`1@)">TryGet(TKey, out TValue)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool TryGet(TKey key, out TValue value)</code></pre>
   </div>
@@ -359,12 +372,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_DataStructures_NoLRUCache_2.md&amp;value=---%0Auid%3A%20EventStore.Core.DataStructures.NoLRUCache%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/DataStructures/NoLRUCache.cs/#L4" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

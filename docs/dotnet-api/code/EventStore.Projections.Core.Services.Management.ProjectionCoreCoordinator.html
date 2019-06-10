@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -112,26 +113,47 @@
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStarted.html">ProjectionCoreServiceMessage.SubComponentStarted</a>&gt;</div>
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStopped.html">ProjectionCoreServiceMessage.SubComponentStopped</a>&gt;</div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Services.Management.html">EventStore.Projections.Core.Services.Management</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
   <h5 id="EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ProjectionCoreCoordinator : object, IHandle&lt;ProjectionManagementMessage.Internal.RegularTimeout&gt;, IHandle&lt;SystemMessage.StateChangeMessage&gt;, IHandle&lt;SystemMessage.SystemCoreReady&gt;, IHandle&lt;SystemMessage.EpochWritten&gt;, IHandle&lt;ProjectionCoreServiceMessage.SubComponentStarted&gt;, IHandle&lt;ProjectionCoreServiceMessage.SubComponentStopped&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class ProjectionCoreCoordinator : IHandle&lt;ProjectionManagementMessage.Internal.RegularTimeout&gt;, IHandle&lt;SystemMessage.StateChangeMessage&gt;, IHandle&lt;SystemMessage.SystemCoreReady&gt;, IHandle&lt;SystemMessage.EpochWritten&gt;, IHandle&lt;ProjectionCoreServiceMessage.SubComponentStarted&gt;, IHandle&lt;ProjectionCoreServiceMessage.SubComponentStopped&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator__ctor_EventStore_Common_Options_ProjectionType_EventStore_Projections_Core_Services_Management_TimeoutScheduler___EventStore_Core_Bus_IPublisher___EventStore_Core_Bus_IPublisher_EventStore_Core_Messaging_IEnvelope_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.%23ctor(EventStore.Common.Options.ProjectionType%2CEventStore.Projections.Core.Services.Management.TimeoutScheduler%5B%5D%2CEventStore.Core.Bus.IPublisher%5B%5D%2CEventStore.Core.Bus.IPublisher%2CEventStore.Core.Messaging.IEnvelope)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Management/ProjectionCoreCoordinator.cs/#L31">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator__ctor_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.#ctor*"></a>
   <h4 id="EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator__ctor_EventStore_Common_Options_ProjectionType_EventStore_Projections_Core_Services_Management_TimeoutScheduler___EventStore_Core_Bus_IPublisher___EventStore_Core_Bus_IPublisher_EventStore_Core_Messaging_IEnvelope_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.#ctor(EventStore.Common.Options.ProjectionType,EventStore.Projections.Core.Services.Management.TimeoutScheduler[],EventStore.Core.Bus.IPublisher[],EventStore.Core.Bus.IPublisher,EventStore.Core.Messaging.IEnvelope)">ProjectionCoreCoordinator(ProjectionType, TimeoutScheduler[], IPublisher[], IPublisher, IEnvelope)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ProjectionCoreCoordinator(ProjectionType runProjections, TimeoutScheduler[] timeoutSchedulers, IPublisher[] queues, IPublisher publisher, IEnvelope publishEnvelope)</code></pre>
   </div>
@@ -174,18 +196,15 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_Handle_EventStore_Core_Messages_SystemMessage_EpochWritten_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.Handle(EventStore.Core.Messages.SystemMessage.EpochWritten)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Management/ProjectionCoreCoordinator.cs/#L69">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_Handle_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_Handle_EventStore_Core_Messages_SystemMessage_EpochWritten_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.Handle(EventStore.Core.Messages.SystemMessage.EpochWritten)">Handle(SystemMessage.EpochWritten)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(SystemMessage.EpochWritten message)</code></pre>
   </div>
@@ -206,18 +225,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_Handle_EventStore_Core_Messages_SystemMessage_StateChangeMessage_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.Handle(EventStore.Core.Messages.SystemMessage.StateChangeMessage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Management/ProjectionCoreCoordinator.cs/#L61">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_Handle_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_Handle_EventStore_Core_Messages_SystemMessage_StateChangeMessage_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.Handle(EventStore.Core.Messages.SystemMessage.StateChangeMessage)">Handle(SystemMessage.StateChangeMessage)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(SystemMessage.StateChangeMessage message)</code></pre>
   </div>
@@ -238,18 +254,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_Handle_EventStore_Core_Messages_SystemMessage_SystemCoreReady_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.Handle(EventStore.Core.Messages.SystemMessage.SystemCoreReady)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Management/ProjectionCoreCoordinator.cs/#L56">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_Handle_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_Handle_EventStore_Core_Messages_SystemMessage_SystemCoreReady_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.Handle(EventStore.Core.Messages.SystemMessage.SystemCoreReady)">Handle(SystemMessage.SystemCoreReady)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(SystemMessage.SystemCoreReady message)</code></pre>
   </div>
@@ -270,18 +283,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_Handle_EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStarted_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.Handle(EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStarted)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Management/ProjectionCoreCoordinator.cs/#L146">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_Handle_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_Handle_EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStarted_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.Handle(EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStarted)">Handle(ProjectionCoreServiceMessage.SubComponentStarted)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ProjectionCoreServiceMessage.SubComponentStarted message)</code></pre>
   </div>
@@ -302,18 +312,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_Handle_EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStopped_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.Handle(EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStopped)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Management/ProjectionCoreCoordinator.cs/#L155">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_Handle_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_Handle_EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStopped_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.Handle(EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStopped)">Handle(ProjectionCoreServiceMessage.SubComponentStopped)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ProjectionCoreServiceMessage.SubComponentStopped message)</code></pre>
   </div>
@@ -334,18 +341,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_Handle_EventStore_Projections_Core_Messages_ProjectionManagementMessage_Internal_RegularTimeout_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.Handle(EventStore.Projections.Core.Messages.ProjectionManagementMessage.Internal.RegularTimeout)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Management/ProjectionCoreCoordinator.cs/#L44">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_Handle_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_Handle_EventStore_Projections_Core_Messages_ProjectionManagementMessage_Internal_RegularTimeout_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.Handle(EventStore.Projections.Core.Messages.ProjectionManagementMessage.Internal.RegularTimeout)">Handle(ProjectionManagementMessage.Internal.RegularTimeout)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ProjectionManagementMessage.Internal.RegularTimeout message)</code></pre>
   </div>
@@ -366,18 +370,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_SetupMessaging_EventStore_Core_Bus_IBus_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.SetupMessaging(EventStore.Core.Bus.IBus)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Management/ProjectionCoreCoordinator.cs/#L163">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_SetupMessaging_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.SetupMessaging*"></a>
   <h4 id="EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator_SetupMessaging_EventStore_Core_Bus_IBus_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.SetupMessaging(EventStore.Core.Bus.IBus)">SetupMessaging(IBus)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void SetupMessaging(IBus bus)</code></pre>
   </div>
@@ -442,12 +443,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Management_ProjectionCoreCoordinator.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Management/ProjectionCoreCoordinator.cs/#L12" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

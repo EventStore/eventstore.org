@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -98,6 +99,27 @@
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.ValueType.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.Transport.Tcp.html">EventStore.Core.Services.Transport.Tcp</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Services_Transport_Tcp_TcpPackage_syntax">Syntax</h5>
@@ -106,18 +128,15 @@
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpPackage__ctor_EventStore_Core_Services_Transport_Tcp_TcpCommand_EventStore_Core_Services_Transport_Tcp_TcpFlags_Guid_System_String_System_String_ArraySegment_System_Byte__.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpPackage.%23ctor(EventStore.Core.Services.Transport.Tcp.TcpCommand%2CEventStore.Core.Services.Transport.Tcp.TcpFlags%2CGuid%2CSystem.String%2CSystem.String%2CArraySegment%7BSystem.Byte%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpPackage.cs/#L77">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Tcp_TcpPackage__ctor_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.#ctor*"></a>
-  <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage__ctor_EventStore_Core_Services_Transport_Tcp_TcpCommand_EventStore_Core_Services_Transport_Tcp_TcpFlags_Guid_System_String_System_String_ArraySegment_System_Byte__" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.#ctor(EventStore.Core.Services.Transport.Tcp.TcpCommand,EventStore.Core.Services.Transport.Tcp.TcpFlags,Guid,System.String,System.String,ArraySegment{System.Byte})">TcpPackage(TcpCommand, TcpFlags, Guid, String, String, ArraySegment&lt;Byte&gt;)</h4>
+  <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage__ctor_EventStore_Core_Services_Transport_Tcp_TcpCommand_EventStore_Core_Services_Transport_Tcp_TcpFlags_System_Guid_System_String_System_String_System_ArraySegment_System_Byte__" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.#ctor(EventStore.Core.Services.Transport.Tcp.TcpCommand,EventStore.Core.Services.Transport.Tcp.TcpFlags,System.Guid,System.String,System.String,System.ArraySegment{System.Byte})">TcpPackage(TcpCommand, TcpFlags, Guid, String, String, ArraySegment&lt;Byte&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TcpPackage(TcpCommand command, TcpFlags flags, Guid correlationId, string login, string password, ArraySegment&lt;byte&gt; data)</code></pre>
   </div>
@@ -142,7 +161,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">correlationId</span></td>
         <td></td>
       </tr>
@@ -157,24 +176,21 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="xref">System.ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
         <td><span class="parametername">data</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpPackage__ctor_EventStore_Core_Services_Transport_Tcp_TcpCommand_EventStore_Core_Services_Transport_Tcp_TcpFlags_Guid_System_String_System_String_System_Byte___.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpPackage.%23ctor(EventStore.Core.Services.Transport.Tcp.TcpCommand%2CEventStore.Core.Services.Transport.Tcp.TcpFlags%2CGuid%2CSystem.String%2CSystem.String%2CSystem.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpPackage.cs/#L72">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Tcp_TcpPackage__ctor_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.#ctor*"></a>
-  <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage__ctor_EventStore_Core_Services_Transport_Tcp_TcpCommand_EventStore_Core_Services_Transport_Tcp_TcpFlags_Guid_System_String_System_String_System_Byte___" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.#ctor(EventStore.Core.Services.Transport.Tcp.TcpCommand,EventStore.Core.Services.Transport.Tcp.TcpFlags,Guid,System.String,System.String,System.Byte[])">TcpPackage(TcpCommand, TcpFlags, Guid, String, String, Byte[])</h4>
+  <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage__ctor_EventStore_Core_Services_Transport_Tcp_TcpCommand_EventStore_Core_Services_Transport_Tcp_TcpFlags_System_Guid_System_String_System_String_System_Byte___" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.#ctor(EventStore.Core.Services.Transport.Tcp.TcpCommand,EventStore.Core.Services.Transport.Tcp.TcpFlags,System.Guid,System.String,System.String,System.Byte[])">TcpPackage(TcpCommand, TcpFlags, Guid, String, String, Byte[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TcpPackage(TcpCommand command, TcpFlags flags, Guid correlationId, string login, string password, byte[] data)</code></pre>
   </div>
@@ -199,7 +215,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">correlationId</span></td>
         <td></td>
       </tr>
@@ -220,18 +236,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpPackage__ctor_EventStore_Core_Services_Transport_Tcp_TcpCommand_Guid_ArraySegment_System_Byte__.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpPackage.%23ctor(EventStore.Core.Services.Transport.Tcp.TcpCommand%2CGuid%2CArraySegment%7BSystem.Byte%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpPackage.cs/#L68">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Tcp_TcpPackage__ctor_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.#ctor*"></a>
-  <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage__ctor_EventStore_Core_Services_Transport_Tcp_TcpCommand_Guid_ArraySegment_System_Byte__" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.#ctor(EventStore.Core.Services.Transport.Tcp.TcpCommand,Guid,ArraySegment{System.Byte})">TcpPackage(TcpCommand, Guid, ArraySegment&lt;Byte&gt;)</h4>
+  <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage__ctor_EventStore_Core_Services_Transport_Tcp_TcpCommand_System_Guid_System_ArraySegment_System_Byte__" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.#ctor(EventStore.Core.Services.Transport.Tcp.TcpCommand,System.Guid,System.ArraySegment{System.Byte})">TcpPackage(TcpCommand, Guid, ArraySegment&lt;Byte&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TcpPackage(TcpCommand command, Guid correlationId, ArraySegment&lt;byte&gt; data)</code></pre>
   </div>
@@ -251,29 +264,26 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">correlationId</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="xref">System.ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
         <td><span class="parametername">data</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpPackage__ctor_EventStore_Core_Services_Transport_Tcp_TcpCommand_Guid_System_Byte___.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpPackage.%23ctor(EventStore.Core.Services.Transport.Tcp.TcpCommand%2CGuid%2CSystem.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpPackage.cs/#L64">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Tcp_TcpPackage__ctor_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.#ctor*"></a>
-  <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage__ctor_EventStore_Core_Services_Transport_Tcp_TcpCommand_Guid_System_Byte___" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.#ctor(EventStore.Core.Services.Transport.Tcp.TcpCommand,Guid,System.Byte[])">TcpPackage(TcpCommand, Guid, Byte[])</h4>
+  <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage__ctor_EventStore_Core_Services_Transport_Tcp_TcpCommand_System_Guid_System_Byte___" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.#ctor(EventStore.Core.Services.Transport.Tcp.TcpCommand,System.Guid,System.Byte[])">TcpPackage(TcpCommand, Guid, Byte[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TcpPackage(TcpCommand command, Guid correlationId, byte[] data)</code></pre>
   </div>
@@ -293,7 +303,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">correlationId</span></td>
         <td></td>
       </tr>
@@ -306,46 +316,38 @@
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpPackage_AuthOffset.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpPackage.AuthOffset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpPackage.cs/#L17">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage_AuthOffset" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.AuthOffset">AuthOffset</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int AuthOffset = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int AuthOffset = 18</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpPackage_Command.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpPackage.Command%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpPackage.cs/#L21">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage_Command" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.Command">Command</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly TcpCommand Command</code></pre>
   </div>
@@ -354,56 +356,46 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.Transport.Tcp.TcpCommand.html">TcpCommand</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpPackage_CommandOffset.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpPackage.CommandOffset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpPackage.cs/#L14">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage_CommandOffset" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.CommandOffset">CommandOffset</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int CommandOffset = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int CommandOffset = 0</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpPackage_CorrelationId.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpPackage.CorrelationId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpPackage.cs/#L23">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage_CorrelationId" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.CorrelationId">CorrelationId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly Guid CorrelationId</code></pre>
   </div>
@@ -412,56 +404,46 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
-        <td></td>
+        <td><span class="xref">System.Guid</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpPackage_CorrelationOffset.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpPackage.CorrelationOffset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpPackage.cs/#L16">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage_CorrelationOffset" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.CorrelationOffset">CorrelationOffset</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int CorrelationOffset = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int CorrelationOffset = 2</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpPackage_Data.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpPackage.Data%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpPackage.cs/#L26">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage_Data" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.Data">Data</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly ArraySegment&lt;byte&gt; Data</code></pre>
   </div>
@@ -470,27 +452,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
-        <td></td>
+        <td><span class="xref">System.ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpPackage_Flags.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpPackage.Flags%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpPackage.cs/#L22">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage_Flags" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.Flags">Flags</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly TcpFlags Flags</code></pre>
   </div>
@@ -499,56 +476,46 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.Transport.Tcp.TcpFlags.html">TcpFlags</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpPackage_FlagsOffset.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpPackage.FlagsOffset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpPackage.cs/#L15">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage_FlagsOffset" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.FlagsOffset">FlagsOffset</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int FlagsOffset = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int FlagsOffset = 1</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpPackage_Login.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpPackage.Login%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpPackage.cs/#L24">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage_Login" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.Login">Login</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly string Login</code></pre>
   </div>
@@ -557,56 +524,46 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpPackage_MandatorySize.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpPackage.MandatorySize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpPackage.cs/#L19">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage_MandatorySize" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.MandatorySize">MandatorySize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int MandatorySize = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int MandatorySize = 18</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpPackage_Password.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpPackage.Password%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpPackage.cs/#L25">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage_Password" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.Password">Password</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly string Password</code></pre>
   </div>
@@ -615,30 +572,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpPackage_AsArraySegment.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpPackage.AsArraySegment%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpPackage.cs/#L129">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Tcp_TcpPackage_AsArraySegment_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.AsArraySegment*"></a>
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage_AsArraySegment" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.AsArraySegment">AsArraySegment()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ArraySegment&lt;byte&gt; AsArraySegment()</code></pre>
   </div>
@@ -652,23 +604,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="xref">System.ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpPackage_AsByteArray.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpPackage.AsByteArray%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpPackage.cs/#L95">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Tcp_TcpPackage_AsByteArray_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.AsByteArray*"></a>
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage_AsByteArray" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.AsByteArray">AsByteArray()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public byte[] AsByteArray()</code></pre>
   </div>
@@ -687,18 +636,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpPackage_FromArraySegment_ArraySegment_System_Byte__.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpPackage.FromArraySegment(ArraySegment%7BSystem.Byte%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpPackage.cs/#L28">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Tcp_TcpPackage_FromArraySegment_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.FromArraySegment*"></a>
-  <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage_FromArraySegment_ArraySegment_System_Byte__" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.FromArraySegment(ArraySegment{System.Byte})">FromArraySegment(ArraySegment&lt;Byte&gt;)</h4>
+  <h4 id="EventStore_Core_Services_Transport_Tcp_TcpPackage_FromArraySegment_System_ArraySegment_System_Byte__" data-uid="EventStore.Core.Services.Transport.Tcp.TcpPackage.FromArraySegment(System.ArraySegment{System.Byte})">FromArraySegment(ArraySegment&lt;Byte&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TcpPackage FromArraySegment(ArraySegment&lt;byte&gt; data)</code></pre>
   </div>
@@ -713,7 +659,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="xref">System.ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
         <td><span class="parametername">data</span></td>
         <td></td>
       </tr>
@@ -736,6 +682,15 @@
   </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJson_System_Object_">Json.ToJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
+  </div>
+  <div>
       <a class="xref" href="EventStore.Projections.Core.Utils.EnumExtensions.html#EventStore_Projections_Core_Utils_EnumExtensions_EnumValueName__1___0_">EnumExtensions.EnumValueName&lt;T&gt;(T)</a>
   </div>
   <div>
@@ -753,12 +708,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpPackage.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpPackage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpPackage.cs/#L13" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

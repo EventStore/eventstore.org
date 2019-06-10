@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -100,8 +101,20 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="EventStore.Core.Data.TFPos.html">TFPos</a>&gt;</div>
-    <div><span class="xref">IComparable</span>&lt;<a class="xref" href="EventStore.Core.Data.TFPos.html">TFPos</a>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="EventStore.Core.Data.TFPos.html">TFPos</a>&gt;</div>
+    <div><span class="xref">System.IComparable</span>&lt;<a class="xref" href="EventStore.Core.Data.TFPos.html">TFPos</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Data.html">EventStore.Core.Data</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
@@ -111,18 +124,15 @@
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_TFPos__ctor_System_Int64_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.TFPos.%23ctor(System.Int64%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/TFPos.cs/#L12">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Data_TFPos__ctor_" data-uid="EventStore.Core.Data.TFPos.#ctor*"></a>
   <h4 id="EventStore_Core_Data_TFPos__ctor_System_Int64_System_Int64_" data-uid="EventStore.Core.Data.TFPos.#ctor(System.Int64,System.Int64)">TFPos(Int64, Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TFPos(long commitPosition, long preparePosition)</code></pre>
   </div>
@@ -150,17 +160,14 @@
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_TFPos_CommitPosition.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.TFPos.CommitPosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/TFPos.cs/#L9">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Data_TFPos_CommitPosition" data-uid="EventStore.Core.Data.TFPos.CommitPosition">CommitPosition</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly long CommitPosition</code></pre>
   </div>
@@ -169,27 +176,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_TFPos_HeadOfTf.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.TFPos.HeadOfTf%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/TFPos.cs/#L7">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Data_TFPos_HeadOfTf" data-uid="EventStore.Core.Data.TFPos.HeadOfTf">HeadOfTf</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static readonly TFPos HeadOfTf</code></pre>
   </div>
@@ -198,27 +200,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Data.TFPos.html">TFPos</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_TFPos_Invalid.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.TFPos.Invalid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/TFPos.cs/#L6">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Data_TFPos_Invalid" data-uid="EventStore.Core.Data.TFPos.Invalid">Invalid</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static readonly TFPos Invalid</code></pre>
   </div>
@@ -227,27 +224,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Data.TFPos.html">TFPos</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_TFPos_PreparePosition.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.TFPos.PreparePosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/TFPos.cs/#L10">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Data_TFPos_PreparePosition" data-uid="EventStore.Core.Data.TFPos.PreparePosition">PreparePosition</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly long PreparePosition</code></pre>
   </div>
@@ -256,32 +248,28 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_TFPos_AsString.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.TFPos.AsString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/TFPos.cs/#L17">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Data_TFPos_AsString_" data-uid="EventStore.Core.Data.TFPos.AsString*"></a>
   <h4 id="EventStore_Core_Data_TFPos_AsString" data-uid="EventStore.Core.Data.TFPos.AsString">AsString()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string AsString()</code></pre>
+    <pre><code class="lang-csharp hljs">[Pure]
+public string AsString()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -298,18 +286,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_TFPos_CompareTo_EventStore_Core_Data_TFPos_.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.TFPos.CompareTo(EventStore.Core.Data.TFPos)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/TFPos.cs/#L37">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Data_TFPos_CompareTo_" data-uid="EventStore.Core.Data.TFPos.CompareTo*"></a>
   <h4 id="EventStore_Core_Data_TFPos_CompareTo_EventStore_Core_Data_TFPos_" data-uid="EventStore.Core.Data.TFPos.CompareTo(EventStore.Core.Data.TFPos)">CompareTo(TFPos)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int CompareTo(TFPos other)</code></pre>
   </div>
@@ -345,18 +330,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_TFPos_Equals_EventStore_Core_Data_TFPos_.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.TFPos.Equals(EventStore.Core.Data.TFPos)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/TFPos.cs/#L45">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Data_TFPos_Equals_" data-uid="EventStore.Core.Data.TFPos.Equals*"></a>
   <h4 id="EventStore_Core_Data_TFPos_Equals_EventStore_Core_Data_TFPos_" data-uid="EventStore.Core.Data.TFPos.Equals(EventStore.Core.Data.TFPos)">Equals(TFPos)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool Equals(TFPos other)</code></pre>
   </div>
@@ -392,18 +374,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_TFPos_Equals_System_Object_.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.TFPos.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/TFPos.cs/#L49">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Data_TFPos_Equals_" data-uid="EventStore.Core.Data.TFPos.Equals*"></a>
   <h4 id="EventStore_Core_Data_TFPos_Equals_System_Object_" data-uid="EventStore.Core.Data.TFPos.Equals(System.Object)">Equals(Object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
   </div>
@@ -439,18 +418,17 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_TFPos_GetHashCode.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.TFPos.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/TFPos.cs/#L54">View Source</a>
-  </span>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.Equals(System.Object)</span></div>
+  
+  
   <a id="EventStore_Core_Data_TFPos_GetHashCode_" data-uid="EventStore.Core.Data.TFPos.GetHashCode*"></a>
   <h4 id="EventStore_Core_Data_TFPos_GetHashCode" data-uid="EventStore.Core.Data.TFPos.GetHashCode">GetHashCode()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
   </div>
@@ -469,18 +447,17 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_TFPos_ToString.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.TFPos.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/TFPos.cs/#L86">View Source</a>
-  </span>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.GetHashCode()</span></div>
+  
+  
   <a id="EventStore_Core_Data_TFPos_ToString_" data-uid="EventStore.Core.Data.TFPos.ToString*"></a>
   <h4 id="EventStore_Core_Data_TFPos_ToString" data-uid="EventStore.Core.Data.TFPos.ToString">ToString()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
   </div>
@@ -499,18 +476,17 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_TFPos_TryParse_System_String_EventStore_Core_Data_TFPos__.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.TFPos.TryParse(System.String%2CEventStore.Core.Data.TFPos%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/TFPos.cs/#L22">View Source</a>
-  </span>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.ToString()</span></div>
+  
+  
   <a id="EventStore_Core_Data_TFPos_TryParse_" data-uid="EventStore.Core.Data.TFPos.TryParse*"></a>
   <h4 id="EventStore_Core_Data_TFPos_TryParse_System_String_EventStore_Core_Data_TFPos__" data-uid="EventStore.Core.Data.TFPos.TryParse(System.String,EventStore.Core.Data.TFPos@)">TryParse(String, out TFPos)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool TryParse(string s, out TFPos pos)</code></pre>
   </div>
@@ -553,18 +529,15 @@
   </table>
   <h3 id="operators">Operators
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_TFPos_op_Equality_EventStore_Core_Data_TFPos_EventStore_Core_Data_TFPos_.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.TFPos.op_Equality(EventStore.Core.Data.TFPos%2CEventStore.Core.Data.TFPos)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/TFPos.cs/#L60">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Data_TFPos_op_Equality_" data-uid="EventStore.Core.Data.TFPos.op_Equality*"></a>
   <h4 id="EventStore_Core_Data_TFPos_op_Equality_EventStore_Core_Data_TFPos_EventStore_Core_Data_TFPos_" data-uid="EventStore.Core.Data.TFPos.op_Equality(EventStore.Core.Data.TFPos,EventStore.Core.Data.TFPos)">Equality(TFPos, TFPos)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool operator ==(TFPos left, TFPos right)</code></pre>
   </div>
@@ -605,18 +578,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_TFPos_op_GreaterThan_EventStore_Core_Data_TFPos_EventStore_Core_Data_TFPos_.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.TFPos.op_GreaterThan(EventStore.Core.Data.TFPos%2CEventStore.Core.Data.TFPos)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/TFPos.cs/#L81">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Data_TFPos_op_GreaterThan_" data-uid="EventStore.Core.Data.TFPos.op_GreaterThan*"></a>
   <h4 id="EventStore_Core_Data_TFPos_op_GreaterThan_EventStore_Core_Data_TFPos_EventStore_Core_Data_TFPos_" data-uid="EventStore.Core.Data.TFPos.op_GreaterThan(EventStore.Core.Data.TFPos,EventStore.Core.Data.TFPos)">GreaterThan(TFPos, TFPos)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool operator&gt;(TFPos left, TFPos right)</code></pre>
   </div>
@@ -657,18 +627,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_TFPos_op_GreaterThanOrEqual_EventStore_Core_Data_TFPos_EventStore_Core_Data_TFPos_.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.TFPos.op_GreaterThanOrEqual(EventStore.Core.Data.TFPos%2CEventStore.Core.Data.TFPos)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/TFPos.cs/#L72">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Data_TFPos_op_GreaterThanOrEqual_" data-uid="EventStore.Core.Data.TFPos.op_GreaterThanOrEqual*"></a>
   <h4 id="EventStore_Core_Data_TFPos_op_GreaterThanOrEqual_EventStore_Core_Data_TFPos_EventStore_Core_Data_TFPos_" data-uid="EventStore.Core.Data.TFPos.op_GreaterThanOrEqual(EventStore.Core.Data.TFPos,EventStore.Core.Data.TFPos)">GreaterThanOrEqual(TFPos, TFPos)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool operator &gt;=(TFPos left, TFPos right)</code></pre>
   </div>
@@ -709,18 +676,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_TFPos_op_Inequality_EventStore_Core_Data_TFPos_EventStore_Core_Data_TFPos_.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.TFPos.op_Inequality(EventStore.Core.Data.TFPos%2CEventStore.Core.Data.TFPos)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/TFPos.cs/#L64">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Data_TFPos_op_Inequality_" data-uid="EventStore.Core.Data.TFPos.op_Inequality*"></a>
   <h4 id="EventStore_Core_Data_TFPos_op_Inequality_EventStore_Core_Data_TFPos_EventStore_Core_Data_TFPos_" data-uid="EventStore.Core.Data.TFPos.op_Inequality(EventStore.Core.Data.TFPos,EventStore.Core.Data.TFPos)">Inequality(TFPos, TFPos)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool operator !=(TFPos left, TFPos right)</code></pre>
   </div>
@@ -761,18 +725,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_TFPos_op_LessThan_EventStore_Core_Data_TFPos_EventStore_Core_Data_TFPos_.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.TFPos.op_LessThan(EventStore.Core.Data.TFPos%2CEventStore.Core.Data.TFPos)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/TFPos.cs/#L76">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Data_TFPos_op_LessThan_" data-uid="EventStore.Core.Data.TFPos.op_LessThan*"></a>
   <h4 id="EventStore_Core_Data_TFPos_op_LessThan_EventStore_Core_Data_TFPos_EventStore_Core_Data_TFPos_" data-uid="EventStore.Core.Data.TFPos.op_LessThan(EventStore.Core.Data.TFPos,EventStore.Core.Data.TFPos)">LessThan(TFPos, TFPos)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool operator &lt;(TFPos left, TFPos right)</code></pre>
   </div>
@@ -813,18 +774,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_TFPos_op_LessThanOrEqual_EventStore_Core_Data_TFPos_EventStore_Core_Data_TFPos_.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.TFPos.op_LessThanOrEqual(EventStore.Core.Data.TFPos%2CEventStore.Core.Data.TFPos)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/TFPos.cs/#L68">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Data_TFPos_op_LessThanOrEqual_" data-uid="EventStore.Core.Data.TFPos.op_LessThanOrEqual*"></a>
   <h4 id="EventStore_Core_Data_TFPos_op_LessThanOrEqual_EventStore_Core_Data_TFPos_EventStore_Core_Data_TFPos_" data-uid="EventStore.Core.Data.TFPos.op_LessThanOrEqual(EventStore.Core.Data.TFPos,EventStore.Core.Data.TFPos)">LessThanOrEqual(TFPos, TFPos)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool operator &lt;=(TFPos left, TFPos right)</code></pre>
   </div>
@@ -867,12 +825,21 @@
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
   <div>
-      <span class="xref">IComparable&lt;&gt;</span>
+      <span class="xref">System.IComparable&lt;T&gt;</span>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJson_System_Object_">Json.ToJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
+  </div>
   <div>
       <a class="xref" href="EventStore.Projections.Core.Utils.EnumExtensions.html#EventStore_Projections_Core_Utils_EnumExtensions_EnumValueName__1___0_">EnumExtensions.EnumValueName&lt;T&gt;(T)</a>
   </div>
@@ -891,12 +858,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_TFPos.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.TFPos%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/TFPos.cs/#L5" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

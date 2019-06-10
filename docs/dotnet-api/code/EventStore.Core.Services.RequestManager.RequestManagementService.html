@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -121,26 +122,47 @@
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.StorageMessage.StreamDeleted.html">StorageMessage.StreamDeleted</a>&gt;</div>
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.StorageMessage.RequestManagerTimerTick.html">StorageMessage.RequestManagerTimerTick</a>&gt;</div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.RequestManager.html">EventStore.Core.Services.RequestManager</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Services_RequestManager_RequestManagementService_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class RequestManagementService : object, IHandle&lt;SystemMessage.SystemInit&gt;, IHandle&lt;ClientMessage.WriteEvents&gt;, IHandle&lt;ClientMessage.DeleteStream&gt;, IHandle&lt;ClientMessage.TransactionStart&gt;, IHandle&lt;ClientMessage.TransactionWrite&gt;, IHandle&lt;ClientMessage.TransactionCommit&gt;, IHandle&lt;StorageMessage.RequestCompleted&gt;, IHandle&lt;StorageMessage.CheckStreamAccessCompleted&gt;, IHandle&lt;StorageMessage.AlreadyCommitted&gt;, IHandle&lt;StorageMessage.PrepareAck&gt;, IHandle&lt;StorageMessage.CommitReplicated&gt;, IHandle&lt;StorageMessage.WrongExpectedVersion&gt;, IHandle&lt;StorageMessage.InvalidTransaction&gt;, IHandle&lt;StorageMessage.StreamDeleted&gt;, IHandle&lt;StorageMessage.RequestManagerTimerTick&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class RequestManagementService : IHandle&lt;SystemMessage.SystemInit&gt;, IHandle&lt;ClientMessage.WriteEvents&gt;, IHandle&lt;ClientMessage.DeleteStream&gt;, IHandle&lt;ClientMessage.TransactionStart&gt;, IHandle&lt;ClientMessage.TransactionWrite&gt;, IHandle&lt;ClientMessage.TransactionCommit&gt;, IHandle&lt;StorageMessage.RequestCompleted&gt;, IHandle&lt;StorageMessage.CheckStreamAccessCompleted&gt;, IHandle&lt;StorageMessage.AlreadyCommitted&gt;, IHandle&lt;StorageMessage.PrepareAck&gt;, IHandle&lt;StorageMessage.CommitReplicated&gt;, IHandle&lt;StorageMessage.WrongExpectedVersion&gt;, IHandle&lt;StorageMessage.InvalidTransaction&gt;, IHandle&lt;StorageMessage.StreamDeleted&gt;, IHandle&lt;StorageMessage.RequestManagerTimerTick&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_RequestManagementService__ctor_EventStore_Core_Bus_IPublisher_System_Int32_TimeSpan_TimeSpan_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.RequestManagementService.%23ctor(EventStore.Core.Bus.IPublisher%2CSystem.Int32%2CTimeSpan%2CTimeSpan%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/RequestManagementService.cs/#L41">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_RequestManagementService__ctor_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.#ctor*"></a>
-  <h4 id="EventStore_Core_Services_RequestManager_RequestManagementService__ctor_EventStore_Core_Bus_IPublisher_System_Int32_TimeSpan_TimeSpan_System_Boolean_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.#ctor(EventStore.Core.Bus.IPublisher,System.Int32,TimeSpan,TimeSpan,System.Boolean)">RequestManagementService(IPublisher, Int32, TimeSpan, TimeSpan, Boolean)</h4>
+  <h4 id="EventStore_Core_Services_RequestManager_RequestManagementService__ctor_EventStore_Core_Bus_IPublisher_System_Int32_System_TimeSpan_System_TimeSpan_System_Boolean_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.#ctor(EventStore.Core.Bus.IPublisher,System.Int32,System.TimeSpan,System.TimeSpan,System.Boolean)">RequestManagementService(IPublisher, Int32, TimeSpan, TimeSpan, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public RequestManagementService(IPublisher bus, int prepareCount, TimeSpan prepareTimeout, TimeSpan commitTimeout, bool betterOrdering)</code></pre>
   </div>
@@ -165,12 +187,12 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">prepareTimeout</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">commitTimeout</span></td>
         <td></td>
       </tr>
@@ -183,18 +205,15 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_ClientMessage_DeleteStream_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.ClientMessage.DeleteStream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/RequestManagementService.cs/#L72">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_ClientMessage_DeleteStream_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.ClientMessage.DeleteStream)">Handle(ClientMessage.DeleteStream)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.DeleteStream message)</code></pre>
   </div>
@@ -215,18 +234,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_ClientMessage_TransactionCommit_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.ClientMessage.TransactionCommit)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/RequestManagementService.cs/#L94">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_ClientMessage_TransactionCommit_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.ClientMessage.TransactionCommit)">Handle(ClientMessage.TransactionCommit)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.TransactionCommit message)</code></pre>
   </div>
@@ -247,18 +263,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_ClientMessage_TransactionStart_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.ClientMessage.TransactionStart)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/RequestManagementService.cs/#L80">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_ClientMessage_TransactionStart_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.ClientMessage.TransactionStart)">Handle(ClientMessage.TransactionStart)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.TransactionStart message)</code></pre>
   </div>
@@ -279,18 +292,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_ClientMessage_TransactionWrite_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.ClientMessage.TransactionWrite)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/RequestManagementService.cs/#L87">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_ClientMessage_TransactionWrite_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.ClientMessage.TransactionWrite)">Handle(ClientMessage.TransactionWrite)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.TransactionWrite message)</code></pre>
   </div>
@@ -311,18 +321,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_ClientMessage_WriteEvents_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.ClientMessage.WriteEvents)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/RequestManagementService.cs/#L64">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_ClientMessage_WriteEvents_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.ClientMessage.WriteEvents)">Handle(ClientMessage.WriteEvents)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.WriteEvents message)</code></pre>
   </div>
@@ -343,18 +350,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_StorageMessage_AlreadyCommitted_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.StorageMessage.AlreadyCommitted)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/RequestManagementService.cs/#L118">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_StorageMessage_AlreadyCommitted_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.StorageMessage.AlreadyCommitted)">Handle(StorageMessage.AlreadyCommitted)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(StorageMessage.AlreadyCommitted message)</code></pre>
   </div>
@@ -375,18 +379,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_StorageMessage_CheckStreamAccessCompleted_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.StorageMessage.CheckStreamAccessCompleted)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/RequestManagementService.cs/#L114">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_StorageMessage_CheckStreamAccessCompleted_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.StorageMessage.CheckStreamAccessCompleted)">Handle(StorageMessage.CheckStreamAccessCompleted)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(StorageMessage.CheckStreamAccessCompleted message)</code></pre>
   </div>
@@ -407,18 +408,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_StorageMessage_CommitReplicated_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.StorageMessage.CommitReplicated)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/RequestManagementService.cs/#L126">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_StorageMessage_CommitReplicated_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.StorageMessage.CommitReplicated)">Handle(StorageMessage.CommitReplicated)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(StorageMessage.CommitReplicated message)</code></pre>
   </div>
@@ -439,18 +437,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_StorageMessage_InvalidTransaction_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.StorageMessage.InvalidTransaction)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/RequestManagementService.cs/#L134">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_StorageMessage_InvalidTransaction_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.StorageMessage.InvalidTransaction)">Handle(StorageMessage.InvalidTransaction)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(StorageMessage.InvalidTransaction message)</code></pre>
   </div>
@@ -471,18 +466,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_StorageMessage_PrepareAck_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.StorageMessage.PrepareAck)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/RequestManagementService.cs/#L122">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_StorageMessage_PrepareAck_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.StorageMessage.PrepareAck)">Handle(StorageMessage.PrepareAck)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(StorageMessage.PrepareAck message)</code></pre>
   </div>
@@ -503,18 +495,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_StorageMessage_RequestCompleted_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.StorageMessage.RequestCompleted)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/RequestManagementService.cs/#L102">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_StorageMessage_RequestCompleted_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.StorageMessage.RequestCompleted)">Handle(StorageMessage.RequestCompleted)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(StorageMessage.RequestCompleted message)</code></pre>
   </div>
@@ -535,18 +524,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_StorageMessage_RequestManagerTimerTick_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.StorageMessage.RequestManagerTimerTick)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/RequestManagementService.cs/#L142">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_StorageMessage_RequestManagerTimerTick_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.StorageMessage.RequestManagerTimerTick)">Handle(StorageMessage.RequestManagerTimerTick)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(StorageMessage.RequestManagerTimerTick message)</code></pre>
   </div>
@@ -567,18 +553,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_StorageMessage_StreamDeleted_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.StorageMessage.StreamDeleted)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/RequestManagementService.cs/#L138">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_StorageMessage_StreamDeleted_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.StorageMessage.StreamDeleted)">Handle(StorageMessage.StreamDeleted)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(StorageMessage.StreamDeleted message)</code></pre>
   </div>
@@ -599,18 +582,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_StorageMessage_WrongExpectedVersion_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.StorageMessage.WrongExpectedVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/RequestManagementService.cs/#L130">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_StorageMessage_WrongExpectedVersion_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.StorageMessage.WrongExpectedVersion)">Handle(StorageMessage.WrongExpectedVersion)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(StorageMessage.WrongExpectedVersion message)</code></pre>
   </div>
@@ -631,18 +611,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_SystemMessage_SystemInit_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.SystemMessage.SystemInit)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/RequestManagementService.cs/#L60">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_RequestManagementService_Handle_EventStore_Core_Messages_SystemMessage_SystemInit_" data-uid="EventStore.Core.Services.RequestManager.RequestManagementService.Handle(EventStore.Core.Messages.SystemMessage.SystemInit)">Handle(SystemMessage.SystemInit)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(SystemMessage.SystemInit message)</code></pre>
   </div>
@@ -734,12 +711,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_RequestManagementService.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.RequestManagementService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/RequestManagementService.cs/#L16" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

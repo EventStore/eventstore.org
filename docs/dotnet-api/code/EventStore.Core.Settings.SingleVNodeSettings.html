@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,28 +104,46 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">SingleVNodeSettings</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Settings.html">EventStore.Core.Settings</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Settings_SingleVNodeSettings_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SingleVNodeSettings : object</code></pre>
+    <pre><code class="lang-csharp hljs">public class SingleVNodeSettings</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Settings_SingleVNodeSettings__ctor_IPEndPoint_IPEndPoint_IPEndPoint_System_String___System_Boolean_X509Certificate2_System_Int32_TimeSpan_TimeSpan_TimeSpan_TimeSpan_TimeSpan_EventStore_Core_Services_Monitoring_StatsStorage_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Core.Settings.SingleVNodeSettings.%23ctor(IPEndPoint%2CIPEndPoint%2CIPEndPoint%2CSystem.String%5B%5D%2CSystem.Boolean%2CX509Certificate2%2CSystem.Int32%2CTimeSpan%2CTimeSpan%2CTimeSpan%2CTimeSpan%2CTimeSpan%2CEventStore.Core.Services.Monitoring.StatsStorage%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Settings/VNodeSettings.cs/#L30">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Settings_SingleVNodeSettings__ctor_" data-uid="EventStore.Core.Settings.SingleVNodeSettings.#ctor*"></a>
-  <h4 id="EventStore_Core_Settings_SingleVNodeSettings__ctor_IPEndPoint_IPEndPoint_IPEndPoint_System_String___System_Boolean_X509Certificate2_System_Int32_TimeSpan_TimeSpan_TimeSpan_TimeSpan_TimeSpan_EventStore_Core_Services_Monitoring_StatsStorage_System_Boolean_System_Boolean_" data-uid="EventStore.Core.Settings.SingleVNodeSettings.#ctor(IPEndPoint,IPEndPoint,IPEndPoint,System.String[],System.Boolean,X509Certificate2,System.Int32,TimeSpan,TimeSpan,TimeSpan,TimeSpan,TimeSpan,EventStore.Core.Services.Monitoring.StatsStorage,System.Boolean,System.Boolean)">SingleVNodeSettings(IPEndPoint, IPEndPoint, IPEndPoint, String[], Boolean, X509Certificate2, Int32, TimeSpan, TimeSpan, TimeSpan, TimeSpan, TimeSpan, StatsStorage, Boolean, Boolean)</h4>
+  <h4 id="EventStore_Core_Settings_SingleVNodeSettings__ctor_System_Net_IPEndPoint_System_Net_IPEndPoint_System_Net_IPEndPoint_System_String___System_Boolean_System_Security_Cryptography_X509Certificates_X509Certificate2_System_Int32_System_TimeSpan_System_TimeSpan_System_TimeSpan_System_TimeSpan_System_TimeSpan_EventStore_Core_Services_Monitoring_StatsStorage_System_Boolean_System_Boolean_" data-uid="EventStore.Core.Settings.SingleVNodeSettings.#ctor(System.Net.IPEndPoint,System.Net.IPEndPoint,System.Net.IPEndPoint,System.String[],System.Boolean,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Int32,System.TimeSpan,System.TimeSpan,System.TimeSpan,System.TimeSpan,System.TimeSpan,EventStore.Core.Services.Monitoring.StatsStorage,System.Boolean,System.Boolean)">SingleVNodeSettings(IPEndPoint, IPEndPoint, IPEndPoint, String[], Boolean, X509Certificate2, Int32, TimeSpan, TimeSpan, TimeSpan, TimeSpan, TimeSpan, StatsStorage, Boolean, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SingleVNodeSettings(IPEndPoint externalTcpEndPoint, IPEndPoint externalSecureTcpEndPoint, IPEndPoint externalHttpEndPoint, string[] httpPrefixes, bool enableTrustedAuth, X509Certificate2 certificate, int workerThreads, TimeSpan minFlushDelay, TimeSpan prepareTimeout, TimeSpan commitTimeout, TimeSpan statsPeriod, TimeSpan tcpTimeout, StatsStorage statsStorage = default(StatsStorage), bool skipInitializeStandardUsersCheck = false, bool disableScavengeMerging = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public SingleVNodeSettings(IPEndPoint externalTcpEndPoint, IPEndPoint externalSecureTcpEndPoint, IPEndPoint externalHttpEndPoint, string[] httpPrefixes, bool enableTrustedAuth, X509Certificate2 certificate, int workerThreads, TimeSpan minFlushDelay, TimeSpan prepareTimeout, TimeSpan commitTimeout, TimeSpan statsPeriod, TimeSpan tcpTimeout, StatsStorage statsStorage = StatsStorage.Stream | StatsStorage.File | StatsStorage.StreamAndFile, bool skipInitializeStandardUsersCheck = false, bool disableScavengeMerging = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -137,17 +156,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPEndPoint</span></td>
+        <td><span class="xref">System.Net.IPEndPoint</span></td>
         <td><span class="parametername">externalTcpEndPoint</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IPEndPoint</span></td>
+        <td><span class="xref">System.Net.IPEndPoint</span></td>
         <td><span class="parametername">externalSecureTcpEndPoint</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IPEndPoint</span></td>
+        <td><span class="xref">System.Net.IPEndPoint</span></td>
         <td><span class="parametername">externalHttpEndPoint</span></td>
         <td></td>
       </tr>
@@ -162,7 +181,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">X509Certificate2</span></td>
+        <td><span class="xref">System.Security.Cryptography.X509Certificates.X509Certificate2</span></td>
         <td><span class="parametername">certificate</span></td>
         <td></td>
       </tr>
@@ -172,27 +191,27 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">minFlushDelay</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">prepareTimeout</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">commitTimeout</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">statsPeriod</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">tcpTimeout</span></td>
         <td></td>
       </tr>
@@ -215,17 +234,14 @@
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Settings_SingleVNodeSettings_Certificate.md&amp;value=---%0Auid%3A%20EventStore.Core.Settings.SingleVNodeSettings.Certificate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Settings/VNodeSettings.cs/#L14">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Settings_SingleVNodeSettings_Certificate" data-uid="EventStore.Core.Settings.SingleVNodeSettings.Certificate">Certificate</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly X509Certificate2 Certificate</code></pre>
   </div>
@@ -234,27 +250,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">X509Certificate2</span></td>
-        <td></td>
+        <td><span class="xref">System.Security.Cryptography.X509Certificates.X509Certificate2</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Settings_SingleVNodeSettings_CommitTimeout.md&amp;value=---%0Auid%3A%20EventStore.Core.Settings.SingleVNodeSettings.CommitTimeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Settings/VNodeSettings.cs/#L19">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Settings_SingleVNodeSettings_CommitTimeout" data-uid="EventStore.Core.Settings.SingleVNodeSettings.CommitTimeout">CommitTimeout</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly TimeSpan CommitTimeout</code></pre>
   </div>
@@ -263,27 +274,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
-        <td></td>
+        <td><span class="xref">System.TimeSpan</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Settings_SingleVNodeSettings_DisableScavengeMerging.md&amp;value=---%0Auid%3A%20EventStore.Core.Settings.SingleVNodeSettings.DisableScavengeMerging%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Settings/VNodeSettings.cs/#L21">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Settings_SingleVNodeSettings_DisableScavengeMerging" data-uid="EventStore.Core.Settings.SingleVNodeSettings.DisableScavengeMerging">DisableScavengeMerging</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly bool DisableScavengeMerging</code></pre>
   </div>
@@ -292,27 +298,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Settings_SingleVNodeSettings_EnableTrustedAuth.md&amp;value=---%0Auid%3A%20EventStore.Core.Settings.SingleVNodeSettings.EnableTrustedAuth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Settings/VNodeSettings.cs/#L13">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Settings_SingleVNodeSettings_EnableTrustedAuth" data-uid="EventStore.Core.Settings.SingleVNodeSettings.EnableTrustedAuth">EnableTrustedAuth</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly bool EnableTrustedAuth</code></pre>
   </div>
@@ -321,27 +322,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Settings_SingleVNodeSettings_ExternalHttpEndPoint.md&amp;value=---%0Auid%3A%20EventStore.Core.Settings.SingleVNodeSettings.ExternalHttpEndPoint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Settings/VNodeSettings.cs/#L11">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Settings_SingleVNodeSettings_ExternalHttpEndPoint" data-uid="EventStore.Core.Settings.SingleVNodeSettings.ExternalHttpEndPoint">ExternalHttpEndPoint</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly IPEndPoint ExternalHttpEndPoint</code></pre>
   </div>
@@ -350,27 +346,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPEndPoint</span></td>
-        <td></td>
+        <td><span class="xref">System.Net.IPEndPoint</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Settings_SingleVNodeSettings_ExternalSecureTcpEndPoint.md&amp;value=---%0Auid%3A%20EventStore.Core.Settings.SingleVNodeSettings.ExternalSecureTcpEndPoint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Settings/VNodeSettings.cs/#L10">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Settings_SingleVNodeSettings_ExternalSecureTcpEndPoint" data-uid="EventStore.Core.Settings.SingleVNodeSettings.ExternalSecureTcpEndPoint">ExternalSecureTcpEndPoint</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly IPEndPoint ExternalSecureTcpEndPoint</code></pre>
   </div>
@@ -379,27 +370,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPEndPoint</span></td>
-        <td></td>
+        <td><span class="xref">System.Net.IPEndPoint</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Settings_SingleVNodeSettings_ExternalTcpEndPoint.md&amp;value=---%0Auid%3A%20EventStore.Core.Settings.SingleVNodeSettings.ExternalTcpEndPoint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Settings/VNodeSettings.cs/#L9">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Settings_SingleVNodeSettings_ExternalTcpEndPoint" data-uid="EventStore.Core.Settings.SingleVNodeSettings.ExternalTcpEndPoint">ExternalTcpEndPoint</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly IPEndPoint ExternalTcpEndPoint</code></pre>
   </div>
@@ -408,27 +394,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPEndPoint</span></td>
-        <td></td>
+        <td><span class="xref">System.Net.IPEndPoint</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Settings_SingleVNodeSettings_HttpPrefixes.md&amp;value=---%0Auid%3A%20EventStore.Core.Settings.SingleVNodeSettings.HttpPrefixes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Settings/VNodeSettings.cs/#L12">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Settings_SingleVNodeSettings_HttpPrefixes" data-uid="EventStore.Core.Settings.SingleVNodeSettings.HttpPrefixes">HttpPrefixes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly string[] HttpPrefixes</code></pre>
   </div>
@@ -437,27 +418,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span>[]</td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Settings_SingleVNodeSettings_MinFlushDelay.md&amp;value=---%0Auid%3A%20EventStore.Core.Settings.SingleVNodeSettings.MinFlushDelay%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Settings/VNodeSettings.cs/#L17">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Settings_SingleVNodeSettings_MinFlushDelay" data-uid="EventStore.Core.Settings.SingleVNodeSettings.MinFlushDelay">MinFlushDelay</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly TimeSpan MinFlushDelay</code></pre>
   </div>
@@ -466,27 +442,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
-        <td></td>
+        <td><span class="xref">System.TimeSpan</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Settings_SingleVNodeSettings_PrepareTimeout.md&amp;value=---%0Auid%3A%20EventStore.Core.Settings.SingleVNodeSettings.PrepareTimeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Settings/VNodeSettings.cs/#L18">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Settings_SingleVNodeSettings_PrepareTimeout" data-uid="EventStore.Core.Settings.SingleVNodeSettings.PrepareTimeout">PrepareTimeout</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly TimeSpan PrepareTimeout</code></pre>
   </div>
@@ -495,27 +466,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
-        <td></td>
+        <td><span class="xref">System.TimeSpan</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Settings_SingleVNodeSettings_SkipInitializeStandardUsersCheck.md&amp;value=---%0Auid%3A%20EventStore.Core.Settings.SingleVNodeSettings.SkipInitializeStandardUsersCheck%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Settings/VNodeSettings.cs/#L26">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Settings_SingleVNodeSettings_SkipInitializeStandardUsersCheck" data-uid="EventStore.Core.Settings.SingleVNodeSettings.SkipInitializeStandardUsersCheck">SkipInitializeStandardUsersCheck</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly bool SkipInitializeStandardUsersCheck</code></pre>
   </div>
@@ -524,27 +490,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Settings_SingleVNodeSettings_StatsPeriod.md&amp;value=---%0Auid%3A%20EventStore.Core.Settings.SingleVNodeSettings.StatsPeriod%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Settings/VNodeSettings.cs/#L23">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Settings_SingleVNodeSettings_StatsPeriod" data-uid="EventStore.Core.Settings.SingleVNodeSettings.StatsPeriod">StatsPeriod</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly TimeSpan StatsPeriod</code></pre>
   </div>
@@ -553,27 +514,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
-        <td></td>
+        <td><span class="xref">System.TimeSpan</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Settings_SingleVNodeSettings_StatsStorage.md&amp;value=---%0Auid%3A%20EventStore.Core.Settings.SingleVNodeSettings.StatsStorage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Settings/VNodeSettings.cs/#L24">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Settings_SingleVNodeSettings_StatsStorage" data-uid="EventStore.Core.Settings.SingleVNodeSettings.StatsStorage">StatsStorage</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly StatsStorage StatsStorage</code></pre>
   </div>
@@ -582,27 +538,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.Monitoring.StatsStorage.html">StatsStorage</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Settings_SingleVNodeSettings_TcpTimeout.md&amp;value=---%0Auid%3A%20EventStore.Core.Settings.SingleVNodeSettings.TcpTimeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Settings/VNodeSettings.cs/#L28">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Settings_SingleVNodeSettings_TcpTimeout" data-uid="EventStore.Core.Settings.SingleVNodeSettings.TcpTimeout">TcpTimeout</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly TimeSpan TcpTimeout</code></pre>
   </div>
@@ -611,27 +562,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
-        <td></td>
+        <td><span class="xref">System.TimeSpan</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Settings_SingleVNodeSettings_WorkerThreads.md&amp;value=---%0Auid%3A%20EventStore.Core.Settings.SingleVNodeSettings.WorkerThreads%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Settings/VNodeSettings.cs/#L15">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Settings_SingleVNodeSettings_WorkerThreads" data-uid="EventStore.Core.Settings.SingleVNodeSettings.WorkerThreads">WorkerThreads</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly int WorkerThreads</code></pre>
   </div>
@@ -640,30 +586,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Settings_SingleVNodeSettings_ToString.md&amp;value=---%0Auid%3A%20EventStore.Core.Settings.SingleVNodeSettings.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Settings/VNodeSettings.cs/#L72">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Settings_SingleVNodeSettings_ToString_" data-uid="EventStore.Core.Settings.SingleVNodeSettings.ToString*"></a>
   <h4 id="EventStore_Core_Settings_SingleVNodeSettings_ToString" data-uid="EventStore.Core.Settings.SingleVNodeSettings.ToString">ToString()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
   </div>
@@ -682,6 +623,8 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
@@ -707,12 +650,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Settings_SingleVNodeSettings.md&amp;value=---%0Auid%3A%20EventStore.Core.Settings.SingleVNodeSettings%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Settings/VNodeSettings.cs/#L8" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

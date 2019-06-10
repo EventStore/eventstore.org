@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,26 +104,49 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">TcpClientMessageDto.ResolvedEvent</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Messages.html">EventStore.Core.Messages</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Messages_TcpClientMessageDto_ResolvedEvent_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ResolvedEvent : object</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+[ProtoContract(Name = &quot;ResolvedEvent&quot;)]
+public class ResolvedEvent</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_ResolvedEvent__ctor_EventStore_Core_Data_ResolvedEvent_.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.ResolvedEvent.%23ctor(EventStore.Core.Data.ResolvedEvent)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDtoExtensions.cs/#L14">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messages_TcpClientMessageDto_ResolvedEvent__ctor_" data-uid="EventStore.Core.Messages.TcpClientMessageDto.ResolvedEvent.#ctor*"></a>
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_ResolvedEvent__ctor_EventStore_Core_Data_ResolvedEvent_" data-uid="EventStore.Core.Messages.TcpClientMessageDto.ResolvedEvent.#ctor(EventStore.Core.Data.ResolvedEvent)">ResolvedEvent(ResolvedEvent)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ResolvedEvent(ResolvedEvent pair)</code></pre>
   </div>
@@ -143,18 +167,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_ResolvedEvent__ctor_EventStore_Core_Messages_TcpClientMessageDto_EventRecord_EventStore_Core_Messages_TcpClientMessageDto_EventRecord_System_Int64_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.ResolvedEvent.%23ctor(EventStore.Core.Messages.TcpClientMessageDto.EventRecord%2CEventStore.Core.Messages.TcpClientMessageDto.EventRecord%2CSystem.Int64%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L139">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messages_TcpClientMessageDto_ResolvedEvent__ctor_" data-uid="EventStore.Core.Messages.TcpClientMessageDto.ResolvedEvent.#ctor*"></a>
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_ResolvedEvent__ctor_EventStore_Core_Messages_TcpClientMessageDto_EventRecord_EventStore_Core_Messages_TcpClientMessageDto_EventRecord_System_Int64_System_Int64_" data-uid="EventStore.Core.Messages.TcpClientMessageDto.ResolvedEvent.#ctor(EventStore.Core.Messages.TcpClientMessageDto.EventRecord,EventStore.Core.Messages.TcpClientMessageDto.EventRecord,System.Int64,System.Int64)">ResolvedEvent(TcpClientMessageDto.EventRecord, TcpClientMessageDto.EventRecord, Int64, Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ResolvedEvent(TcpClientMessageDto.EventRecord event, TcpClientMessageDto.EventRecord link, long commitPosition, long preparePosition)</code></pre>
   </div>
@@ -192,119 +213,103 @@
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_ResolvedEvent_CommitPosition.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.ResolvedEvent.CommitPosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L132">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_ResolvedEvent_CommitPosition" data-uid="EventStore.Core.Messages.TcpClientMessageDto.ResolvedEvent.CommitPosition">CommitPosition</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly long CommitPosition</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(3, IsRequired = true, Name = &quot;commit_position&quot;, DataFormat = DataFormat.TwosComplement)]
+public readonly long CommitPosition</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_ResolvedEvent_Event.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.ResolvedEvent.Event%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L126">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_ResolvedEvent_Event" data-uid="EventStore.Core.Messages.TcpClientMessageDto.ResolvedEvent.Event">Event</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly TcpClientMessageDto.EventRecord Event</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(1, IsRequired = true, Name = &quot;event&quot;, DataFormat = DataFormat.Default)]
+public readonly TcpClientMessageDto.EventRecord Event</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.TcpClientMessageDto.EventRecord.html">TcpClientMessageDto.EventRecord</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_ResolvedEvent_Link.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.ResolvedEvent.Link%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L129">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_ResolvedEvent_Link" data-uid="EventStore.Core.Messages.TcpClientMessageDto.ResolvedEvent.Link">Link</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly TcpClientMessageDto.EventRecord Link</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(2, IsRequired = false, Name = &quot;link&quot;, DataFormat = DataFormat.Default)]
+public readonly TcpClientMessageDto.EventRecord Link</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.TcpClientMessageDto.EventRecord.html">TcpClientMessageDto.EventRecord</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_ResolvedEvent_PreparePosition.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.ResolvedEvent.PreparePosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L135">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_ResolvedEvent_PreparePosition" data-uid="EventStore.Core.Messages.TcpClientMessageDto.ResolvedEvent.PreparePosition">PreparePosition</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly long PreparePosition</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(4, IsRequired = true, Name = &quot;prepare_position&quot;, DataFormat = DataFormat.TwosComplement)]
+public readonly long PreparePosition</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -333,12 +338,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_ResolvedEvent.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.ResolvedEvent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDtoExtensions.cs/#L13" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -112,28 +113,49 @@ Subscribers are responsible for handling exceptions</p>
     <div><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></div>
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messaging.Message.html">Message</a>&gt;</div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Bus.html">EventStore.Core.Bus</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Bus_InMemoryBusUnoptimized_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InMemoryBusUnoptimized : object, IBus, ISubscriber, IPublisher, IHandle&lt;Message&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class InMemoryBusUnoptimized : IBus, ISubscriber, IPublisher, IHandle&lt;Message&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_InMemoryBusUnoptimized__ctor_System_String_System_Boolean_System_Nullable_TimeSpan__.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.InMemoryBusUnoptimized.%23ctor(System.String%2CSystem.Boolean%2CSystem.Nullable%7BTimeSpan%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/InMemoryBus.cs/#L35">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_InMemoryBusUnoptimized__ctor_" data-uid="EventStore.Core.Bus.InMemoryBusUnoptimized.#ctor*"></a>
-  <h4 id="EventStore_Core_Bus_InMemoryBusUnoptimized__ctor_System_String_System_Boolean_System_Nullable_TimeSpan__" data-uid="EventStore.Core.Bus.InMemoryBusUnoptimized.#ctor(System.String,System.Boolean,System.Nullable{TimeSpan})">InMemoryBusUnoptimized(String, Boolean, Nullable&lt;TimeSpan&gt;)</h4>
+  <h4 id="EventStore_Core_Bus_InMemoryBusUnoptimized__ctor_System_String_System_Boolean_System_Nullable_System_TimeSpan__" data-uid="EventStore.Core.Bus.InMemoryBusUnoptimized.#ctor(System.String,System.Boolean,System.Nullable{System.TimeSpan})">InMemoryBusUnoptimized(String, Boolean, Nullable&lt;TimeSpan&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InMemoryBusUnoptimized(string name, bool watchSlowMsg = true, TimeSpan? slowMsgThreshold = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public InMemoryBusUnoptimized(string name, bool watchSlowMsg = true, TimeSpan? slowMsgThreshold = default(TimeSpan? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,7 +178,7 @@ Subscribers are responsible for handling exceptions</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">TimeSpan</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.TimeSpan</span>&gt;</td>
         <td><span class="parametername">slowMsgThreshold</span></td>
         <td></td>
       </tr>
@@ -164,17 +186,14 @@ Subscribers are responsible for handling exceptions</p>
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_InMemoryBusUnoptimized_DefaultSlowMessageThreshold.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.InMemoryBusUnoptimized.DefaultSlowMessageThreshold%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/InMemoryBus.cs/#L20">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Bus_InMemoryBusUnoptimized_DefaultSlowMessageThreshold" data-uid="EventStore.Core.Bus.InMemoryBusUnoptimized.DefaultSlowMessageThreshold">DefaultSlowMessageThreshold</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static readonly TimeSpan DefaultSlowMessageThreshold</code></pre>
   </div>
@@ -183,30 +202,25 @@ Subscribers are responsible for handling exceptions</p>
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
-        <td></td>
+        <td><span class="xref">System.TimeSpan</span></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_InMemoryBusUnoptimized_Name.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.InMemoryBusUnoptimized.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/InMemoryBus.cs/#L24">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_InMemoryBusUnoptimized_Name_" data-uid="EventStore.Core.Bus.InMemoryBusUnoptimized.Name*"></a>
   <h4 id="EventStore_Core_Bus_InMemoryBusUnoptimized_Name" data-uid="EventStore.Core.Bus.InMemoryBusUnoptimized.Name">Name</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
   </div>
@@ -215,30 +229,25 @@ Subscribers are responsible for handling exceptions</p>
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_InMemoryBusUnoptimized_CreateTest.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.InMemoryBusUnoptimized.CreateTest%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/InMemoryBus.cs/#L16">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_InMemoryBusUnoptimized_CreateTest_" data-uid="EventStore.Core.Bus.InMemoryBusUnoptimized.CreateTest*"></a>
   <h4 id="EventStore_Core_Bus_InMemoryBusUnoptimized_CreateTest" data-uid="EventStore.Core.Bus.InMemoryBusUnoptimized.CreateTest">CreateTest()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static InMemoryBusUnoptimized CreateTest()</code></pre>
   </div>
@@ -257,18 +266,15 @@ Subscribers are responsible for handling exceptions</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_InMemoryBusUnoptimized_Handle_EventStore_Core_Messaging_Message_.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.InMemoryBusUnoptimized.Handle(EventStore.Core.Messaging.Message)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/InMemoryBus.cs/#L71">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_InMemoryBusUnoptimized_Handle_" data-uid="EventStore.Core.Bus.InMemoryBusUnoptimized.Handle*"></a>
   <h4 id="EventStore_Core_Bus_InMemoryBusUnoptimized_Handle_EventStore_Core_Messaging_Message_" data-uid="EventStore.Core.Bus.InMemoryBusUnoptimized.Handle(EventStore.Core.Messaging.Message)">Handle(Message)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(Message message)</code></pre>
   </div>
@@ -289,18 +295,15 @@ Subscribers are responsible for handling exceptions</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_InMemoryBusUnoptimized_Publish_EventStore_Core_Messaging_Message_.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.InMemoryBusUnoptimized.Publish(EventStore.Core.Messaging.Message)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/InMemoryBus.cs/#L75">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_InMemoryBusUnoptimized_Publish_" data-uid="EventStore.Core.Bus.InMemoryBusUnoptimized.Publish*"></a>
   <h4 id="EventStore_Core_Bus_InMemoryBusUnoptimized_Publish_EventStore_Core_Messaging_Message_" data-uid="EventStore.Core.Bus.InMemoryBusUnoptimized.Publish(EventStore.Core.Messaging.Message)">Publish(Message)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Publish(Message message)</code></pre>
   </div>
@@ -321,18 +324,15 @@ Subscribers are responsible for handling exceptions</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_InMemoryBusUnoptimized_Subscribe__1_EventStore_Core_Bus_IHandle___0__.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.InMemoryBusUnoptimized.Subscribe%60%601(EventStore.Core.Bus.IHandle%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/InMemoryBus.cs/#L43">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_InMemoryBusUnoptimized_Subscribe_" data-uid="EventStore.Core.Bus.InMemoryBusUnoptimized.Subscribe*"></a>
   <h4 id="EventStore_Core_Bus_InMemoryBusUnoptimized_Subscribe__1_EventStore_Core_Bus_IHandle___0__" data-uid="EventStore.Core.Bus.InMemoryBusUnoptimized.Subscribe``1(EventStore.Core.Bus.IHandle{``0})">Subscribe&lt;T&gt;(IHandle&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Subscribe&lt;T&gt;(IHandle&lt;T&gt; handler)
     where T : Message</code></pre>
@@ -369,18 +369,15 @@ Subscribers are responsible for handling exceptions</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_InMemoryBusUnoptimized_Unsubscribe__1_EventStore_Core_Bus_IHandle___0__.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.InMemoryBusUnoptimized.Unsubscribe%60%601(EventStore.Core.Bus.IHandle%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/InMemoryBus.cs/#L58">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_InMemoryBusUnoptimized_Unsubscribe_" data-uid="EventStore.Core.Bus.InMemoryBusUnoptimized.Unsubscribe*"></a>
   <h4 id="EventStore_Core_Bus_InMemoryBusUnoptimized_Unsubscribe__1_EventStore_Core_Bus_IHandle___0__" data-uid="EventStore.Core.Bus.InMemoryBusUnoptimized.Unsubscribe``1(EventStore.Core.Bus.IHandle{``0})">Unsubscribe&lt;T&gt;(IHandle&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Unsubscribe&lt;T&gt;(IHandle&lt;T&gt; handler)
     where T : Message</code></pre>
@@ -441,6 +438,12 @@ Subscribers are responsible for handling exceptions</p>
       <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
   </div>
   <div>
+      <a class="xref" href="EventStore.Core.Bus.HandleExtensions.html#EventStore_Core_Bus_HandleExtensions_WidenFrom__2_EventStore_Core_Bus_IHandle___1__">HandleExtensions.WidenFrom&lt;TInput, TOutput&gt;(IHandle&lt;TOutput&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.HandleExtensions.html#EventStore_Core_Bus_HandleExtensions_NarrowTo__2_EventStore_Core_Bus_IHandle___1__">HandleExtensions.NarrowTo&lt;TInput, TOutput&gt;(IHandle&lt;TOutput&gt;)</a>
+  </div>
+  <div>
       <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_Serialize__1___0_">ProtobufExtensions.Serialize&lt;T&gt;(T)</a>
   </div>
   <div>
@@ -455,12 +458,6 @@ Subscribers are responsible for handling exceptions</p>
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_InMemoryBusUnoptimized.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.InMemoryBusUnoptimized%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/InMemoryBus.cs/#L15" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

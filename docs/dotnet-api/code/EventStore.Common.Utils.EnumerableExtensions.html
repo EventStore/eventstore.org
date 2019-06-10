@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,26 +104,47 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">EnumerableExtensions</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Common.Utils.html">EventStore.Common.Utils</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Common.dll</h6>
   <h5 id="EventStore_Common_Utils_EnumerableExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class EnumerableExtensions : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class EnumerableExtensions</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Common_Utils_EnumerableExtensions_Contains__1_IEnumerable___0__Predicate___0__.md&amp;value=---%0Auid%3A%20EventStore.Common.Utils.EnumerableExtensions.Contains%60%601(IEnumerable%7B%60%600%7D%2CPredicate%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Common/Utils/EnumerableExtensions.cs/#L12">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Common_Utils_EnumerableExtensions_Contains_" data-uid="EventStore.Common.Utils.EnumerableExtensions.Contains*"></a>
-  <h4 id="EventStore_Common_Utils_EnumerableExtensions_Contains__1_IEnumerable___0__Predicate___0__" data-uid="EventStore.Common.Utils.EnumerableExtensions.Contains``1(IEnumerable{``0},Predicate{``0})">Contains&lt;T&gt;(IEnumerable&lt;T&gt;, Predicate&lt;T&gt;)</h4>
+  <h4 id="EventStore_Common_Utils_EnumerableExtensions_Contains__1_System_Collections_Generic_IEnumerable___0__System_Predicate___0__" data-uid="EventStore.Common.Utils.EnumerableExtensions.Contains``1(System.Collections.Generic.IEnumerable{``0},System.Predicate{``0})">Contains&lt;T&gt;(IEnumerable&lt;T&gt;, Predicate&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool Contains&lt;T&gt;(this IEnumerable&lt;T&gt; collection, Predicate&lt;T&gt; condition)</code></pre>
   </div>
@@ -137,12 +159,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
         <td><span class="parametername">collection</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Predicate</span>&lt;T&gt;</td>
+        <td><span class="xref">System.Predicate</span>&lt;T&gt;</td>
         <td><span class="parametername">condition</span></td>
         <td></td>
       </tr>
@@ -178,18 +200,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Common_Utils_EnumerableExtensions_IsEmpty__1_IEnumerable___0__.md&amp;value=---%0Auid%3A%20EventStore.Common.Utils.EnumerableExtensions.IsEmpty%60%601(IEnumerable%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Common/Utils/EnumerableExtensions.cs/#L16">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Common_Utils_EnumerableExtensions_IsEmpty_" data-uid="EventStore.Common.Utils.EnumerableExtensions.IsEmpty*"></a>
-  <h4 id="EventStore_Common_Utils_EnumerableExtensions_IsEmpty__1_IEnumerable___0__" data-uid="EventStore.Common.Utils.EnumerableExtensions.IsEmpty``1(IEnumerable{``0})">IsEmpty&lt;T&gt;(IEnumerable&lt;T&gt;)</h4>
+  <h4 id="EventStore_Common_Utils_EnumerableExtensions_IsEmpty__1_System_Collections_Generic_IEnumerable___0__" data-uid="EventStore.Common.Utils.EnumerableExtensions.IsEmpty``1(System.Collections.Generic.IEnumerable{``0})">IsEmpty&lt;T&gt;(IEnumerable&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool IsEmpty&lt;T&gt;(this IEnumerable&lt;T&gt; collection)</code></pre>
   </div>
@@ -204,7 +223,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
         <td><span class="parametername">collection</span></td>
         <td></td>
       </tr>
@@ -240,18 +259,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Common_Utils_EnumerableExtensions_IsNotEmpty__1_IEnumerable___0__.md&amp;value=---%0Auid%3A%20EventStore.Common.Utils.EnumerableExtensions.IsNotEmpty%60%601(IEnumerable%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Common/Utils/EnumerableExtensions.cs/#L25">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Common_Utils_EnumerableExtensions_IsNotEmpty_" data-uid="EventStore.Common.Utils.EnumerableExtensions.IsNotEmpty*"></a>
-  <h4 id="EventStore_Common_Utils_EnumerableExtensions_IsNotEmpty__1_IEnumerable___0__" data-uid="EventStore.Common.Utils.EnumerableExtensions.IsNotEmpty``1(IEnumerable{``0})">IsNotEmpty&lt;T&gt;(IEnumerable&lt;T&gt;)</h4>
+  <h4 id="EventStore_Common_Utils_EnumerableExtensions_IsNotEmpty__1_System_Collections_Generic_IEnumerable___0__" data-uid="EventStore.Common.Utils.EnumerableExtensions.IsNotEmpty``1(System.Collections.Generic.IEnumerable{``0})">IsNotEmpty&lt;T&gt;(IEnumerable&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool IsNotEmpty&lt;T&gt;(this IEnumerable&lt;T&gt; collection)</code></pre>
   </div>
@@ -266,7 +282,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
         <td><span class="parametername">collection</span></td>
         <td></td>
       </tr>
@@ -302,18 +318,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Common_Utils_EnumerableExtensions_Safe__1_IEnumerable___0__.md&amp;value=---%0Auid%3A%20EventStore.Common.Utils.EnumerableExtensions.Safe%60%601(IEnumerable%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Common/Utils/EnumerableExtensions.cs/#L8">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Common_Utils_EnumerableExtensions_Safe_" data-uid="EventStore.Common.Utils.EnumerableExtensions.Safe*"></a>
-  <h4 id="EventStore_Common_Utils_EnumerableExtensions_Safe__1_IEnumerable___0__" data-uid="EventStore.Common.Utils.EnumerableExtensions.Safe``1(IEnumerable{``0})">Safe&lt;T&gt;(IEnumerable&lt;T&gt;)</h4>
+  <h4 id="EventStore_Common_Utils_EnumerableExtensions_Safe__1_System_Collections_Generic_IEnumerable___0__" data-uid="EventStore.Common.Utils.EnumerableExtensions.Safe``1(System.Collections.Generic.IEnumerable{``0})">Safe&lt;T&gt;(IEnumerable&lt;T&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IEnumerable&lt;T&gt; Safe&lt;T&gt;(this IEnumerable&lt;T&gt; collection)</code></pre>
   </div>
@@ -328,7 +341,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
         <td><span class="parametername">collection</span></td>
         <td></td>
       </tr>
@@ -344,7 +357,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -373,12 +386,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Common_Utils_EnumerableExtensions.md&amp;value=---%0Auid%3A%20EventStore.Common.Utils.EnumerableExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Common/Utils/EnumerableExtensions.cs/#L7" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

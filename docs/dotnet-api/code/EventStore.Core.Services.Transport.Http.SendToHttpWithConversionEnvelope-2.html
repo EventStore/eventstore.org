@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -107,11 +108,35 @@
     <h5>Implements</h5>
     <div><a class="xref" href="EventStore.Core.Messaging.IEnvelope.html">IEnvelope</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.Transport.Http.html">EventStore.Core.Services.Transport.Http</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Services_Transport_Http_SendToHttpWithConversionEnvelope_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SendToHttpWithConversionEnvelope&lt;TExpectedResponseMessage, TExpectedHttpFormattedResponseMessage&gt; : object, IEnvelope where TExpectedResponseMessage : Message</code></pre>
+    <pre><code class="lang-csharp hljs">public class SendToHttpWithConversionEnvelope&lt;TExpectedResponseMessage, TExpectedHttpFormattedResponseMessage&gt; : IEnvelope where TExpectedResponseMessage : Message</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -134,18 +159,15 @@
   </table>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_SendToHttpWithConversionEnvelope_2__ctor_EventStore_Core_Bus_IPublisher_EventStore_Transport_Http_EntityManagement_HttpEntityManager_Func_EventStore_Transport_Http_ICodec__1_System_String__Func_EventStore_Transport_Http_ICodec__1_EventStore_Core_Services_Transport_Http_ResponseConfiguration__Func__0__1__EventStore_Core_Messaging_IEnvelope_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.SendToHttpWithConversionEnvelope%602.%23ctor(EventStore.Core.Bus.IPublisher%2CEventStore.Transport.Http.EntityManagement.HttpEntityManager%2CFunc%7BEventStore.Transport.Http.ICodec%2C%601%2CSystem.String%7D%2CFunc%7BEventStore.Transport.Http.ICodec%2C%601%2CEventStore.Core.Services.Transport.Http.ResponseConfiguration%7D%2CFunc%7B%600%2C%601%7D%2CEventStore.Core.Messaging.IEnvelope)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/SendToHttpWithConversionEnvelope.cs/#L17">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Http_SendToHttpWithConversionEnvelope_2__ctor_" data-uid="EventStore.Core.Services.Transport.Http.SendToHttpWithConversionEnvelope`2.#ctor*"></a>
-  <h4 id="EventStore_Core_Services_Transport_Http_SendToHttpWithConversionEnvelope_2__ctor_EventStore_Core_Bus_IPublisher_EventStore_Transport_Http_EntityManagement_HttpEntityManager_Func_EventStore_Transport_Http_ICodec__1_System_String__Func_EventStore_Transport_Http_ICodec__1_EventStore_Core_Services_Transport_Http_ResponseConfiguration__Func__0__1__EventStore_Core_Messaging_IEnvelope_" data-uid="EventStore.Core.Services.Transport.Http.SendToHttpWithConversionEnvelope`2.#ctor(EventStore.Core.Bus.IPublisher,EventStore.Transport.Http.EntityManagement.HttpEntityManager,Func{EventStore.Transport.Http.ICodec,`1,System.String},Func{EventStore.Transport.Http.ICodec,`1,EventStore.Core.Services.Transport.Http.ResponseConfiguration},Func{`0,`1},EventStore.Core.Messaging.IEnvelope)">SendToHttpWithConversionEnvelope(IPublisher, HttpEntityManager, Func&lt;ICodec, TExpectedHttpFormattedResponseMessage, String&gt;, Func&lt;ICodec, TExpectedHttpFormattedResponseMessage, ResponseConfiguration&gt;, Func&lt;TExpectedResponseMessage, TExpectedHttpFormattedResponseMessage&gt;, IEnvelope)</h4>
+  <h4 id="EventStore_Core_Services_Transport_Http_SendToHttpWithConversionEnvelope_2__ctor_EventStore_Core_Bus_IPublisher_EventStore_Transport_Http_EntityManagement_HttpEntityManager_System_Func_EventStore_Transport_Http_ICodec__1_System_String__System_Func_EventStore_Transport_Http_ICodec__1_EventStore_Core_Services_Transport_Http_ResponseConfiguration__System_Func__0__1__EventStore_Core_Messaging_IEnvelope_" data-uid="EventStore.Core.Services.Transport.Http.SendToHttpWithConversionEnvelope`2.#ctor(EventStore.Core.Bus.IPublisher,EventStore.Transport.Http.EntityManagement.HttpEntityManager,System.Func{EventStore.Transport.Http.ICodec,`1,System.String},System.Func{EventStore.Transport.Http.ICodec,`1,EventStore.Core.Services.Transport.Http.ResponseConfiguration},System.Func{`0,`1},EventStore.Core.Messaging.IEnvelope)">SendToHttpWithConversionEnvelope(IPublisher, HttpEntityManager, Func&lt;ICodec, TExpectedHttpFormattedResponseMessage, String&gt;, Func&lt;ICodec, TExpectedHttpFormattedResponseMessage, ResponseConfiguration&gt;, Func&lt;TExpectedResponseMessage, TExpectedHttpFormattedResponseMessage&gt;, IEnvelope)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SendToHttpWithConversionEnvelope(IPublisher networkSendQueue, HttpEntityManager entity, Func&lt;ICodec, TExpectedHttpFormattedResponseMessage, string&gt; formatter, Func&lt;ICodec, TExpectedHttpFormattedResponseMessage, ResponseConfiguration&gt; configurator, Func&lt;TExpectedResponseMessage, TExpectedHttpFormattedResponseMessage&gt; convertor, IEnvelope nonMatchingEnvelope = null)</code></pre>
   </div>
@@ -170,17 +192,17 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;<a class="xref" href="EventStore.Transport.Http.ICodec.html">ICodec</a>, TExpectedHttpFormattedResponseMessage, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="EventStore.Transport.Http.ICodec.html">ICodec</a>, TExpectedHttpFormattedResponseMessage, <span class="xref">System.String</span>&gt;</td>
         <td><span class="parametername">formatter</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;<a class="xref" href="EventStore.Transport.Http.ICodec.html">ICodec</a>, TExpectedHttpFormattedResponseMessage, <a class="xref" href="EventStore.Core.Services.Transport.Http.ResponseConfiguration.html">ResponseConfiguration</a>&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="EventStore.Transport.Http.ICodec.html">ICodec</a>, TExpectedHttpFormattedResponseMessage, <a class="xref" href="EventStore.Core.Services.Transport.Http.ResponseConfiguration.html">ResponseConfiguration</a>&gt;</td>
         <td><span class="parametername">configurator</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;TExpectedResponseMessage, TExpectedHttpFormattedResponseMessage&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;TExpectedResponseMessage, TExpectedHttpFormattedResponseMessage&gt;</td>
         <td><span class="parametername">convertor</span></td>
         <td></td>
       </tr>
@@ -193,18 +215,15 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_SendToHttpWithConversionEnvelope_2_ReplyWith__1___0_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.SendToHttpWithConversionEnvelope%602.ReplyWith%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/SendToHttpWithConversionEnvelope.cs/#L40">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Http_SendToHttpWithConversionEnvelope_2_ReplyWith_" data-uid="EventStore.Core.Services.Transport.Http.SendToHttpWithConversionEnvelope`2.ReplyWith*"></a>
   <h4 id="EventStore_Core_Services_Transport_Http_SendToHttpWithConversionEnvelope_2_ReplyWith__1___0_" data-uid="EventStore.Core.Services.Transport.Http.SendToHttpWithConversionEnvelope`2.ReplyWith``1(``0)">ReplyWith&lt;T&gt;(T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void ReplyWith&lt;T&gt;(T message)
     where T : Message</code></pre>
@@ -270,12 +289,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_SendToHttpWithConversionEnvelope_2.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.SendToHttpWithConversionEnvelope%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/SendToHttpWithConversionEnvelope.cs/#L8" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

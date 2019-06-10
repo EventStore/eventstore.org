@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -109,6 +110,27 @@
     <div>
       <a class="xref" href="EventStore.Core.Messaging.Message.html#EventStore_Core_Messaging_Message_NextMsgId">Message.NextMsgId</a>
     </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Messages.html">EventStore.Core.Messages</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
@@ -118,18 +140,15 @@
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ReplicationMessage_SubscribeReplica__ctor_System_Int64_Guid_EventStore_Core_TransactionLog_LogRecords_EpochRecord___IPEndPoint_Guid_Guid_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ReplicationMessage.SubscribeReplica.%23ctor(System.Int64%2CGuid%2CEventStore.Core.TransactionLog.LogRecords.EpochRecord%5B%5D%2CIPEndPoint%2CGuid%2CGuid%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ReplicationMessage.cs/#L28">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messages_ReplicationMessage_SubscribeReplica__ctor_" data-uid="EventStore.Core.Messages.ReplicationMessage.SubscribeReplica.#ctor*"></a>
-  <h4 id="EventStore_Core_Messages_ReplicationMessage_SubscribeReplica__ctor_System_Int64_Guid_EventStore_Core_TransactionLog_LogRecords_EpochRecord___IPEndPoint_Guid_Guid_System_Boolean_" data-uid="EventStore.Core.Messages.ReplicationMessage.SubscribeReplica.#ctor(System.Int64,Guid,EventStore.Core.TransactionLog.LogRecords.EpochRecord[],IPEndPoint,Guid,Guid,System.Boolean)">SubscribeReplica(Int64, Guid, EpochRecord[], IPEndPoint, Guid, Guid, Boolean)</h4>
+  <h4 id="EventStore_Core_Messages_ReplicationMessage_SubscribeReplica__ctor_System_Int64_System_Guid_EventStore_Core_TransactionLog_LogRecords_EpochRecord___System_Net_IPEndPoint_System_Guid_System_Guid_System_Boolean_" data-uid="EventStore.Core.Messages.ReplicationMessage.SubscribeReplica.#ctor(System.Int64,System.Guid,EventStore.Core.TransactionLog.LogRecords.EpochRecord[],System.Net.IPEndPoint,System.Guid,System.Guid,System.Boolean)">SubscribeReplica(Int64, Guid, EpochRecord[], IPEndPoint, Guid, Guid, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SubscribeReplica(long logPosition, Guid chunkId, EpochRecord[] lastEpochs, IPEndPoint replicaEndPoint, Guid masterId, Guid subscriptionId, bool isPromotable)</code></pre>
   </div>
@@ -149,7 +168,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">chunkId</span></td>
         <td></td>
       </tr>
@@ -159,17 +178,17 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IPEndPoint</span></td>
+        <td><span class="xref">System.Net.IPEndPoint</span></td>
         <td><span class="parametername">replicaEndPoint</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">masterId</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">subscriptionId</span></td>
         <td></td>
       </tr>
@@ -182,17 +201,14 @@
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ReplicationMessage_SubscribeReplica_ChunkId.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ReplicationMessage.SubscribeReplica.ChunkId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ReplicationMessage.cs/#L21">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_ReplicationMessage_SubscribeReplica_ChunkId" data-uid="EventStore.Core.Messages.ReplicationMessage.SubscribeReplica.ChunkId">ChunkId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly Guid ChunkId</code></pre>
   </div>
@@ -201,27 +217,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
-        <td></td>
+        <td><span class="xref">System.Guid</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ReplicationMessage_SubscribeReplica_IsPromotable.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ReplicationMessage.SubscribeReplica.IsPromotable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ReplicationMessage.cs/#L26">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_ReplicationMessage_SubscribeReplica_IsPromotable" data-uid="EventStore.Core.Messages.ReplicationMessage.SubscribeReplica.IsPromotable">IsPromotable</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly bool IsPromotable</code></pre>
   </div>
@@ -230,27 +241,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ReplicationMessage_SubscribeReplica_LastEpochs.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ReplicationMessage.SubscribeReplica.LastEpochs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ReplicationMessage.cs/#L22">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_ReplicationMessage_SubscribeReplica_LastEpochs" data-uid="EventStore.Core.Messages.ReplicationMessage.SubscribeReplica.LastEpochs">LastEpochs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly EpochRecord[] LastEpochs</code></pre>
   </div>
@@ -259,27 +265,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.LogRecords.EpochRecord.html">EpochRecord</a>[]</td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ReplicationMessage_SubscribeReplica_LogPosition.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ReplicationMessage.SubscribeReplica.LogPosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ReplicationMessage.cs/#L20">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_ReplicationMessage_SubscribeReplica_LogPosition" data-uid="EventStore.Core.Messages.ReplicationMessage.SubscribeReplica.LogPosition">LogPosition</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly long LogPosition</code></pre>
   </div>
@@ -288,27 +289,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ReplicationMessage_SubscribeReplica_MasterId.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ReplicationMessage.SubscribeReplica.MasterId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ReplicationMessage.cs/#L24">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_ReplicationMessage_SubscribeReplica_MasterId" data-uid="EventStore.Core.Messages.ReplicationMessage.SubscribeReplica.MasterId">MasterId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly Guid MasterId</code></pre>
   </div>
@@ -317,27 +313,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
-        <td></td>
+        <td><span class="xref">System.Guid</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ReplicationMessage_SubscribeReplica_ReplicaEndPoint.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ReplicationMessage.SubscribeReplica.ReplicaEndPoint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ReplicationMessage.cs/#L23">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_ReplicationMessage_SubscribeReplica_ReplicaEndPoint" data-uid="EventStore.Core.Messages.ReplicationMessage.SubscribeReplica.ReplicaEndPoint">ReplicaEndPoint</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly IPEndPoint ReplicaEndPoint</code></pre>
   </div>
@@ -346,27 +337,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPEndPoint</span></td>
-        <td></td>
+        <td><span class="xref">System.Net.IPEndPoint</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ReplicationMessage_SubscribeReplica_SubscriptionId.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ReplicationMessage.SubscribeReplica.SubscriptionId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ReplicationMessage.cs/#L25">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_ReplicationMessage_SubscribeReplica_SubscriptionId" data-uid="EventStore.Core.Messages.ReplicationMessage.SubscribeReplica.SubscriptionId">SubscriptionId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly Guid SubscriptionId</code></pre>
   </div>
@@ -375,30 +361,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
-        <td></td>
+        <td><span class="xref">System.Guid</span></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ReplicationMessage_SubscribeReplica_MsgTypeId.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ReplicationMessage.SubscribeReplica.MsgTypeId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ReplicationMessage.cs/#L16">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messages_ReplicationMessage_SubscribeReplica_MsgTypeId_" data-uid="EventStore.Core.Messages.ReplicationMessage.SubscribeReplica.MsgTypeId*"></a>
   <h4 id="EventStore_Core_Messages_ReplicationMessage_SubscribeReplica_MsgTypeId" data-uid="EventStore.Core.Messages.ReplicationMessage.SubscribeReplica.MsgTypeId">MsgTypeId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override int MsgTypeId { get; }</code></pre>
   </div>
@@ -407,13 +388,11 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -444,12 +423,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ReplicationMessage_SubscribeReplica.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ReplicationMessage.SubscribeReplica%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ReplicationMessage.cs/#L13" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

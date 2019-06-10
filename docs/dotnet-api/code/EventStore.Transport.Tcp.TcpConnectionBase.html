@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -110,26 +111,47 @@
     <h5>Implements</h5>
     <div><a class="xref" href="EventStore.Transport.Tcp.IMonitoredTcpConnection.html">IMonitoredTcpConnection</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Transport.Tcp.html">EventStore.Transport.Tcp</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Transport.Tcp.dll</h6>
   <h5 id="EventStore_Transport_Tcp_TcpConnectionBase_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TcpConnectionBase : object, IMonitoredTcpConnection</code></pre>
+    <pre><code class="lang-csharp hljs">public class TcpConnectionBase : IMonitoredTcpConnection</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase__ctor_IPEndPoint_.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.%23ctor(IPEndPoint)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L135">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase__ctor_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.#ctor*"></a>
-  <h4 id="EventStore_Transport_Tcp_TcpConnectionBase__ctor_IPEndPoint_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.#ctor(IPEndPoint)">TcpConnectionBase(IPEndPoint)</h4>
+  <h4 id="EventStore_Transport_Tcp_TcpConnectionBase__ctor_System_Net_IPEndPoint_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.#ctor(System.Net.IPEndPoint)">TcpConnectionBase(IPEndPoint)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TcpConnectionBase(IPEndPoint remoteEndPoint)</code></pre>
   </div>
@@ -144,7 +166,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPEndPoint</span></td>
+        <td><span class="xref">System.Net.IPEndPoint</span></td>
         <td><span class="parametername">remoteEndPoint</span></td>
         <td></td>
       </tr>
@@ -152,18 +174,15 @@
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_InReceive.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.InReceive%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L29">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_InReceive_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.InReceive*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_InReceive" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.InReceive">InReceive</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool InReceive { get; }</code></pre>
   </div>
@@ -172,28 +191,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_InSend.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.InSend%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L25">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_InSend_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.InSend*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_InSend" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.InSend">InSend</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool InSend { get; }</code></pre>
   </div>
@@ -202,28 +216,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_InSendBytes.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.InSendBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L37">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_InSendBytes_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.InSendBytes*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_InSendBytes" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.InSendBytes">InSendBytes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int InSendBytes { get; }</code></pre>
   </div>
@@ -232,28 +241,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_IsClosed.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.IsClosed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L21">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_IsClosed_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.IsClosed*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_IsClosed" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.IsClosed">IsClosed</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool IsClosed { get; }</code></pre>
   </div>
@@ -262,28 +266,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_IsFaulted.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.IsFaulted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L91">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_IsFaulted_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.IsFaulted*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_IsFaulted" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.IsFaulted">IsFaulted</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool IsFaulted { get; }</code></pre>
   </div>
@@ -292,28 +291,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_IsInitialized.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.IsInitialized%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L17">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_IsInitialized_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.IsInitialized*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_IsInitialized" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.IsInitialized">IsInitialized</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool IsInitialized { get; }</code></pre>
   </div>
@@ -322,28 +316,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_IsReadyForReceive.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.IsReadyForReceive%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L80">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_IsReadyForReceive_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.IsReadyForReceive*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_IsReadyForReceive" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.IsReadyForReceive">IsReadyForReceive</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool IsReadyForReceive { get; }</code></pre>
   </div>
@@ -352,28 +341,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_IsReadyForSend.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.IsReadyForSend%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L69">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_IsReadyForSend_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.IsReadyForSend*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_IsReadyForSend" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.IsReadyForSend">IsReadyForSend</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool IsReadyForSend { get; }</code></pre>
   </div>
@@ -382,28 +366,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_LastReceiveStarted.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.LastReceiveStarted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L109">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_LastReceiveStarted_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.LastReceiveStarted*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_LastReceiveStarted" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.LastReceiveStarted">LastReceiveStarted</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public DateTime? LastReceiveStarted { get; }</code></pre>
   </div>
@@ -412,28 +391,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">DateTime</span>&gt;</td>
-        <td></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_LastSendStarted.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.LastSendStarted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L102">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_LastSendStarted_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.LastSendStarted*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_LastSendStarted" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.LastSendStarted">LastSendStarted</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public DateTime? LastSendStarted { get; }</code></pre>
   </div>
@@ -442,28 +416,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">DateTime</span>&gt;</td>
-        <td></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_LocalEndPoint.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.LocalEndPoint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L13">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_LocalEndPoint_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.LocalEndPoint*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_LocalEndPoint" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.LocalEndPoint">LocalEndPoint</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IPEndPoint LocalEndPoint { get; }</code></pre>
   </div>
@@ -472,28 +441,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPEndPoint</span></td>
-        <td></td>
+        <td><span class="xref">System.Net.IPEndPoint</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_PendingReceivedBytes.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.PendingReceivedBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L41">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_PendingReceivedBytes_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.PendingReceivedBytes*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_PendingReceivedBytes" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.PendingReceivedBytes">PendingReceivedBytes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int PendingReceivedBytes { get; }</code></pre>
   </div>
@@ -502,28 +466,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_PendingSendBytes.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.PendingSendBytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L33">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_PendingSendBytes_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.PendingSendBytes*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_PendingSendBytes" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.PendingSendBytes">PendingSendBytes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int PendingSendBytes { get; }</code></pre>
   </div>
@@ -532,28 +491,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_ReceiveCallbacks.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.ReceiveCallbacks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L65">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_ReceiveCallbacks_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.ReceiveCallbacks*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_ReceiveCallbacks" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.ReceiveCallbacks">ReceiveCallbacks</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int ReceiveCallbacks { get; }</code></pre>
   </div>
@@ -562,28 +516,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_ReceiveCalls.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.ReceiveCalls%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L61">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_ReceiveCalls_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.ReceiveCalls*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_ReceiveCalls" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.ReceiveCalls">ReceiveCalls</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int ReceiveCalls { get; }</code></pre>
   </div>
@@ -592,28 +541,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_RemoteEndPoint.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.RemoteEndPoint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L9">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_RemoteEndPoint_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.RemoteEndPoint*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_RemoteEndPoint" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.RemoteEndPoint">RemoteEndPoint</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IPEndPoint RemoteEndPoint { get; }</code></pre>
   </div>
@@ -622,28 +566,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPEndPoint</span></td>
-        <td></td>
+        <td><span class="xref">System.Net.IPEndPoint</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_SendCallbacks.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.SendCallbacks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L57">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_SendCallbacks_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.SendCallbacks*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_SendCallbacks" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.SendCallbacks">SendCallbacks</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int SendCallbacks { get; }</code></pre>
   </div>
@@ -652,28 +591,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_SendCalls.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.SendCalls%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L53">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_SendCalls_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.SendCalls*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_SendCalls" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.SendCalls">SendCalls</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int SendCalls { get; }</code></pre>
   </div>
@@ -682,28 +616,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_TotalBytesReceived.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.TotalBytesReceived%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L49">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_TotalBytesReceived_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.TotalBytesReceived*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_TotalBytesReceived" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.TotalBytesReceived">TotalBytesReceived</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public long TotalBytesReceived { get; }</code></pre>
   </div>
@@ -712,28 +641,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_TotalBytesSent.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.TotalBytesSent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L45">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_TotalBytesSent_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.TotalBytesSent*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_TotalBytesSent" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.TotalBytesSent">TotalBytesSent</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public long TotalBytesSent { get; }</code></pre>
   </div>
@@ -742,30 +666,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_InitConnectionBase_Socket_.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.InitConnectionBase(Socket)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L142">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_InitConnectionBase_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.InitConnectionBase*"></a>
-  <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_InitConnectionBase_Socket_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.InitConnectionBase(Socket)">InitConnectionBase(Socket)</h4>
+  <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_InitConnectionBase_System_Net_Sockets_Socket_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.InitConnectionBase(System.Net.Sockets.Socket)">InitConnectionBase(Socket)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void InitConnectionBase(Socket socket)</code></pre>
   </div>
@@ -780,39 +699,33 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Socket</span></td>
+        <td><span class="xref">System.Net.Sockets.Socket</span></td>
         <td><span class="parametername">socket</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_NotifyClosed.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.NotifyClosed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L186">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_NotifyClosed_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.NotifyClosed*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_NotifyClosed" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.NotifyClosed">NotifyClosed()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void NotifyClosed()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_NotifyReceiveCompleted_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.NotifyReceiveCompleted(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L175">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_NotifyReceiveCompleted_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.NotifyReceiveCompleted*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_NotifyReceiveCompleted_System_Int32_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.NotifyReceiveCompleted(System.Int32)">NotifyReceiveCompleted(Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void NotifyReceiveCompleted(int bytes)</code></pre>
   </div>
@@ -833,18 +746,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_NotifyReceiveDispatched_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.NotifyReceiveDispatched(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L182">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_NotifyReceiveDispatched_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.NotifyReceiveDispatched*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_NotifyReceiveDispatched_System_Int32_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.NotifyReceiveDispatched(System.Int32)">NotifyReceiveDispatched(Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void NotifyReceiveDispatched(int bytes)</code></pre>
   </div>
@@ -865,33 +775,27 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_NotifyReceiveStarting.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.NotifyReceiveStarting%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L168">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_NotifyReceiveStarting_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.NotifyReceiveStarting*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_NotifyReceiveStarting" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.NotifyReceiveStarting">NotifyReceiveStarting()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void NotifyReceiveStarting()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_NotifySendCompleted_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.NotifySendCompleted(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L161">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_NotifySendCompleted_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.NotifySendCompleted*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_NotifySendCompleted_System_Int32_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.NotifySendCompleted(System.Int32)">NotifySendCompleted(Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void NotifySendCompleted(int bytes)</code></pre>
   </div>
@@ -912,18 +816,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_NotifySendScheduled_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.NotifySendScheduled(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L149">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_NotifySendScheduled_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.NotifySendScheduled*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_NotifySendScheduled_System_Int32_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.NotifySendScheduled(System.Int32)">NotifySendScheduled(Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void NotifySendScheduled(int bytes)</code></pre>
   </div>
@@ -944,18 +845,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase_NotifySendStarting_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase.NotifySendStarting(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L153">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpConnectionBase_NotifySendStarting_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.NotifySendStarting*"></a>
   <h4 id="EventStore_Transport_Tcp_TcpConnectionBase_NotifySendStarting_System_Int32_" data-uid="EventStore.Transport.Tcp.TcpConnectionBase.NotifySendStarting(System.Int32)">NotifySendStarting(Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void NotifySendStarting(int bytes)</code></pre>
   </div>
@@ -1005,12 +903,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpConnectionBase.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpConnectionBase%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpConnectionBase.cs/#L8" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -106,349 +107,315 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="EventStore.Core.Index.ISearchTable.html">ISearchTable</a></div>
-    <div><span class="xref">IDisposable</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Index.html">EventStore.Core.Index</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Index_PTable_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PTable : object, ISearchTable, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class PTable : ISearchTable, IDisposable</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_DefaultBufferSize.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.DefaultBufferSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L39">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Index_PTable_DefaultBufferSize" data-uid="EventStore.Core.Index.PTable.DefaultBufferSize">DefaultBufferSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int DefaultBufferSize = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int DefaultBufferSize = 8192</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_DefaultSequentialBufferSize.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.DefaultSequentialBufferSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L40">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Index_PTable_DefaultSequentialBufferSize" data-uid="EventStore.Core.Index.PTable.DefaultSequentialBufferSize">DefaultSequentialBufferSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int DefaultSequentialBufferSize = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int DefaultSequentialBufferSize = 65536</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_IndexEntryV1Size.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.IndexEntryV1Size%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L29">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Index_PTable_IndexEntryV1Size" data-uid="EventStore.Core.Index.PTable.IndexEntryV1Size">IndexEntryV1Size</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int IndexEntryV1Size = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int IndexEntryV1Size = 16</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_IndexEntryV2Size.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.IndexEntryV2Size%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L30">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Index_PTable_IndexEntryV2Size" data-uid="EventStore.Core.Index.PTable.IndexEntryV2Size">IndexEntryV2Size</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int IndexEntryV2Size = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int IndexEntryV2Size = 20</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_IndexEntryV3Size.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.IndexEntryV3Size%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L31">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Index_PTable_IndexEntryV3Size" data-uid="EventStore.Core.Index.PTable.IndexEntryV3Size">IndexEntryV3Size</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int IndexEntryV3Size = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int IndexEntryV3Size = 24</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_IndexEntryV4Size.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.IndexEntryV4Size%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L32">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Index_PTable_IndexEntryV4Size" data-uid="EventStore.Core.Index.PTable.IndexEntryV4Size">IndexEntryV4Size</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int IndexEntryV4Size = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int IndexEntryV4Size = 24</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_IndexKeyV1Size.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.IndexKeyV1Size%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L34">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Index_PTable_IndexKeyV1Size" data-uid="EventStore.Core.Index.PTable.IndexKeyV1Size">IndexKeyV1Size</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int IndexKeyV1Size = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int IndexKeyV1Size = 8</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_IndexKeyV2Size.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.IndexKeyV2Size%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L35">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Index_PTable_IndexKeyV2Size" data-uid="EventStore.Core.Index.PTable.IndexKeyV2Size">IndexKeyV2Size</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int IndexKeyV2Size = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int IndexKeyV2Size = 12</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_IndexKeyV3Size.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.IndexKeyV3Size%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L36">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Index_PTable_IndexKeyV3Size" data-uid="EventStore.Core.Index.PTable.IndexKeyV3Size">IndexKeyV3Size</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int IndexKeyV3Size = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int IndexKeyV3Size = 16</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_IndexKeyV4Size.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.IndexKeyV4Size%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L37">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Index_PTable_IndexKeyV4Size" data-uid="EventStore.Core.Index.PTable.IndexKeyV4Size">IndexKeyV4Size</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int IndexKeyV4Size = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int IndexKeyV4Size = 16</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_MD5Size.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.MD5Size%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L38">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Index_PTable_MD5Size" data-uid="EventStore.Core.Index.PTable.MD5Size">MD5Size</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int MD5Size = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int MD5Size = 16</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_Count.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L48">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_PTable_Count_" data-uid="EventStore.Core.Index.PTable.Count*"></a>
   <h4 id="EventStore_Core_Index_PTable_Count" data-uid="EventStore.Core.Index.PTable.Count">Count</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public long Count { get; }</code></pre>
   </div>
@@ -457,28 +424,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_Filename.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.Filename%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L52">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_PTable_Filename_" data-uid="EventStore.Core.Index.PTable.Filename*"></a>
   <h4 id="EventStore_Core_Index_PTable_Filename" data-uid="EventStore.Core.Index.PTable.Filename">Filename</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Filename { get; }</code></pre>
   </div>
@@ -487,28 +449,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_Id.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L44">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_PTable_Id_" data-uid="EventStore.Core.Index.PTable.Id*"></a>
   <h4 id="EventStore_Core_Index_PTable_Id" data-uid="EventStore.Core.Index.PTable.Id">Id</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Guid Id { get; }</code></pre>
   </div>
@@ -517,28 +474,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
-        <td></td>
+        <td><span class="xref">System.Guid</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_Version.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.Version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L56">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_PTable_Version_" data-uid="EventStore.Core.Index.PTable.Version*"></a>
   <h4 id="EventStore_Core_Index_PTable_Version" data-uid="EventStore.Core.Index.PTable.Version">Version</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public byte Version { get; }</code></pre>
   </div>
@@ -547,45 +499,37 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_Dispose.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L719">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_PTable_Dispose_" data-uid="EventStore.Core.Index.PTable.Dispose*"></a>
   <h4 id="EventStore_Core_Index_PTable_Dispose" data-uid="EventStore.Core.Index.PTable.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_FromFile_System_String_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.FromFile(System.String%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTableConstruction.cs/#L14">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_PTable_FromFile_" data-uid="EventStore.Core.Index.PTable.FromFile*"></a>
   <h4 id="EventStore_Core_Index_PTable_FromFile_System_String_System_Int32_System_Boolean_" data-uid="EventStore.Core.Index.PTable.FromFile(System.String,System.Int32,System.Boolean)">FromFile(String, Int32, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static PTable FromFile(string filename, int cacheDepth, bool skipIndexVerify)</code></pre>
   </div>
@@ -631,18 +575,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_FromMemtable_EventStore_Core_Index_IMemTable_System_String_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.FromMemtable(EventStore.Core.Index.IMemTable%2CSystem.String%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTableConstruction.cs/#L18">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_PTable_FromMemtable_" data-uid="EventStore.Core.Index.PTable.FromMemtable*"></a>
   <h4 id="EventStore_Core_Index_PTable_FromMemtable_EventStore_Core_Index_IMemTable_System_String_System_Int32_System_Boolean_" data-uid="EventStore.Core.Index.PTable.FromMemtable(EventStore.Core.Index.IMemTable,System.String,System.Int32,System.Boolean)">FromMemtable(IMemTable, String, Int32, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static PTable FromMemtable(IMemTable table, string filename, int cacheDepth = 16, bool skipIndexVerify = false)</code></pre>
   </div>
@@ -693,18 +634,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_GetMidpointIndex_System_Int64_System_Int64_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.GetMidpointIndex(System.Int64%2CSystem.Int64%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTableConstruction.cs/#L705">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_PTable_GetMidpointIndex_" data-uid="EventStore.Core.Index.PTable.GetMidpointIndex*"></a>
   <h4 id="EventStore_Core_Index_PTable_GetMidpointIndex_System_Int64_System_Int64_System_Int64_" data-uid="EventStore.Core.Index.PTable.GetMidpointIndex(System.Int64,System.Int64,System.Int64)">GetMidpointIndex(Int64, Int64, Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static long GetMidpointIndex(long k, long numIndexEntries, long numMidpoints)</code></pre>
   </div>
@@ -750,20 +688,17 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_GetRange_System_UInt64_System_Int64_System_Int64_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.GetRange(System.UInt64%2CSystem.Int64%2CSystem.Int64%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L564">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_PTable_GetRange_" data-uid="EventStore.Core.Index.PTable.GetRange*"></a>
   <h4 id="EventStore_Core_Index_PTable_GetRange_System_UInt64_System_Int64_System_Int64_System_Nullable_System_Int32__" data-uid="EventStore.Core.Index.PTable.GetRange(System.UInt64,System.Int64,System.Int64,System.Nullable{System.Int32})">GetRange(UInt64, Int64, Int64, Nullable&lt;Int32&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;IndexEntry&gt; GetRange(ulong stream, long startNumber, long endNumber, int? limit = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;IndexEntry&gt; GetRange(ulong stream, long startNumber, long endNumber, int? limit = default(int? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -807,23 +742,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="EventStore.Core.Index.IndexEntry.html">IndexEntry</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="EventStore.Core.Index.IndexEntry.html">IndexEntry</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_GetRequiredMidpointCountCached_System_Int64_System_Byte_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.GetRequiredMidpointCountCached(System.Int64%2CSystem.Byte%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTableConstruction.cs/#L699">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_PTable_GetRequiredMidpointCountCached_" data-uid="EventStore.Core.Index.PTable.GetRequiredMidpointCountCached*"></a>
   <h4 id="EventStore_Core_Index_PTable_GetRequiredMidpointCountCached_System_Int64_System_Byte_System_Int32_" data-uid="EventStore.Core.Index.PTable.GetRequiredMidpointCountCached(System.Int64,System.Byte,System.Int32)">GetRequiredMidpointCountCached(Int64, Byte, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static uint GetRequiredMidpointCountCached(long numIndexEntries, byte version, int minDepth = 16)</code></pre>
   </div>
@@ -869,18 +801,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_IsMidpointIndex_System_Int64_System_Int64_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.IsMidpointIndex(System.Int64%2CSystem.Int64%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTableConstruction.cs/#L710">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_PTable_IsMidpointIndex_" data-uid="EventStore.Core.Index.PTable.IsMidpointIndex*"></a>
   <h4 id="EventStore_Core_Index_PTable_IsMidpointIndex_System_Int64_System_Int64_System_Int64_" data-uid="EventStore.Core.Index.PTable.IsMidpointIndex(System.Int64,System.Int64,System.Int64)">IsMidpointIndex(Int64, Int64, Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool IsMidpointIndex(long index, long numIndexEntries, long numMidpoints)</code></pre>
   </div>
@@ -926,18 +855,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_IterateAllInOrder.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.IterateAllInOrder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L414">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_PTable_IterateAllInOrder_" data-uid="EventStore.Core.Index.PTable.IterateAllInOrder*"></a>
   <h4 id="EventStore_Core_Index_PTable_IterateAllInOrder" data-uid="EventStore.Core.Index.PTable.IterateAllInOrder">IterateAllInOrder()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IEnumerable&lt;IndexEntry&gt; IterateAllInOrder()</code></pre>
   </div>
@@ -951,38 +877,32 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="EventStore.Core.Index.IndexEntry.html">IndexEntry</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="EventStore.Core.Index.IndexEntry.html">IndexEntry</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_MarkForDestruction.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.MarkForDestruction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L714">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_PTable_MarkForDestruction_" data-uid="EventStore.Core.Index.PTable.MarkForDestruction*"></a>
   <h4 id="EventStore_Core_Index_PTable_MarkForDestruction" data-uid="EventStore.Core.Index.PTable.MarkForDestruction">MarkForDestruction()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void MarkForDestruction()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_MergeTo_IList_EventStore_Core_Index_PTable__System_String_Func_System_String_System_UInt64_System_UInt64__Func_EventStore_Core_Index_IndexEntry_System_Boolean__Func_EventStore_Core_Index_IndexEntry_Tuple_System_String_System_Boolean___System_Byte_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.MergeTo(IList%7BEventStore.Core.Index.PTable%7D%2CSystem.String%2CFunc%7BSystem.String%2CSystem.UInt64%2CSystem.UInt64%7D%2CFunc%7BEventStore.Core.Index.IndexEntry%2CSystem.Boolean%7D%2CFunc%7BEventStore.Core.Index.IndexEntry%2CTuple%7BSystem.String%2CSystem.Boolean%7D%7D%2CSystem.Byte%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTableConstruction.cs/#L90">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_PTable_MergeTo_" data-uid="EventStore.Core.Index.PTable.MergeTo*"></a>
-  <h4 id="EventStore_Core_Index_PTable_MergeTo_IList_EventStore_Core_Index_PTable__System_String_Func_System_String_System_UInt64_System_UInt64__Func_EventStore_Core_Index_IndexEntry_System_Boolean__Func_EventStore_Core_Index_IndexEntry_Tuple_System_String_System_Boolean___System_Byte_System_Int32_System_Boolean_" data-uid="EventStore.Core.Index.PTable.MergeTo(IList{EventStore.Core.Index.PTable},System.String,Func{System.String,System.UInt64,System.UInt64},Func{EventStore.Core.Index.IndexEntry,System.Boolean},Func{EventStore.Core.Index.IndexEntry,Tuple{System.String,System.Boolean}},System.Byte,System.Int32,System.Boolean)">MergeTo(IList&lt;PTable&gt;, String, Func&lt;String, UInt64, UInt64&gt;, Func&lt;IndexEntry, Boolean&gt;, Func&lt;IndexEntry, Tuple&lt;String, Boolean&gt;&gt;, Byte, Int32, Boolean)</h4>
+  <h4 id="EventStore_Core_Index_PTable_MergeTo_System_Collections_Generic_IList_EventStore_Core_Index_PTable__System_String_System_Func_System_String_System_UInt64_System_UInt64__System_Func_EventStore_Core_Index_IndexEntry_System_Boolean__System_Func_EventStore_Core_Index_IndexEntry_System_Tuple_System_String_System_Boolean___System_Byte_System_Int32_System_Boolean_" data-uid="EventStore.Core.Index.PTable.MergeTo(System.Collections.Generic.IList{EventStore.Core.Index.PTable},System.String,System.Func{System.String,System.UInt64,System.UInt64},System.Func{EventStore.Core.Index.IndexEntry,System.Boolean},System.Func{EventStore.Core.Index.IndexEntry,System.Tuple{System.String,System.Boolean}},System.Byte,System.Int32,System.Boolean)">MergeTo(IList&lt;PTable&gt;, String, Func&lt;String, UInt64, UInt64&gt;, Func&lt;IndexEntry, Boolean&gt;, Func&lt;IndexEntry, Tuple&lt;String, Boolean&gt;&gt;, Byte, Int32, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static PTable MergeTo(IList&lt;PTable&gt; tables, string outputFile, Func&lt;string, ulong, ulong&gt; upgradeHash, Func&lt;IndexEntry, bool&gt; existsAt, Func&lt;IndexEntry, Tuple&lt;string, bool&gt;&gt; readRecord, byte version, int cacheDepth = 16, bool skipIndexVerify = false)</code></pre>
   </div>
@@ -997,7 +917,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IList</span>&lt;<a class="xref" href="EventStore.Core.Index.PTable.html">PTable</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IList</span>&lt;<a class="xref" href="EventStore.Core.Index.PTable.html">PTable</a>&gt;</td>
         <td><span class="parametername">tables</span></td>
         <td></td>
       </tr>
@@ -1007,17 +927,17 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.UInt64</span>, <span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.UInt64</span>, <span class="xref">System.UInt64</span>&gt;</td>
         <td><span class="parametername">upgradeHash</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;<a class="xref" href="EventStore.Core.Index.IndexEntry.html">IndexEntry</a>, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="EventStore.Core.Index.IndexEntry.html">IndexEntry</a>, <span class="xref">System.Boolean</span>&gt;</td>
         <td><span class="parametername">existsAt</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;<a class="xref" href="EventStore.Core.Index.IndexEntry.html">IndexEntry</a>, <span class="xref">Tuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="EventStore.Core.Index.IndexEntry.html">IndexEntry</a>, <span class="xref">System.Tuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td><span class="parametername">readRecord</span></td>
         <td></td>
       </tr>
@@ -1053,20 +973,17 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_Scavenged_EventStore_Core_Index_PTable_System_String_Func_System_String_System_UInt64_System_UInt64__Func_EventStore_Core_Index_IndexEntry_System_Boolean__Func_EventStore_Core_Index_IndexEntry_Tuple_System_String_System_Boolean___System_Byte_System_Int64__System_Int32_System_Boolean_CancellationToken_.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.Scavenged(EventStore.Core.Index.PTable%2CSystem.String%2CFunc%7BSystem.String%2CSystem.UInt64%2CSystem.UInt64%7D%2CFunc%7BEventStore.Core.Index.IndexEntry%2CSystem.Boolean%7D%2CFunc%7BEventStore.Core.Index.IndexEntry%2CTuple%7BSystem.String%2CSystem.Boolean%7D%7D%2CSystem.Byte%2CSystem.Int64%40%2CSystem.Int32%2CSystem.Boolean%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTableConstruction.cs/#L312">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_PTable_Scavenged_" data-uid="EventStore.Core.Index.PTable.Scavenged*"></a>
-  <h4 id="EventStore_Core_Index_PTable_Scavenged_EventStore_Core_Index_PTable_System_String_Func_System_String_System_UInt64_System_UInt64__Func_EventStore_Core_Index_IndexEntry_System_Boolean__Func_EventStore_Core_Index_IndexEntry_Tuple_System_String_System_Boolean___System_Byte_System_Int64__System_Int32_System_Boolean_CancellationToken_" data-uid="EventStore.Core.Index.PTable.Scavenged(EventStore.Core.Index.PTable,System.String,Func{System.String,System.UInt64,System.UInt64},Func{EventStore.Core.Index.IndexEntry,System.Boolean},Func{EventStore.Core.Index.IndexEntry,Tuple{System.String,System.Boolean}},System.Byte,System.Int64@,System.Int32,System.Boolean,CancellationToken)">Scavenged(PTable, String, Func&lt;String, UInt64, UInt64&gt;, Func&lt;IndexEntry, Boolean&gt;, Func&lt;IndexEntry, Tuple&lt;String, Boolean&gt;&gt;, Byte, out Int64, Int32, Boolean, CancellationToken)</h4>
+  <h4 id="EventStore_Core_Index_PTable_Scavenged_EventStore_Core_Index_PTable_System_String_System_Func_System_String_System_UInt64_System_UInt64__System_Func_EventStore_Core_Index_IndexEntry_System_Boolean__System_Func_EventStore_Core_Index_IndexEntry_System_Tuple_System_String_System_Boolean___System_Byte_System_Int64__System_Int32_System_Boolean_System_Threading_CancellationToken_" data-uid="EventStore.Core.Index.PTable.Scavenged(EventStore.Core.Index.PTable,System.String,System.Func{System.String,System.UInt64,System.UInt64},System.Func{EventStore.Core.Index.IndexEntry,System.Boolean},System.Func{EventStore.Core.Index.IndexEntry,System.Tuple{System.String,System.Boolean}},System.Byte,System.Int64@,System.Int32,System.Boolean,System.Threading.CancellationToken)">Scavenged(PTable, String, Func&lt;String, UInt64, UInt64&gt;, Func&lt;IndexEntry, Boolean&gt;, Func&lt;IndexEntry, Tuple&lt;String, Boolean&gt;&gt;, Byte, out Int64, Int32, Boolean, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static PTable Scavenged(PTable table, string outputFile, Func&lt;string, ulong, ulong&gt; upgradeHash, Func&lt;IndexEntry, bool&gt; existsAt, Func&lt;IndexEntry, Tuple&lt;string, bool&gt;&gt; readRecord, byte version, out long spaceSaved, int cacheDepth = 16, bool skipIndexVerify = false, CancellationToken ct = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static PTable Scavenged(PTable table, string outputFile, Func&lt;string, ulong, ulong&gt; upgradeHash, Func&lt;IndexEntry, bool&gt; existsAt, Func&lt;IndexEntry, Tuple&lt;string, bool&gt;&gt; readRecord, byte version, out long spaceSaved, int cacheDepth = 16, bool skipIndexVerify = false, CancellationToken ct = default(CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1089,17 +1006,17 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.UInt64</span>, <span class="xref">System.UInt64</span>&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.UInt64</span>, <span class="xref">System.UInt64</span>&gt;</td>
         <td><span class="parametername">upgradeHash</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;<a class="xref" href="EventStore.Core.Index.IndexEntry.html">IndexEntry</a>, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="EventStore.Core.Index.IndexEntry.html">IndexEntry</a>, <span class="xref">System.Boolean</span>&gt;</td>
         <td><span class="parametername">existsAt</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;<a class="xref" href="EventStore.Core.Index.IndexEntry.html">IndexEntry</a>, <span class="xref">Tuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="EventStore.Core.Index.IndexEntry.html">IndexEntry</a>, <span class="xref">System.Tuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Boolean</span>&gt;&gt;</td>
         <td><span class="parametername">readRecord</span></td>
         <td></td>
       </tr>
@@ -1124,7 +1041,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">ct</span></td>
         <td></td>
       </tr>
@@ -1145,18 +1062,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_TryGetLatestEntry_System_UInt64_EventStore_Core_Index_IndexEntry__.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.TryGetLatestEntry(System.UInt64%2CEventStore.Core.Index.IndexEntry%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L438">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_PTable_TryGetLatestEntry_" data-uid="EventStore.Core.Index.PTable.TryGetLatestEntry*"></a>
   <h4 id="EventStore_Core_Index_PTable_TryGetLatestEntry_System_UInt64_EventStore_Core_Index_IndexEntry__" data-uid="EventStore.Core.Index.PTable.TryGetLatestEntry(System.UInt64,EventStore.Core.Index.IndexEntry@)">TryGetLatestEntry(UInt64, out IndexEntry)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool TryGetLatestEntry(ulong stream, out IndexEntry entry)</code></pre>
   </div>
@@ -1197,18 +1111,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_TryGetOldestEntry_System_UInt64_EventStore_Core_Index_IndexEntry__.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.TryGetOldestEntry(System.UInt64%2CEventStore.Core.Index.IndexEntry%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L501">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_PTable_TryGetOldestEntry_" data-uid="EventStore.Core.Index.PTable.TryGetOldestEntry*"></a>
   <h4 id="EventStore_Core_Index_PTable_TryGetOldestEntry_System_UInt64_EventStore_Core_Index_IndexEntry__" data-uid="EventStore.Core.Index.PTable.TryGetOldestEntry(System.UInt64,EventStore.Core.Index.IndexEntry@)">TryGetOldestEntry(UInt64, out IndexEntry)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool TryGetOldestEntry(ulong stream, out IndexEntry entry)</code></pre>
   </div>
@@ -1249,18 +1160,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_TryGetOneValue_System_UInt64_System_Int64_System_Int64__.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.TryGetOneValue(System.UInt64%2CSystem.Int64%2CSystem.Int64%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L426">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_PTable_TryGetOneValue_" data-uid="EventStore.Core.Index.PTable.TryGetOneValue*"></a>
   <h4 id="EventStore_Core_Index_PTable_TryGetOneValue_System_UInt64_System_Int64_System_Int64__" data-uid="EventStore.Core.Index.PTable.TryGetOneValue(System.UInt64,System.Int64,System.Int64@)">TryGetOneValue(UInt64, Int64, out Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool TryGetOneValue(ulong stream, long number, out long position)</code></pre>
   </div>
@@ -1306,18 +1214,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_WaitForDisposal_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.WaitForDisposal(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L731">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_PTable_WaitForDisposal_" data-uid="EventStore.Core.Index.PTable.WaitForDisposal*"></a>
   <h4 id="EventStore_Core_Index_PTable_WaitForDisposal_System_Int32_" data-uid="EventStore.Core.Index.PTable.WaitForDisposal(System.Int32)">WaitForDisposal(Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void WaitForDisposal(int timeout)</code></pre>
   </div>
@@ -1338,18 +1243,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable_WaitForDisposal_TimeSpan_.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable.WaitForDisposal(TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTable.cs/#L736">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_PTable_WaitForDisposal_" data-uid="EventStore.Core.Index.PTable.WaitForDisposal*"></a>
-  <h4 id="EventStore_Core_Index_PTable_WaitForDisposal_TimeSpan_" data-uid="EventStore.Core.Index.PTable.WaitForDisposal(TimeSpan)">WaitForDisposal(TimeSpan)</h4>
+  <h4 id="EventStore_Core_Index_PTable_WaitForDisposal_System_TimeSpan_" data-uid="EventStore.Core.Index.PTable.WaitForDisposal(System.TimeSpan)">WaitForDisposal(TimeSpan)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void WaitForDisposal(TimeSpan timeout)</code></pre>
   </div>
@@ -1364,7 +1266,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">timeout</span></td>
         <td></td>
       </tr>
@@ -1375,7 +1277,7 @@
       <a class="xref" href="EventStore.Core.Index.ISearchTable.html">ISearchTable</a>
   </div>
   <div>
-      <span class="xref">IDisposable</span>
+      <span class="xref">System.IDisposable</span>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
@@ -1402,12 +1304,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_PTable.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.PTable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/PTableConstruction.cs/#L13" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

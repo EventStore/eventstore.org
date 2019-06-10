@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -107,26 +108,47 @@
     <h5>Implements</h5>
     <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.ICoreProjectionCheckpointReader.html">ICoreProjectionCheckpointReader</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Services.Processing.html">EventStore.Projections.Core.Services.Processing</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
   <h5 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointReader_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CoreProjectionCheckpointReader : object, ICoreProjectionCheckpointReader</code></pre>
+    <pre><code class="lang-csharp hljs">public class CoreProjectionCheckpointReader : ICoreProjectionCheckpointReader</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointReader__ctor_EventStore_Core_Bus_IPublisher_Guid_EventStore_Core_Helpers_IODispatcher_System_String_EventStore_Projections_Core_Services_Processing_ProjectionVersion_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointReader.%23ctor(EventStore.Core.Bus.IPublisher%2CGuid%2CEventStore.Core.Helpers.IODispatcher%2CSystem.String%2CEventStore.Projections.Core.Services.Processing.ProjectionVersion%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointReader.cs/#L30">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointReader__ctor_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointReader.#ctor*"></a>
-  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointReader__ctor_EventStore_Core_Bus_IPublisher_Guid_EventStore_Core_Helpers_IODispatcher_System_String_EventStore_Projections_Core_Services_Processing_ProjectionVersion_System_Boolean_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointReader.#ctor(EventStore.Core.Bus.IPublisher,Guid,EventStore.Core.Helpers.IODispatcher,System.String,EventStore.Projections.Core.Services.Processing.ProjectionVersion,System.Boolean)">CoreProjectionCheckpointReader(IPublisher, Guid, IODispatcher, String, ProjectionVersion, Boolean)</h4>
+  <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointReader__ctor_EventStore_Core_Bus_IPublisher_System_Guid_EventStore_Core_Helpers_IODispatcher_System_String_EventStore_Projections_Core_Services_Processing_ProjectionVersion_System_Boolean_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointReader.#ctor(EventStore.Core.Bus.IPublisher,System.Guid,EventStore.Core.Helpers.IODispatcher,System.String,EventStore.Projections.Core.Services.Processing.ProjectionVersion,System.Boolean)">CoreProjectionCheckpointReader(IPublisher, Guid, IODispatcher, String, ProjectionVersion, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CoreProjectionCheckpointReader(IPublisher publisher, Guid projectionCorrelationId, IODispatcher ioDispatcher, string projectionCheckpointStreamId, ProjectionVersion projectionVersion, bool useCheckpoints)</code></pre>
   </div>
@@ -146,7 +168,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">projectionCorrelationId</span></td>
         <td></td>
       </tr>
@@ -174,48 +196,39 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointReader_BeforeBeginLoadState.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointReader.BeforeBeginLoadState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointReader.cs/#L59">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointReader_BeforeBeginLoadState_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointReader.BeforeBeginLoadState*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointReader_BeforeBeginLoadState" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointReader.BeforeBeginLoadState">BeforeBeginLoadState()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void BeforeBeginLoadState()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointReader_BeginLoadState.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointReader.BeginLoadState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointReader.cs/#L41">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointReader_BeginLoadState_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointReader.BeginLoadState*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointReader_BeginLoadState" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointReader.BeginLoadState">BeginLoadState()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void BeginLoadState()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointReader_CheckpointLoaded_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointReader.CheckpointLoaded(EventStore.Projections.Core.Services.Processing.CheckpointTag%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointReader.cs/#L111">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointReader_CheckpointLoaded_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointReader.CheckpointLoaded*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointReader_CheckpointLoaded_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_String_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointReader.CheckpointLoaded(EventStore.Projections.Core.Services.Processing.CheckpointTag,System.String)">CheckpointLoaded(CheckpointTag, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void CheckpointLoaded(CheckpointTag checkpointTag, string checkpointData)</code></pre>
   </div>
@@ -241,33 +254,27 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointReader_Initialize.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointReader.Initialize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointReader.cs/#L53">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointReader_Initialize_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointReader.Initialize*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointReader_Initialize" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointReader.Initialize">Initialize()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointReader_RequestLoadState.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointReader.RequestLoadState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointReader.cs/#L64">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointReader_RequestLoadState_" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointReader.RequestLoadState*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointReader_RequestLoadState" data-uid="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointReader.RequestLoadState">RequestLoadState()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void RequestLoadState()</code></pre>
   </div>
@@ -300,12 +307,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointReader.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/CoreProjectionCheckpointReader.cs/#L15" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

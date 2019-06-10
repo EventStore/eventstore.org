@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -109,26 +110,47 @@
     <div><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></div>
     <div><a class="xref" href="EventStore.Core.Bus.IThreadSafePublisher.html">IThreadSafePublisher</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Bus.html">EventStore.Core.Bus</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Bus_MultiQueuedHandler_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MultiQueuedHandler : object, IHandle&lt;Message&gt;, IPublisher, IThreadSafePublisher</code></pre>
+    <pre><code class="lang-csharp hljs">public class MultiQueuedHandler : IHandle&lt;Message&gt;, IPublisher, IThreadSafePublisher</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_MultiQueuedHandler__ctor_EventStore_Core_Bus_IQueuedHandler___Func_EventStore_Core_Messaging_Message_System_Int32__.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.MultiQueuedHandler.%23ctor(EventStore.Core.Bus.IQueuedHandler%5B%5D%2CFunc%7BEventStore.Core.Messaging.Message%2CSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/MultiQueuedHandler.cs/#L35">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_MultiQueuedHandler__ctor_" data-uid="EventStore.Core.Bus.MultiQueuedHandler.#ctor*"></a>
-  <h4 id="EventStore_Core_Bus_MultiQueuedHandler__ctor_EventStore_Core_Bus_IQueuedHandler___Func_EventStore_Core_Messaging_Message_System_Int32__" data-uid="EventStore.Core.Bus.MultiQueuedHandler.#ctor(EventStore.Core.Bus.IQueuedHandler[],Func{EventStore.Core.Messaging.Message,System.Int32})">MultiQueuedHandler(IQueuedHandler[], Func&lt;Message, Int32&gt;)</h4>
+  <h4 id="EventStore_Core_Bus_MultiQueuedHandler__ctor_EventStore_Core_Bus_IQueuedHandler___System_Func_EventStore_Core_Messaging_Message_System_Int32__" data-uid="EventStore.Core.Bus.MultiQueuedHandler.#ctor(EventStore.Core.Bus.IQueuedHandler[],System.Func{EventStore.Core.Messaging.Message,System.Int32})">MultiQueuedHandler(IQueuedHandler[], Func&lt;Message, Int32&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public MultiQueuedHandler(IQueuedHandler[] queues, Func&lt;Message, int&gt; queueHash)</code></pre>
   </div>
@@ -148,24 +170,21 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;<a class="xref" href="EventStore.Core.Messaging.Message.html">Message</a>, <span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="EventStore.Core.Messaging.Message.html">Message</a>, <span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">queueHash</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_MultiQueuedHandler__ctor_EventStore_Core_Bus_QueuedHandler___.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.MultiQueuedHandler.%23ctor(EventStore.Core.Bus.QueuedHandler%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/MultiQueuedHandler.cs/#L31">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_MultiQueuedHandler__ctor_" data-uid="EventStore.Core.Bus.MultiQueuedHandler.#ctor*"></a>
   <h4 id="EventStore_Core_Bus_MultiQueuedHandler__ctor_EventStore_Core_Bus_QueuedHandler___" data-uid="EventStore.Core.Bus.MultiQueuedHandler.#ctor(EventStore.Core.Bus.QueuedHandler[])">MultiQueuedHandler(QueuedHandler[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public MultiQueuedHandler(params QueuedHandler[] queues)</code></pre>
   </div>
@@ -186,18 +205,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_MultiQueuedHandler__ctor_System_Int32_Func_System_Int32_EventStore_Core_Bus_IQueuedHandler__Func_EventStore_Core_Messaging_Message_System_Int32__.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.MultiQueuedHandler.%23ctor(System.Int32%2CFunc%7BSystem.Int32%2CEventStore.Core.Bus.IQueuedHandler%7D%2CFunc%7BEventStore.Core.Messaging.Message%2CSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/MultiQueuedHandler.cs/#L16">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_MultiQueuedHandler__ctor_" data-uid="EventStore.Core.Bus.MultiQueuedHandler.#ctor*"></a>
-  <h4 id="EventStore_Core_Bus_MultiQueuedHandler__ctor_System_Int32_Func_System_Int32_EventStore_Core_Bus_IQueuedHandler__Func_EventStore_Core_Messaging_Message_System_Int32__" data-uid="EventStore.Core.Bus.MultiQueuedHandler.#ctor(System.Int32,Func{System.Int32,EventStore.Core.Bus.IQueuedHandler},Func{EventStore.Core.Messaging.Message,System.Int32})">MultiQueuedHandler(Int32, Func&lt;Int32, IQueuedHandler&gt;, Func&lt;Message, Int32&gt;)</h4>
+  <h4 id="EventStore_Core_Bus_MultiQueuedHandler__ctor_System_Int32_System_Func_System_Int32_EventStore_Core_Bus_IQueuedHandler__System_Func_EventStore_Core_Messaging_Message_System_Int32__" data-uid="EventStore.Core.Bus.MultiQueuedHandler.#ctor(System.Int32,System.Func{System.Int32,EventStore.Core.Bus.IQueuedHandler},System.Func{EventStore.Core.Messaging.Message,System.Int32})">MultiQueuedHandler(Int32, Func&lt;Int32, IQueuedHandler&gt;, Func&lt;Message, Int32&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public MultiQueuedHandler(int queueCount, Func&lt;int, IQueuedHandler&gt; queueFactory, Func&lt;Message, int&gt; queueHash = null)</code></pre>
   </div>
@@ -217,12 +233,12 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;<span class="xref">System.Int32</span>, <a class="xref" href="EventStore.Core.Bus.IQueuedHandler.html">IQueuedHandler</a>&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Int32</span>, <a class="xref" href="EventStore.Core.Bus.IQueuedHandler.html">IQueuedHandler</a>&gt;</td>
         <td><span class="parametername">queueFactory</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;<a class="xref" href="EventStore.Core.Messaging.Message.html">Message</a>, <span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="EventStore.Core.Messaging.Message.html">Message</a>, <span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">queueHash</span></td>
         <td></td>
       </tr>
@@ -230,17 +246,14 @@
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_MultiQueuedHandler_Queues.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.MultiQueuedHandler.Queues%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/MultiQueuedHandler.cs/#L11">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Bus_MultiQueuedHandler_Queues" data-uid="EventStore.Core.Bus.MultiQueuedHandler.Queues">Queues</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly IQueuedHandler[] Queues</code></pre>
   </div>
@@ -249,30 +262,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IQueuedHandler.html">IQueuedHandler</a>[]</td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_MultiQueuedHandler_Handle_EventStore_Core_Messaging_Message_.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.MultiQueuedHandler.Handle(EventStore.Core.Messaging.Message)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/MultiQueuedHandler.cs/#L66">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_MultiQueuedHandler_Handle_" data-uid="EventStore.Core.Bus.MultiQueuedHandler.Handle*"></a>
   <h4 id="EventStore_Core_Bus_MultiQueuedHandler_Handle_EventStore_Core_Messaging_Message_" data-uid="EventStore.Core.Bus.MultiQueuedHandler.Handle(EventStore.Core.Messaging.Message)">Handle(Message)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(Message message)</code></pre>
   </div>
@@ -293,18 +301,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_MultiQueuedHandler_Publish_EventStore_Core_Messaging_Message_.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.MultiQueuedHandler.Publish(EventStore.Core.Messaging.Message)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/MultiQueuedHandler.cs/#L70">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_MultiQueuedHandler_Publish_" data-uid="EventStore.Core.Bus.MultiQueuedHandler.Publish*"></a>
   <h4 id="EventStore_Core_Bus_MultiQueuedHandler_Publish_EventStore_Core_Messaging_Message_" data-uid="EventStore.Core.Bus.MultiQueuedHandler.Publish(EventStore.Core.Messaging.Message)">Publish(Message)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Publish(Message message)</code></pre>
   </div>
@@ -325,18 +330,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_MultiQueuedHandler_PublishToAll_EventStore_Core_Messaging_Message_.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.MultiQueuedHandler.PublishToAll(EventStore.Core.Messaging.Message)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/MultiQueuedHandler.cs/#L77">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_MultiQueuedHandler_PublishToAll_" data-uid="EventStore.Core.Bus.MultiQueuedHandler.PublishToAll*"></a>
   <h4 id="EventStore_Core_Bus_MultiQueuedHandler_PublishToAll_EventStore_Core_Messaging_Message_" data-uid="EventStore.Core.Bus.MultiQueuedHandler.PublishToAll(EventStore.Core.Messaging.Message)">PublishToAll(Message)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void PublishToAll(Message message)</code></pre>
   </div>
@@ -357,18 +359,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_MultiQueuedHandler_Start.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.MultiQueuedHandler.Start%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/MultiQueuedHandler.cs/#L47">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_MultiQueuedHandler_Start_" data-uid="EventStore.Core.Bus.MultiQueuedHandler.Start*"></a>
   <h4 id="EventStore_Core_Bus_MultiQueuedHandler_Start" data-uid="EventStore.Core.Bus.MultiQueuedHandler.Start">Start()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IEnumerable&lt;Task&gt; Start()</code></pre>
   </div>
@@ -382,23 +381,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Task</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_MultiQueuedHandler_Stop.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.MultiQueuedHandler.Stop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/MultiQueuedHandler.cs/#L56">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_MultiQueuedHandler_Stop_" data-uid="EventStore.Core.Bus.MultiQueuedHandler.Stop*"></a>
   <h4 id="EventStore_Core_Bus_MultiQueuedHandler_Stop" data-uid="EventStore.Core.Bus.MultiQueuedHandler.Stop">Stop()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Stop()</code></pre>
   </div>
@@ -423,6 +419,12 @@
       <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
   </div>
   <div>
+      <a class="xref" href="EventStore.Core.Bus.HandleExtensions.html#EventStore_Core_Bus_HandleExtensions_WidenFrom__2_EventStore_Core_Bus_IHandle___1__">HandleExtensions.WidenFrom&lt;TInput, TOutput&gt;(IHandle&lt;TOutput&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.HandleExtensions.html#EventStore_Core_Bus_HandleExtensions_NarrowTo__2_EventStore_Core_Bus_IHandle___1__">HandleExtensions.NarrowTo&lt;TInput, TOutput&gt;(IHandle&lt;TOutput&gt;)</a>
+  </div>
+  <div>
       <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_Serialize__1___0_">ProtobufExtensions.Serialize&lt;T&gt;(T)</a>
   </div>
   <div>
@@ -437,12 +439,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_MultiQueuedHandler.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.MultiQueuedHandler%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/MultiQueuedHandler.cs/#L10" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

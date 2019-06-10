@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -107,26 +108,47 @@
     <h5>Implements</h5>
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.TcpMessage.TcpSend.html">TcpMessage.TcpSend</a>&gt;</div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.html">EventStore.Core.Services</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Services_TcpSendService_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TcpSendService : object, IHandle&lt;TcpMessage.TcpSend&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class TcpSendService : IHandle&lt;TcpMessage.TcpSend&gt;</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_TcpSendService_Handle_EventStore_Core_Messages_TcpMessage_TcpSend_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.TcpSendService.Handle(EventStore.Core.Messages.TcpMessage.TcpSend)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/TcpSendService.cs/#L11">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_TcpSendService_Handle_" data-uid="EventStore.Core.Services.TcpSendService.Handle*"></a>
   <h4 id="EventStore_Core_Services_TcpSendService_Handle_EventStore_Core_Messages_TcpMessage_TcpSend_" data-uid="EventStore.Core.Services.TcpSendService.Handle(EventStore.Core.Messages.TcpMessage.TcpSend)">Handle(TcpMessage.TcpSend)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(TcpMessage.TcpSend message)</code></pre>
   </div>
@@ -162,6 +184,12 @@
       <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
   </div>
   <div>
+      <a class="xref" href="EventStore.Core.Bus.HandleExtensions.html#EventStore_Core_Bus_HandleExtensions_WidenFrom__2_EventStore_Core_Bus_IHandle___1__">HandleExtensions.WidenFrom&lt;TInput, TOutput&gt;(IHandle&lt;TOutput&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.HandleExtensions.html#EventStore_Core_Bus_HandleExtensions_NarrowTo__2_EventStore_Core_Bus_IHandle___1__">HandleExtensions.NarrowTo&lt;TInput, TOutput&gt;(IHandle&lt;TOutput&gt;)</a>
+  </div>
+  <div>
       <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_Serialize__1___0_">ProtobufExtensions.Serialize&lt;T&gt;(T)</a>
   </div>
   <div>
@@ -176,12 +204,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_TcpSendService.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.TcpSendService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/TcpSendService.cs/#L7" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

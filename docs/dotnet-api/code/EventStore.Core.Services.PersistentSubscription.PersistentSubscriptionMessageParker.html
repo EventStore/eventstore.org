@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -107,26 +108,47 @@
     <h5>Implements</h5>
     <div><a class="xref" href="EventStore.Core.Services.PersistentSubscription.IPersistentSubscriptionMessageParker.html">IPersistentSubscriptionMessageParker</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.PersistentSubscription.html">EventStore.Core.Services.PersistentSubscription</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionMessageParker_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PersistentSubscriptionMessageParker : object, IPersistentSubscriptionMessageParker</code></pre>
+    <pre><code class="lang-csharp hljs">public class PersistentSubscriptionMessageParker : IPersistentSubscriptionMessageParker</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionMessageParker__ctor_System_String_EventStore_Core_Helpers_IODispatcher_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionMessageParker.%23ctor(System.String%2CEventStore.Core.Helpers.IODispatcher)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionMessageParker.cs/#L16">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionMessageParker__ctor_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionMessageParker.#ctor*"></a>
   <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionMessageParker__ctor_System_String_EventStore_Core_Helpers_IODispatcher_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionMessageParker.#ctor(System.String,EventStore.Core.Helpers.IODispatcher)">PersistentSubscriptionMessageParker(String, IODispatcher)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public PersistentSubscriptionMessageParker(string subscriptionId, IODispatcher ioDispatcher)</code></pre>
   </div>
@@ -154,18 +176,15 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionMessageParker_BeginDelete_Action_EventStore_Core_Services_PersistentSubscription_IPersistentSubscriptionMessageParker__.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionMessageParker.BeginDelete(Action%7BEventStore.Core.Services.PersistentSubscription.IPersistentSubscriptionMessageParker%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionMessageParker.cs/#L63">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionMessageParker_BeginDelete_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionMessageParker.BeginDelete*"></a>
-  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionMessageParker_BeginDelete_Action_EventStore_Core_Services_PersistentSubscription_IPersistentSubscriptionMessageParker__" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionMessageParker.BeginDelete(Action{EventStore.Core.Services.PersistentSubscription.IPersistentSubscriptionMessageParker})">BeginDelete(Action&lt;IPersistentSubscriptionMessageParker&gt;)</h4>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionMessageParker_BeginDelete_System_Action_EventStore_Core_Services_PersistentSubscription_IPersistentSubscriptionMessageParker__" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionMessageParker.BeginDelete(System.Action{EventStore.Core.Services.PersistentSubscription.IPersistentSubscriptionMessageParker})">BeginDelete(Action&lt;IPersistentSubscriptionMessageParker&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void BeginDelete(Action&lt;IPersistentSubscriptionMessageParker&gt; completed)</code></pre>
   </div>
@@ -180,24 +199,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.Core.Services.PersistentSubscription.IPersistentSubscriptionMessageParker.html">IPersistentSubscriptionMessageParker</a>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.Core.Services.PersistentSubscription.IPersistentSubscriptionMessageParker.html">IPersistentSubscriptionMessageParker</a>&gt;</td>
         <td><span class="parametername">completed</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionMessageParker_BeginMarkParkedMessagesReprocessed_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionMessageParker.BeginMarkParkedMessagesReprocessed(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionMessageParker.cs/#L91">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionMessageParker_BeginMarkParkedMessagesReprocessed_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionMessageParker.BeginMarkParkedMessagesReprocessed*"></a>
   <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionMessageParker_BeginMarkParkedMessagesReprocessed_System_Int64_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionMessageParker.BeginMarkParkedMessagesReprocessed(System.Int64)">BeginMarkParkedMessagesReprocessed(Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void BeginMarkParkedMessagesReprocessed(long sequence)</code></pre>
   </div>
@@ -218,18 +234,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionMessageParker_BeginParkMessage_EventStore_Core_Data_ResolvedEvent_System_String_Action_EventStore_Core_Data_ResolvedEvent_EventStore_Core_Messages_OperationResult__.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionMessageParker.BeginParkMessage(EventStore.Core.Data.ResolvedEvent%2CSystem.String%2CAction%7BEventStore.Core.Data.ResolvedEvent%2CEventStore.Core.Messages.OperationResult%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionMessageParker.cs/#L40">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionMessageParker_BeginParkMessage_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionMessageParker.BeginParkMessage*"></a>
-  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionMessageParker_BeginParkMessage_EventStore_Core_Data_ResolvedEvent_System_String_Action_EventStore_Core_Data_ResolvedEvent_EventStore_Core_Messages_OperationResult__" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionMessageParker.BeginParkMessage(EventStore.Core.Data.ResolvedEvent,System.String,Action{EventStore.Core.Data.ResolvedEvent,EventStore.Core.Messages.OperationResult})">BeginParkMessage(ResolvedEvent, String, Action&lt;ResolvedEvent, OperationResult&gt;)</h4>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionMessageParker_BeginParkMessage_EventStore_Core_Data_ResolvedEvent_System_String_System_Action_EventStore_Core_Data_ResolvedEvent_EventStore_Core_Messages_OperationResult__" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionMessageParker.BeginParkMessage(EventStore.Core.Data.ResolvedEvent,System.String,System.Action{EventStore.Core.Data.ResolvedEvent,EventStore.Core.Messages.OperationResult})">BeginParkMessage(ResolvedEvent, String, Action&lt;ResolvedEvent, OperationResult&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void BeginParkMessage(ResolvedEvent ev, string reason, Action&lt;ResolvedEvent, OperationResult&gt; completed)</code></pre>
   </div>
@@ -254,24 +267,21 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.Core.Data.ResolvedEvent.html">ResolvedEvent</a>, <a class="xref" href="EventStore.Core.Messages.OperationResult.html">OperationResult</a>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.Core.Data.ResolvedEvent.html">ResolvedEvent</a>, <a class="xref" href="EventStore.Core.Messages.OperationResult.html">OperationResult</a>&gt;</td>
         <td><span class="parametername">completed</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionMessageParker_BeginReadEndSequence_Action_System_Nullable_System_Int64___.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionMessageParker.BeginReadEndSequence(Action%7BSystem.Nullable%7BSystem.Int64%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionMessageParker.cs/#L68">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionMessageParker_BeginReadEndSequence_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionMessageParker.BeginReadEndSequence*"></a>
-  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionMessageParker_BeginReadEndSequence_Action_System_Nullable_System_Int64___" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionMessageParker.BeginReadEndSequence(Action{System.Nullable{System.Int64}})">BeginReadEndSequence(Action&lt;Nullable&lt;Int64&gt;&gt;)</h4>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionMessageParker_BeginReadEndSequence_System_Action_System_Nullable_System_Int64___" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionMessageParker.BeginReadEndSequence(System.Action{System.Nullable{System.Int64}})">BeginReadEndSequence(Action&lt;Nullable&lt;Int64&gt;&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void BeginReadEndSequence(Action&lt;long? &gt; completed)</code></pre>
   </div>
@@ -286,7 +296,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Action</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;&gt;</td>
         <td><span class="parametername">completed</span></td>
         <td></td>
       </tr>
@@ -321,12 +331,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionMessageParker.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionMessageParker%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionMessageParker.cs/#L11" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

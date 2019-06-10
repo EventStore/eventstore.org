@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,26 +104,38 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ControllerAction</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.Transport.Http.html">EventStore.Core.Services.Transport.Http</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Services_Transport_Http_ControllerAction_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ControllerAction : object</code></pre>
+    <pre><code class="lang-csharp hljs">public class ControllerAction</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_ControllerAction__ctor_System_String_System_String_EventStore_Transport_Http_ICodec___EventStore_Transport_Http_ICodec___.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.ControllerAction.%23ctor(System.String%2CSystem.String%2CEventStore.Transport.Http.ICodec%5B%5D%2CEventStore.Transport.Http.ICodec%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/ControllerAction.cs/#L14">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Http_ControllerAction__ctor_" data-uid="EventStore.Core.Services.Transport.Http.ControllerAction.#ctor*"></a>
   <h4 id="EventStore_Core_Services_Transport_Http_ControllerAction__ctor_System_String_System_String_EventStore_Transport_Http_ICodec___EventStore_Transport_Http_ICodec___" data-uid="EventStore.Core.Services.Transport.Http.ControllerAction.#ctor(System.String,System.String,EventStore.Transport.Http.ICodec[],EventStore.Transport.Http.ICodec[])">ControllerAction(String, String, ICodec[], ICodec[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ControllerAction(string uriTemplate, string httpMethod, ICodec[] requestCodecs, ICodec[] responseCodecs)</code></pre>
   </div>
@@ -160,17 +173,14 @@
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_ControllerAction_DefaultResponseCodec.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.ControllerAction.DefaultResponseCodec%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/ControllerAction.cs/#L12">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Transport_Http_ControllerAction_DefaultResponseCodec" data-uid="EventStore.Core.Services.Transport.Http.ControllerAction.DefaultResponseCodec">DefaultResponseCodec</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly ICodec DefaultResponseCodec</code></pre>
   </div>
@@ -179,27 +189,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Transport.Http.ICodec.html">ICodec</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_ControllerAction_HttpMethod.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.ControllerAction.HttpMethod%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/ControllerAction.cs/#L8">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Transport_Http_ControllerAction_HttpMethod" data-uid="EventStore.Core.Services.Transport.Http.ControllerAction.HttpMethod">HttpMethod</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly string HttpMethod</code></pre>
   </div>
@@ -208,27 +213,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_ControllerAction_SupportedRequestCodecs.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.ControllerAction.SupportedRequestCodecs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/ControllerAction.cs/#L10">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Transport_Http_ControllerAction_SupportedRequestCodecs" data-uid="EventStore.Core.Services.Transport.Http.ControllerAction.SupportedRequestCodecs">SupportedRequestCodecs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly ICodec[] SupportedRequestCodecs</code></pre>
   </div>
@@ -237,27 +237,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Transport.Http.ICodec.html">ICodec</a>[]</td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_ControllerAction_SupportedResponseCodecs.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.ControllerAction.SupportedResponseCodecs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/ControllerAction.cs/#L11">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Transport_Http_ControllerAction_SupportedResponseCodecs" data-uid="EventStore.Core.Services.Transport.Http.ControllerAction.SupportedResponseCodecs">SupportedResponseCodecs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly ICodec[] SupportedResponseCodecs</code></pre>
   </div>
@@ -266,27 +261,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Transport.Http.ICodec.html">ICodec</a>[]</td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_ControllerAction_UriTemplate.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.ControllerAction.UriTemplate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/ControllerAction.cs/#L7">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Transport_Http_ControllerAction_UriTemplate" data-uid="EventStore.Core.Services.Transport.Http.ControllerAction.UriTemplate">UriTemplate</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly string UriTemplate</code></pre>
   </div>
@@ -295,30 +285,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_ControllerAction_Equals_EventStore_Core_Services_Transport_Http_ControllerAction_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.ControllerAction.Equals(EventStore.Core.Services.Transport.Http.ControllerAction)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/ControllerAction.cs/#L31">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Http_ControllerAction_Equals_" data-uid="EventStore.Core.Services.Transport.Http.ControllerAction.Equals*"></a>
   <h4 id="EventStore_Core_Services_Transport_Http_ControllerAction_Equals_EventStore_Core_Services_Transport_Http_ControllerAction_" data-uid="EventStore.Core.Services.Transport.Http.ControllerAction.Equals(EventStore.Core.Services.Transport.Http.ControllerAction)">Equals(ControllerAction)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool Equals(ControllerAction other)</code></pre>
   </div>
@@ -354,18 +339,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_ControllerAction_Equals_System_Object_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.ControllerAction.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/ControllerAction.cs/#L37">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Http_ControllerAction_Equals_" data-uid="EventStore.Core.Services.Transport.Http.ControllerAction.Equals*"></a>
   <h4 id="EventStore_Core_Services_Transport_Http_ControllerAction_Equals_System_Object_" data-uid="EventStore.Core.Services.Transport.Http.ControllerAction.Equals(System.Object)">Equals(Object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
   </div>
@@ -401,18 +383,17 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_ControllerAction_GetHashCode.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.ControllerAction.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/ControllerAction.cs/#L44">View Source</a>
-  </span>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+  
+  
   <a id="EventStore_Core_Services_Transport_Http_ControllerAction_GetHashCode_" data-uid="EventStore.Core.Services.Transport.Http.ControllerAction.GetHashCode*"></a>
   <h4 id="EventStore_Core_Services_Transport_Http_ControllerAction_GetHashCode" data-uid="EventStore.Core.Services.Transport.Http.ControllerAction.GetHashCode">GetHashCode()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
   </div>
@@ -431,18 +412,17 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_ControllerAction_ToString.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.ControllerAction.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/ControllerAction.cs/#L50">View Source</a>
-  </span>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  
+  
   <a id="EventStore_Core_Services_Transport_Http_ControllerAction_ToString_" data-uid="EventStore.Core.Services.Transport.Http.ControllerAction.ToString*"></a>
   <h4 id="EventStore_Core_Services_Transport_Http_ControllerAction_ToString" data-uid="EventStore.Core.Services.Transport.Http.ControllerAction.ToString">ToString()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
   </div>
@@ -461,6 +441,8 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
@@ -486,12 +468,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_ControllerAction.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.ControllerAction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/ControllerAction.cs/#L6" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

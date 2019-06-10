@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,26 +104,47 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ProjectionManager.NewProjectionInitializer</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Services.Management.html">EventStore.Projections.Core.Services.Management</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
   <h5 id="EventStore_Projections_Core_Services_Management_ProjectionManager_NewProjectionInitializer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class NewProjectionInitializer : object</code></pre>
+    <pre><code class="lang-csharp hljs">public class NewProjectionInitializer</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Management_ProjectionManager_NewProjectionInitializer__ctor_System_Int64_System_String_EventStore_Projections_Core_Services_ProjectionMode_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_EventStore_Projections_Core_Messages_ProjectionManagementMessage_RunAs_EventStore_Core_Messaging_IEnvelope_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Management.ProjectionManager.NewProjectionInitializer.%23ctor(System.Int64%2CSystem.String%2CEventStore.Projections.Core.Services.ProjectionMode%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean%2CEventStore.Projections.Core.Messages.ProjectionManagementMessage.RunAs%2CEventStore.Core.Messaging.IEnvelope)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Management/ProjectionManager.cs/#L938">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Management_ProjectionManager_NewProjectionInitializer__ctor_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.NewProjectionInitializer.#ctor*"></a>
   <h4 id="EventStore_Projections_Core_Services_Management_ProjectionManager_NewProjectionInitializer__ctor_System_Int64_System_String_EventStore_Projections_Core_Services_ProjectionMode_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_EventStore_Projections_Core_Messages_ProjectionManagementMessage_RunAs_EventStore_Core_Messaging_IEnvelope_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.NewProjectionInitializer.#ctor(System.Int64,System.String,EventStore.Projections.Core.Services.ProjectionMode,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,EventStore.Projections.Core.Messages.ProjectionManagementMessage.RunAs,EventStore.Core.Messaging.IEnvelope)">NewProjectionInitializer(Int64, String, ProjectionMode, String, String, Boolean, Boolean, Boolean, Boolean, Boolean, ProjectionManagementMessage.RunAs, IEnvelope)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public NewProjectionInitializer(long projectionId, string name, ProjectionMode projectionMode, string handlerType, string query, bool enabled, bool emitEnabled, bool checkpointsEnabled, bool enableRunAs, bool trackEmittedStreams, ProjectionManagementMessage.RunAs runAs, IEnvelope replyEnvelope)</code></pre>
   </div>
@@ -200,20 +222,17 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Management_ProjectionManager_NewProjectionInitializer_CreateAndInitializeNewProjection_EventStore_Projections_Core_Services_Management_ProjectionManager_Guid_Guid_System_Boolean_Guid_Guid_System_Nullable_System_Int64__.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Management.ProjectionManager.NewProjectionInitializer.CreateAndInitializeNewProjection(EventStore.Projections.Core.Services.Management.ProjectionManager%2CGuid%2CGuid%2CSystem.Boolean%2CGuid%2CGuid%2CSystem.Nullable%7BSystem.Int64%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Management/ProjectionManager.cs/#L971">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Management_ProjectionManager_NewProjectionInitializer_CreateAndInitializeNewProjection_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.NewProjectionInitializer.CreateAndInitializeNewProjection*"></a>
-  <h4 id="EventStore_Projections_Core_Services_Management_ProjectionManager_NewProjectionInitializer_CreateAndInitializeNewProjection_EventStore_Projections_Core_Services_Management_ProjectionManager_Guid_Guid_System_Boolean_Guid_Guid_System_Nullable_System_Int64__" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.NewProjectionInitializer.CreateAndInitializeNewProjection(EventStore.Projections.Core.Services.Management.ProjectionManager,Guid,Guid,System.Boolean,Guid,Guid,System.Nullable{System.Int64})">CreateAndInitializeNewProjection(ProjectionManager, Guid, Guid, Boolean, Guid, Guid, Nullable&lt;Int64&gt;)</h4>
+  <h4 id="EventStore_Projections_Core_Services_Management_ProjectionManager_NewProjectionInitializer_CreateAndInitializeNewProjection_EventStore_Projections_Core_Services_Management_ProjectionManager_System_Guid_System_Guid_System_Boolean_System_Guid_System_Guid_System_Nullable_System_Int64__" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.NewProjectionInitializer.CreateAndInitializeNewProjection(EventStore.Projections.Core.Services.Management.ProjectionManager,System.Guid,System.Guid,System.Boolean,System.Guid,System.Guid,System.Nullable{System.Int64})">CreateAndInitializeNewProjection(ProjectionManager, Guid, Guid, Boolean, Guid, Guid, Nullable&lt;Int64&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CreateAndInitializeNewProjection(ProjectionManager projectionManager, Guid projectionCorrelationId, Guid workerId, bool isSlave = false, Guid slaveMasterWorkerId = null, Guid slaveMasterCorrelationId = null, long? version = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public void CreateAndInitializeNewProjection(ProjectionManager projectionManager, Guid projectionCorrelationId, Guid workerId, bool isSlave = false, Guid slaveMasterWorkerId = default(Guid), Guid slaveMasterCorrelationId = default(Guid), long? version)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,12 +250,12 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">projectionCorrelationId</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">workerId</span></td>
         <td></td>
       </tr>
@@ -246,12 +265,12 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">slaveMasterWorkerId</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">slaveMasterCorrelationId</span></td>
         <td></td>
       </tr>
@@ -287,12 +306,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Management_ProjectionManager_NewProjectionInitializer.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Management.ProjectionManager.NewProjectionInitializer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Management/ProjectionManager.cs/#L924" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

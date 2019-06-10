@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -107,7 +108,7 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.IEventReader.html">IEventReader</a></div>
-    <div><span class="xref">IDisposable</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -162,6 +163,27 @@
     <div>
       <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventReader.html#EventStore_Projections_Core_Services_Processing_EventReader_NotifyIfStarting_System_Int64_">EventReader.NotifyIfStarting(Int64)</a>
     </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Services.Processing.html">EventStore.Projections.Core.Services.Processing</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
@@ -171,18 +193,15 @@
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ByStreamCatalogEventReader__ctor_EventStore_Core_Bus_IPublisher_Guid_IPrincipal_EventStore_Core_Helpers_IODispatcher_System_String_System_Int64_System_String_System_Int64_System_Nullable_System_Int64__System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ByStreamCatalogEventReader.%23ctor(EventStore.Core.Bus.IPublisher%2CGuid%2CIPrincipal%2CEventStore.Core.Helpers.IODispatcher%2CSystem.String%2CSystem.Int64%2CSystem.String%2CSystem.Int64%2CSystem.Nullable%7BSystem.Int64%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ByStreamCatalogEventReader.cs/#L32">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_ByStreamCatalogEventReader__ctor_" data-uid="EventStore.Projections.Core.Services.Processing.ByStreamCatalogEventReader.#ctor*"></a>
-  <h4 id="EventStore_Projections_Core_Services_Processing_ByStreamCatalogEventReader__ctor_EventStore_Core_Bus_IPublisher_Guid_IPrincipal_EventStore_Core_Helpers_IODispatcher_System_String_System_Int64_System_String_System_Int64_System_Nullable_System_Int64__System_Boolean_" data-uid="EventStore.Projections.Core.Services.Processing.ByStreamCatalogEventReader.#ctor(EventStore.Core.Bus.IPublisher,Guid,IPrincipal,EventStore.Core.Helpers.IODispatcher,System.String,System.Int64,System.String,System.Int64,System.Nullable{System.Int64},System.Boolean)">ByStreamCatalogEventReader(IPublisher, Guid, IPrincipal, IODispatcher, String, Int64, String, Int64, Nullable&lt;Int64&gt;, Boolean)</h4>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ByStreamCatalogEventReader__ctor_EventStore_Core_Bus_IPublisher_System_Guid_System_Security_Principal_IPrincipal_EventStore_Core_Helpers_IODispatcher_System_String_System_Int64_System_String_System_Int64_System_Nullable_System_Int64__System_Boolean_" data-uid="EventStore.Projections.Core.Services.Processing.ByStreamCatalogEventReader.#ctor(EventStore.Core.Bus.IPublisher,System.Guid,System.Security.Principal.IPrincipal,EventStore.Core.Helpers.IODispatcher,System.String,System.Int64,System.String,System.Int64,System.Nullable{System.Int64},System.Boolean)">ByStreamCatalogEventReader(IPublisher, Guid, IPrincipal, IODispatcher, String, Int64, String, Int64, Nullable&lt;Int64&gt;, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ByStreamCatalogEventReader(IPublisher publisher, Guid eventReaderCorrelationId, IPrincipal readAs, IODispatcher ioDispatcher, string catalogCatalogStreamName, long catalogNextSequenceNumber, string dataStreamName, long dataNextSequenceNumber, long? limitingCommitPosition, bool resolveLinkTos)</code></pre>
   </div>
@@ -202,12 +221,12 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">eventReaderCorrelationId</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IPrincipal</span></td>
+        <td><span class="xref">System.Security.Principal.IPrincipal</span></td>
         <td><span class="parametername">readAs</span></td>
         <td></td>
       </tr>
@@ -250,18 +269,15 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ByStreamCatalogEventReader_AreEventsRequested.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ByStreamCatalogEventReader.AreEventsRequested%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ByStreamCatalogEventReader.cs/#L54">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_ByStreamCatalogEventReader_AreEventsRequested_" data-uid="EventStore.Projections.Core.Services.Processing.ByStreamCatalogEventReader.AreEventsRequested*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_ByStreamCatalogEventReader_AreEventsRequested" data-uid="EventStore.Projections.Core.Services.Processing.ByStreamCatalogEventReader.AreEventsRequested">AreEventsRequested()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected override bool AreEventsRequested()</code></pre>
   </div>
@@ -282,18 +298,15 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.EventReader.html#EventStore_Projections_Core_Services_Processing_EventReader_AreEventsRequested">EventReader.AreEventsRequested()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ByStreamCatalogEventReader_RequestEvents.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ByStreamCatalogEventReader.RequestEvents%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ByStreamCatalogEventReader.cs/#L58">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_ByStreamCatalogEventReader_RequestEvents_" data-uid="EventStore.Projections.Core.Services.Processing.ByStreamCatalogEventReader.RequestEvents*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_ByStreamCatalogEventReader_RequestEvents" data-uid="EventStore.Projections.Core.Services.Processing.ByStreamCatalogEventReader.RequestEvents">RequestEvents()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected override void RequestEvents()</code></pre>
   </div>
@@ -304,7 +317,7 @@
       <a class="xref" href="EventStore.Projections.Core.Services.Processing.IEventReader.html">IEventReader</a>
   </div>
   <div>
-      <span class="xref">IDisposable</span>
+      <span class="xref">System.IDisposable</span>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
@@ -331,12 +344,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_ByStreamCatalogEventReader.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.ByStreamCatalogEventReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/ByStreamCatalogEventReader.cs/#L13" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

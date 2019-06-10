@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,25 +104,46 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Json</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Common.Utils.html">EventStore.Common.Utils</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Common.dll</h6>
   <h5 id="EventStore_Common_Utils_Json_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class Json : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class Json</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Common_Utils_Json_JsonSettings.md&amp;value=---%0Auid%3A%20EventStore.Common.Utils.Json.JsonSettings%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Common/Utils/Json.cs/#L14">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Common_Utils_Json_JsonSettings" data-uid="EventStore.Common.Utils.Json.JsonSettings">JsonSettings</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static readonly JsonSerializerSettings JsonSettings</code></pre>
   </div>
@@ -130,30 +152,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">JsonSerializerSettings</span></td>
-        <td></td>
+        <td><span class="xref">Newtonsoft.Json.JsonSerializerSettings</span></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Common_Utils_Json_DeserializeObject_JObject_Type_JsonConverter___.md&amp;value=---%0Auid%3A%20EventStore.Common.Utils.Json.DeserializeObject(JObject%2CType%2CJsonConverter%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Common/Utils/Json.cs/#L54">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Common_Utils_Json_DeserializeObject_" data-uid="EventStore.Common.Utils.Json.DeserializeObject*"></a>
-  <h4 id="EventStore_Common_Utils_Json_DeserializeObject_JObject_Type_JsonConverter___" data-uid="EventStore.Common.Utils.Json.DeserializeObject(JObject,Type,JsonConverter[])">DeserializeObject(JObject, Type, JsonConverter[])</h4>
+  <h4 id="EventStore_Common_Utils_Json_DeserializeObject_Newtonsoft_Json_Linq_JObject_System_Type_Newtonsoft_Json_JsonConverter___" data-uid="EventStore.Common.Utils.Json.DeserializeObject(Newtonsoft.Json.Linq.JObject,System.Type,Newtonsoft.Json.JsonConverter[])">DeserializeObject(JObject, Type, JsonConverter[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static object DeserializeObject(JObject value, Type type, params JsonConverter[] converters)</code></pre>
   </div>
@@ -168,17 +185,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">JObject</span></td>
+        <td><span class="xref">Newtonsoft.Json.Linq.JObject</span></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Type</span></td>
+        <td><span class="xref">System.Type</span></td>
         <td><span class="parametername">type</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">JsonConverter</span>[]</td>
+        <td><span class="xref">Newtonsoft.Json.JsonConverter</span>[]</td>
         <td><span class="parametername">converters</span></td>
         <td></td>
       </tr>
@@ -199,18 +216,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Common_Utils_Json_DeserializeObject_JObject_Type_JsonSerializerSettings_.md&amp;value=---%0Auid%3A%20EventStore.Common.Utils.Json.DeserializeObject(JObject%2CType%2CJsonSerializerSettings)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Common/Utils/Json.cs/#L49">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Common_Utils_Json_DeserializeObject_" data-uid="EventStore.Common.Utils.Json.DeserializeObject*"></a>
-  <h4 id="EventStore_Common_Utils_Json_DeserializeObject_JObject_Type_JsonSerializerSettings_" data-uid="EventStore.Common.Utils.Json.DeserializeObject(JObject,Type,JsonSerializerSettings)">DeserializeObject(JObject, Type, JsonSerializerSettings)</h4>
+  <h4 id="EventStore_Common_Utils_Json_DeserializeObject_Newtonsoft_Json_Linq_JObject_System_Type_Newtonsoft_Json_JsonSerializerSettings_" data-uid="EventStore.Common.Utils.Json.DeserializeObject(Newtonsoft.Json.Linq.JObject,System.Type,Newtonsoft.Json.JsonSerializerSettings)">DeserializeObject(JObject, Type, JsonSerializerSettings)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static object DeserializeObject(JObject value, Type type, JsonSerializerSettings settings)</code></pre>
   </div>
@@ -225,17 +239,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">JObject</span></td>
+        <td><span class="xref">Newtonsoft.Json.Linq.JObject</span></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Type</span></td>
+        <td><span class="xref">System.Type</span></td>
         <td><span class="parametername">type</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">JsonSerializerSettings</span></td>
+        <td><span class="xref">Newtonsoft.Json.JsonSerializerSettings</span></td>
         <td><span class="parametername">settings</span></td>
         <td></td>
       </tr>
@@ -256,18 +270,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Common_Utils_Json_IsValidJson_System_Byte___.md&amp;value=---%0Auid%3A%20EventStore.Common.Utils.Json.IsValidJson(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Common/Utils/Json.cs/#L71">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Common_Utils_Json_IsValidJson_" data-uid="EventStore.Common.Utils.Json.IsValidJson*"></a>
   <h4 id="EventStore_Common_Utils_Json_IsValidJson_System_Byte___" data-uid="EventStore.Common.Utils.Json.IsValidJson(System.Byte[])">IsValidJson(Byte[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool IsValidJson(this byte[] value)</code></pre>
   </div>
@@ -303,18 +314,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Common_Utils_Json_ParseJson__1_System_Byte___.md&amp;value=---%0Auid%3A%20EventStore.Common.Utils.Json.ParseJson%60%601(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Common/Utils/Json.cs/#L44">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Common_Utils_Json_ParseJson_" data-uid="EventStore.Common.Utils.Json.ParseJson*"></a>
   <h4 id="EventStore_Common_Utils_Json_ParseJson__1_System_Byte___" data-uid="EventStore.Common.Utils.Json.ParseJson``1(System.Byte[])">ParseJson&lt;T&gt;(Byte[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T ParseJson&lt;T&gt;(this byte[] json)</code></pre>
   </div>
@@ -365,18 +373,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Common_Utils_Json_ParseJson__1_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Common.Utils.Json.ParseJson%60%601(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Common/Utils/Json.cs/#L39">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Common_Utils_Json_ParseJson_" data-uid="EventStore.Common.Utils.Json.ParseJson*"></a>
   <h4 id="EventStore_Common_Utils_Json_ParseJson__1_System_String_" data-uid="EventStore.Common.Utils.Json.ParseJson``1(System.String)">ParseJson&lt;T&gt;(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static T ParseJson&lt;T&gt;(this string json)</code></pre>
   </div>
@@ -427,18 +432,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_.md&amp;value=---%0Auid%3A%20EventStore.Common.Utils.Json.ToCanonicalJson(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Common/Utils/Json.cs/#L34">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Common_Utils_Json_ToCanonicalJson_" data-uid="EventStore.Common.Utils.Json.ToCanonicalJson*"></a>
   <h4 id="EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_" data-uid="EventStore.Common.Utils.Json.ToCanonicalJson(System.Object)">ToCanonicalJson(Object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string ToCanonicalJson(this object source)</code></pre>
   </div>
@@ -474,18 +476,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Common_Utils_Json_ToJson_System_Object_.md&amp;value=---%0Auid%3A%20EventStore.Common.Utils.Json.ToJson(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Common/Utils/Json.cs/#L29">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Common_Utils_Json_ToJson_" data-uid="EventStore.Common.Utils.Json.ToJson*"></a>
   <h4 id="EventStore_Common_Utils_Json_ToJson_System_Object_" data-uid="EventStore.Common.Utils.Json.ToJson(System.Object)">ToJson(Object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static string ToJson(this object source)</code></pre>
   </div>
@@ -521,18 +520,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Common_Utils_Json_ToJsonBytes_System_Object_.md&amp;value=---%0Auid%3A%20EventStore.Common.Utils.Json.ToJsonBytes(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Common/Utils/Json.cs/#L24">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Common_Utils_Json_ToJsonBytes_" data-uid="EventStore.Common.Utils.Json.ToJsonBytes*"></a>
   <h4 id="EventStore_Common_Utils_Json_ToJsonBytes_System_Object_" data-uid="EventStore.Common.Utils.Json.ToJsonBytes(System.Object)">ToJsonBytes(Object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static byte[] ToJsonBytes(this object source)</code></pre>
   </div>
@@ -568,18 +564,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Common_Utils_Json_ToXmlDocument_JObject_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Common.Utils.Json.ToXmlDocument(JObject%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Common/Utils/Json.cs/#L61">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Common_Utils_Json_ToXmlDocument_" data-uid="EventStore.Common.Utils.Json.ToXmlDocument*"></a>
-  <h4 id="EventStore_Common_Utils_Json_ToXmlDocument_JObject_System_String_System_Boolean_" data-uid="EventStore.Common.Utils.Json.ToXmlDocument(JObject,System.String,System.Boolean)">ToXmlDocument(JObject, String, Boolean)</h4>
+  <h4 id="EventStore_Common_Utils_Json_ToXmlDocument_Newtonsoft_Json_Linq_JObject_System_String_System_Boolean_" data-uid="EventStore.Common.Utils.Json.ToXmlDocument(Newtonsoft.Json.Linq.JObject,System.String,System.Boolean)">ToXmlDocument(JObject, String, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static XmlDocument ToXmlDocument(this JObject value, string deserializeRootElementName, bool writeArrayAttribute)</code></pre>
   </div>
@@ -594,7 +587,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">JObject</span></td>
+        <td><span class="xref">Newtonsoft.Json.Linq.JObject</span></td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
@@ -620,7 +613,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">XmlDocument</span></td>
+        <td><span class="xref">System.Xml.XmlDocument</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -634,12 +627,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Common_Utils_Json.md&amp;value=---%0Auid%3A%20EventStore.Common.Utils.Json%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Common/Utils/Json.cs/#L13" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

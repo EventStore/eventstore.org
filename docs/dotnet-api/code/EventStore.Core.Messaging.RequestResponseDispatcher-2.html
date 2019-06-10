@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -107,11 +108,35 @@
     <h5>Implements</h5>
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;TResponse&gt;</div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Messaging.html">EventStore.Core.Messaging</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Messaging_RequestResponseDispatcher_2_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class RequestResponseDispatcher&lt;TRequest, TResponse&gt; : object, IHandle&lt;TResponse&gt; where TRequest : Message where TResponse : Message</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class RequestResponseDispatcher&lt;TRequest, TResponse&gt; : IHandle&lt;TResponse&gt; where TRequest : Message where TResponse : Message</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -134,18 +159,15 @@
   </table>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messaging_RequestResponseDispatcher_2__ctor_EventStore_Core_Bus_IPublisher_Func__0_Guid__Func__1_Guid__EventStore_Core_Messaging_IEnvelope_Func_Guid_EventStore_Core_Messaging_Message__.md&amp;value=---%0Auid%3A%20EventStore.Core.Messaging.RequestResponseDispatcher%602.%23ctor(EventStore.Core.Bus.IPublisher%2CFunc%7B%600%2CGuid%7D%2CFunc%7B%601%2CGuid%7D%2CEventStore.Core.Messaging.IEnvelope%2CFunc%7BGuid%2CEventStore.Core.Messaging.Message%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messaging/RequestResponseDispatcher.cs/#L18">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messaging_RequestResponseDispatcher_2__ctor_" data-uid="EventStore.Core.Messaging.RequestResponseDispatcher`2.#ctor*"></a>
-  <h4 id="EventStore_Core_Messaging_RequestResponseDispatcher_2__ctor_EventStore_Core_Bus_IPublisher_Func__0_Guid__Func__1_Guid__EventStore_Core_Messaging_IEnvelope_Func_Guid_EventStore_Core_Messaging_Message__" data-uid="EventStore.Core.Messaging.RequestResponseDispatcher`2.#ctor(EventStore.Core.Bus.IPublisher,Func{`0,Guid},Func{`1,Guid},EventStore.Core.Messaging.IEnvelope,Func{Guid,EventStore.Core.Messaging.Message})">RequestResponseDispatcher(IPublisher, Func&lt;TRequest, Guid&gt;, Func&lt;TResponse, Guid&gt;, IEnvelope, Func&lt;Guid, Message&gt;)</h4>
+  <h4 id="EventStore_Core_Messaging_RequestResponseDispatcher_2__ctor_EventStore_Core_Bus_IPublisher_System_Func__0_System_Guid__System_Func__1_System_Guid__EventStore_Core_Messaging_IEnvelope_System_Func_System_Guid_EventStore_Core_Messaging_Message__" data-uid="EventStore.Core.Messaging.RequestResponseDispatcher`2.#ctor(EventStore.Core.Bus.IPublisher,System.Func{`0,System.Guid},System.Func{`1,System.Guid},EventStore.Core.Messaging.IEnvelope,System.Func{System.Guid,EventStore.Core.Messaging.Message})">RequestResponseDispatcher(IPublisher, Func&lt;TRequest, Guid&gt;, Func&lt;TResponse, Guid&gt;, IEnvelope, Func&lt;Guid, Message&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public RequestResponseDispatcher(IPublisher publisher, Func&lt;TRequest, Guid&gt; getRequestCorrelationId, Func&lt;TResponse, Guid&gt; getResponseCorrelationId, IEnvelope defaultReplyEnvelope, Func&lt;Guid, Message&gt; cancelMessageFactory = null)</code></pre>
   </div>
@@ -165,12 +187,12 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;TRequest, <span class="xref">Guid</span>&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;TRequest, <span class="xref">System.Guid</span>&gt;</td>
         <td><span class="parametername">getRequestCorrelationId</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;TResponse, <span class="xref">Guid</span>&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;TResponse, <span class="xref">System.Guid</span>&gt;</td>
         <td><span class="parametername">getResponseCorrelationId</span></td>
         <td></td>
       </tr>
@@ -180,7 +202,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;<span class="xref">Guid</span>, <a class="xref" href="EventStore.Core.Messaging.Message.html">Message</a>&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Guid</span>, <a class="xref" href="EventStore.Core.Messaging.Message.html">Message</a>&gt;</td>
         <td><span class="parametername">cancelMessageFactory</span></td>
         <td></td>
       </tr>
@@ -188,18 +210,15 @@
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messaging_RequestResponseDispatcher_2_Envelope.md&amp;value=---%0Auid%3A%20EventStore.Core.Messaging.RequestResponseDispatcher%602.Envelope%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messaging/RequestResponseDispatcher.cs/#L72">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messaging_RequestResponseDispatcher_2_Envelope_" data-uid="EventStore.Core.Messaging.RequestResponseDispatcher`2.Envelope*"></a>
   <h4 id="EventStore_Core_Messaging_RequestResponseDispatcher_2_Envelope" data-uid="EventStore.Core.Messaging.RequestResponseDispatcher`2.Envelope">Envelope</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IEnvelope Envelope { get; }</code></pre>
   </div>
@@ -208,30 +227,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messaging.IEnvelope.html">IEnvelope</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messaging_RequestResponseDispatcher_2_Cancel_Guid_.md&amp;value=---%0Auid%3A%20EventStore.Core.Messaging.RequestResponseDispatcher%602.Cancel(Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messaging/RequestResponseDispatcher.cs/#L76">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messaging_RequestResponseDispatcher_2_Cancel_" data-uid="EventStore.Core.Messaging.RequestResponseDispatcher`2.Cancel*"></a>
-  <h4 id="EventStore_Core_Messaging_RequestResponseDispatcher_2_Cancel_Guid_" data-uid="EventStore.Core.Messaging.RequestResponseDispatcher`2.Cancel(Guid)">Cancel(Guid)</h4>
+  <h4 id="EventStore_Core_Messaging_RequestResponseDispatcher_2_Cancel_System_Guid_" data-uid="EventStore.Core.Messaging.RequestResponseDispatcher`2.Cancel(System.Guid)">Cancel(Guid)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Cancel(Guid requestId)</code></pre>
   </div>
@@ -246,39 +260,33 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">requestId</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messaging_RequestResponseDispatcher_2_CancelAll.md&amp;value=---%0Auid%3A%20EventStore.Core.Messaging.RequestResponseDispatcher%602.CancelAll%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messaging/RequestResponseDispatcher.cs/#L83">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messaging_RequestResponseDispatcher_2_CancelAll_" data-uid="EventStore.Core.Messaging.RequestResponseDispatcher`2.CancelAll*"></a>
   <h4 id="EventStore_Core_Messaging_RequestResponseDispatcher_2_CancelAll" data-uid="EventStore.Core.Messaging.RequestResponseDispatcher`2.CancelAll">CancelAll()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void CancelAll()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messaging_RequestResponseDispatcher_2_Handle__1_.md&amp;value=---%0Auid%3A%20EventStore.Core.Messaging.RequestResponseDispatcher%602.Handle(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messaging/RequestResponseDispatcher.cs/#L50">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messaging_RequestResponseDispatcher_2_Handle_" data-uid="EventStore.Core.Messaging.RequestResponseDispatcher`2.Handle*"></a>
   <h4 id="EventStore_Core_Messaging_RequestResponseDispatcher_2_Handle__1_" data-uid="EventStore.Core.Messaging.RequestResponseDispatcher`2.Handle(`1)">Handle(TResponse)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool Handle(TResponse message)</code></pre>
   </div>
@@ -314,18 +322,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messaging_RequestResponseDispatcher_2_Publish__0_Action__1__.md&amp;value=---%0Auid%3A%20EventStore.Core.Messaging.RequestResponseDispatcher%602.Publish(%600%2CAction%7B%601%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messaging/RequestResponseDispatcher.cs/#L31">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messaging_RequestResponseDispatcher_2_Publish_" data-uid="EventStore.Core.Messaging.RequestResponseDispatcher`2.Publish*"></a>
-  <h4 id="EventStore_Core_Messaging_RequestResponseDispatcher_2_Publish__0_Action__1__" data-uid="EventStore.Core.Messaging.RequestResponseDispatcher`2.Publish(`0,Action{`1})">Publish(TRequest, Action&lt;TResponse&gt;)</h4>
+  <h4 id="EventStore_Core_Messaging_RequestResponseDispatcher_2_Publish__0_System_Action__1__" data-uid="EventStore.Core.Messaging.RequestResponseDispatcher`2.Publish(`0,System.Action{`1})">Publish(TRequest, Action&lt;TResponse&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Guid Publish(TRequest request, Action&lt;TResponse&gt; action)</code></pre>
   </div>
@@ -345,7 +350,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;TResponse&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;TResponse&gt;</td>
         <td><span class="parametername">action</span></td>
         <td></td>
       </tr>
@@ -361,25 +366,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="eii">Explicit Interface Implementations
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messaging_RequestResponseDispatcher_2_EventStore_Core_Bus_IHandle_TResponse__Handle__1_.md&amp;value=---%0Auid%3A%20EventStore.Core.Messaging.RequestResponseDispatcher%602.EventStore%23Core%23Bus%23IHandle%7BTResponse%7D%23Handle(%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messaging/RequestResponseDispatcher.cs/#L46">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messaging_RequestResponseDispatcher_2_EventStore_Core_Bus_IHandle_TResponse__Handle_" data-uid="EventStore.Core.Messaging.RequestResponseDispatcher`2.EventStore#Core#Bus#IHandle{TResponse}#Handle*"></a>
   <h4 id="EventStore_Core_Messaging_RequestResponseDispatcher_2_EventStore_Core_Bus_IHandle_TResponse__Handle__1_" data-uid="EventStore.Core.Messaging.RequestResponseDispatcher`2.EventStore#Core#Bus#IHandle{TResponse}#Handle(`1)">IHandle&lt;TResponse&gt;.Handle(TResponse)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void IHandle&lt;TResponse&gt;.Handle(TResponse message)</code></pre>
   </div>
@@ -415,6 +417,12 @@
       <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
   </div>
   <div>
+      <a class="xref" href="EventStore.Core.Bus.HandleExtensions.html#EventStore_Core_Bus_HandleExtensions_WidenFrom__2_EventStore_Core_Bus_IHandle___1__">HandleExtensions.WidenFrom&lt;TInput, TOutput&gt;(IHandle&lt;TOutput&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Bus.HandleExtensions.html#EventStore_Core_Bus_HandleExtensions_NarrowTo__2_EventStore_Core_Bus_IHandle___1__">HandleExtensions.NarrowTo&lt;TInput, TOutput&gt;(IHandle&lt;TOutput&gt;)</a>
+  </div>
+  <div>
       <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_Serialize__1___0_">ProtobufExtensions.Serialize&lt;T&gt;(T)</a>
   </div>
   <div>
@@ -429,12 +437,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messaging_RequestResponseDispatcher_2.md&amp;value=---%0Auid%3A%20EventStore.Core.Messaging.RequestResponseDispatcher%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messaging/RequestResponseDispatcher.cs/#L7" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

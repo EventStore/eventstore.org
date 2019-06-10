@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,6 +104,25 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">EventRecord</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="EventStore.Core.Data.EventRecord.html">EventRecord</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Data.html">EventStore.Core.Data</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Data_EventRecord_syntax">Syntax</h5>
@@ -111,18 +131,15 @@
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord__ctor_System_Int64_EventStore_Core_TransactionLog_LogRecords_PrepareLogRecord_.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.%23ctor(System.Int64%2CEventStore.Core.TransactionLog.LogRecords.PrepareLogRecord)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L27">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Data_EventRecord__ctor_" data-uid="EventStore.Core.Data.EventRecord.#ctor*"></a>
   <h4 id="EventStore_Core_Data_EventRecord__ctor_System_Int64_EventStore_Core_TransactionLog_LogRecords_PrepareLogRecord_" data-uid="EventStore.Core.Data.EventRecord.#ctor(System.Int64,EventStore.Core.TransactionLog.LogRecords.PrepareLogRecord)">EventRecord(Int64, PrepareLogRecord)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public EventRecord(long eventNumber, PrepareLogRecord prepare)</code></pre>
   </div>
@@ -148,18 +165,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord__ctor_System_Int64_System_Int64_Guid_Guid_System_Int64_System_Int32_System_String_System_Int64_DateTime_EventStore_Core_TransactionLog_LogRecords_PrepareFlags_System_String_System_Byte___System_Byte___.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.%23ctor(System.Int64%2CSystem.Int64%2CGuid%2CGuid%2CSystem.Int64%2CSystem.Int32%2CSystem.String%2CSystem.Int64%2CDateTime%2CEventStore.Core.TransactionLog.LogRecords.PrepareFlags%2CSystem.String%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L46">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Data_EventRecord__ctor_" data-uid="EventStore.Core.Data.EventRecord.#ctor*"></a>
-  <h4 id="EventStore_Core_Data_EventRecord__ctor_System_Int64_System_Int64_Guid_Guid_System_Int64_System_Int32_System_String_System_Int64_DateTime_EventStore_Core_TransactionLog_LogRecords_PrepareFlags_System_String_System_Byte___System_Byte___" data-uid="EventStore.Core.Data.EventRecord.#ctor(System.Int64,System.Int64,Guid,Guid,System.Int64,System.Int32,System.String,System.Int64,DateTime,EventStore.Core.TransactionLog.LogRecords.PrepareFlags,System.String,System.Byte[],System.Byte[])">EventRecord(Int64, Int64, Guid, Guid, Int64, Int32, String, Int64, DateTime, PrepareFlags, String, Byte[], Byte[])</h4>
+  <h4 id="EventStore_Core_Data_EventRecord__ctor_System_Int64_System_Int64_System_Guid_System_Guid_System_Int64_System_Int32_System_String_System_Int64_System_DateTime_EventStore_Core_TransactionLog_LogRecords_PrepareFlags_System_String_System_Byte___System_Byte___" data-uid="EventStore.Core.Data.EventRecord.#ctor(System.Int64,System.Int64,System.Guid,System.Guid,System.Int64,System.Int32,System.String,System.Int64,System.DateTime,EventStore.Core.TransactionLog.LogRecords.PrepareFlags,System.String,System.Byte[],System.Byte[])">EventRecord(Int64, Int64, Guid, Guid, Int64, Int32, String, Int64, DateTime, PrepareFlags, String, Byte[], Byte[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public EventRecord(long eventNumber, long logPosition, Guid correlationId, Guid eventId, long transactionPosition, int transactionOffset, string eventStreamId, long expectedVersion, DateTime timeStamp, PrepareFlags flags, string eventType, byte[] data, byte[] metadata)</code></pre>
   </div>
@@ -184,12 +198,12 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">correlationId</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">eventId</span></td>
         <td></td>
       </tr>
@@ -214,7 +228,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">DateTime</span></td>
+        <td><span class="xref">System.DateTime</span></td>
         <td><span class="parametername">timeStamp</span></td>
         <td></td>
       </tr>
@@ -242,17 +256,14 @@
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord_CorrelationId.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.CorrelationId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L15">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Data_EventRecord_CorrelationId" data-uid="EventStore.Core.Data.EventRecord.CorrelationId">CorrelationId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly Guid CorrelationId</code></pre>
   </div>
@@ -261,27 +272,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
-        <td></td>
+        <td><span class="xref">System.Guid</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord_Data.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.Data%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L24">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Data_EventRecord_Data" data-uid="EventStore.Core.Data.EventRecord.Data">Data</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly byte[] Data</code></pre>
   </div>
@@ -290,27 +296,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord_EventId.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.EventId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L16">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Data_EventRecord_EventId" data-uid="EventStore.Core.Data.EventRecord.EventId">EventId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly Guid EventId</code></pre>
   </div>
@@ -319,27 +320,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
-        <td></td>
+        <td><span class="xref">System.Guid</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord_EventNumber.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.EventNumber%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L13">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Data_EventRecord_EventNumber" data-uid="EventStore.Core.Data.EventRecord.EventNumber">EventNumber</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly long EventNumber</code></pre>
   </div>
@@ -348,27 +344,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord_EventStreamId.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.EventStreamId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L19">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Data_EventRecord_EventStreamId" data-uid="EventStore.Core.Data.EventRecord.EventStreamId">EventStreamId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly string EventStreamId</code></pre>
   </div>
@@ -377,27 +368,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord_EventType.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.EventType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L23">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Data_EventRecord_EventType" data-uid="EventStore.Core.Data.EventRecord.EventType">EventType</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly string EventType</code></pre>
   </div>
@@ -406,27 +392,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord_ExpectedVersion.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.ExpectedVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L20">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Data_EventRecord_ExpectedVersion" data-uid="EventStore.Core.Data.EventRecord.ExpectedVersion">ExpectedVersion</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly long ExpectedVersion</code></pre>
   </div>
@@ -435,27 +416,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord_Flags.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.Flags%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L22">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Data_EventRecord_Flags" data-uid="EventStore.Core.Data.EventRecord.Flags">Flags</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly PrepareFlags Flags</code></pre>
   </div>
@@ -464,27 +440,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.LogRecords.PrepareFlags.html">PrepareFlags</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord_LogPosition.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.LogPosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L14">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Data_EventRecord_LogPosition" data-uid="EventStore.Core.Data.EventRecord.LogPosition">LogPosition</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly long LogPosition</code></pre>
   </div>
@@ -493,27 +464,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord_Metadata.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.Metadata%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L25">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Data_EventRecord_Metadata" data-uid="EventStore.Core.Data.EventRecord.Metadata">Metadata</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly byte[] Metadata</code></pre>
   </div>
@@ -522,27 +488,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord_TimeStamp.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.TimeStamp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L21">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Data_EventRecord_TimeStamp" data-uid="EventStore.Core.Data.EventRecord.TimeStamp">TimeStamp</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly DateTime TimeStamp</code></pre>
   </div>
@@ -551,27 +512,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">DateTime</span></td>
-        <td></td>
+        <td><span class="xref">System.DateTime</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord_TransactionOffset.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.TransactionOffset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L18">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Data_EventRecord_TransactionOffset" data-uid="EventStore.Core.Data.EventRecord.TransactionOffset">TransactionOffset</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly int TransactionOffset</code></pre>
   </div>
@@ -580,27 +536,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord_TransactionPosition.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.TransactionPosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L17">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Data_EventRecord_TransactionPosition" data-uid="EventStore.Core.Data.EventRecord.TransactionPosition">TransactionPosition</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly long TransactionPosition</code></pre>
   </div>
@@ -609,30 +560,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord_IsJson.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.IsJson%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L9">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Data_EventRecord_IsJson_" data-uid="EventStore.Core.Data.EventRecord.IsJson*"></a>
   <h4 id="EventStore_Core_Data_EventRecord_IsJson" data-uid="EventStore.Core.Data.EventRecord.IsJson">IsJson</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool IsJson { get; }</code></pre>
   </div>
@@ -641,30 +587,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord_Equals_EventStore_Core_Data_EventRecord_.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.Equals(EventStore.Core.Data.EventRecord)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L83">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Data_EventRecord_Equals_" data-uid="EventStore.Core.Data.EventRecord.Equals*"></a>
   <h4 id="EventStore_Core_Data_EventRecord_Equals_EventStore_Core_Data_EventRecord_" data-uid="EventStore.Core.Data.EventRecord.Equals(EventStore.Core.Data.EventRecord)">Equals(EventRecord)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool Equals(EventRecord other)</code></pre>
   </div>
@@ -700,18 +641,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord_Equals_System_Object_.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L101">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Data_EventRecord_Equals_" data-uid="EventStore.Core.Data.EventRecord.Equals*"></a>
   <h4 id="EventStore_Core_Data_EventRecord_Equals_System_Object_" data-uid="EventStore.Core.Data.EventRecord.Equals(System.Object)">Equals(Object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
   </div>
@@ -747,18 +685,17 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord_GetHashCode.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L108">View Source</a>
-  </span>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+  
+  
   <a id="EventStore_Core_Data_EventRecord_GetHashCode_" data-uid="EventStore.Core.Data.EventRecord.GetHashCode*"></a>
   <h4 id="EventStore_Core_Data_EventRecord_GetHashCode" data-uid="EventStore.Core.Data.EventRecord.GetHashCode">GetHashCode()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
   </div>
@@ -777,18 +714,17 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord_ToString.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L135">View Source</a>
-  </span>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.GetHashCode()</span></div>
+  
+  
   <a id="EventStore_Core_Data_EventRecord_ToString_" data-uid="EventStore.Core.Data.EventRecord.ToString*"></a>
   <h4 id="EventStore_Core_Data_EventRecord_ToString" data-uid="EventStore.Core.Data.EventRecord.ToString">ToString()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
   </div>
@@ -807,20 +743,19 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
   <h3 id="operators">Operators
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord_op_Equality_EventStore_Core_Data_EventRecord_EventStore_Core_Data_EventRecord_.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.op_Equality(EventStore.Core.Data.EventRecord%2CEventStore.Core.Data.EventRecord)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L127">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Data_EventRecord_op_Equality_" data-uid="EventStore.Core.Data.EventRecord.op_Equality*"></a>
   <h4 id="EventStore_Core_Data_EventRecord_op_Equality_EventStore_Core_Data_EventRecord_EventStore_Core_Data_EventRecord_" data-uid="EventStore.Core.Data.EventRecord.op_Equality(EventStore.Core.Data.EventRecord,EventStore.Core.Data.EventRecord)">Equality(EventRecord, EventRecord)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool operator ==(EventRecord left, EventRecord right)</code></pre>
   </div>
@@ -861,18 +796,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord_op_Inequality_EventStore_Core_Data_EventRecord_EventStore_Core_Data_EventRecord_.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord.op_Inequality(EventStore.Core.Data.EventRecord%2CEventStore.Core.Data.EventRecord)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L131">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Data_EventRecord_op_Inequality_" data-uid="EventStore.Core.Data.EventRecord.op_Inequality*"></a>
   <h4 id="EventStore_Core_Data_EventRecord_op_Inequality_EventStore_Core_Data_EventRecord_EventStore_Core_Data_EventRecord_" data-uid="EventStore.Core.Data.EventRecord.op_Inequality(EventStore.Core.Data.EventRecord,EventStore.Core.Data.EventRecord)">Inequality(EventRecord, EventRecord)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static bool operator !=(EventRecord left, EventRecord right)</code></pre>
   </div>
@@ -913,6 +845,10 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
+  </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
@@ -938,12 +874,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Data_EventRecord.md&amp;value=---%0Auid%3A%20EventStore.Core.Data.EventRecord%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Data/EventRecord.cs/#L8" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

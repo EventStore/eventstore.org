@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -105,8 +106,33 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<span class="xref">CoreProjectionProcessingMessage.EmittedStreamWriteCompleted</span>&gt;</div>
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionManagementMessage.Internal.ReadTimeout.html">ProjectionManagementMessage.Internal.ReadTimeout</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Services.Processing.html">EventStore.Projections.Core.Services.Processing</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
@@ -116,18 +142,15 @@
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EmittedStream__ctor_System_String_EventStore_Projections_Core_Services_Processing_EmittedStream_WriterConfiguration_EventStore_Projections_Core_Services_Processing_ProjectionVersion_EventStore_Projections_Core_Services_Processing_PositionTagger_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Core_Bus_IPublisher_EventStore_Core_Helpers_IODispatcher_EventStore_Projections_Core_Messages_IEmittedStreamContainer_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EmittedStream.%23ctor(System.String%2CEventStore.Projections.Core.Services.Processing.EmittedStream.WriterConfiguration%2CEventStore.Projections.Core.Services.Processing.ProjectionVersion%2CEventStore.Projections.Core.Services.Processing.PositionTagger%2CEventStore.Projections.Core.Services.Processing.CheckpointTag%2CEventStore.Core.Bus.IPublisher%2CEventStore.Core.Helpers.IODispatcher%2CEventStore.Projections.Core.Messages.IEmittedStreamContainer%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EmittedStream.cs/#L133">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EmittedStream__ctor_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedStream.#ctor*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EmittedStream__ctor_System_String_EventStore_Projections_Core_Services_Processing_EmittedStream_WriterConfiguration_EventStore_Projections_Core_Services_Processing_ProjectionVersion_EventStore_Projections_Core_Services_Processing_PositionTagger_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Core_Bus_IPublisher_EventStore_Core_Helpers_IODispatcher_EventStore_Projections_Core_Messages_IEmittedStreamContainer_System_Boolean_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedStream.#ctor(System.String,EventStore.Projections.Core.Services.Processing.EmittedStream.WriterConfiguration,EventStore.Projections.Core.Services.Processing.ProjectionVersion,EventStore.Projections.Core.Services.Processing.PositionTagger,EventStore.Projections.Core.Services.Processing.CheckpointTag,EventStore.Core.Bus.IPublisher,EventStore.Core.Helpers.IODispatcher,EventStore.Projections.Core.Messages.IEmittedStreamContainer,System.Boolean)">EmittedStream(String, EmittedStream.WriterConfiguration, ProjectionVersion, PositionTagger, CheckpointTag, IPublisher, IODispatcher, IEmittedStreamContainer, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public EmittedStream(string streamId, EmittedStream.WriterConfiguration writerConfiguration, ProjectionVersion projectionVersion, PositionTagger positionTagger, CheckpointTag fromCheckpointPosition, IPublisher publisher, IODispatcher ioDispatcher, IEmittedStreamContainer readyHandler, bool noCheckpoints = false)</code></pre>
   </div>
@@ -190,48 +213,39 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EmittedStream_Checkpoint.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EmittedStream.Checkpoint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EmittedStream.cs/#L187">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EmittedStream_Checkpoint_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedStream.Checkpoint*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EmittedStream_Checkpoint" data-uid="EventStore.Projections.Core.Services.Processing.EmittedStream.Checkpoint">Checkpoint()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Checkpoint()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EmittedStream_Dispose.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EmittedStream.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EmittedStream.cs/#L696">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EmittedStream_Dispose_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedStream.Dispose*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EmittedStream_Dispose" data-uid="EventStore.Projections.Core.Services.Processing.EmittedStream.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EmittedStream_EmitEvents_EventStore_Projections_Core_Services_Processing_EmittedEvent___.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EmittedStream.EmitEvents(EventStore.Projections.Core.Services.Processing.EmittedEvent%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EmittedStream.cs/#L162">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EmittedStream_EmitEvents_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedStream.EmitEvents*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EmittedStream_EmitEvents_EventStore_Projections_Core_Services_Processing_EmittedEvent___" data-uid="EventStore.Projections.Core.Services.Processing.EmittedStream.EmitEvents(EventStore.Projections.Core.Services.Processing.EmittedEvent[])">EmitEvents(EmittedEvent[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void EmitEvents(EmittedEvent[] events)</code></pre>
   </div>
@@ -252,18 +266,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EmittedStream_GetReadsInProgress.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EmittedStream.GetReadsInProgress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EmittedStream.cs/#L211">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EmittedStream_GetReadsInProgress_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedStream.GetReadsInProgress*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EmittedStream_GetReadsInProgress" data-uid="EventStore.Projections.Core.Services.Processing.EmittedStream.GetReadsInProgress">GetReadsInProgress()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int GetReadsInProgress()</code></pre>
   </div>
@@ -282,18 +293,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EmittedStream_GetWritePendingEvents.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EmittedStream.GetWritePendingEvents%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EmittedStream.cs/#L203">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EmittedStream_GetWritePendingEvents_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedStream.GetWritePendingEvents*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EmittedStream_GetWritePendingEvents" data-uid="EventStore.Projections.Core.Services.Processing.EmittedStream.GetWritePendingEvents">GetWritePendingEvents()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int GetWritePendingEvents()</code></pre>
   </div>
@@ -312,18 +320,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EmittedStream_GetWritesInProgress.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EmittedStream.GetWritesInProgress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EmittedStream.cs/#L207">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EmittedStream_GetWritesInProgress_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedStream.GetWritesInProgress*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EmittedStream_GetWritesInProgress" data-uid="EventStore.Projections.Core.Services.Processing.EmittedStream.GetWritesInProgress">GetWritesInProgress()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int GetWritesInProgress()</code></pre>
   </div>
@@ -342,18 +347,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EmittedStream_Handle_CoreProjectionProcessingMessage_EmittedStreamWriteCompleted_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EmittedStream.Handle(CoreProjectionProcessingMessage.EmittedStreamWriteCompleted)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EmittedStream.cs/#L700">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EmittedStream_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedStream.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EmittedStream_Handle_CoreProjectionProcessingMessage_EmittedStreamWriteCompleted_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedStream.Handle(CoreProjectionProcessingMessage.EmittedStreamWriteCompleted)">Handle(CoreProjectionProcessingMessage.EmittedStreamWriteCompleted)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(CoreProjectionProcessingMessage.EmittedStreamWriteCompleted message)</code></pre>
   </div>
@@ -374,18 +376,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EmittedStream_Handle_EventStore_Projections_Core_Messages_ProjectionManagementMessage_Internal_ReadTimeout_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EmittedStream.Handle(EventStore.Projections.Core.Messages.ProjectionManagementMessage.Internal.ReadTimeout)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EmittedStream.cs/#L418">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EmittedStream_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedStream.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EmittedStream_Handle_EventStore_Projections_Core_Messages_ProjectionManagementMessage_Internal_ReadTimeout_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedStream.Handle(EventStore.Projections.Core.Messages.ProjectionManagementMessage.Internal.ReadTimeout)">Handle(ProjectionManagementMessage.Internal.ReadTimeout)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ProjectionManagementMessage.Internal.ReadTimeout message)</code></pre>
   </div>
@@ -406,22 +405,22 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EmittedStream_Start.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EmittedStream.Start%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EmittedStream.cs/#L195">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EmittedStream_Start_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedStream.Start*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EmittedStream_Start" data-uid="EventStore.Projections.Core.Services.Processing.EmittedStream.Start">Start()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Start()</code></pre>
   </div>
   <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
   <div>
       <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
   </div>
@@ -453,12 +452,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EmittedStream.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EmittedStream%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EmittedStream.cs/#L20" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

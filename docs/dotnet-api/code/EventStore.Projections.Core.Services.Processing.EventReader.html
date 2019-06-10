@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -113,28 +114,49 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.IEventReader.html">IEventReader</a></div>
-    <div><span class="xref">IDisposable</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Services.Processing.html">EventStore.Projections.Core.Services.Processing</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
   <h5 id="EventStore_Projections_Core_Services_Processing_EventReader_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class EventReader : object, IEventReader, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class EventReader : IEventReader, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReader__ctor_EventStore_Core_Bus_IPublisher_Guid_IPrincipal_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReader.%23ctor(EventStore.Core.Bus.IPublisher%2CGuid%2CIPrincipal%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReader.cs/#L21">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReader__ctor_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.#ctor*"></a>
-  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader__ctor_EventStore_Core_Bus_IPublisher_Guid_IPrincipal_System_Boolean_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.#ctor(EventStore.Core.Bus.IPublisher,Guid,IPrincipal,System.Boolean)">EventReader(IPublisher, Guid, IPrincipal, Boolean)</h4>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader__ctor_EventStore_Core_Bus_IPublisher_System_Guid_System_Security_Principal_IPrincipal_System_Boolean_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.#ctor(EventStore.Core.Bus.IPublisher,System.Guid,System.Security.Principal.IPrincipal,System.Boolean)">EventReader(IPublisher, Guid, IPrincipal, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected EventReader(IPublisher publisher, Guid eventReaderCorrelationId, IPrincipal readAs, bool stopOnEof)</code></pre>
   </div>
@@ -154,12 +176,12 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">eventReaderCorrelationId</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IPrincipal</span></td>
+        <td><span class="xref">System.Security.Principal.IPrincipal</span></td>
         <td><span class="parametername">readAs</span></td>
         <td></td>
       </tr>
@@ -172,17 +194,14 @@
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReader__disposed.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReader._disposed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReader.cs/#L18">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReader__disposed" data-uid="EventStore.Projections.Core.Services.Processing.EventReader._disposed">_disposed</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected bool _disposed</code></pre>
   </div>
@@ -191,27 +210,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReader__publisher.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReader._publisher%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReader.cs/#L13">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReader__publisher" data-uid="EventStore.Projections.Core.Services.Processing.EventReader._publisher">_publisher</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected readonly IPublisher _publisher</code></pre>
   </div>
@@ -220,27 +234,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReader__stopOnEof.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReader._stopOnEof%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReader.cs/#L15">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReader__stopOnEof" data-uid="EventStore.Projections.Core.Services.Processing.EventReader._stopOnEof">_stopOnEof</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected readonly bool _stopOnEof</code></pre>
   </div>
@@ -249,27 +258,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReader_EventReaderCorrelationId.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReader.EventReaderCorrelationId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReader.cs/#L11">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_EventReaderCorrelationId" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.EventReaderCorrelationId">EventReaderCorrelationId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected readonly Guid EventReaderCorrelationId</code></pre>
   </div>
@@ -278,30 +282,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
-        <td></td>
+        <td><span class="xref">System.Guid</span></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReader_Paused.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReader.Paused%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReader.cs/#L35">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReader_Paused_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.Paused*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_Paused" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.Paused">Paused</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected bool Paused { get; }</code></pre>
   </div>
@@ -310,28 +309,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReader_PauseRequested.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReader.PauseRequested%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReader.cs/#L31">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReader_PauseRequested_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.PauseRequested*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_PauseRequested" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.PauseRequested">PauseRequested</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected bool PauseRequested { get; }</code></pre>
   </div>
@@ -340,28 +334,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReader_ReadAs.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReader.ReadAs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReader.cs/#L39">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReader_ReadAs_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.ReadAs*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_ReadAs" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.ReadAs">ReadAs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected IPrincipal ReadAs { get; }</code></pre>
   </div>
@@ -370,30 +359,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPrincipal</span></td>
-        <td></td>
+        <td><span class="xref">System.Security.Principal.IPrincipal</span></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReader_AreEventsRequested.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReader.AreEventsRequested%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReader.cs/#L74">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReader_AreEventsRequested_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.AreEventsRequested*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_AreEventsRequested" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.AreEventsRequested">AreEventsRequested()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected abstract bool AreEventsRequested()</code></pre>
   </div>
@@ -412,33 +396,27 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReader_Dispose.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReader.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReader.cs/#L70">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReader_Dispose_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.Dispose*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_Dispose" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual void Dispose()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReader_GetLastCommitPositionFrom_EventStore_Core_Messages_ClientMessage_ReadStreamEventsForwardCompleted_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReader.GetLastCommitPositionFrom(EventStore.Core.Messages.ClientMessage.ReadStreamEventsForwardCompleted)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReader.cs/#L110">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReader_GetLastCommitPositionFrom_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.GetLastCommitPositionFrom*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_GetLastCommitPositionFrom_EventStore_Core_Messages_ClientMessage_ReadStreamEventsForwardCompleted_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.GetLastCommitPositionFrom(EventStore.Core.Messages.ClientMessage.ReadStreamEventsForwardCompleted)">GetLastCommitPositionFrom(ClientMessage.ReadStreamEventsForwardCompleted)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected static long? GetLastCommitPositionFrom(ClientMessage.ReadStreamEventsForwardCompleted msg)</code></pre>
   </div>
@@ -474,18 +452,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReader_NotifyIfStarting_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReader.NotifyIfStarting(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReader.cs/#L133">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReader_NotifyIfStarting_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.NotifyIfStarting*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_NotifyIfStarting_System_Int64_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.NotifyIfStarting(System.Int64)">NotifyIfStarting(Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void NotifyIfStarting(long startingLastCommitPosition)</code></pre>
   </div>
@@ -506,108 +481,87 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReader_Pause.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReader.Pause%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReader.cs/#L58">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReader_Pause_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.Pause*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_Pause" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.Pause">Pause()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Pause()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReader_PauseOrContinueProcessing.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReader.PauseOrContinueProcessing%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReader.cs/#L118">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReader_PauseOrContinueProcessing_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.PauseOrContinueProcessing*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_PauseOrContinueProcessing" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.PauseOrContinueProcessing">PauseOrContinueProcessing()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void PauseOrContinueProcessing()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReader_RequestEvents.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReader.RequestEvents%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReader.cs/#L75">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReader_RequestEvents_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.RequestEvents*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_RequestEvents" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.RequestEvents">RequestEvents()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected abstract void RequestEvents()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReader_Resume.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReader.Resume%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReader.cs/#L43">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReader_Resume_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.Resume*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_Resume" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.Resume">Resume()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Resume()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReader_SendEof.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReader.SendEof%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReader.cs/#L77">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReader_SendEof_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.SendEof*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_SendEof" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.SendEof">SendEof()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void SendEof()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReader_SendNotAuthorized.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReader.SendNotAuthorized%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReader.cs/#L103">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReader_SendNotAuthorized_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.SendNotAuthorized*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_SendNotAuthorized" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.SendNotAuthorized">SendNotAuthorized()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void SendNotAuthorized()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReader_SendPartitionDeleted_WhenReadingDataStream_System_String_System_Nullable_System_Int64__System_Nullable_EventStore_Core_Data_TFPos__System_Nullable_EventStore_Core_Data_TFPos__System_String_System_Nullable_System_Int32__EventStore_Projections_Core_Services_Processing_CheckpointTag_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReader.SendPartitionDeleted_WhenReadingDataStream(System.String%2CSystem.Nullable%7BSystem.Int64%7D%2CSystem.Nullable%7BEventStore.Core.Data.TFPos%7D%2CSystem.Nullable%7BEventStore.Core.Data.TFPos%7D%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CEventStore.Projections.Core.Services.Processing.CheckpointTag)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReader.cs/#L91">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReader_SendPartitionDeleted_WhenReadingDataStream_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.SendPartitionDeleted_WhenReadingDataStream*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_SendPartitionDeleted_WhenReadingDataStream_System_String_System_Nullable_System_Int64__System_Nullable_EventStore_Core_Data_TFPos__System_Nullable_EventStore_Core_Data_TFPos__System_String_System_Nullable_System_Int32__EventStore_Projections_Core_Services_Processing_CheckpointTag_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.SendPartitionDeleted_WhenReadingDataStream(System.String,System.Nullable{System.Int64},System.Nullable{EventStore.Core.Data.TFPos},System.Nullable{EventStore.Core.Data.TFPos},System.String,System.Nullable{System.Int32},EventStore.Projections.Core.Services.Processing.CheckpointTag)">SendPartitionDeleted_WhenReadingDataStream(String, Nullable&lt;Int64&gt;, Nullable&lt;TFPos&gt;, Nullable&lt;TFPos&gt;, String, Nullable&lt;Int32&gt;, CheckpointTag)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void SendPartitionDeleted_WhenReadingDataStream(string partition, long? lastEventNumber, TFPos? deletedLinkOrEventPosition, TFPos? deletedEventPosition, string positionStreamId, int? positionEventNumber, CheckpointTag preTagged = null)</code></pre>
   </div>
@@ -658,18 +612,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReader_SendPartitionEof_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReader.SendPartitionEof(System.String%2CEventStore.Projections.Core.Services.Processing.CheckpointTag)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReader.cs/#L84">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReader_SendPartitionEof_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.SendPartitionEof*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_SendPartitionEof_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.SendPartitionEof(System.String,EventStore.Projections.Core.Services.Processing.CheckpointTag)">SendPartitionEof(String, CheckpointTag)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void SendPartitionEof(string partition, CheckpointTag preTagged)</code></pre>
   </div>
@@ -700,7 +651,7 @@
       <a class="xref" href="EventStore.Projections.Core.Services.Processing.IEventReader.html">IEventReader</a>
   </div>
   <div>
-      <span class="xref">IDisposable</span>
+      <span class="xref">System.IDisposable</span>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
@@ -727,12 +678,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReader.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReader.cs/#L10" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

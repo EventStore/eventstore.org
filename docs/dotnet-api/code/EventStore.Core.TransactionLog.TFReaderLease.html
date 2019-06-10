@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -100,7 +101,28 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IDisposable</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.ValueType.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.TransactionLog.html">EventStore.Core.TransactionLog</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
@@ -110,18 +132,15 @@
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_TFReaderLease__ctor_EventStore_Core_DataStructures_ObjectPool_EventStore_Core_TransactionLog_ITransactionFileReader__.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.TFReaderLease.%23ctor(EventStore.Core.DataStructures.ObjectPool%7BEventStore.Core.TransactionLog.ITransactionFileReader%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/ITransactionFileReader.cs/#L19">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_TFReaderLease__ctor_" data-uid="EventStore.Core.TransactionLog.TFReaderLease.#ctor*"></a>
   <h4 id="EventStore_Core_TransactionLog_TFReaderLease__ctor_EventStore_Core_DataStructures_ObjectPool_EventStore_Core_TransactionLog_ITransactionFileReader__" data-uid="EventStore.Core.TransactionLog.TFReaderLease.#ctor(EventStore.Core.DataStructures.ObjectPool{EventStore.Core.TransactionLog.ITransactionFileReader})">TFReaderLease(ObjectPool&lt;ITransactionFileReader&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TFReaderLease(ObjectPool&lt;ITransactionFileReader&gt; pool)</code></pre>
   </div>
@@ -142,18 +161,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_TFReaderLease__ctor_EventStore_Core_TransactionLog_ITransactionFileReader_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.TFReaderLease.%23ctor(EventStore.Core.TransactionLog.ITransactionFileReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/ITransactionFileReader.cs/#L24">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_TFReaderLease__ctor_" data-uid="EventStore.Core.TransactionLog.TFReaderLease.#ctor*"></a>
   <h4 id="EventStore_Core_TransactionLog_TFReaderLease__ctor_EventStore_Core_TransactionLog_ITransactionFileReader_" data-uid="EventStore.Core.TransactionLog.TFReaderLease.#ctor(EventStore.Core.TransactionLog.ITransactionFileReader)">TFReaderLease(ITransactionFileReader)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TFReaderLease(ITransactionFileReader reader)</code></pre>
   </div>
@@ -176,17 +192,14 @@
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_TFReaderLease_Reader.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.TFReaderLease.Reader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/ITransactionFileReader.cs/#L16">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_TransactionLog_TFReaderLease_Reader" data-uid="EventStore.Core.TransactionLog.TFReaderLease.Reader">Reader</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly ITransactionFileReader Reader</code></pre>
   </div>
@@ -195,30 +208,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.ITransactionFileReader.html">ITransactionFileReader</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_TFReaderLease_ExistsAt_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.TFReaderLease.ExistsAt(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/ITransactionFileReader.cs/#L46">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_TFReaderLease_ExistsAt_" data-uid="EventStore.Core.TransactionLog.TFReaderLease.ExistsAt*"></a>
   <h4 id="EventStore_Core_TransactionLog_TFReaderLease_ExistsAt_System_Int64_" data-uid="EventStore.Core.TransactionLog.TFReaderLease.ExistsAt(System.Int64)">ExistsAt(Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool ExistsAt(long position)</code></pre>
   </div>
@@ -254,18 +262,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_TFReaderLease_Reposition_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.TFReaderLease.Reposition(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/ITransactionFileReader.cs/#L34">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_TFReaderLease_Reposition_" data-uid="EventStore.Core.TransactionLog.TFReaderLease.Reposition*"></a>
   <h4 id="EventStore_Core_TransactionLog_TFReaderLease_Reposition_System_Int64_" data-uid="EventStore.Core.TransactionLog.TFReaderLease.Reposition(System.Int64)">Reposition(Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Reposition(long position)</code></pre>
   </div>
@@ -286,18 +291,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_TFReaderLease_TryReadAt_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.TFReaderLease.TryReadAt(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/ITransactionFileReader.cs/#L50">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_TFReaderLease_TryReadAt_" data-uid="EventStore.Core.TransactionLog.TFReaderLease.TryReadAt*"></a>
   <h4 id="EventStore_Core_TransactionLog_TFReaderLease_TryReadAt_System_Int64_" data-uid="EventStore.Core.TransactionLog.TFReaderLease.TryReadAt(System.Int64)">TryReadAt(Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public RecordReadResult TryReadAt(long position)</code></pre>
   </div>
@@ -333,18 +335,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_TFReaderLease_TryReadNext.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.TFReaderLease.TryReadNext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/ITransactionFileReader.cs/#L38">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_TFReaderLease_TryReadNext_" data-uid="EventStore.Core.TransactionLog.TFReaderLease.TryReadNext*"></a>
   <h4 id="EventStore_Core_TransactionLog_TFReaderLease_TryReadNext" data-uid="EventStore.Core.TransactionLog.TFReaderLease.TryReadNext">TryReadNext()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SeqReadResult TryReadNext()</code></pre>
   </div>
@@ -363,18 +362,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_TFReaderLease_TryReadPrev.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.TFReaderLease.TryReadPrev%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/ITransactionFileReader.cs/#L42">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_TFReaderLease_TryReadPrev_" data-uid="EventStore.Core.TransactionLog.TFReaderLease.TryReadPrev*"></a>
   <h4 id="EventStore_Core_TransactionLog_TFReaderLease_TryReadPrev" data-uid="EventStore.Core.TransactionLog.TFReaderLease.TryReadPrev">TryReadPrev()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SeqReadResult TryReadPrev()</code></pre>
   </div>
@@ -393,11 +389,34 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  
+  
+  <a id="EventStore_Core_TransactionLog_TFReaderLease_System_IDisposable_Dispose_" data-uid="EventStore.Core.TransactionLog.TFReaderLease.System#IDisposable#Dispose*"></a>
+  <h4 id="EventStore_Core_TransactionLog_TFReaderLease_System_IDisposable_Dispose" data-uid="EventStore.Core.TransactionLog.TFReaderLease.System#IDisposable#Dispose">IDisposable.Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void IDisposable.Dispose()</code></pre>
+  </div>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IDisposable</span>
+      <span class="xref">System.IDisposable</span>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJson_System_Object_">Json.ToJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
+  </div>
   <div>
       <a class="xref" href="EventStore.Projections.Core.Utils.EnumExtensions.html#EventStore_Projections_Core_Utils_EnumExtensions_EnumValueName__1___0_">EnumExtensions.EnumValueName&lt;T&gt;(T)</a>
   </div>
@@ -416,12 +435,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_TFReaderLease.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.TFReaderLease%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/ITransactionFileReader.cs/#L15" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

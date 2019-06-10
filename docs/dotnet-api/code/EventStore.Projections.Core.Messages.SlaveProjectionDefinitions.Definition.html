@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,26 +104,47 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">SlaveProjectionDefinitions.Definition</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Messages.html">EventStore.Projections.Core.Messages</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
   <h5 id="EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Definition : object</code></pre>
+    <pre><code class="lang-csharp hljs">public class Definition</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition__ctor_System_String_System_String_System_String_EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_SlaveProjectionRequestedNumber_EventStore_Projections_Core_Services_ProjectionMode_System_Boolean_System_Boolean_System_Boolean_System_Boolean_EventStore_Projections_Core_Services_Management_SerializedRunAs_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.%23ctor(System.String%2CSystem.String%2CSystem.String%2CEventStore.Projections.Core.Messages.SlaveProjectionDefinitions.SlaveProjectionRequestedNumber%2CEventStore.Projections.Core.Services.ProjectionMode%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean%2CEventStore.Projections.Core.Services.Management.SerializedRunAs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/SlaveProjectionDefinitions.cs/#L14">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition__ctor_" data-uid="EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.#ctor*"></a>
   <h4 id="EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition__ctor_System_String_System_String_System_String_EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_SlaveProjectionRequestedNumber_EventStore_Projections_Core_Services_ProjectionMode_System_Boolean_System_Boolean_System_Boolean_System_Boolean_EventStore_Projections_Core_Services_Management_SerializedRunAs_" data-uid="EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.#ctor(System.String,System.String,System.String,EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.SlaveProjectionRequestedNumber,EventStore.Projections.Core.Services.ProjectionMode,System.Boolean,System.Boolean,System.Boolean,System.Boolean,EventStore.Projections.Core.Services.Management.SerializedRunAs)">Definition(String, String, String, SlaveProjectionDefinitions.SlaveProjectionRequestedNumber, ProjectionMode, Boolean, Boolean, Boolean, Boolean, SerializedRunAs)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Definition(string name, string handlerType, string query, SlaveProjectionDefinitions.SlaveProjectionRequestedNumber requestedNumber, ProjectionMode mode, bool emitEnabled, bool checkpointsEnabled, bool enableRunAs, bool trackEmittedStreams, SerializedRunAs runAs1)</code></pre>
   </div>
@@ -190,17 +212,14 @@
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition_CheckpointsEnabled.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.CheckpointsEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/SlaveProjectionDefinitions.cs/#L39">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition_CheckpointsEnabled" data-uid="EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.CheckpointsEnabled">CheckpointsEnabled</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool CheckpointsEnabled</code></pre>
   </div>
@@ -209,27 +228,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition_EmitEnabled.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.EmitEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/SlaveProjectionDefinitions.cs/#L37">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition_EmitEnabled" data-uid="EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.EmitEnabled">EmitEnabled</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool EmitEnabled</code></pre>
   </div>
@@ -238,27 +252,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition_EnableRunAs.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.EnableRunAs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/SlaveProjectionDefinitions.cs/#L43">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition_EnableRunAs" data-uid="EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.EnableRunAs">EnableRunAs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool EnableRunAs</code></pre>
   </div>
@@ -267,27 +276,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition_HandlerType.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.HandlerType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/SlaveProjectionDefinitions.cs/#L47">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition_HandlerType" data-uid="EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.HandlerType">HandlerType</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string HandlerType</code></pre>
   </div>
@@ -296,27 +300,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition_Mode.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.Mode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/SlaveProjectionDefinitions.cs/#L35">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition_Mode" data-uid="EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.Mode">Mode</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ProjectionMode Mode</code></pre>
   </div>
@@ -325,27 +324,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Services.ProjectionMode.html">ProjectionMode</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition_Name.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/SlaveProjectionDefinitions.cs/#L31">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition_Name" data-uid="EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.Name">Name</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Name</code></pre>
   </div>
@@ -354,27 +348,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition_Query.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.Query%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/SlaveProjectionDefinitions.cs/#L49">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition_Query" data-uid="EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.Query">Query</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Query</code></pre>
   </div>
@@ -383,27 +372,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition_RequestedNumber.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.RequestedNumber%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/SlaveProjectionDefinitions.cs/#L33">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition_RequestedNumber" data-uid="EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.RequestedNumber">RequestedNumber</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SlaveProjectionDefinitions.SlaveProjectionRequestedNumber RequestedNumber</code></pre>
   </div>
@@ -412,27 +396,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.SlaveProjectionRequestedNumber.html">SlaveProjectionDefinitions.SlaveProjectionRequestedNumber</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition_RunAs1.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.RunAs1%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/SlaveProjectionDefinitions.cs/#L45">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition_RunAs1" data-uid="EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.RunAs1">RunAs1</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SerializedRunAs RunAs1</code></pre>
   </div>
@@ -441,27 +420,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Services.Management.SerializedRunAs.html">SerializedRunAs</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition_TrackEmittedStreams.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.TrackEmittedStreams%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/SlaveProjectionDefinitions.cs/#L41">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition_TrackEmittedStreams" data-uid="EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition.TrackEmittedStreams">TrackEmittedStreams</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool TrackEmittedStreams</code></pre>
   </div>
@@ -470,13 +444,11 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -505,12 +477,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Messages_SlaveProjectionDefinitions_Definition.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Messages.SlaveProjectionDefinitions.Definition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Messages/SlaveProjectionDefinitions.cs/#L13" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

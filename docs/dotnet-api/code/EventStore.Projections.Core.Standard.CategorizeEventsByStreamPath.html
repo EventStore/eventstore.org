@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -106,29 +107,50 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="EventStore.Projections.Core.Services.IProjectionStateHandler.html">IProjectionStateHandler</a></div>
-    <div><span class="xref">IDisposable</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
     <div><a class="xref" href="EventStore.Projections.Core.Services.ISourceDefinitionSource.html">ISourceDefinitionSource</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Standard.html">EventStore.Projections.Core.Standard</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
   <h5 id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CategorizeEventsByStreamPath : object, IProjectionStateHandler, IDisposable, ISourceDefinitionSource</code></pre>
+    <pre><code class="lang-csharp hljs">public class CategorizeEventsByStreamPath : IProjectionStateHandler, IDisposable, ISourceDefinitionSource</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath__ctor_System_String_Action_System_String_System_Object____.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.%23ctor(System.String%2CAction%7BSystem.String%2CSystem.Object%5B%5D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Standard/CategorizeEventsByStreamPath.cs/#L14">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath__ctor_" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.#ctor*"></a>
-  <h4 id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath__ctor_System_String_Action_System_String_System_Object____" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.#ctor(System.String,Action{System.String,System.Object[]})">CategorizeEventsByStreamPath(String, Action&lt;String, Object[]&gt;)</h4>
+  <h4 id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath__ctor_System_String_System_Action_System_String_System_Object____" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.#ctor(System.String,System.Action{System.String,System.Object[]})">CategorizeEventsByStreamPath(String, Action&lt;String, Object[]&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CategorizeEventsByStreamPath(string source, Action&lt;string, object[]&gt; logger)</code></pre>
   </div>
@@ -148,7 +170,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>[]&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>[]&gt;</td>
         <td><span class="parametername">logger</span></td>
         <td></td>
       </tr>
@@ -156,18 +178,15 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_ConfigureSourceProcessingStrategy_EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.ConfigureSourceProcessingStrategy(EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Standard/CategorizeEventsByStreamPath.cs/#L21">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_ConfigureSourceProcessingStrategy_" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.ConfigureSourceProcessingStrategy*"></a>
   <h4 id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_ConfigureSourceProcessingStrategy_EventStore_Projections_Core_Services_Processing_SourceDefinitionBuilder_" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.ConfigureSourceProcessingStrategy(EventStore.Projections.Core.Services.Processing.SourceDefinitionBuilder)">ConfigureSourceProcessingStrategy(SourceDefinitionBuilder)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void ConfigureSourceProcessingStrategy(SourceDefinitionBuilder builder)</code></pre>
   </div>
@@ -188,33 +207,27 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_Dispose.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Standard/CategorizeEventsByStreamPath.cs/#L93">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_Dispose_" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.Dispose*"></a>
   <h4 id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_Dispose" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_GetSourceDefinition.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.GetSourceDefinition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Standard/CategorizeEventsByStreamPath.cs/#L96">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_GetSourceDefinition_" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.GetSourceDefinition*"></a>
   <h4 id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_GetSourceDefinition" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.GetSourceDefinition">GetSourceDefinition()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IQuerySources GetSourceDefinition()</code></pre>
   </div>
@@ -233,18 +246,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_GetStatePartition_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_String_EventStore_Projections_Core_Services_Processing_ResolvedEvent_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.GetStatePartition(EventStore.Projections.Core.Services.Processing.CheckpointTag%2CSystem.String%2CEventStore.Projections.Core.Services.Processing.ResolvedEvent)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Standard/CategorizeEventsByStreamPath.cs/#L40">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_GetStatePartition_" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.GetStatePartition*"></a>
   <h4 id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_GetStatePartition_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_String_EventStore_Projections_Core_Services_Processing_ResolvedEvent_" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.GetStatePartition(EventStore.Projections.Core.Services.Processing.CheckpointTag,System.String,EventStore.Projections.Core.Services.Processing.ResolvedEvent)">GetStatePartition(CheckpointTag, String, ResolvedEvent)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string GetStatePartition(CheckpointTag eventPosition, string category, ResolvedEvent data)</code></pre>
   </div>
@@ -290,48 +300,39 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_Initialize.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.Initialize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Standard/CategorizeEventsByStreamPath.cs/#L34">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_Initialize_" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.Initialize*"></a>
   <h4 id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_Initialize" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.Initialize">Initialize()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Initialize()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_InitializeShared.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.InitializeShared%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Standard/CategorizeEventsByStreamPath.cs/#L37">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_InitializeShared_" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.InitializeShared*"></a>
   <h4 id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_InitializeShared" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.InitializeShared">InitializeShared()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void InitializeShared()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_Load_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.Load(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Standard/CategorizeEventsByStreamPath.cs/#L27">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_Load_" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.Load*"></a>
   <h4 id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_Load_System_String_" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.Load(System.String)">Load(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Load(string state)</code></pre>
   </div>
@@ -352,18 +353,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_LoadShared_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.LoadShared(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Standard/CategorizeEventsByStreamPath.cs/#L30">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_LoadShared_" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.LoadShared*"></a>
   <h4 id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_LoadShared_System_String_" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.LoadShared(System.String)">LoadShared(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void LoadShared(string state)</code></pre>
   </div>
@@ -384,18 +382,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_ProcessEvent_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_String_EventStore_Projections_Core_Services_Processing_ResolvedEvent_System_String__System_String__EventStore_Projections_Core_Services_Processing_EmittedEventEnvelope____.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.ProcessEvent(System.String%2CEventStore.Projections.Core.Services.Processing.CheckpointTag%2CSystem.String%2CEventStore.Projections.Core.Services.Processing.ResolvedEvent%2CSystem.String%40%2CSystem.String%40%2CEventStore.Projections.Core.Services.Processing.EmittedEventEnvelope%5B%5D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Standard/CategorizeEventsByStreamPath.cs/#L48">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_ProcessEvent_" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.ProcessEvent*"></a>
   <h4 id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_ProcessEvent_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_String_EventStore_Projections_Core_Services_Processing_ResolvedEvent_System_String__System_String__EventStore_Projections_Core_Services_Processing_EmittedEventEnvelope____" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.ProcessEvent(System.String,EventStore.Projections.Core.Services.Processing.CheckpointTag,System.String,EventStore.Projections.Core.Services.Processing.ResolvedEvent,System.String@,System.String@,EventStore.Projections.Core.Services.Processing.EmittedEventEnvelope[]@)">ProcessEvent(String, CheckpointTag, String, ResolvedEvent, out String, out String, out EmittedEventEnvelope[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool ProcessEvent(string partition, CheckpointTag eventPosition, string category1, ResolvedEvent data, out string newState, out string newSharedState, out EmittedEventEnvelope[] emittedEvents)</code></pre>
   </div>
@@ -461,18 +456,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_ProcessPartitionCreated_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Projections_Core_Services_Processing_ResolvedEvent_EventStore_Projections_Core_Services_Processing_EmittedEventEnvelope____.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.ProcessPartitionCreated(System.String%2CEventStore.Projections.Core.Services.Processing.CheckpointTag%2CEventStore.Projections.Core.Services.Processing.ResolvedEvent%2CEventStore.Projections.Core.Services.Processing.EmittedEventEnvelope%5B%5D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Standard/CategorizeEventsByStreamPath.cs/#L79">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_ProcessPartitionCreated_" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.ProcessPartitionCreated*"></a>
   <h4 id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_ProcessPartitionCreated_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Projections_Core_Services_Processing_ResolvedEvent_EventStore_Projections_Core_Services_Processing_EmittedEventEnvelope____" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.ProcessPartitionCreated(System.String,EventStore.Projections.Core.Services.Processing.CheckpointTag,EventStore.Projections.Core.Services.Processing.ResolvedEvent,EventStore.Projections.Core.Services.Processing.EmittedEventEnvelope[]@)">ProcessPartitionCreated(String, CheckpointTag, ResolvedEvent, out EmittedEventEnvelope[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool ProcessPartitionCreated(string partition, CheckpointTag createPosition, ResolvedEvent data, out EmittedEventEnvelope[] emittedEvents)</code></pre>
   </div>
@@ -523,18 +515,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_ProcessPartitionDeleted_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_String__.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.ProcessPartitionDeleted(System.String%2CEventStore.Projections.Core.Services.Processing.CheckpointTag%2CSystem.String%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Standard/CategorizeEventsByStreamPath.cs/#L85">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_ProcessPartitionDeleted_" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.ProcessPartitionDeleted*"></a>
   <h4 id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_ProcessPartitionDeleted_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_String__" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.ProcessPartitionDeleted(System.String,EventStore.Projections.Core.Services.Processing.CheckpointTag,System.String@)">ProcessPartitionDeleted(String, CheckpointTag, out String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool ProcessPartitionDeleted(string partition, CheckpointTag deletePosition, out string newState)</code></pre>
   </div>
@@ -580,18 +569,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_TransformCatalogEvent_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Projections_Core_Services_Processing_ResolvedEvent_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.TransformCatalogEvent(EventStore.Projections.Core.Services.Processing.CheckpointTag%2CEventStore.Projections.Core.Services.Processing.ResolvedEvent)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Standard/CategorizeEventsByStreamPath.cs/#L44">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_TransformCatalogEvent_" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.TransformCatalogEvent*"></a>
   <h4 id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_TransformCatalogEvent_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Projections_Core_Services_Processing_ResolvedEvent_" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.TransformCatalogEvent(EventStore.Projections.Core.Services.Processing.CheckpointTag,EventStore.Projections.Core.Services.Processing.ResolvedEvent)">TransformCatalogEvent(CheckpointTag, ResolvedEvent)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string TransformCatalogEvent(CheckpointTag eventPosition, ResolvedEvent data)</code></pre>
   </div>
@@ -632,18 +618,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_TransformStateToResult.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.TransformStateToResult%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Standard/CategorizeEventsByStreamPath.cs/#L89">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_TransformStateToResult_" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.TransformStateToResult*"></a>
   <h4 id="EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath_TransformStateToResult" data-uid="EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath.TransformStateToResult">TransformStateToResult()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string TransformStateToResult()</code></pre>
   </div>
@@ -667,7 +650,7 @@
       <a class="xref" href="EventStore.Projections.Core.Services.IProjectionStateHandler.html">IProjectionStateHandler</a>
   </div>
   <div>
-      <span class="xref">IDisposable</span>
+      <span class="xref">System.IDisposable</span>
   </div>
   <div>
       <a class="xref" href="EventStore.Projections.Core.Services.ISourceDefinitionSource.html">ISourceDefinitionSource</a>
@@ -681,6 +664,12 @@
   </div>
   <div>
       <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.ProjectionStateHandlerTestExtensions.html#EventStore_Projections_Core_Services_ProjectionStateHandlerTestExtensions_ProcessEvent_EventStore_Projections_Core_Services_IProjectionStateHandler_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_String_System_String_System_String_System_Guid_System_Int64_System_String_System_String_System_String__EventStore_Projections_Core_Services_Processing_EmittedEventEnvelope____System_Boolean_">ProjectionStateHandlerTestExtensions.ProcessEvent(IProjectionStateHandler, String, CheckpointTag, String, String, String, Guid, Int64, String, String, out String, out EmittedEventEnvelope[], Boolean)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.ProjectionStateHandlerTestExtensions.html#EventStore_Projections_Core_Services_ProjectionStateHandlerTestExtensions_ProcessEvent_EventStore_Projections_Core_Services_IProjectionStateHandler_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_String_System_String_System_String_System_Guid_System_Int64_System_String_System_String_System_String__System_String__EventStore_Projections_Core_Services_Processing_EmittedEventEnvelope____System_Boolean_">ProjectionStateHandlerTestExtensions.ProcessEvent(IProjectionStateHandler, String, CheckpointTag, String, String, String, Guid, Int64, String, String, out String, out String, out EmittedEventEnvelope[], Boolean)</a>
   </div>
   <div>
       <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_Serialize__1___0_">ProtobufExtensions.Serialize&lt;T&gt;(T)</a>
@@ -697,12 +686,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Standard_CategorizeEventsByStreamPath.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Standard.CategorizeEventsByStreamPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Standard/CategorizeEventsByStreamPath.cs/#L10" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

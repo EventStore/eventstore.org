@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -104,11 +105,35 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">BufferManager</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.BufferManagement.html">EventStore.BufferManagement</a></h6>
   <h6><strong>Assembly</strong>: EventStore.BufferManagement.dll</h6>
   <h5 id="EventStore_BufferManagement_BufferManager_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class BufferManager : object</code></pre>
+    <pre><code class="lang-csharp hljs">public class BufferManager</code></pre>
   </div>
   <h5 id="EventStore_BufferManagement_BufferManager_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>When used in an async call a buffer is pinned. Large numbers of pinned buffers
@@ -124,19 +149,16 @@ that were in the normal heap.</p>
 </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_BufferManagement_BufferManager__ctor_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.BufferManagement.BufferManager.%23ctor(System.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.BufferManagement/BufferManager.cs/#L94">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_BufferManagement_BufferManager__ctor_" data-uid="EventStore.BufferManagement.BufferManager.#ctor*"></a>
   <h4 id="EventStore_BufferManagement_BufferManager__ctor_System_Int32_System_Int32_" data-uid="EventStore.BufferManagement.BufferManager.#ctor(System.Int32,System.Int32)">BufferManager(Int32, Int32)</h4>
   <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="EventStore.BufferManagement.BufferManager.html">BufferManager</a> object</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public BufferManager(int segmentChunks, int chunkSize)</code></pre>
   </div>
@@ -164,19 +186,16 @@ that were in the normal heap.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_BufferManagement_BufferManager__ctor_System_Int32_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.BufferManagement.BufferManager.%23ctor(System.Int32%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.BufferManagement/BufferManager.cs/#L104">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_BufferManagement_BufferManager__ctor_" data-uid="EventStore.BufferManagement.BufferManager.#ctor*"></a>
   <h4 id="EventStore_BufferManagement_BufferManager__ctor_System_Int32_System_Int32_System_Int32_" data-uid="EventStore.BufferManagement.BufferManager.#ctor(System.Int32,System.Int32,System.Int32)">BufferManager(Int32, Int32, Int32)</h4>
   <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="EventStore.BufferManagement.BufferManager.html">BufferManager</a> object</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public BufferManager(int segmentChunks, int chunkSize, int initialSegments)</code></pre>
   </div>
@@ -210,19 +229,16 @@ that were in the normal heap.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_BufferManagement_BufferManager__ctor_System_Int32_System_Int32_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.BufferManagement.BufferManager.%23ctor(System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.BufferManagement/BufferManager.cs/#L115">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_BufferManagement_BufferManager__ctor_" data-uid="EventStore.BufferManagement.BufferManager.#ctor*"></a>
   <h4 id="EventStore_BufferManagement_BufferManager__ctor_System_Int32_System_Int32_System_Int32_System_Boolean_" data-uid="EventStore.BufferManagement.BufferManager.#ctor(System.Int32,System.Int32,System.Int32,System.Boolean)">BufferManager(Int32, Int32, Int32, Boolean)</h4>
   <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="EventStore.BufferManagement.BufferManager.html">BufferManager</a> object</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public BufferManager(int segmentChunks, int chunkSize, int initialSegments, bool allowedToCreateMemory)</code></pre>
   </div>
@@ -264,19 +280,16 @@ that were in the normal heap.</p>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_BufferManagement_BufferManager_AvailableBuffers.md&amp;value=---%0Auid%3A%20EventStore.BufferManagement.BufferManager.AvailableBuffers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.BufferManagement/BufferManager.cs/#L78">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_BufferManagement_BufferManager_AvailableBuffers_" data-uid="EventStore.BufferManagement.BufferManager.AvailableBuffers*"></a>
   <h4 id="EventStore_BufferManagement_BufferManager_AvailableBuffers" data-uid="EventStore.BufferManagement.BufferManager.AvailableBuffers">AvailableBuffers</h4>
   <div class="markdown level1 summary"><p>The current number of buffers available</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int AvailableBuffers { get; }</code></pre>
   </div>
@@ -285,28 +298,23 @@ that were in the normal heap.</p>
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_BufferManagement_BufferManager_ChunkSize.md&amp;value=---%0Auid%3A%20EventStore.BufferManagement.BufferManager.ChunkSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.BufferManagement/BufferManager.cs/#L63">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_BufferManagement_BufferManager_ChunkSize_" data-uid="EventStore.BufferManagement.BufferManager.ChunkSize*"></a>
   <h4 id="EventStore_BufferManagement_BufferManager_ChunkSize" data-uid="EventStore.BufferManagement.BufferManager.ChunkSize">ChunkSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int ChunkSize { get; }</code></pre>
   </div>
@@ -315,29 +323,24 @@ that were in the normal heap.</p>
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_BufferManagement_BufferManager_Default.md&amp;value=---%0Auid%3A%20EventStore.BufferManagement.BufferManager.Default%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.BufferManagement/BufferManager.cs/#L44">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_BufferManagement_BufferManager_Default_" data-uid="EventStore.BufferManagement.BufferManager.Default*"></a>
   <h4 id="EventStore_BufferManagement_BufferManager_Default" data-uid="EventStore.BufferManagement.BufferManager.Default">Default</h4>
   <div class="markdown level1 summary"><p>Gets the default buffer manager</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static BufferManager Default { get; }</code></pre>
   </div>
@@ -346,32 +349,26 @@ that were in the normal heap.</p>
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.BufferManagement.BufferManager.html">BufferManager</a></td>
-        <td><p>The default buffer manager.</p>
-</td>
       </tr>
     </tbody>
   </table>
   <h5 id="EventStore_BufferManagement_BufferManager_Default_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>You should only be using this method if you don&apos;t want to manage buffers on your own.</p>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_BufferManagement_BufferManager_SegmentChunksCount.md&amp;value=---%0Auid%3A%20EventStore.BufferManagement.BufferManager.SegmentChunksCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.BufferManagement/BufferManager.cs/#L71">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_BufferManagement_BufferManager_SegmentChunksCount_" data-uid="EventStore.BufferManagement.BufferManager.SegmentChunksCount*"></a>
   <h4 id="EventStore_BufferManagement_BufferManager_SegmentChunksCount" data-uid="EventStore.BufferManagement.BufferManager.SegmentChunksCount">SegmentChunksCount</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int SegmentChunksCount { get; }</code></pre>
   </div>
@@ -380,28 +377,23 @@ that were in the normal heap.</p>
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_BufferManagement_BufferManager_SegmentsCount.md&amp;value=---%0Auid%3A%20EventStore.BufferManagement.BufferManager.SegmentsCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.BufferManagement/BufferManager.cs/#L67">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_BufferManagement_BufferManager_SegmentsCount_" data-uid="EventStore.BufferManagement.BufferManager.SegmentsCount*"></a>
   <h4 id="EventStore_BufferManagement_BufferManager_SegmentsCount" data-uid="EventStore.BufferManagement.BufferManager.SegmentsCount">SegmentsCount</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int SegmentsCount { get; }</code></pre>
   </div>
@@ -410,29 +402,24 @@ that were in the normal heap.</p>
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_BufferManagement_BufferManager_TotalBufferSize.md&amp;value=---%0Auid%3A%20EventStore.BufferManagement.BufferManager.TotalBufferSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.BufferManagement/BufferManager.cs/#L85">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_BufferManagement_BufferManager_TotalBufferSize_" data-uid="EventStore.BufferManagement.BufferManager.TotalBufferSize*"></a>
   <h4 id="EventStore_BufferManagement_BufferManager_TotalBufferSize" data-uid="EventStore.BufferManagement.BufferManager.TotalBufferSize">TotalBufferSize</h4>
   <div class="markdown level1 summary"><p>The total size of all buffers</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int TotalBufferSize { get; }</code></pre>
   </div>
@@ -441,31 +428,26 @@ that were in the normal heap.</p>
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_BufferManagement_BufferManager_CheckIn_ArraySegment_System_Byte__.md&amp;value=---%0Auid%3A%20EventStore.BufferManagement.BufferManager.CheckIn(ArraySegment%7BSystem.Byte%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.BufferManagement/BufferManager.cs/#L227">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_BufferManagement_BufferManager_CheckIn_" data-uid="EventStore.BufferManagement.BufferManager.CheckIn*"></a>
-  <h4 id="EventStore_BufferManagement_BufferManager_CheckIn_ArraySegment_System_Byte__" data-uid="EventStore.BufferManagement.BufferManager.CheckIn(ArraySegment{System.Byte})">CheckIn(ArraySegment&lt;Byte&gt;)</h4>
+  <h4 id="EventStore_BufferManagement_BufferManager_CheckIn_System_ArraySegment_System_Byte__" data-uid="EventStore.BufferManagement.BufferManager.CheckIn(System.ArraySegment{System.Byte})">CheckIn(ArraySegment&lt;Byte&gt;)</h4>
   <div class="markdown level1 summary"><p>Returns a buffer to the control of the manager</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void CheckIn(ArraySegment&lt;byte&gt; buffer)</code></pre>
   </div>
@@ -480,30 +462,27 @@ that were in the normal heap.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="xref">System.ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
         <td><span class="parametername">buffer</span></td>
-        <td><p>The <see cref="!:ArraySegment&lt;T>"></see> to return to the cache</p>
+        <td><p>The <span class="xref">System.ArraySegment&lt;T&gt;</span> to return to the cache</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="EventStore_BufferManagement_BufferManager_CheckIn_ArraySegment_System_Byte___remarks">Remarks</h5>
+  <h5 id="EventStore_BufferManagement_BufferManager_CheckIn_System_ArraySegment_System_Byte___remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>It is the client&apos;s responsibility to return the buffer to the manger by
-calling <a class="xref" href="EventStore.BufferManagement.BufferManager.html#EventStore_BufferManagement_BufferManager_CheckIn_ArraySegment_System_Byte__">CheckIn(ArraySegment&lt;Byte&gt;)</a> on the buffer</p>
+calling <a class="xref" href="EventStore.BufferManagement.BufferManager.html#EventStore_BufferManagement_BufferManager_CheckIn_System_ArraySegment_System_Byte__">CheckIn(ArraySegment&lt;Byte&gt;)</a> on the buffer</p>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_BufferManagement_BufferManager_CheckIn_IEnumerable_ArraySegment_System_Byte___.md&amp;value=---%0Auid%3A%20EventStore.BufferManagement.BufferManager.CheckIn(IEnumerable%7BArraySegment%7BSystem.Byte%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.BufferManagement/BufferManager.cs/#L240">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_BufferManagement_BufferManager_CheckIn_" data-uid="EventStore.BufferManagement.BufferManager.CheckIn*"></a>
-  <h4 id="EventStore_BufferManagement_BufferManager_CheckIn_IEnumerable_ArraySegment_System_Byte___" data-uid="EventStore.BufferManagement.BufferManager.CheckIn(IEnumerable{ArraySegment{System.Byte}})">CheckIn(IEnumerable&lt;ArraySegment&lt;Byte&gt;&gt;)</h4>
+  <h4 id="EventStore_BufferManagement_BufferManager_CheckIn_System_Collections_Generic_IEnumerable_System_ArraySegment_System_Byte___" data-uid="EventStore.BufferManagement.BufferManager.CheckIn(System.Collections.Generic.IEnumerable{System.ArraySegment{System.Byte}})">CheckIn(IEnumerable&lt;ArraySegment&lt;Byte&gt;&gt;)</h4>
   <div class="markdown level1 summary"><p>Returns a set of buffers to the control of the manager</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void CheckIn(IEnumerable&lt;ArraySegment&lt;byte&gt;&gt; buffersToReturn)</code></pre>
   </div>
@@ -518,30 +497,27 @@ calling <a class="xref" href="EventStore.BufferManagement.BufferManager.html#Eve
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;&gt;</td>
         <td><span class="parametername">buffersToReturn</span></td>
-        <td><p>The <see cref="!:ArraySegment&lt;T>"></see> to return to the cache</p>
+        <td><p>The <span class="xref">System.ArraySegment&lt;T&gt;</span> to return to the cache</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="EventStore_BufferManagement_BufferManager_CheckIn_IEnumerable_ArraySegment_System_Byte____remarks">Remarks</h5>
+  <h5 id="EventStore_BufferManagement_BufferManager_CheckIn_System_Collections_Generic_IEnumerable_System_ArraySegment_System_Byte____remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>It is the client&apos;s responsibility to return the buffer to the manger by
-calling <a class="xref" href="EventStore.BufferManagement.BufferManager.html#EventStore_BufferManagement_BufferManager_CheckIn_IEnumerable_ArraySegment_System_Byte___">CheckIn(IEnumerable&lt;ArraySegment&lt;Byte&gt;&gt;)</a> on the buffer</p>
+calling <a class="xref" href="EventStore.BufferManagement.BufferManager.html#EventStore_BufferManagement_BufferManager_CheckIn_System_Collections_Generic_IEnumerable_System_ArraySegment_System_Byte___">CheckIn(IEnumerable&lt;ArraySegment&lt;Byte&gt;&gt;)</a> on the buffer</p>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_BufferManagement_BufferManager_CheckOut.md&amp;value=---%0Auid%3A%20EventStore.BufferManagement.BufferManager.CheckOut%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.BufferManagement/BufferManager.cs/#L169">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_BufferManagement_BufferManager_CheckOut_" data-uid="EventStore.BufferManagement.BufferManager.CheckOut*"></a>
   <h4 id="EventStore_BufferManagement_BufferManager_CheckOut" data-uid="EventStore.BufferManagement.BufferManager.CheckOut">CheckOut()</h4>
   <div class="markdown level1 summary"><p>Checks out a buffer from the manager</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ArraySegment&lt;byte&gt; CheckOut()</code></pre>
   </div>
@@ -555,29 +531,26 @@ calling <a class="xref" href="EventStore.BufferManagement.BufferManager.html#Eve
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
-        <td><p>A <see cref="!:ArraySegment&lt;T>"></see> that can be used as a buffer</p>
+        <td><span class="xref">System.ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><p>A <span class="xref">System.ArraySegment&lt;T&gt;</span> that can be used as a buffer</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h5 id="EventStore_BufferManagement_BufferManager_CheckOut_remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>It is the client&apos;s responsibility to return the buffer to the manager by
-calling <a class="xref" href="EventStore.BufferManagement.BufferManager.html#EventStore_BufferManagement_BufferManager_CheckIn_ArraySegment_System_Byte__">CheckIn(ArraySegment&lt;Byte&gt;)</a> on the buffer</p>
+calling <a class="xref" href="EventStore.BufferManagement.BufferManager.html#EventStore_BufferManagement_BufferManager_CheckIn_System_ArraySegment_System_Byte__">CheckIn(ArraySegment&lt;Byte&gt;)</a> on the buffer</p>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_BufferManagement_BufferManager_CheckOut_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.BufferManagement.BufferManager.CheckOut(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.BufferManagement/BufferManager.cs/#L190">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_BufferManagement_BufferManager_CheckOut_" data-uid="EventStore.BufferManagement.BufferManager.CheckOut*"></a>
   <h4 id="EventStore_BufferManagement_BufferManager_CheckOut_System_Int32_" data-uid="EventStore.BufferManagement.BufferManager.CheckOut(System.Int32)">CheckOut(Int32)</h4>
   <div class="markdown level1 summary"><p>Checks out a buffer from the manager</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IEnumerable&lt;ArraySegment&lt;byte&gt;&gt; CheckOut(int toGet)</code></pre>
   </div>
@@ -608,29 +581,26 @@ calling <a class="xref" href="EventStore.BufferManagement.BufferManager.html#Eve
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;&gt;</td>
-        <td><p>A <see cref="!:ArraySegment&lt;T>"></see> that can be used as a buffer</p>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;&gt;</td>
+        <td><p>A <span class="xref">System.ArraySegment&lt;T&gt;</span> that can be used as a buffer</p>
 </td>
       </tr>
     </tbody>
   </table>
   <h5 id="EventStore_BufferManagement_BufferManager_CheckOut_System_Int32__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>It is the client&apos;s responsibility to return the buffer to the manger by
-calling <a class="xref" href="EventStore.BufferManagement.BufferManager.html#EventStore_BufferManagement_BufferManager_CheckIn_IEnumerable_ArraySegment_System_Byte___">CheckIn(IEnumerable&lt;ArraySegment&lt;Byte&gt;&gt;)</a> on the buffer</p>
+calling <a class="xref" href="EventStore.BufferManagement.BufferManager.html#EventStore_BufferManagement_BufferManager_CheckIn_System_Collections_Generic_IEnumerable_System_ArraySegment_System_Byte___">CheckIn(IEnumerable&lt;ArraySegment&lt;Byte&gt;&gt;)</a> on the buffer</p>
 </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_BufferManagement_BufferManager_SetDefaultBufferManager_EventStore_BufferManagement_BufferManager_.md&amp;value=---%0Auid%3A%20EventStore.BufferManagement.BufferManager.SetDefaultBufferManager(EventStore.BufferManagement.BufferManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.BufferManagement/BufferManager.cs/#L57">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_BufferManagement_BufferManager_SetDefaultBufferManager_" data-uid="EventStore.BufferManagement.BufferManager.SetDefaultBufferManager*"></a>
   <h4 id="EventStore_BufferManagement_BufferManager_SetDefaultBufferManager_EventStore_BufferManagement_BufferManager_" data-uid="EventStore.BufferManagement.BufferManager.SetDefaultBufferManager(EventStore.BufferManagement.BufferManager)">SetDefaultBufferManager(BufferManager)</h4>
   <div class="markdown level1 summary"><p>Sets the default buffer manager.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void SetDefaultBufferManager(BufferManager manager)</code></pre>
   </div>
@@ -677,12 +647,6 @@ calling <a class="xref" href="EventStore.BufferManagement.BufferManager.html#Eve
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_BufferManagement_BufferManager.md&amp;value=---%0Auid%3A%20EventStore.BufferManagement.BufferManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.BufferManagement/BufferManager.cs/#L23" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -114,26 +115,47 @@
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.SubscriptionMessage.CheckPollTimeout.html">SubscriptionMessage.CheckPollTimeout</a>&gt;</div>
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.StorageMessage.EventCommitted.html">StorageMessage.EventCommitted</a>&gt;</div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.html">EventStore.Core.Services</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Services_SubscriptionsService_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SubscriptionsService : object, IHandle&lt;SystemMessage.SystemStart&gt;, IHandle&lt;SystemMessage.BecomeShuttingDown&gt;, IHandle&lt;TcpMessage.ConnectionClosed&gt;, IHandle&lt;ClientMessage.SubscribeToStream&gt;, IHandle&lt;ClientMessage.UnsubscribeFromStream&gt;, IHandle&lt;SubscriptionMessage.PollStream&gt;, IHandle&lt;SubscriptionMessage.CheckPollTimeout&gt;, IHandle&lt;StorageMessage.EventCommitted&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class SubscriptionsService : IHandle&lt;SystemMessage.SystemStart&gt;, IHandle&lt;SystemMessage.BecomeShuttingDown&gt;, IHandle&lt;TcpMessage.ConnectionClosed&gt;, IHandle&lt;ClientMessage.SubscribeToStream&gt;, IHandle&lt;ClientMessage.UnsubscribeFromStream&gt;, IHandle&lt;SubscriptionMessage.PollStream&gt;, IHandle&lt;SubscriptionMessage.CheckPollTimeout&gt;, IHandle&lt;StorageMessage.EventCommitted&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_SubscriptionsService__ctor_EventStore_Core_Bus_IPublisher_EventStore_Core_Bus_IQueuedHandler_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.SubscriptionsService.%23ctor(EventStore.Core.Bus.IPublisher%2CEventStore.Core.Bus.IQueuedHandler%2CEventStore.Core.Services.Storage.ReaderIndex.IReadIndex)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/SubscriptionsService.cs/#L51">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_SubscriptionsService__ctor_" data-uid="EventStore.Core.Services.SubscriptionsService.#ctor*"></a>
   <h4 id="EventStore_Core_Services_SubscriptionsService__ctor_EventStore_Core_Bus_IPublisher_EventStore_Core_Bus_IQueuedHandler_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_" data-uid="EventStore.Core.Services.SubscriptionsService.#ctor(EventStore.Core.Bus.IPublisher,EventStore.Core.Bus.IQueuedHandler,EventStore.Core.Services.Storage.ReaderIndex.IReadIndex)">SubscriptionsService(IPublisher, IQueuedHandler, IReadIndex)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SubscriptionsService(IPublisher bus, IQueuedHandler queuedHandler, IReadIndex readIndex)</code></pre>
   </div>
@@ -166,49 +188,41 @@
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_SubscriptionsService_AllStreamsSubscriptionId.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.SubscriptionsService.AllStreamsSubscriptionId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/SubscriptionsService.cs/#L30">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_SubscriptionsService_AllStreamsSubscriptionId" data-uid="EventStore.Core.Services.SubscriptionsService.AllStreamsSubscriptionId">AllStreamsSubscriptionId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string AllStreamsSubscriptionId = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const string AllStreamsSubscriptionId = &quot;&quot;</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_SubscriptionsService_Handle_EventStore_Core_Messages_ClientMessage_SubscribeToStream_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.SubscriptionsService.Handle(EventStore.Core.Messages.ClientMessage.SubscribeToStream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/SubscriptionsService.cs/#L102">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_SubscriptionsService_Handle_" data-uid="EventStore.Core.Services.SubscriptionsService.Handle*"></a>
   <h4 id="EventStore_Core_Services_SubscriptionsService_Handle_EventStore_Core_Messages_ClientMessage_SubscribeToStream_" data-uid="EventStore.Core.Services.SubscriptionsService.Handle(EventStore.Core.Messages.ClientMessage.SubscribeToStream)">Handle(ClientMessage.SubscribeToStream)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.SubscribeToStream msg)</code></pre>
   </div>
@@ -229,18 +243,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_SubscriptionsService_Handle_EventStore_Core_Messages_ClientMessage_UnsubscribeFromStream_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.SubscriptionsService.Handle(EventStore.Core.Messages.ClientMessage.UnsubscribeFromStream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/SubscriptionsService.cs/#L123">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_SubscriptionsService_Handle_" data-uid="EventStore.Core.Services.SubscriptionsService.Handle*"></a>
   <h4 id="EventStore_Core_Services_SubscriptionsService_Handle_EventStore_Core_Messages_ClientMessage_UnsubscribeFromStream_" data-uid="EventStore.Core.Services.SubscriptionsService.Handle(EventStore.Core.Messages.ClientMessage.UnsubscribeFromStream)">Handle(ClientMessage.UnsubscribeFromStream)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.UnsubscribeFromStream message)</code></pre>
   </div>
@@ -261,18 +272,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_SubscriptionsService_Handle_EventStore_Core_Messages_StorageMessage_EventCommitted_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.SubscriptionsService.Handle(EventStore.Core.Messages.StorageMessage.EventCommitted)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/SubscriptionsService.cs/#L244">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_SubscriptionsService_Handle_" data-uid="EventStore.Core.Services.SubscriptionsService.Handle*"></a>
   <h4 id="EventStore_Core_Services_SubscriptionsService_Handle_EventStore_Core_Messages_StorageMessage_EventCommitted_" data-uid="EventStore.Core.Services.SubscriptionsService.Handle(EventStore.Core.Messages.StorageMessage.EventCommitted)">Handle(StorageMessage.EventCommitted)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(StorageMessage.EventCommitted message)</code></pre>
   </div>
@@ -293,18 +301,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_SubscriptionsService_Handle_EventStore_Core_Messages_SubscriptionMessage_CheckPollTimeout_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.SubscriptionsService.Handle(EventStore.Core.Messages.SubscriptionMessage.CheckPollTimeout)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/SubscriptionsService.cs/#L195">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_SubscriptionsService_Handle_" data-uid="EventStore.Core.Services.SubscriptionsService.Handle*"></a>
   <h4 id="EventStore_Core_Services_SubscriptionsService_Handle_EventStore_Core_Messages_SubscriptionMessage_CheckPollTimeout_" data-uid="EventStore.Core.Services.SubscriptionsService.Handle(EventStore.Core.Messages.SubscriptionMessage.CheckPollTimeout)">Handle(SubscriptionMessage.CheckPollTimeout)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(SubscriptionMessage.CheckPollTimeout message)</code></pre>
   </div>
@@ -325,18 +330,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_SubscriptionsService_Handle_EventStore_Core_Messages_SubscriptionMessage_PollStream_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.SubscriptionsService.Handle(EventStore.Core.Messages.SubscriptionMessage.PollStream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/SubscriptionsService.cs/#L170">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_SubscriptionsService_Handle_" data-uid="EventStore.Core.Services.SubscriptionsService.Handle*"></a>
   <h4 id="EventStore_Core_Services_SubscriptionsService_Handle_EventStore_Core_Messages_SubscriptionMessage_PollStream_" data-uid="EventStore.Core.Services.SubscriptionsService.Handle(EventStore.Core.Messages.SubscriptionMessage.PollStream)">Handle(SubscriptionMessage.PollStream)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(SubscriptionMessage.PollStream message)</code></pre>
   </div>
@@ -357,18 +359,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_SubscriptionsService_Handle_EventStore_Core_Messages_SystemMessage_BecomeShuttingDown_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.SubscriptionsService.Handle(EventStore.Core.Messages.SystemMessage.BecomeShuttingDown)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/SubscriptionsService.cs/#L68">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_SubscriptionsService_Handle_" data-uid="EventStore.Core.Services.SubscriptionsService.Handle*"></a>
   <h4 id="EventStore_Core_Services_SubscriptionsService_Handle_EventStore_Core_Messages_SystemMessage_BecomeShuttingDown_" data-uid="EventStore.Core.Services.SubscriptionsService.Handle(EventStore.Core.Messages.SystemMessage.BecomeShuttingDown)">Handle(SystemMessage.BecomeShuttingDown)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(SystemMessage.BecomeShuttingDown message)</code></pre>
   </div>
@@ -389,18 +388,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_SubscriptionsService_Handle_EventStore_Core_Messages_SystemMessage_SystemStart_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.SubscriptionsService.Handle(EventStore.Core.Messages.SystemMessage.SystemStart)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/SubscriptionsService.cs/#L62">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_SubscriptionsService_Handle_" data-uid="EventStore.Core.Services.SubscriptionsService.Handle*"></a>
   <h4 id="EventStore_Core_Services_SubscriptionsService_Handle_EventStore_Core_Messages_SystemMessage_SystemStart_" data-uid="EventStore.Core.Services.SubscriptionsService.Handle(EventStore.Core.Messages.SystemMessage.SystemStart)">Handle(SystemMessage.SystemStart)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(SystemMessage.SystemStart message)</code></pre>
   </div>
@@ -421,18 +417,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_SubscriptionsService_Handle_EventStore_Core_Messages_TcpMessage_ConnectionClosed_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.SubscriptionsService.Handle(EventStore.Core.Messages.TcpMessage.ConnectionClosed)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/SubscriptionsService.cs/#L77">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_SubscriptionsService_Handle_" data-uid="EventStore.Core.Services.SubscriptionsService.Handle*"></a>
   <h4 id="EventStore_Core_Services_SubscriptionsService_Handle_EventStore_Core_Messages_TcpMessage_ConnectionClosed_" data-uid="EventStore.Core.Services.SubscriptionsService.Handle(EventStore.Core.Messages.TcpMessage.ConnectionClosed)">Handle(TcpMessage.ConnectionClosed)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(TcpMessage.ConnectionClosed message)</code></pre>
   </div>
@@ -503,12 +496,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_SubscriptionsService.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.SubscriptionsService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/SubscriptionsService.cs/#L22" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

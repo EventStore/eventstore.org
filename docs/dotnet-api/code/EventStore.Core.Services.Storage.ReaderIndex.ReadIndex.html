@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -105,7 +106,32 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
     <div><a class="xref" href="EventStore.Core.Services.Storage.ReaderIndex.IReadIndex.html">IReadIndex</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.Storage.ReaderIndex.html">EventStore.Core.Services.Storage.ReaderIndex</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
@@ -115,18 +141,15 @@
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_ReadIndex__ctor_EventStore_Core_Bus_IPublisher_EventStore_Core_DataStructures_ObjectPool_EventStore_Core_TransactionLog_ITransactionFileReader__EventStore_Core_Index_ITableIndex_System_Int32_System_Boolean_System_Int64_System_Int32_System_Boolean_EventStore_Core_TransactionLog_Checkpoint_ICheckpoint_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.%23ctor(EventStore.Core.Bus.IPublisher%2CEventStore.Core.DataStructures.ObjectPool%7BEventStore.Core.TransactionLog.ITransactionFileReader%7D%2CEventStore.Core.Index.ITableIndex%2CSystem.Int32%2CSystem.Boolean%2CSystem.Int64%2CSystem.Int32%2CSystem.Boolean%2CEventStore.Core.TransactionLog.Checkpoint.ICheckpoint)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/ReadIndex.cs/#L38">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex__ctor_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.#ctor*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex__ctor_EventStore_Core_Bus_IPublisher_EventStore_Core_DataStructures_ObjectPool_EventStore_Core_TransactionLog_ITransactionFileReader__EventStore_Core_Index_ITableIndex_System_Int32_System_Boolean_System_Int64_System_Int32_System_Boolean_EventStore_Core_TransactionLog_Checkpoint_ICheckpoint_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.#ctor(EventStore.Core.Bus.IPublisher,EventStore.Core.DataStructures.ObjectPool{EventStore.Core.TransactionLog.ITransactionFileReader},EventStore.Core.Index.ITableIndex,System.Int32,System.Boolean,System.Int64,System.Int32,System.Boolean,EventStore.Core.TransactionLog.Checkpoint.ICheckpoint)">ReadIndex(IPublisher, ObjectPool&lt;ITransactionFileReader&gt;, ITableIndex, Int32, Boolean, Int64, Int32, Boolean, ICheckpoint)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ReadIndex(IPublisher bus, ObjectPool&lt;ITransactionFileReader&gt; readerPool, ITableIndex tableIndex, int streamInfoCacheCapacity, bool additionalCommitChecks, long metastreamMaxCount, int hashCollisionReadLimit, bool skipIndexScanOnReads, ICheckpoint replicationCheckpoint)</code></pre>
   </div>
@@ -189,18 +212,15 @@
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_IndexCommitter.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.IndexCommitter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/ReadIndex.cs/#L27">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_IndexCommitter_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.IndexCommitter*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_IndexCommitter" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.IndexCommitter">IndexCommitter</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IIndexCommitter IndexCommitter { get; }</code></pre>
   </div>
@@ -209,28 +229,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.Storage.ReaderIndex.IIndexCommitter.html">IIndexCommitter</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_IndexWriter.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.IndexWriter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/ReadIndex.cs/#L23">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_IndexWriter_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.IndexWriter*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_IndexWriter" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.IndexWriter">IndexWriter</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IIndexWriter IndexWriter { get; }</code></pre>
   </div>
@@ -239,28 +254,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.Storage.ReaderIndex.IIndexWriter.html">IIndexWriter</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_LastCommitPosition.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.LastCommitPosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/ReadIndex.cs/#L15">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_LastCommitPosition_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.LastCommitPosition*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_LastCommitPosition" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.LastCommitPosition">LastCommitPosition</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public long LastCommitPosition { get; }</code></pre>
   </div>
@@ -269,28 +279,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_LastReplicatedPosition.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.LastReplicatedPosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/ReadIndex.cs/#L19">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_LastReplicatedPosition_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.LastReplicatedPosition*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_LastReplicatedPosition" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.LastReplicatedPosition">LastReplicatedPosition</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public long LastReplicatedPosition { get; }</code></pre>
   </div>
@@ -299,60 +304,49 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_Close.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.Close%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/ReadIndex.cs/#L119">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_Close_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.Close*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_Close" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.Close">Close()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Close()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_Dispose.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/ReadIndex.cs/#L123">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_Dispose_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.Dispose*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_Dispose" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_GetEventStreamIdByTransactionId_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.GetEventStreamIdByTransactionId(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/ReadIndex.cs/#L93">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_GetEventStreamIdByTransactionId_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.GetEventStreamIdByTransactionId*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_GetEventStreamIdByTransactionId_System_Int64_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.GetEventStreamIdByTransactionId(System.Int64)">GetEventStreamIdByTransactionId(Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string GetEventStreamIdByTransactionId(long transactionId)</code></pre>
   </div>
@@ -390,18 +384,15 @@
   </table>
   <h3 id="eii">Explicit Interface Implementations
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_CheckStreamAccess_System_String_EventStore_Core_Services_Storage_ReaderIndex_StreamAccessType_IPrincipal_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore%23Core%23Services%23Storage%23ReaderIndex%23IReadIndex%23CheckStreamAccess(System.String%2CEventStore.Core.Services.Storage.ReaderIndex.StreamAccessType%2CIPrincipal)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/ReadIndex.cs/#L97">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_CheckStreamAccess_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#CheckStreamAccess*"></a>
-  <h4 id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_CheckStreamAccess_System_String_EventStore_Core_Services_Storage_ReaderIndex_StreamAccessType_IPrincipal_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#CheckStreamAccess(System.String,EventStore.Core.Services.Storage.ReaderIndex.StreamAccessType,IPrincipal)">IReadIndex.CheckStreamAccess(String, StreamAccessType, IPrincipal)</h4>
+  <h4 id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_CheckStreamAccess_System_String_EventStore_Core_Services_Storage_ReaderIndex_StreamAccessType_System_Security_Principal_IPrincipal_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#CheckStreamAccess(System.String,EventStore.Core.Services.Storage.ReaderIndex.StreamAccessType,System.Security.Principal.IPrincipal)">IReadIndex.CheckStreamAccess(String, StreamAccessType, IPrincipal)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">StreamAccess IReadIndex.CheckStreamAccess(string streamId, StreamAccessType streamAccessType, IPrincipal user)</code></pre>
   </div>
@@ -426,7 +417,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IPrincipal</span></td>
+        <td><span class="xref">System.Security.Principal.IPrincipal</span></td>
         <td><span class="parametername">user</span></td>
         <td></td>
       </tr>
@@ -447,18 +438,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_GetStatistics.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore%23Core%23Services%23Storage%23ReaderIndex%23IReadIndex%23GetStatistics%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/ReadIndex.cs/#L109">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_GetStatistics_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#GetStatistics*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_GetStatistics" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#GetStatistics">IReadIndex.GetStatistics()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">ReadIndexStats IReadIndex.GetStatistics()</code></pre>
   </div>
@@ -477,18 +465,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_GetStreamLastEventNumber_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore%23Core%23Services%23Storage%23ReaderIndex%23IReadIndex%23GetStreamLastEventNumber(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/ReadIndex.cs/#L85">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_GetStreamLastEventNumber_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#GetStreamLastEventNumber*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_GetStreamLastEventNumber_System_String_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#GetStreamLastEventNumber(System.String)">IReadIndex.GetStreamLastEventNumber(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">long IReadIndex.GetStreamLastEventNumber(string streamId)</code></pre>
   </div>
@@ -524,18 +509,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_GetStreamMetadata_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore%23Core%23Services%23Storage%23ReaderIndex%23IReadIndex%23GetStreamMetadata(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/ReadIndex.cs/#L89">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_GetStreamMetadata_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#GetStreamMetadata*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_GetStreamMetadata_System_String_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#GetStreamMetadata(System.String)">IReadIndex.GetStreamMetadata(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">StreamMetadata IReadIndex.GetStreamMetadata(string streamId)</code></pre>
   </div>
@@ -571,18 +553,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_Init_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore%23Core%23Services%23Storage%23ReaderIndex%23IReadIndex%23Init(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/ReadIndex.cs/#L65">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_Init_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#Init*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_Init_System_Int64_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#Init(System.Int64)">IReadIndex.Init(Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void IReadIndex.Init(long buildToPosition)</code></pre>
   </div>
@@ -603,18 +582,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_IsStreamDeleted_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore%23Core%23Services%23Storage%23ReaderIndex%23IReadIndex%23IsStreamDeleted(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/ReadIndex.cs/#L81">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_IsStreamDeleted_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#IsStreamDeleted*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_IsStreamDeleted_System_String_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#IsStreamDeleted(System.String)">IReadIndex.IsStreamDeleted(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">bool IReadIndex.IsStreamDeleted(string streamId)</code></pre>
   </div>
@@ -650,18 +626,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_ReadAllEventsBackward_EventStore_Core_Data_TFPos_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore%23Core%23Services%23Storage%23ReaderIndex%23IReadIndex%23ReadAllEventsBackward(EventStore.Core.Data.TFPos%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/ReadIndex.cs/#L105">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_ReadAllEventsBackward_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#ReadAllEventsBackward*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_ReadAllEventsBackward_EventStore_Core_Data_TFPos_System_Int32_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#ReadAllEventsBackward(EventStore.Core.Data.TFPos,System.Int32)">IReadIndex.ReadAllEventsBackward(TFPos, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IndexReadAllResult IReadIndex.ReadAllEventsBackward(TFPos pos, int maxCount)</code></pre>
   </div>
@@ -702,18 +675,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_ReadAllEventsForward_EventStore_Core_Data_TFPos_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore%23Core%23Services%23Storage%23ReaderIndex%23IReadIndex%23ReadAllEventsForward(EventStore.Core.Data.TFPos%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/ReadIndex.cs/#L101">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_ReadAllEventsForward_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#ReadAllEventsForward*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_ReadAllEventsForward_EventStore_Core_Data_TFPos_System_Int32_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#ReadAllEventsForward(EventStore.Core.Data.TFPos,System.Int32)">IReadIndex.ReadAllEventsForward(TFPos, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IndexReadAllResult IReadIndex.ReadAllEventsForward(TFPos pos, int maxCount)</code></pre>
   </div>
@@ -754,18 +724,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_ReadEvent_System_String_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore%23Core%23Services%23Storage%23ReaderIndex%23IReadIndex%23ReadEvent(System.String%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/ReadIndex.cs/#L69">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_ReadEvent_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#ReadEvent*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_ReadEvent_System_String_System_Int64_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#ReadEvent(System.String,System.Int64)">IReadIndex.ReadEvent(String, Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IndexReadEventResult IReadIndex.ReadEvent(string streamId, long eventNumber)</code></pre>
   </div>
@@ -806,18 +773,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_ReadStreamEventsBackward_System_String_System_Int64_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore%23Core%23Services%23Storage%23ReaderIndex%23IReadIndex%23ReadStreamEventsBackward(System.String%2CSystem.Int64%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/ReadIndex.cs/#L77">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_ReadStreamEventsBackward_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#ReadStreamEventsBackward*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_ReadStreamEventsBackward_System_String_System_Int64_System_Int32_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#ReadStreamEventsBackward(System.String,System.Int64,System.Int32)">IReadIndex.ReadStreamEventsBackward(String, Int64, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IndexReadStreamResult IReadIndex.ReadStreamEventsBackward(string streamId, long fromEventNumber, int maxCount)</code></pre>
   </div>
@@ -863,18 +827,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_ReadStreamEventsForward_System_String_System_Int64_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore%23Core%23Services%23Storage%23ReaderIndex%23IReadIndex%23ReadStreamEventsForward(System.String%2CSystem.Int64%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/ReadIndex.cs/#L73">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_ReadStreamEventsForward_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#ReadStreamEventsForward*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_ReadIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_ReadStreamEventsForward_System_String_System_Int64_System_Int32_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.ReadIndex.EventStore#Core#Services#Storage#ReaderIndex#IReadIndex#ReadStreamEventsForward(System.String,System.Int64,System.Int32)">IReadIndex.ReadStreamEventsForward(String, Int64, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">IndexReadStreamResult IReadIndex.ReadStreamEventsForward(string streamId, long fromEventNumber, int maxCount)</code></pre>
   </div>
@@ -922,6 +883,9 @@
   </table>
   <h3 id="implements">Implements</h3>
   <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <div>
       <a class="xref" href="EventStore.Core.Services.Storage.ReaderIndex.IReadIndex.html">IReadIndex</a>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
@@ -949,12 +913,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_ReadIndex.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.ReadIndex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/ReadIndex.cs/#L14" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

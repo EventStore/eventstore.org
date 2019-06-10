@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -114,26 +115,47 @@
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.TransactionCommitCompleted.html">ClientMessage.TransactionCommitCompleted</a>&gt;</div>
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.DeleteStreamCompleted.html">ClientMessage.DeleteStreamCompleted</a>&gt;</div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.html">EventStore.Core.Services</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Services_RequestForwardingService_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class RequestForwardingService : object, IHandle&lt;SystemMessage.SystemStart&gt;, IHandle&lt;SystemMessage.RequestForwardingTimerTick&gt;, IHandle&lt;ClientMessage.NotHandled&gt;, IHandle&lt;ClientMessage.WriteEventsCompleted&gt;, IHandle&lt;ClientMessage.TransactionStartCompleted&gt;, IHandle&lt;ClientMessage.TransactionWriteCompleted&gt;, IHandle&lt;ClientMessage.TransactionCommitCompleted&gt;, IHandle&lt;ClientMessage.DeleteStreamCompleted&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class RequestForwardingService : IHandle&lt;SystemMessage.SystemStart&gt;, IHandle&lt;SystemMessage.RequestForwardingTimerTick&gt;, IHandle&lt;ClientMessage.NotHandled&gt;, IHandle&lt;ClientMessage.WriteEventsCompleted&gt;, IHandle&lt;ClientMessage.TransactionStartCompleted&gt;, IHandle&lt;ClientMessage.TransactionWriteCompleted&gt;, IHandle&lt;ClientMessage.TransactionCommitCompleted&gt;, IHandle&lt;ClientMessage.DeleteStreamCompleted&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestForwardingService__ctor_EventStore_Core_Bus_IPublisher_EventStore_Core_Services_VNode_MessageForwardingProxy_TimeSpan_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestForwardingService.%23ctor(EventStore.Core.Bus.IPublisher%2CEventStore.Core.Services.VNode.MessageForwardingProxy%2CTimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestForwardingService.cs/#L23">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestForwardingService__ctor_" data-uid="EventStore.Core.Services.RequestForwardingService.#ctor*"></a>
-  <h4 id="EventStore_Core_Services_RequestForwardingService__ctor_EventStore_Core_Bus_IPublisher_EventStore_Core_Services_VNode_MessageForwardingProxy_TimeSpan_" data-uid="EventStore.Core.Services.RequestForwardingService.#ctor(EventStore.Core.Bus.IPublisher,EventStore.Core.Services.VNode.MessageForwardingProxy,TimeSpan)">RequestForwardingService(IPublisher, MessageForwardingProxy, TimeSpan)</h4>
+  <h4 id="EventStore_Core_Services_RequestForwardingService__ctor_EventStore_Core_Bus_IPublisher_EventStore_Core_Services_VNode_MessageForwardingProxy_System_TimeSpan_" data-uid="EventStore.Core.Services.RequestForwardingService.#ctor(EventStore.Core.Bus.IPublisher,EventStore.Core.Services.VNode.MessageForwardingProxy,System.TimeSpan)">RequestForwardingService(IPublisher, MessageForwardingProxy, TimeSpan)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public RequestForwardingService(IPublisher bus, MessageForwardingProxy forwardingProxy, TimeSpan tickInterval)</code></pre>
   </div>
@@ -158,7 +180,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">tickInterval</span></td>
         <td></td>
       </tr>
@@ -166,18 +188,15 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestForwardingService_Handle_EventStore_Core_Messages_ClientMessage_DeleteStreamCompleted_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestForwardingService.Handle(EventStore.Core.Messages.ClientMessage.DeleteStreamCompleted)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestForwardingService.cs/#L71">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestForwardingService_Handle_" data-uid="EventStore.Core.Services.RequestForwardingService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestForwardingService_Handle_EventStore_Core_Messages_ClientMessage_DeleteStreamCompleted_" data-uid="EventStore.Core.Services.RequestForwardingService.Handle(EventStore.Core.Messages.ClientMessage.DeleteStreamCompleted)">Handle(ClientMessage.DeleteStreamCompleted)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.DeleteStreamCompleted message)</code></pre>
   </div>
@@ -198,18 +217,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestForwardingService_Handle_EventStore_Core_Messages_ClientMessage_NotHandled_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestForwardingService.Handle(EventStore.Core.Messages.ClientMessage.NotHandled)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestForwardingService.cs/#L45">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestForwardingService_Handle_" data-uid="EventStore.Core.Services.RequestForwardingService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestForwardingService_Handle_EventStore_Core_Messages_ClientMessage_NotHandled_" data-uid="EventStore.Core.Services.RequestForwardingService.Handle(EventStore.Core.Messages.ClientMessage.NotHandled)">Handle(ClientMessage.NotHandled)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.NotHandled message)</code></pre>
   </div>
@@ -230,18 +246,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestForwardingService_Handle_EventStore_Core_Messages_ClientMessage_TransactionCommitCompleted_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestForwardingService.Handle(EventStore.Core.Messages.ClientMessage.TransactionCommitCompleted)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestForwardingService.cs/#L66">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestForwardingService_Handle_" data-uid="EventStore.Core.Services.RequestForwardingService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestForwardingService_Handle_EventStore_Core_Messages_ClientMessage_TransactionCommitCompleted_" data-uid="EventStore.Core.Services.RequestForwardingService.Handle(EventStore.Core.Messages.ClientMessage.TransactionCommitCompleted)">Handle(ClientMessage.TransactionCommitCompleted)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.TransactionCommitCompleted message)</code></pre>
   </div>
@@ -262,18 +275,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestForwardingService_Handle_EventStore_Core_Messages_ClientMessage_TransactionStartCompleted_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestForwardingService.Handle(EventStore.Core.Messages.ClientMessage.TransactionStartCompleted)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestForwardingService.cs/#L56">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestForwardingService_Handle_" data-uid="EventStore.Core.Services.RequestForwardingService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestForwardingService_Handle_EventStore_Core_Messages_ClientMessage_TransactionStartCompleted_" data-uid="EventStore.Core.Services.RequestForwardingService.Handle(EventStore.Core.Messages.ClientMessage.TransactionStartCompleted)">Handle(ClientMessage.TransactionStartCompleted)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.TransactionStartCompleted message)</code></pre>
   </div>
@@ -294,18 +304,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestForwardingService_Handle_EventStore_Core_Messages_ClientMessage_TransactionWriteCompleted_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestForwardingService.Handle(EventStore.Core.Messages.ClientMessage.TransactionWriteCompleted)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestForwardingService.cs/#L61">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestForwardingService_Handle_" data-uid="EventStore.Core.Services.RequestForwardingService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestForwardingService_Handle_EventStore_Core_Messages_ClientMessage_TransactionWriteCompleted_" data-uid="EventStore.Core.Services.RequestForwardingService.Handle(EventStore.Core.Messages.ClientMessage.TransactionWriteCompleted)">Handle(ClientMessage.TransactionWriteCompleted)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.TransactionWriteCompleted message)</code></pre>
   </div>
@@ -326,18 +333,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestForwardingService_Handle_EventStore_Core_Messages_ClientMessage_WriteEventsCompleted_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestForwardingService.Handle(EventStore.Core.Messages.ClientMessage.WriteEventsCompleted)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestForwardingService.cs/#L51">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestForwardingService_Handle_" data-uid="EventStore.Core.Services.RequestForwardingService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestForwardingService_Handle_EventStore_Core_Messages_ClientMessage_WriteEventsCompleted_" data-uid="EventStore.Core.Services.RequestForwardingService.Handle(EventStore.Core.Messages.ClientMessage.WriteEventsCompleted)">Handle(ClientMessage.WriteEventsCompleted)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.WriteEventsCompleted message)</code></pre>
   </div>
@@ -358,18 +362,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestForwardingService_Handle_EventStore_Core_Messages_SystemMessage_RequestForwardingTimerTick_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestForwardingService.Handle(EventStore.Core.Messages.SystemMessage.RequestForwardingTimerTick)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestForwardingService.cs/#L40">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestForwardingService_Handle_" data-uid="EventStore.Core.Services.RequestForwardingService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestForwardingService_Handle_EventStore_Core_Messages_SystemMessage_RequestForwardingTimerTick_" data-uid="EventStore.Core.Services.RequestForwardingService.Handle(EventStore.Core.Messages.SystemMessage.RequestForwardingTimerTick)">Handle(SystemMessage.RequestForwardingTimerTick)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(SystemMessage.RequestForwardingTimerTick message)</code></pre>
   </div>
@@ -390,18 +391,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestForwardingService_Handle_EventStore_Core_Messages_SystemMessage_SystemStart_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestForwardingService.Handle(EventStore.Core.Messages.SystemMessage.SystemStart)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestForwardingService.cs/#L36">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestForwardingService_Handle_" data-uid="EventStore.Core.Services.RequestForwardingService.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestForwardingService_Handle_EventStore_Core_Messages_SystemMessage_SystemStart_" data-uid="EventStore.Core.Services.RequestForwardingService.Handle(EventStore.Core.Messages.SystemMessage.SystemStart)">Handle(SystemMessage.SystemStart)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(SystemMessage.SystemStart message)</code></pre>
   </div>
@@ -472,12 +470,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestForwardingService.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestForwardingService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestForwardingService.cs/#L10" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -110,26 +111,47 @@ heartbeats, message framing and dispatch to the memory bus.</p>
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.TcpMessage.Heartbeat.html">TcpMessage.Heartbeat</a>&gt;</div>
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.TcpMessage.HeartbeatTimeout.html">TcpMessage.HeartbeatTimeout</a>&gt;</div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.Transport.Tcp.html">EventStore.Core.Services.Transport.Tcp</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TcpConnectionManager : object, IHandle&lt;TcpMessage.Heartbeat&gt;, IHandle&lt;TcpMessage.HeartbeatTimeout&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class TcpConnectionManager : IHandle&lt;TcpMessage.Heartbeat&gt;, IHandle&lt;TcpMessage.HeartbeatTimeout&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpConnectionManager__ctor_System_String_EventStore_Core_Services_Transport_Tcp_TcpServiceType_EventStore_Core_Services_Transport_Tcp_ITcpDispatcher_EventStore_Core_Bus_IPublisher_EventStore_Transport_Tcp_ITcpConnection_EventStore_Core_Bus_IPublisher_EventStore_Core_Authentication_IAuthenticationProvider_TimeSpan_TimeSpan_Action_EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_SocketError__System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.%23ctor(System.String%2CEventStore.Core.Services.Transport.Tcp.TcpServiceType%2CEventStore.Core.Services.Transport.Tcp.ITcpDispatcher%2CEventStore.Core.Bus.IPublisher%2CEventStore.Transport.Tcp.ITcpConnection%2CEventStore.Core.Bus.IPublisher%2CEventStore.Core.Authentication.IAuthenticationProvider%2CTimeSpan%2CTimeSpan%2CAction%7BEventStore.Core.Services.Transport.Tcp.TcpConnectionManager%2CSocketError%7D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpConnectionManager.cs/#L72">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager__ctor_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.#ctor*"></a>
-  <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager__ctor_System_String_EventStore_Core_Services_Transport_Tcp_TcpServiceType_EventStore_Core_Services_Transport_Tcp_ITcpDispatcher_EventStore_Core_Bus_IPublisher_EventStore_Transport_Tcp_ITcpConnection_EventStore_Core_Bus_IPublisher_EventStore_Core_Authentication_IAuthenticationProvider_TimeSpan_TimeSpan_Action_EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_SocketError__System_Int32_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.#ctor(System.String,EventStore.Core.Services.Transport.Tcp.TcpServiceType,EventStore.Core.Services.Transport.Tcp.ITcpDispatcher,EventStore.Core.Bus.IPublisher,EventStore.Transport.Tcp.ITcpConnection,EventStore.Core.Bus.IPublisher,EventStore.Core.Authentication.IAuthenticationProvider,TimeSpan,TimeSpan,Action{EventStore.Core.Services.Transport.Tcp.TcpConnectionManager,SocketError},System.Int32)">TcpConnectionManager(String, TcpServiceType, ITcpDispatcher, IPublisher, ITcpConnection, IPublisher, IAuthenticationProvider, TimeSpan, TimeSpan, Action&lt;TcpConnectionManager, SocketError&gt;, Int32)</h4>
+  <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager__ctor_System_String_EventStore_Core_Services_Transport_Tcp_TcpServiceType_EventStore_Core_Services_Transport_Tcp_ITcpDispatcher_EventStore_Core_Bus_IPublisher_EventStore_Transport_Tcp_ITcpConnection_EventStore_Core_Bus_IPublisher_EventStore_Core_Authentication_IAuthenticationProvider_System_TimeSpan_System_TimeSpan_System_Action_EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_System_Net_Sockets_SocketError__System_Int32_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.#ctor(System.String,EventStore.Core.Services.Transport.Tcp.TcpServiceType,EventStore.Core.Services.Transport.Tcp.ITcpDispatcher,EventStore.Core.Bus.IPublisher,EventStore.Transport.Tcp.ITcpConnection,EventStore.Core.Bus.IPublisher,EventStore.Core.Authentication.IAuthenticationProvider,System.TimeSpan,System.TimeSpan,System.Action{EventStore.Core.Services.Transport.Tcp.TcpConnectionManager,System.Net.Sockets.SocketError},System.Int32)">TcpConnectionManager(String, TcpServiceType, ITcpDispatcher, IPublisher, ITcpConnection, IPublisher, IAuthenticationProvider, TimeSpan, TimeSpan, Action&lt;TcpConnectionManager, SocketError&gt;, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TcpConnectionManager(string connectionName, TcpServiceType serviceType, ITcpDispatcher dispatcher, IPublisher publisher, ITcpConnection openedConnection, IPublisher networkSendQueue, IAuthenticationProvider authProvider, TimeSpan heartbeatInterval, TimeSpan heartbeatTimeout, Action&lt;TcpConnectionManager, SocketError&gt; onConnectionClosed, int connectionPendingSendBytesThreshold)</code></pre>
   </div>
@@ -179,17 +201,17 @@ heartbeats, message framing and dispatch to the memory bus.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">heartbeatInterval</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">heartbeatTimeout</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.html">TcpConnectionManager</a>, <span class="xref">SocketError</span>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.html">TcpConnectionManager</a>, <span class="xref">System.Net.Sockets.SocketError</span>&gt;</td>
         <td><span class="parametername">onConnectionClosed</span></td>
         <td></td>
       </tr>
@@ -200,18 +222,15 @@ heartbeats, message framing and dispatch to the memory bus.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpConnectionManager__ctor_System_String_Guid_EventStore_Core_Services_Transport_Tcp_ITcpDispatcher_EventStore_Core_Bus_IPublisher_IPEndPoint_EventStore_Transport_Tcp_TcpClientConnector_System_Boolean_System_String_System_Boolean_EventStore_Core_Bus_IPublisher_EventStore_Core_Authentication_IAuthenticationProvider_TimeSpan_TimeSpan_Action_EventStore_Core_Services_Transport_Tcp_TcpConnectionManager__Action_EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_SocketError__.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.%23ctor(System.String%2CGuid%2CEventStore.Core.Services.Transport.Tcp.ITcpDispatcher%2CEventStore.Core.Bus.IPublisher%2CIPEndPoint%2CEventStore.Transport.Tcp.TcpClientConnector%2CSystem.Boolean%2CSystem.String%2CSystem.Boolean%2CEventStore.Core.Bus.IPublisher%2CEventStore.Core.Authentication.IAuthenticationProvider%2CTimeSpan%2CTimeSpan%2CAction%7BEventStore.Core.Services.Transport.Tcp.TcpConnectionManager%7D%2CAction%7BEventStore.Core.Services.Transport.Tcp.TcpConnectionManager%2CSocketError%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpConnectionManager.cs/#L119">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager__ctor_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.#ctor*"></a>
-  <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager__ctor_System_String_Guid_EventStore_Core_Services_Transport_Tcp_ITcpDispatcher_EventStore_Core_Bus_IPublisher_IPEndPoint_EventStore_Transport_Tcp_TcpClientConnector_System_Boolean_System_String_System_Boolean_EventStore_Core_Bus_IPublisher_EventStore_Core_Authentication_IAuthenticationProvider_TimeSpan_TimeSpan_Action_EventStore_Core_Services_Transport_Tcp_TcpConnectionManager__Action_EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_SocketError__" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.#ctor(System.String,Guid,EventStore.Core.Services.Transport.Tcp.ITcpDispatcher,EventStore.Core.Bus.IPublisher,IPEndPoint,EventStore.Transport.Tcp.TcpClientConnector,System.Boolean,System.String,System.Boolean,EventStore.Core.Bus.IPublisher,EventStore.Core.Authentication.IAuthenticationProvider,TimeSpan,TimeSpan,Action{EventStore.Core.Services.Transport.Tcp.TcpConnectionManager},Action{EventStore.Core.Services.Transport.Tcp.TcpConnectionManager,SocketError})">TcpConnectionManager(String, Guid, ITcpDispatcher, IPublisher, IPEndPoint, TcpClientConnector, Boolean, String, Boolean, IPublisher, IAuthenticationProvider, TimeSpan, TimeSpan, Action&lt;TcpConnectionManager&gt;, Action&lt;TcpConnectionManager, SocketError&gt;)</h4>
+  <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager__ctor_System_String_System_Guid_EventStore_Core_Services_Transport_Tcp_ITcpDispatcher_EventStore_Core_Bus_IPublisher_System_Net_IPEndPoint_EventStore_Transport_Tcp_TcpClientConnector_System_Boolean_System_String_System_Boolean_EventStore_Core_Bus_IPublisher_EventStore_Core_Authentication_IAuthenticationProvider_System_TimeSpan_System_TimeSpan_System_Action_EventStore_Core_Services_Transport_Tcp_TcpConnectionManager__System_Action_EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_System_Net_Sockets_SocketError__" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.#ctor(System.String,System.Guid,EventStore.Core.Services.Transport.Tcp.ITcpDispatcher,EventStore.Core.Bus.IPublisher,System.Net.IPEndPoint,EventStore.Transport.Tcp.TcpClientConnector,System.Boolean,System.String,System.Boolean,EventStore.Core.Bus.IPublisher,EventStore.Core.Authentication.IAuthenticationProvider,System.TimeSpan,System.TimeSpan,System.Action{EventStore.Core.Services.Transport.Tcp.TcpConnectionManager},System.Action{EventStore.Core.Services.Transport.Tcp.TcpConnectionManager,System.Net.Sockets.SocketError})">TcpConnectionManager(String, Guid, ITcpDispatcher, IPublisher, IPEndPoint, TcpClientConnector, Boolean, String, Boolean, IPublisher, IAuthenticationProvider, TimeSpan, TimeSpan, Action&lt;TcpConnectionManager&gt;, Action&lt;TcpConnectionManager, SocketError&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TcpConnectionManager(string connectionName, Guid connectionId, ITcpDispatcher dispatcher, IPublisher publisher, IPEndPoint remoteEndPoint, TcpClientConnector connector, bool useSsl, string sslTargetHost, bool sslValidateServer, IPublisher networkSendQueue, IAuthenticationProvider authProvider, TimeSpan heartbeatInterval, TimeSpan heartbeatTimeout, Action&lt;TcpConnectionManager&gt; onConnectionEstablished, Action&lt;TcpConnectionManager, SocketError&gt; onConnectionClosed)</code></pre>
   </div>
@@ -231,7 +250,7 @@ heartbeats, message framing and dispatch to the memory bus.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">connectionId</span></td>
         <td></td>
       </tr>
@@ -246,7 +265,7 @@ heartbeats, message framing and dispatch to the memory bus.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IPEndPoint</span></td>
+        <td><span class="xref">System.Net.IPEndPoint</span></td>
         <td><span class="parametername">remoteEndPoint</span></td>
         <td></td>
       </tr>
@@ -281,22 +300,22 @@ heartbeats, message framing and dispatch to the memory bus.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">heartbeatInterval</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">heartbeatTimeout</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.html">TcpConnectionManager</a>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.html">TcpConnectionManager</a>&gt;</td>
         <td><span class="parametername">onConnectionEstablished</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.html">TcpConnectionManager</a>, <span class="xref">SocketError</span>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.html">TcpConnectionManager</a>, <span class="xref">System.Net.Sockets.SocketError</span>&gt;</td>
         <td><span class="parametername">onConnectionClosed</span></td>
         <td></td>
       </tr>
@@ -304,17 +323,14 @@ heartbeats, message framing and dispatch to the memory bus.</p>
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_ConnectionId.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.ConnectionId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpConnectionManager.cs/#L29">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_ConnectionId" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.ConnectionId">ConnectionId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly Guid ConnectionId</code></pre>
   </div>
@@ -323,27 +339,22 @@ heartbeats, message framing and dispatch to the memory bus.</p>
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
-        <td></td>
+        <td><span class="xref">System.Guid</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_ConnectionName.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.ConnectionName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpConnectionManager.cs/#L30">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_ConnectionName" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.ConnectionName">ConnectionName</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly string ConnectionName</code></pre>
   </div>
@@ -352,56 +363,46 @@ heartbeats, message framing and dispatch to the memory bus.</p>
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_ConnectionQueueSizeThreshold.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.ConnectionQueueSizeThreshold%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpConnectionManager.cs/#L24">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_ConnectionQueueSizeThreshold" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.ConnectionQueueSizeThreshold">ConnectionQueueSizeThreshold</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int ConnectionQueueSizeThreshold = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int ConnectionQueueSizeThreshold = 50000</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_ConnectionTimeout.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.ConnectionTimeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpConnectionManager.cs/#L25">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_ConnectionTimeout" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.ConnectionTimeout">ConnectionTimeout</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static readonly TimeSpan ConnectionTimeout</code></pre>
   </div>
@@ -410,27 +411,22 @@ heartbeats, message framing and dispatch to the memory bus.</p>
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
-        <td></td>
+        <td><span class="xref">System.TimeSpan</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_RemoteEndPoint.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.RemoteEndPoint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpConnectionManager.cs/#L31">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_RemoteEndPoint" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.RemoteEndPoint">RemoteEndPoint</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly IPEndPoint RemoteEndPoint</code></pre>
   </div>
@@ -439,30 +435,25 @@ heartbeats, message framing and dispatch to the memory bus.</p>
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPEndPoint</span></td>
-        <td></td>
+        <td><span class="xref">System.Net.IPEndPoint</span></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_ClientConnectionName.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.ClientConnectionName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpConnectionManager.cs/#L45">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_ClientConnectionName_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.ClientConnectionName*"></a>
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_ClientConnectionName" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.ClientConnectionName">ClientConnectionName</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string ClientConnectionName { get; }</code></pre>
   </div>
@@ -471,28 +462,23 @@ heartbeats, message framing and dispatch to the memory bus.</p>
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_IsClosed.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.IsClosed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpConnectionManager.cs/#L37">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_IsClosed_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.IsClosed*"></a>
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_IsClosed" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.IsClosed">IsClosed</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool IsClosed { get; }</code></pre>
   </div>
@@ -501,28 +487,23 @@ heartbeats, message framing and dispatch to the memory bus.</p>
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_LocalEndPoint.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.LocalEndPoint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpConnectionManager.cs/#L33">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_LocalEndPoint_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.LocalEndPoint*"></a>
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_LocalEndPoint" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.LocalEndPoint">LocalEndPoint</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IPEndPoint LocalEndPoint { get; }</code></pre>
   </div>
@@ -531,28 +512,23 @@ heartbeats, message framing and dispatch to the memory bus.</p>
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPEndPoint</span></td>
-        <td></td>
+        <td><span class="xref">System.Net.IPEndPoint</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_SendQueueSize.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.SendQueueSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpConnectionManager.cs/#L41">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_SendQueueSize_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.SendQueueSize*"></a>
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_SendQueueSize" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.SendQueueSize">SendQueueSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int SendQueueSize { get; }</code></pre>
   </div>
@@ -561,30 +537,25 @@ heartbeats, message framing and dispatch to the memory bus.</p>
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_Handle_EventStore_Core_Messages_TcpMessage_Heartbeat_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.Handle(EventStore.Core.Messages.TcpMessage.Heartbeat)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpConnectionManager.cs/#L407">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_Handle_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.Handle*"></a>
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_Handle_EventStore_Core_Messages_TcpMessage_Heartbeat_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.Handle(EventStore.Core.Messages.TcpMessage.Heartbeat)">Handle(TcpMessage.Heartbeat)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(TcpMessage.Heartbeat message)</code></pre>
   </div>
@@ -605,18 +576,15 @@ heartbeats, message framing and dispatch to the memory bus.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_Handle_EventStore_Core_Messages_TcpMessage_HeartbeatTimeout_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.Handle(EventStore.Core.Messages.TcpMessage.HeartbeatTimeout)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpConnectionManager.cs/#L421">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_Handle_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.Handle*"></a>
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_Handle_EventStore_Core_Messages_TcpMessage_HeartbeatTimeout_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.Handle(EventStore.Core.Messages.TcpMessage.HeartbeatTimeout)">Handle(TcpMessage.HeartbeatTimeout)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(TcpMessage.HeartbeatTimeout message)</code></pre>
   </div>
@@ -637,18 +605,15 @@ heartbeats, message framing and dispatch to the memory bus.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_ProcessPackage_EventStore_Core_Services_Transport_Tcp_TcpPackage_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.ProcessPackage(EventStore.Core.Services.Transport.Tcp.TcpPackage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpConnectionManager.cs/#L240">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_ProcessPackage_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.ProcessPackage*"></a>
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_ProcessPackage_EventStore_Core_Services_Transport_Tcp_TcpPackage_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.ProcessPackage(EventStore.Core.Services.Transport.Tcp.TcpPackage)">ProcessPackage(TcpPackage)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void ProcessPackage(TcpPackage package)</code></pre>
   </div>
@@ -669,18 +634,15 @@ heartbeats, message framing and dispatch to the memory bus.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_SendBadRequest_Guid_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.SendBadRequest(Guid%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpConnectionManager.cs/#L359">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_SendBadRequest_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.SendBadRequest*"></a>
-  <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_SendBadRequest_Guid_System_String_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.SendBadRequest(Guid,System.String)">SendBadRequest(Guid, String)</h4>
+  <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_SendBadRequest_System_Guid_System_String_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.SendBadRequest(System.Guid,System.String)">SendBadRequest(Guid, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void SendBadRequest(Guid correlationId, string message)</code></pre>
   </div>
@@ -695,7 +657,7 @@ heartbeats, message framing and dispatch to the memory bus.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">correlationId</span></td>
         <td></td>
       </tr>
@@ -706,18 +668,15 @@ heartbeats, message framing and dispatch to the memory bus.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_SendBadRequestAndClose_Guid_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.SendBadRequestAndClose(Guid%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpConnectionManager.cs/#L347">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_SendBadRequestAndClose_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.SendBadRequestAndClose*"></a>
-  <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_SendBadRequestAndClose_Guid_System_String_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.SendBadRequestAndClose(Guid,System.String)">SendBadRequestAndClose(Guid, String)</h4>
+  <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_SendBadRequestAndClose_System_Guid_System_String_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.SendBadRequestAndClose(System.Guid,System.String)">SendBadRequestAndClose(Guid, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void SendBadRequestAndClose(Guid correlationId, string message)</code></pre>
   </div>
@@ -732,7 +691,7 @@ heartbeats, message framing and dispatch to the memory bus.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">correlationId</span></td>
         <td></td>
       </tr>
@@ -743,18 +702,15 @@ heartbeats, message framing and dispatch to the memory bus.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_SendMessage_EventStore_Core_Messaging_Message_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.SendMessage(EventStore.Core.Messaging.Message)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpConnectionManager.cs/#L375">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_SendMessage_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.SendMessage*"></a>
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_SendMessage_EventStore_Core_Messaging_Message_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.SendMessage(EventStore.Core.Messaging.Message)">SendMessage(Message)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void SendMessage(Message message)</code></pre>
   </div>
@@ -775,33 +731,27 @@ heartbeats, message framing and dispatch to the memory bus.</p>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_StartReceiving.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.StartReceiving%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpConnectionManager.cs/#L201">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_StartReceiving_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.StartReceiving*"></a>
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_StartReceiving" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.StartReceiving">StartReceiving()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void StartReceiving()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_Stop_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.Stop(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpConnectionManager.cs/#L366">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_Stop_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.Stop*"></a>
   <h4 id="EventStore_Core_Services_Transport_Tcp_TcpConnectionManager_Stop_System_String_" data-uid="EventStore.Core.Services.Transport.Tcp.TcpConnectionManager.Stop(System.String)">Stop(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Stop(string reason = null)</code></pre>
   </div>
@@ -854,12 +804,6 @@ heartbeats, message framing and dispatch to the memory bus.</p>
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Tcp_TcpConnectionManager.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Tcp.TcpConnectionManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Tcp/TcpConnectionManager.cs/#L23" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

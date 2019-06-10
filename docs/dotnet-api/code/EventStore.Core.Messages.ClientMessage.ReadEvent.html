@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -125,6 +126,27 @@
     <div>
       <a class="xref" href="EventStore.Core.Messaging.Message.html#EventStore_Core_Messaging_Message_NextMsgId">Message.NextMsgId</a>
     </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Messages.html">EventStore.Core.Messages</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
@@ -134,18 +156,15 @@
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ClientMessage_ReadEvent__ctor_Guid_Guid_EventStore_Core_Messaging_IEnvelope_System_String_System_Int64_System_Boolean_System_Boolean_IPrincipal_.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ClientMessage.ReadEvent.%23ctor(Guid%2CGuid%2CEventStore.Core.Messaging.IEnvelope%2CSystem.String%2CSystem.Int64%2CSystem.Boolean%2CSystem.Boolean%2CIPrincipal)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ClientMessage.cs/#L505">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messages_ClientMessage_ReadEvent__ctor_" data-uid="EventStore.Core.Messages.ClientMessage.ReadEvent.#ctor*"></a>
-  <h4 id="EventStore_Core_Messages_ClientMessage_ReadEvent__ctor_Guid_Guid_EventStore_Core_Messaging_IEnvelope_System_String_System_Int64_System_Boolean_System_Boolean_IPrincipal_" data-uid="EventStore.Core.Messages.ClientMessage.ReadEvent.#ctor(Guid,Guid,EventStore.Core.Messaging.IEnvelope,System.String,System.Int64,System.Boolean,System.Boolean,IPrincipal)">ReadEvent(Guid, Guid, IEnvelope, String, Int64, Boolean, Boolean, IPrincipal)</h4>
+  <h4 id="EventStore_Core_Messages_ClientMessage_ReadEvent__ctor_System_Guid_System_Guid_EventStore_Core_Messaging_IEnvelope_System_String_System_Int64_System_Boolean_System_Boolean_System_Security_Principal_IPrincipal_" data-uid="EventStore.Core.Messages.ClientMessage.ReadEvent.#ctor(System.Guid,System.Guid,EventStore.Core.Messaging.IEnvelope,System.String,System.Int64,System.Boolean,System.Boolean,System.Security.Principal.IPrincipal)">ReadEvent(Guid, Guid, IEnvelope, String, Int64, Boolean, Boolean, IPrincipal)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ReadEvent(Guid internalCorrId, Guid correlationId, IEnvelope envelope, string eventStreamId, long eventNumber, bool resolveLinkTos, bool requireMaster, IPrincipal user)</code></pre>
   </div>
@@ -160,12 +179,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">internalCorrId</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">correlationId</span></td>
         <td></td>
       </tr>
@@ -195,7 +214,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IPrincipal</span></td>
+        <td><span class="xref">System.Security.Principal.IPrincipal</span></td>
         <td><span class="parametername">user</span></td>
         <td></td>
       </tr>
@@ -203,17 +222,14 @@
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ClientMessage_ReadEvent_EventNumber.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ClientMessage.ReadEvent.EventNumber%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ClientMessage.cs/#L501">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_ClientMessage_ReadEvent_EventNumber" data-uid="EventStore.Core.Messages.ClientMessage.ReadEvent.EventNumber">EventNumber</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly long EventNumber</code></pre>
   </div>
@@ -222,27 +238,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ClientMessage_ReadEvent_EventStreamId.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ClientMessage.ReadEvent.EventStreamId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ClientMessage.cs/#L500">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_ClientMessage_ReadEvent_EventStreamId" data-uid="EventStore.Core.Messages.ClientMessage.ReadEvent.EventStreamId">EventStreamId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly string EventStreamId</code></pre>
   </div>
@@ -251,27 +262,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ClientMessage_ReadEvent_RequireMaster.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ClientMessage.ReadEvent.RequireMaster%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ClientMessage.cs/#L503">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_ClientMessage_ReadEvent_RequireMaster" data-uid="EventStore.Core.Messages.ClientMessage.ReadEvent.RequireMaster">RequireMaster</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly bool RequireMaster</code></pre>
   </div>
@@ -280,27 +286,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ClientMessage_ReadEvent_ResolveLinkTos.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ClientMessage.ReadEvent.ResolveLinkTos%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ClientMessage.cs/#L502">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_ClientMessage_ReadEvent_ResolveLinkTos" data-uid="EventStore.Core.Messages.ClientMessage.ReadEvent.ResolveLinkTos">ResolveLinkTos</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly bool ResolveLinkTos</code></pre>
   </div>
@@ -309,30 +310,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ClientMessage_ReadEvent_MsgTypeId.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ClientMessage.ReadEvent.MsgTypeId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ClientMessage.cs/#L496">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messages_ClientMessage_ReadEvent_MsgTypeId_" data-uid="EventStore.Core.Messages.ClientMessage.ReadEvent.MsgTypeId*"></a>
   <h4 id="EventStore_Core_Messages_ClientMessage_ReadEvent_MsgTypeId" data-uid="EventStore.Core.Messages.ClientMessage.ReadEvent.MsgTypeId">MsgTypeId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override int MsgTypeId { get; }</code></pre>
   </div>
@@ -341,13 +337,11 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -378,12 +372,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ClientMessage_ReadEvent.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ClientMessage.ReadEvent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ClientMessage.cs/#L493" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

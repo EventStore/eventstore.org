@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,26 +104,47 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">HttpEntity</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Transport.Http.EntityManagement.html">EventStore.Transport.Http.EntityManagement</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Transport.Http.dll</h6>
   <h5 id="EventStore_Transport_Http_EntityManagement_HttpEntity_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class HttpEntity : object</code></pre>
+    <pre><code class="lang-csharp hljs">public class HttpEntity</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Http_EntityManagement_HttpEntity__ctor_HttpListenerRequest_HttpListenerResponse_IPrincipal_System_Boolean_IPAddress_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Transport.Http.EntityManagement.HttpEntity.%23ctor(HttpListenerRequest%2CHttpListenerResponse%2CIPrincipal%2CSystem.Boolean%2CIPAddress%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Http/EntityManagement/HttpEntity.cs/#L19">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Http_EntityManagement_HttpEntity__ctor_" data-uid="EventStore.Transport.Http.EntityManagement.HttpEntity.#ctor*"></a>
-  <h4 id="EventStore_Transport_Http_EntityManagement_HttpEntity__ctor_HttpListenerRequest_HttpListenerResponse_IPrincipal_System_Boolean_IPAddress_System_Int32_" data-uid="EventStore.Transport.Http.EntityManagement.HttpEntity.#ctor(HttpListenerRequest,HttpListenerResponse,IPrincipal,System.Boolean,IPAddress,System.Int32)">HttpEntity(HttpListenerRequest, HttpListenerResponse, IPrincipal, Boolean, IPAddress, Int32)</h4>
+  <h4 id="EventStore_Transport_Http_EntityManagement_HttpEntity__ctor_System_Net_HttpListenerRequest_System_Net_HttpListenerResponse_System_Security_Principal_IPrincipal_System_Boolean_System_Net_IPAddress_System_Int32_" data-uid="EventStore.Transport.Http.EntityManagement.HttpEntity.#ctor(System.Net.HttpListenerRequest,System.Net.HttpListenerResponse,System.Security.Principal.IPrincipal,System.Boolean,System.Net.IPAddress,System.Int32)">HttpEntity(HttpListenerRequest, HttpListenerResponse, IPrincipal, Boolean, IPAddress, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public HttpEntity(HttpListenerRequest request, HttpListenerResponse response, IPrincipal user, bool logHttpRequests, IPAddress advertiseAsAddress, int advertiseAsPort)</code></pre>
   </div>
@@ -137,17 +159,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">HttpListenerRequest</span></td>
+        <td><span class="xref">System.Net.HttpListenerRequest</span></td>
         <td><span class="parametername">request</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">HttpListenerResponse</span></td>
+        <td><span class="xref">System.Net.HttpListenerResponse</span></td>
         <td><span class="parametername">response</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IPrincipal</span></td>
+        <td><span class="xref">System.Security.Principal.IPrincipal</span></td>
         <td><span class="parametername">user</span></td>
         <td></td>
       </tr>
@@ -157,7 +179,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IPAddress</span></td>
+        <td><span class="xref">System.Net.IPAddress</span></td>
         <td><span class="parametername">advertiseAsAddress</span></td>
         <td></td>
       </tr>
@@ -170,17 +192,14 @@
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Http_EntityManagement_HttpEntity_Request.md&amp;value=---%0Auid%3A%20EventStore.Transport.Http.EntityManagement.HttpEntity.Request%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Http/EntityManagement/HttpEntity.cs/#L15">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Transport_Http_EntityManagement_HttpEntity_Request" data-uid="EventStore.Transport.Http.EntityManagement.HttpEntity.Request">Request</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly HttpListenerRequest Request</code></pre>
   </div>
@@ -189,27 +208,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">HttpListenerRequest</span></td>
-        <td></td>
+        <td><span class="xref">System.Net.HttpListenerRequest</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Http_EntityManagement_HttpEntity_RequestedUrl.md&amp;value=---%0Auid%3A%20EventStore.Transport.Http.EntityManagement.HttpEntity.RequestedUrl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Http/EntityManagement/HttpEntity.cs/#L12">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Transport_Http_EntityManagement_HttpEntity_RequestedUrl" data-uid="EventStore.Transport.Http.EntityManagement.HttpEntity.RequestedUrl">RequestedUrl</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly Uri RequestedUrl</code></pre>
   </div>
@@ -218,27 +232,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Uri</span></td>
-        <td></td>
+        <td><span class="xref">System.Uri</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Http_EntityManagement_HttpEntity_ResponseUrl.md&amp;value=---%0Auid%3A%20EventStore.Transport.Http.EntityManagement.HttpEntity.ResponseUrl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Http/EntityManagement/HttpEntity.cs/#L13">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Transport_Http_EntityManagement_HttpEntity_ResponseUrl" data-uid="EventStore.Transport.Http.EntityManagement.HttpEntity.ResponseUrl">ResponseUrl</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly Uri ResponseUrl</code></pre>
   </div>
@@ -247,27 +256,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Uri</span></td>
-        <td></td>
+        <td><span class="xref">System.Uri</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Http_EntityManagement_HttpEntity_User.md&amp;value=---%0Auid%3A%20EventStore.Transport.Http.EntityManagement.HttpEntity.User%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Http/EntityManagement/HttpEntity.cs/#L17">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Transport_Http_EntityManagement_HttpEntity_User" data-uid="EventStore.Transport.Http.EntityManagement.HttpEntity.User">User</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly IPrincipal User</code></pre>
   </div>
@@ -276,30 +280,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPrincipal</span></td>
-        <td></td>
+        <td><span class="xref">System.Security.Principal.IPrincipal</span></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Http_EntityManagement_HttpEntity_BuildRequestedUrl_Uri_NameValueCollection_IPAddress_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Transport.Http.EntityManagement.HttpEntity.BuildRequestedUrl(Uri%2CNameValueCollection%2CIPAddress%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Http/EntityManagement/HttpEntity.cs/#L32">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Http_EntityManagement_HttpEntity_BuildRequestedUrl_" data-uid="EventStore.Transport.Http.EntityManagement.HttpEntity.BuildRequestedUrl*"></a>
-  <h4 id="EventStore_Transport_Http_EntityManagement_HttpEntity_BuildRequestedUrl_Uri_NameValueCollection_IPAddress_System_Int32_System_Boolean_" data-uid="EventStore.Transport.Http.EntityManagement.HttpEntity.BuildRequestedUrl(Uri,NameValueCollection,IPAddress,System.Int32,System.Boolean)">BuildRequestedUrl(Uri, NameValueCollection, IPAddress, Int32, Boolean)</h4>
+  <h4 id="EventStore_Transport_Http_EntityManagement_HttpEntity_BuildRequestedUrl_System_Uri_System_Collections_Specialized_NameValueCollection_System_Net_IPAddress_System_Int32_System_Boolean_" data-uid="EventStore.Transport.Http.EntityManagement.HttpEntity.BuildRequestedUrl(System.Uri,System.Collections.Specialized.NameValueCollection,System.Net.IPAddress,System.Int32,System.Boolean)">BuildRequestedUrl(Uri, NameValueCollection, IPAddress, Int32, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static Uri BuildRequestedUrl(Uri requestUrl, NameValueCollection requestHeaders, IPAddress advertiseAsAddress, int advertiseAsPort, bool overridePath = false)</code></pre>
   </div>
@@ -314,17 +313,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Uri</span></td>
+        <td><span class="xref">System.Uri</span></td>
         <td><span class="parametername">requestUrl</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">NameValueCollection</span></td>
+        <td><span class="xref">System.Collections.Specialized.NameValueCollection</span></td>
         <td><span class="parametername">requestHeaders</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IPAddress</span></td>
+        <td><span class="xref">System.Net.IPAddress</span></td>
         <td><span class="parametername">advertiseAsAddress</span></td>
         <td></td>
       </tr>
@@ -350,23 +349,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Uri</span></td>
+        <td><span class="xref">System.Uri</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Http_EntityManagement_HttpEntity_CreateManager.md&amp;value=---%0Auid%3A%20EventStore.Transport.Http.EntityManagement.HttpEntity.CreateManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Http/EntityManagement/HttpEntity.cs/#L108">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Http_EntityManagement_HttpEntity_CreateManager_" data-uid="EventStore.Transport.Http.EntityManagement.HttpEntity.CreateManager*"></a>
   <h4 id="EventStore_Transport_Http_EntityManagement_HttpEntity_CreateManager" data-uid="EventStore.Transport.Http.EntityManagement.HttpEntity.CreateManager">CreateManager()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public HttpEntityManager CreateManager()</code></pre>
   </div>
@@ -385,18 +381,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Http_EntityManagement_HttpEntity_CreateManager_EventStore_Transport_Http_ICodec_EventStore_Transport_Http_ICodec_System_String___Action_EventStore_Transport_Http_EntityManagement_HttpEntity__.md&amp;value=---%0Auid%3A%20EventStore.Transport.Http.EntityManagement.HttpEntity.CreateManager(EventStore.Transport.Http.ICodec%2CEventStore.Transport.Http.ICodec%2CSystem.String%5B%5D%2CAction%7BEventStore.Transport.Http.EntityManagement.HttpEntity%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Http/EntityManagement/HttpEntity.cs/#L102">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Http_EntityManagement_HttpEntity_CreateManager_" data-uid="EventStore.Transport.Http.EntityManagement.HttpEntity.CreateManager*"></a>
-  <h4 id="EventStore_Transport_Http_EntityManagement_HttpEntity_CreateManager_EventStore_Transport_Http_ICodec_EventStore_Transport_Http_ICodec_System_String___Action_EventStore_Transport_Http_EntityManagement_HttpEntity__" data-uid="EventStore.Transport.Http.EntityManagement.HttpEntity.CreateManager(EventStore.Transport.Http.ICodec,EventStore.Transport.Http.ICodec,System.String[],Action{EventStore.Transport.Http.EntityManagement.HttpEntity})">CreateManager(ICodec, ICodec, String[], Action&lt;HttpEntity&gt;)</h4>
+  <h4 id="EventStore_Transport_Http_EntityManagement_HttpEntity_CreateManager_EventStore_Transport_Http_ICodec_EventStore_Transport_Http_ICodec_System_String___System_Action_EventStore_Transport_Http_EntityManagement_HttpEntity__" data-uid="EventStore.Transport.Http.EntityManagement.HttpEntity.CreateManager(EventStore.Transport.Http.ICodec,EventStore.Transport.Http.ICodec,System.String[],System.Action{EventStore.Transport.Http.EntityManagement.HttpEntity})">CreateManager(ICodec, ICodec, String[], Action&lt;HttpEntity&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public HttpEntityManager CreateManager(ICodec requestCodec, ICodec responseCodec, string[] allowedMethods, Action&lt;HttpEntity&gt; onRequestSatisfied)</code></pre>
   </div>
@@ -426,7 +419,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.Transport.Http.EntityManagement.HttpEntity.html">HttpEntity</a>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.Transport.Http.EntityManagement.HttpEntity.html">HttpEntity</a>&gt;</td>
         <td><span class="parametername">onRequestSatisfied</span></td>
         <td></td>
       </tr>
@@ -447,18 +440,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Http_EntityManagement_HttpEntity_SetUser_IPrincipal_.md&amp;value=---%0Auid%3A%20EventStore.Transport.Http.EntityManagement.HttpEntity.SetUser(IPrincipal)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Http/EntityManagement/HttpEntity.cs/#L113">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Http_EntityManagement_HttpEntity_SetUser_" data-uid="EventStore.Transport.Http.EntityManagement.HttpEntity.SetUser*"></a>
-  <h4 id="EventStore_Transport_Http_EntityManagement_HttpEntity_SetUser_IPrincipal_" data-uid="EventStore.Transport.Http.EntityManagement.HttpEntity.SetUser(IPrincipal)">SetUser(IPrincipal)</h4>
+  <h4 id="EventStore_Transport_Http_EntityManagement_HttpEntity_SetUser_System_Security_Principal_IPrincipal_" data-uid="EventStore.Transport.Http.EntityManagement.HttpEntity.SetUser(System.Security.Principal.IPrincipal)">SetUser(IPrincipal)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public HttpEntity SetUser(IPrincipal user)</code></pre>
   </div>
@@ -473,7 +463,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPrincipal</span></td>
+        <td><span class="xref">System.Security.Principal.IPrincipal</span></td>
         <td><span class="parametername">user</span></td>
         <td></td>
       </tr>
@@ -494,18 +484,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Http_EntityManagement_HttpEntity_Test_IPrincipal_.md&amp;value=---%0Auid%3A%20EventStore.Transport.Http.EntityManagement.HttpEntity.Test(IPrincipal)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Http/EntityManagement/HttpEntity.cs/#L117">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Http_EntityManagement_HttpEntity_Test_" data-uid="EventStore.Transport.Http.EntityManagement.HttpEntity.Test*"></a>
-  <h4 id="EventStore_Transport_Http_EntityManagement_HttpEntity_Test_IPrincipal_" data-uid="EventStore.Transport.Http.EntityManagement.HttpEntity.Test(IPrincipal)">Test(IPrincipal)</h4>
+  <h4 id="EventStore_Transport_Http_EntityManagement_HttpEntity_Test_System_Security_Principal_IPrincipal_" data-uid="EventStore.Transport.Http.EntityManagement.HttpEntity.Test(System.Security.Principal.IPrincipal)">Test(IPrincipal)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static HttpEntity Test(IPrincipal user)</code></pre>
   </div>
@@ -520,7 +507,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPrincipal</span></td>
+        <td><span class="xref">System.Security.Principal.IPrincipal</span></td>
         <td><span class="parametername">user</span></td>
         <td></td>
       </tr>
@@ -566,12 +553,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Http_EntityManagement_HttpEntity.md&amp;value=---%0Auid%3A%20EventStore.Transport.Http.EntityManagement.HttpEntity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Http/EntityManagement/HttpEntity.cs/#L10" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

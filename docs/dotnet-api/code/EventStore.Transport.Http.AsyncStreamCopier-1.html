@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,11 +104,35 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">AsyncStreamCopier&lt;T&gt;</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Transport.Http.html">EventStore.Transport.Http</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Transport.Http.dll</h6>
   <h5 id="EventStore_Transport_Http_AsyncStreamCopier_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class AsyncStreamCopier&lt;T&gt; : object</code></pre>
+    <pre><code class="lang-csharp hljs">public class AsyncStreamCopier&lt;T&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -126,18 +151,15 @@
   </table>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Http_AsyncStreamCopier_1__ctor_Stream_Stream__0_Action_EventStore_Transport_Http_AsyncStreamCopier__0___.md&amp;value=---%0Auid%3A%20EventStore.Transport.Http.AsyncStreamCopier%601.%23ctor(Stream%2CStream%2C%600%2CAction%7BEventStore.Transport.Http.AsyncStreamCopier%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Http/AsyncStreamCopier.cs/#L15">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Http_AsyncStreamCopier_1__ctor_" data-uid="EventStore.Transport.Http.AsyncStreamCopier`1.#ctor*"></a>
-  <h4 id="EventStore_Transport_Http_AsyncStreamCopier_1__ctor_Stream_Stream__0_Action_EventStore_Transport_Http_AsyncStreamCopier__0___" data-uid="EventStore.Transport.Http.AsyncStreamCopier`1.#ctor(Stream,Stream,`0,Action{EventStore.Transport.Http.AsyncStreamCopier{`0}})">AsyncStreamCopier(Stream, Stream, T, Action&lt;AsyncStreamCopier&lt;T&gt;&gt;)</h4>
+  <h4 id="EventStore_Transport_Http_AsyncStreamCopier_1__ctor_System_IO_Stream_System_IO_Stream__0_System_Action_EventStore_Transport_Http_AsyncStreamCopier__0___" data-uid="EventStore.Transport.Http.AsyncStreamCopier`1.#ctor(System.IO.Stream,System.IO.Stream,`0,System.Action{EventStore.Transport.Http.AsyncStreamCopier{`0}})">AsyncStreamCopier(Stream, Stream, T, Action&lt;AsyncStreamCopier&lt;T&gt;&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public AsyncStreamCopier(Stream input, Stream output, T state, Action&lt;AsyncStreamCopier&lt;T&gt;&gt; onCompleted)</code></pre>
   </div>
@@ -152,12 +174,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Stream</span></td>
+        <td><span class="xref">System.IO.Stream</span></td>
         <td><span class="parametername">input</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Stream</span></td>
+        <td><span class="xref">System.IO.Stream</span></td>
         <td><span class="parametername">output</span></td>
         <td></td>
       </tr>
@@ -167,7 +189,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.Transport.Http.AsyncStreamCopier-1.html">AsyncStreamCopier</a>&lt;T&gt;&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.Transport.Http.AsyncStreamCopier-1.html">AsyncStreamCopier</a>&lt;T&gt;&gt;</td>
         <td><span class="parametername">onCompleted</span></td>
         <td></td>
       </tr>
@@ -175,17 +197,14 @@
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Http_AsyncStreamCopier_1_AsyncState.md&amp;value=---%0Auid%3A%20EventStore.Transport.Http.AsyncStreamCopier%601.AsyncState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Http/AsyncStreamCopier.cs/#L8">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Transport_Http_AsyncStreamCopier_1_AsyncState" data-uid="EventStore.Transport.Http.AsyncStreamCopier`1.AsyncState">AsyncState</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly T AsyncState</code></pre>
   </div>
@@ -194,30 +213,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Http_AsyncStreamCopier_1_Error.md&amp;value=---%0Auid%3A%20EventStore.Transport.Http.AsyncStreamCopier%601.Error%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Http/AsyncStreamCopier.cs/#L7">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Http_AsyncStreamCopier_1_Error_" data-uid="EventStore.Transport.Http.AsyncStreamCopier`1.Error*"></a>
   <h4 id="EventStore_Transport_Http_AsyncStreamCopier_1_Error" data-uid="EventStore.Transport.Http.AsyncStreamCopier`1.Error">Error</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Exception Error { get; }</code></pre>
   </div>
@@ -226,30 +240,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Exception</span></td>
-        <td></td>
+        <td><span class="xref">System.Exception</span></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Http_AsyncStreamCopier_1_Start.md&amp;value=---%0Auid%3A%20EventStore.Transport.Http.AsyncStreamCopier%601.Start%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Http/AsyncStreamCopier.cs/#L28">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Http_AsyncStreamCopier_1_Start_" data-uid="EventStore.Transport.Http.AsyncStreamCopier`1.Start*"></a>
   <h4 id="EventStore_Transport_Http_AsyncStreamCopier_1_Start" data-uid="EventStore.Transport.Http.AsyncStreamCopier`1.Start">Start()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Start()</code></pre>
   </div>
@@ -278,12 +287,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Http_AsyncStreamCopier_1.md&amp;value=---%0Auid%3A%20EventStore.Transport.Http.AsyncStreamCopier%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Http/AsyncStreamCopier.cs/#L6" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

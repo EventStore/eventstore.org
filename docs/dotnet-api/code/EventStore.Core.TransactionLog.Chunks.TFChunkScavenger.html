@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,28 +104,49 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">TFChunkScavenger</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.TransactionLog.Chunks.html">EventStore.Core.TransactionLog.Chunks</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_TransactionLog_Chunks_TFChunkScavenger_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TFChunkScavenger : object</code></pre>
+    <pre><code class="lang-csharp hljs">public class TFChunkScavenger</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunkScavenger__ctor_EventStore_Core_TransactionLog_Chunks_TFChunkDb_EventStore_Core_TransactionLog_Chunks_ITFChunkScavengerLog_EventStore_Core_Index_ITableIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_System_Nullable_System_Int64__System_Boolean_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunkScavenger.%23ctor(EventStore.Core.TransactionLog.Chunks.TFChunkDb%2CEventStore.Core.TransactionLog.Chunks.ITFChunkScavengerLog%2CEventStore.Core.Index.ITableIndex%2CEventStore.Core.Services.Storage.ReaderIndex.IReadIndex%2CSystem.Nullable%7BSystem.Int64%7D%2CSystem.Boolean%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunkScavenger.cs/#L34">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunkScavenger__ctor_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkScavenger.#ctor*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunkScavenger__ctor_EventStore_Core_TransactionLog_Chunks_TFChunkDb_EventStore_Core_TransactionLog_Chunks_ITFChunkScavengerLog_EventStore_Core_Index_ITableIndex_EventStore_Core_Services_Storage_ReaderIndex_IReadIndex_System_Nullable_System_Int64__System_Boolean_System_Int32_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkScavenger.#ctor(EventStore.Core.TransactionLog.Chunks.TFChunkDb,EventStore.Core.TransactionLog.Chunks.ITFChunkScavengerLog,EventStore.Core.Index.ITableIndex,EventStore.Core.Services.Storage.ReaderIndex.IReadIndex,System.Nullable{System.Int64},System.Boolean,System.Int32)">TFChunkScavenger(TFChunkDb, ITFChunkScavengerLog, ITableIndex, IReadIndex, Nullable&lt;Int64&gt;, Boolean, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TFChunkScavenger(TFChunkDb db, ITFChunkScavengerLog scavengerLog, ITableIndex tableIndex, IReadIndex readIndex, long? maxChunkDataSize = null, bool unsafeIgnoreHardDeletes = false, int threads = 1)</code></pre>
+    <pre><code class="lang-csharp hljs">public TFChunkScavenger(TFChunkDb db, ITFChunkScavengerLog scavengerLog, ITableIndex tableIndex, IReadIndex readIndex, long? maxChunkDataSize = default(long? ), bool unsafeIgnoreHardDeletes = false, int threads = 1)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -175,18 +197,15 @@
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunkScavenger_ScavengeId.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunkScavenger.ScavengeId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunkScavenger.cs/#L59">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunkScavenger_ScavengeId_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkScavenger.ScavengeId*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunkScavenger_ScavengeId" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkScavenger.ScavengeId">ScavengeId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string ScavengeId { get; }</code></pre>
   </div>
@@ -195,32 +214,27 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunkScavenger_Scavenge_System_Boolean_System_Boolean_System_Int32_CancellationToken_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunkScavenger.Scavenge(System.Boolean%2CSystem.Boolean%2CSystem.Int32%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunkScavenger.cs/#L75">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunkScavenger_Scavenge_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkScavenger.Scavenge*"></a>
-  <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunkScavenger_Scavenge_System_Boolean_System_Boolean_System_Int32_CancellationToken_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkScavenger.Scavenge(System.Boolean,System.Boolean,System.Int32,CancellationToken)">Scavenge(Boolean, Boolean, Int32, CancellationToken)</h4>
+  <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunkScavenger_Scavenge_System_Boolean_System_Boolean_System_Int32_System_Threading_CancellationToken_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkScavenger.Scavenge(System.Boolean,System.Boolean,System.Int32,System.Threading.CancellationToken)">Scavenge(Boolean, Boolean, Int32, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task Scavenge(bool alwaysKeepScavenged, bool mergeChunks, int startFromChunk = 0, CancellationToken ct = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task Scavenge(bool alwaysKeepScavenged, bool mergeChunks, int startFromChunk = 0, CancellationToken ct = default(CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -248,7 +262,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><span class="xref">System.Threading.CancellationToken</span></td>
         <td><span class="parametername">ct</span></td>
         <td></td>
       </tr>
@@ -264,7 +278,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span></td>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -294,12 +308,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunkScavenger.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunkScavenger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunkScavenger.cs/#L21" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

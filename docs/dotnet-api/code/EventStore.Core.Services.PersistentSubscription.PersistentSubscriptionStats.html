@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,26 +104,47 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">PersistentSubscriptionStats</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.PersistentSubscription.html">EventStore.Core.Services.PersistentSubscription</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionStats_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PersistentSubscriptionStats : object</code></pre>
+    <pre><code class="lang-csharp hljs">public class PersistentSubscriptionStats</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionStats__ctor_EventStore_Core_Services_PersistentSubscription_PersistentSubscription_EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParams_Stopwatch_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionStats.%23ctor(EventStore.Core.Services.PersistentSubscription.PersistentSubscription%2CEventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParams%2CStopwatch)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionStats.cs/#L18">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionStats__ctor_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionStats.#ctor*"></a>
-  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionStats__ctor_EventStore_Core_Services_PersistentSubscription_PersistentSubscription_EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParams_Stopwatch_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionStats.#ctor(EventStore.Core.Services.PersistentSubscription.PersistentSubscription,EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParams,Stopwatch)">PersistentSubscriptionStats(PersistentSubscription, PersistentSubscriptionParams, Stopwatch)</h4>
+  <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionStats__ctor_EventStore_Core_Services_PersistentSubscription_PersistentSubscription_EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionParams_System_Diagnostics_Stopwatch_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionStats.#ctor(EventStore.Core.Services.PersistentSubscription.PersistentSubscription,EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionParams,System.Diagnostics.Stopwatch)">PersistentSubscriptionStats(PersistentSubscription, PersistentSubscriptionParams, Stopwatch)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public PersistentSubscriptionStats(PersistentSubscription parent, PersistentSubscriptionParams settings, Stopwatch totalTimeWatch)</code></pre>
   </div>
@@ -147,7 +169,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Stopwatch</span></td>
+        <td><span class="xref">System.Diagnostics.Stopwatch</span></td>
         <td><span class="parametername">totalTimeWatch</span></td>
         <td></td>
       </tr>
@@ -155,18 +177,15 @@
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionStats_GetStatistics.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionStats.GetStatistics%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionStats.cs/#L38">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionStats_GetStatistics_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionStats.GetStatistics*"></a>
   <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionStats_GetStatistics" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionStats.GetStatistics">GetStatistics()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public MonitoringMessage.SubscriptionInfo GetStatistics()</code></pre>
   </div>
@@ -185,33 +204,27 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionStats_IncrementProcessed.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionStats.IncrementProcessed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionStats.cs/#L25">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionStats_IncrementProcessed_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionStats.IncrementProcessed*"></a>
   <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionStats_IncrementProcessed" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionStats.IncrementProcessed">IncrementProcessed()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void IncrementProcessed()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionStats_SetLastCheckPoint_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionStats.SetLastCheckPoint(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionStats.cs/#L29">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionStats_SetLastCheckPoint_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionStats.SetLastCheckPoint*"></a>
   <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionStats_SetLastCheckPoint_System_Int64_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionStats.SetLastCheckPoint(System.Int64)">SetLastCheckPoint(Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void SetLastCheckPoint(long lastEventNumber)</code></pre>
   </div>
@@ -232,18 +245,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionStats_SetLastKnownEventNumber_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionStats.SetLastKnownEventNumber(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionStats.cs/#L33">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionStats_SetLastKnownEventNumber_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionStats.SetLastKnownEventNumber*"></a>
   <h4 id="EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionStats_SetLastKnownEventNumber_System_Int64_" data-uid="EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionStats.SetLastKnownEventNumber(System.Int64)">SetLastKnownEventNumber(Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void SetLastKnownEventNumber(long knownEventNumber)</code></pre>
   </div>
@@ -289,12 +299,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_PersistentSubscription_PersistentSubscriptionStats.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.PersistentSubscription.PersistentSubscriptionStats%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/PersistentSubscription/PersistentSubscriptionStats.cs/#L8" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
