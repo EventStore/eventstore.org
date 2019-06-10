@@ -169,44 +169,36 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
         <td><span class="parametername">bus</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.ISubscriber.html">ISubscriber</a></td>
         <td><span class="parametername">subscribeToBus</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">minFlushDelay</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.Chunks.TFChunkDb.html">TFChunkDb</a></td>
         <td><span class="parametername">db</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.html">TFChunkWriter</a></td>
         <td><span class="parametername">writer</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.Storage.ReaderIndex.IIndexWriter.html">IIndexWriter</a></td>
         <td><span class="parametername">indexWriter</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.Storage.EpochManager.IEpochManager.html">IEpochManager</a></td>
         <td><span class="parametername">epochManager</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -451,14 +443,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">force</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -495,14 +485,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.MonitoringMessage.InternalStatsRequest.html">MonitoringMessage.InternalStatsRequest</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -524,14 +512,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.SystemMessage.StateChangeMessage.html">SystemMessage.StateChangeMessage</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -553,24 +539,20 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
         <td><span class="parametername">rawMeta</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">recreateFromEventNumber</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
         <td><span class="parametername">modifiedMeta</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -600,6 +582,7 @@
   
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void SubscribeToMessage&lt;T&gt;()
+
     where T : Message</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
@@ -637,14 +620,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.StorageMessage.WriteCommit.html">StorageMessage.WriteCommit</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -666,14 +647,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.StorageMessage.WriteDelete.html">StorageMessage.WriteDelete</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -695,14 +674,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.StorageMessage.WritePrepares.html">StorageMessage.WritePrepares</a></td>
         <td><span class="parametername">msg</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -724,14 +701,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.StorageMessage.WriteTransactionData.html">StorageMessage.WriteTransactionData</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -753,14 +728,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.StorageMessage.WriteTransactionPrepare.html">StorageMessage.WriteTransactionPrepare</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -782,14 +755,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.StorageMessage.WriteTransactionStart.html">StorageMessage.WriteTransactionStart</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -811,14 +782,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.SystemMessage.SystemInit.html">SystemMessage.SystemInit</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -840,14 +809,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.SystemMessage.WaitForChaserToCatchUp.html">SystemMessage.WaitForChaserToCatchUp</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -869,14 +836,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.SystemMessage.WriteEpoch.html">SystemMessage.WriteEpoch</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>

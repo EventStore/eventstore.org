@@ -114,8 +114,12 @@
 </code></pre></section>
 <section id="tabpanel_91M2l1Hlsb_tabid-6" role="tabpanel" data-tab="tabid-6" aria-hidden="true" hidden="hidden">
 <!-- TODO: Further explanation here -->
-<!-- Can not find reference ~/code-examples/dotnet-client/Program.cs -->
-<!-- ## [JVM Client](#tab/tabid-7) -->
+<pre><code class="lang-csharp" name="getting-started-projections-create-projection-dotnet">PersistentSubscriptionSettings settings = PersistentSubscriptionSettings.Create()
+    .DoNotResolveLinkTos()
+    .StartFromCurrent();
+
+conn.CreatePersistentSubscriptionAsync(streamName, &quot;examplegroup&quot;, settings, adminCredentials).Wait();
+</code></pre><!-- ## [JVM Client](#tab/tabid-7) -->
 <!-- TODO: Exists? -->
 </section>
 </div>

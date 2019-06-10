@@ -135,6 +135,7 @@
   <h5 id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class PublishSubscribeDispatcher&lt;TGuid, TSubscribeRequest, TControlMessageBase, TResponseBase&gt;
+
     where TSubscribeRequest : Message where TControlMessageBase : Message where TResponseBase : Message</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
@@ -184,24 +185,20 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
         <td><span class="parametername">publisher</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Func</span>&lt;TSubscribeRequest, TGuid&gt;</td>
         <td><span class="parametername">getRequestCorrelationId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Func</span>&lt;TResponseBase, TGuid&gt;</td>
         <td><span class="parametername">getResponseCorrelationId</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -225,14 +222,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">TGuid</span></td>
         <td><span class="parametername">requestId</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -259,6 +254,7 @@
   
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IHandle&lt;T&gt; CreateSubscriber&lt;T&gt;()
+
     where T : TResponseBase</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
@@ -302,6 +298,7 @@
   
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool Handle&lt;T&gt;(T message)
+
     where T : TResponseBase</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -310,14 +307,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -369,14 +364,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">TControlMessageBase</span></td>
         <td><span class="parametername">request</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -398,19 +391,16 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
         <td><span class="parametername">publisher</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">TControlMessageBase</span></td>
         <td><span class="parametername">request</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -432,19 +422,16 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">TSubscribeRequest</span></td>
         <td><span class="parametername">request</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">subscriber</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -481,24 +468,20 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
         <td><span class="parametername">publisher</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">TSubscribeRequest</span></td>
         <td><span class="parametername">request</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">subscriber</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -535,19 +518,16 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">TGuid</span></td>
         <td><span class="parametername">correlationId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">subscriber</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>

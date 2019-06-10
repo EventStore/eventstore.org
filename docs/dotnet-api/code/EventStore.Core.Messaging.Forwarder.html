@@ -148,6 +148,7 @@
   
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IHandle&lt;T&gt; Create&lt;T&gt;(IPublisher to)
+
     where T : Message</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -156,14 +157,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
         <td><span class="parametername">to</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -209,6 +208,7 @@
   
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IHandle&lt;T&gt; CreateBalancing&lt;T&gt;(params IPublisher[] to)
+
     where T : Message</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -217,14 +217,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a>[]</td>
         <td><span class="parametername">to</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -269,6 +267,7 @@
   
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IHandle&lt;T&gt; CreateTracing&lt;T&gt;(IPublisher to, string prefix)
+
     where T : Message</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -277,19 +276,16 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
         <td><span class="parametername">to</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">prefix</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>

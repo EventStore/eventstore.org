@@ -98,13 +98,13 @@
 <div class="WARNING"><h5>Warning</h5><p>The last event in a stream is always kept as a record of the last event number in the stream.</p>
 </div>
 <h3 id="soft-delete-and-truncatebefore">Soft delete and <code>TruncateBefore</code></h3>
-<p><code>TruncateBefore</code> and <code>$tb</code> considers any event with an event number equal to or lower than its value as deleted.
+<p><code>TruncateBefore</code> and <code>$tb</code> considers any event with an event number lower than its value as deleted.
 For example, if you had the following events in a stream :</p>
 <pre><code class="lang-text">0@test-stream
 1@test-stream
 2@test-stream
 3@test-stream
-</code></pre><p>If you set the <code>TruncateBefore</code> or <code>$tb</code> value to 2, a read of the stream would result in only reading the last event:</p>
+</code></pre><p>If you set the <code>TruncateBefore</code> or <code>$tb</code> value to 3, a read of the stream would result in only reading the last event:</p>
 <pre><code class="lang-text">3@test-stream
 </code></pre><p>A <strong>Soft delete</strong> makes use of <code>TruncateBefore</code> and <code>$tb</code>. When you delete a stream, its <code>TruncateBefore</code> or <code>$tb</code> is set to the streams current last event number. When you read a soft deleted stream, the read returns a <code>StreamNotFound</code> or <code>404</code> result.
 After deleting the stream, you are able to write to it again, continuing from where it left off.</p>

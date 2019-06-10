@@ -163,24 +163,20 @@ Subscribers are responsible for handling exceptions</p>
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">name</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">watchSlowMsg</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.TimeSpan</span>&gt;</td>
         <td><span class="parametername">slowMsgThreshold</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -284,14 +280,12 @@ Subscribers are responsible for handling exceptions</p>
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messaging.Message.html">Message</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -313,14 +307,12 @@ Subscribers are responsible for handling exceptions</p>
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messaging.Message.html">Message</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -335,6 +327,7 @@ Subscribers are responsible for handling exceptions</p>
   
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Subscribe&lt;T&gt;(IHandle&lt;T&gt; handler)
+
     where T : Message</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -343,14 +336,12 @@ Subscribers are responsible for handling exceptions</p>
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;T&gt;</td>
         <td><span class="parametername">handler</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -380,6 +371,7 @@ Subscribers are responsible for handling exceptions</p>
   
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Unsubscribe&lt;T&gt;(IHandle&lt;T&gt; handler)
+
     where T : Message</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -388,14 +380,12 @@ Subscribers are responsible for handling exceptions</p>
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;T&gt;</td>
         <td><span class="parametername">handler</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>

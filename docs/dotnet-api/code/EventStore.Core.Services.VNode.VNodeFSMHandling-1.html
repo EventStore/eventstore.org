@@ -133,6 +133,7 @@
   <h5 id="EventStore_Core_Services_VNode_VNodeFSMHandling_1_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class VNodeFSMHandling&lt;TMessage&gt;
+
     where TMessage : Message</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
@@ -170,19 +171,16 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.VNode.VNodeFSMStatesDefinition.html">VNodeFSMStatesDefinition</a></td>
         <td><span class="parametername">stateDef</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">defaultHandler</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -206,14 +204,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Action</span>&lt;TMessage&gt;</td>
         <td><span class="parametername">handler</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -250,14 +246,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.Core.Data.VNodeState.html">VNodeState</a>, TMessage&gt;</td>
         <td><span class="parametername">handler</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -294,14 +288,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
         <td><span class="parametername">publisher</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>

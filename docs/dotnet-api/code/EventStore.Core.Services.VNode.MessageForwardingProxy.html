@@ -154,34 +154,28 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">internalCorrId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">clientCorrId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messaging.IEnvelope.html">IEnvelope</a></td>
         <td><span class="parametername">envelope</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messaging.Message.html">Message</a></td>
         <td><span class="parametername">timeoutMessage</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -208,6 +202,7 @@
   
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool TryForwardReply&lt;TMessage&gt;(Guid correlationId, TMessage originalMessage, Func&lt;Guid, TMessage, TMessage&gt; getForwardMessage)
+
     where TMessage : Message</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -216,24 +211,20 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">correlationId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">TMessage</span></td>
         <td><span class="parametername">originalMessage</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Func</span>&lt;<span class="xref">System.Guid</span>, TMessage, TMessage&gt;</td>
         <td><span class="parametername">getForwardMessage</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
