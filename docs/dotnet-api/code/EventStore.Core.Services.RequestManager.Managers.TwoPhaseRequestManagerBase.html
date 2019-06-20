@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -117,26 +118,47 @@
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.StorageMessage.StreamDeleted.html">StorageMessage.StreamDeleted</a>&gt;</div>
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.StorageMessage.RequestManagerTimerTick.html">StorageMessage.RequestManagerTimerTick</a>&gt;</div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.RequestManager.Managers.html">EventStore.Core.Services.RequestManager.Managers</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class TwoPhaseRequestManagerBase : object, IRequestManager, IHandle&lt;StorageMessage.CheckStreamAccessCompleted&gt;, IHandle&lt;StorageMessage.AlreadyCommitted&gt;, IHandle&lt;StorageMessage.PrepareAck&gt;, IHandle&lt;StorageMessage.CommitReplicated&gt;, IHandle&lt;StorageMessage.WrongExpectedVersion&gt;, IHandle&lt;StorageMessage.StreamDeleted&gt;, IHandle&lt;StorageMessage.RequestManagerTimerTick&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class TwoPhaseRequestManagerBase : IRequestManager, IHandle&lt;StorageMessage.CheckStreamAccessCompleted&gt;, IHandle&lt;StorageMessage.AlreadyCommitted&gt;, IHandle&lt;StorageMessage.PrepareAck&gt;, IHandle&lt;StorageMessage.CommitReplicated&gt;, IHandle&lt;StorageMessage.WrongExpectedVersion&gt;, IHandle&lt;StorageMessage.StreamDeleted&gt;, IHandle&lt;StorageMessage.RequestManagerTimerTick&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase__ctor_EventStore_Core_Bus_IPublisher_System_Int32_TimeSpan_TimeSpan_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.%23ctor(EventStore.Core.Bus.IPublisher%2CSystem.Int32%2CTimeSpan%2CTimeSpan%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/Managers/TwoPhaseRequestManagerBase.cs/#L53">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase__ctor_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.#ctor*"></a>
-  <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase__ctor_EventStore_Core_Bus_IPublisher_System_Int32_TimeSpan_TimeSpan_System_Boolean_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.#ctor(EventStore.Core.Bus.IPublisher,System.Int32,TimeSpan,TimeSpan,System.Boolean)">TwoPhaseRequestManagerBase(IPublisher, Int32, TimeSpan, TimeSpan, Boolean)</h4>
+  <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase__ctor_EventStore_Core_Bus_IPublisher_System_Int32_System_TimeSpan_System_TimeSpan_System_Boolean_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.#ctor(EventStore.Core.Bus.IPublisher,System.Int32,System.TimeSpan,System.TimeSpan,System.Boolean)">TwoPhaseRequestManagerBase(IPublisher, Int32, TimeSpan, TimeSpan, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected TwoPhaseRequestManagerBase(IPublisher publisher, int prepareCount, TimeSpan prepareTimeout, TimeSpan commitTimeout, bool betterOrdering)</code></pre>
   </div>
@@ -146,50 +168,41 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
         <td><span class="parametername">publisher</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">prepareCount</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">prepareTimeout</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">commitTimeout</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">betterOrdering</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_CommitTimeout.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.CommitTimeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/Managers/TwoPhaseRequestManagerBase.cs/#L40">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_CommitTimeout" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.CommitTimeout">CommitTimeout</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected readonly TimeSpan CommitTimeout</code></pre>
   </div>
@@ -198,27 +211,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
-        <td></td>
+        <td><span class="xref">System.TimeSpan</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_PrepareTimeout.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.PrepareTimeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/Managers/TwoPhaseRequestManagerBase.cs/#L39">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_PrepareTimeout" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.PrepareTimeout">PrepareTimeout</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected readonly TimeSpan PrepareTimeout</code></pre>
   </div>
@@ -227,27 +235,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
-        <td></td>
+        <td><span class="xref">System.TimeSpan</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_PublishEnvelope.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.PublishEnvelope%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/Managers/TwoPhaseRequestManagerBase.cs/#L25">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_PublishEnvelope" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.PublishEnvelope">PublishEnvelope</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected readonly IEnvelope PublishEnvelope</code></pre>
   </div>
@@ -256,27 +259,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messaging.IEnvelope.html">IEnvelope</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Publisher.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Publisher%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/Managers/TwoPhaseRequestManagerBase.cs/#L24">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Publisher" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Publisher">Publisher</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected readonly IPublisher Publisher</code></pre>
   </div>
@@ -285,30 +283,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_ClientCorrId.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.ClientCorrId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/Managers/TwoPhaseRequestManagerBase.cs/#L31">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_ClientCorrId_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.ClientCorrId*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_ClientCorrId" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.ClientCorrId">ClientCorrId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected Guid ClientCorrId { get; }</code></pre>
   </div>
@@ -317,28 +310,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
-        <td></td>
+        <td><span class="xref">System.Guid</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_NextTimeoutTime.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.NextTimeoutTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/Managers/TwoPhaseRequestManagerBase.cs/#L35">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_NextTimeoutTime_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.NextTimeoutTime*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_NextTimeoutTime" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.NextTimeoutTime">NextTimeoutTime</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected DateTime NextTimeoutTime { get; }</code></pre>
   </div>
@@ -347,28 +335,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">DateTime</span></td>
-        <td></td>
+        <td><span class="xref">System.DateTime</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_ResponseEnvelope.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.ResponseEnvelope%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/Managers/TwoPhaseRequestManagerBase.cs/#L27">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_ResponseEnvelope_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.ResponseEnvelope*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_ResponseEnvelope" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.ResponseEnvelope">ResponseEnvelope</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected IEnvelope ResponseEnvelope { get; }</code></pre>
   </div>
@@ -377,32 +360,27 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messaging.IEnvelope.html">IEnvelope</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_CompleteFailedRequest_EventStore_Core_Messages_OperationResult_System_String_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.CompleteFailedRequest(EventStore.Core.Messages.OperationResult%2CSystem.String%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/Managers/TwoPhaseRequestManagerBase.cs/#L178">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_CompleteFailedRequest_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.CompleteFailedRequest*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_CompleteFailedRequest_EventStore_Core_Messages_OperationResult_System_String_System_Int64_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.CompleteFailedRequest(EventStore.Core.Messages.OperationResult,System.String,System.Int64)">CompleteFailedRequest(OperationResult, String, Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void CompleteFailedRequest(OperationResult result, string error, long currentVersion = null)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void CompleteFailedRequest(OperationResult result, string error, long currentVersion = -1L)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -410,39 +388,32 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.OperationResult.html">OperationResult</a></td>
         <td><span class="parametername">result</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">error</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">currentVersion</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_CompleteSuccessRequest_System_Int64_System_Int64_System_Int64_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.CompleteSuccessRequest(System.Int64%2CSystem.Int64%2CSystem.Int64%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/Managers/TwoPhaseRequestManagerBase.cs/#L172">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_CompleteSuccessRequest_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.CompleteSuccessRequest*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_CompleteSuccessRequest_System_Int64_System_Int64_System_Int64_System_Int64_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.CompleteSuccessRequest(System.Int64,System.Int64,System.Int64,System.Int64)">CompleteSuccessRequest(Int64, Int64, Int64, Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void CompleteSuccessRequest(long firstEventNumber, long lastEventNumber, long preparePosition, long commitPosition)</code></pre>
   </div>
@@ -452,44 +423,36 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">firstEventNumber</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">lastEventNumber</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">preparePosition</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">commitPosition</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Handle_EventStore_Core_Messages_StorageMessage_AlreadyCommitted_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Handle(EventStore.Core.Messages.StorageMessage.AlreadyCommitted)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/Managers/TwoPhaseRequestManagerBase.cs/#L140">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Handle_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Handle_EventStore_Core_Messages_StorageMessage_AlreadyCommitted_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Handle(EventStore.Core.Messages.StorageMessage.AlreadyCommitted)">Handle(StorageMessage.AlreadyCommitted)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(StorageMessage.AlreadyCommitted message)</code></pre>
   </div>
@@ -499,29 +462,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.StorageMessage.AlreadyCommitted.html">StorageMessage.AlreadyCommitted</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Handle_EventStore_Core_Messages_StorageMessage_CheckStreamAccessCompleted_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Handle(EventStore.Core.Messages.StorageMessage.CheckStreamAccessCompleted)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/Managers/TwoPhaseRequestManagerBase.cs/#L108">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Handle_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Handle_EventStore_Core_Messages_StorageMessage_CheckStreamAccessCompleted_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Handle(EventStore.Core.Messages.StorageMessage.CheckStreamAccessCompleted)">Handle(StorageMessage.CheckStreamAccessCompleted)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(StorageMessage.CheckStreamAccessCompleted message)</code></pre>
   </div>
@@ -531,29 +489,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.StorageMessage.CheckStreamAccessCompleted.html">StorageMessage.CheckStreamAccessCompleted</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Handle_EventStore_Core_Messages_StorageMessage_CommitReplicated_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Handle(EventStore.Core.Messages.StorageMessage.CommitReplicated)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/Managers/TwoPhaseRequestManagerBase.cs/#L164">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Handle_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Handle_EventStore_Core_Messages_StorageMessage_CommitReplicated_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Handle(EventStore.Core.Messages.StorageMessage.CommitReplicated)">Handle(StorageMessage.CommitReplicated)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(StorageMessage.CommitReplicated message)</code></pre>
   </div>
@@ -563,29 +516,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.StorageMessage.CommitReplicated.html">StorageMessage.CommitReplicated</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Handle_EventStore_Core_Messages_StorageMessage_PrepareAck_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Handle(EventStore.Core.Messages.StorageMessage.PrepareAck)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/Managers/TwoPhaseRequestManagerBase.cs/#L147">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Handle_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Handle_EventStore_Core_Messages_StorageMessage_PrepareAck_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Handle(EventStore.Core.Messages.StorageMessage.PrepareAck)">Handle(StorageMessage.PrepareAck)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(StorageMessage.PrepareAck message)</code></pre>
   </div>
@@ -595,29 +543,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.StorageMessage.PrepareAck.html">StorageMessage.PrepareAck</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Handle_EventStore_Core_Messages_StorageMessage_RequestManagerTimerTick_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Handle(EventStore.Core.Messages.StorageMessage.RequestManagerTimerTick)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/Managers/TwoPhaseRequestManagerBase.cs/#L130">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Handle_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Handle_EventStore_Core_Messages_StorageMessage_RequestManagerTimerTick_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Handle(EventStore.Core.Messages.StorageMessage.RequestManagerTimerTick)">Handle(StorageMessage.RequestManagerTimerTick)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(StorageMessage.RequestManagerTimerTick message)</code></pre>
   </div>
@@ -627,29 +570,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.StorageMessage.RequestManagerTimerTick.html">StorageMessage.RequestManagerTimerTick</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Handle_EventStore_Core_Messages_StorageMessage_StreamDeleted_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Handle(EventStore.Core.Messages.StorageMessage.StreamDeleted)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/Managers/TwoPhaseRequestManagerBase.cs/#L123">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Handle_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Handle_EventStore_Core_Messages_StorageMessage_StreamDeleted_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Handle(EventStore.Core.Messages.StorageMessage.StreamDeleted)">Handle(StorageMessage.StreamDeleted)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(StorageMessage.StreamDeleted message)</code></pre>
   </div>
@@ -659,29 +597,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.StorageMessage.StreamDeleted.html">StorageMessage.StreamDeleted</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Handle_EventStore_Core_Messages_StorageMessage_WrongExpectedVersion_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Handle(EventStore.Core.Messages.StorageMessage.WrongExpectedVersion)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/Managers/TwoPhaseRequestManagerBase.cs/#L115">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Handle_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Handle*"></a>
   <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_Handle_EventStore_Core_Messages_StorageMessage_WrongExpectedVersion_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.Handle(EventStore.Core.Messages.StorageMessage.WrongExpectedVersion)">Handle(StorageMessage.WrongExpectedVersion)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(StorageMessage.WrongExpectedVersion message)</code></pre>
   </div>
@@ -691,29 +624,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.StorageMessage.WrongExpectedVersion.html">StorageMessage.WrongExpectedVersion</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_InitNoPreparePhase_EventStore_Core_Messaging_IEnvelope_Guid_Guid_System_String_IPrincipal_EventStore_Core_Services_Storage_ReaderIndex_StreamAccessType_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.InitNoPreparePhase(EventStore.Core.Messaging.IEnvelope%2CGuid%2CGuid%2CSystem.String%2CIPrincipal%2CEventStore.Core.Services.Storage.ReaderIndex.StreamAccessType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/Managers/TwoPhaseRequestManagerBase.cs/#L73">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_InitNoPreparePhase_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.InitNoPreparePhase*"></a>
-  <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_InitNoPreparePhase_EventStore_Core_Messaging_IEnvelope_Guid_Guid_System_String_IPrincipal_EventStore_Core_Services_Storage_ReaderIndex_StreamAccessType_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.InitNoPreparePhase(EventStore.Core.Messaging.IEnvelope,Guid,Guid,System.String,IPrincipal,EventStore.Core.Services.Storage.ReaderIndex.StreamAccessType)">InitNoPreparePhase(IEnvelope, Guid, Guid, String, IPrincipal, StreamAccessType)</h4>
+  <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_InitNoPreparePhase_EventStore_Core_Messaging_IEnvelope_System_Guid_System_Guid_System_String_System_Security_Principal_IPrincipal_EventStore_Core_Services_Storage_ReaderIndex_StreamAccessType_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.InitNoPreparePhase(EventStore.Core.Messaging.IEnvelope,System.Guid,System.Guid,System.String,System.Security.Principal.IPrincipal,EventStore.Core.Services.Storage.ReaderIndex.StreamAccessType)">InitNoPreparePhase(IEnvelope, Guid, Guid, String, IPrincipal, StreamAccessType)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void InitNoPreparePhase(IEnvelope responseEnvelope, Guid internalCorrId, Guid clientCorrId, string eventStreamId, IPrincipal user, StreamAccessType accessType)</code></pre>
   </div>
@@ -723,54 +651,44 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messaging.IEnvelope.html">IEnvelope</a></td>
         <td><span class="parametername">responseEnvelope</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">internalCorrId</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">clientCorrId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">eventStreamId</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IPrincipal</span></td>
+        <td><span class="xref">System.Security.Principal.IPrincipal</span></td>
         <td><span class="parametername">user</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.Storage.ReaderIndex.StreamAccessType.html">StreamAccessType</a></td>
         <td><span class="parametername">accessType</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_InitTwoPhase_EventStore_Core_Messaging_IEnvelope_Guid_Guid_System_Int64_IPrincipal_EventStore_Core_Services_Storage_ReaderIndex_StreamAccessType_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.InitTwoPhase(EventStore.Core.Messaging.IEnvelope%2CGuid%2CGuid%2CSystem.Int64%2CIPrincipal%2CEventStore.Core.Services.Storage.ReaderIndex.StreamAccessType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/Managers/TwoPhaseRequestManagerBase.cs/#L90">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_InitTwoPhase_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.InitTwoPhase*"></a>
-  <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_InitTwoPhase_EventStore_Core_Messaging_IEnvelope_Guid_Guid_System_Int64_IPrincipal_EventStore_Core_Services_Storage_ReaderIndex_StreamAccessType_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.InitTwoPhase(EventStore.Core.Messaging.IEnvelope,Guid,Guid,System.Int64,IPrincipal,EventStore.Core.Services.Storage.ReaderIndex.StreamAccessType)">InitTwoPhase(IEnvelope, Guid, Guid, Int64, IPrincipal, StreamAccessType)</h4>
+  <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_InitTwoPhase_EventStore_Core_Messaging_IEnvelope_System_Guid_System_Guid_System_Int64_System_Security_Principal_IPrincipal_EventStore_Core_Services_Storage_ReaderIndex_StreamAccessType_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.InitTwoPhase(EventStore.Core.Messaging.IEnvelope,System.Guid,System.Guid,System.Int64,System.Security.Principal.IPrincipal,EventStore.Core.Services.Storage.ReaderIndex.StreamAccessType)">InitTwoPhase(IEnvelope, Guid, Guid, Int64, IPrincipal, StreamAccessType)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void InitTwoPhase(IEnvelope responseEnvelope, Guid internalCorrId, Guid clientCorrId, long transactionId, IPrincipal user, StreamAccessType accessType)</code></pre>
   </div>
@@ -780,54 +698,44 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messaging.IEnvelope.html">IEnvelope</a></td>
         <td><span class="parametername">responseEnvelope</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">internalCorrId</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">clientCorrId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">transactionId</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IPrincipal</span></td>
+        <td><span class="xref">System.Security.Principal.IPrincipal</span></td>
         <td><span class="parametername">user</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.Storage.ReaderIndex.StreamAccessType.html">StreamAccessType</a></td>
         <td><span class="parametername">accessType</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_OnSecurityAccessGranted_Guid_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.OnSecurityAccessGranted(Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/Managers/TwoPhaseRequestManagerBase.cs/#L71">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_OnSecurityAccessGranted_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.OnSecurityAccessGranted*"></a>
-  <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_OnSecurityAccessGranted_Guid_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.OnSecurityAccessGranted(Guid)">OnSecurityAccessGranted(Guid)</h4>
+  <h4 id="EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase_OnSecurityAccessGranted_System_Guid_" data-uid="EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase.OnSecurityAccessGranted(System.Guid)">OnSecurityAccessGranted(Guid)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected abstract void OnSecurityAccessGranted(Guid internalCorrId)</code></pre>
   </div>
@@ -837,14 +745,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">internalCorrId</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -898,12 +804,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_RequestManager_Managers_TwoPhaseRequestManagerBase.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.RequestManager.Managers.TwoPhaseRequestManagerBase%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/RequestManager/Managers/TwoPhaseRequestManagerBase.cs/#L13" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

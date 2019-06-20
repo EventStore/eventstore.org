@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -107,2998 +108,2623 @@
     <h5>Implements</h5>
     <div><a class="xref" href="EventStore.Common.Options.IOptions.html">IOptions</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.ClusterNode.html">EventStore.ClusterNode</a></h6>
   <h6><strong>Assembly</strong>: EventStore.ClusterNode.dll</h6>
   <h5 id="EventStore_ClusterNode_ClusterNodeOptions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ClusterNodeOptions : object, IOptions</code></pre>
+    <pre><code class="lang-csharp hljs">public class ClusterNodeOptions : IOptions</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions__ctor.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L308">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions__ctor_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.#ctor*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions__ctor" data-uid="EventStore.ClusterNode.ClusterNodeOptions.#ctor">ClusterNodeOptions()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ClusterNodeOptions()</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_AddInterfacePrefixes.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.AddInterfacePrefixes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L212">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_AddInterfacePrefixes_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.AddInterfacePrefixes*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_AddInterfacePrefixes" data-uid="EventStore.ClusterNode.ClusterNodeOptions.AddInterfacePrefixes">AddInterfacePrefixes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool AddInterfacePrefixes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Add interface prefixes&quot;, &quot;Interface Options&quot;)]
+public bool AddInterfacePrefixes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_AdminOnExt.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.AdminOnExt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L121">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_AdminOnExt_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.AdminOnExt*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_AdminOnExt" data-uid="EventStore.ClusterNode.ClusterNodeOptions.AdminOnExt">AdminOnExt</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool AdminOnExt { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Whether or not to run the admin ui on the external HTTP endpoint&quot;, &quot;Interface Options&quot;)]
+public bool AdminOnExt { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_AlwaysKeepScavenged.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.AlwaysKeepScavenged%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L290">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_AlwaysKeepScavenged_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.AlwaysKeepScavenged*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_AlwaysKeepScavenged" data-uid="EventStore.ClusterNode.ClusterNodeOptions.AlwaysKeepScavenged">AlwaysKeepScavenged</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool AlwaysKeepScavenged { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Always keeps the newer chunks from a scavenge operation.&quot;, &quot;Database Options&quot;)]
+public bool AlwaysKeepScavenged { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_AuthenticationConfig.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.AuthenticationConfig%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L248">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_AuthenticationConfig_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.AuthenticationConfig*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_AuthenticationConfig" data-uid="EventStore.ClusterNode.ClusterNodeOptions.AuthenticationConfig">AuthenticationConfig</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string AuthenticationConfig { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Path to the configuration file for authentication configuration (if applicable).&quot;, &quot;Authentication Options&quot;)]
+public string AuthenticationConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_AuthenticationType.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.AuthenticationType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L245">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_AuthenticationType_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.AuthenticationType*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_AuthenticationType" data-uid="EventStore.ClusterNode.ClusterNodeOptions.AuthenticationType">AuthenticationType</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string AuthenticationType { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The type of authentication to use.&quot;, &quot;Authentication Options&quot;)]
+public string AuthenticationType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_BetterOrdering.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.BetterOrdering%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L260">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_BetterOrdering_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.BetterOrdering*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_BetterOrdering" data-uid="EventStore.ClusterNode.ClusterNodeOptions.BetterOrdering">BetterOrdering</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool BetterOrdering { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Enable Queue affinity on reads during write process to try to get better ordering.&quot;, &quot;Database Options&quot;)]
+public bool BetterOrdering { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_CachedChunks.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.CachedChunks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L151">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_CachedChunks_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.CachedChunks*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_CachedChunks" data-uid="EventStore.ClusterNode.ClusterNodeOptions.CachedChunks">CachedChunks</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int CachedChunks { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The number of chunks to cache in unmanaged memory.&quot;, &quot;Database Options&quot;)]
+public int CachedChunks { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_CertificateFile.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.CertificateFile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L227">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_CertificateFile_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.CertificateFile*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_CertificateFile" data-uid="EventStore.ClusterNode.ClusterNodeOptions.CertificateFile">CertificateFile</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string CertificateFile { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The path to certificate file.&quot;, &quot;Certificate Options&quot;)]
+public string CertificateFile { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_CertificatePassword.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.CertificatePassword%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L230">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_CertificatePassword_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.CertificatePassword*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_CertificatePassword" data-uid="EventStore.ClusterNode.ClusterNodeOptions.CertificatePassword">CertificatePassword</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string CertificatePassword { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The password to certificate in file.&quot;, &quot;Certificate Options&quot;)]
+public string CertificatePassword { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_CertificateStoreLocation.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.CertificateStoreLocation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L215">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_CertificateStoreLocation_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.CertificateStoreLocation*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_CertificateStoreLocation" data-uid="EventStore.ClusterNode.ClusterNodeOptions.CertificateStoreLocation">CertificateStoreLocation</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string CertificateStoreLocation { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The certificate store location name.&quot;, &quot;Certificate Options&quot;)]
+public string CertificateStoreLocation { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_CertificateStoreName.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.CertificateStoreName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L218">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_CertificateStoreName_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.CertificateStoreName*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_CertificateStoreName" data-uid="EventStore.ClusterNode.ClusterNodeOptions.CertificateStoreName">CertificateStoreName</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string CertificateStoreName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The certificate store name.&quot;, &quot;Certificate Options&quot;)]
+public string CertificateStoreName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_CertificateSubjectName.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.CertificateSubjectName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L221">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_CertificateSubjectName_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.CertificateSubjectName*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_CertificateSubjectName" data-uid="EventStore.ClusterNode.ClusterNodeOptions.CertificateSubjectName">CertificateSubjectName</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string CertificateSubjectName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The certificate subject name.&quot;, &quot;Certificate Options&quot;)]
+public string CertificateSubjectName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_CertificateThumbprint.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.CertificateThumbprint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L224">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_CertificateThumbprint_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.CertificateThumbprint*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_CertificateThumbprint" data-uid="EventStore.ClusterNode.ClusterNodeOptions.CertificateThumbprint">CertificateThumbprint</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string CertificateThumbprint { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The certificate fingerprint/thumbprint.&quot;, &quot;Certificate Options&quot;)]
+public string CertificateThumbprint { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ChunkInitialReaderCount.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ChunkInitialReaderCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L184">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ChunkInitialReaderCount_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ChunkInitialReaderCount*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ChunkInitialReaderCount" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ChunkInitialReaderCount">ChunkInitialReaderCount</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ChunkInitialReaderCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The initial number of readers to start when opening a TFChunk&quot;, &quot;Database Options&quot;)]
+public int ChunkInitialReaderCount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ChunksCacheSize.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ChunksCacheSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L157">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ChunksCacheSize_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ChunksCacheSize*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ChunksCacheSize" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ChunksCacheSize">ChunksCacheSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long ChunksCacheSize { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The amount of unmanaged memory to use for caching chunks in bytes.&quot;, &quot;Database Options&quot;)]
+public long ChunksCacheSize { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ClusterDns.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ClusterDns%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L139">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ClusterDns_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ClusterDns*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ClusterDns" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ClusterDns">ClusterDns</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string ClusterDns { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;DNS name from which other nodes can be discovered.&quot;, &quot;Cluster Options&quot;)]
+public string ClusterDns { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ClusterGossipPort.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ClusterGossipPort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L142">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ClusterGossipPort_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ClusterGossipPort*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ClusterGossipPort" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ClusterGossipPort">ClusterGossipPort</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ClusterGossipPort { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The port on which cluster nodes' managers are running.&quot;, &quot;Cluster Options&quot;)]
+public int ClusterGossipPort { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ClusterSize.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ClusterSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L106">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ClusterSize_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ClusterSize*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ClusterSize" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ClusterSize">ClusterSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ClusterSize { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The number of nodes in the cluster.&quot;, &quot;Cluster Options&quot;)]
+public int ClusterSize { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_CommitCount.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.CommitCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L115">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_CommitCount_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.CommitCount*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_CommitCount" data-uid="EventStore.ClusterNode.ClusterNodeOptions.CommitCount">CommitCount</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int CommitCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The number of nodes which must acknowledge commits before acknowledging to a client.&quot;, &quot;Cluster Options&quot;)]
+public int CommitCount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_CommitTimeoutMs.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.CommitTimeoutMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L254">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_CommitTimeoutMs_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.CommitTimeoutMs*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_CommitTimeoutMs" data-uid="EventStore.ClusterNode.ClusterNodeOptions.CommitTimeoutMs">CommitTimeoutMs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int CommitTimeoutMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Commit timeout (in milliseconds).&quot;, &quot;Database Options&quot;)]
+public int CommitTimeoutMs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_Config.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.Config%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L18">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_Config_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.Config*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_Config" data-uid="EventStore.ClusterNode.ClusterNodeOptions.Config">Config</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Config { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Configuration files.&quot;, &quot;Application Options&quot;)]
+public string Config { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ConnectionPendingSendBytesThreshold.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ConnectionPendingSendBytesThreshold%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L99">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ConnectionPendingSendBytesThreshold_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ConnectionPendingSendBytesThreshold*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ConnectionPendingSendBytesThreshold" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ConnectionPendingSendBytesThreshold">ConnectionPendingSendBytesThreshold</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ConnectionPendingSendBytesThreshold { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The maximum number of pending send bytes allowed before a connection is closed.&quot;, &quot;Interface Options&quot;)]
+public int ConnectionPendingSendBytesThreshold { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_Db.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.Db%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L166">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_Db_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.Db*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_Db" data-uid="EventStore.ClusterNode.ClusterNodeOptions.Db">Db</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Db { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The path the db should be loaded/saved to.&quot;, &quot;Database Options&quot;)]
+public string Db { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_Defines.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.Defines%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L21">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_Defines_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.Defines*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_Defines" data-uid="EventStore.ClusterNode.ClusterNodeOptions.Defines">Defines</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[] Defines { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Run-time conditionals.&quot;, &quot;Application Options&quot;)]
+public string[] Defines { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span>[]</td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_DisableHTTPCaching.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.DisableHTTPCaching%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L30">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_DisableHTTPCaching_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.DisableHTTPCaching*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_DisableHTTPCaching" data-uid="EventStore.ClusterNode.ClusterNodeOptions.DisableHTTPCaching">DisableHTTPCaching</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool DisableHTTPCaching { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Disable HTTP caching.&quot;, &quot;Application Options&quot;)]
+public bool DisableHTTPCaching { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_DisableInsecureTCP.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.DisableInsecureTCP%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L236">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_DisableInsecureTCP_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.DisableInsecureTCP*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_DisableInsecureTCP" data-uid="EventStore.ClusterNode.ClusterNodeOptions.DisableInsecureTCP">DisableInsecureTCP</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool DisableInsecureTCP { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Whether to disable insecure TCP communication&quot;, &quot;Interface Options&quot;)]
+public bool DisableInsecureTCP { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_DisableScavengeMerging.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.DisableScavengeMerging%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L130">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_DisableScavengeMerging_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.DisableScavengeMerging*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_DisableScavengeMerging" data-uid="EventStore.ClusterNode.ClusterNodeOptions.DisableScavengeMerging">DisableScavengeMerging</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool DisableScavengeMerging { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Disables the merging of chunks when scavenge is running&quot;, &quot;Database Options&quot;)]
+public bool DisableScavengeMerging { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_DiscoverViaDns.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.DiscoverViaDns%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L136">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_DiscoverViaDns_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.DiscoverViaDns*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_DiscoverViaDns" data-uid="EventStore.ClusterNode.ClusterNodeOptions.DiscoverViaDns">DiscoverViaDns</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool DiscoverViaDns { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Whether to use DNS lookup to discover other cluster nodes.&quot;, &quot;Cluster Options&quot;)]
+public bool DiscoverViaDns { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_EnableHistograms.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.EnableHistograms%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L284">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_EnableHistograms_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.EnableHistograms*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_EnableHistograms" data-uid="EventStore.ClusterNode.ClusterNodeOptions.EnableHistograms">EnableHistograms</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool EnableHistograms { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Enables the tracking of various histograms in the backend, typically only used for debugging etc&quot;, &quot;Application Options&quot;)]
+public bool EnableHistograms { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_EnableTrustedAuth.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.EnableTrustedAuth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L209">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_EnableTrustedAuth_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.EnableTrustedAuth*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_EnableTrustedAuth" data-uid="EventStore.ClusterNode.ClusterNodeOptions.EnableTrustedAuth">EnableTrustedAuth</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool EnableTrustedAuth { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Enables trusted authentication by an intermediary in the HTTP&quot;, &quot;Interface Options&quot;)]
+public bool EnableTrustedAuth { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ExtHttpPort.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ExtHttpPort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L45">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ExtHttpPort_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtHttpPort*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ExtHttpPort" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtHttpPort">ExtHttpPort</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ExtHttpPort { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;External HTTP Port.&quot;, &quot;Interface Options&quot;)]
+public int ExtHttpPort { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ExtHttpPortAdvertiseAs.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ExtHttpPortAdvertiseAs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L69">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ExtHttpPortAdvertiseAs_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtHttpPortAdvertiseAs*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ExtHttpPortAdvertiseAs" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtHttpPortAdvertiseAs">ExtHttpPortAdvertiseAs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ExtHttpPortAdvertiseAs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Advertise External Http Port As.&quot;, &quot;Interface Options&quot;)]
+public int ExtHttpPortAdvertiseAs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ExtHttpPrefixes.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ExtHttpPrefixes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L206">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ExtHttpPrefixes_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtHttpPrefixes*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ExtHttpPrefixes" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtHttpPrefixes">ExtHttpPrefixes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[] ExtHttpPrefixes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The prefixes that the external HTTP server should respond to.&quot;, &quot;Interface Options&quot;)]
+public string[] ExtHttpPrefixes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span>[]</td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ExtIp.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ExtIp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L39">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ExtIp_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtIp*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ExtIp" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtIp">ExtIp</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IPAddress ExtIp { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;External IP Address.&quot;, &quot;Interface Options&quot;)]
+public IPAddress ExtIp { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPAddress</span></td>
-        <td></td>
+        <td><span class="xref">System.Net.IPAddress</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ExtIpAdvertiseAs.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ExtIpAdvertiseAs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L63">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ExtIpAdvertiseAs_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtIpAdvertiseAs*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ExtIpAdvertiseAs" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtIpAdvertiseAs">ExtIpAdvertiseAs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IPAddress ExtIpAdvertiseAs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Advertise External Tcp Address As.&quot;, &quot;Interface Options&quot;)]
+public IPAddress ExtIpAdvertiseAs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPAddress</span></td>
-        <td></td>
+        <td><span class="xref">System.Net.IPAddress</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ExtSecureTcpPort.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ExtSecureTcpPort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L60">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ExtSecureTcpPort_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtSecureTcpPort*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ExtSecureTcpPort" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtSecureTcpPort">ExtSecureTcpPort</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ExtSecureTcpPort { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;External Secure TCP Port.&quot;, &quot;Interface Options&quot;)]
+public int ExtSecureTcpPort { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ExtSecureTcpPortAdvertiseAs.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ExtSecureTcpPortAdvertiseAs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L57">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ExtSecureTcpPortAdvertiseAs_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtSecureTcpPortAdvertiseAs*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ExtSecureTcpPortAdvertiseAs" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtSecureTcpPortAdvertiseAs">ExtSecureTcpPortAdvertiseAs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ExtSecureTcpPortAdvertiseAs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Advertise Secure External Tcp Port As.&quot;, &quot;Interface Options&quot;)]
+public int ExtSecureTcpPortAdvertiseAs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ExtTcpHeartbeatInterval.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ExtTcpHeartbeatInterval%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L93">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ExtTcpHeartbeatInterval_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtTcpHeartbeatInterval*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ExtTcpHeartbeatInterval" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtTcpHeartbeatInterval">ExtTcpHeartbeatInterval</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ExtTcpHeartbeatInterval { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Heartbeat interval for external TCP sockets&quot;, &quot;Interface Options&quot;)]
+public int ExtTcpHeartbeatInterval { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ExtTcpHeartbeatTimeout.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ExtTcpHeartbeatTimeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L87">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ExtTcpHeartbeatTimeout_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtTcpHeartbeatTimeout*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ExtTcpHeartbeatTimeout" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtTcpHeartbeatTimeout">ExtTcpHeartbeatTimeout</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ExtTcpHeartbeatTimeout { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Heartbeat timeout for external TCP sockets&quot;, &quot;Interface Options&quot;)]
+public int ExtTcpHeartbeatTimeout { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ExtTcpPort.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ExtTcpPort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L54">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ExtTcpPort_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtTcpPort*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ExtTcpPort" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtTcpPort">ExtTcpPort</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ExtTcpPort { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;External TCP Port.&quot;, &quot;Interface Options&quot;)]
+public int ExtTcpPort { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ExtTcpPortAdvertiseAs.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ExtTcpPortAdvertiseAs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L66">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ExtTcpPortAdvertiseAs_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtTcpPortAdvertiseAs*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ExtTcpPortAdvertiseAs" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ExtTcpPortAdvertiseAs">ExtTcpPortAdvertiseAs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ExtTcpPortAdvertiseAs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Advertise External Tcp Port As.&quot;, &quot;Interface Options&quot;)]
+public int ExtTcpPortAdvertiseAs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_FaultOutOfOrderProjections.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.FaultOutOfOrderProjections%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L200">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_FaultOutOfOrderProjections_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.FaultOutOfOrderProjections*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_FaultOutOfOrderProjections" data-uid="EventStore.ClusterNode.ClusterNodeOptions.FaultOutOfOrderProjections">FaultOutOfOrderProjections</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool FaultOutOfOrderProjections { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Fault the projection if the Event number that was expected in the stream differs from what is received. This may happen if events have been deleted or expired&quot;, &quot;Projections Options&quot;)]
+public bool FaultOutOfOrderProjections { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_Force.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.Force%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L103">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_Force_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.Force*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_Force" data-uid="EventStore.ClusterNode.ClusterNodeOptions.Force">Force</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Force { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Force the Event Store to run in possibly harmful environments such as with Boehm GC.&quot;, &quot;Application Options&quot;)]
+public bool Force { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_GossipAllowedDifferenceMs.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.GossipAllowedDifferenceMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L278">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_GossipAllowedDifferenceMs_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.GossipAllowedDifferenceMs*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_GossipAllowedDifferenceMs" data-uid="EventStore.ClusterNode.ClusterNodeOptions.GossipAllowedDifferenceMs">GossipAllowedDifferenceMs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int GossipAllowedDifferenceMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The amount of drift, in ms, between clocks on nodes allowed before gossip is rejected.&quot;, &quot;Cluster Options&quot;)]
+public int GossipAllowedDifferenceMs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_GossipIntervalMs.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.GossipIntervalMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L275">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_GossipIntervalMs_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.GossipIntervalMs*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_GossipIntervalMs" data-uid="EventStore.ClusterNode.ClusterNodeOptions.GossipIntervalMs">GossipIntervalMs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int GossipIntervalMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The interval, in ms, nodes should try to gossip with each other.&quot;, &quot;Cluster Options&quot;)]
+public int GossipIntervalMs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_GossipOnExt.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.GossipOnExt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L127">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_GossipOnExt_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.GossipOnExt*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_GossipOnExt" data-uid="EventStore.ClusterNode.ClusterNodeOptions.GossipOnExt">GossipOnExt</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool GossipOnExt { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Whether or not to accept gossip requests on the external HTTP endpoint&quot;, &quot;Interface Options&quot;)]
+public bool GossipOnExt { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_GossipOnSingleNode.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.GossipOnSingleNode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L96">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_GossipOnSingleNode_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.GossipOnSingleNode*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_GossipOnSingleNode" data-uid="EventStore.ClusterNode.ClusterNodeOptions.GossipOnSingleNode">GossipOnSingleNode</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool GossipOnSingleNode { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;When enabled tells a single node to run gossip as if it is a cluster&quot;, &quot;Interface Options&quot;)]
+public bool GossipOnSingleNode { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_GossipSeed.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.GossipSeed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L145">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_GossipSeed_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.GossipSeed*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_GossipSeed" data-uid="EventStore.ClusterNode.ClusterNodeOptions.GossipSeed">GossipSeed</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IPEndPoint[] GossipSeed { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Endpoints for other cluster nodes from which to seed gossip&quot;, &quot;Cluster Options&quot;)]
+public IPEndPoint[] GossipSeed { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPEndPoint</span>[]</td>
-        <td></td>
+        <td><span class="xref">System.Net.IPEndPoint</span>[]</td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_GossipTimeoutMs.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.GossipTimeoutMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L281">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_GossipTimeoutMs_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.GossipTimeoutMs*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_GossipTimeoutMs" data-uid="EventStore.ClusterNode.ClusterNodeOptions.GossipTimeoutMs">GossipTimeoutMs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int GossipTimeoutMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The timeout, in ms, on gossip to another node.&quot;, &quot;Cluster Options&quot;)]
+public int GossipTimeoutMs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_HashCollisionReadLimit.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.HashCollisionReadLimit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L163">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_HashCollisionReadLimit_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.HashCollisionReadLimit*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_HashCollisionReadLimit" data-uid="EventStore.ClusterNode.ClusterNodeOptions.HashCollisionReadLimit">HashCollisionReadLimit</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int HashCollisionReadLimit { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The number of events to read per candidate in the case of a hash collision&quot;, &quot;Database Options&quot;)]
+public int HashCollisionReadLimit { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_Help.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.Help%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L9">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_Help_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.Help*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_Help" data-uid="EventStore.ClusterNode.ClusterNodeOptions.Help">Help</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Help { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Show help.&quot;, &quot;Application Options&quot;)]
+public bool Help { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_Index.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.Index%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L169">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_Index_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.Index*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_Index" data-uid="EventStore.ClusterNode.ClusterNodeOptions.Index">Index</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Index { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The path the index should be loaded/saved to.&quot;, &quot;Database Options&quot;)]
+public string Index { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_IndexCacheDepth.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.IndexCacheDepth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L269">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_IndexCacheDepth_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IndexCacheDepth*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_IndexCacheDepth" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IndexCacheDepth">IndexCacheDepth</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int IndexCacheDepth { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Sets the depth to cache for the mid point cache in index.&quot;, &quot;Database Options&quot;)]
+public int IndexCacheDepth { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_InitializationThreads.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.InitializationThreads%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L299">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_InitializationThreads_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.InitializationThreads*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_InitializationThreads" data-uid="EventStore.ClusterNode.ClusterNodeOptions.InitializationThreads">InitializationThreads</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int InitializationThreads { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Number of threads to be used to initialize the database. Will be capped at host processor count.&quot;, &quot;Database Options&quot;)]
+public int InitializationThreads { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_IntHttpPort.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.IntHttpPort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L42">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_IntHttpPort_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntHttpPort*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_IntHttpPort" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntHttpPort">IntHttpPort</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int IntHttpPort { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Internal HTTP Port.&quot;, &quot;Interface Options&quot;)]
+public int IntHttpPort { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_IntHttpPortAdvertiseAs.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.IntHttpPortAdvertiseAs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L81">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_IntHttpPortAdvertiseAs_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntHttpPortAdvertiseAs*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_IntHttpPortAdvertiseAs" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntHttpPortAdvertiseAs">IntHttpPortAdvertiseAs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int IntHttpPortAdvertiseAs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Advertise Internal Http Port As.&quot;, &quot;Interface Options&quot;)]
+public int IntHttpPortAdvertiseAs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_IntHttpPrefixes.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.IntHttpPrefixes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L203">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_IntHttpPrefixes_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntHttpPrefixes*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_IntHttpPrefixes" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntHttpPrefixes">IntHttpPrefixes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[] IntHttpPrefixes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The prefixes that the internal HTTP server should respond to.&quot;, &quot;Interface Options&quot;)]
+public string[] IntHttpPrefixes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span>[]</td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_IntIp.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.IntIp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L36">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_IntIp_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntIp*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_IntIp" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntIp">IntIp</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IPAddress IntIp { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Internal IP Address.&quot;, &quot;Interface Options&quot;)]
+public IPAddress IntIp { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPAddress</span></td>
-        <td></td>
+        <td><span class="xref">System.Net.IPAddress</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_IntIpAdvertiseAs.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.IntIpAdvertiseAs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L72">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_IntIpAdvertiseAs_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntIpAdvertiseAs*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_IntIpAdvertiseAs" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntIpAdvertiseAs">IntIpAdvertiseAs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IPAddress IntIpAdvertiseAs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Advertise Internal Tcp Address As.&quot;, &quot;Interface Options&quot;)]
+public IPAddress IntIpAdvertiseAs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPAddress</span></td>
-        <td></td>
+        <td><span class="xref">System.Net.IPAddress</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_IntSecureTcpPort.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.IntSecureTcpPort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L51">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_IntSecureTcpPort_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntSecureTcpPort*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_IntSecureTcpPort" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntSecureTcpPort">IntSecureTcpPort</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int IntSecureTcpPort { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Internal Secure TCP Port.&quot;, &quot;Interface Options&quot;)]
+public int IntSecureTcpPort { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_IntSecureTcpPortAdvertiseAs.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.IntSecureTcpPortAdvertiseAs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L75">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_IntSecureTcpPortAdvertiseAs_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntSecureTcpPortAdvertiseAs*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_IntSecureTcpPortAdvertiseAs" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntSecureTcpPortAdvertiseAs">IntSecureTcpPortAdvertiseAs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int IntSecureTcpPortAdvertiseAs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Advertise Secure Internal Tcp Port As.&quot;, &quot;Interface Options&quot;)]
+public int IntSecureTcpPortAdvertiseAs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_IntTcpHeartbeatInterval.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.IntTcpHeartbeatInterval%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L90">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_IntTcpHeartbeatInterval_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntTcpHeartbeatInterval*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_IntTcpHeartbeatInterval" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntTcpHeartbeatInterval">IntTcpHeartbeatInterval</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int IntTcpHeartbeatInterval { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Heartbeat interval for internal TCP sockets&quot;, &quot;Interface Options&quot;)]
+public int IntTcpHeartbeatInterval { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_IntTcpHeartbeatTimeout.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.IntTcpHeartbeatTimeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L84">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_IntTcpHeartbeatTimeout_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntTcpHeartbeatTimeout*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_IntTcpHeartbeatTimeout" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntTcpHeartbeatTimeout">IntTcpHeartbeatTimeout</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int IntTcpHeartbeatTimeout { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Heartbeat timeout for internal TCP sockets&quot;, &quot;Interface Options&quot;)]
+public int IntTcpHeartbeatTimeout { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_IntTcpPort.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.IntTcpPort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L48">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_IntTcpPort_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntTcpPort*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_IntTcpPort" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntTcpPort">IntTcpPort</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int IntTcpPort { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Internal TCP Port.&quot;, &quot;Interface Options&quot;)]
+public int IntTcpPort { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_IntTcpPortAdvertiseAs.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.IntTcpPortAdvertiseAs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L78">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_IntTcpPortAdvertiseAs_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntTcpPortAdvertiseAs*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_IntTcpPortAdvertiseAs" data-uid="EventStore.ClusterNode.ClusterNodeOptions.IntTcpPortAdvertiseAs">IntTcpPortAdvertiseAs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int IntTcpPortAdvertiseAs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Advertise Internal Tcp Port As.&quot;, &quot;Interface Options&quot;)]
+public int IntTcpPortAdvertiseAs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_Log.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.Log%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L15">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_Log_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.Log*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_Log" data-uid="EventStore.ClusterNode.ClusterNodeOptions.Log">Log</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Log { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Path where to keep log files.&quot;, &quot;Application Options&quot;)]
+public string Log { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_LogHttpRequests.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.LogHttpRequests%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L287">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_LogHttpRequests_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.LogHttpRequests*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_LogHttpRequests" data-uid="EventStore.ClusterNode.ClusterNodeOptions.LogHttpRequests">LogHttpRequests</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool LogHttpRequests { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Log Http Requests and Responses before processing them.&quot;, &quot;Application Options&quot;)]
+public bool LogHttpRequests { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_MaxAutoMergeIndexLevel.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.MaxAutoMergeIndexLevel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L305">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_MaxAutoMergeIndexLevel_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.MaxAutoMergeIndexLevel*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_MaxAutoMergeIndexLevel" data-uid="EventStore.ClusterNode.ClusterNodeOptions.MaxAutoMergeIndexLevel">MaxAutoMergeIndexLevel</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int MaxAutoMergeIndexLevel { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;During large Index Merge operations, writes may be slowed down. Set this to the maximum index file level for which automatic merges should happen.  Merging indexes above this level should be done manually.&quot;, &quot;Database Options&quot;)]
+public int MaxAutoMergeIndexLevel { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_MaxMemTableSize.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.MaxMemTableSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L160">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_MaxMemTableSize_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.MaxMemTableSize*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_MaxMemTableSize" data-uid="EventStore.ClusterNode.ClusterNodeOptions.MaxMemTableSize">MaxMemTableSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int MaxMemTableSize { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Adjusts the maximum size of a mem table.&quot;, &quot;Database Options&quot;)]
+public int MaxMemTableSize { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_MemDb.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.MemDb%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L172">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_MemDb_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.MemDb*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_MemDb" data-uid="EventStore.ClusterNode.ClusterNodeOptions.MemDb">MemDb</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool MemDb { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Keep everything in memory, no directories or files are created.&quot;, &quot;Database Options&quot;)]
+public bool MemDb { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_MinFlushDelayMs.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.MinFlushDelayMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L112">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_MinFlushDelayMs_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.MinFlushDelayMs*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_MinFlushDelayMs" data-uid="EventStore.ClusterNode.ClusterNodeOptions.MinFlushDelayMs">MinFlushDelayMs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public double MinFlushDelayMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The minimum flush delay in milliseconds.&quot;, &quot;Database Options&quot;)]
+public double MinFlushDelayMs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Double</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_MonoMinThreadpoolSize.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.MonoMinThreadpoolSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L33">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_MonoMinThreadpoolSize_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.MonoMinThreadpoolSize*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_MonoMinThreadpoolSize" data-uid="EventStore.ClusterNode.ClusterNodeOptions.MonoMinThreadpoolSize">MonoMinThreadpoolSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int MonoMinThreadpoolSize { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Minimum number of worker threads when running under mono. Set to 0 to leave machine defaults.&quot;, &quot;Application Options&quot;)]
+public int MonoMinThreadpoolSize { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_NodePriority.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.NodePriority%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L109">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_NodePriority_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.NodePriority*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_NodePriority" data-uid="EventStore.ClusterNode.ClusterNodeOptions.NodePriority">NodePriority</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int NodePriority { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The node priority used during master election&quot;, &quot;Cluster Options&quot;)]
+public int NodePriority { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_OptimizeIndexMerge.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.OptimizeIndexMerge%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L272">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_OptimizeIndexMerge_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.OptimizeIndexMerge*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_OptimizeIndexMerge" data-uid="EventStore.ClusterNode.ClusterNodeOptions.OptimizeIndexMerge">OptimizeIndexMerge</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool OptimizeIndexMerge { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Makes index merges faster and reduces disk pressure during merges.&quot;, &quot;Database Options&quot;)]
+public bool OptimizeIndexMerge { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_PrepareCount.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.PrepareCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L118">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_PrepareCount_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.PrepareCount*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_PrepareCount" data-uid="EventStore.ClusterNode.ClusterNodeOptions.PrepareCount">PrepareCount</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int PrepareCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The number of nodes which must acknowledge prepares.&quot;, &quot;Cluster Options&quot;)]
+public int PrepareCount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_PrepareTimeoutMs.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.PrepareTimeoutMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L251">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_PrepareTimeoutMs_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.PrepareTimeoutMs*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_PrepareTimeoutMs" data-uid="EventStore.ClusterNode.ClusterNodeOptions.PrepareTimeoutMs">PrepareTimeoutMs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int PrepareTimeoutMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Prepare timeout (in milliseconds).&quot;, &quot;Database Options&quot;)]
+public int PrepareTimeoutMs { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ProjectionsQueryExpiry.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ProjectionsQueryExpiry%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L197">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ProjectionsQueryExpiry_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ProjectionsQueryExpiry*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ProjectionsQueryExpiry" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ProjectionsQueryExpiry">ProjectionsQueryExpiry</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ProjectionsQueryExpiry { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The number of minutes a query can be idle before it expires&quot;, &quot;Projections Options&quot;)]
+public int ProjectionsQueryExpiry { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ProjectionThreads.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ProjectionThreads%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L191">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ProjectionThreads_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ProjectionThreads*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ProjectionThreads" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ProjectionThreads">ProjectionThreads</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ProjectionThreads { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The number of threads to use for projections.&quot;, &quot;Projections Options&quot;)]
+public int ProjectionThreads { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ReaderThreadsCount.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ReaderThreadsCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L154">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ReaderThreadsCount_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ReaderThreadsCount*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ReaderThreadsCount" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ReaderThreadsCount">ReaderThreadsCount</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ReaderThreadsCount { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The number of reader threads to use for processing reads.&quot;, &quot;Database Options&quot;)]
+public int ReaderThreadsCount { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ReduceFileCachePressure.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ReduceFileCachePressure%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L296">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ReduceFileCachePressure_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ReduceFileCachePressure*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ReduceFileCachePressure" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ReduceFileCachePressure">ReduceFileCachePressure</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool ReduceFileCachePressure { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Change the way the DB files are opened to reduce their stickiness in the system file cache.&quot;, &quot;Database Options&quot;)]
+public bool ReduceFileCachePressure { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_RunProjections.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.RunProjections%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L188">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_RunProjections_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.RunProjections*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_RunProjections" data-uid="EventStore.ClusterNode.ClusterNodeOptions.RunProjections">RunProjections</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProjectionType RunProjections { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Enables the running of projections. System runs built-in projections, All runs user projections.&quot;, &quot;Projections Options&quot;)]
+public ProjectionType RunProjections { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Common.Options.ProjectionType.html">ProjectionType</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_ScavengeHistoryMaxAge.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.ScavengeHistoryMaxAge%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L133">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_ScavengeHistoryMaxAge_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ScavengeHistoryMaxAge*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_ScavengeHistoryMaxAge" data-uid="EventStore.ClusterNode.ClusterNodeOptions.ScavengeHistoryMaxAge">ScavengeHistoryMaxAge</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int ScavengeHistoryMaxAge { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The number of days to keep scavenge history&quot;, &quot;Database Options&quot;)]
+public int ScavengeHistoryMaxAge { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_SkipDbVerify.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.SkipDbVerify%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L175">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_SkipDbVerify_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.SkipDbVerify*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_SkipDbVerify" data-uid="EventStore.ClusterNode.ClusterNodeOptions.SkipDbVerify">SkipDbVerify</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool SkipDbVerify { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Bypasses the checking of file hashes of database during startup (allows for faster startup).&quot;, &quot;Database Options&quot;)]
+public bool SkipDbVerify { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_SkipIndexScanOnReads.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.SkipIndexScanOnReads%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L293">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_SkipIndexScanOnReads_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.SkipIndexScanOnReads*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_SkipIndexScanOnReads" data-uid="EventStore.ClusterNode.ClusterNodeOptions.SkipIndexScanOnReads">SkipIndexScanOnReads</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool SkipIndexScanOnReads { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Skip Index Scan on Reads. This skips the index scan which was used to stop reading duplicates.&quot;, &quot;Application Options&quot;)]
+public bool SkipIndexScanOnReads { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_SkipIndexVerify.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.SkipIndexVerify%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L266">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_SkipIndexVerify_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.SkipIndexVerify*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_SkipIndexVerify" data-uid="EventStore.ClusterNode.ClusterNodeOptions.SkipIndexVerify">SkipIndexVerify</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool SkipIndexVerify { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Bypasses the checking of file hashes of indexes during startup and after index merges (allows for faster startup and less disk pressure after merges).&quot;, &quot;Database Options&quot;)]
+public bool SkipIndexVerify { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_SslTargetHost.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.SslTargetHost%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L239">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_SslTargetHost_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.SslTargetHost*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_SslTargetHost" data-uid="EventStore.ClusterNode.ClusterNodeOptions.SslTargetHost">SslTargetHost</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string SslTargetHost { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Target host of server's SSL certificate.&quot;, &quot;Interface Options&quot;)]
+public string SslTargetHost { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_SslValidateServer.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.SslValidateServer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L242">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_SslValidateServer_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.SslValidateServer*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_SslValidateServer" data-uid="EventStore.ClusterNode.ClusterNodeOptions.SslValidateServer">SslValidateServer</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool SslValidateServer { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Whether to validate that server's certificate is trusted.&quot;, &quot;Interface Options&quot;)]
+public bool SslValidateServer { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_StartStandardProjections.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.StartStandardProjections%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L27">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_StartStandardProjections_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.StartStandardProjections*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_StartStandardProjections" data-uid="EventStore.ClusterNode.ClusterNodeOptions.StartStandardProjections">StartStandardProjections</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool StartStandardProjections { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Start the built in system projections.&quot;, &quot;Application Options&quot;)]
+public bool StartStandardProjections { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_StatsOnExt.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.StatsOnExt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L124">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_StatsOnExt_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.StatsOnExt*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_StatsOnExt" data-uid="EventStore.ClusterNode.ClusterNodeOptions.StatsOnExt">StatsOnExt</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool StatsOnExt { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Whether or not to accept statistics requests on the external HTTP endpoint, needed if you use admin ui&quot;, &quot;Interface Options&quot;)]
+public bool StatsOnExt { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_StatsPeriodSec.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.StatsPeriodSec%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L148">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_StatsPeriodSec_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.StatsPeriodSec*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_StatsPeriodSec" data-uid="EventStore.ClusterNode.ClusterNodeOptions.StatsPeriodSec">StatsPeriodSec</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int StatsPeriodSec { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The number of seconds between statistics gathers.&quot;, &quot;Application Options&quot;)]
+public int StatsPeriodSec { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_StructuredLog.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.StructuredLog%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L302">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_StructuredLog_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.StructuredLog*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_StructuredLog" data-uid="EventStore.ClusterNode.ClusterNodeOptions.StructuredLog">StructuredLog</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool StructuredLog { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Enable structured logging.&quot;, &quot;Database Options&quot;)]
+public bool StructuredLog { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_Unbuffered.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.Unbuffered%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L181">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_Unbuffered_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.Unbuffered*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_Unbuffered" data-uid="EventStore.ClusterNode.ClusterNodeOptions.Unbuffered">Unbuffered</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Unbuffered { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Enables Unbuffered/DirectIO when writing to the file system, this bypasses filesystem caches.&quot;, &quot;Database Options&quot;)]
+public bool Unbuffered { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_UnsafeDisableFlushToDisk.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.UnsafeDisableFlushToDisk%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L257">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_UnsafeDisableFlushToDisk_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.UnsafeDisableFlushToDisk*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_UnsafeDisableFlushToDisk" data-uid="EventStore.ClusterNode.ClusterNodeOptions.UnsafeDisableFlushToDisk">UnsafeDisableFlushToDisk</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool UnsafeDisableFlushToDisk { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Disable flushing to disk.  (UNSAFE: on power off)&quot;, &quot;Database Options&quot;)]
+public bool UnsafeDisableFlushToDisk { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_UnsafeIgnoreHardDelete.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.UnsafeIgnoreHardDelete%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L263">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_UnsafeIgnoreHardDelete_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.UnsafeIgnoreHardDelete*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_UnsafeIgnoreHardDelete" data-uid="EventStore.ClusterNode.ClusterNodeOptions.UnsafeIgnoreHardDelete">UnsafeIgnoreHardDelete</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool UnsafeIgnoreHardDelete { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Disables Hard Deletes (UNSAFE: use to remove hard deletes)&quot;, &quot;Database Options&quot;)]
+public bool UnsafeIgnoreHardDelete { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_UseInternalSsl.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.UseInternalSsl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L233">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_UseInternalSsl_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.UseInternalSsl*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_UseInternalSsl" data-uid="EventStore.ClusterNode.ClusterNodeOptions.UseInternalSsl">UseInternalSsl</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool UseInternalSsl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Whether to use secure internal communication.&quot;, &quot;Interface Options&quot;)]
+public bool UseInternalSsl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_Version.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.Version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L12">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_Version_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.Version*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_Version" data-uid="EventStore.ClusterNode.ClusterNodeOptions.Version">Version</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Version { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Show version.&quot;, &quot;Application Options&quot;)]
+public bool Version { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_WhatIf.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.WhatIf%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L24">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_WhatIf_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.WhatIf*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_WhatIf" data-uid="EventStore.ClusterNode.ClusterNodeOptions.WhatIf">WhatIf</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool WhatIf { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Print effective configuration to console and then exit.&quot;, &quot;Application Options&quot;)]
+public bool WhatIf { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_WorkerThreads.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.WorkerThreads%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L194">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_WorkerThreads_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.WorkerThreads*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_WorkerThreads" data-uid="EventStore.ClusterNode.ClusterNodeOptions.WorkerThreads">WorkerThreads</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int WorkerThreads { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The number of threads to use for pool of worker services.&quot;, &quot;Application Options&quot;)]
+public int WorkerThreads { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions_WriteThrough.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions.WriteThrough%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L178">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_ClusterNode_ClusterNodeOptions_WriteThrough_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.WriteThrough*"></a>
   <h4 id="EventStore_ClusterNode_ClusterNodeOptions_WriteThrough" data-uid="EventStore.ClusterNode.ClusterNodeOptions.WriteThrough">WriteThrough</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool WriteThrough { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Enables Write Through when writing to the file system, this bypasses filesystem caches.&quot;, &quot;Database Options&quot;)]
+public bool WriteThrough { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -3131,12 +2757,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_ClusterNode_ClusterNodeOptions.md&amp;value=---%0Auid%3A%20EventStore.ClusterNode.ClusterNodeOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.ClusterNode/ClusterNodeOptions.cs/#L8" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

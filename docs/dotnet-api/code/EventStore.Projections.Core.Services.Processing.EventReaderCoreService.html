@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -124,26 +125,47 @@
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.Faulted.html">ReaderSubscriptionMessage.Faulted</a>&gt;</div>
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderCoreServiceMessage.ReaderTick.html">ReaderCoreServiceMessage.ReaderTick</a>&gt;</div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Services.Processing.html">EventStore.Projections.Core.Services.Processing</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
   <h5 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class EventReaderCoreService : object, IHandle&lt;ReaderCoreServiceMessage.StartReader&gt;, IHandle&lt;ReaderCoreServiceMessage.StopReader&gt;, IHandle&lt;ReaderSubscriptionManagement.Subscribe&gt;, IHandle&lt;ReaderSubscriptionManagement.Unsubscribe&gt;, IHandle&lt;ReaderSubscriptionManagement.Pause&gt;, IHandle&lt;ReaderSubscriptionManagement.Resume&gt;, IHandle&lt;ReaderSubscriptionManagement.SpoolStreamReadingCore&gt;, IHandle&lt;ReaderSubscriptionManagement.CompleteSpooledStreamReading&gt;, IHandle&lt;ReaderSubscriptionMessage.CommittedEventDistributed&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderIdle&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderStarting&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderNotAuthorized&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderEof&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderPartitionEof&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderPartitionDeleted&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderPartitionMeasured&gt;, IHandle&lt;ReaderSubscriptionMessage.Faulted&gt;, IHandle&lt;ReaderCoreServiceMessage.ReaderTick&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class EventReaderCoreService : IHandle&lt;ReaderCoreServiceMessage.StartReader&gt;, IHandle&lt;ReaderCoreServiceMessage.StopReader&gt;, IHandle&lt;ReaderSubscriptionManagement.Subscribe&gt;, IHandle&lt;ReaderSubscriptionManagement.Unsubscribe&gt;, IHandle&lt;ReaderSubscriptionManagement.Pause&gt;, IHandle&lt;ReaderSubscriptionManagement.Resume&gt;, IHandle&lt;ReaderSubscriptionManagement.SpoolStreamReadingCore&gt;, IHandle&lt;ReaderSubscriptionManagement.CompleteSpooledStreamReading&gt;, IHandle&lt;ReaderSubscriptionMessage.CommittedEventDistributed&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderIdle&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderStarting&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderNotAuthorized&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderEof&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderPartitionEof&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderPartitionDeleted&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderPartitionMeasured&gt;, IHandle&lt;ReaderSubscriptionMessage.Faulted&gt;, IHandle&lt;ReaderCoreServiceMessage.ReaderTick&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReaderCoreService__ctor_EventStore_Core_Bus_IPublisher_EventStore_Core_Helpers_IODispatcher_System_Int32_EventStore_Core_TransactionLog_Checkpoint_ICheckpoint_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReaderCoreService.%23ctor(EventStore.Core.Bus.IPublisher%2CEventStore.Core.Helpers.IODispatcher%2CSystem.Int32%2CEventStore.Core.TransactionLog.Checkpoint.ICheckpoint%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReaderCoreService.cs/#L51">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService__ctor_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.#ctor*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService__ctor_EventStore_Core_Bus_IPublisher_EventStore_Core_Helpers_IODispatcher_System_Int32_EventStore_Core_TransactionLog_Checkpoint_ICheckpoint_System_Boolean_System_Boolean_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.#ctor(EventStore.Core.Bus.IPublisher,EventStore.Core.Helpers.IODispatcher,System.Int32,EventStore.Core.TransactionLog.Checkpoint.ICheckpoint,System.Boolean,System.Boolean)">EventReaderCoreService(IPublisher, IODispatcher, Int32, ICheckpoint, Boolean, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public EventReaderCoreService(IPublisher publisher, IODispatcher ioDispatcher, int eventCacheSize, ICheckpoint writerCheckpoint, bool runHeadingReader, bool faultOutOfOrderProjections)</code></pre>
   </div>
@@ -153,56 +175,46 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
         <td><span class="parametername">publisher</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Helpers.IODispatcher.html">IODispatcher</a></td>
         <td><span class="parametername">ioDispatcher</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">eventCacheSize</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.Checkpoint.ICheckpoint.html">ICheckpoint</a></td>
         <td><span class="parametername">writerCheckpoint</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">runHeadingReader</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">faultOutOfOrderProjections</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderCoreServiceMessage_ReaderTick_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderCoreServiceMessage.ReaderTick)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReaderCoreService.cs/#L338">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderCoreServiceMessage_ReaderTick_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderCoreServiceMessage.ReaderTick)">Handle(ReaderCoreServiceMessage.ReaderTick)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ReaderCoreServiceMessage.ReaderTick message)</code></pre>
   </div>
@@ -212,29 +224,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderCoreServiceMessage.ReaderTick.html">ReaderCoreServiceMessage.ReaderTick</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderCoreServiceMessage_StartReader_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderCoreServiceMessage.StartReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReaderCoreService.cs/#L328">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderCoreServiceMessage_StartReader_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderCoreServiceMessage.StartReader)">Handle(ReaderCoreServiceMessage.StartReader)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ReaderCoreServiceMessage.StartReader message)</code></pre>
   </div>
@@ -244,29 +251,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderCoreServiceMessage.StartReader.html">ReaderCoreServiceMessage.StartReader</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderCoreServiceMessage_StopReader_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderCoreServiceMessage.StopReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReaderCoreService.cs/#L333">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderCoreServiceMessage_StopReader_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderCoreServiceMessage.StopReader)">Handle(ReaderCoreServiceMessage.StopReader)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ReaderCoreServiceMessage.StopReader message)</code></pre>
   </div>
@@ -276,29 +278,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderCoreServiceMessage.StopReader.html">ReaderCoreServiceMessage.StopReader</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_CompleteSpooledStreamReading_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.CompleteSpooledStreamReading)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReaderCoreService.cs/#L348">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_CompleteSpooledStreamReading_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.CompleteSpooledStreamReading)">Handle(ReaderSubscriptionManagement.CompleteSpooledStreamReading)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionManagement.CompleteSpooledStreamReading message)</code></pre>
   </div>
@@ -308,29 +305,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.CompleteSpooledStreamReading.html">ReaderSubscriptionManagement.CompleteSpooledStreamReading</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_Pause_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Pause)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReaderCoreService.cs/#L63">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_Pause_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Pause)">Handle(ReaderSubscriptionManagement.Pause)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionManagement.Pause message)</code></pre>
   </div>
@@ -340,29 +332,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Pause.html">ReaderSubscriptionManagement.Pause</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_Resume_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Resume)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReaderCoreService.cs/#L90">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_Resume_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Resume)">Handle(ReaderSubscriptionManagement.Resume)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionManagement.Resume message)</code></pre>
   </div>
@@ -372,29 +359,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Resume.html">ReaderSubscriptionManagement.Resume</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_SpoolStreamReadingCore_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.SpoolStreamReadingCore)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReaderCoreService.cs/#L342">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_SpoolStreamReadingCore_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.SpoolStreamReadingCore)">Handle(ReaderSubscriptionManagement.SpoolStreamReadingCore)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionManagement.SpoolStreamReadingCore message)</code></pre>
   </div>
@@ -404,29 +386,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.SpoolStreamReadingCore.html">ReaderSubscriptionManagement.SpoolStreamReadingCore</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_Subscribe_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Subscribe)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReaderCoreService.cs/#L97">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_Subscribe_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Subscribe)">Handle(ReaderSubscriptionManagement.Subscribe)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionManagement.Subscribe message)</code></pre>
   </div>
@@ -436,29 +413,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Subscribe.html">ReaderSubscriptionManagement.Subscribe</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_Unsubscribe_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Unsubscribe)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReaderCoreService.cs/#L122">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_Unsubscribe_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Unsubscribe)">Handle(ReaderSubscriptionManagement.Unsubscribe)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionManagement.Unsubscribe message)</code></pre>
   </div>
@@ -468,29 +440,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Unsubscribe.html">ReaderSubscriptionManagement.Unsubscribe</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_CommittedEventDistributed_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.CommittedEventDistributed)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReaderCoreService.cs/#L140">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_CommittedEventDistributed_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.CommittedEventDistributed)">Handle(ReaderSubscriptionMessage.CommittedEventDistributed)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionMessage.CommittedEventDistributed message)</code></pre>
   </div>
@@ -500,29 +467,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.CommittedEventDistributed.html">ReaderSubscriptionMessage.CommittedEventDistributed</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderEof_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderEof)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReaderCoreService.cs/#L185">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderEof_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderEof)">Handle(ReaderSubscriptionMessage.EventReaderEof)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionMessage.EventReaderEof message)</code></pre>
   </div>
@@ -532,29 +494,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderEof.html">ReaderSubscriptionMessage.EventReaderEof</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderIdle_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderIdle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReaderCoreService.cs/#L165">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderIdle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderIdle)">Handle(ReaderSubscriptionMessage.EventReaderIdle)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionMessage.EventReaderIdle message)</code></pre>
   </div>
@@ -564,29 +521,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderIdle.html">ReaderSubscriptionMessage.EventReaderIdle</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderNotAuthorized_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderNotAuthorized)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReaderCoreService.cs/#L226">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderNotAuthorized_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderNotAuthorized)">Handle(ReaderSubscriptionMessage.EventReaderNotAuthorized)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionMessage.EventReaderNotAuthorized message)</code></pre>
   </div>
@@ -596,29 +548,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderNotAuthorized.html">ReaderSubscriptionMessage.EventReaderNotAuthorized</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderPartitionDeleted_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderPartitionDeleted)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReaderCoreService.cs/#L206">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderPartitionDeleted_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderPartitionDeleted)">Handle(ReaderSubscriptionMessage.EventReaderPartitionDeleted)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionMessage.EventReaderPartitionDeleted message)</code></pre>
   </div>
@@ -628,29 +575,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderPartitionDeleted.html">ReaderSubscriptionMessage.EventReaderPartitionDeleted</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderPartitionEof_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderPartitionEof)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReaderCoreService.cs/#L197">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderPartitionEof_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderPartitionEof)">Handle(ReaderSubscriptionMessage.EventReaderPartitionEof)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionMessage.EventReaderPartitionEof message)</code></pre>
   </div>
@@ -660,29 +602,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderPartitionEof.html">ReaderSubscriptionMessage.EventReaderPartitionEof</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderPartitionMeasured_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderPartitionMeasured)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReaderCoreService.cs/#L217">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderPartitionMeasured_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderPartitionMeasured)">Handle(ReaderSubscriptionMessage.EventReaderPartitionMeasured)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionMessage.EventReaderPartitionMeasured message)</code></pre>
   </div>
@@ -692,29 +629,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderPartitionMeasured.html">ReaderSubscriptionMessage.EventReaderPartitionMeasured</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderStarting_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderStarting)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReaderCoreService.cs/#L176">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderStarting_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderStarting)">Handle(ReaderSubscriptionMessage.EventReaderStarting)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionMessage.EventReaderStarting message)</code></pre>
   </div>
@@ -724,29 +656,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderStarting.html">ReaderSubscriptionMessage.EventReaderStarting</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_Faulted_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.Faulted)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReaderCoreService.cs/#L238">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_Faulted_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.Faulted)">Handle(ReaderSubscriptionMessage.Faulted)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionMessage.Faulted message)</code></pre>
   </div>
@@ -756,14 +683,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.Faulted.html">ReaderSubscriptionMessage.Faulted</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -847,12 +772,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EventReaderCoreService.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EventReaderCoreService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EventReaderCoreService.cs/#L14" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

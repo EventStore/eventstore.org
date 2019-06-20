@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -109,6 +110,27 @@
     <div>
       <a class="xref" href="EventStore.Core.Messaging.Message.html#EventStore_Core_Messaging_Message_NextMsgId">Message.NextMsgId</a>
     </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Messages.html">EventStore.Core.Messages</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
@@ -118,18 +140,15 @@
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ClientMessage_PersistentSubscriptionConfirmation__ctor_System_String_Guid_System_Int64_System_Nullable_System_Int64__.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ClientMessage.PersistentSubscriptionConfirmation.%23ctor(System.String%2CGuid%2CSystem.Int64%2CSystem.Nullable%7BSystem.Int64%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ClientMessage.cs/#L1259">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messages_ClientMessage_PersistentSubscriptionConfirmation__ctor_" data-uid="EventStore.Core.Messages.ClientMessage.PersistentSubscriptionConfirmation.#ctor*"></a>
-  <h4 id="EventStore_Core_Messages_ClientMessage_PersistentSubscriptionConfirmation__ctor_System_String_Guid_System_Int64_System_Nullable_System_Int64__" data-uid="EventStore.Core.Messages.ClientMessage.PersistentSubscriptionConfirmation.#ctor(System.String,Guid,System.Int64,System.Nullable{System.Int64})">PersistentSubscriptionConfirmation(String, Guid, Int64, Nullable&lt;Int64&gt;)</h4>
+  <h4 id="EventStore_Core_Messages_ClientMessage_PersistentSubscriptionConfirmation__ctor_System_String_System_Guid_System_Int64_System_Nullable_System_Int64__" data-uid="EventStore.Core.Messages.ClientMessage.PersistentSubscriptionConfirmation.#ctor(System.String,System.Guid,System.Int64,System.Nullable{System.Int64})">PersistentSubscriptionConfirmation(String, Guid, Int64, Nullable&lt;Int64&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public PersistentSubscriptionConfirmation(string subscriptionId, Guid correlationId, long lastCommitPosition, long? lastEventNumber)</code></pre>
   </div>
@@ -139,45 +158,37 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">subscriptionId</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">correlationId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">lastCommitPosition</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
         <td><span class="parametername">lastEventNumber</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ClientMessage_PersistentSubscriptionConfirmation_CorrelationId.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ClientMessage.PersistentSubscriptionConfirmation.CorrelationId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ClientMessage.cs/#L1254">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_ClientMessage_PersistentSubscriptionConfirmation_CorrelationId" data-uid="EventStore.Core.Messages.ClientMessage.PersistentSubscriptionConfirmation.CorrelationId">CorrelationId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly Guid CorrelationId</code></pre>
   </div>
@@ -186,27 +197,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
-        <td></td>
+        <td><span class="xref">System.Guid</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ClientMessage_PersistentSubscriptionConfirmation_LastCommitPosition.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ClientMessage.PersistentSubscriptionConfirmation.LastCommitPosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ClientMessage.cs/#L1255">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_ClientMessage_PersistentSubscriptionConfirmation_LastCommitPosition" data-uid="EventStore.Core.Messages.ClientMessage.PersistentSubscriptionConfirmation.LastCommitPosition">LastCommitPosition</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly long LastCommitPosition</code></pre>
   </div>
@@ -215,27 +221,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ClientMessage_PersistentSubscriptionConfirmation_LastEventNumber.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ClientMessage.PersistentSubscriptionConfirmation.LastEventNumber%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ClientMessage.cs/#L1256">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_ClientMessage_PersistentSubscriptionConfirmation_LastEventNumber" data-uid="EventStore.Core.Messages.ClientMessage.PersistentSubscriptionConfirmation.LastEventNumber">LastEventNumber</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly long? LastEventNumber</code></pre>
   </div>
@@ -244,27 +245,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ClientMessage_PersistentSubscriptionConfirmation_SubscriptionId.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ClientMessage.PersistentSubscriptionConfirmation.SubscriptionId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ClientMessage.cs/#L1257">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_ClientMessage_PersistentSubscriptionConfirmation_SubscriptionId" data-uid="EventStore.Core.Messages.ClientMessage.PersistentSubscriptionConfirmation.SubscriptionId">SubscriptionId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string SubscriptionId</code></pre>
   </div>
@@ -273,30 +269,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ClientMessage_PersistentSubscriptionConfirmation_MsgTypeId.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ClientMessage.PersistentSubscriptionConfirmation.MsgTypeId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ClientMessage.cs/#L1250">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messages_ClientMessage_PersistentSubscriptionConfirmation_MsgTypeId_" data-uid="EventStore.Core.Messages.ClientMessage.PersistentSubscriptionConfirmation.MsgTypeId*"></a>
   <h4 id="EventStore_Core_Messages_ClientMessage_PersistentSubscriptionConfirmation_MsgTypeId" data-uid="EventStore.Core.Messages.ClientMessage.PersistentSubscriptionConfirmation.MsgTypeId">MsgTypeId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override int MsgTypeId { get; }</code></pre>
   </div>
@@ -305,13 +296,11 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -342,12 +331,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_ClientMessage_PersistentSubscriptionConfirmation.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.ClientMessage.PersistentSubscriptionConfirmation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/ClientMessage.cs/#L1247" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

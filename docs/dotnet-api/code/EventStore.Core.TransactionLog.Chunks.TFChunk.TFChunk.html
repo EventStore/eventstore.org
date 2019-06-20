@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,6 +104,31 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">TFChunk</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.TransactionLog.Chunks.TFChunk.html">EventStore.Core.TransactionLog.Chunks.TFChunk</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_syntax">Syntax</h5>
@@ -111,46 +137,38 @@
   </div>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_CurrentChunkVersion.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.CurrentChunkVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L28">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_CurrentChunkVersion" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.CurrentChunkVersion">CurrentChunkVersion</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const byte CurrentChunkVersion = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const byte CurrentChunkVersion = 3</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_MidpointsDepth.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.MidpointsDepth%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L68">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_MidpointsDepth" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.MidpointsDepth">MidpointsDepth</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly int MidpointsDepth</code></pre>
   </div>
@@ -159,88 +177,73 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_ReadBufferSize.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.ReadBufferSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L30">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_ReadBufferSize" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.ReadBufferSize">ReadBufferSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int ReadBufferSize = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int ReadBufferSize = 8192</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_WriteBufferSize.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.WriteBufferSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L29">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_WriteBufferSize" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.WriteBufferSize">WriteBufferSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int WriteBufferSize = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int WriteBufferSize = 8192</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_ChunkFooter.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.ChunkFooter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L64">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_ChunkFooter_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.ChunkFooter*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_ChunkFooter" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.ChunkFooter">ChunkFooter</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ChunkFooter ChunkFooter { get; }</code></pre>
   </div>
@@ -249,28 +252,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.Chunks.ChunkFooter.html">ChunkFooter</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_ChunkHeader.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.ChunkHeader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L60">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_ChunkHeader_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.ChunkHeader*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_ChunkHeader" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.ChunkHeader">ChunkHeader</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ChunkHeader ChunkHeader { get; }</code></pre>
   </div>
@@ -279,28 +277,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.Chunks.ChunkHeader.html">ChunkHeader</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_FileName.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.FileName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L52">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_FileName_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.FileName*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_FileName" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.FileName">FileName</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string FileName { get; }</code></pre>
   </div>
@@ -309,28 +302,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_FileSize.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.FileSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L56">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_FileSize_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.FileSize*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_FileSize" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.FileSize">FileSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int FileSize { get; }</code></pre>
   </div>
@@ -339,28 +327,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_IsCached.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.IsCached%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L38">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_IsCached_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.IsCached*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_IsCached" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.IsCached">IsCached</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool IsCached { get; }</code></pre>
   </div>
@@ -369,28 +352,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_IsReadOnly.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.IsReadOnly%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L34">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_IsReadOnly_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.IsReadOnly*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_IsReadOnly" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.IsReadOnly">IsReadOnly</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool IsReadOnly { get; }</code></pre>
   </div>
@@ -399,28 +377,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_LogicalDataSize.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.LogicalDataSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L43">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_LogicalDataSize_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.LogicalDataSize*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_LogicalDataSize" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.LogicalDataSize">LogicalDataSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public long LogicalDataSize { get; }</code></pre>
   </div>
@@ -429,28 +402,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_PhysicalDataSize.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.PhysicalDataSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L48">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_PhysicalDataSize_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.PhysicalDataSize*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_PhysicalDataSize" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.PhysicalDataSize">PhysicalDataSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int PhysicalDataSize { get; }</code></pre>
   </div>
@@ -459,28 +427,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_RawWriterPosition.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.RawWriterPosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L70">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_RawWriterPosition_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.RawWriterPosition*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_RawWriterPosition" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.RawWriterPosition">RawWriterPosition</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int RawWriterPosition { get; }</code></pre>
   </div>
@@ -489,30 +452,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_AcquireReader.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.AcquireReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L1047">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_AcquireReader_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.AcquireReader*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_AcquireReader" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.AcquireReader">AcquireReader()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TFChunkBulkReader AcquireReader()</code></pre>
   </div>
@@ -531,63 +489,51 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_CacheInMemory.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.CacheInMemory%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L582">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_CacheInMemory_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.CacheInMemory*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_CacheInMemory" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.CacheInMemory">CacheInMemory()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void CacheInMemory()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_Complete.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.Complete%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L787">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_Complete_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.Complete*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_Complete" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.Complete">Complete()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Complete()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_CompleteRaw.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.CompleteRaw%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L813">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_CompleteRaw_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.CompleteRaw*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_CompleteRaw" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.CompleteRaw">CompleteRaw()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void CompleteRaw()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_CompleteScavenge_ICollection_EventStore_Core_TransactionLog_Chunks_TFChunk_PosMap__.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.CompleteScavenge(ICollection%7BEventStore.Core.TransactionLog.Chunks.TFChunk.PosMap%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L793">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_CompleteScavenge_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.CompleteScavenge*"></a>
-  <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_CompleteScavenge_ICollection_EventStore_Core_TransactionLog_Chunks_TFChunk_PosMap__" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.CompleteScavenge(ICollection{EventStore.Core.TransactionLog.Chunks.TFChunk.PosMap})">CompleteScavenge(ICollection&lt;PosMap&gt;)</h4>
+  <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_CompleteScavenge_System_Collections_Generic_ICollection_EventStore_Core_TransactionLog_Chunks_TFChunk_PosMap__" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.CompleteScavenge(System.Collections.Generic.ICollection{EventStore.Core.TransactionLog.Chunks.TFChunk.PosMap})">CompleteScavenge(ICollection&lt;PosMap&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void CompleteScavenge(ICollection&lt;PosMap&gt; mapping)</code></pre>
   </div>
@@ -597,29 +543,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ICollection</span>&lt;<a class="xref" href="EventStore.Core.TransactionLog.Chunks.TFChunk.PosMap.html">PosMap</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="EventStore.Core.TransactionLog.Chunks.TFChunk.PosMap.html">PosMap</a>&gt;</td>
         <td><span class="parametername">mapping</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_CreateNew_System_String_System_Int32_System_Int32_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.CreateNew(System.String%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L173">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_CreateNew_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.CreateNew*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_CreateNew_System_String_System_Int32_System_Int32_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Int32_System_Boolean_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.CreateNew(System.String,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Boolean)">CreateNew(String, Int32, Int32, Int32, Boolean, Boolean, Boolean, Boolean, Int32, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TFChunk CreateNew(string filename, int chunkSize, int chunkStartNumber, int chunkEndNumber, bool isScavenged, bool inMem, bool unbuffered, bool writethrough, int initialReaderCount, bool reduceFileCachePressure)</code></pre>
   </div>
@@ -629,59 +570,48 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">filename</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">chunkSize</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">chunkStartNumber</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">chunkEndNumber</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">isScavenged</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">inMem</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">unbuffered</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">writethrough</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">initialReaderCount</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">reduceFileCachePressure</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -700,18 +630,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_CreateWithHeader_System_String_EventStore_Core_TransactionLog_Chunks_ChunkHeader_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.CreateWithHeader(System.String%2CEventStore.Core.TransactionLog.Chunks.ChunkHeader%2CSystem.Int32%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L190">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_CreateWithHeader_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.CreateWithHeader*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_CreateWithHeader_System_String_EventStore_Core_TransactionLog_Chunks_ChunkHeader_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Int32_System_Boolean_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.CreateWithHeader(System.String,EventStore.Core.TransactionLog.Chunks.ChunkHeader,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Boolean)">CreateWithHeader(String, ChunkHeader, Int32, Boolean, Boolean, Boolean, Int32, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TFChunk CreateWithHeader(string filename, ChunkHeader header, int fileSize, bool inMem, bool unbuffered, bool writethrough, int initialReaderCount, bool reduceFileCachePressure)</code></pre>
   </div>
@@ -721,49 +648,40 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">filename</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.Chunks.ChunkHeader.html">ChunkHeader</a></td>
         <td><span class="parametername">header</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">fileSize</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">inMem</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">unbuffered</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">writethrough</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">initialReaderCount</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">reduceFileCachePressure</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -782,48 +700,39 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_DeOptimizeExistsAt.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.DeOptimizeExistsAt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L698">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_DeOptimizeExistsAt_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.DeOptimizeExistsAt*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_DeOptimizeExistsAt" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.DeOptimizeExistsAt">DeOptimizeExistsAt()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void DeOptimizeExistsAt()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_Dispose.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L918">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_Dispose_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.Dispose*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_Dispose" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_ExistsAt_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.ExistsAt(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L689">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_ExistsAt_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.ExistsAt*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_ExistsAt_System_Int64_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.ExistsAt(System.Int64)">ExistsAt(Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool ExistsAt(long logicalPosition)</code></pre>
   </div>
@@ -833,14 +742,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">logicalPosition</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -859,48 +766,39 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_Finalize.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.Finalize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L136">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_Finalize_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.Finalize*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_Finalize" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.Finalize">Finalize()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected void Finalize()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_Flush.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.Flush%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L779">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_Flush_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.Flush*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_Flush" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.Flush">Flush()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Flush()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_FromCompletedFile_System_String_System_Boolean_System_Boolean_System_Int32_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.FromCompletedFile(System.String%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Int32%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L140">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_FromCompletedFile_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.FromCompletedFile*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_FromCompletedFile_System_String_System_Boolean_System_Boolean_System_Int32_System_Boolean_System_Boolean_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.FromCompletedFile(System.String,System.Boolean,System.Boolean,System.Int32,System.Boolean,System.Boolean)">FromCompletedFile(String, Boolean, Boolean, Int32, Boolean, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TFChunk FromCompletedFile(string filename, bool verifyHash, bool unbufferedRead, int initialReaderCount, bool optimizeReadSideCache = false, bool reduceFileCachePressure = false)</code></pre>
   </div>
@@ -910,39 +808,32 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">filename</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">verifyHash</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">unbufferedRead</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">initialReaderCount</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">optimizeReadSideCache</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">reduceFileCachePressure</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -961,18 +852,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_FromOngoingFile_System_String_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.FromOngoingFile(System.String%2CSystem.Int32%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L154">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_FromOngoingFile_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.FromOngoingFile*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_FromOngoingFile_System_String_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Int32_System_Boolean_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.FromOngoingFile(System.String,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Boolean)">FromOngoingFile(String, Int32, Boolean, Boolean, Boolean, Int32, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static TFChunk FromOngoingFile(string filename, int writePosition, bool checkSize, bool unbuffered, bool writethrough, int initialReaderCount, bool reduceFileCachePressure)</code></pre>
   </div>
@@ -982,44 +870,36 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">filename</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">writePosition</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">checkSize</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">unbuffered</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">writethrough</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">initialReaderCount</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">reduceFileCachePressure</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1038,18 +918,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_GetAlignedSize_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.GetAlignedSize(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L962">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_GetAlignedSize_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.GetAlignedSize*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_GetAlignedSize_System_Int32_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.GetAlignedSize(System.Int32)">GetAlignedSize(Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static int GetAlignedSize(int size)</code></pre>
   </div>
@@ -1059,14 +936,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">size</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1085,48 +960,39 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_MarkForDeletion.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.MarkForDeletion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L924">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_MarkForDeletion_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.MarkForDeletion*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_MarkForDeletion" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.MarkForDeletion">MarkForDeletion()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void MarkForDeletion()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_OptimizeExistsAt.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.OptimizeExistsAt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L693">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_OptimizeExistsAt_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.OptimizeExistsAt*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_OptimizeExistsAt" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.OptimizeExistsAt">OptimizeExistsAt()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void OptimizeExistsAt()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_ReleaseReader_EventStore_Core_TransactionLog_Chunks_TFChunkBulkReader_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.ReleaseReader(EventStore.Core.TransactionLog.Chunks.TFChunkBulkReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L1070">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_ReleaseReader_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.ReleaseReader*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_ReleaseReader_EventStore_Core_TransactionLog_Chunks_TFChunkBulkReader_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.ReleaseReader(EventStore.Core.TransactionLog.Chunks.TFChunkBulkReader)">ReleaseReader(TFChunkBulkReader)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void ReleaseReader(TFChunkBulkReader reader)</code></pre>
   </div>
@@ -1136,29 +1002,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.Chunks.TFChunkBulkReader.html">TFChunkBulkReader</a></td>
         <td><span class="parametername">reader</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_ToString.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L1078">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_ToString_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.ToString*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_ToString" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.ToString">ToString()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
   </div>
@@ -1177,18 +1038,17 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_TryAppend_EventStore_Core_TransactionLog_LogRecords_LogRecord_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.TryAppend(EventStore.Core.TransactionLog.LogRecords.LogRecord)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L723">View Source</a>
-  </span>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_TryAppend_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.TryAppend*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_TryAppend_EventStore_Core_TransactionLog_LogRecords_LogRecord_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.TryAppend(EventStore.Core.TransactionLog.LogRecords.LogRecord)">TryAppend(LogRecord)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public RecordWriteResult TryAppend(LogRecord record)</code></pre>
   </div>
@@ -1198,14 +1058,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.LogRecords.LogRecord.html">LogRecord</a></td>
         <td><span class="parametername">record</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1224,18 +1082,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_TryAppendRawData_System_Byte___.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.TryAppendRawData(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L758">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_TryAppendRawData_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.TryAppendRawData*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_TryAppendRawData_System_Byte___" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.TryAppendRawData(System.Byte[])">TryAppendRawData(Byte[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool TryAppendRawData(byte[] buffer)</code></pre>
   </div>
@@ -1245,14 +1100,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
         <td><span class="parametername">buffer</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1271,18 +1124,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_TryReadAt_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.TryReadAt(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L703">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_TryReadAt_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.TryReadAt*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_TryReadAt_System_Int64_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.TryReadAt(System.Int64)">TryReadAt(Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public RecordReadResult TryReadAt(long logicalPosition)</code></pre>
   </div>
@@ -1292,14 +1142,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">logicalPosition</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1318,18 +1166,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_TryReadClosestBackward_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.TryReadClosestBackward(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L719">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_TryReadClosestBackward_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.TryReadClosestBackward*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_TryReadClosestBackward_System_Int64_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.TryReadClosestBackward(System.Int64)">TryReadClosestBackward(Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public RecordReadResult TryReadClosestBackward(long logicalPosition)</code></pre>
   </div>
@@ -1339,14 +1184,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">logicalPosition</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1365,18 +1208,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_TryReadClosestForward_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.TryReadClosestForward(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L711">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_TryReadClosestForward_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.TryReadClosestForward*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_TryReadClosestForward_System_Int64_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.TryReadClosestForward(System.Int64)">TryReadClosestForward(Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public RecordReadResult TryReadClosestForward(long logicalPosition)</code></pre>
   </div>
@@ -1386,14 +1226,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">logicalPosition</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1412,18 +1250,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_TryReadFirst.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.TryReadFirst%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L707">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_TryReadFirst_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.TryReadFirst*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_TryReadFirst" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.TryReadFirst">TryReadFirst()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public RecordReadResult TryReadFirst()</code></pre>
   </div>
@@ -1442,18 +1277,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_TryReadLast.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.TryReadLast%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L715">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_TryReadLast_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.TryReadLast*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_TryReadLast" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.TryReadLast">TryReadLast()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public RecordReadResult TryReadLast()</code></pre>
   </div>
@@ -1472,48 +1304,39 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_UnCacheFromMemory.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.UnCacheFromMemory%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L669">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_UnCacheFromMemory_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.UnCacheFromMemory*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_UnCacheFromMemory" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.UnCacheFromMemory">UnCacheFromMemory()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void UnCacheFromMemory()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_VerifyFileHash.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.VerifyFileHash%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L510">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_VerifyFileHash_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.VerifyFileHash*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_VerifyFileHash" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.VerifyFileHash">VerifyFileHash()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void VerifyFileHash()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_WaitForDestroy_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.WaitForDestroy(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunk.cs/#L996">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_WaitForDestroy_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.WaitForDestroy*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_WaitForDestroy_System_Int32_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.WaitForDestroy(System.Int32)">WaitForDestroy(Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void WaitForDestroy(int timeoutMs)</code></pre>
   </div>
@@ -1523,17 +1346,19 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">timeoutMs</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
@@ -1559,12 +1384,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunk/TFChunkReadSide.cs/#L11" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

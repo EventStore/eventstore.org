@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,26 +104,49 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">TcpClientMessageDto.CreatePersistentSubscription</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Messages.html">EventStore.Core.Messages</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CreatePersistentSubscription : object</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+[ProtoContract(Name = &quot;CreatePersistentSubscription&quot;)]
+public class CreatePersistentSubscription</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription__ctor_System_String_System_String_System_Boolean_System_Int64_System_Int32_System_Boolean_System_Int32_System_Int32_System_Int32_System_Int32_System_Boolean_System_Int32_System_Int32_System_Int32_System_Int32_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.%23ctor(System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Int64%2CSystem.Int32%2CSystem.Boolean%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L708">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription__ctor_" data-uid="EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.#ctor*"></a>
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription__ctor_System_String_System_String_System_Boolean_System_Int64_System_Int32_System_Boolean_System_Int32_System_Int32_System_Int32_System_Int32_System_Boolean_System_Int32_System_Int32_System_Int32_System_Int32_System_String_" data-uid="EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.#ctor(System.String,System.String,System.Boolean,System.Int64,System.Int32,System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32,System.String)">CreatePersistentSubscription(String, String, Boolean, Int64, Int32, Boolean, Int32, Int32, Int32, Int32, Boolean, Int32, Int32, Int32, Int32, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public CreatePersistentSubscription(string subscriptionGroupName, string eventStreamId, bool resolveLinkTos, long startFrom, int messageTimeoutMilliseconds, bool recordStatistics, int liveBufferSize, int readBatchSize, int bufferSize, int maxRetryCount, bool preferRoundRobin, int checkpointAfterTime, int checkpointMaxCount, int checkpointMinCount, int subscriberMaxCount, string namedConsumerStrategy)</code></pre>
   </div>
@@ -132,555 +156,474 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">subscriptionGroupName</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">eventStreamId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">resolveLinkTos</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">startFrom</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">messageTimeoutMilliseconds</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">recordStatistics</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">liveBufferSize</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">readBatchSize</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">bufferSize</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">maxRetryCount</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">preferRoundRobin</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">checkpointAfterTime</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">checkpointMaxCount</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">checkpointMinCount</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">subscriberMaxCount</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">namedConsumerStrategy</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_BufferSize.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.BufferSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L683">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_BufferSize" data-uid="EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.BufferSize">BufferSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly int BufferSize</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(9, IsRequired = true, Name = &quot;buffer_size&quot;, DataFormat = DataFormat.TwosComplement)]
+public readonly int BufferSize</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_CheckpointAfterTime.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.CheckpointAfterTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L692">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_CheckpointAfterTime" data-uid="EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.CheckpointAfterTime">CheckpointAfterTime</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly int CheckpointAfterTime</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(12, IsRequired = true, Name = &quot;checkpoint_after_time&quot;, DataFormat = DataFormat.TwosComplement)]
+public readonly int CheckpointAfterTime</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_CheckpointMaxCount.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.CheckpointMaxCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L695">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_CheckpointMaxCount" data-uid="EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.CheckpointMaxCount">CheckpointMaxCount</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly int CheckpointMaxCount</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(13, IsRequired = true, Name = &quot;checkpoint_max_count&quot;, DataFormat = DataFormat.TwosComplement)]
+public readonly int CheckpointMaxCount</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_CheckpointMinCount.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.CheckpointMinCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L698">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_CheckpointMinCount" data-uid="EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.CheckpointMinCount">CheckpointMinCount</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly int CheckpointMinCount</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(14, IsRequired = true, Name = &quot;checkpoint_min_count&quot;, DataFormat = DataFormat.TwosComplement)]
+public readonly int CheckpointMinCount</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_EventStreamId.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.EventStreamId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L662">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_EventStreamId" data-uid="EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.EventStreamId">EventStreamId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string EventStreamId</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(2, IsRequired = true, Name = &quot;event_stream_id&quot;, DataFormat = DataFormat.Default)]
+public readonly string EventStreamId</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_LiveBufferSize.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.LiveBufferSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L677">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_LiveBufferSize" data-uid="EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.LiveBufferSize">LiveBufferSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly int LiveBufferSize</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(7, IsRequired = true, Name = &quot;live_buffer_size&quot;, DataFormat = DataFormat.TwosComplement)]
+public readonly int LiveBufferSize</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_MaxRetryCount.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.MaxRetryCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L686">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_MaxRetryCount" data-uid="EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.MaxRetryCount">MaxRetryCount</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly int MaxRetryCount</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(10, IsRequired = true, Name = &quot;max_retry_count&quot;, DataFormat = DataFormat.TwosComplement)]
+public readonly int MaxRetryCount</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_MessageTimeoutMilliseconds.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.MessageTimeoutMilliseconds%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L671">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_MessageTimeoutMilliseconds" data-uid="EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.MessageTimeoutMilliseconds">MessageTimeoutMilliseconds</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly int MessageTimeoutMilliseconds</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(5, IsRequired = true, Name = &quot;message_timeout_milliseconds&quot;, DataFormat = DataFormat.TwosComplement)]
+public readonly int MessageTimeoutMilliseconds</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_NamedConsumerStrategy.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.NamedConsumerStrategy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L704">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_NamedConsumerStrategy" data-uid="EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.NamedConsumerStrategy">NamedConsumerStrategy</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string NamedConsumerStrategy</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(16, IsRequired = false, Name = &quot;named_consumer_strategy&quot;, DataFormat = DataFormat.Default)]
+public readonly string NamedConsumerStrategy</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_PreferRoundRobin.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.PreferRoundRobin%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L689">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_PreferRoundRobin" data-uid="EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.PreferRoundRobin">PreferRoundRobin</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly bool PreferRoundRobin</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(11, IsRequired = true, Name = &quot;prefer_round_robin&quot;, DataFormat = DataFormat.Default)]
+public readonly bool PreferRoundRobin</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_ReadBatchSize.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.ReadBatchSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L680">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_ReadBatchSize" data-uid="EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.ReadBatchSize">ReadBatchSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly int ReadBatchSize</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(8, IsRequired = true, Name = &quot;read_batch_size&quot;, DataFormat = DataFormat.TwosComplement)]
+public readonly int ReadBatchSize</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_RecordStatistics.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.RecordStatistics%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L674">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_RecordStatistics" data-uid="EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.RecordStatistics">RecordStatistics</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly bool RecordStatistics</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(6, IsRequired = true, Name = &quot;record_statistics&quot;, DataFormat = DataFormat.Default)]
+public readonly bool RecordStatistics</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_ResolveLinkTos.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.ResolveLinkTos%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L665">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_ResolveLinkTos" data-uid="EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.ResolveLinkTos">ResolveLinkTos</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly bool ResolveLinkTos</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(3, IsRequired = true, Name = &quot;resolve_link_tos&quot;, DataFormat = DataFormat.Default)]
+public readonly bool ResolveLinkTos</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_StartFrom.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.StartFrom%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L668">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_StartFrom" data-uid="EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.StartFrom">StartFrom</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly long StartFrom</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(4, IsRequired = true, Name = &quot;start_from&quot;, DataFormat = DataFormat.TwosComplement)]
+public readonly long StartFrom</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_SubscriberMaxCount.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.SubscriberMaxCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L701">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_SubscriberMaxCount" data-uid="EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.SubscriberMaxCount">SubscriberMaxCount</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly int SubscriberMaxCount</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(15, IsRequired = true, Name = &quot;subscriber_max_count&quot;, DataFormat = DataFormat.TwosComplement)]
+public readonly int SubscriberMaxCount</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_SubscriptionGroupName.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.SubscriptionGroupName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L659">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription_SubscriptionGroupName" data-uid="EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription.SubscriptionGroupName">SubscriptionGroupName</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string SubscriptionGroupName</code></pre>
+    <pre><code class="lang-csharp hljs">[ProtoMember(1, IsRequired = true, Name = &quot;subscription_group_name&quot;, DataFormat = DataFormat.Default)]
+public readonly string SubscriptionGroupName</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -709,12 +652,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_TcpClientMessageDto_CreatePersistentSubscription.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.TcpClientMessageDto.CreatePersistentSubscription%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/TcpClientMessageDto.cs/#L655" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

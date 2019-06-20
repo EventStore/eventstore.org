@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -106,18 +107,15 @@
   </div>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_IProjectionPhaseStateManager_LastProcessedEventPosition.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.IProjectionPhaseStateManager.LastProcessedEventPosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/IEventProcessingPhase.cs/#L21">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_IProjectionPhaseStateManager_LastProcessedEventPosition_" data-uid="EventStore.Projections.Core.Services.Processing.IProjectionPhaseStateManager.LastProcessedEventPosition*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_IProjectionPhaseStateManager_LastProcessedEventPosition" data-uid="EventStore.Projections.Core.Services.Processing.IProjectionPhaseStateManager.LastProcessedEventPosition">LastProcessedEventPosition</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">CheckpointTag LastProcessedEventPosition { get; }</code></pre>
   </div>
@@ -126,30 +124,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_IProjectionPhaseStateManager_BeginGetPartitionStateAt_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_Action_EventStore_Projections_Core_Services_Processing_PartitionState__System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.IProjectionPhaseStateManager.BeginGetPartitionStateAt(System.String%2CEventStore.Projections.Core.Services.Processing.CheckpointTag%2CAction%7BEventStore.Projections.Core.Services.Processing.PartitionState%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/IEventProcessingPhase.cs/#L15">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_IProjectionPhaseStateManager_BeginGetPartitionStateAt_" data-uid="EventStore.Projections.Core.Services.Processing.IProjectionPhaseStateManager.BeginGetPartitionStateAt*"></a>
-  <h4 id="EventStore_Projections_Core_Services_Processing_IProjectionPhaseStateManager_BeginGetPartitionStateAt_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_Action_EventStore_Projections_Core_Services_Processing_PartitionState__System_Boolean_" data-uid="EventStore.Projections.Core.Services.Processing.IProjectionPhaseStateManager.BeginGetPartitionStateAt(System.String,EventStore.Projections.Core.Services.Processing.CheckpointTag,Action{EventStore.Projections.Core.Services.Processing.PartitionState},System.Boolean)">BeginGetPartitionStateAt(String, CheckpointTag, Action&lt;PartitionState&gt;, Boolean)</h4>
+  <h4 id="EventStore_Projections_Core_Services_Processing_IProjectionPhaseStateManager_BeginGetPartitionStateAt_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_Action_EventStore_Projections_Core_Services_Processing_PartitionState__System_Boolean_" data-uid="EventStore.Projections.Core.Services.Processing.IProjectionPhaseStateManager.BeginGetPartitionStateAt(System.String,EventStore.Projections.Core.Services.Processing.CheckpointTag,System.Action{EventStore.Projections.Core.Services.Processing.PartitionState},System.Boolean)">BeginGetPartitionStateAt(String, CheckpointTag, Action&lt;PartitionState&gt;, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void BeginGetPartitionStateAt(string statePartition, CheckpointTag at, Action&lt;PartitionState&gt; loadCompleted, bool lockLoaded)</code></pre>
   </div>
@@ -159,44 +152,36 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">statePartition</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
         <td><span class="parametername">at</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.Projections.Core.Services.Processing.PartitionState.html">PartitionState</a>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.Projections.Core.Services.Processing.PartitionState.html">PartitionState</a>&gt;</td>
         <td><span class="parametername">loadCompleted</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">lockLoaded</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_IProjectionPhaseStateManager_UnlockAndForgetBefore_EventStore_Projections_Core_Services_Processing_CheckpointTag_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.IProjectionPhaseStateManager.UnlockAndForgetBefore(EventStore.Projections.Core.Services.Processing.CheckpointTag)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/IEventProcessingPhase.cs/#L19">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_IProjectionPhaseStateManager_UnlockAndForgetBefore_" data-uid="EventStore.Projections.Core.Services.Processing.IProjectionPhaseStateManager.UnlockAndForgetBefore*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_IProjectionPhaseStateManager_UnlockAndForgetBefore_EventStore_Projections_Core_Services_Processing_CheckpointTag_" data-uid="EventStore.Projections.Core.Services.Processing.IProjectionPhaseStateManager.UnlockAndForgetBefore(EventStore.Projections.Core.Services.Processing.CheckpointTag)">UnlockAndForgetBefore(CheckpointTag)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void UnlockAndForgetBefore(CheckpointTag checkpointTag)</code></pre>
   </div>
@@ -206,14 +191,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
         <td><span class="parametername">checkpointTag</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -242,12 +225,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_IProjectionPhaseStateManager.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.IProjectionPhaseStateManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/IEventProcessingPhase.cs/#L14" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

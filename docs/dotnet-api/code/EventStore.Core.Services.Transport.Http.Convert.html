@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,26 +104,47 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Convert</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.Transport.Http.html">EventStore.Core.Services.Transport.Http</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Services_Transport_Http_Convert_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class Convert : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class Convert</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_Convert_ToAllEventsBackwardFeed_EventStore_Core_Messages_ClientMessage_ReadAllEventsBackwardCompleted_Uri_EventStore_Core_Services_Transport_Http_Controllers_EmbedLevel_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.Convert.ToAllEventsBackwardFeed(EventStore.Core.Messages.ClientMessage.ReadAllEventsBackwardCompleted%2CUri%2CEventStore.Core.Services.Transport.Http.Controllers.EmbedLevel)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/Convert.cs/#L148">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Http_Convert_ToAllEventsBackwardFeed_" data-uid="EventStore.Core.Services.Transport.Http.Convert.ToAllEventsBackwardFeed*"></a>
-  <h4 id="EventStore_Core_Services_Transport_Http_Convert_ToAllEventsBackwardFeed_EventStore_Core_Messages_ClientMessage_ReadAllEventsBackwardCompleted_Uri_EventStore_Core_Services_Transport_Http_Controllers_EmbedLevel_" data-uid="EventStore.Core.Services.Transport.Http.Convert.ToAllEventsBackwardFeed(EventStore.Core.Messages.ClientMessage.ReadAllEventsBackwardCompleted,Uri,EventStore.Core.Services.Transport.Http.Controllers.EmbedLevel)">ToAllEventsBackwardFeed(ClientMessage.ReadAllEventsBackwardCompleted, Uri, EmbedLevel)</h4>
+  <h4 id="EventStore_Core_Services_Transport_Http_Convert_ToAllEventsBackwardFeed_EventStore_Core_Messages_ClientMessage_ReadAllEventsBackwardCompleted_System_Uri_EventStore_Core_Services_Transport_Http_Controllers_EmbedLevel_" data-uid="EventStore.Core.Services.Transport.Http.Convert.ToAllEventsBackwardFeed(EventStore.Core.Messages.ClientMessage.ReadAllEventsBackwardCompleted,System.Uri,EventStore.Core.Services.Transport.Http.Controllers.EmbedLevel)">ToAllEventsBackwardFeed(ClientMessage.ReadAllEventsBackwardCompleted, Uri, EmbedLevel)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static FeedElement ToAllEventsBackwardFeed(ClientMessage.ReadAllEventsBackwardCompleted msg, Uri requestedUrl, EmbedLevel embedContent)</code></pre>
   </div>
@@ -132,24 +154,20 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.ClientMessage.ReadAllEventsBackwardCompleted.html">ClientMessage.ReadAllEventsBackwardCompleted</a></td>
         <td><span class="parametername">msg</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Uri</span></td>
+        <td><span class="xref">System.Uri</span></td>
         <td><span class="parametername">requestedUrl</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.Transport.Http.Controllers.EmbedLevel.html">EmbedLevel</a></td>
         <td><span class="parametername">embedContent</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -168,18 +186,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_Convert_ToAllEventsForwardFeed_EventStore_Core_Messages_ClientMessage_ReadAllEventsForwardCompleted_Uri_EventStore_Core_Services_Transport_Http_Controllers_EmbedLevel_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.Convert.ToAllEventsForwardFeed(EventStore.Core.Messages.ClientMessage.ReadAllEventsForwardCompleted%2CUri%2CEventStore.Core.Services.Transport.Http.Controllers.EmbedLevel)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/Convert.cs/#L113">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Http_Convert_ToAllEventsForwardFeed_" data-uid="EventStore.Core.Services.Transport.Http.Convert.ToAllEventsForwardFeed*"></a>
-  <h4 id="EventStore_Core_Services_Transport_Http_Convert_ToAllEventsForwardFeed_EventStore_Core_Messages_ClientMessage_ReadAllEventsForwardCompleted_Uri_EventStore_Core_Services_Transport_Http_Controllers_EmbedLevel_" data-uid="EventStore.Core.Services.Transport.Http.Convert.ToAllEventsForwardFeed(EventStore.Core.Messages.ClientMessage.ReadAllEventsForwardCompleted,Uri,EventStore.Core.Services.Transport.Http.Controllers.EmbedLevel)">ToAllEventsForwardFeed(ClientMessage.ReadAllEventsForwardCompleted, Uri, EmbedLevel)</h4>
+  <h4 id="EventStore_Core_Services_Transport_Http_Convert_ToAllEventsForwardFeed_EventStore_Core_Messages_ClientMessage_ReadAllEventsForwardCompleted_System_Uri_EventStore_Core_Services_Transport_Http_Controllers_EmbedLevel_" data-uid="EventStore.Core.Services.Transport.Http.Convert.ToAllEventsForwardFeed(EventStore.Core.Messages.ClientMessage.ReadAllEventsForwardCompleted,System.Uri,EventStore.Core.Services.Transport.Http.Controllers.EmbedLevel)">ToAllEventsForwardFeed(ClientMessage.ReadAllEventsForwardCompleted, Uri, EmbedLevel)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static FeedElement ToAllEventsForwardFeed(ClientMessage.ReadAllEventsForwardCompleted msg, Uri requestedUrl, EmbedLevel embedContent)</code></pre>
   </div>
@@ -189,24 +204,20 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.ClientMessage.ReadAllEventsForwardCompleted.html">ClientMessage.ReadAllEventsForwardCompleted</a></td>
         <td><span class="parametername">msg</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Uri</span></td>
+        <td><span class="xref">System.Uri</span></td>
         <td><span class="parametername">requestedUrl</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.Transport.Http.Controllers.EmbedLevel.html">EmbedLevel</a></td>
         <td><span class="parametername">embedContent</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -225,18 +236,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_Convert_ToDescriptionDocument_Uri_System_String_System_String___.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.Convert.ToDescriptionDocument(Uri%2CSystem.String%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/Convert.cs/#L230">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Http_Convert_ToDescriptionDocument_" data-uid="EventStore.Core.Services.Transport.Http.Convert.ToDescriptionDocument*"></a>
-  <h4 id="EventStore_Core_Services_Transport_Http_Convert_ToDescriptionDocument_Uri_System_String_System_String___" data-uid="EventStore.Core.Services.Transport.Http.Convert.ToDescriptionDocument(Uri,System.String,System.String[])">ToDescriptionDocument(Uri, String, String[])</h4>
+  <h4 id="EventStore_Core_Services_Transport_Http_Convert_ToDescriptionDocument_System_Uri_System_String_System_String___" data-uid="EventStore.Core.Services.Transport.Http.Convert.ToDescriptionDocument(System.Uri,System.String,System.String[])">ToDescriptionDocument(Uri, String, String[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static DescriptionDocument ToDescriptionDocument(Uri requestedUrl, string streamId, string[] subscriptions)</code></pre>
   </div>
@@ -246,24 +254,20 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Uri</span></td>
+        <td><span class="xref">System.Uri</span></td>
         <td><span class="parametername">requestedUrl</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">streamId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span>[]</td>
         <td><span class="parametername">subscriptions</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -282,18 +286,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_Convert_ToEntry_EventStore_Core_Data_ResolvedEvent_Uri_EventStore_Core_Services_Transport_Http_Controllers_EmbedLevel_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.Convert.ToEntry(EventStore.Core.Data.ResolvedEvent%2CUri%2CEventStore.Core.Services.Transport.Http.Controllers.EmbedLevel%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/Convert.cs/#L257">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Http_Convert_ToEntry_" data-uid="EventStore.Core.Services.Transport.Http.Convert.ToEntry*"></a>
-  <h4 id="EventStore_Core_Services_Transport_Http_Convert_ToEntry_EventStore_Core_Data_ResolvedEvent_Uri_EventStore_Core_Services_Transport_Http_Controllers_EmbedLevel_System_Boolean_" data-uid="EventStore.Core.Services.Transport.Http.Convert.ToEntry(EventStore.Core.Data.ResolvedEvent,Uri,EventStore.Core.Services.Transport.Http.Controllers.EmbedLevel,System.Boolean)">ToEntry(ResolvedEvent, Uri, EmbedLevel, Boolean)</h4>
+  <h4 id="EventStore_Core_Services_Transport_Http_Convert_ToEntry_EventStore_Core_Data_ResolvedEvent_System_Uri_EventStore_Core_Services_Transport_Http_Controllers_EmbedLevel_System_Boolean_" data-uid="EventStore.Core.Services.Transport.Http.Convert.ToEntry(EventStore.Core.Data.ResolvedEvent,System.Uri,EventStore.Core.Services.Transport.Http.Controllers.EmbedLevel,System.Boolean)">ToEntry(ResolvedEvent, Uri, EmbedLevel, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static EntryElement ToEntry(ResolvedEvent eventLinkPair, Uri requestedUrl, EmbedLevel embedContent, bool singleEntry = false)</code></pre>
   </div>
@@ -303,29 +304,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Data.ResolvedEvent.html">ResolvedEvent</a></td>
         <td><span class="parametername">eventLinkPair</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Uri</span></td>
+        <td><span class="xref">System.Uri</span></td>
         <td><span class="parametername">requestedUrl</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.Transport.Http.Controllers.EmbedLevel.html">EmbedLevel</a></td>
         <td><span class="parametername">embedContent</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">singleEntry</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -344,18 +340,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_Convert_ToNextNPersistentMessagesFeed_EventStore_Core_Messages_ClientMessage_ReadNextNPersistentMessagesCompleted_Uri_System_String_System_String_System_Int32_EventStore_Core_Services_Transport_Http_Controllers_EmbedLevel_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.Convert.ToNextNPersistentMessagesFeed(EventStore.Core.Messages.ClientMessage.ReadNextNPersistentMessagesCompleted%2CUri%2CSystem.String%2CSystem.String%2CSystem.Int32%2CEventStore.Core.Services.Transport.Http.Controllers.EmbedLevel)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/Convert.cs/#L182">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Http_Convert_ToNextNPersistentMessagesFeed_" data-uid="EventStore.Core.Services.Transport.Http.Convert.ToNextNPersistentMessagesFeed*"></a>
-  <h4 id="EventStore_Core_Services_Transport_Http_Convert_ToNextNPersistentMessagesFeed_EventStore_Core_Messages_ClientMessage_ReadNextNPersistentMessagesCompleted_Uri_System_String_System_String_System_Int32_EventStore_Core_Services_Transport_Http_Controllers_EmbedLevel_" data-uid="EventStore.Core.Services.Transport.Http.Convert.ToNextNPersistentMessagesFeed(EventStore.Core.Messages.ClientMessage.ReadNextNPersistentMessagesCompleted,Uri,System.String,System.String,System.Int32,EventStore.Core.Services.Transport.Http.Controllers.EmbedLevel)">ToNextNPersistentMessagesFeed(ClientMessage.ReadNextNPersistentMessagesCompleted, Uri, String, String, Int32, EmbedLevel)</h4>
+  <h4 id="EventStore_Core_Services_Transport_Http_Convert_ToNextNPersistentMessagesFeed_EventStore_Core_Messages_ClientMessage_ReadNextNPersistentMessagesCompleted_System_Uri_System_String_System_String_System_Int32_EventStore_Core_Services_Transport_Http_Controllers_EmbedLevel_" data-uid="EventStore.Core.Services.Transport.Http.Convert.ToNextNPersistentMessagesFeed(EventStore.Core.Messages.ClientMessage.ReadNextNPersistentMessagesCompleted,System.Uri,System.String,System.String,System.Int32,EventStore.Core.Services.Transport.Http.Controllers.EmbedLevel)">ToNextNPersistentMessagesFeed(ClientMessage.ReadNextNPersistentMessagesCompleted, Uri, String, String, Int32, EmbedLevel)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static FeedElement ToNextNPersistentMessagesFeed(ClientMessage.ReadNextNPersistentMessagesCompleted msg, Uri requestedUrl, string streamId, string groupName, int count, EmbedLevel embedContent)</code></pre>
   </div>
@@ -365,39 +358,32 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.ClientMessage.ReadNextNPersistentMessagesCompleted.html">ClientMessage.ReadNextNPersistentMessagesCompleted</a></td>
         <td><span class="parametername">msg</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Uri</span></td>
+        <td><span class="xref">System.Uri</span></td>
         <td><span class="parametername">requestedUrl</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">streamId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">groupName</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">count</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.Transport.Http.Controllers.EmbedLevel.html">EmbedLevel</a></td>
         <td><span class="parametername">embedContent</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -416,18 +402,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_Convert_ToStreamEventBackwardFeed_EventStore_Core_Messages_ClientMessage_ReadStreamEventsBackwardCompleted_Uri_EventStore_Core_Services_Transport_Http_Controllers_EmbedLevel_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.Convert.ToStreamEventBackwardFeed(EventStore.Core.Messages.ClientMessage.ReadStreamEventsBackwardCompleted%2CUri%2CEventStore.Core.Services.Transport.Http.Controllers.EmbedLevel%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/Convert.cs/#L65">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Http_Convert_ToStreamEventBackwardFeed_" data-uid="EventStore.Core.Services.Transport.Http.Convert.ToStreamEventBackwardFeed*"></a>
-  <h4 id="EventStore_Core_Services_Transport_Http_Convert_ToStreamEventBackwardFeed_EventStore_Core_Messages_ClientMessage_ReadStreamEventsBackwardCompleted_Uri_EventStore_Core_Services_Transport_Http_Controllers_EmbedLevel_System_Boolean_" data-uid="EventStore.Core.Services.Transport.Http.Convert.ToStreamEventBackwardFeed(EventStore.Core.Messages.ClientMessage.ReadStreamEventsBackwardCompleted,Uri,EventStore.Core.Services.Transport.Http.Controllers.EmbedLevel,System.Boolean)">ToStreamEventBackwardFeed(ClientMessage.ReadStreamEventsBackwardCompleted, Uri, EmbedLevel, Boolean)</h4>
+  <h4 id="EventStore_Core_Services_Transport_Http_Convert_ToStreamEventBackwardFeed_EventStore_Core_Messages_ClientMessage_ReadStreamEventsBackwardCompleted_System_Uri_EventStore_Core_Services_Transport_Http_Controllers_EmbedLevel_System_Boolean_" data-uid="EventStore.Core.Services.Transport.Http.Convert.ToStreamEventBackwardFeed(EventStore.Core.Messages.ClientMessage.ReadStreamEventsBackwardCompleted,System.Uri,EventStore.Core.Services.Transport.Http.Controllers.EmbedLevel,System.Boolean)">ToStreamEventBackwardFeed(ClientMessage.ReadStreamEventsBackwardCompleted, Uri, EmbedLevel, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static FeedElement ToStreamEventBackwardFeed(ClientMessage.ReadStreamEventsBackwardCompleted msg, Uri requestedUrl, EmbedLevel embedContent, bool headOfStream)</code></pre>
   </div>
@@ -437,29 +420,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.ClientMessage.ReadStreamEventsBackwardCompleted.html">ClientMessage.ReadStreamEventsBackwardCompleted</a></td>
         <td><span class="parametername">msg</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Uri</span></td>
+        <td><span class="xref">System.Uri</span></td>
         <td><span class="parametername">requestedUrl</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.Transport.Http.Controllers.EmbedLevel.html">EmbedLevel</a></td>
         <td><span class="parametername">embedContent</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">headOfStream</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -478,18 +456,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_Convert_ToStreamEventForwardFeed_EventStore_Core_Messages_ClientMessage_ReadStreamEventsForwardCompleted_Uri_EventStore_Core_Services_Transport_Http_Controllers_EmbedLevel_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.Convert.ToStreamEventForwardFeed(EventStore.Core.Messages.ClientMessage.ReadStreamEventsForwardCompleted%2CUri%2CEventStore.Core.Services.Transport.Http.Controllers.EmbedLevel)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/Convert.cs/#L22">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Transport_Http_Convert_ToStreamEventForwardFeed_" data-uid="EventStore.Core.Services.Transport.Http.Convert.ToStreamEventForwardFeed*"></a>
-  <h4 id="EventStore_Core_Services_Transport_Http_Convert_ToStreamEventForwardFeed_EventStore_Core_Messages_ClientMessage_ReadStreamEventsForwardCompleted_Uri_EventStore_Core_Services_Transport_Http_Controllers_EmbedLevel_" data-uid="EventStore.Core.Services.Transport.Http.Convert.ToStreamEventForwardFeed(EventStore.Core.Messages.ClientMessage.ReadStreamEventsForwardCompleted,Uri,EventStore.Core.Services.Transport.Http.Controllers.EmbedLevel)">ToStreamEventForwardFeed(ClientMessage.ReadStreamEventsForwardCompleted, Uri, EmbedLevel)</h4>
+  <h4 id="EventStore_Core_Services_Transport_Http_Convert_ToStreamEventForwardFeed_EventStore_Core_Messages_ClientMessage_ReadStreamEventsForwardCompleted_System_Uri_EventStore_Core_Services_Transport_Http_Controllers_EmbedLevel_" data-uid="EventStore.Core.Services.Transport.Http.Convert.ToStreamEventForwardFeed(EventStore.Core.Messages.ClientMessage.ReadStreamEventsForwardCompleted,System.Uri,EventStore.Core.Services.Transport.Http.Controllers.EmbedLevel)">ToStreamEventForwardFeed(ClientMessage.ReadStreamEventsForwardCompleted, Uri, EmbedLevel)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static FeedElement ToStreamEventForwardFeed(ClientMessage.ReadStreamEventsForwardCompleted msg, Uri requestedUrl, EmbedLevel embedContent)</code></pre>
   </div>
@@ -499,24 +474,20 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.ClientMessage.ReadStreamEventsForwardCompleted.html">ClientMessage.ReadStreamEventsForwardCompleted</a></td>
         <td><span class="parametername">msg</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Uri</span></td>
+        <td><span class="xref">System.Uri</span></td>
         <td><span class="parametername">requestedUrl</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.Transport.Http.Controllers.EmbedLevel.html">EmbedLevel</a></td>
         <td><span class="parametername">embedContent</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -544,12 +515,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Transport_Http_Convert.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Transport.Http.Convert%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Transport/Http/Convert.cs/#L19" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -115,6 +116,27 @@
     <div>
       <a class="xref" href="EventStore.Core.Messaging.Message.html#EventStore_Core_Messaging_Message_NextMsgId">Message.NextMsgId</a>
     </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Messages.html">EventStore.Core.Messages</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
@@ -124,18 +146,15 @@
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_StorageMessage_WriteDelete__ctor_Guid_EventStore_Core_Messaging_IEnvelope_System_String_System_Int64_System_Boolean_DateTime_.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.StorageMessage.WriteDelete.%23ctor(Guid%2CEventStore.Core.Messaging.IEnvelope%2CSystem.String%2CSystem.Int64%2CSystem.Boolean%2CDateTime)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/StorageMessage.cs/#L73">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messages_StorageMessage_WriteDelete__ctor_" data-uid="EventStore.Core.Messages.StorageMessage.WriteDelete.#ctor*"></a>
-  <h4 id="EventStore_Core_Messages_StorageMessage_WriteDelete__ctor_Guid_EventStore_Core_Messaging_IEnvelope_System_String_System_Int64_System_Boolean_DateTime_" data-uid="EventStore.Core.Messages.StorageMessage.WriteDelete.#ctor(Guid,EventStore.Core.Messaging.IEnvelope,System.String,System.Int64,System.Boolean,DateTime)">WriteDelete(Guid, IEnvelope, String, Int64, Boolean, DateTime)</h4>
+  <h4 id="EventStore_Core_Messages_StorageMessage_WriteDelete__ctor_System_Guid_EventStore_Core_Messaging_IEnvelope_System_String_System_Int64_System_Boolean_System_DateTime_" data-uid="EventStore.Core.Messages.StorageMessage.WriteDelete.#ctor(System.Guid,EventStore.Core.Messaging.IEnvelope,System.String,System.Int64,System.Boolean,System.DateTime)">WriteDelete(Guid, IEnvelope, String, Int64, Boolean, DateTime)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public WriteDelete(Guid correlationId, IEnvelope envelope, string eventStreamId, long expectedVersion, bool hardDelete, DateTime liveUntil)</code></pre>
   </div>
@@ -145,55 +164,45 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">correlationId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messaging.IEnvelope.html">IEnvelope</a></td>
         <td><span class="parametername">envelope</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">eventStreamId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">expectedVersion</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">hardDelete</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">DateTime</span></td>
+        <td><span class="xref">System.DateTime</span></td>
         <td><span class="parametername">liveUntil</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_StorageMessage_WriteDelete_HardDelete.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.StorageMessage.WriteDelete.HardDelete%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/StorageMessage.cs/#L69">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_StorageMessage_WriteDelete_HardDelete" data-uid="EventStore.Core.Messages.StorageMessage.WriteDelete.HardDelete">HardDelete</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly bool HardDelete</code></pre>
   </div>
@@ -202,27 +211,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_StorageMessage_WriteDelete_LiveUntil.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.StorageMessage.WriteDelete.LiveUntil%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/StorageMessage.cs/#L71">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Messages_StorageMessage_WriteDelete_LiveUntil" data-uid="EventStore.Core.Messages.StorageMessage.WriteDelete.LiveUntil">LiveUntil</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly DateTime LiveUntil</code></pre>
   </div>
@@ -231,30 +235,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">DateTime</span></td>
-        <td></td>
+        <td><span class="xref">System.DateTime</span></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_StorageMessage_WriteDelete_CorrelationId.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.StorageMessage.WriteDelete.CorrelationId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/StorageMessage.cs/#L65">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messages_StorageMessage_WriteDelete_CorrelationId_" data-uid="EventStore.Core.Messages.StorageMessage.WriteDelete.CorrelationId*"></a>
   <h4 id="EventStore_Core_Messages_StorageMessage_WriteDelete_CorrelationId" data-uid="EventStore.Core.Messages.StorageMessage.WriteDelete.CorrelationId">CorrelationId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Guid CorrelationId { get; }</code></pre>
   </div>
@@ -263,28 +262,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
-        <td></td>
+        <td><span class="xref">System.Guid</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_StorageMessage_WriteDelete_Envelope.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.StorageMessage.WriteDelete.Envelope%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/StorageMessage.cs/#L66">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messages_StorageMessage_WriteDelete_Envelope_" data-uid="EventStore.Core.Messages.StorageMessage.WriteDelete.Envelope*"></a>
   <h4 id="EventStore_Core_Messages_StorageMessage_WriteDelete_Envelope" data-uid="EventStore.Core.Messages.StorageMessage.WriteDelete.Envelope">Envelope</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IEnvelope Envelope { get; }</code></pre>
   </div>
@@ -293,28 +287,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messaging.IEnvelope.html">IEnvelope</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_StorageMessage_WriteDelete_EventStreamId.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.StorageMessage.WriteDelete.EventStreamId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/StorageMessage.cs/#L67">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messages_StorageMessage_WriteDelete_EventStreamId_" data-uid="EventStore.Core.Messages.StorageMessage.WriteDelete.EventStreamId*"></a>
   <h4 id="EventStore_Core_Messages_StorageMessage_WriteDelete_EventStreamId" data-uid="EventStore.Core.Messages.StorageMessage.WriteDelete.EventStreamId">EventStreamId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string EventStreamId { get; }</code></pre>
   </div>
@@ -323,28 +312,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_StorageMessage_WriteDelete_ExpectedVersion.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.StorageMessage.WriteDelete.ExpectedVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/StorageMessage.cs/#L68">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messages_StorageMessage_WriteDelete_ExpectedVersion_" data-uid="EventStore.Core.Messages.StorageMessage.WriteDelete.ExpectedVersion*"></a>
   <h4 id="EventStore_Core_Messages_StorageMessage_WriteDelete_ExpectedVersion" data-uid="EventStore.Core.Messages.StorageMessage.WriteDelete.ExpectedVersion">ExpectedVersion</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public long ExpectedVersion { get; }</code></pre>
   </div>
@@ -353,28 +337,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_StorageMessage_WriteDelete_MsgTypeId.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.StorageMessage.WriteDelete.MsgTypeId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/StorageMessage.cs/#L61">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Messages_StorageMessage_WriteDelete_MsgTypeId_" data-uid="EventStore.Core.Messages.StorageMessage.WriteDelete.MsgTypeId*"></a>
   <h4 id="EventStore_Core_Messages_StorageMessage_WriteDelete_MsgTypeId" data-uid="EventStore.Core.Messages.StorageMessage.WriteDelete.MsgTypeId">MsgTypeId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override int MsgTypeId { get; }</code></pre>
   </div>
@@ -383,13 +362,11 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -430,12 +407,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Messages_StorageMessage_WriteDelete.md&amp;value=---%0Auid%3A%20EventStore.Core.Messages.StorageMessage.WriteDelete%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Messages/StorageMessage.cs/#L58" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

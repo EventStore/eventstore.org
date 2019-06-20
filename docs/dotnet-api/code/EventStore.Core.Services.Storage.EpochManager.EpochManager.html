@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -107,26 +108,47 @@
     <h5>Implements</h5>
     <div><a class="xref" href="EventStore.Core.Services.Storage.EpochManager.IEpochManager.html">IEpochManager</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.Storage.EpochManager.html">EventStore.Core.Services.Storage.EpochManager</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Services_Storage_EpochManager_EpochManager_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class EpochManager : object, IEpochManager</code></pre>
+    <pre><code class="lang-csharp hljs">public class EpochManager : IEpochManager</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_EpochManager_EpochManager__ctor_EventStore_Core_Bus_IPublisher_System_Int32_EventStore_Core_TransactionLog_Checkpoint_ICheckpoint_EventStore_Core_TransactionLog_ITransactionFileWriter_System_Int32_System_Int32_Func_EventStore_Core_TransactionLog_ITransactionFileReader__.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.EpochManager.EpochManager.%23ctor(EventStore.Core.Bus.IPublisher%2CSystem.Int32%2CEventStore.Core.TransactionLog.Checkpoint.ICheckpoint%2CEventStore.Core.TransactionLog.ITransactionFileWriter%2CSystem.Int32%2CSystem.Int32%2CFunc%7BEventStore.Core.TransactionLog.ITransactionFileReader%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/EpochManager/EpochManager.cs/#L33">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_EpochManager_EpochManager__ctor_" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.#ctor*"></a>
-  <h4 id="EventStore_Core_Services_Storage_EpochManager_EpochManager__ctor_EventStore_Core_Bus_IPublisher_System_Int32_EventStore_Core_TransactionLog_Checkpoint_ICheckpoint_EventStore_Core_TransactionLog_ITransactionFileWriter_System_Int32_System_Int32_Func_EventStore_Core_TransactionLog_ITransactionFileReader__" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.#ctor(EventStore.Core.Bus.IPublisher,System.Int32,EventStore.Core.TransactionLog.Checkpoint.ICheckpoint,EventStore.Core.TransactionLog.ITransactionFileWriter,System.Int32,System.Int32,Func{EventStore.Core.TransactionLog.ITransactionFileReader})">EpochManager(IPublisher, Int32, ICheckpoint, ITransactionFileWriter, Int32, Int32, Func&lt;ITransactionFileReader&gt;)</h4>
+  <h4 id="EventStore_Core_Services_Storage_EpochManager_EpochManager__ctor_EventStore_Core_Bus_IPublisher_System_Int32_EventStore_Core_TransactionLog_Checkpoint_ICheckpoint_EventStore_Core_TransactionLog_ITransactionFileWriter_System_Int32_System_Int32_System_Func_EventStore_Core_TransactionLog_ITransactionFileReader__" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.#ctor(EventStore.Core.Bus.IPublisher,System.Int32,EventStore.Core.TransactionLog.Checkpoint.ICheckpoint,EventStore.Core.TransactionLog.ITransactionFileWriter,System.Int32,System.Int32,System.Func{EventStore.Core.TransactionLog.ITransactionFileReader})">EpochManager(IPublisher, Int32, ICheckpoint, ITransactionFileWriter, Int32, Int32, Func&lt;ITransactionFileReader&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public EpochManager(IPublisher bus, int cachedEpochCount, ICheckpoint checkpoint, ITransactionFileWriter writer, int initialReaderCount, int maxReaderCount, Func&lt;ITransactionFileReader&gt; readerFactory)</code></pre>
   </div>
@@ -136,60 +158,49 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
         <td><span class="parametername">bus</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">cachedEpochCount</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.Checkpoint.ICheckpoint.html">ICheckpoint</a></td>
         <td><span class="parametername">checkpoint</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.ITransactionFileWriter.html">ITransactionFileWriter</a></td>
         <td><span class="parametername">writer</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">initialReaderCount</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">maxReaderCount</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;<a class="xref" href="EventStore.Core.TransactionLog.ITransactionFileReader.html">ITransactionFileReader</a>&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="EventStore.Core.TransactionLog.ITransactionFileReader.html">ITransactionFileReader</a>&gt;</td>
         <td><span class="parametername">readerFactory</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_EpochManager_EpochManager_CachedEpochCount.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.EpochManager.EpochManager.CachedEpochCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/EpochManager/EpochManager.cs/#L17">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Storage_EpochManager_EpochManager_CachedEpochCount" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.CachedEpochCount">CachedEpochCount</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly int CachedEpochCount</code></pre>
   </div>
@@ -198,30 +209,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_EpochManager_EpochManager_LastEpochNumber.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.EpochManager.EpochManager.LastEpochNumber%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/EpochManager/EpochManager.cs/#L19">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_EpochManager_EpochManager_LastEpochNumber_" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.LastEpochNumber*"></a>
   <h4 id="EventStore_Core_Services_Storage_EpochManager_EpochManager_LastEpochNumber" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.LastEpochNumber">LastEpochNumber</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int LastEpochNumber { get; }</code></pre>
   </div>
@@ -230,30 +236,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_EpochManager_EpochManager_GetEpoch_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.EpochManager.EpochManager.GetEpoch(System.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/EpochManager/EpochManager.cs/#L133">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_EpochManager_EpochManager_GetEpoch_" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.GetEpoch*"></a>
   <h4 id="EventStore_Core_Services_Storage_EpochManager_EpochManager_GetEpoch_System_Int32_System_Boolean_" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.GetEpoch(System.Int32,System.Boolean)">GetEpoch(Int32, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public EpochRecord GetEpoch(int epochNumber, bool throwIfNotFound)</code></pre>
   </div>
@@ -263,19 +264,16 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">epochNumber</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">throwIfNotFound</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -294,18 +292,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_EpochManager_EpochManager_GetEpochWithAllEpochs_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.EpochManager.EpochManager.GetEpochWithAllEpochs(System.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/EpochManager/EpochManager.cs/#L269">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_EpochManager_EpochManager_GetEpochWithAllEpochs_" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.GetEpochWithAllEpochs*"></a>
   <h4 id="EventStore_Core_Services_Storage_EpochManager_EpochManager_GetEpochWithAllEpochs_System_Int32_System_Boolean_" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.GetEpochWithAllEpochs(System.Int32,System.Boolean)">GetEpochWithAllEpochs(Int32, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public EpochRecord GetEpochWithAllEpochs(int epochNumber, bool throwIfNotFound)</code></pre>
   </div>
@@ -315,19 +310,16 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">epochNumber</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">throwIfNotFound</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -346,18 +338,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_EpochManager_EpochManager_GetLastEpoch.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.EpochManager.EpochManager.GetLastEpoch%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/EpochManager/EpochManager.cs/#L63">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_EpochManager_EpochManager_GetLastEpoch_" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.GetLastEpoch*"></a>
   <h4 id="EventStore_Core_Services_Storage_EpochManager_EpochManager_GetLastEpoch" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.GetLastEpoch">GetLastEpoch()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public EpochRecord GetLastEpoch()</code></pre>
   </div>
@@ -376,18 +365,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_EpochManager_EpochManager_GetLastEpochs_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.EpochManager.EpochManager.GetLastEpochs(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/EpochManager/EpochManager.cs/#L119">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_EpochManager_EpochManager_GetLastEpochs_" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.GetLastEpochs*"></a>
   <h4 id="EventStore_Core_Services_Storage_EpochManager_EpochManager_GetLastEpochs_System_Int32_" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.GetLastEpochs(System.Int32)">GetLastEpochs(Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public EpochRecord[] GetLastEpochs(int maxCount)</code></pre>
   </div>
@@ -397,14 +383,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">maxCount</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -423,33 +407,27 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_EpochManager_EpochManager_Init.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.EpochManager.EpochManager.Init%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/EpochManager/EpochManager.cs/#L59">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_EpochManager_EpochManager_Init_" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.Init*"></a>
   <h4 id="EventStore_Core_Services_Storage_EpochManager_EpochManager_Init" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.Init">Init()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Init()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_EpochManager_EpochManager_IsCorrectEpochAt_System_Int64_System_Int32_Guid_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.EpochManager.EpochManager.IsCorrectEpochAt(System.Int64%2CSystem.Int32%2CGuid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/EpochManager/EpochManager.cs/#L153">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_EpochManager_EpochManager_IsCorrectEpochAt_" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.IsCorrectEpochAt*"></a>
-  <h4 id="EventStore_Core_Services_Storage_EpochManager_EpochManager_IsCorrectEpochAt_System_Int64_System_Int32_Guid_" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.IsCorrectEpochAt(System.Int64,System.Int32,Guid)">IsCorrectEpochAt(Int64, Int32, Guid)</h4>
+  <h4 id="EventStore_Core_Services_Storage_EpochManager_EpochManager_IsCorrectEpochAt_System_Int64_System_Int32_System_Guid_" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.IsCorrectEpochAt(System.Int64,System.Int32,System.Guid)">IsCorrectEpochAt(Int64, Int32, Guid)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool IsCorrectEpochAt(long epochPosition, int epochNumber, Guid epochId)</code></pre>
   </div>
@@ -459,24 +437,20 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">epochPosition</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">epochNumber</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">epochId</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -495,18 +469,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_EpochManager_EpochManager_SetLastEpoch_EventStore_Core_TransactionLog_LogRecords_EpochRecord_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.EpochManager.EpochManager.SetLastEpoch(EventStore.Core.TransactionLog.LogRecords.EpochRecord)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/EpochManager/EpochManager.cs/#L228">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_EpochManager_EpochManager_SetLastEpoch_" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.SetLastEpoch*"></a>
   <h4 id="EventStore_Core_Services_Storage_EpochManager_EpochManager_SetLastEpoch_EventStore_Core_TransactionLog_LogRecords_EpochRecord_" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.SetLastEpoch(EventStore.Core.TransactionLog.LogRecords.EpochRecord)">SetLastEpoch(EpochRecord)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void SetLastEpoch(EpochRecord epoch)</code></pre>
   </div>
@@ -516,29 +487,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.LogRecords.EpochRecord.html">EpochRecord</a></td>
         <td><span class="parametername">epoch</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_EpochManager_EpochManager_WriteNewEpoch.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.EpochManager.EpochManager.WriteNewEpoch%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/EpochManager/EpochManager.cs/#L185">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_EpochManager_EpochManager_WriteNewEpoch_" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.WriteNewEpoch*"></a>
   <h4 id="EventStore_Core_Services_Storage_EpochManager_EpochManager_WriteNewEpoch" data-uid="EventStore.Core.Services.Storage.EpochManager.EpochManager.WriteNewEpoch">WriteNewEpoch()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void WriteNewEpoch()</code></pre>
   </div>
@@ -571,12 +537,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_EpochManager_EpochManager.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.EpochManager.EpochManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/EpochManager/EpochManager.cs/#L13" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

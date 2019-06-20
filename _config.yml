@@ -4,9 +4,8 @@ url: "https://eventstore.org"
 permalink: /blog/:year:month:day/:title/
 include:
     - docs
-exclude: [CNAME]
-include:
     - _redirects
+exclude: [CNAME]
 sass:
     sass_dir: _sass
     style: compressed

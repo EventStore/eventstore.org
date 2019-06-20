@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -108,26 +109,47 @@
     <div><a class="xref" href="EventStore.Core.ISubsystem.html">ISubsystem</a></div>
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.CoreProjectionStatusMessage.Stopped.html">CoreProjectionStatusMessage.Stopped</a>&gt;</div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.html">EventStore.Projections.Core</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
   <h5 id="EventStore_Projections_Core_ProjectionsSubsystem_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ProjectionsSubsystem : object, ISubsystem, IHandle&lt;CoreProjectionStatusMessage.Stopped&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ProjectionsSubsystem : ISubsystem, IHandle&lt;CoreProjectionStatusMessage.Stopped&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_ProjectionsSubsystem__ctor_System_Int32_EventStore_Common_Options_ProjectionType_System_Boolean_TimeSpan_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.ProjectionsSubsystem.%23ctor(System.Int32%2CEventStore.Common.Options.ProjectionType%2CSystem.Boolean%2CTimeSpan%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/ProjectionsSubsystem.cs/#L30">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_ProjectionsSubsystem__ctor_" data-uid="EventStore.Projections.Core.ProjectionsSubsystem.#ctor*"></a>
-  <h4 id="EventStore_Projections_Core_ProjectionsSubsystem__ctor_System_Int32_EventStore_Common_Options_ProjectionType_System_Boolean_TimeSpan_System_Boolean_" data-uid="EventStore.Projections.Core.ProjectionsSubsystem.#ctor(System.Int32,EventStore.Common.Options.ProjectionType,System.Boolean,TimeSpan,System.Boolean)">ProjectionsSubsystem(Int32, ProjectionType, Boolean, TimeSpan, Boolean)</h4>
+  <h4 id="EventStore_Projections_Core_ProjectionsSubsystem__ctor_System_Int32_EventStore_Common_Options_ProjectionType_System_Boolean_System_TimeSpan_System_Boolean_" data-uid="EventStore.Projections.Core.ProjectionsSubsystem.#ctor(System.Int32,EventStore.Common.Options.ProjectionType,System.Boolean,System.TimeSpan,System.Boolean)">ProjectionsSubsystem(Int32, ProjectionType, Boolean, TimeSpan, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ProjectionsSubsystem(int projectionWorkerThreadCount, ProjectionType runProjections, bool startStandardProjections, TimeSpan projectionQueryExpiry, bool faultOutOfOrderProjections)</code></pre>
   </div>
@@ -137,82 +159,68 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">projectionWorkerThreadCount</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Common.Options.ProjectionType.html">ProjectionType</a></td>
         <td><span class="parametername">runProjections</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">startStandardProjections</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">projectionQueryExpiry</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">faultOutOfOrderProjections</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_ProjectionsSubsystem_VERSION.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.ProjectionsSubsystem.VERSION%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/ProjectionsSubsystem.cs/#L19">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Projections_Core_ProjectionsSubsystem_VERSION" data-uid="EventStore.Projections.Core.ProjectionsSubsystem.VERSION">VERSION</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int VERSION = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int VERSION = 3</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_ProjectionsSubsystem_Handle_EventStore_Projections_Core_Messages_CoreProjectionStatusMessage_Stopped_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.ProjectionsSubsystem.Handle(EventStore.Projections.Core.Messages.CoreProjectionStatusMessage.Stopped)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/ProjectionsSubsystem.cs/#L106">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_ProjectionsSubsystem_Handle_" data-uid="EventStore.Projections.Core.ProjectionsSubsystem.Handle*"></a>
   <h4 id="EventStore_Projections_Core_ProjectionsSubsystem_Handle_EventStore_Projections_Core_Messages_CoreProjectionStatusMessage_Stopped_" data-uid="EventStore.Projections.Core.ProjectionsSubsystem.Handle(EventStore.Projections.Core.Messages.CoreProjectionStatusMessage.Stopped)">Handle(CoreProjectionStatusMessage.Stopped)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(CoreProjectionStatusMessage.Stopped message)</code></pre>
   </div>
@@ -222,29 +230,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.CoreProjectionStatusMessage.Stopped.html">CoreProjectionStatusMessage.Stopped</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_ProjectionsSubsystem_Register_EventStore_Core_StandardComponents_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.ProjectionsSubsystem.Register(EventStore.Core.StandardComponents)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/ProjectionsSubsystem.cs/#L43">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_ProjectionsSubsystem_Register_" data-uid="EventStore.Projections.Core.ProjectionsSubsystem.Register*"></a>
   <h4 id="EventStore_Projections_Core_ProjectionsSubsystem_Register_EventStore_Core_StandardComponents_" data-uid="EventStore.Projections.Core.ProjectionsSubsystem.Register(EventStore.Core.StandardComponents)">Register(StandardComponents)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Register(StandardComponents standardComponents)</code></pre>
   </div>
@@ -254,29 +257,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.StandardComponents.html">StandardComponents</a></td>
         <td><span class="parametername">standardComponents</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_ProjectionsSubsystem_Start.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.ProjectionsSubsystem.Start%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/ProjectionsSubsystem.cs/#L74">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_ProjectionsSubsystem_Start_" data-uid="EventStore.Projections.Core.ProjectionsSubsystem.Start*"></a>
   <h4 id="EventStore_Projections_Core_ProjectionsSubsystem_Start" data-uid="EventStore.Projections.Core.ProjectionsSubsystem.Start">Start()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IEnumerable&lt;Task&gt; Start()</code></pre>
   </div>
@@ -290,23 +288,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Task</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_ProjectionsSubsystem_Stop.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.ProjectionsSubsystem.Stop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/ProjectionsSubsystem.cs/#L87">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_ProjectionsSubsystem_Stop_" data-uid="EventStore.Projections.Core.ProjectionsSubsystem.Stop*"></a>
   <h4 id="EventStore_Projections_Core_ProjectionsSubsystem_Stop" data-uid="EventStore.Projections.Core.ProjectionsSubsystem.Stop">Stop()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Stop()</code></pre>
   </div>
@@ -342,12 +337,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_ProjectionsSubsystem.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.ProjectionsSubsystem%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/ProjectionsSubsystem.cs/#L14" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

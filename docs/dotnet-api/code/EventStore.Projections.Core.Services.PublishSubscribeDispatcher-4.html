@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -105,11 +106,37 @@
       <div class="level2"><a class="xref" href="EventStore.Projections.Core.Services.ReaderSubscriptionDispatcher.html">ReaderSubscriptionDispatcher</a></div>
       <div class="level2"><a class="xref" href="EventStore.Projections.Core.Services.SpooledStreamReadingDispatcher.html">SpooledStreamReadingDispatcher</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Services.html">EventStore.Projections.Core.Services</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
   <h5 id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PublishSubscribeDispatcher&lt;TGuid, TSubscribeRequest, TControlMessageBase, TResponseBase&gt; : object where TSubscribeRequest : Message where TControlMessageBase : Message where TResponseBase : Message</code></pre>
+    <pre><code class="lang-csharp hljs">public class PublishSubscribeDispatcher&lt;TGuid, TSubscribeRequest, TControlMessageBase, TResponseBase&gt;
+
+    where TSubscribeRequest : Message where TControlMessageBase : Message where TResponseBase : Message</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,18 +167,15 @@
   </table>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4__ctor_EventStore_Core_Bus_IPublisher_Func__1__0__Func__3__0__.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.PublishSubscribeDispatcher%604.%23ctor(EventStore.Core.Bus.IPublisher%2CFunc%7B%601%2C%600%7D%2CFunc%7B%603%2C%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/PublishSubscribeDispatcher.cs/#L20">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4__ctor_" data-uid="EventStore.Projections.Core.Services.PublishSubscribeDispatcher`4.#ctor*"></a>
-  <h4 id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4__ctor_EventStore_Core_Bus_IPublisher_Func__1__0__Func__3__0__" data-uid="EventStore.Projections.Core.Services.PublishSubscribeDispatcher`4.#ctor(EventStore.Core.Bus.IPublisher,Func{`1,`0},Func{`3,`0})">PublishSubscribeDispatcher(IPublisher, Func&lt;TSubscribeRequest, TGuid&gt;, Func&lt;TResponseBase, TGuid&gt;)</h4>
+  <h4 id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4__ctor_EventStore_Core_Bus_IPublisher_System_Func__1__0__System_Func__3__0__" data-uid="EventStore.Projections.Core.Services.PublishSubscribeDispatcher`4.#ctor(EventStore.Core.Bus.IPublisher,System.Func{`1,`0},System.Func{`3,`0})">PublishSubscribeDispatcher(IPublisher, Func&lt;TSubscribeRequest, TGuid&gt;, Func&lt;TResponseBase, TGuid&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public PublishSubscribeDispatcher(IPublisher publisher, Func&lt;TSubscribeRequest, TGuid&gt; getRequestCorrelationId, Func&lt;TResponseBase, TGuid&gt; getResponseCorrelationId)</code></pre>
   </div>
@@ -161,41 +185,34 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
         <td><span class="parametername">publisher</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;TSubscribeRequest, TGuid&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;TSubscribeRequest, TGuid&gt;</td>
         <td><span class="parametername">getRequestCorrelationId</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Func</span>&lt;TResponseBase, TGuid&gt;</td>
+        <td><span class="xref">System.Func</span>&lt;TResponseBase, TGuid&gt;</td>
         <td><span class="parametername">getResponseCorrelationId</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_Cancel__0_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.PublishSubscribeDispatcher%604.Cancel(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/PublishSubscribeDispatcher.cs/#L55">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_Cancel_" data-uid="EventStore.Projections.Core.Services.PublishSubscribeDispatcher`4.Cancel*"></a>
   <h4 id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_Cancel__0_" data-uid="EventStore.Projections.Core.Services.PublishSubscribeDispatcher`4.Cancel(`0)">Cancel(TGuid)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Cancel(TGuid requestId)</code></pre>
   </div>
@@ -205,46 +222,39 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">TGuid</span></td>
         <td><span class="parametername">requestId</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_CancelAll.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.PublishSubscribeDispatcher%604.CancelAll%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/PublishSubscribeDispatcher.cs/#L60">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_CancelAll_" data-uid="EventStore.Projections.Core.Services.PublishSubscribeDispatcher`4.CancelAll*"></a>
   <h4 id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_CancelAll" data-uid="EventStore.Projections.Core.Services.PublishSubscribeDispatcher`4.CancelAll">CancelAll()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void CancelAll()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_CreateSubscriber__1.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.PublishSubscribeDispatcher%604.CreateSubscriber%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/PublishSubscribeDispatcher.cs/#L65">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_CreateSubscriber_" data-uid="EventStore.Projections.Core.Services.PublishSubscribeDispatcher`4.CreateSubscriber*"></a>
   <h4 id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_CreateSubscriber__1" data-uid="EventStore.Projections.Core.Services.PublishSubscribeDispatcher`4.CreateSubscriber``1">CreateSubscriber&lt;T&gt;()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IHandle&lt;T&gt; CreateSubscriber&lt;T&gt;()
+
     where T : TResponseBase</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
@@ -277,20 +287,18 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_Handle__1___0_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.PublishSubscribeDispatcher%604.Handle%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/PublishSubscribeDispatcher.cs/#L83">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_Handle_" data-uid="EventStore.Projections.Core.Services.PublishSubscribeDispatcher`4.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_Handle__1___0_" data-uid="EventStore.Projections.Core.Services.PublishSubscribeDispatcher`4.Handle``1(``0)">Handle&lt;T&gt;(T)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool Handle&lt;T&gt;(T message)
+
     where T : TResponseBase</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -299,14 +307,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -340,18 +346,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_Publish__2_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.PublishSubscribeDispatcher%604.Publish(%602)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/PublishSubscribeDispatcher.cs/#L46">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_Publish_" data-uid="EventStore.Projections.Core.Services.PublishSubscribeDispatcher`4.Publish*"></a>
   <h4 id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_Publish__2_" data-uid="EventStore.Projections.Core.Services.PublishSubscribeDispatcher`4.Publish(`2)">Publish(TControlMessageBase)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Publish(TControlMessageBase request)</code></pre>
   </div>
@@ -361,29 +364,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">TControlMessageBase</span></td>
         <td><span class="parametername">request</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_Publish_EventStore_Core_Bus_IPublisher__2_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.PublishSubscribeDispatcher%604.Publish(EventStore.Core.Bus.IPublisher%2C%602)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/PublishSubscribeDispatcher.cs/#L50">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_Publish_" data-uid="EventStore.Projections.Core.Services.PublishSubscribeDispatcher`4.Publish*"></a>
   <h4 id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_Publish_EventStore_Core_Bus_IPublisher__2_" data-uid="EventStore.Projections.Core.Services.PublishSubscribeDispatcher`4.Publish(EventStore.Core.Bus.IPublisher,`2)">Publish(IPublisher, TControlMessageBase)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Publish(IPublisher publisher, TControlMessageBase request)</code></pre>
   </div>
@@ -393,34 +391,28 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
         <td><span class="parametername">publisher</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">TControlMessageBase</span></td>
         <td><span class="parametername">request</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_PublishSubscribe__1_System_Object_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.PublishSubscribeDispatcher%604.PublishSubscribe(%601%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/PublishSubscribeDispatcher.cs/#L28">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_PublishSubscribe_" data-uid="EventStore.Projections.Core.Services.PublishSubscribeDispatcher`4.PublishSubscribe*"></a>
   <h4 id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_PublishSubscribe__1_System_Object_" data-uid="EventStore.Projections.Core.Services.PublishSubscribeDispatcher`4.PublishSubscribe(`1,System.Object)">PublishSubscribe(TSubscribeRequest, Object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TGuid PublishSubscribe(TSubscribeRequest request, object subscriber)</code></pre>
   </div>
@@ -430,19 +422,16 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">TSubscribeRequest</span></td>
         <td><span class="parametername">request</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">subscriber</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -461,18 +450,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_PublishSubscribe_EventStore_Core_Bus_IPublisher__1_System_Object_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.PublishSubscribeDispatcher%604.PublishSubscribe(EventStore.Core.Bus.IPublisher%2C%601%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/PublishSubscribeDispatcher.cs/#L32">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_PublishSubscribe_" data-uid="EventStore.Projections.Core.Services.PublishSubscribeDispatcher`4.PublishSubscribe*"></a>
   <h4 id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_PublishSubscribe_EventStore_Core_Bus_IPublisher__1_System_Object_" data-uid="EventStore.Projections.Core.Services.PublishSubscribeDispatcher`4.PublishSubscribe(EventStore.Core.Bus.IPublisher,`1,System.Object)">PublishSubscribe(IPublisher, TSubscribeRequest, Object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TGuid PublishSubscribe(IPublisher publisher, TSubscribeRequest request, object subscriber)</code></pre>
   </div>
@@ -482,24 +468,20 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
         <td><span class="parametername">publisher</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">TSubscribeRequest</span></td>
         <td><span class="parametername">request</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">subscriber</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -518,18 +500,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_Subscribed__0_System_Object_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.PublishSubscribeDispatcher%604.Subscribed(%600%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/PublishSubscribeDispatcher.cs/#L98">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_Subscribed_" data-uid="EventStore.Projections.Core.Services.PublishSubscribeDispatcher`4.Subscribed*"></a>
   <h4 id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_Subscribed__0_System_Object_" data-uid="EventStore.Projections.Core.Services.PublishSubscribeDispatcher`4.Subscribed(`0,System.Object)">Subscribed(TGuid, Object)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Subscribed(TGuid correlationId, object subscriber)</code></pre>
   </div>
@@ -539,19 +518,16 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">TGuid</span></td>
         <td><span class="parametername">correlationId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">subscriber</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -580,12 +556,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.PublishSubscribeDispatcher%604%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/PublishSubscribeDispatcher.cs/#L8" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

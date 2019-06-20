@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -108,26 +109,44 @@
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.SystemMessage.StateChangeMessage.html">SystemMessage.StateChangeMessage</a>&gt;</div>
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.SystemMessage.BecomeShutdown.html">SystemMessage.BecomeShutdown</a>&gt;</div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.html">EventStore.Core</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_ClusterVNode_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ClusterVNode : object, IHandle&lt;SystemMessage.StateChangeMessage&gt;, IHandle&lt;SystemMessage.BecomeShutdown&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class ClusterVNode : IHandle&lt;SystemMessage.StateChangeMessage&gt;, IHandle&lt;SystemMessage.BecomeShutdown&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode__ctor_EventStore_Core_TransactionLog_Chunks_TFChunkDb_EventStore_Core_Cluster_Settings_ClusterVNodeSettings_EventStore_Core_Services_Gossip_IGossipSeedSource_EventStore_Core_Services_Transport_Http_Controllers_InfoController_EventStore_Core_ISubsystem___.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode.%23ctor(EventStore.Core.TransactionLog.Chunks.TFChunkDb%2CEventStore.Core.Cluster.Settings.ClusterVNodeSettings%2CEventStore.Core.Services.Gossip.IGossipSeedSource%2CEventStore.Core.Services.Transport.Http.Controllers.InfoController%2CEventStore.Core.ISubsystem%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L112">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_ClusterVNode__ctor_" data-uid="EventStore.Core.ClusterVNode.#ctor*"></a>
   <h4 id="EventStore_Core_ClusterVNode__ctor_EventStore_Core_TransactionLog_Chunks_TFChunkDb_EventStore_Core_Cluster_Settings_ClusterVNodeSettings_EventStore_Core_Services_Gossip_IGossipSeedSource_EventStore_Core_Services_Transport_Http_Controllers_InfoController_EventStore_Core_ISubsystem___" data-uid="EventStore.Core.ClusterVNode.#ctor(EventStore.Core.TransactionLog.Chunks.TFChunkDb,EventStore.Core.Cluster.Settings.ClusterVNodeSettings,EventStore.Core.Services.Gossip.IGossipSeedSource,EventStore.Core.Services.Transport.Http.Controllers.InfoController,EventStore.Core.ISubsystem[])">ClusterVNode(TFChunkDb, ClusterVNodeSettings, IGossipSeedSource, InfoController, ISubsystem[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ClusterVNode(TFChunkDb db, ClusterVNodeSettings vNodeSettings, IGossipSeedSource gossipSeedSource, InfoController infoController, params ISubsystem[] subsystems)</code></pre>
   </div>
@@ -137,51 +156,42 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.Chunks.TFChunkDb.html">TFChunkDb</a></td>
         <td><span class="parametername">db</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Cluster.Settings.ClusterVNodeSettings.html">ClusterVNodeSettings</a></td>
         <td><span class="parametername">vNodeSettings</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.Gossip.IGossipSeedSource.html">IGossipSeedSource</a></td>
         <td><span class="parametername">gossipSeedSource</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.Transport.Http.Controllers.InfoController.html">InfoController</a></td>
         <td><span class="parametername">infoController</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.ISubsystem.html">ISubsystem</a>[]</td>
         <td><span class="parametername">subsystems</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode_ExternalHttpService.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode.ExternalHttpService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L60">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_ClusterVNode_ExternalHttpService_" data-uid="EventStore.Core.ClusterVNode.ExternalHttpService*"></a>
   <h4 id="EventStore_Core_ClusterVNode_ExternalHttpService" data-uid="EventStore.Core.ClusterVNode.ExternalHttpService">ExternalHttpService</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public HttpService ExternalHttpService { get; }</code></pre>
   </div>
@@ -190,28 +200,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.Transport.Http.HttpService.html">HttpService</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode_InternalAuthenticationProvider.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode.InternalAuthenticationProvider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L72">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_ClusterVNode_InternalAuthenticationProvider_" data-uid="EventStore.Core.ClusterVNode.InternalAuthenticationProvider*"></a>
   <h4 id="EventStore_Core_ClusterVNode_InternalAuthenticationProvider" data-uid="EventStore.Core.ClusterVNode.InternalAuthenticationProvider">InternalAuthenticationProvider</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IAuthenticationProvider InternalAuthenticationProvider { get; }</code></pre>
   </div>
@@ -220,28 +225,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Authentication.IAuthenticationProvider.html">IAuthenticationProvider</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode_InternalHttpService.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode.InternalHttpService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L56">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_ClusterVNode_InternalHttpService_" data-uid="EventStore.Core.ClusterVNode.InternalHttpService*"></a>
   <h4 id="EventStore_Core_ClusterVNode_InternalHttpService" data-uid="EventStore.Core.ClusterVNode.InternalHttpService">InternalHttpService</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public HttpService InternalHttpService { get; }</code></pre>
   </div>
@@ -250,28 +250,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.Transport.Http.HttpService.html">HttpService</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode_MainBus.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode.MainBus%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L52">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_ClusterVNode_MainBus_" data-uid="EventStore.Core.ClusterVNode.MainBus*"></a>
   <h4 id="EventStore_Core_ClusterVNode_MainBus" data-uid="EventStore.Core.ClusterVNode.MainBus">MainBus</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ISubscriber MainBus { get; }</code></pre>
   </div>
@@ -280,28 +275,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.ISubscriber.html">ISubscriber</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode_MainQueue.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode.MainQueue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L48">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_ClusterVNode_MainQueue_" data-uid="EventStore.Core.ClusterVNode.MainQueue*"></a>
   <h4 id="EventStore_Core_ClusterVNode_MainQueue" data-uid="EventStore.Core.ClusterVNode.MainQueue">MainQueue</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IQueuedHandler MainQueue { get; }</code></pre>
   </div>
@@ -310,28 +300,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IQueuedHandler.html">IQueuedHandler</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode_NetworkSendService.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode.NetworkSendService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L68">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_ClusterVNode_NetworkSendService_" data-uid="EventStore.Core.ClusterVNode.NetworkSendService*"></a>
   <h4 id="EventStore_Core_ClusterVNode_NetworkSendService" data-uid="EventStore.Core.ClusterVNode.NetworkSendService">NetworkSendService</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IPublisher NetworkSendService { get; }</code></pre>
   </div>
@@ -340,28 +325,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode_Tasks.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode.Tasks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L98">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_ClusterVNode_Tasks_" data-uid="EventStore.Core.ClusterVNode.Tasks*"></a>
   <h4 id="EventStore_Core_ClusterVNode_Tasks" data-uid="EventStore.Core.ClusterVNode.Tasks">Tasks</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IEnumerable&lt;Task&gt; Tasks { get; }</code></pre>
   </div>
@@ -370,28 +350,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Task</span>&gt;</td>
-        <td></td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode_TimerService.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode.TimerService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L64">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_ClusterVNode_TimerService_" data-uid="EventStore.Core.ClusterVNode.TimerService*"></a>
   <h4 id="EventStore_Core_ClusterVNode_TimerService" data-uid="EventStore.Core.ClusterVNode.TimerService">TimerService</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TimerService TimerService { get; }</code></pre>
   </div>
@@ -400,30 +375,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.TimerService.TimerService.html">TimerService</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode_AddTask_Task_.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode.AddTask(Task)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L687">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_ClusterVNode_AddTask_" data-uid="EventStore.Core.ClusterVNode.AddTask*"></a>
-  <h4 id="EventStore_Core_ClusterVNode_AddTask_Task_" data-uid="EventStore.Core.ClusterVNode.AddTask(Task)">AddTask(Task)</h4>
+  <h4 id="EventStore_Core_ClusterVNode_AddTask_System_Threading_Tasks_Task_" data-uid="EventStore.Core.ClusterVNode.AddTask(System.Threading.Tasks.Task)">AddTask(Task)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void AddTask(Task task)</code></pre>
   </div>
@@ -433,29 +403,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span></td>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
         <td><span class="parametername">task</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode_AddTasks_IEnumerable_Task__.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode.AddTasks(IEnumerable%7BTask%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L679">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_ClusterVNode_AddTasks_" data-uid="EventStore.Core.ClusterVNode.AddTasks*"></a>
-  <h4 id="EventStore_Core_ClusterVNode_AddTasks_IEnumerable_Task__" data-uid="EventStore.Core.ClusterVNode.AddTasks(IEnumerable{Task})">AddTasks(IEnumerable&lt;Task&gt;)</h4>
+  <h4 id="EventStore_Core_ClusterVNode_AddTasks_System_Collections_Generic_IEnumerable_System_Threading_Tasks_Task__" data-uid="EventStore.Core.ClusterVNode.AddTasks(System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task})">AddTasks(IEnumerable&lt;Task&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void AddTasks(IEnumerable&lt;Task&gt; tasks)</code></pre>
   </div>
@@ -465,29 +430,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Task</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
         <td><span class="parametername">tasks</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode_Handle_EventStore_Core_Messages_SystemMessage_BecomeShutdown_.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode.Handle(EventStore.Core.Messages.SystemMessage.BecomeShutdown)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L675">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_ClusterVNode_Handle_" data-uid="EventStore.Core.ClusterVNode.Handle*"></a>
   <h4 id="EventStore_Core_ClusterVNode_Handle_EventStore_Core_Messages_SystemMessage_BecomeShutdown_" data-uid="EventStore.Core.ClusterVNode.Handle(EventStore.Core.Messages.SystemMessage.BecomeShutdown)">Handle(SystemMessage.BecomeShutdown)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(SystemMessage.BecomeShutdown message)</code></pre>
   </div>
@@ -497,29 +457,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.SystemMessage.BecomeShutdown.html">SystemMessage.BecomeShutdown</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode_Handle_EventStore_Core_Messages_SystemMessage_StateChangeMessage_.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode.Handle(EventStore.Core.Messages.SystemMessage.StateChangeMessage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L671">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_ClusterVNode_Handle_" data-uid="EventStore.Core.ClusterVNode.Handle*"></a>
   <h4 id="EventStore_Core_ClusterVNode_Handle_EventStore_Core_Messages_SystemMessage_StateChangeMessage_" data-uid="EventStore.Core.ClusterVNode.Handle(EventStore.Core.Messages.SystemMessage.StateChangeMessage)">Handle(SystemMessage.StateChangeMessage)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(SystemMessage.StateChangeMessage message)</code></pre>
   </div>
@@ -529,29 +484,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.SystemMessage.StateChangeMessage.html">SystemMessage.StateChangeMessage</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode_OnNodeStatusChanged_EventStore_Core_VNodeStatusChangeArgs_.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode.OnNodeStatusChanged(EventStore.Core.VNodeStatusChangeArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L106">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_ClusterVNode_OnNodeStatusChanged_" data-uid="EventStore.Core.ClusterVNode.OnNodeStatusChanged*"></a>
   <h4 id="EventStore_Core_ClusterVNode_OnNodeStatusChanged_EventStore_Core_VNodeStatusChangeArgs_" data-uid="EventStore.Core.ClusterVNode.OnNodeStatusChanged(EventStore.Core.VNodeStatusChangeArgs)">OnNodeStatusChanged(VNodeStatusChangeArgs)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected virtual void OnNodeStatusChanged(VNodeStatusChangeArgs e)</code></pre>
   </div>
@@ -561,44 +511,36 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.VNodeStatusChangeArgs.html">VNodeStatusChangeArgs</a></td>
         <td><span class="parametername">e</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode_Start.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode.Start%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L650">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_ClusterVNode_Start_" data-uid="EventStore.Core.ClusterVNode.Start*"></a>
   <h4 id="EventStore_Core_ClusterVNode_Start" data-uid="EventStore.Core.ClusterVNode.Start">Start()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Start()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode_StartAndWaitUntilReady.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode.StartAndWaitUntilReady%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L708">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_ClusterVNode_StartAndWaitUntilReady_" data-uid="EventStore.Core.ClusterVNode.StartAndWaitUntilReady*"></a>
   <h4 id="EventStore_Core_ClusterVNode_StartAndWaitUntilReady" data-uid="EventStore.Core.ClusterVNode.StartAndWaitUntilReady">StartAndWaitUntilReady()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task&lt;ClusterVNode&gt; StartAndWaitUntilReady()</code></pre>
   </div>
@@ -612,23 +554,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="EventStore.Core.ClusterVNode.html">ClusterVNode</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="EventStore.Core.ClusterVNode.html">ClusterVNode</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode_Stop.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode.Stop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L662">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_ClusterVNode_Stop_" data-uid="EventStore.Core.ClusterVNode.Stop*"></a>
   <h4 id="EventStore_Core_ClusterVNode_Stop" data-uid="EventStore.Core.ClusterVNode.Stop">Stop()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool Stop()</code></pre>
   </div>
@@ -647,18 +586,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode_Stop_TimeSpan_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode.Stop(TimeSpan%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L666">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_ClusterVNode_Stop_" data-uid="EventStore.Core.ClusterVNode.Stop*"></a>
-  <h4 id="EventStore_Core_ClusterVNode_Stop_TimeSpan_System_Boolean_System_Boolean_" data-uid="EventStore.Core.ClusterVNode.Stop(TimeSpan,System.Boolean,System.Boolean)">Stop(TimeSpan, Boolean, Boolean)</h4>
+  <h4 id="EventStore_Core_ClusterVNode_Stop_System_TimeSpan_System_Boolean_System_Boolean_" data-uid="EventStore.Core.ClusterVNode.Stop(System.TimeSpan,System.Boolean,System.Boolean)">Stop(TimeSpan, Boolean, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool Stop(TimeSpan timeout, bool exitProcess, bool shutdownHttp)</code></pre>
   </div>
@@ -668,24 +604,20 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">exitProcess</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">shutdownHttp</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -704,18 +636,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode_StopNonblocking_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode.StopNonblocking(System.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L654">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_ClusterVNode_StopNonblocking_" data-uid="EventStore.Core.ClusterVNode.StopNonblocking*"></a>
   <h4 id="EventStore_Core_ClusterVNode_StopNonblocking_System_Boolean_System_Boolean_" data-uid="EventStore.Core.ClusterVNode.StopNonblocking(System.Boolean,System.Boolean)">StopNonblocking(Boolean, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void StopNonblocking(bool exitProcess, bool shutdownHttp)</code></pre>
   </div>
@@ -725,34 +654,28 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">exitProcess</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">shutdownHttp</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode_ToString.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L719">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_ClusterVNode_ToString_" data-uid="EventStore.Core.ClusterVNode.ToString*"></a>
   <h4 id="EventStore_Core_ClusterVNode_ToString" data-uid="EventStore.Core.ClusterVNode.ToString">ToString()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
   </div>
@@ -771,19 +694,18 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
   <h3 id="events">Events
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode_NodeStatusChanged.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode.NodeStatusChanged%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L96">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_ClusterVNode_NodeStatusChanged" data-uid="EventStore.Core.ClusterVNode.NodeStatusChanged">NodeStatusChanged</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public event EventHandler&lt;VNodeStatusChangeArgs&gt; NodeStatusChanged</code></pre>
   </div>
@@ -792,13 +714,11 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">EventHandler</span>&lt;<a class="xref" href="EventStore.Core.VNodeStatusChangeArgs.html">VNodeStatusChangeArgs</a>&gt;</td>
-        <td></td>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="EventStore.Core.VNodeStatusChangeArgs.html">VNodeStatusChangeArgs</a>&gt;</td>
       </tr>
     </tbody>
   </table>
@@ -834,12 +754,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_ClusterVNode.md&amp;value=---%0Auid%3A%20EventStore.Core.ClusterVNode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/ClusterVNode.cs/#L43" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

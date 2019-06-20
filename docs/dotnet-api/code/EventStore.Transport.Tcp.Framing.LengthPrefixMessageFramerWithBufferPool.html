@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,29 +104,50 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">LengthPrefixMessageFramerWithBufferPool</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Transport.Tcp.Framing.html">EventStore.Transport.Tcp.Framing</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Transport.Tcp.dll</h6>
   <h5 id="EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class LengthPrefixMessageFramerWithBufferPool : object</code></pre>
+    <pre><code class="lang-csharp hljs">public class LengthPrefixMessageFramerWithBufferPool</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool__ctor_EventStore_BufferManagement_BufferManager_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.%23ctor(EventStore.BufferManagement.BufferManager%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/Framing/LengthPrefixMessageFramerWithBufferPool.cs/#L24">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool__ctor_" data-uid="EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.#ctor*"></a>
   <h4 id="EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool__ctor_EventStore_BufferManagement_BufferManager_System_Int32_" data-uid="EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.#ctor(EventStore.BufferManagement.BufferManager,System.Int32)">LengthPrefixMessageFramerWithBufferPool(BufferManager, Int32)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.html">LengthPrefixMessageFramerWithBufferPool</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LengthPrefixMessageFramerWithBufferPool(BufferManager bufferManager, int maxPackageSize = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public LengthPrefixMessageFramerWithBufferPool(BufferManager bufferManager, int maxPackageSize = 16777216)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,36 +155,30 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.BufferManagement.BufferManager.html">BufferManager</a></td>
         <td><span class="parametername">bufferManager</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">maxPackageSize</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool_FrameData_ArraySegment_System_Byte__.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.FrameData(ArraySegment%7BSystem.Byte%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/Framing/LengthPrefixMessageFramerWithBufferPool.cs/#L88">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool_FrameData_" data-uid="EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.FrameData*"></a>
-  <h4 id="EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool_FrameData_ArraySegment_System_Byte__" data-uid="EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.FrameData(ArraySegment{System.Byte})">FrameData(ArraySegment&lt;Byte&gt;)</h4>
+  <h4 id="EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool_FrameData_System_ArraySegment_System_Byte__" data-uid="EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.FrameData(System.ArraySegment{System.Byte})">FrameData(ArraySegment&lt;Byte&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IEnumerable&lt;ArraySegment&lt;byte&gt;&gt; FrameData(ArraySegment&lt;byte&gt; data)</code></pre>
   </div>
@@ -172,14 +188,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="xref">System.ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
         <td><span class="parametername">data</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -193,23 +207,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool_RegisterMessageArrivedCallback_Action_EventStore_BufferManagement_BufferPool__.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.RegisterMessageArrivedCallback(Action%7BEventStore.BufferManagement.BufferPool%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/Framing/LengthPrefixMessageFramerWithBufferPool.cs/#L96">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool_RegisterMessageArrivedCallback_" data-uid="EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.RegisterMessageArrivedCallback*"></a>
-  <h4 id="EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool_RegisterMessageArrivedCallback_Action_EventStore_BufferManagement_BufferPool__" data-uid="EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.RegisterMessageArrivedCallback(Action{EventStore.BufferManagement.BufferPool})">RegisterMessageArrivedCallback(Action&lt;BufferPool&gt;)</h4>
+  <h4 id="EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool_RegisterMessageArrivedCallback_System_Action_EventStore_BufferManagement_BufferPool__" data-uid="EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.RegisterMessageArrivedCallback(System.Action{EventStore.BufferManagement.BufferPool})">RegisterMessageArrivedCallback(Action&lt;BufferPool&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void RegisterMessageArrivedCallback(Action&lt;BufferPool&gt; handler)</code></pre>
   </div>
@@ -219,44 +230,36 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.BufferManagement.BufferPool.html">BufferPool</a>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.BufferManagement.BufferPool.html">BufferPool</a>&gt;</td>
         <td><span class="parametername">handler</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool_Reset.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.Reset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/Framing/LengthPrefixMessageFramerWithBufferPool.cs/#L32">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool_Reset_" data-uid="EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.Reset*"></a>
   <h4 id="EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool_Reset" data-uid="EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.Reset">Reset()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Reset()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool_UnFrameData_ArraySegment_System_Byte__.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.UnFrameData(ArraySegment%7BSystem.Byte%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/Framing/LengthPrefixMessageFramerWithBufferPool.cs/#L47">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool_UnFrameData_" data-uid="EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.UnFrameData*"></a>
-  <h4 id="EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool_UnFrameData_ArraySegment_System_Byte__" data-uid="EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.UnFrameData(ArraySegment{System.Byte})">UnFrameData(ArraySegment&lt;Byte&gt;)</h4>
+  <h4 id="EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool_UnFrameData_System_ArraySegment_System_Byte__" data-uid="EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.UnFrameData(System.ArraySegment{System.Byte})">UnFrameData(ArraySegment&lt;Byte&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void UnFrameData(ArraySegment&lt;byte&gt; data)</code></pre>
   </div>
@@ -266,29 +269,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
+        <td><span class="xref">System.ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;</td>
         <td><span class="parametername">data</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool_UnFrameData_IEnumerable_ArraySegment_System_Byte___.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.UnFrameData(IEnumerable%7BArraySegment%7BSystem.Byte%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/Framing/LengthPrefixMessageFramerWithBufferPool.cs/#L38">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool_UnFrameData_" data-uid="EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.UnFrameData*"></a>
-  <h4 id="EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool_UnFrameData_IEnumerable_ArraySegment_System_Byte___" data-uid="EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.UnFrameData(IEnumerable{ArraySegment{System.Byte}})">UnFrameData(IEnumerable&lt;ArraySegment&lt;Byte&gt;&gt;)</h4>
+  <h4 id="EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool_UnFrameData_System_Collections_Generic_IEnumerable_System_ArraySegment_System_Byte___" data-uid="EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool.UnFrameData(System.Collections.Generic.IEnumerable{System.ArraySegment{System.Byte}})">UnFrameData(IEnumerable&lt;ArraySegment&lt;Byte&gt;&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void UnFrameData(IEnumerable&lt;ArraySegment&lt;byte&gt;&gt; data)</code></pre>
   </div>
@@ -298,14 +296,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.ArraySegment</span>&lt;<span class="xref">System.Byte</span>&gt;&gt;</td>
         <td><span class="parametername">data</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -334,12 +330,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_Framing_LengthPrefixMessageFramerWithBufferPool.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.Framing.LengthPrefixMessageFramerWithBufferPool%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/Framing/LengthPrefixMessageFramerWithBufferPool.cs/#L8" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

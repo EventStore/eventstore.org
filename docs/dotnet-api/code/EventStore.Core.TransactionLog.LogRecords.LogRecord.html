@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -106,26 +107,47 @@
       <div class="level2"><a class="xref" href="EventStore.Core.TransactionLog.LogRecords.PrepareLogRecord.html">PrepareLogRecord</a></div>
       <div class="level2"><a class="xref" href="EventStore.Core.TransactionLog.LogRecords.SystemLogRecord.html">SystemLogRecord</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.TransactionLog.LogRecords.html">EventStore.Core.TransactionLog.LogRecords</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class LogRecord : object</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class LogRecord</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_LogRecords_LogRecord__ctor_EventStore_Core_TransactionLog_LogRecords_LogRecordType_System_Byte_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.LogRecords.LogRecord.%23ctor(EventStore.Core.TransactionLog.LogRecords.LogRecordType%2CSystem.Byte%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/LogRecords/LogRecord.cs/#L111">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_LogRecords_LogRecord__ctor_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.#ctor*"></a>
   <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord__ctor_EventStore_Core_TransactionLog_LogRecords_LogRecordType_System_Byte_System_Int64_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.#ctor(EventStore.Core.TransactionLog.LogRecords.LogRecordType,System.Byte,System.Int64)">LogRecord(LogRecordType, Byte, Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected LogRecord(LogRecordType recordType, byte version, long logPosition)</code></pre>
   </div>
@@ -135,40 +157,33 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.LogRecords.LogRecordType.html">LogRecordType</a></td>
         <td><span class="parametername">recordType</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Byte</span></td>
         <td><span class="parametername">version</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">logPosition</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_LogRecords_LogRecord_LogPosition.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.LogRecords.LogRecord.LogPosition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/LogRecords/LogRecord.cs/#L24">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_LogPosition" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.LogPosition">LogPosition</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly long LogPosition</code></pre>
   </div>
@@ -177,27 +192,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_LogRecords_LogRecord_NoData.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.LogRecords.LogRecord.NoData%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/LogRecords/LogRecord.cs/#L20">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_NoData" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.NoData">NoData</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static readonly byte[] NoData</code></pre>
   </div>
@@ -206,27 +216,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_LogRecords_LogRecord_RecordType.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.LogRecords.LogRecord.RecordType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/LogRecords/LogRecord.cs/#L22">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_RecordType" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.RecordType">RecordType</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly LogRecordType RecordType</code></pre>
   </div>
@@ -235,27 +240,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.LogRecords.LogRecordType.html">LogRecordType</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_LogRecords_LogRecord_Version.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.LogRecords.LogRecord.Version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/LogRecords/LogRecord.cs/#L23">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_Version" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.Version">Version</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly byte Version</code></pre>
   </div>
@@ -264,30 +264,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_LogRecords_LogRecord_Commit_System_Int64_Guid_System_Int64_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.LogRecords.LogRecord.Commit(System.Int64%2CGuid%2CSystem.Int64%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/LogRecords/LogRecord.cs/#L62">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_LogRecords_LogRecord_Commit_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.Commit*"></a>
-  <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_Commit_System_Int64_Guid_System_Int64_System_Int64_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.Commit(System.Int64,Guid,System.Int64,System.Int64)">Commit(Int64, Guid, Int64, Int64)</h4>
+  <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_Commit_System_Int64_System_Guid_System_Int64_System_Int64_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.Commit(System.Int64,System.Guid,System.Int64,System.Int64)">Commit(Int64, Guid, Int64, Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static CommitLogRecord Commit(long logPosition, Guid correlationId, long startPosition, long eventNumber)</code></pre>
   </div>
@@ -297,29 +292,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">logPosition</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">correlationId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">startPosition</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">eventNumber</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -338,20 +328,17 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_LogRecords_LogRecord_DeleteTombstone_System_Int64_Guid_Guid_System_String_System_Int64_EventStore_Core_TransactionLog_LogRecords_PrepareFlags_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.LogRecords.LogRecord.DeleteTombstone(System.Int64%2CGuid%2CGuid%2CSystem.String%2CSystem.Int64%2CEventStore.Core.TransactionLog.LogRecords.PrepareFlags)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/LogRecords/LogRecord.cs/#L102">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_LogRecords_LogRecord_DeleteTombstone_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.DeleteTombstone*"></a>
-  <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_DeleteTombstone_System_Int64_Guid_Guid_System_String_System_Int64_EventStore_Core_TransactionLog_LogRecords_PrepareFlags_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.DeleteTombstone(System.Int64,Guid,Guid,System.String,System.Int64,EventStore.Core.TransactionLog.LogRecords.PrepareFlags)">DeleteTombstone(Int64, Guid, Guid, String, Int64, PrepareFlags)</h4>
+  <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_DeleteTombstone_System_Int64_System_Guid_System_Guid_System_String_System_Int64_EventStore_Core_TransactionLog_LogRecords_PrepareFlags_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.DeleteTombstone(System.Int64,System.Guid,System.Guid,System.String,System.Int64,EventStore.Core.TransactionLog.LogRecords.PrepareFlags)">DeleteTombstone(Int64, Guid, Guid, String, Int64, PrepareFlags)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static PrepareLogRecord DeleteTombstone(long logPosition, Guid correlationId, Guid eventId, string eventStreamId, long expectedVersion, PrepareFlags additionalFlags = default(PrepareFlags))</code></pre>
+    <pre><code class="lang-csharp hljs">public static PrepareLogRecord DeleteTombstone(long logPosition, Guid correlationId, Guid eventId, string eventStreamId, long expectedVersion, PrepareFlags additionalFlags = PrepareFlags.None)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -359,39 +346,32 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">logPosition</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">correlationId</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">eventId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">eventStreamId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">expectedVersion</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.LogRecords.PrepareFlags.html">PrepareFlags</a></td>
         <td><span class="parametername">additionalFlags</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -410,18 +390,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_LogRecords_LogRecord_GetNextLogPosition_System_Int64_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.LogRecords.LogRecord.GetNextLogPosition(System.Int64%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/LogRecords/LogRecord.cs/#L26">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_LogRecords_LogRecord_GetNextLogPosition_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.GetNextLogPosition*"></a>
   <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_GetNextLogPosition_System_Int64_System_Int32_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.GetNextLogPosition(System.Int64,System.Int32)">GetNextLogPosition(Int64, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public long GetNextLogPosition(long logicalPosition, int length)</code></pre>
   </div>
@@ -431,19 +408,16 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">logicalPosition</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">length</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -462,18 +436,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_LogRecords_LogRecord_GetPrevLogPosition_System_Int64_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.LogRecords.LogRecord.GetPrevLogPosition(System.Int64%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/LogRecords/LogRecord.cs/#L30">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_LogRecords_LogRecord_GetPrevLogPosition_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.GetPrevLogPosition*"></a>
   <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_GetPrevLogPosition_System_Int64_System_Int32_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.GetPrevLogPosition(System.Int64,System.Int32)">GetPrevLogPosition(Int64, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public long GetPrevLogPosition(long logicalPosition, int length)</code></pre>
   </div>
@@ -483,19 +454,16 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">logicalPosition</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">length</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -514,18 +482,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_LogRecords_LogRecord_GetSizeWithLengthPrefixAndSuffix.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.LogRecords.LogRecord.GetSizeWithLengthPrefixAndSuffix%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/LogRecords/LogRecord.cs/#L124">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_LogRecords_LogRecord_GetSizeWithLengthPrefixAndSuffix_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.GetSizeWithLengthPrefixAndSuffix*"></a>
   <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_GetSizeWithLengthPrefixAndSuffix" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.GetSizeWithLengthPrefixAndSuffix">GetSizeWithLengthPrefixAndSuffix()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int GetSizeWithLengthPrefixAndSuffix()</code></pre>
   </div>
@@ -544,20 +509,17 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_LogRecords_LogRecord_Prepare_System_Int64_Guid_Guid_System_Int64_System_Int32_System_String_System_Int64_EventStore_Core_TransactionLog_LogRecords_PrepareFlags_System_String_System_Byte___System_Byte___System_Nullable_DateTime__.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.LogRecords.LogRecord.Prepare(System.Int64%2CGuid%2CGuid%2CSystem.Int64%2CSystem.Int32%2CSystem.String%2CSystem.Int64%2CEventStore.Core.TransactionLog.LogRecords.PrepareFlags%2CSystem.String%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Nullable%7BDateTime%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/LogRecords/LogRecord.cs/#L53">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_LogRecords_LogRecord_Prepare_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.Prepare*"></a>
-  <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_Prepare_System_Int64_Guid_Guid_System_Int64_System_Int32_System_String_System_Int64_EventStore_Core_TransactionLog_LogRecords_PrepareFlags_System_String_System_Byte___System_Byte___System_Nullable_DateTime__" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.Prepare(System.Int64,Guid,Guid,System.Int64,System.Int32,System.String,System.Int64,EventStore.Core.TransactionLog.LogRecords.PrepareFlags,System.String,System.Byte[],System.Byte[],System.Nullable{DateTime})">Prepare(Int64, Guid, Guid, Int64, Int32, String, Int64, PrepareFlags, String, Byte[], Byte[], Nullable&lt;DateTime&gt;)</h4>
+  <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_Prepare_System_Int64_System_Guid_System_Guid_System_Int64_System_Int32_System_String_System_Int64_EventStore_Core_TransactionLog_LogRecords_PrepareFlags_System_String_System_Byte___System_Byte___System_Nullable_System_DateTime__" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.Prepare(System.Int64,System.Guid,System.Guid,System.Int64,System.Int32,System.String,System.Int64,EventStore.Core.TransactionLog.LogRecords.PrepareFlags,System.String,System.Byte[],System.Byte[],System.Nullable{System.DateTime})">Prepare(Int64, Guid, Guid, Int64, Int32, String, Int64, PrepareFlags, String, Byte[], Byte[], Nullable&lt;DateTime&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static PrepareLogRecord Prepare(long logPosition, Guid correlationId, Guid eventId, long transactionPos, int transactionOffset, string eventStreamId, long expectedVersion, PrepareFlags flags, string eventType, byte[] data, byte[] metadata, DateTime? timeStamp = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static PrepareLogRecord Prepare(long logPosition, Guid correlationId, Guid eventId, long transactionPos, int transactionOffset, string eventStreamId, long expectedVersion, PrepareFlags flags, string eventType, byte[] data, byte[] metadata, DateTime? timeStamp = default(DateTime? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -565,69 +527,56 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">logPosition</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">correlationId</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">eventId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">transactionPos</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">transactionOffset</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">eventStreamId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">expectedVersion</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.LogRecords.PrepareFlags.html">PrepareFlags</a></td>
         <td><span class="parametername">flags</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">eventType</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
         <td><span class="parametername">data</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
         <td><span class="parametername">metadata</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">DateTime</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
         <td><span class="parametername">timeStamp</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -646,18 +595,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_LogRecords_LogRecord_ReadFrom_BinaryReader_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.LogRecords.LogRecord.ReadFrom(BinaryReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/LogRecords/LogRecord.cs/#L34">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_LogRecords_LogRecord_ReadFrom_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.ReadFrom*"></a>
-  <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_ReadFrom_BinaryReader_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.ReadFrom(BinaryReader)">ReadFrom(BinaryReader)</h4>
+  <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_ReadFrom_System_IO_BinaryReader_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.ReadFrom(System.IO.BinaryReader)">ReadFrom(BinaryReader)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static LogRecord ReadFrom(BinaryReader reader)</code></pre>
   </div>
@@ -667,14 +613,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BinaryReader</span></td>
+        <td><span class="xref">System.IO.BinaryReader</span></td>
         <td><span class="parametername">reader</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -693,20 +637,17 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_LogRecords_LogRecord_SingleWrite_System_Int64_Guid_Guid_System_String_System_Int64_System_String_System_Byte___System_Byte___System_Nullable_DateTime__System_Nullable_EventStore_Core_TransactionLog_LogRecords_PrepareFlags__.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.LogRecords.LogRecord.SingleWrite(System.Int64%2CGuid%2CGuid%2CSystem.String%2CSystem.Int64%2CSystem.String%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Nullable%7BDateTime%7D%2CSystem.Nullable%7BEventStore.Core.TransactionLog.LogRecords.PrepareFlags%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/LogRecords/LogRecord.cs/#L67">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_LogRecords_LogRecord_SingleWrite_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.SingleWrite*"></a>
-  <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_SingleWrite_System_Int64_Guid_Guid_System_String_System_Int64_System_String_System_Byte___System_Byte___System_Nullable_DateTime__System_Nullable_EventStore_Core_TransactionLog_LogRecords_PrepareFlags__" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.SingleWrite(System.Int64,Guid,Guid,System.String,System.Int64,System.String,System.Byte[],System.Byte[],System.Nullable{DateTime},System.Nullable{EventStore.Core.TransactionLog.LogRecords.PrepareFlags})">SingleWrite(Int64, Guid, Guid, String, Int64, String, Byte[], Byte[], Nullable&lt;DateTime&gt;, Nullable&lt;PrepareFlags&gt;)</h4>
+  <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_SingleWrite_System_Int64_System_Guid_System_Guid_System_String_System_Int64_System_String_System_Byte___System_Byte___System_Nullable_System_DateTime__System_Nullable_EventStore_Core_TransactionLog_LogRecords_PrepareFlags__" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.SingleWrite(System.Int64,System.Guid,System.Guid,System.String,System.Int64,System.String,System.Byte[],System.Byte[],System.Nullable{System.DateTime},System.Nullable{EventStore.Core.TransactionLog.LogRecords.PrepareFlags})">SingleWrite(Int64, Guid, Guid, String, Int64, String, Byte[], Byte[], Nullable&lt;DateTime&gt;, Nullable&lt;PrepareFlags&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static PrepareLogRecord SingleWrite(long logPosition, Guid correlationId, Guid eventId, string eventStreamId, long expectedVersion, string eventType, byte[] data, byte[] metadata, DateTime? timestamp = null, PrepareFlags? additionalFlags = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static PrepareLogRecord SingleWrite(long logPosition, Guid correlationId, Guid eventId, string eventStreamId, long expectedVersion, string eventType, byte[] data, byte[] metadata, DateTime? timestamp = default(DateTime? ), PrepareFlags? additionalFlags = default(PrepareFlags? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -714,59 +655,48 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">logPosition</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">correlationId</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">eventId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">eventStreamId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">expectedVersion</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">eventType</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
         <td><span class="parametername">data</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
         <td><span class="parametername">metadata</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">DateTime</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;</td>
         <td><span class="parametername">timestamp</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="EventStore.Core.TransactionLog.LogRecords.PrepareFlags.html">PrepareFlags</a>&gt;</td>
         <td><span class="parametername">additionalFlags</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -785,18 +715,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_LogRecords_LogRecord_TransactionBegin_System_Int64_Guid_System_String_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.LogRecords.LogRecord.TransactionBegin(System.Int64%2CGuid%2CSystem.String%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/LogRecords/LogRecord.cs/#L79">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_LogRecords_LogRecord_TransactionBegin_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.TransactionBegin*"></a>
-  <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_TransactionBegin_System_Int64_Guid_System_String_System_Int64_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.TransactionBegin(System.Int64,Guid,System.String,System.Int64)">TransactionBegin(Int64, Guid, String, Int64)</h4>
+  <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_TransactionBegin_System_Int64_System_Guid_System_String_System_Int64_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.TransactionBegin(System.Int64,System.Guid,System.String,System.Int64)">TransactionBegin(Int64, Guid, String, Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static PrepareLogRecord TransactionBegin(long logPos, Guid correlationId, string eventStreamId, long expectedVersion)</code></pre>
   </div>
@@ -806,29 +733,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">logPos</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">correlationId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">eventStreamId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">expectedVersion</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -847,18 +769,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_LogRecords_LogRecord_TransactionEnd_System_Int64_Guid_Guid_System_Int64_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.LogRecords.LogRecord.TransactionEnd(System.Int64%2CGuid%2CGuid%2CSystem.Int64%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/LogRecords/LogRecord.cs/#L95">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_LogRecords_LogRecord_TransactionEnd_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.TransactionEnd*"></a>
-  <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_TransactionEnd_System_Int64_Guid_Guid_System_Int64_System_String_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.TransactionEnd(System.Int64,Guid,Guid,System.Int64,System.String)">TransactionEnd(Int64, Guid, Guid, Int64, String)</h4>
+  <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_TransactionEnd_System_Int64_System_Guid_System_Guid_System_Int64_System_String_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.TransactionEnd(System.Int64,System.Guid,System.Guid,System.Int64,System.String)">TransactionEnd(Int64, Guid, Guid, Int64, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static PrepareLogRecord TransactionEnd(long logPos, Guid correlationId, Guid eventId, long transactionPos, string eventStreamId)</code></pre>
   </div>
@@ -868,34 +787,28 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">logPos</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">correlationId</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">eventId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">transactionPos</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">eventStreamId</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -914,18 +827,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_LogRecords_LogRecord_TransactionWrite_System_Int64_Guid_Guid_System_Int64_System_Int32_System_String_System_String_System_Byte___System_Byte___System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.LogRecords.LogRecord.TransactionWrite(System.Int64%2CGuid%2CGuid%2CSystem.Int64%2CSystem.Int32%2CSystem.String%2CSystem.String%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/LogRecords/LogRecord.cs/#L86">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_LogRecords_LogRecord_TransactionWrite_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.TransactionWrite*"></a>
-  <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_TransactionWrite_System_Int64_Guid_Guid_System_Int64_System_Int32_System_String_System_String_System_Byte___System_Byte___System_Boolean_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.TransactionWrite(System.Int64,Guid,Guid,System.Int64,System.Int32,System.String,System.String,System.Byte[],System.Byte[],System.Boolean)">TransactionWrite(Int64, Guid, Guid, Int64, Int32, String, String, Byte[], Byte[], Boolean)</h4>
+  <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_TransactionWrite_System_Int64_System_Guid_System_Guid_System_Int64_System_Int32_System_String_System_String_System_Byte___System_Byte___System_Boolean_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.TransactionWrite(System.Int64,System.Guid,System.Guid,System.Int64,System.Int32,System.String,System.String,System.Byte[],System.Byte[],System.Boolean)">TransactionWrite(Int64, Guid, Guid, Int64, Int32, String, String, Byte[], Byte[], Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static PrepareLogRecord TransactionWrite(long logPosition, Guid correlationId, Guid eventId, long transactionPos, int transactionOffset, string eventStreamId, string eventType, byte[] data, byte[] metadata, bool isJson)</code></pre>
   </div>
@@ -935,59 +845,48 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">logPosition</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">correlationId</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">eventId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">transactionPos</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">transactionOffset</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">eventStreamId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">eventType</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
         <td><span class="parametername">data</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Byte</span>[]</td>
         <td><span class="parametername">metadata</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">isJson</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1006,18 +905,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_LogRecords_LogRecord_WriteTo_BinaryWriter_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.LogRecords.LogRecord.WriteTo(BinaryWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/LogRecords/LogRecord.cs/#L118">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_LogRecords_LogRecord_WriteTo_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.WriteTo*"></a>
-  <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_WriteTo_BinaryWriter_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.WriteTo(BinaryWriter)">WriteTo(BinaryWriter)</h4>
+  <h4 id="EventStore_Core_TransactionLog_LogRecords_LogRecord_WriteTo_System_IO_BinaryWriter_" data-uid="EventStore.Core.TransactionLog.LogRecords.LogRecord.WriteTo(System.IO.BinaryWriter)">WriteTo(BinaryWriter)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual void WriteTo(BinaryWriter writer)</code></pre>
   </div>
@@ -1027,14 +923,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">BinaryWriter</span></td>
+        <td><span class="xref">System.IO.BinaryWriter</span></td>
         <td><span class="parametername">writer</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1063,12 +957,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_LogRecords_LogRecord.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.LogRecords.LogRecord%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/LogRecords/LogRecord.cs/#L19" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

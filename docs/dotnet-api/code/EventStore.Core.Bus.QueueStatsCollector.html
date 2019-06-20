@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,26 +104,47 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">QueueStatsCollector</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Bus.html">EventStore.Core.Bus</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Bus_QueueStatsCollector_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class QueueStatsCollector : object</code></pre>
+    <pre><code class="lang-csharp hljs">public class QueueStatsCollector</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueueStatsCollector__ctor_System_String_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueueStatsCollector.%23ctor(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueueStatsCollector.cs/#L51">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_QueueStatsCollector__ctor_" data-uid="EventStore.Core.Bus.QueueStatsCollector.#ctor*"></a>
   <h4 id="EventStore_Core_Bus_QueueStatsCollector__ctor_System_String_System_String_" data-uid="EventStore.Core.Bus.QueueStatsCollector.#ctor(System.String,System.String)">QueueStatsCollector(String, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public QueueStatsCollector(string name, string groupName = null)</code></pre>
   </div>
@@ -132,35 +154,29 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">name</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">groupName</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueueStatsCollector_GroupName.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueueStatsCollector.GroupName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueueStatsCollector.cs/#L15">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Bus_QueueStatsCollector_GroupName" data-uid="EventStore.Core.Bus.QueueStatsCollector.GroupName">GroupName</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly string GroupName</code></pre>
   </div>
@@ -169,27 +185,22 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueueStatsCollector_Name.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueueStatsCollector.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueueStatsCollector.cs/#L14">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Bus_QueueStatsCollector_Name" data-uid="EventStore.Core.Bus.QueueStatsCollector.Name">Name</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly string Name</code></pre>
   </div>
@@ -198,30 +209,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueueStatsCollector_InProgressMessage.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueueStatsCollector.InProgressMessage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueueStatsCollector.cs/#L17">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_QueueStatsCollector_InProgressMessage_" data-uid="EventStore.Core.Bus.QueueStatsCollector.InProgressMessage*"></a>
   <h4 id="EventStore_Core_Bus_QueueStatsCollector_InProgressMessage" data-uid="EventStore.Core.Bus.QueueStatsCollector.InProgressMessage">InProgressMessage</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Type InProgressMessage { get; }</code></pre>
   </div>
@@ -230,32 +236,28 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Type</span></td>
-        <td></td>
+        <td><span class="xref">System.Type</span></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueueStatsCollector_Dequeued_EventStore_Core_Messaging_Message_.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueueStatsCollector.Dequeued(EventStore.Core.Messaging.Message)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueueStatsCollector.cs/#L355">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_QueueStatsCollector_Dequeued_" data-uid="EventStore.Core.Bus.QueueStatsCollector.Dequeued*"></a>
   <h4 id="EventStore_Core_Bus_QueueStatsCollector_Dequeued_EventStore_Core_Messaging_Message_" data-uid="EventStore.Core.Bus.QueueStatsCollector.Dequeued(EventStore.Core.Messaging.Message)">Dequeued(Message)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Dequeued(Message msg)</code></pre>
+    <pre><code class="lang-csharp hljs">[Conditional(&quot;DEBUG&quot;)]
+public void Dequeued(Message msg)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -263,74 +265,61 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messaging.Message.html">Message</a></td>
         <td><span class="parametername">msg</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueueStatsCollector_Enqueued.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueueStatsCollector.Enqueued%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueueStatsCollector.cs/#L340">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_QueueStatsCollector_Enqueued_" data-uid="EventStore.Core.Bus.QueueStatsCollector.Enqueued*"></a>
   <h4 id="EventStore_Core_Bus_QueueStatsCollector_Enqueued" data-uid="EventStore.Core.Bus.QueueStatsCollector.Enqueued">Enqueued()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Enqueued()</code></pre>
+    <pre><code class="lang-csharp hljs">[Conditional(&quot;DEBUG&quot;)]
+public void Enqueued()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueueStatsCollector_EnterBusy.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueueStatsCollector.EnterBusy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueueStatsCollector.cs/#L160">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_QueueStatsCollector_EnterBusy_" data-uid="EventStore.Core.Bus.QueueStatsCollector.EnterBusy*"></a>
   <h4 id="EventStore_Core_Bus_QueueStatsCollector_EnterBusy" data-uid="EventStore.Core.Bus.QueueStatsCollector.EnterBusy">EnterBusy()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void EnterBusy()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueueStatsCollector_EnterIdle.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueueStatsCollector.EnterIdle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueueStatsCollector.cs/#L128">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_QueueStatsCollector_EnterIdle_" data-uid="EventStore.Core.Bus.QueueStatsCollector.EnterIdle*"></a>
   <h4 id="EventStore_Core_Bus_QueueStatsCollector_EnterIdle" data-uid="EventStore.Core.Bus.QueueStatsCollector.EnterIdle">EnterIdle()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void EnterIdle()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueueStatsCollector_GetStatistics_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueueStatsCollector.GetStatistics(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueueStatsCollector.cs/#L186">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_QueueStatsCollector_GetStatistics_" data-uid="EventStore.Core.Bus.QueueStatsCollector.GetStatistics*"></a>
   <h4 id="EventStore_Core_Bus_QueueStatsCollector_GetStatistics_System_Int32_" data-uid="EventStore.Core.Bus.QueueStatsCollector.GetStatistics(System.Int32)">GetStatistics(Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public QueueStats GetStatistics(int currentQueueLength)</code></pre>
   </div>
@@ -340,14 +329,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">currentQueueLength</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -366,18 +353,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueueStatsCollector_ProcessingEnded_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueueStatsCollector.ProcessingEnded(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueueStatsCollector.cs/#L122">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_QueueStatsCollector_ProcessingEnded_" data-uid="EventStore.Core.Bus.QueueStatsCollector.ProcessingEnded*"></a>
   <h4 id="EventStore_Core_Bus_QueueStatsCollector_ProcessingEnded_System_Int32_" data-uid="EventStore.Core.Bus.QueueStatsCollector.ProcessingEnded(System.Int32)">ProcessingEnded(Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void ProcessingEnded(int itemsProcessed)</code></pre>
   </div>
@@ -387,29 +371,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">itemsProcessed</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueueStatsCollector_ProcessingStarted_Type_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueueStatsCollector.ProcessingStarted(Type%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueueStatsCollector.cs/#L115">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_QueueStatsCollector_ProcessingStarted_" data-uid="EventStore.Core.Bus.QueueStatsCollector.ProcessingStarted*"></a>
-  <h4 id="EventStore_Core_Bus_QueueStatsCollector_ProcessingStarted_Type_System_Int32_" data-uid="EventStore.Core.Bus.QueueStatsCollector.ProcessingStarted(Type,System.Int32)">ProcessingStarted(Type, Int32)</h4>
+  <h4 id="EventStore_Core_Bus_QueueStatsCollector_ProcessingStarted_System_Type_System_Int32_" data-uid="EventStore.Core.Bus.QueueStatsCollector.ProcessingStarted(System.Type,System.Int32)">ProcessingStarted(Type, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void ProcessingStarted(Type msgType, int queueLength)</code></pre>
   </div>
@@ -419,34 +398,28 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Type</span></td>
+        <td><span class="xref">System.Type</span></td>
         <td><span class="parametername">msgType</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">queueLength</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueueStatsCollector_ProcessingStarted__1_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueueStatsCollector.ProcessingStarted%60%601(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueueStatsCollector.cs/#L111">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_QueueStatsCollector_ProcessingStarted_" data-uid="EventStore.Core.Bus.QueueStatsCollector.ProcessingStarted*"></a>
   <h4 id="EventStore_Core_Bus_QueueStatsCollector_ProcessingStarted__1_System_Int32_" data-uid="EventStore.Core.Bus.QueueStatsCollector.ProcessingStarted``1(System.Int32)">ProcessingStarted&lt;T&gt;(Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void ProcessingStarted&lt;T&gt;(int queueLength)</code></pre>
   </div>
@@ -456,14 +429,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">queueLength</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -482,50 +453,42 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueueStatsCollector_Start.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueueStatsCollector.Start%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueueStatsCollector.cs/#L58">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_QueueStatsCollector_Start_" data-uid="EventStore.Core.Bus.QueueStatsCollector.Start*"></a>
   <h4 id="EventStore_Core_Bus_QueueStatsCollector_Start" data-uid="EventStore.Core.Bus.QueueStatsCollector.Start">Start()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Start()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueueStatsCollector_Stop.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueueStatsCollector.Stop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueueStatsCollector.cs/#L83">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_QueueStatsCollector_Stop_" data-uid="EventStore.Core.Bus.QueueStatsCollector.Stop*"></a>
   <h4 id="EventStore_Core_Bus_QueueStatsCollector_Stop" data-uid="EventStore.Core.Bus.QueueStatsCollector.Stop">Stop()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Stop()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueueStatsCollector_WaitIdle_System_Boolean_System_Boolean_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueueStatsCollector.WaitIdle(System.Boolean%2CSystem.Boolean%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueueStatsCollector.cs/#L283">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Bus_QueueStatsCollector_WaitIdle_" data-uid="EventStore.Core.Bus.QueueStatsCollector.WaitIdle*"></a>
   <h4 id="EventStore_Core_Bus_QueueStatsCollector_WaitIdle_System_Boolean_System_Boolean_System_Int32_" data-uid="EventStore.Core.Bus.QueueStatsCollector.WaitIdle(System.Boolean,System.Boolean,System.Int32)">WaitIdle(Boolean, Boolean, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void WaitIdle(bool waitForCheckpoints = true, bool waitForNonEmptyTf = false, int multiplier = 1)</code></pre>
+    <pre><code class="lang-csharp hljs">[Conditional(&quot;DEBUG&quot;)]
+public static void WaitIdle(bool waitForCheckpoints = true, bool waitForNonEmptyTf = false, int multiplier = 1)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -533,24 +496,20 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">waitForCheckpoints</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">waitForNonEmptyTf</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">multiplier</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -579,12 +538,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Bus_QueueStatsCollector.md&amp;value=---%0Auid%3A%20EventStore.Core.Bus.QueueStatsCollector%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Bus/QueueStatsCollector.cs/#L11" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

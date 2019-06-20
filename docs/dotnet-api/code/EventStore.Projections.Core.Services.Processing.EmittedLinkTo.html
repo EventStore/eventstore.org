@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -134,10 +135,31 @@
       <a class="xref" href="EventStore.Projections.Core.Services.Processing.EmittedEvent.html#EventStore_Projections_Core_Services_Processing_EmittedEvent_ExtraMetaData">EmittedEvent.ExtraMetaData()</a>
     </div>
     <div>
-      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EmittedEvent.html#EventStore_Projections_Core_Services_Processing_EmittedEvent_SetCausedBy_Guid_">EmittedEvent.SetCausedBy(Guid)</a>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EmittedEvent.html#EventStore_Projections_Core_Services_Processing_EmittedEvent_SetCausedBy_System_Guid_">EmittedEvent.SetCausedBy(Guid)</a>
     </div>
     <div>
       <a class="xref" href="EventStore.Projections.Core.Services.Processing.EmittedEvent.html#EventStore_Projections_Core_Services_Processing_EmittedEvent_SetCorrelationId_System_String_">EmittedEvent.SetCorrelationId(String)</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Services.Processing.html">EventStore.Projections.Core.Services.Processing</a></h6>
@@ -148,18 +170,15 @@
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EmittedLinkTo__ctor_System_String_Guid_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Projections_Core_Services_Processing_CheckpointTag_Action_System_Int64__.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EmittedLinkTo.%23ctor(System.String%2CGuid%2CSystem.String%2CEventStore.Projections.Core.Services.Processing.CheckpointTag%2CEventStore.Projections.Core.Services.Processing.CheckpointTag%2CAction%7BSystem.Int64%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EmittedLinkTo.cs/#L10">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EmittedLinkTo__ctor_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedLinkTo.#ctor*"></a>
-  <h4 id="EventStore_Projections_Core_Services_Processing_EmittedLinkTo__ctor_System_String_Guid_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Projections_Core_Services_Processing_CheckpointTag_Action_System_Int64__" data-uid="EventStore.Projections.Core.Services.Processing.EmittedLinkTo.#ctor(System.String,Guid,System.String,EventStore.Projections.Core.Services.Processing.CheckpointTag,EventStore.Projections.Core.Services.Processing.CheckpointTag,Action{System.Int64})">EmittedLinkTo(String, Guid, String, CheckpointTag, CheckpointTag, Action&lt;Int64&gt;)</h4>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EmittedLinkTo__ctor_System_String_System_Guid_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_Action_System_Int64__" data-uid="EventStore.Projections.Core.Services.Processing.EmittedLinkTo.#ctor(System.String,System.Guid,System.String,EventStore.Projections.Core.Services.Processing.CheckpointTag,EventStore.Projections.Core.Services.Processing.CheckpointTag,System.Action{System.Int64})">EmittedLinkTo(String, Guid, String, CheckpointTag, CheckpointTag, Action&lt;Int64&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public EmittedLinkTo(string streamId, Guid eventId, string targetStreamId, CheckpointTag causedByTag, CheckpointTag expectedTag, Action&lt;long&gt; onCommitted = null)</code></pre>
   </div>
@@ -169,54 +188,44 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">streamId</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">eventId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">targetStreamId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
         <td><span class="parametername">causedByTag</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
         <td><span class="parametername">expectedTag</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
         <td><span class="parametername">onCommitted</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EmittedLinkTo__ctor_System_String_Guid_System_String_System_Int32_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EmittedLinkTo.%23ctor(System.String%2CGuid%2CSystem.String%2CSystem.Int32%2CEventStore.Projections.Core.Services.Processing.CheckpointTag%2CEventStore.Projections.Core.Services.Processing.CheckpointTag%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EmittedLinkTo.cs/#L18">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EmittedLinkTo__ctor_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedLinkTo.#ctor*"></a>
-  <h4 id="EventStore_Projections_Core_Services_Processing_EmittedLinkTo__ctor_System_String_Guid_System_String_System_Int32_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_String_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedLinkTo.#ctor(System.String,Guid,System.String,System.Int32,EventStore.Projections.Core.Services.Processing.CheckpointTag,EventStore.Projections.Core.Services.Processing.CheckpointTag,System.String)">EmittedLinkTo(String, Guid, String, Int32, CheckpointTag, CheckpointTag, String)</h4>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EmittedLinkTo__ctor_System_String_System_Guid_System_String_System_Int32_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_String_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedLinkTo.#ctor(System.String,System.Guid,System.String,System.Int32,EventStore.Projections.Core.Services.Processing.CheckpointTag,EventStore.Projections.Core.Services.Processing.CheckpointTag,System.String)">EmittedLinkTo(String, Guid, String, Int32, CheckpointTag, CheckpointTag, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public EmittedLinkTo(string streamId, Guid eventId, string targetStreamId, int targetEventNumber, CheckpointTag causedByTag, CheckpointTag expectedTag, string originalStreamId = null)</code></pre>
   </div>
@@ -226,61 +235,50 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">streamId</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">eventId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">targetStreamId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">targetEventNumber</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
         <td><span class="parametername">causedByTag</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
         <td><span class="parametername">expectedTag</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">originalStreamId</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EmittedLinkTo_Data.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EmittedLinkTo.Data%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EmittedLinkTo.cs/#L27">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EmittedLinkTo_Data_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedLinkTo.Data*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EmittedLinkTo_Data" data-uid="EventStore.Projections.Core.Services.Processing.EmittedLinkTo.Data">Data</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override string Data { get; }</code></pre>
   </div>
@@ -289,30 +287,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.EmittedEvent.html#EventStore_Projections_Core_Services_Processing_EmittedEvent_Data">EmittedEvent.Data</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EmittedLinkTo_IsJson.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EmittedLinkTo.IsJson%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EmittedLinkTo.cs/#L36">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EmittedLinkTo_IsJson_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedLinkTo.IsJson*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EmittedLinkTo_IsJson" data-uid="EventStore.Projections.Core.Services.Processing.EmittedLinkTo.IsJson">IsJson</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool IsJson { get; }</code></pre>
   </div>
@@ -321,13 +314,11 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -335,18 +326,15 @@
   <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.EmittedEvent.html#EventStore_Projections_Core_Services_Processing_EmittedEvent_IsJson">EmittedEvent.IsJson</a></div>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EmittedLinkTo_IsReady.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EmittedLinkTo.IsReady%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EmittedLinkTo.cs/#L40">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EmittedLinkTo_IsReady_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedLinkTo.IsReady*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EmittedLinkTo_IsReady" data-uid="EventStore.Projections.Core.Services.Processing.EmittedLinkTo.IsReady">IsReady()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override bool IsReady()</code></pre>
   </div>
@@ -367,18 +355,15 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.EmittedEvent.html#EventStore_Projections_Core_Services_Processing_EmittedEvent_IsReady">EmittedEvent.IsReady()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EmittedLinkTo_SetTargetEventNumber_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EmittedLinkTo.SetTargetEventNumber(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EmittedLinkTo.cs/#L44">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_EmittedLinkTo_SetTargetEventNumber_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedLinkTo.SetTargetEventNumber*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EmittedLinkTo_SetTargetEventNumber_System_Int64_" data-uid="EventStore.Projections.Core.Services.Processing.EmittedLinkTo.SetTargetEventNumber(System.Int64)">SetTargetEventNumber(Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void SetTargetEventNumber(long eventNumber)</code></pre>
   </div>
@@ -388,14 +373,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">eventNumber</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -424,12 +407,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_EmittedLinkTo.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.EmittedLinkTo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/EmittedLinkTo.cs/#L6" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

@@ -55,11 +55,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -214,13 +215,19 @@ Read <a href="../server/deploy-kubernetes-aks/index.html">this guide</a> for mor
 </ul>
 <section id="tabpanel_dfgfloIX5I-1_tabid-dotnet-client-connect" role="tabpanel" data-tab="tabid-dotnet-client-connect">
 <p>When using the .NET client, you also need to give the connection a name.</p>
-<!-- Can not find reference ~/code-examples/dotnet-client/Program.cs -->
-<div class="NEXT"><h5>Next Steps</h5><p>In this example we used the <a href="#EventStore.ClientAPI.EventStoreConnection.Create(System.String,System.String)"><code>EventStoreConnection.Create()</code></a> overloaded method but <a href="#EventStore.ClientAPI.EventStoreConnection">others are available</a>.</p>
+<pre><code class="lang-csharp" name="getting-started-connection">var conn = EventStoreConnection.Create(new Uri(&quot;tcp://admin:changeit@localhost:1113&quot;),
+    &quot;InputFromFileConsoleApp&quot;);
+</code></pre><div class="NEXT"><h5>Next Steps</h5><p>In this example we used the <a href="#EventStore.ClientAPI.EventStoreConnection.Create(System.String,System.String)"><code>EventStoreConnection.Create()</code></a> overloaded method but <a href="#EventStore.ClientAPI.EventStoreConnection">others are available</a>.</p>
 </div>
 </section>
 <section id="tabpanel_dfgfloIX5I-1_tabid-jvm-client-connect" role="tabpanel" data-tab="tabid-jvm-client-connect" aria-hidden="true" hidden="hidden">
-<!-- Can not find reference ~/code-examples/jvm-client//WriteEventExample.java -->
-<div class="NOTE"><h5>Note</h5><p>For our JVM examples we use <a href="https://akka.io">akka</a>, a toolkit for building highly concurrent and distributed JVM applications.</p>
+<pre><code class="lang-java" name="getting-started-connection">final ActorSystem system = ActorSystem.create();
+final Settings settings = new SettingsBuilder()
+        .address(new InetSocketAddress(&quot;127.0.0.1&quot;, 1113))
+        .defaultCredentials(&quot;admin&quot;, &quot;changeit&quot;)
+        .build();
+final ActorRef connection = system.actorOf(ConnectionActor.getProps(settings));
+</code></pre><div class="NOTE"><h5>Note</h5><p>For our JVM examples we use <a href="https://akka.io">akka</a>, a toolkit for building highly concurrent and distributed JVM applications.</p>
 </div>
 </section>
 </div>
@@ -261,14 +268,27 @@ Read <a href="../server/deploy-kubernetes-aks/index.html">this guide</a> for mor
 </section>
 <section id="tabpanel_dfgfloIX5I-2_tabid-5" role="tabpanel" data-tab="tabid-5" aria-hidden="true" hidden="hidden">
 <p>To use the .NET API, use the following method, passing the name of the stream, the version, and the events to write:</p>
-<!-- Can not find reference ~/code-examples/dotnet-client/Program.cs -->
-<div class="NEXT"><h5>Next Steps</h5><p>Read <a href="../http-api/creating-writing-a-stream/index.html">this guide</a> for more information on how to write events with the .NET API. We don&#39;t cover version checking in this guide, but you can read more in <a href="../dotnet-api/optimistic-concurrency-and-idempotence/index.html">the optimistic concurrency guide</a>.</p>
+<pre><code class="lang-csharp" name="getting-started-write-event-request">conn.AppendToStreamAsync(streamName, ExpectedVersion.Any, eventData).Wait();
+</code></pre><div class="NEXT"><h5>Next Steps</h5><p>Read <a href="../http-api/creating-writing-a-stream/index.html">this guide</a> for more information on how to write events with the .NET API. We don&#39;t cover version checking in this guide, but you can read more in <a href="../dotnet-api/optimistic-concurrency-and-idempotence/index.html">the optimistic concurrency guide</a>.</p>
 </div>
 </section>
 <section id="tabpanel_dfgfloIX5I-2_tabid-6" role="tabpanel" data-tab="tabid-6" aria-hidden="true" hidden="hidden">
 <p>To use the JVM Client, use the following method, passing the name of the stream, the version, and the events to write:</p>
-<!-- Can not find reference ~/code-examples/jvm-client/WriteEventExample.java -->
-</section>
+<pre><code class="lang-java" name="getting-started-connection">    final ActorRef writeResult = system.actorOf(Props.create(WriteResult.class));
+
+    final EventData event = new EventDataBuilder(&quot;event-type&quot;)
+            .eventId(UUID.randomUUID())
+            .jsonData(&quot;{\&quot;a\&quot;: \&quot;1\&quot;}&quot;)
+            .build();
+
+    final WriteEvents writeEvents = new WriteEventsBuilder(&quot;newstream&quot;)
+            .addEvent(event)
+            .expectAnyVersion()
+            .build();
+
+    connection.tell(writeEvents, writeResult);
+}
+</code></pre></section>
 </div>
 <h2 id="next-step">Next Step</h2>
 <p>In this first part of our getting started guide you learned how to install and run Event Store and write your first event. The next part covers reading events from a stream.</p>

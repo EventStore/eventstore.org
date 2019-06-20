@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -107,7 +108,7 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.IEventReader.html">IEventReader</a></div>
-    <div><span class="xref">IDisposable</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.ReadStreamEventsForwardCompleted.html">ClientMessage.ReadStreamEventsForwardCompleted</a>&gt;</div>
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionManagementMessage.Internal.ReadTimeout.html">ProjectionManagementMessage.Internal.ReadTimeout</a>&gt;</div>
   </div>
@@ -164,6 +165,27 @@
     <div>
       <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventReader.html#EventStore_Projections_Core_Services_Processing_EventReader_NotifyIfStarting_System_Int64_">EventReader.NotifyIfStarting(Int64)</a>
     </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Services.Processing.html">EventStore.Projections.Core.Services.Processing</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
@@ -173,20 +195,17 @@
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_MultiStreamEventReader__ctor_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Bus_IPublisher_Guid_IPrincipal_System_Int32_System_String___Dictionary_System_String_System_Int64__System_Boolean_EventStore_Core_Services_TimerService_ITimeProvider_System_Boolean_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.MultiStreamEventReader.%23ctor(EventStore.Core.Helpers.IODispatcher%2CEventStore.Core.Bus.IPublisher%2CGuid%2CIPrincipal%2CSystem.Int32%2CSystem.String%5B%5D%2CDictionary%7BSystem.String%2CSystem.Int64%7D%2CSystem.Boolean%2CEventStore.Core.Services.TimerService.ITimeProvider%2CSystem.Boolean%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/MultiStreamEventReader.cs/#L42">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_MultiStreamEventReader__ctor_" data-uid="EventStore.Projections.Core.Services.Processing.MultiStreamEventReader.#ctor*"></a>
-  <h4 id="EventStore_Projections_Core_Services_Processing_MultiStreamEventReader__ctor_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Bus_IPublisher_Guid_IPrincipal_System_Int32_System_String___Dictionary_System_String_System_Int64__System_Boolean_EventStore_Core_Services_TimerService_ITimeProvider_System_Boolean_System_Nullable_System_Int32__" data-uid="EventStore.Projections.Core.Services.Processing.MultiStreamEventReader.#ctor(EventStore.Core.Helpers.IODispatcher,EventStore.Core.Bus.IPublisher,Guid,IPrincipal,System.Int32,System.String[],Dictionary{System.String,System.Int64},System.Boolean,EventStore.Core.Services.TimerService.ITimeProvider,System.Boolean,System.Nullable{System.Int32})">MultiStreamEventReader(IODispatcher, IPublisher, Guid, IPrincipal, Int32, String[], Dictionary&lt;String, Int64&gt;, Boolean, ITimeProvider, Boolean, Nullable&lt;Int32&gt;)</h4>
+  <h4 id="EventStore_Projections_Core_Services_Processing_MultiStreamEventReader__ctor_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Bus_IPublisher_System_Guid_System_Security_Principal_IPrincipal_System_Int32_System_String___System_Collections_Generic_Dictionary_System_String_System_Int64__System_Boolean_EventStore_Core_Services_TimerService_ITimeProvider_System_Boolean_System_Nullable_System_Int32__" data-uid="EventStore.Projections.Core.Services.Processing.MultiStreamEventReader.#ctor(EventStore.Core.Helpers.IODispatcher,EventStore.Core.Bus.IPublisher,System.Guid,System.Security.Principal.IPrincipal,System.Int32,System.String[],System.Collections.Generic.Dictionary{System.String,System.Int64},System.Boolean,EventStore.Core.Services.TimerService.ITimeProvider,System.Boolean,System.Nullable{System.Int32})">MultiStreamEventReader(IODispatcher, IPublisher, Guid, IPrincipal, Int32, String[], Dictionary&lt;String, Int64&gt;, Boolean, ITimeProvider, Boolean, Nullable&lt;Int32&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MultiStreamEventReader(IODispatcher ioDispatcher, IPublisher publisher, Guid eventReaderCorrelationId, IPrincipal readAs, int phase, string[] streams, Dictionary&lt;string, long&gt; fromPositions, bool resolveLinkTos, ITimeProvider timeProvider, bool stopOnEof = false, int? stopAfterNEvents = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public MultiStreamEventReader(IODispatcher ioDispatcher, IPublisher publisher, Guid eventReaderCorrelationId, IPrincipal readAs, int phase, string[] streams, Dictionary&lt;string, long&gt; fromPositions, bool resolveLinkTos, ITimeProvider timeProvider, bool stopOnEof = false, int? stopAfterNEvents = default(int? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -194,81 +213,66 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Helpers.IODispatcher.html">IODispatcher</a></td>
         <td><span class="parametername">ioDispatcher</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
         <td><span class="parametername">publisher</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">eventReaderCorrelationId</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IPrincipal</span></td>
+        <td><span class="xref">System.Security.Principal.IPrincipal</span></td>
         <td><span class="parametername">readAs</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">phase</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span>[]</td>
         <td><span class="parametername">streams</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Int64</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Int64</span>&gt;</td>
         <td><span class="parametername">fromPositions</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">resolveLinkTos</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.TimerService.ITimeProvider.html">ITimeProvider</a></td>
         <td><span class="parametername">timeProvider</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">stopOnEof</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
         <td><span class="parametername">stopAfterNEvents</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_MultiStreamEventReader_AreEventsRequested.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.MultiStreamEventReader.AreEventsRequested%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/MultiStreamEventReader.cs/#L93">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_MultiStreamEventReader_AreEventsRequested_" data-uid="EventStore.Projections.Core.Services.Processing.MultiStreamEventReader.AreEventsRequested*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_MultiStreamEventReader_AreEventsRequested" data-uid="EventStore.Projections.Core.Services.Processing.MultiStreamEventReader.AreEventsRequested">AreEventsRequested()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected override bool AreEventsRequested()</code></pre>
   </div>
@@ -289,18 +293,15 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.EventReader.html#EventStore_Projections_Core_Services_Processing_EventReader_AreEventsRequested">EventReader.AreEventsRequested()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_MultiStreamEventReader_Handle_EventStore_Core_Messages_ClientMessage_ReadStreamEventsForwardCompleted_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.MultiStreamEventReader.Handle(EventStore.Core.Messages.ClientMessage.ReadStreamEventsForwardCompleted)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/MultiStreamEventReader.cs/#L97">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_MultiStreamEventReader_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.MultiStreamEventReader.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_MultiStreamEventReader_Handle_EventStore_Core_Messages_ClientMessage_ReadStreamEventsForwardCompleted_" data-uid="EventStore.Projections.Core.Services.Processing.MultiStreamEventReader.Handle(EventStore.Core.Messages.ClientMessage.ReadStreamEventsForwardCompleted)">Handle(ClientMessage.ReadStreamEventsForwardCompleted)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ClientMessage.ReadStreamEventsForwardCompleted message)</code></pre>
   </div>
@@ -310,29 +311,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.ClientMessage.ReadStreamEventsForwardCompleted.html">ClientMessage.ReadStreamEventsForwardCompleted</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_MultiStreamEventReader_Handle_EventStore_Projections_Core_Messages_ProjectionManagementMessage_Internal_ReadTimeout_.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.MultiStreamEventReader.Handle(EventStore.Projections.Core.Messages.ProjectionManagementMessage.Internal.ReadTimeout)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/MultiStreamEventReader.cs/#L158">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_MultiStreamEventReader_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.MultiStreamEventReader.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_MultiStreamEventReader_Handle_EventStore_Projections_Core_Messages_ProjectionManagementMessage_Internal_ReadTimeout_" data-uid="EventStore.Projections.Core.Services.Processing.MultiStreamEventReader.Handle(EventStore.Projections.Core.Messages.ProjectionManagementMessage.Internal.ReadTimeout)">Handle(ProjectionManagementMessage.Internal.ReadTimeout)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ProjectionManagementMessage.Internal.ReadTimeout message)</code></pre>
   </div>
@@ -342,29 +338,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.ProjectionManagementMessage.Internal.ReadTimeout.html">ProjectionManagementMessage.Internal.ReadTimeout</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_MultiStreamEventReader_RequestEvents.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.MultiStreamEventReader.RequestEvents%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/MultiStreamEventReader.cs/#L76">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Projections_Core_Services_Processing_MultiStreamEventReader_RequestEvents_" data-uid="EventStore.Projections.Core.Services.Processing.MultiStreamEventReader.RequestEvents*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_MultiStreamEventReader_RequestEvents" data-uid="EventStore.Projections.Core.Services.Processing.MultiStreamEventReader.RequestEvents">RequestEvents()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">protected override void RequestEvents()</code></pre>
   </div>
@@ -375,7 +366,7 @@
       <a class="xref" href="EventStore.Projections.Core.Services.Processing.IEventReader.html">IEventReader</a>
   </div>
   <div>
-      <span class="xref">IDisposable</span>
+      <span class="xref">System.IDisposable</span>
   </div>
   <div>
       <a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle&lt;T&gt;</a>
@@ -408,12 +399,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Projections_Core_Services_Processing_MultiStreamEventReader.md&amp;value=---%0Auid%3A%20EventStore.Projections.Core.Services.Processing.MultiStreamEventReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Projections.Core/Services/Processing/MultiStreamEventReader.cs/#L18" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

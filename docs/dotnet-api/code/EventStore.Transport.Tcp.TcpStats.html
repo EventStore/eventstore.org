@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,26 +104,47 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">TcpStats</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Transport.Tcp.html">EventStore.Transport.Tcp</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Transport.Tcp.dll</h6>
   <h5 id="EventStore_Transport_Tcp_TcpStats_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TcpStats : object</code></pre>
+    <pre><code class="lang-csharp hljs">public class TcpStats</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpStats__ctor_System_Int32_System_Int64_System_Int64_System_Int64_System_Int64_System_Int64_System_Int64_System_Int64_TimeSpan_.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpStats.%23ctor(System.Int32%2CSystem.Int64%2CSystem.Int64%2CSystem.Int64%2CSystem.Int64%2CSystem.Int64%2CSystem.Int64%2CSystem.Int64%2CTimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpStats.cs/#L17">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Transport_Tcp_TcpStats__ctor_" data-uid="EventStore.Transport.Tcp.TcpStats.#ctor*"></a>
-  <h4 id="EventStore_Transport_Tcp_TcpStats__ctor_System_Int32_System_Int64_System_Int64_System_Int64_System_Int64_System_Int64_System_Int64_System_Int64_TimeSpan_" data-uid="EventStore.Transport.Tcp.TcpStats.#ctor(System.Int32,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,TimeSpan)">TcpStats(Int32, Int64, Int64, Int64, Int64, Int64, Int64, Int64, TimeSpan)</h4>
+  <h4 id="EventStore_Transport_Tcp_TcpStats__ctor_System_Int32_System_Int64_System_Int64_System_Int64_System_Int64_System_Int64_System_Int64_System_Int64_System_TimeSpan_" data-uid="EventStore.Transport.Tcp.TcpStats.#ctor(System.Int32,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.Int64,System.TimeSpan)">TcpStats(Int32, Int64, Int64, Int64, Int64, Int64, Int64, Int64, TimeSpan)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TcpStats(int connections, long sentBytesTotal, long receivedBytesTotal, long sentBytesSinceLastRunSinceLastRun, long receivedBytesSinceLastRun, long pendingSend, long inSend, long pendingReceived, TimeSpan measureTime)</code></pre>
   </div>
@@ -132,70 +154,58 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">connections</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">sentBytesTotal</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">receivedBytesTotal</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">sentBytesSinceLastRunSinceLastRun</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">receivedBytesSinceLastRun</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">pendingSend</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">inSend</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">pendingReceived</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">measureTime</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpStats_Connections.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpStats.Connections%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpStats.cs/#L5">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Transport_Tcp_TcpStats_Connections" data-uid="EventStore.Transport.Tcp.TcpStats.Connections">Connections</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of TCP connections to Event Store</p>
+</div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly int Connections</code></pre>
   </div>
@@ -204,27 +214,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpStats_InSend.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpStats.InSend%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpStats.cs/#L13">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Transport_Tcp_TcpStats_InSend" data-uid="EventStore.Transport.Tcp.TcpStats.InSend">InSend</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of bytes sent to connections but not yet acknowledged by the receiving party</p>
+</div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly long InSend</code></pre>
   </div>
@@ -233,27 +239,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpStats_MeasureTime.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpStats.MeasureTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpStats.cs/#L15">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Transport_Tcp_TcpStats_MeasureTime" data-uid="EventStore.Transport.Tcp.TcpStats.MeasureTime">MeasureTime</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Time elapsed since last stats read</p>
+</div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly TimeSpan MeasureTime</code></pre>
   </div>
@@ -262,27 +264,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
-        <td></td>
+        <td><span class="xref">System.TimeSpan</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpStats_PendingReceived.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpStats.PendingReceived%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpStats.cs/#L14">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Transport_Tcp_TcpStats_PendingReceived" data-uid="EventStore.Transport.Tcp.TcpStats.PendingReceived">PendingReceived</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of bytes waiting to be received by connections</p>
+</div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly long PendingReceived</code></pre>
   </div>
@@ -291,27 +289,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpStats_PendingSend.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpStats.PendingSend%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpStats.cs/#L12">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Transport_Tcp_TcpStats_PendingSend" data-uid="EventStore.Transport.Tcp.TcpStats.PendingSend">PendingSend</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Number of bytes waiting to be sent to connections</p>
+</div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly long PendingSend</code></pre>
   </div>
@@ -320,27 +314,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpStats_ReceivedBytesSinceLastRun.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpStats.ReceivedBytesSinceLastRun%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpStats.cs/#L9">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Transport_Tcp_TcpStats_ReceivedBytesSinceLastRun" data-uid="EventStore.Transport.Tcp.TcpStats.ReceivedBytesSinceLastRun">ReceivedBytesSinceLastRun</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Total bytes received by TCP connections since last run</p>
+</div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly long ReceivedBytesSinceLastRun</code></pre>
   </div>
@@ -349,27 +339,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpStats_ReceivedBytesTotal.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpStats.ReceivedBytesTotal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpStats.cs/#L7">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Transport_Tcp_TcpStats_ReceivedBytesTotal" data-uid="EventStore.Transport.Tcp.TcpStats.ReceivedBytesTotal">ReceivedBytesTotal</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Total bytes received by TCP connections</p>
+</div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly long ReceivedBytesTotal</code></pre>
   </div>
@@ -378,27 +364,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpStats_ReceivingSpeed.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpStats.ReceivingSpeed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpStats.cs/#L11">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Transport_Tcp_TcpStats_ReceivingSpeed" data-uid="EventStore.Transport.Tcp.TcpStats.ReceivingSpeed">ReceivingSpeed</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Receiving speed in bytes per second.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly double ReceivingSpeed</code></pre>
   </div>
@@ -407,27 +389,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Double</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpStats_SendingSpeed.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpStats.SendingSpeed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpStats.cs/#L10">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Transport_Tcp_TcpStats_SendingSpeed" data-uid="EventStore.Transport.Tcp.TcpStats.SendingSpeed">SendingSpeed</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sending speed in bytes per second</p>
+</div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly double SendingSpeed</code></pre>
   </div>
@@ -436,27 +414,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Double</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpStats_SentBytesSinceLastRun.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpStats.SentBytesSinceLastRun%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpStats.cs/#L8">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Transport_Tcp_TcpStats_SentBytesSinceLastRun" data-uid="EventStore.Transport.Tcp.TcpStats.SentBytesSinceLastRun">SentBytesSinceLastRun</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Total bytes sent to TCP connections since last run</p>
+</div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly long SentBytesSinceLastRun</code></pre>
   </div>
@@ -465,27 +439,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpStats_SentBytesTotal.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpStats.SentBytesTotal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpStats.cs/#L6">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Transport_Tcp_TcpStats_SentBytesTotal" data-uid="EventStore.Transport.Tcp.TcpStats.SentBytesTotal">SentBytesTotal</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Total bytes sent from TCP connections</p>
+</div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly long SentBytesTotal</code></pre>
   </div>
@@ -494,13 +464,11 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -529,12 +497,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Transport_Tcp_TcpStats.md&amp;value=---%0Auid%3A%20EventStore.Transport.Tcp.TcpStats%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Transport.Tcp/TcpStats.cs/#L4" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

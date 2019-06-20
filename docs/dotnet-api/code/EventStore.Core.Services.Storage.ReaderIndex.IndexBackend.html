@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -107,26 +108,47 @@
     <h5>Implements</h5>
     <div><a class="xref" href="EventStore.Core.Services.Storage.ReaderIndex.IIndexBackend.html">IIndexBackend</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.Storage.ReaderIndex.html">EventStore.Core.Services.Storage.ReaderIndex</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class IndexBackend : object, IIndexBackend</code></pre>
+    <pre><code class="lang-csharp hljs">public class IndexBackend : IIndexBackend</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend__ctor_EventStore_Core_DataStructures_ObjectPool_EventStore_Core_TransactionLog_ITransactionFileReader__System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.%23ctor(EventStore.Core.DataStructures.ObjectPool%7BEventStore.Core.TransactionLog.ITransactionFileReader%7D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L30">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend__ctor_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.#ctor*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend__ctor_EventStore_Core_DataStructures_ObjectPool_EventStore_Core_TransactionLog_ITransactionFileReader__System_Int32_System_Int32_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.#ctor(EventStore.Core.DataStructures.ObjectPool{EventStore.Core.TransactionLog.ITransactionFileReader},System.Int32,System.Int32)">IndexBackend(ObjectPool&lt;ITransactionFileReader&gt;, Int32, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IndexBackend(ObjectPool&lt;ITransactionFileReader&gt; readers, int lastEventNumberCacheCapacity, int metadataCacheCapacity)</code></pre>
   </div>
@@ -136,41 +158,34 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.DataStructures.ObjectPool-1.html">ObjectPool</a>&lt;<a class="xref" href="EventStore.Core.TransactionLog.ITransactionFileReader.html">ITransactionFileReader</a>&gt;</td>
         <td><span class="parametername">readers</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">lastEventNumberCacheCapacity</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">metadataCacheCapacity</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_BorrowReader.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.BorrowReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L40">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_BorrowReader_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.BorrowReader*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_BorrowReader" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.BorrowReader">BorrowReader()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TFReaderLease BorrowReader()</code></pre>
   </div>
@@ -189,18 +204,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_GetSystemSettings.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.GetSystemSettings%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L96">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_GetSystemSettings_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.GetSystemSettings*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_GetSystemSettings" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.GetSystemSettings">GetSystemSettings()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public SystemSettings GetSystemSettings()</code></pre>
   </div>
@@ -219,18 +231,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_SetSystemSettings_EventStore_Core_Data_SystemSettings_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.SetSystemSettings(EventStore.Core.Data.SystemSettings)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L92">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_SetSystemSettings_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.SetSystemSettings*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_SetSystemSettings_EventStore_Core_Data_SystemSettings_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.SetSystemSettings(EventStore.Core.Data.SystemSettings)">SetSystemSettings(SystemSettings)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void SetSystemSettings(SystemSettings systemSettings)</code></pre>
   </div>
@@ -240,29 +249,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Data.SystemSettings.html">SystemSettings</a></td>
         <td><span class="parametername">systemSettings</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_TryGetStreamLastEventNumber_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.TryGetStreamLastEventNumber(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L44">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_TryGetStreamLastEventNumber_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.TryGetStreamLastEventNumber*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_TryGetStreamLastEventNumber_System_String_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.TryGetStreamLastEventNumber(System.String)">TryGetStreamLastEventNumber(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IndexBackend.EventNumberCached TryGetStreamLastEventNumber(string streamId)</code></pre>
   </div>
@@ -272,14 +276,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">streamId</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -298,18 +300,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_TryGetStreamMetadata_System_String_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.TryGetStreamMetadata(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L50">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_TryGetStreamMetadata_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.TryGetStreamMetadata*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_TryGetStreamMetadata_System_String_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.TryGetStreamMetadata(System.String)">TryGetStreamMetadata(String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IndexBackend.MetadataCached TryGetStreamMetadata(string streamId)</code></pre>
   </div>
@@ -319,14 +318,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">streamId</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -345,18 +342,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_UpdateStreamLastEventNumber_System_Int32_System_String_System_Nullable_System_Int64__.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.UpdateStreamLastEventNumber(System.Int32%2CSystem.String%2CSystem.Nullable%7BSystem.Int64%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L56">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_UpdateStreamLastEventNumber_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.UpdateStreamLastEventNumber*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_UpdateStreamLastEventNumber_System_Int32_System_String_System_Nullable_System_Int64__" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.UpdateStreamLastEventNumber(System.Int32,System.String,System.Nullable{System.Int64})">UpdateStreamLastEventNumber(Int32, String, Nullable&lt;Int64&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public long? UpdateStreamLastEventNumber(int cacheVersion, string streamId, long? lastEventNumber)</code></pre>
   </div>
@@ -366,24 +360,20 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">cacheVersion</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">streamId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
         <td><span class="parametername">lastEventNumber</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -402,18 +392,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_UpdateStreamMetadata_System_Int32_System_String_EventStore_Core_Data_StreamMetadata_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.UpdateStreamMetadata(System.Int32%2CSystem.String%2CEventStore.Core.Data.StreamMetadata)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L67">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_UpdateStreamMetadata_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.UpdateStreamMetadata*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_UpdateStreamMetadata_System_Int32_System_String_EventStore_Core_Data_StreamMetadata_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.UpdateStreamMetadata(System.Int32,System.String,EventStore.Core.Data.StreamMetadata)">UpdateStreamMetadata(Int32, String, StreamMetadata)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public StreamMetadata UpdateStreamMetadata(int cacheVersion, string streamId, StreamMetadata metadata)</code></pre>
   </div>
@@ -423,24 +410,20 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">cacheVersion</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">streamId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Data.StreamMetadata.html">StreamMetadata</a></td>
         <td><span class="parametername">metadata</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -461,18 +444,15 @@
   </table>
   <h3 id="eii">Explicit Interface Implementations
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_EventStore_Core_Services_Storage_ReaderIndex_IIndexBackend_SetStreamLastEventNumber_System_String_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.EventStore%23Core%23Services%23Storage%23ReaderIndex%23IIndexBackend%23SetStreamLastEventNumber(System.String%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L76">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_EventStore_Core_Services_Storage_ReaderIndex_IIndexBackend_SetStreamLastEventNumber_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.EventStore#Core#Services#Storage#ReaderIndex#IIndexBackend#SetStreamLastEventNumber*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_EventStore_Core_Services_Storage_ReaderIndex_IIndexBackend_SetStreamLastEventNumber_System_String_System_Int64_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.EventStore#Core#Services#Storage#ReaderIndex#IIndexBackend#SetStreamLastEventNumber(System.String,System.Int64)">IIndexBackend.SetStreamLastEventNumber(String, Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">long? IIndexBackend.SetStreamLastEventNumber(string streamId, long lastEventNumber)</code></pre>
   </div>
@@ -482,19 +462,16 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">streamId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">lastEventNumber</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -513,18 +490,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_EventStore_Core_Services_Storage_ReaderIndex_IIndexBackend_SetStreamMetadata_System_String_EventStore_Core_Data_StreamMetadata_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.EventStore%23Core%23Services%23Storage%23ReaderIndex%23IIndexBackend%23SetStreamMetadata(System.String%2CEventStore.Core.Data.StreamMetadata)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L84">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_EventStore_Core_Services_Storage_ReaderIndex_IIndexBackend_SetStreamMetadata_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.EventStore#Core#Services#Storage#ReaderIndex#IIndexBackend#SetStreamMetadata*"></a>
   <h4 id="EventStore_Core_Services_Storage_ReaderIndex_IndexBackend_EventStore_Core_Services_Storage_ReaderIndex_IIndexBackend_SetStreamMetadata_System_String_EventStore_Core_Data_StreamMetadata_" data-uid="EventStore.Core.Services.Storage.ReaderIndex.IndexBackend.EventStore#Core#Services#Storage#ReaderIndex#IIndexBackend#SetStreamMetadata(System.String,EventStore.Core.Data.StreamMetadata)">IIndexBackend.SetStreamMetadata(String, StreamMetadata)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">StreamMetadata IIndexBackend.SetStreamMetadata(string streamId, StreamMetadata metadata)</code></pre>
   </div>
@@ -534,19 +508,16 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">streamId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Data.StreamMetadata.html">StreamMetadata</a></td>
         <td><span class="parametername">metadata</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -594,12 +565,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Storage_ReaderIndex_IndexBackend.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Storage.ReaderIndex.IndexBackend%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Storage/ReaderIndex/IndexBackend.cs/#L24" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

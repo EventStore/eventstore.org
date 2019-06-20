@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,26 +104,44 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">QueueStats</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.Monitoring.Stats.html">EventStore.Core.Services.Monitoring.Stats</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Services_Monitoring_Stats_QueueStats_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class QueueStats : object</code></pre>
+    <pre><code class="lang-csharp hljs">public class QueueStats</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Monitoring_Stats_QueueStats__ctor_System_String_System_String_System_Int32_System_Int32_System_Double_System_Double_System_Nullable_TimeSpan__System_Nullable_TimeSpan__System_Int64_System_Int64_System_Int64_Type_Type_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Monitoring.Stats.QueueStats.%23ctor(System.String%2CSystem.String%2CSystem.Int32%2CSystem.Int32%2CSystem.Double%2CSystem.Double%2CSystem.Nullable%7BTimeSpan%7D%2CSystem.Nullable%7BTimeSpan%7D%2CSystem.Int64%2CSystem.Int64%2CSystem.Int64%2CType%2CType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Monitoring/Stats/QueueStats.cs/#L71">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Monitoring_Stats_QueueStats__ctor_" data-uid="EventStore.Core.Services.Monitoring.Stats.QueueStats.#ctor*"></a>
-  <h4 id="EventStore_Core_Services_Monitoring_Stats_QueueStats__ctor_System_String_System_String_System_Int32_System_Int32_System_Double_System_Double_System_Nullable_TimeSpan__System_Nullable_TimeSpan__System_Int64_System_Int64_System_Int64_Type_Type_" data-uid="EventStore.Core.Services.Monitoring.Stats.QueueStats.#ctor(System.String,System.String,System.Int32,System.Int32,System.Double,System.Double,System.Nullable{TimeSpan},System.Nullable{TimeSpan},System.Int64,System.Int64,System.Int64,Type,Type)">QueueStats(String, String, Int32, Int32, Double, Double, Nullable&lt;TimeSpan&gt;, Nullable&lt;TimeSpan&gt;, Int64, Int64, Int64, Type, Type)</h4>
+  <h4 id="EventStore_Core_Services_Monitoring_Stats_QueueStats__ctor_System_String_System_String_System_Int32_System_Int32_System_Double_System_Double_System_Nullable_System_TimeSpan__System_Nullable_System_TimeSpan__System_Int64_System_Int64_System_Int64_System_Type_System_Type_" data-uid="EventStore.Core.Services.Monitoring.Stats.QueueStats.#ctor(System.String,System.String,System.Int32,System.Int32,System.Double,System.Double,System.Nullable{System.TimeSpan},System.Nullable{System.TimeSpan},System.Int64,System.Int64,System.Int64,System.Type,System.Type)">QueueStats(String, String, Int32, Int32, Double, Double, Nullable&lt;TimeSpan&gt;, Nullable&lt;TimeSpan&gt;, Int64, Int64, Int64, Type, Type)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public QueueStats(string name, string groupName, int length, int avgItemsPerSecond, double avgProcessingTime, double idleTimePercent, TimeSpan? currentItemProcessingTime, TimeSpan? currentIdleTime, long totalItemsProcessed, long lengthCurrentTryPeak, long lengthLifetimePeak, Type lastProcessedMessageType, Type inProgressMessageType)</code></pre>
   </div>
@@ -132,91 +151,74 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">name</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">groupName</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">length</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">avgItemsPerSecond</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Double</span></td>
         <td><span class="parametername">avgProcessingTime</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Double</span></td>
         <td><span class="parametername">idleTimePercent</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">TimeSpan</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.TimeSpan</span>&gt;</td>
         <td><span class="parametername">currentItemProcessingTime</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">TimeSpan</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.TimeSpan</span>&gt;</td>
         <td><span class="parametername">currentIdleTime</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">totalItemsProcessed</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">lengthCurrentTryPeak</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">lengthLifetimePeak</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Type</span></td>
+        <td><span class="xref">System.Type</span></td>
         <td><span class="parametername">lastProcessedMessageType</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Type</span></td>
+        <td><span class="xref">System.Type</span></td>
         <td><span class="parametername">inProgressMessageType</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Monitoring_Stats_QueueStats_AvgItemsPerSecond.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Monitoring.Stats.QueueStats.AvgItemsPerSecond%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Monitoring/Stats/QueueStats.cs/#L49">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Monitoring_Stats_QueueStats_AvgItemsPerSecond" data-uid="EventStore.Core.Services.Monitoring.Stats.QueueStats.AvgItemsPerSecond">AvgItemsPerSecond</h4>
   <div class="markdown level1 summary"><p>The average number of items processed per second by the queue.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly int AvgItemsPerSecond</code></pre>
   </div>
@@ -225,28 +227,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Monitoring_Stats_QueueStats_AvgProcessingTime.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Monitoring.Stats.QueueStats.AvgProcessingTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Monitoring/Stats/QueueStats.cs/#L54">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Monitoring_Stats_QueueStats_AvgProcessingTime" data-uid="EventStore.Core.Services.Monitoring.Stats.QueueStats.AvgProcessingTime">AvgProcessingTime</h4>
   <div class="markdown level1 summary"><p>Average number of items processed per second</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly double AvgProcessingTime</code></pre>
   </div>
@@ -255,28 +252,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Double</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Monitoring_Stats_QueueStats_CurrentIdleTime.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Monitoring.Stats.QueueStats.CurrentIdleTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Monitoring/Stats/QueueStats.cs/#L39">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Monitoring_Stats_QueueStats_CurrentIdleTime" data-uid="EventStore.Core.Services.Monitoring.Stats.QueueStats.CurrentIdleTime">CurrentIdleTime</h4>
   <div class="markdown level1 summary"><p>Time elapsed since queue went idle</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly TimeSpan? CurrentIdleTime</code></pre>
   </div>
@@ -285,28 +277,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">TimeSpan</span>&gt;</td>
-        <td></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.TimeSpan</span>&gt;</td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Monitoring_Stats_QueueStats_CurrentItemProcessingTime.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Monitoring.Stats.QueueStats.CurrentItemProcessingTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Monitoring/Stats/QueueStats.cs/#L34">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Monitoring_Stats_QueueStats_CurrentItemProcessingTime" data-uid="EventStore.Core.Services.Monitoring.Stats.QueueStats.CurrentItemProcessingTime">CurrentItemProcessingTime</h4>
   <div class="markdown level1 summary"><p>Time elapsed processing the current item</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly TimeSpan? CurrentItemProcessingTime</code></pre>
   </div>
@@ -315,28 +302,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">TimeSpan</span>&gt;</td>
-        <td></td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.TimeSpan</span>&gt;</td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Monitoring_Stats_QueueStats_GroupName.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Monitoring.Stats.QueueStats.GroupName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Monitoring/Stats/QueueStats.cs/#L14">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Monitoring_Stats_QueueStats_GroupName" data-uid="EventStore.Core.Services.Monitoring.Stats.QueueStats.GroupName">GroupName</h4>
   <div class="markdown level1 summary"><p>Group queue is a member of</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly string GroupName</code></pre>
   </div>
@@ -345,28 +327,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Monitoring_Stats_QueueStats_IdleTimePercent.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Monitoring.Stats.QueueStats.IdleTimePercent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Monitoring/Stats/QueueStats.cs/#L59">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Monitoring_Stats_QueueStats_IdleTimePercent" data-uid="EventStore.Core.Services.Monitoring.Stats.QueueStats.IdleTimePercent">IdleTimePercent</h4>
   <div class="markdown level1 summary"><p>Percentage of time queue spent idle</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly double IdleTimePercent</code></pre>
   </div>
@@ -375,28 +352,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Double</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Monitoring_Stats_QueueStats_InProgressMessageType.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Monitoring.Stats.QueueStats.InProgressMessageType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Monitoring/Stats/QueueStats.cs/#L69">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Monitoring_Stats_QueueStats_InProgressMessageType" data-uid="EventStore.Core.Services.Monitoring.Stats.QueueStats.InProgressMessageType">InProgressMessageType</h4>
   <div class="markdown level1 summary"><p>Current message type queue is processing</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly Type InProgressMessageType</code></pre>
   </div>
@@ -405,28 +377,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Type</span></td>
-        <td></td>
+        <td><span class="xref">System.Type</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Monitoring_Stats_QueueStats_LastProcessedMessageType.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Monitoring.Stats.QueueStats.LastProcessedMessageType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Monitoring/Stats/QueueStats.cs/#L64">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Monitoring_Stats_QueueStats_LastProcessedMessageType" data-uid="EventStore.Core.Services.Monitoring.Stats.QueueStats.LastProcessedMessageType">LastProcessedMessageType</h4>
   <div class="markdown level1 summary"><p>Last message type processed</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly Type LastProcessedMessageType</code></pre>
   </div>
@@ -435,28 +402,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Type</span></td>
-        <td></td>
+        <td><span class="xref">System.Type</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Monitoring_Stats_QueueStats_Length.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Monitoring.Stats.QueueStats.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Monitoring/Stats/QueueStats.cs/#L19">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Monitoring_Stats_QueueStats_Length" data-uid="EventStore.Core.Services.Monitoring.Stats.QueueStats.Length">Length</h4>
   <div class="markdown level1 summary"><p>Number of items in the queue</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly int Length</code></pre>
   </div>
@@ -465,28 +427,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Monitoring_Stats_QueueStats_LengthCurrentTryPeak.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Monitoring.Stats.QueueStats.LengthCurrentTryPeak%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Monitoring/Stats/QueueStats.cs/#L29">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Monitoring_Stats_QueueStats_LengthCurrentTryPeak" data-uid="EventStore.Core.Services.Monitoring.Stats.QueueStats.LengthCurrentTryPeak">LengthCurrentTryPeak</h4>
   <div class="markdown level1 summary"><p>The highest number of items in the queue within the past 100ms</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly long LengthCurrentTryPeak</code></pre>
   </div>
@@ -495,28 +452,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Monitoring_Stats_QueueStats_LengthLifetimePeak.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Monitoring.Stats.QueueStats.LengthLifetimePeak%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Monitoring/Stats/QueueStats.cs/#L24">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Monitoring_Stats_QueueStats_LengthLifetimePeak" data-uid="EventStore.Core.Services.Monitoring.Stats.QueueStats.LengthLifetimePeak">LengthLifetimePeak</h4>
   <div class="markdown level1 summary"><p>The highest number of items in the queue</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly long LengthLifetimePeak</code></pre>
   </div>
@@ -525,28 +477,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Monitoring_Stats_QueueStats_Name.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Monitoring.Stats.QueueStats.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Monitoring/Stats/QueueStats.cs/#L9">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Monitoring_Stats_QueueStats_Name" data-uid="EventStore.Core.Services.Monitoring.Stats.QueueStats.Name">Name</h4>
   <div class="markdown level1 summary"><p>Queue name</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly string Name</code></pre>
   </div>
@@ -555,28 +502,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Monitoring_Stats_QueueStats_TotalItemsProcessed.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Monitoring.Stats.QueueStats.TotalItemsProcessed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Monitoring/Stats/QueueStats.cs/#L44">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Monitoring_Stats_QueueStats_TotalItemsProcessed" data-uid="EventStore.Core.Services.Monitoring.Stats.QueueStats.TotalItemsProcessed">TotalItemsProcessed</h4>
   <div class="markdown level1 summary"><p>The total number of items processed by the queue.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public readonly long TotalItemsProcessed</code></pre>
   </div>
@@ -585,30 +527,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int64</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Monitoring_Stats_QueueStats_ToString.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Monitoring.Stats.QueueStats.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Monitoring/Stats/QueueStats.cs/#L101">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Monitoring_Stats_QueueStats_ToString_" data-uid="EventStore.Core.Services.Monitoring.Stats.QueueStats.ToString*"></a>
   <h4 id="EventStore_Core_Services_Monitoring_Stats_QueueStats_ToString" data-uid="EventStore.Core.Services.Monitoring.Stats.QueueStats.ToString">ToString()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
   </div>
@@ -627,6 +564,8 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.Object.ToString()</span></div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
@@ -652,12 +591,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Monitoring_Stats_QueueStats.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Monitoring.Stats.QueueStats%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Monitoring/Stats/QueueStats.cs/#L5" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

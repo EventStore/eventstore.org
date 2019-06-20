@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,6 +104,34 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">NLogValueFormatter</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">NLog.IValueFormatter</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Common.Log.html">EventStore.Common.Log</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Common.dll</h6>
   <h5 id="EventStore_Common_Log_NLogValueFormatter_syntax">Syntax</h5>
@@ -111,18 +140,15 @@
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Common_Log_NLogValueFormatter__ctor_IValueFormatter_System_Boolean_.md&amp;value=---%0Auid%3A%20EventStore.Common.Log.NLogValueFormatter.%23ctor(IValueFormatter%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Common/Log/NLogValueFormatter.cs/#L14">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Common_Log_NLogValueFormatter__ctor_" data-uid="EventStore.Common.Log.NLogValueFormatter.#ctor*"></a>
-  <h4 id="EventStore_Common_Log_NLogValueFormatter__ctor_IValueFormatter_System_Boolean_" data-uid="EventStore.Common.Log.NLogValueFormatter.#ctor(IValueFormatter,System.Boolean)">NLogValueFormatter(IValueFormatter, Boolean)</h4>
+  <h4 id="EventStore_Common_Log_NLogValueFormatter__ctor_NLog_IValueFormatter_System_Boolean_" data-uid="EventStore.Common.Log.NLogValueFormatter.#ctor(NLog.IValueFormatter,System.Boolean)">NLogValueFormatter(IValueFormatter, Boolean)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public NLogValueFormatter(IValueFormatter originalFormatter, bool isStructured)</code></pre>
   </div>
@@ -132,36 +158,30 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IValueFormatter</span></td>
+        <td><span class="xref">NLog.IValueFormatter</span></td>
         <td><span class="parametername">originalFormatter</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">isStructured</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Common_Log_NLogValueFormatter_FormatValue_System_Object_System_String_CaptureType_IFormatProvider_StringBuilder_.md&amp;value=---%0Auid%3A%20EventStore.Common.Log.NLogValueFormatter.FormatValue(System.Object%2CSystem.String%2CCaptureType%2CIFormatProvider%2CStringBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Common/Log/NLogValueFormatter.cs/#L19">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Common_Log_NLogValueFormatter_FormatValue_" data-uid="EventStore.Common.Log.NLogValueFormatter.FormatValue*"></a>
-  <h4 id="EventStore_Common_Log_NLogValueFormatter_FormatValue_System_Object_System_String_CaptureType_IFormatProvider_StringBuilder_" data-uid="EventStore.Common.Log.NLogValueFormatter.FormatValue(System.Object,System.String,CaptureType,IFormatProvider,StringBuilder)">FormatValue(Object, String, CaptureType, IFormatProvider, StringBuilder)</h4>
+  <h4 id="EventStore_Common_Log_NLogValueFormatter_FormatValue_System_Object_System_String_NLog_MessageTemplates_CaptureType_System_IFormatProvider_System_Text_StringBuilder_" data-uid="EventStore.Common.Log.NLogValueFormatter.FormatValue(System.Object,System.String,NLog.MessageTemplates.CaptureType,System.IFormatProvider,System.Text.StringBuilder)">FormatValue(Object, String, CaptureType, IFormatProvider, StringBuilder)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool FormatValue(object value, string format, CaptureType captureType, IFormatProvider formatProvider, StringBuilder builder)</code></pre>
   </div>
@@ -171,34 +191,28 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Object</span></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">format</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">CaptureType</span></td>
+        <td><span class="xref">NLog.MessageTemplates.CaptureType</span></td>
         <td><span class="parametername">captureType</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IFormatProvider</span></td>
+        <td><span class="xref">System.IFormatProvider</span></td>
         <td><span class="parametername">formatProvider</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">StringBuilder</span></td>
+        <td><span class="xref">System.Text.StringBuilder</span></td>
         <td><span class="parametername">builder</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -217,6 +231,10 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">NLog.IValueFormatter</span>
+  </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
@@ -242,12 +260,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Common_Log_NLogValueFormatter.md&amp;value=---%0Auid%3A%20EventStore.Common.Log.NLogValueFormatter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Common/Log/NLogValueFormatter.cs/#L10" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

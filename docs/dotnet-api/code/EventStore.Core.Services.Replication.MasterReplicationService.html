@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -112,26 +113,47 @@
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.ReplicationMessage.ReplicaLogPositionAck.html">ReplicationMessage.ReplicaLogPositionAck</a>&gt;</div>
     <div><a class="xref" href="EventStore.Core.Bus.IHandle-1.html">IHandle</a>&lt;<a class="xref" href="EventStore.Core.Messages.ReplicationMessage.GetReplicationStats.html">ReplicationMessage.GetReplicationStats</a>&gt;</div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Services.Replication.html">EventStore.Core.Services.Replication</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Services_Replication_MasterReplicationService_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MasterReplicationService : object, IMonitoredQueue, IHandle&lt;SystemMessage.SystemStart&gt;, IHandle&lt;SystemMessage.StateChangeMessage&gt;, IHandle&lt;ReplicationMessage.ReplicaSubscriptionRequest&gt;, IHandle&lt;ReplicationMessage.ReplicaLogPositionAck&gt;, IHandle&lt;ReplicationMessage.GetReplicationStats&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class MasterReplicationService : IMonitoredQueue, IHandle&lt;SystemMessage.SystemStart&gt;, IHandle&lt;SystemMessage.StateChangeMessage&gt;, IHandle&lt;ReplicationMessage.ReplicaSubscriptionRequest&gt;, IHandle&lt;ReplicationMessage.ReplicaLogPositionAck&gt;, IHandle&lt;ReplicationMessage.GetReplicationStats&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Replication_MasterReplicationService__ctor_EventStore_Core_Bus_IPublisher_Guid_EventStore_Core_TransactionLog_Chunks_TFChunkDb_EventStore_Core_Bus_IPublisher_EventStore_Core_Services_Storage_EpochManager_IEpochManager_System_Int32_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Replication.MasterReplicationService.%23ctor(EventStore.Core.Bus.IPublisher%2CGuid%2CEventStore.Core.TransactionLog.Chunks.TFChunkDb%2CEventStore.Core.Bus.IPublisher%2CEventStore.Core.Services.Storage.EpochManager.IEpochManager%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Replication/MasterReplicationService.cs/#L75">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Replication_MasterReplicationService__ctor_" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.#ctor*"></a>
-  <h4 id="EventStore_Core_Services_Replication_MasterReplicationService__ctor_EventStore_Core_Bus_IPublisher_Guid_EventStore_Core_TransactionLog_Chunks_TFChunkDb_EventStore_Core_Bus_IPublisher_EventStore_Core_Services_Storage_EpochManager_IEpochManager_System_Int32_" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.#ctor(EventStore.Core.Bus.IPublisher,Guid,EventStore.Core.TransactionLog.Chunks.TFChunkDb,EventStore.Core.Bus.IPublisher,EventStore.Core.Services.Storage.EpochManager.IEpochManager,System.Int32)">MasterReplicationService(IPublisher, Guid, TFChunkDb, IPublisher, IEpochManager, Int32)</h4>
+  <h4 id="EventStore_Core_Services_Replication_MasterReplicationService__ctor_EventStore_Core_Bus_IPublisher_System_Guid_EventStore_Core_TransactionLog_Chunks_TFChunkDb_EventStore_Core_Bus_IPublisher_EventStore_Core_Services_Storage_EpochManager_IEpochManager_System_Int32_" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.#ctor(EventStore.Core.Bus.IPublisher,System.Guid,EventStore.Core.TransactionLog.Chunks.TFChunkDb,EventStore.Core.Bus.IPublisher,EventStore.Core.Services.Storage.EpochManager.IEpochManager,System.Int32)">MasterReplicationService(IPublisher, Guid, TFChunkDb, IPublisher, IEpochManager, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public MasterReplicationService(IPublisher publisher, Guid instanceId, TFChunkDb db, IPublisher tcpSendPublisher, IEpochManager epochManager, int clusterSize)</code></pre>
   </div>
@@ -141,171 +163,141 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
         <td><span class="parametername">publisher</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><span class="xref">System.Guid</span></td>
         <td><span class="parametername">instanceId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.Chunks.TFChunkDb.html">TFChunkDb</a></td>
         <td><span class="parametername">db</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Bus.IPublisher.html">IPublisher</a></td>
         <td><span class="parametername">tcpSendPublisher</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Services.Storage.EpochManager.IEpochManager.html">IEpochManager</a></td>
         <td><span class="parametername">epochManager</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">clusterSize</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Replication_MasterReplicationService_BulkSize.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Replication.MasterReplicationService.BulkSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Replication/MasterReplicationService.cs/#L35">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Replication_MasterReplicationService_BulkSize" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.BulkSize">BulkSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int BulkSize = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int BulkSize = 8192</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Replication_MasterReplicationService_CloneThreshold.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Replication.MasterReplicationService.CloneThreshold%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Replication/MasterReplicationService.cs/#L32">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Replication_MasterReplicationService_CloneThreshold" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.CloneThreshold">CloneThreshold</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int CloneThreshold = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int CloneThreshold = 1024</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Replication_MasterReplicationService_LagOccurencesThreshold.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Replication.MasterReplicationService.LagOccurencesThreshold%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Replication/MasterReplicationService.cs/#L34">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Replication_MasterReplicationService_LagOccurencesThreshold" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.LagOccurencesThreshold">LagOccurencesThreshold</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int LagOccurencesThreshold = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int LagOccurencesThreshold = 2</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Replication_MasterReplicationService_MaxQueueSize.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Replication.MasterReplicationService.MaxQueueSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Replication/MasterReplicationService.cs/#L31">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Replication_MasterReplicationService_MaxQueueSize" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.MaxQueueSize">MaxQueueSize</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int MaxQueueSize = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int MaxQueueSize = 100</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Replication_MasterReplicationService_NoQuorumTimeout.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Replication.MasterReplicationService.NoQuorumTimeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Replication/MasterReplicationService.cs/#L39">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Replication_MasterReplicationService_NoQuorumTimeout" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.NoQuorumTimeout">NoQuorumTimeout</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static readonly TimeSpan NoQuorumTimeout</code></pre>
   </div>
@@ -314,85 +306,70 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
-        <td></td>
+        <td><span class="xref">System.TimeSpan</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Replication_MasterReplicationService_ReplicaAckWindow.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Replication.MasterReplicationService.ReplicaAckWindow%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Replication/MasterReplicationService.cs/#L37">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Replication_MasterReplicationService_ReplicaAckWindow" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.ReplicaAckWindow">ReplicaAckWindow</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int ReplicaAckWindow = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int ReplicaAckWindow = 524288</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Replication_MasterReplicationService_ReplicaSendWindow.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Replication.MasterReplicationService.ReplicaSendWindow%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Replication/MasterReplicationService.cs/#L36">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Replication_MasterReplicationService_ReplicaSendWindow" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.ReplicaSendWindow">ReplicaSendWindow</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int ReplicaSendWindow = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int ReplicaSendWindow = 16777216</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Replication_MasterReplicationService_RoleAssignmentsInterval.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Replication.MasterReplicationService.RoleAssignmentsInterval%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Replication/MasterReplicationService.cs/#L38">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Replication_MasterReplicationService_RoleAssignmentsInterval" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.RoleAssignmentsInterval">RoleAssignmentsInterval</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static readonly TimeSpan RoleAssignmentsInterval</code></pre>
   </div>
@@ -401,59 +378,49 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
-        <td></td>
+        <td><span class="xref">System.TimeSpan</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Replication_MasterReplicationService_SlaveLagThreshold.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Replication.MasterReplicationService.SlaveLagThreshold%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Replication/MasterReplicationService.cs/#L33">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Services_Replication_MasterReplicationService_SlaveLagThreshold" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.SlaveLagThreshold">SlaveLagThreshold</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int SlaveLagThreshold = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int SlaveLagThreshold = 262144</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Replication_MasterReplicationService_Name.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Replication.MasterReplicationService.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Replication/MasterReplicationService.cs/#L43">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Replication_MasterReplicationService_Name_" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.Name*"></a>
   <h4 id="EventStore_Core_Services_Replication_MasterReplicationService_Name" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.Name">Name</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
   </div>
@@ -462,28 +429,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Replication_MasterReplicationService_Task.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Replication.MasterReplicationService.Task%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Replication/MasterReplicationService.cs/#L71">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Replication_MasterReplicationService_Task_" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.Task*"></a>
   <h4 id="EventStore_Core_Services_Replication_MasterReplicationService_Task" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.Task">Task</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public Task Task { get; }</code></pre>
   </div>
@@ -492,30 +454,25 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span></td>
-        <td></td>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Replication_MasterReplicationService_GetStatistics.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Replication.MasterReplicationService.GetStatistics%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Replication/MasterReplicationService.cs/#L612">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Replication_MasterReplicationService_GetStatistics_" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.GetStatistics*"></a>
   <h4 id="EventStore_Core_Services_Replication_MasterReplicationService_GetStatistics" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.GetStatistics">GetStatistics()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public QueueStats GetStatistics()</code></pre>
   </div>
@@ -534,18 +491,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Replication_MasterReplicationService_Handle_EventStore_Core_Messages_ReplicationMessage_GetReplicationStats_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Replication.MasterReplicationService.Handle(EventStore.Core.Messages.ReplicationMessage.GetReplicationStats)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Replication/MasterReplicationService.cs/#L155">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Replication_MasterReplicationService_Handle_" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.Handle*"></a>
   <h4 id="EventStore_Core_Services_Replication_MasterReplicationService_Handle_EventStore_Core_Messages_ReplicationMessage_GetReplicationStats_" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.Handle(EventStore.Core.Messages.ReplicationMessage.GetReplicationStats)">Handle(ReplicationMessage.GetReplicationStats)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ReplicationMessage.GetReplicationStats message)</code></pre>
   </div>
@@ -555,29 +509,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.ReplicationMessage.GetReplicationStats.html">ReplicationMessage.GetReplicationStats</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Replication_MasterReplicationService_Handle_EventStore_Core_Messages_ReplicationMessage_ReplicaLogPositionAck_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Replication.MasterReplicationService.Handle(EventStore.Core.Messages.ReplicationMessage.ReplicaLogPositionAck)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Replication/MasterReplicationService.cs/#L149">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Replication_MasterReplicationService_Handle_" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.Handle*"></a>
   <h4 id="EventStore_Core_Services_Replication_MasterReplicationService_Handle_EventStore_Core_Messages_ReplicationMessage_ReplicaLogPositionAck_" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.Handle(EventStore.Core.Messages.ReplicationMessage.ReplicaLogPositionAck)">Handle(ReplicationMessage.ReplicaLogPositionAck)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ReplicationMessage.ReplicaLogPositionAck message)</code></pre>
   </div>
@@ -587,29 +536,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.ReplicationMessage.ReplicaLogPositionAck.html">ReplicationMessage.ReplicaLogPositionAck</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Replication_MasterReplicationService_Handle_EventStore_Core_Messages_ReplicationMessage_ReplicaSubscriptionRequest_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Replication.MasterReplicationService.Handle(EventStore.Core.Messages.ReplicationMessage.ReplicaSubscriptionRequest)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Replication/MasterReplicationService.cs/#L110">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Replication_MasterReplicationService_Handle_" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.Handle*"></a>
   <h4 id="EventStore_Core_Services_Replication_MasterReplicationService_Handle_EventStore_Core_Messages_ReplicationMessage_ReplicaSubscriptionRequest_" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.Handle(EventStore.Core.Messages.ReplicationMessage.ReplicaSubscriptionRequest)">Handle(ReplicationMessage.ReplicaSubscriptionRequest)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(ReplicationMessage.ReplicaSubscriptionRequest message)</code></pre>
   </div>
@@ -619,29 +563,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.ReplicationMessage.ReplicaSubscriptionRequest.html">ReplicationMessage.ReplicaSubscriptionRequest</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Replication_MasterReplicationService_Handle_EventStore_Core_Messages_SystemMessage_StateChangeMessage_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Replication.MasterReplicationService.Handle(EventStore.Core.Messages.SystemMessage.StateChangeMessage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Replication/MasterReplicationService.cs/#L103">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Replication_MasterReplicationService_Handle_" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.Handle*"></a>
   <h4 id="EventStore_Core_Services_Replication_MasterReplicationService_Handle_EventStore_Core_Messages_SystemMessage_StateChangeMessage_" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.Handle(EventStore.Core.Messages.SystemMessage.StateChangeMessage)">Handle(SystemMessage.StateChangeMessage)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(SystemMessage.StateChangeMessage message)</code></pre>
   </div>
@@ -651,29 +590,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.SystemMessage.StateChangeMessage.html">SystemMessage.StateChangeMessage</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Replication_MasterReplicationService_Handle_EventStore_Core_Messages_SystemMessage_SystemStart_.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Replication.MasterReplicationService.Handle(EventStore.Core.Messages.SystemMessage.SystemStart)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Replication/MasterReplicationService.cs/#L99">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Services_Replication_MasterReplicationService_Handle_" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.Handle*"></a>
   <h4 id="EventStore_Core_Services_Replication_MasterReplicationService_Handle_EventStore_Core_Messages_SystemMessage_SystemStart_" data-uid="EventStore.Core.Services.Replication.MasterReplicationService.Handle(EventStore.Core.Messages.SystemMessage.SystemStart)">Handle(SystemMessage.SystemStart)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Handle(SystemMessage.SystemStart message)</code></pre>
   </div>
@@ -683,14 +617,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Messages.SystemMessage.SystemStart.html">SystemMessage.SystemStart</a></td>
         <td><span class="parametername">message</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -738,12 +670,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Services_Replication_MasterReplicationService.md&amp;value=---%0Auid%3A%20EventStore.Core.Services.Replication.MasterReplicationService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Services/Replication/MasterReplicationService.cs/#L25" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

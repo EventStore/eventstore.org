@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -106,28 +107,49 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="EventStore.Core.TransactionLog.ITransactionFileWriter.html">ITransactionFileWriter</a></div>
-    <div><span class="xref">IDisposable</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.TransactionLog.Chunks.html">EventStore.Core.TransactionLog.Chunks</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_TransactionLog_Chunks_TFChunkWriter_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TFChunkWriter : object, ITransactionFileWriter, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class TFChunkWriter : ITransactionFileWriter, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunkWriter__ctor_EventStore_Core_TransactionLog_Chunks_TFChunkDb_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunkWriter.%23ctor(EventStore.Core.TransactionLog.Chunks.TFChunkDb)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunkWriter.cs/#L21">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunkWriter__ctor_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.#ctor*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunkWriter__ctor_EventStore_Core_TransactionLog_Chunks_TFChunkDb_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.#ctor(EventStore.Core.TransactionLog.Chunks.TFChunkDb)">TFChunkWriter(TFChunkDb)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TFChunkWriter(TFChunkDb db)</code></pre>
   </div>
@@ -137,31 +159,26 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.Chunks.TFChunkDb.html">TFChunkDb</a></td>
         <td><span class="parametername">db</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunkWriter_Checkpoint.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunkWriter.Checkpoint%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunkWriter.cs/#L8">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunkWriter_Checkpoint_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.Checkpoint*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunkWriter_Checkpoint" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.Checkpoint">Checkpoint</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ICheckpoint Checkpoint { get; }</code></pre>
   </div>
@@ -170,28 +187,23 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.Checkpoint.ICheckpoint.html">ICheckpoint</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunkWriter_CurrentChunk.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunkWriter.CurrentChunk%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunkWriter.cs/#L12">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunkWriter_CurrentChunk_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.CurrentChunk*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunkWriter_CurrentChunk" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.CurrentChunk">CurrentChunk</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public TFChunk CurrentChunk { get; }</code></pre>
   </div>
@@ -200,60 +212,49 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.html">TFChunk</a></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunkWriter_Close.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunkWriter.Close%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunkWriter.cs/#L73">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunkWriter_Close_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.Close*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunkWriter_Close" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.Close">Close()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Close()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunkWriter_CompleteChunk.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunkWriter.CompleteChunk%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunkWriter.cs/#L45">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunkWriter_CompleteChunk_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.CompleteChunk*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunkWriter_CompleteChunk" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.CompleteChunk">CompleteChunk()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void CompleteChunk()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunkWriter_CompleteReplicatedRawChunk_EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunkWriter.CompleteReplicatedRawChunk(EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunkWriter.cs/#L57">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunkWriter_CompleteReplicatedRawChunk_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.CompleteReplicatedRawChunk*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunkWriter_CompleteReplicatedRawChunk_EventStore_Core_TransactionLog_Chunks_TFChunk_TFChunk_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.CompleteReplicatedRawChunk(EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk)">CompleteReplicatedRawChunk(TFChunk)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void CompleteReplicatedRawChunk(TFChunk rawChunk)</code></pre>
   </div>
@@ -263,74 +264,60 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.Chunks.TFChunk.TFChunk.html">TFChunk</a></td>
         <td><span class="parametername">rawChunk</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunkWriter_Dispose.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunkWriter.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunkWriter.cs/#L69">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunkWriter_Dispose_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.Dispose*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunkWriter_Dispose" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunkWriter_Flush.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunkWriter.Flush%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunkWriter.cs/#L77">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunkWriter_Flush_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.Flush*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunkWriter_Flush" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.Flush">Flush()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Flush()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunkWriter_Open.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunkWriter.Open%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunkWriter.cs/#L31">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunkWriter_Open_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.Open*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunkWriter_Open" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.Open">Open()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Open()</code></pre>
   </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunkWriter_Write_EventStore_Core_TransactionLog_LogRecords_LogRecord_System_Int64__.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunkWriter.Write(EventStore.Core.TransactionLog.LogRecords.LogRecord%2CSystem.Int64%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunkWriter.cs/#L35">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_TransactionLog_Chunks_TFChunkWriter_Write_" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.Write*"></a>
   <h4 id="EventStore_Core_TransactionLog_Chunks_TFChunkWriter_Write_EventStore_Core_TransactionLog_LogRecords_LogRecord_System_Int64__" data-uid="EventStore.Core.TransactionLog.Chunks.TFChunkWriter.Write(EventStore.Core.TransactionLog.LogRecords.LogRecord,System.Int64@)">Write(LogRecord, out Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool Write(LogRecord record, out long newPos)</code></pre>
   </div>
@@ -340,19 +327,16 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.TransactionLog.LogRecords.LogRecord.html">LogRecord</a></td>
         <td><span class="parametername">record</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">newPos</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -376,7 +360,7 @@
       <a class="xref" href="EventStore.Core.TransactionLog.ITransactionFileWriter.html">ITransactionFileWriter</a>
   </div>
   <div>
-      <span class="xref">IDisposable</span>
+      <span class="xref">System.IDisposable</span>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
@@ -403,12 +387,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_TransactionLog_Chunks_TFChunkWriter.md&amp;value=---%0Auid%3A%20EventStore.Core.TransactionLog.Chunks.TFChunkWriter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/TransactionLog/Chunks/TFChunkWriter.cs/#L7" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

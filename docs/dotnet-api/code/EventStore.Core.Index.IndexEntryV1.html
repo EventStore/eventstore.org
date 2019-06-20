@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -100,8 +101,26 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IComparable</span>&lt;<a class="xref" href="EventStore.Core.Index.IndexEntryV1.html">IndexEntryV1</a>&gt;</div>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="EventStore.Core.Index.IndexEntryV1.html">IndexEntryV1</a>&gt;</div>
+    <div><span class="xref">System.IComparable</span>&lt;<a class="xref" href="EventStore.Core.Index.IndexEntryV1.html">IndexEntryV1</a>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="EventStore.Core.Index.IndexEntryV1.html">IndexEntryV1</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.ValueType.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Index.html">EventStore.Core.Index</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
@@ -111,18 +130,15 @@
   </div>
   <h3 id="constructors">Constructors
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_IndexEntryV1__ctor_System_UInt32_System_Int32_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.IndexEntryV1.%23ctor(System.UInt32%2CSystem.Int32%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/IndexEntryV1.cs/#L18">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_IndexEntryV1__ctor_" data-uid="EventStore.Core.Index.IndexEntryV1.#ctor*"></a>
   <h4 id="EventStore_Core_Index_IndexEntryV1__ctor_System_UInt32_System_Int32_System_Int64_" data-uid="EventStore.Core.Index.IndexEntryV1.#ctor(System.UInt32,System.Int32,System.Int64)">IndexEntryV1(UInt32, Int32, Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IndexEntryV1(uint stream, int version, long position)</code></pre>
   </div>
@@ -132,39 +148,32 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">stream</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">version</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">position</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_IndexEntryV1__ctor_System_UInt64_System_Int64_.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.IndexEntryV1.%23ctor(System.UInt64%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/IndexEntryV1.cs/#L13">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_IndexEntryV1__ctor_" data-uid="EventStore.Core.Index.IndexEntryV1.#ctor*"></a>
   <h4 id="EventStore_Core_Index_IndexEntryV1__ctor_System_UInt64_System_Int64_" data-uid="EventStore.Core.Index.IndexEntryV1.#ctor(System.UInt64,System.Int64)">IndexEntryV1(UInt64, Int64)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IndexEntryV1(ulong key, long position)</code></pre>
   </div>
@@ -174,35 +183,29 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.UInt64</span></td>
         <td><span class="parametername">key</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">position</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="fields">Fields
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_IndexEntryV1_Bytes.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.IndexEntryV1.Bytes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/IndexEntryV1.cs/#L8">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Index_IndexEntryV1_Bytes" data-uid="EventStore.Core.Index.IndexEntryV1.Bytes">Bytes</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public byte *Bytes</code></pre>
   </div>
@@ -211,146 +214,121 @@
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span>*</td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_IndexEntryV1_Key.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.IndexEntryV1.Key%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/IndexEntryV1.cs/#L7">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Index_IndexEntryV1_Key" data-uid="EventStore.Core.Index.IndexEntryV1.Key">Key</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UInt64 Key</code></pre>
+    <pre><code class="lang-csharp hljs">public ulong Key</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UInt64</span></td>
-        <td></td>
+        <td><span class="xref">System.UInt64</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_IndexEntryV1_Position.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.IndexEntryV1.Position%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/IndexEntryV1.cs/#L11">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Index_IndexEntryV1_Position" data-uid="EventStore.Core.Index.IndexEntryV1.Position">Position</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Int64 Position</code></pre>
+    <pre><code class="lang-csharp hljs">public long Position</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Int64</span></td>
-        <td></td>
+        <td><span class="xref">System.Int64</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_IndexEntryV1_Stream.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.IndexEntryV1.Stream%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/IndexEntryV1.cs/#L10">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Index_IndexEntryV1_Stream" data-uid="EventStore.Core.Index.IndexEntryV1.Stream">Stream</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UInt32 Stream</code></pre>
+    <pre><code class="lang-csharp hljs">public uint Stream</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">UInt32</span></td>
-        <td></td>
+        <td><span class="xref">System.UInt32</span></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_IndexEntryV1_Version.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.IndexEntryV1.Version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/IndexEntryV1.cs/#L9">View Source</a>
-  </span>
+  
+  
   <h4 id="EventStore_Core_Index_IndexEntryV1_Version" data-uid="EventStore.Core.Index.IndexEntryV1.Version">Version</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Int32 Version</code></pre>
+    <pre><code class="lang-csharp hljs">public int Version</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Int32</span></td>
-        <td></td>
+        <td><span class="xref">System.Int32</span></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_IndexEntryV1_CompareTo_EventStore_Core_Index_IndexEntryV1_.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.IndexEntryV1.CompareTo(EventStore.Core.Index.IndexEntryV1)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/IndexEntryV1.cs/#L24">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_IndexEntryV1_CompareTo_" data-uid="EventStore.Core.Index.IndexEntryV1.CompareTo*"></a>
   <h4 id="EventStore_Core_Index_IndexEntryV1_CompareTo_EventStore_Core_Index_IndexEntryV1_" data-uid="EventStore.Core.Index.IndexEntryV1.CompareTo(EventStore.Core.Index.IndexEntryV1)">CompareTo(IndexEntryV1)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public int CompareTo(IndexEntryV1 other)</code></pre>
   </div>
@@ -360,14 +338,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Index.IndexEntryV1.html">IndexEntryV1</a></td>
         <td><span class="parametername">other</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -386,18 +362,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_IndexEntryV1_Equals_EventStore_Core_Index_IndexEntryV1_.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.IndexEntryV1.Equals(EventStore.Core.Index.IndexEntryV1)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/IndexEntryV1.cs/#L31">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_IndexEntryV1_Equals_" data-uid="EventStore.Core.Index.IndexEntryV1.Equals*"></a>
   <h4 id="EventStore_Core_Index_IndexEntryV1_Equals_EventStore_Core_Index_IndexEntryV1_" data-uid="EventStore.Core.Index.IndexEntryV1.Equals(EventStore.Core.Index.IndexEntryV1)">Equals(IndexEntryV1)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool Equals(IndexEntryV1 other)</code></pre>
   </div>
@@ -407,14 +380,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Index.IndexEntryV1.html">IndexEntryV1</a></td>
         <td><span class="parametername">other</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -433,18 +404,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_IndexEntryV1_ToString.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.IndexEntryV1.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/IndexEntryV1.cs/#L35">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Index_IndexEntryV1_ToString_" data-uid="EventStore.Core.Index.IndexEntryV1.ToString*"></a>
   <h4 id="EventStore_Core_Index_IndexEntryV1_ToString" data-uid="EventStore.Core.Index.IndexEntryV1.ToString">ToString()</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
   </div>
@@ -463,14 +431,25 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.ToString()</span></div>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IComparable&lt;&gt;</span>
+      <span class="xref">System.IComparable&lt;T&gt;</span>
   </div>
   <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJson_System_Object_">Json.ToJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
+  </div>
   <div>
       <a class="xref" href="EventStore.Projections.Core.Utils.EnumExtensions.html#EventStore_Projections_Core_Utils_EnumExtensions_EnumValueName__1___0_">EnumExtensions.EnumValueName&lt;T&gt;(T)</a>
   </div>
@@ -489,12 +468,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Index_IndexEntryV1.md&amp;value=---%0Auid%3A%20EventStore.Core.Index.IndexEntryV1%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Index/IndexEntryV1.cs/#L5" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

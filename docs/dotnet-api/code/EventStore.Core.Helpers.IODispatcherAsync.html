@@ -57,11 +57,12 @@
                 </a>
             </h1>
             <ul class="site-navigation">
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
                 <li class="site-navigation__item"><a href="/support">Support</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="/docs">Documentation</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
                 <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
                 <li class="site-navigation__item"><a href="/contact">Contact</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search" id="search">
@@ -103,26 +104,47 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">IODispatcherAsync</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Core.Helpers.html">EventStore.Core.Helpers</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Core.dll</h6>
   <h5 id="EventStore_Core_Helpers_IODispatcherAsync_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class IODispatcherAsync : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class IODispatcherAsync</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Helpers_IODispatcherAsync_BeginDelay_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Helpers_IODispatcherAsync_CancellationScope_TimeSpan_Action_.md&amp;value=---%0Auid%3A%20EventStore.Core.Helpers.IODispatcherAsync.BeginDelay(EventStore.Core.Helpers.IODispatcher%2CEventStore.Core.Helpers.IODispatcherAsync.CancellationScope%2CTimeSpan%2CAction)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Helpers/IODispatcherAsync.cs/#L185">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Helpers_IODispatcherAsync_BeginDelay_" data-uid="EventStore.Core.Helpers.IODispatcherAsync.BeginDelay*"></a>
-  <h4 id="EventStore_Core_Helpers_IODispatcherAsync_BeginDelay_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Helpers_IODispatcherAsync_CancellationScope_TimeSpan_Action_" data-uid="EventStore.Core.Helpers.IODispatcherAsync.BeginDelay(EventStore.Core.Helpers.IODispatcher,EventStore.Core.Helpers.IODispatcherAsync.CancellationScope,TimeSpan,Action)">BeginDelay(IODispatcher, IODispatcherAsync.CancellationScope, TimeSpan, Action)</h4>
+  <h4 id="EventStore_Core_Helpers_IODispatcherAsync_BeginDelay_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Helpers_IODispatcherAsync_CancellationScope_System_TimeSpan_System_Action_" data-uid="EventStore.Core.Helpers.IODispatcherAsync.BeginDelay(EventStore.Core.Helpers.IODispatcher,EventStore.Core.Helpers.IODispatcherAsync.CancellationScope,System.TimeSpan,System.Action)">BeginDelay(IODispatcher, IODispatcherAsync.CancellationScope, TimeSpan, Action)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IODispatcherAsync.Step BeginDelay(this IODispatcher ioDispatcher, IODispatcherAsync.CancellationScope cancellationScope, TimeSpan timeout, Action handler)</code></pre>
   </div>
@@ -132,29 +154,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Helpers.IODispatcher.html">IODispatcher</a></td>
         <td><span class="parametername">ioDispatcher</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Helpers.IODispatcherAsync.CancellationScope.html">IODispatcherAsync.CancellationScope</a></td>
         <td><span class="parametername">cancellationScope</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span></td>
+        <td><span class="xref">System.Action</span></td>
         <td><span class="parametername">handler</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -173,18 +190,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Helpers_IODispatcherAsync_BeginDeleteStream_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Helpers_IODispatcherAsync_CancellationScope_System_String_System_Int64_System_Boolean_IPrincipal_Action_EventStore_Core_Messages_ClientMessage_DeleteStreamCompleted__.md&amp;value=---%0Auid%3A%20EventStore.Core.Helpers.IODispatcherAsync.BeginDeleteStream(EventStore.Core.Helpers.IODispatcher%2CEventStore.Core.Helpers.IODispatcherAsync.CancellationScope%2CSystem.String%2CSystem.Int64%2CSystem.Boolean%2CIPrincipal%2CAction%7BEventStore.Core.Messages.ClientMessage.DeleteStreamCompleted%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Helpers/IODispatcherAsync.cs/#L125">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Helpers_IODispatcherAsync_BeginDeleteStream_" data-uid="EventStore.Core.Helpers.IODispatcherAsync.BeginDeleteStream*"></a>
-  <h4 id="EventStore_Core_Helpers_IODispatcherAsync_BeginDeleteStream_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Helpers_IODispatcherAsync_CancellationScope_System_String_System_Int64_System_Boolean_IPrincipal_Action_EventStore_Core_Messages_ClientMessage_DeleteStreamCompleted__" data-uid="EventStore.Core.Helpers.IODispatcherAsync.BeginDeleteStream(EventStore.Core.Helpers.IODispatcher,EventStore.Core.Helpers.IODispatcherAsync.CancellationScope,System.String,System.Int64,System.Boolean,IPrincipal,Action{EventStore.Core.Messages.ClientMessage.DeleteStreamCompleted})">BeginDeleteStream(IODispatcher, IODispatcherAsync.CancellationScope, String, Int64, Boolean, IPrincipal, Action&lt;ClientMessage.DeleteStreamCompleted&gt;)</h4>
+  <h4 id="EventStore_Core_Helpers_IODispatcherAsync_BeginDeleteStream_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Helpers_IODispatcherAsync_CancellationScope_System_String_System_Int64_System_Boolean_System_Security_Principal_IPrincipal_System_Action_EventStore_Core_Messages_ClientMessage_DeleteStreamCompleted__" data-uid="EventStore.Core.Helpers.IODispatcherAsync.BeginDeleteStream(EventStore.Core.Helpers.IODispatcher,EventStore.Core.Helpers.IODispatcherAsync.CancellationScope,System.String,System.Int64,System.Boolean,System.Security.Principal.IPrincipal,System.Action{EventStore.Core.Messages.ClientMessage.DeleteStreamCompleted})">BeginDeleteStream(IODispatcher, IODispatcherAsync.CancellationScope, String, Int64, Boolean, IPrincipal, Action&lt;ClientMessage.DeleteStreamCompleted&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IODispatcherAsync.Step BeginDeleteStream(this IODispatcher ioDispatcher, IODispatcherAsync.CancellationScope cancellationScope, string streamId, long expectedVersion, bool hardDelete, IPrincipal principal, Action&lt;ClientMessage.DeleteStreamCompleted&gt; handler)</code></pre>
   </div>
@@ -194,44 +208,36 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Helpers.IODispatcher.html">IODispatcher</a></td>
         <td><span class="parametername">ioDispatcher</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Helpers.IODispatcherAsync.CancellationScope.html">IODispatcherAsync.CancellationScope</a></td>
         <td><span class="parametername">cancellationScope</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">streamId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">expectedVersion</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">hardDelete</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IPrincipal</span></td>
+        <td><span class="xref">System.Security.Principal.IPrincipal</span></td>
         <td><span class="parametername">principal</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.DeleteStreamCompleted.html">ClientMessage.DeleteStreamCompleted</a>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.DeleteStreamCompleted.html">ClientMessage.DeleteStreamCompleted</a>&gt;</td>
         <td><span class="parametername">handler</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -250,18 +256,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Helpers_IODispatcherAsync_BeginReadBackward_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Helpers_IODispatcherAsync_CancellationScope_System_String_System_Int64_System_Int32_System_Boolean_IPrincipal_Action_EventStore_Core_Messages_ClientMessage_ReadStreamEventsBackwardCompleted__Action_.md&amp;value=---%0Auid%3A%20EventStore.Core.Helpers.IODispatcherAsync.BeginReadBackward(EventStore.Core.Helpers.IODispatcher%2CEventStore.Core.Helpers.IODispatcherAsync.CancellationScope%2CSystem.String%2CSystem.Int64%2CSystem.Int32%2CSystem.Boolean%2CIPrincipal%2CAction%7BEventStore.Core.Messages.ClientMessage.ReadStreamEventsBackwardCompleted%7D%2CAction)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Helpers/IODispatcherAsync.cs/#L77">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Helpers_IODispatcherAsync_BeginReadBackward_" data-uid="EventStore.Core.Helpers.IODispatcherAsync.BeginReadBackward*"></a>
-  <h4 id="EventStore_Core_Helpers_IODispatcherAsync_BeginReadBackward_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Helpers_IODispatcherAsync_CancellationScope_System_String_System_Int64_System_Int32_System_Boolean_IPrincipal_Action_EventStore_Core_Messages_ClientMessage_ReadStreamEventsBackwardCompleted__Action_" data-uid="EventStore.Core.Helpers.IODispatcherAsync.BeginReadBackward(EventStore.Core.Helpers.IODispatcher,EventStore.Core.Helpers.IODispatcherAsync.CancellationScope,System.String,System.Int64,System.Int32,System.Boolean,IPrincipal,Action{EventStore.Core.Messages.ClientMessage.ReadStreamEventsBackwardCompleted},Action)">BeginReadBackward(IODispatcher, IODispatcherAsync.CancellationScope, String, Int64, Int32, Boolean, IPrincipal, Action&lt;ClientMessage.ReadStreamEventsBackwardCompleted&gt;, Action)</h4>
+  <h4 id="EventStore_Core_Helpers_IODispatcherAsync_BeginReadBackward_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Helpers_IODispatcherAsync_CancellationScope_System_String_System_Int64_System_Int32_System_Boolean_System_Security_Principal_IPrincipal_System_Action_EventStore_Core_Messages_ClientMessage_ReadStreamEventsBackwardCompleted__System_Action_" data-uid="EventStore.Core.Helpers.IODispatcherAsync.BeginReadBackward(EventStore.Core.Helpers.IODispatcher,EventStore.Core.Helpers.IODispatcherAsync.CancellationScope,System.String,System.Int64,System.Int32,System.Boolean,System.Security.Principal.IPrincipal,System.Action{EventStore.Core.Messages.ClientMessage.ReadStreamEventsBackwardCompleted},System.Action)">BeginReadBackward(IODispatcher, IODispatcherAsync.CancellationScope, String, Int64, Int32, Boolean, IPrincipal, Action&lt;ClientMessage.ReadStreamEventsBackwardCompleted&gt;, Action)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IODispatcherAsync.Step BeginReadBackward(this IODispatcher ioDispatcher, IODispatcherAsync.CancellationScope cancellationScope, string streamId, long fromEventNumber, int maxCount, bool resolveLinks, IPrincipal principal, Action&lt;ClientMessage.ReadStreamEventsBackwardCompleted&gt; handler, Action timeoutHandler)</code></pre>
   </div>
@@ -271,54 +274,44 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Helpers.IODispatcher.html">IODispatcher</a></td>
         <td><span class="parametername">ioDispatcher</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Helpers.IODispatcherAsync.CancellationScope.html">IODispatcherAsync.CancellationScope</a></td>
         <td><span class="parametername">cancellationScope</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">streamId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">fromEventNumber</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">maxCount</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">resolveLinks</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IPrincipal</span></td>
+        <td><span class="xref">System.Security.Principal.IPrincipal</span></td>
         <td><span class="parametername">principal</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.ReadStreamEventsBackwardCompleted.html">ClientMessage.ReadStreamEventsBackwardCompleted</a>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.ReadStreamEventsBackwardCompleted.html">ClientMessage.ReadStreamEventsBackwardCompleted</a>&gt;</td>
         <td><span class="parametername">handler</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span></td>
+        <td><span class="xref">System.Action</span></td>
         <td><span class="parametername">timeoutHandler</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -337,18 +330,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Helpers_IODispatcherAsync_BeginReadForward_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Helpers_IODispatcherAsync_CancellationScope_System_String_System_Int64_System_Int32_System_Boolean_IPrincipal_Action_EventStore_Core_Messages_ClientMessage_ReadStreamEventsForwardCompleted__Action_.md&amp;value=---%0Auid%3A%20EventStore.Core.Helpers.IODispatcherAsync.BeginReadForward(EventStore.Core.Helpers.IODispatcher%2CEventStore.Core.Helpers.IODispatcherAsync.CancellationScope%2CSystem.String%2CSystem.Int64%2CSystem.Int32%2CSystem.Boolean%2CIPrincipal%2CAction%7BEventStore.Core.Messages.ClientMessage.ReadStreamEventsForwardCompleted%7D%2CAction)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Helpers/IODispatcherAsync.cs/#L43">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Helpers_IODispatcherAsync_BeginReadForward_" data-uid="EventStore.Core.Helpers.IODispatcherAsync.BeginReadForward*"></a>
-  <h4 id="EventStore_Core_Helpers_IODispatcherAsync_BeginReadForward_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Helpers_IODispatcherAsync_CancellationScope_System_String_System_Int64_System_Int32_System_Boolean_IPrincipal_Action_EventStore_Core_Messages_ClientMessage_ReadStreamEventsForwardCompleted__Action_" data-uid="EventStore.Core.Helpers.IODispatcherAsync.BeginReadForward(EventStore.Core.Helpers.IODispatcher,EventStore.Core.Helpers.IODispatcherAsync.CancellationScope,System.String,System.Int64,System.Int32,System.Boolean,IPrincipal,Action{EventStore.Core.Messages.ClientMessage.ReadStreamEventsForwardCompleted},Action)">BeginReadForward(IODispatcher, IODispatcherAsync.CancellationScope, String, Int64, Int32, Boolean, IPrincipal, Action&lt;ClientMessage.ReadStreamEventsForwardCompleted&gt;, Action)</h4>
+  <h4 id="EventStore_Core_Helpers_IODispatcherAsync_BeginReadForward_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Helpers_IODispatcherAsync_CancellationScope_System_String_System_Int64_System_Int32_System_Boolean_System_Security_Principal_IPrincipal_System_Action_EventStore_Core_Messages_ClientMessage_ReadStreamEventsForwardCompleted__System_Action_" data-uid="EventStore.Core.Helpers.IODispatcherAsync.BeginReadForward(EventStore.Core.Helpers.IODispatcher,EventStore.Core.Helpers.IODispatcherAsync.CancellationScope,System.String,System.Int64,System.Int32,System.Boolean,System.Security.Principal.IPrincipal,System.Action{EventStore.Core.Messages.ClientMessage.ReadStreamEventsForwardCompleted},System.Action)">BeginReadForward(IODispatcher, IODispatcherAsync.CancellationScope, String, Int64, Int32, Boolean, IPrincipal, Action&lt;ClientMessage.ReadStreamEventsForwardCompleted&gt;, Action)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IODispatcherAsync.Step BeginReadForward(this IODispatcher ioDispatcher, IODispatcherAsync.CancellationScope cancellationScope, string streamId, long fromEventNumber, int maxCount, bool resolveLinks, IPrincipal principal, Action&lt;ClientMessage.ReadStreamEventsForwardCompleted&gt; handler, Action timeoutHandler)</code></pre>
   </div>
@@ -358,54 +348,44 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Helpers.IODispatcher.html">IODispatcher</a></td>
         <td><span class="parametername">ioDispatcher</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Helpers.IODispatcherAsync.CancellationScope.html">IODispatcherAsync.CancellationScope</a></td>
         <td><span class="parametername">cancellationScope</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">streamId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">fromEventNumber</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">maxCount</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">resolveLinks</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IPrincipal</span></td>
+        <td><span class="xref">System.Security.Principal.IPrincipal</span></td>
         <td><span class="parametername">principal</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.ReadStreamEventsForwardCompleted.html">ClientMessage.ReadStreamEventsForwardCompleted</a>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.ReadStreamEventsForwardCompleted.html">ClientMessage.ReadStreamEventsForwardCompleted</a>&gt;</td>
         <td><span class="parametername">handler</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span></td>
+        <td><span class="xref">System.Action</span></td>
         <td><span class="parametername">timeoutHandler</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -424,20 +404,17 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Helpers_IODispatcherAsync_BeginSubscribeAwake_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Helpers_IODispatcherAsync_CancellationScope_System_String_EventStore_Core_Data_TFPos_Action_EventStore_Core_Helpers_IODispatcherDelayedMessage__System_Nullable_Guid__.md&amp;value=---%0Auid%3A%20EventStore.Core.Helpers.IODispatcherAsync.BeginSubscribeAwake(EventStore.Core.Helpers.IODispatcher%2CEventStore.Core.Helpers.IODispatcherAsync.CancellationScope%2CSystem.String%2CEventStore.Core.Data.TFPos%2CAction%7BEventStore.Core.Helpers.IODispatcherDelayedMessage%7D%2CSystem.Nullable%7BGuid%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Helpers/IODispatcherAsync.cs/#L146">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Helpers_IODispatcherAsync_BeginSubscribeAwake_" data-uid="EventStore.Core.Helpers.IODispatcherAsync.BeginSubscribeAwake*"></a>
-  <h4 id="EventStore_Core_Helpers_IODispatcherAsync_BeginSubscribeAwake_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Helpers_IODispatcherAsync_CancellationScope_System_String_EventStore_Core_Data_TFPos_Action_EventStore_Core_Helpers_IODispatcherDelayedMessage__System_Nullable_Guid__" data-uid="EventStore.Core.Helpers.IODispatcherAsync.BeginSubscribeAwake(EventStore.Core.Helpers.IODispatcher,EventStore.Core.Helpers.IODispatcherAsync.CancellationScope,System.String,EventStore.Core.Data.TFPos,Action{EventStore.Core.Helpers.IODispatcherDelayedMessage},System.Nullable{Guid})">BeginSubscribeAwake(IODispatcher, IODispatcherAsync.CancellationScope, String, TFPos, Action&lt;IODispatcherDelayedMessage&gt;, Nullable&lt;Guid&gt;)</h4>
+  <h4 id="EventStore_Core_Helpers_IODispatcherAsync_BeginSubscribeAwake_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Helpers_IODispatcherAsync_CancellationScope_System_String_EventStore_Core_Data_TFPos_System_Action_EventStore_Core_Helpers_IODispatcherDelayedMessage__System_Nullable_System_Guid__" data-uid="EventStore.Core.Helpers.IODispatcherAsync.BeginSubscribeAwake(EventStore.Core.Helpers.IODispatcher,EventStore.Core.Helpers.IODispatcherAsync.CancellationScope,System.String,EventStore.Core.Data.TFPos,System.Action{EventStore.Core.Helpers.IODispatcherDelayedMessage},System.Nullable{System.Guid})">BeginSubscribeAwake(IODispatcher, IODispatcherAsync.CancellationScope, String, TFPos, Action&lt;IODispatcherDelayedMessage&gt;, Nullable&lt;Guid&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IODispatcherAsync.Step BeginSubscribeAwake(this IODispatcher ioDispatcher, IODispatcherAsync.CancellationScope cancellationScope, string streamId, TFPos from, Action&lt;IODispatcherDelayedMessage&gt; handler, Guid? correlationId = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IODispatcherAsync.Step BeginSubscribeAwake(this IODispatcher ioDispatcher, IODispatcherAsync.CancellationScope cancellationScope, string streamId, TFPos from, Action&lt;IODispatcherDelayedMessage&gt; handler, Guid? correlationId = default(Guid? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -445,39 +422,32 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Helpers.IODispatcher.html">IODispatcher</a></td>
         <td><span class="parametername">ioDispatcher</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Helpers.IODispatcherAsync.CancellationScope.html">IODispatcherAsync.CancellationScope</a></td>
         <td><span class="parametername">cancellationScope</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">streamId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Data.TFPos.html">TFPos</a></td>
         <td><span class="parametername">from</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.Core.Helpers.IODispatcherDelayedMessage.html">IODispatcherDelayedMessage</a>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.Core.Helpers.IODispatcherDelayedMessage.html">IODispatcherDelayedMessage</a>&gt;</td>
         <td><span class="parametername">handler</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Guid</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Guid</span>&gt;</td>
         <td><span class="parametername">correlationId</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -496,18 +466,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Helpers_IODispatcherAsync_BeginUpdateStreamAcl_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Helpers_IODispatcherAsync_CancellationScope_System_String_System_Int64_IPrincipal_EventStore_Core_Data_StreamMetadata_Action_EventStore_Core_Messages_ClientMessage_WriteEventsCompleted__.md&amp;value=---%0Auid%3A%20EventStore.Core.Helpers.IODispatcherAsync.BeginUpdateStreamAcl(EventStore.Core.Helpers.IODispatcher%2CEventStore.Core.Helpers.IODispatcherAsync.CancellationScope%2CSystem.String%2CSystem.Int64%2CIPrincipal%2CEventStore.Core.Data.StreamMetadata%2CAction%7BEventStore.Core.Messages.ClientMessage.WriteEventsCompleted%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Helpers/IODispatcherAsync.cs/#L164">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Helpers_IODispatcherAsync_BeginUpdateStreamAcl_" data-uid="EventStore.Core.Helpers.IODispatcherAsync.BeginUpdateStreamAcl*"></a>
-  <h4 id="EventStore_Core_Helpers_IODispatcherAsync_BeginUpdateStreamAcl_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Helpers_IODispatcherAsync_CancellationScope_System_String_System_Int64_IPrincipal_EventStore_Core_Data_StreamMetadata_Action_EventStore_Core_Messages_ClientMessage_WriteEventsCompleted__" data-uid="EventStore.Core.Helpers.IODispatcherAsync.BeginUpdateStreamAcl(EventStore.Core.Helpers.IODispatcher,EventStore.Core.Helpers.IODispatcherAsync.CancellationScope,System.String,System.Int64,IPrincipal,EventStore.Core.Data.StreamMetadata,Action{EventStore.Core.Messages.ClientMessage.WriteEventsCompleted})">BeginUpdateStreamAcl(IODispatcher, IODispatcherAsync.CancellationScope, String, Int64, IPrincipal, StreamMetadata, Action&lt;ClientMessage.WriteEventsCompleted&gt;)</h4>
+  <h4 id="EventStore_Core_Helpers_IODispatcherAsync_BeginUpdateStreamAcl_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Helpers_IODispatcherAsync_CancellationScope_System_String_System_Int64_System_Security_Principal_IPrincipal_EventStore_Core_Data_StreamMetadata_System_Action_EventStore_Core_Messages_ClientMessage_WriteEventsCompleted__" data-uid="EventStore.Core.Helpers.IODispatcherAsync.BeginUpdateStreamAcl(EventStore.Core.Helpers.IODispatcher,EventStore.Core.Helpers.IODispatcherAsync.CancellationScope,System.String,System.Int64,System.Security.Principal.IPrincipal,EventStore.Core.Data.StreamMetadata,System.Action{EventStore.Core.Messages.ClientMessage.WriteEventsCompleted})">BeginUpdateStreamAcl(IODispatcher, IODispatcherAsync.CancellationScope, String, Int64, IPrincipal, StreamMetadata, Action&lt;ClientMessage.WriteEventsCompleted&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IODispatcherAsync.Step BeginUpdateStreamAcl(this IODispatcher ioDispatcher, IODispatcherAsync.CancellationScope cancellationScope, string streamId, long expectedVersion, IPrincipal principal, StreamMetadata metadata, Action&lt;ClientMessage.WriteEventsCompleted&gt; handler)</code></pre>
   </div>
@@ -517,44 +484,36 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Helpers.IODispatcher.html">IODispatcher</a></td>
         <td><span class="parametername">ioDispatcher</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Helpers.IODispatcherAsync.CancellationScope.html">IODispatcherAsync.CancellationScope</a></td>
         <td><span class="parametername">cancellationScope</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">streamId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">expectedVersion</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IPrincipal</span></td>
+        <td><span class="xref">System.Security.Principal.IPrincipal</span></td>
         <td><span class="parametername">principal</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Data.StreamMetadata.html">StreamMetadata</a></td>
         <td><span class="parametername">metadata</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.WriteEventsCompleted.html">ClientMessage.WriteEventsCompleted</a>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.WriteEventsCompleted.html">ClientMessage.WriteEventsCompleted</a>&gt;</td>
         <td><span class="parametername">handler</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -573,18 +532,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Helpers_IODispatcherAsync_BeginWriteEvents_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Helpers_IODispatcherAsync_CancellationScope_System_String_System_Int64_IPrincipal_EventStore_Core_Data_Event___Action_EventStore_Core_Messages_ClientMessage_WriteEventsCompleted__.md&amp;value=---%0Auid%3A%20EventStore.Core.Helpers.IODispatcherAsync.BeginWriteEvents(EventStore.Core.Helpers.IODispatcher%2CEventStore.Core.Helpers.IODispatcherAsync.CancellationScope%2CSystem.String%2CSystem.Int64%2CIPrincipal%2CEventStore.Core.Data.Event%5B%5D%2CAction%7BEventStore.Core.Messages.ClientMessage.WriteEventsCompleted%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Helpers/IODispatcherAsync.cs/#L111">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Helpers_IODispatcherAsync_BeginWriteEvents_" data-uid="EventStore.Core.Helpers.IODispatcherAsync.BeginWriteEvents*"></a>
-  <h4 id="EventStore_Core_Helpers_IODispatcherAsync_BeginWriteEvents_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Helpers_IODispatcherAsync_CancellationScope_System_String_System_Int64_IPrincipal_EventStore_Core_Data_Event___Action_EventStore_Core_Messages_ClientMessage_WriteEventsCompleted__" data-uid="EventStore.Core.Helpers.IODispatcherAsync.BeginWriteEvents(EventStore.Core.Helpers.IODispatcher,EventStore.Core.Helpers.IODispatcherAsync.CancellationScope,System.String,System.Int64,IPrincipal,EventStore.Core.Data.Event[],Action{EventStore.Core.Messages.ClientMessage.WriteEventsCompleted})">BeginWriteEvents(IODispatcher, IODispatcherAsync.CancellationScope, String, Int64, IPrincipal, Event[], Action&lt;ClientMessage.WriteEventsCompleted&gt;)</h4>
+  <h4 id="EventStore_Core_Helpers_IODispatcherAsync_BeginWriteEvents_EventStore_Core_Helpers_IODispatcher_EventStore_Core_Helpers_IODispatcherAsync_CancellationScope_System_String_System_Int64_System_Security_Principal_IPrincipal_EventStore_Core_Data_Event___System_Action_EventStore_Core_Messages_ClientMessage_WriteEventsCompleted__" data-uid="EventStore.Core.Helpers.IODispatcherAsync.BeginWriteEvents(EventStore.Core.Helpers.IODispatcher,EventStore.Core.Helpers.IODispatcherAsync.CancellationScope,System.String,System.Int64,System.Security.Principal.IPrincipal,EventStore.Core.Data.Event[],System.Action{EventStore.Core.Messages.ClientMessage.WriteEventsCompleted})">BeginWriteEvents(IODispatcher, IODispatcherAsync.CancellationScope, String, Int64, IPrincipal, Event[], Action&lt;ClientMessage.WriteEventsCompleted&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static IODispatcherAsync.Step BeginWriteEvents(this IODispatcher ioDispatcher, IODispatcherAsync.CancellationScope cancellationScope, string streamId, long expectedVersion, IPrincipal principal, Event[] events, Action&lt;ClientMessage.WriteEventsCompleted&gt; handler)</code></pre>
   </div>
@@ -594,44 +550,36 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Helpers.IODispatcher.html">IODispatcher</a></td>
         <td><span class="parametername">ioDispatcher</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Helpers.IODispatcherAsync.CancellationScope.html">IODispatcherAsync.CancellationScope</a></td>
         <td><span class="parametername">cancellationScope</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">streamId</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int64</span></td>
         <td><span class="parametername">expectedVersion</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IPrincipal</span></td>
+        <td><span class="xref">System.Security.Principal.IPrincipal</span></td>
         <td><span class="parametername">principal</span></td>
-        <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="EventStore.Core.Data.Event.html">Event</a>[]</td>
         <td><span class="parametername">events</span></td>
-        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.WriteEventsCompleted.html">ClientMessage.WriteEventsCompleted</a>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.Core.Messages.ClientMessage.WriteEventsCompleted.html">ClientMessage.WriteEventsCompleted</a>&gt;</td>
         <td><span class="parametername">handler</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -650,18 +598,15 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Helpers_IODispatcherAsync_Run_EventStore_Core_Helpers_IODispatcherAsync_Step_.md&amp;value=---%0Auid%3A%20EventStore.Core.Helpers.IODispatcherAsync.Run(EventStore.Core.Helpers.IODispatcherAsync.Step)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Helpers/IODispatcherAsync.cs/#L39">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Helpers_IODispatcherAsync_Run_" data-uid="EventStore.Core.Helpers.IODispatcherAsync.Run*"></a>
   <h4 id="EventStore_Core_Helpers_IODispatcherAsync_Run_EventStore_Core_Helpers_IODispatcherAsync_Step_" data-uid="EventStore.Core.Helpers.IODispatcherAsync.Run(EventStore.Core.Helpers.IODispatcherAsync.Step)">Run(IODispatcherAsync.Step)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void Run(this IODispatcherAsync.Step action)</code></pre>
   </div>
@@ -671,29 +616,24 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Core.Helpers.IODispatcherAsync.Step.html">IODispatcherAsync.Step</a></td>
         <td><span class="parametername">action</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Helpers_IODispatcherAsync_Run_IEnumerable_EventStore_Core_Helpers_IODispatcherAsync_Step__.md&amp;value=---%0Auid%3A%20EventStore.Core.Helpers.IODispatcherAsync.Run(IEnumerable%7BEventStore.Core.Helpers.IODispatcherAsync.Step%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Helpers/IODispatcherAsync.cs/#L34">View Source</a>
-  </span>
+  
+  
   <a id="EventStore_Core_Helpers_IODispatcherAsync_Run_" data-uid="EventStore.Core.Helpers.IODispatcherAsync.Run*"></a>
-  <h4 id="EventStore_Core_Helpers_IODispatcherAsync_Run_IEnumerable_EventStore_Core_Helpers_IODispatcherAsync_Step__" data-uid="EventStore.Core.Helpers.IODispatcherAsync.Run(IEnumerable{EventStore.Core.Helpers.IODispatcherAsync.Step})">Run(IEnumerable&lt;IODispatcherAsync.Step&gt;)</h4>
+  <h4 id="EventStore_Core_Helpers_IODispatcherAsync_Run_System_Collections_Generic_IEnumerable_EventStore_Core_Helpers_IODispatcherAsync_Step__" data-uid="EventStore.Core.Helpers.IODispatcherAsync.Run(System.Collections.Generic.IEnumerable{EventStore.Core.Helpers.IODispatcherAsync.Step})">Run(IEnumerable&lt;IODispatcherAsync.Step&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
+  
   <h5 class="decalaration">Declaration</h5>
+  
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static void Run(this IEnumerable&lt;IODispatcherAsync.Step&gt; actions)</code></pre>
   </div>
@@ -703,14 +643,12 @@
       <tr>
         <th>Type</th>
         <th>Name</th>
-        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="EventStore.Core.Helpers.IODispatcherAsync.Step.html">IODispatcherAsync.Step</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="EventStore.Core.Helpers.IODispatcherAsync.Step.html">IODispatcherAsync.Step</a>&gt;</td>
         <td><span class="parametername">actions</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -723,12 +661,6 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/new/master/apiSpec/new?filename=EventStore_Core_Helpers_IODispatcherAsync.md&amp;value=---%0Auid%3A%20EventStore.Core.Helpers.IODispatcherAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/ChrisChinchilla/EventStore/blob/master/src/EventStore.Core/Helpers/IODispatcherAsync.cs/#L12" class="contribution-link">View Source</a>
-                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
