@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PublishSubscribeDispatcher&lt;TGuid, TSubscribeRequest, TControlMessageBase, TResponseBase&gt;
    | Event Store ">
-    <meta name="generator" content="docfx 2.42.4.0">
+    <meta name="generator" content="docfx 2.43.3.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -135,7 +135,6 @@
   <h5 id="EventStore_Projections_Core_Services_PublishSubscribeDispatcher_4_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class PublishSubscribeDispatcher&lt;TGuid, TSubscribeRequest, TControlMessageBase, TResponseBase&gt;
-
     where TSubscribeRequest : Message where TControlMessageBase : Message where TResponseBase : Message</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
@@ -254,7 +253,6 @@
   
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public IHandle&lt;T&gt; CreateSubscriber&lt;T&gt;()
-
     where T : TResponseBase</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
@@ -298,7 +296,6 @@
   
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool Handle&lt;T&gt;(T message)
-
     where T : TResponseBase</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

@@ -12,7 +12,7 @@
     <title>Competing Consumers | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Competing Consumers | Event Store ">
-    <meta name="generator" content="docfx 2.42.4.0">
+    <meta name="generator" content="docfx 2.43.3.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -345,28 +345,12 @@ _result = _conn.UpdatePersistentSubscriptionAsync(_stream,
 <p>When creating a persistent subscription, the settings allow for different consumer strategies via the <code>WithNamedConsumerStrategy</code> method. Built-in strategies are defined in the enum <code>SystemConsumerStrategies</code>.</p>
 <div class="NOTE"><h5>Note</h5><p>HTTP clients bypass the consumer strategy which means it ignores any ordering or pinning.</p>
 </div>
-<table>
-<thead>
-<tr>
-<th>Strategy Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>RoundRobin (default)</td>
-<td>Distributes events to all clients evenly. If the client bufferSize is reached the client is ignored until events are acknowledged/not acknowledged.</td>
-</tr>
-<tr>
-<td>DispatchToSingle</td>
-<td>Distributes events to a single client until the bufferSize is reached. After which the next client is selected in a round robin style, and the process is repeated.</td>
-</tr>
-<tr>
-<td>Pinned</td>
-<td>For use with an indexing projection such as the system $by_category projection.</td>
-</tr>
-</tbody>
-</table>
+<h3 id="roundrobin-default">RoundRobin (default)</h3>
+<p>Distributes events to all clients evenly. If the client bufferSize is reached the client is ignored until events are acknowledged/not acknowledged.                 |</p>
+<h3 id="dispatchtosingle">DispatchToSingle</h3>
+<p>Distributes events to a single client until the bufferSize is reached. After which the next client is selected in a round robin style, and the process is repeated.</p>
+<h3 id="pinned">Pinned</h3>
+<p>For use with an indexing projection such as the system <code>$by_category</code> projection.</p>
 <p>Event Store inspects event for its source stream id, hashing the id to one of 1024 buckets assigned to individual clients. When a client disconnects it&#39;s buckets are assigned to other clients. When a client connects, it is assigned some of the existing buckets. This naively attempts to maintain a balanced workload.</p>
 <p>The main aim of this strategy is to decrease the likelihood of concurrency and ordering issues while maintaining load balancing. <em>This is not a guarantee</em>, and you should handle the usual ordering and concurrency issues.</p>
 </article>

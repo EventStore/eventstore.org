@@ -12,7 +12,7 @@
     <title>Stream Metadata | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Stream Metadata | Event Store ">
-    <meta name="generator" content="docfx 2.42.4.0">
+    <meta name="generator" content="docfx 2.43.3.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -94,12 +94,6 @@
 <h1 id="stream-metadata">Stream Metadata</h1>
 
 <p>Every stream in Event Store has metadata associated with it. Internally, the metadata includes information such as the ACL of the stream and the maximum count and age for the events in the stream. Client code can also put information into stream metadata for use with projections or through the client API.</p>
-<p>A common use of this information is to store associated details about an event that is not part of the event. Examples of these are:</p>
-<ul>
-<li>&quot;which user wrote the event?&quot;</li>
-<li>&quot;Which application server were they talking to?&quot;</li>
-<li>&quot;From what IP address did the request come from?&quot;</li>
-</ul>
 <p>This information is not part of the actual event but is metadata associated with the event. Event Store stores stream metadata as JSON, and you can access it over the HTTP APIs.</p>
 <h2 id="methods">Methods</h2>
 <h3 id="read-stream-metadata">Read Stream Metadata</h3>

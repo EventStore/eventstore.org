@@ -12,7 +12,7 @@
     <title>Stream Metadata | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Stream Metadata | Event Store ">
-    <meta name="generator" content="docfx 2.42.4.0">
+    <meta name="generator" content="docfx 2.43.3.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,14 +93,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="stream-metadata">Stream Metadata</h1>
 
-<p>By default streams you create in Event Store have no metadata associated with it. Internally, the metadata includes information such as the ACL of the stream, the maximum count and age for the events in the stream. Client code can also add information into stream metadata for use with projections or the client API.</p>
-<p>A common use case is to store information associated with an event that is not part of the event.</p>
-<p>Examples of this are:</p>
-<ul>
-<li>Which user wrote the event.</li>
-<li>Which application server were they talking to.</li>
-<li>What IP address did the request come from?</li>
-</ul>
+<p>By default streams you create in Event Store have no metadata associated with them. Internally, the metadata includes information such as the ACL of the stream, the maximum count and age for the events in the stream. Client code can also add information into stream metadata for use with projections or the client API.</p>
 <p>Stream metadata is stored internally as JSON, and you can access it over the HTTP API.</p>
 <h2 id="reading-stream-metadata">Reading Stream Metadata</h2>
 <p>To read the metadata, issue a <code>GET</code> request to the attached metadata resource, which is typically of the form:</p>
@@ -189,7 +182,7 @@ Keep-Alive: timeout=15,max=100
 </li>
 </ul>
 <section id="tabpanel_p0WG6wXVnG-2_tabid-5" role="tabpanel" data-tab="tabid-5">
-<pre><code class="lang-bash" name="http-api-missing-credentials-request">curl -i -H &quot;Accept:application/vnd.eventstore.atom+json&quot; http://127.0.0.1:2113/streams/%24userss
+<pre><code class="lang-bash" name="http-api-missing-credentials-request">curl -i -H &quot;Accept:application/vnd.eventstore.atom+json&quot; http://127.0.0.1:2113/streams/%24users
 </code></pre></section>
 <section id="tabpanel_p0WG6wXVnG-2_tabid-6" role="tabpanel" data-tab="tabid-6" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-json" name="http-api-missing-credentials-response">HTTP/1.1 401 Unauthorized

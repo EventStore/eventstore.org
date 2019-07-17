@@ -12,7 +12,7 @@
     <title>Step 2 - Read events from a stream and subscribe to changes | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Step 2 - Read events from a stream and subscribe to changes | Event Store ">
-    <meta name="generator" content="docfx 2.42.4.0">
+    <meta name="generator" content="docfx 2.43.3.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -196,7 +196,7 @@ Keep-Alive: timeout=15,max=100
 <pre><code class="lang-csharp" name="getting-started-read-stream-request">var readEvents = conn.ReadStreamEventsForwardAsync(streamName, 0, 10, true).Result;
 foreach (var evt in readEvents.Events)
     Console.WriteLine(Encoding.UTF8.GetString(evt.Event.Data));
-</code></pre><div class="NEXT"><h5>Next Steps</h5><p><a href="../../dotnet-api/reading-events/index.html">Read this guide</a> for more information on how to read events with the .NET API.</p>
+</code></pre><div class="NEXT"><h5>Next Steps</h5><p><a href="../../dotnet-api/reading-events/index.html">read this guide</a> for more information on how to read events with the .NET API.</p>
 </div>
 </section>
 <section id="tabpanel_ewz4UtAAbO-1_tabid-jvm-client" role="tabpanel" data-tab="tabid-jvm-client" aria-hidden="true" hidden="hidden">
