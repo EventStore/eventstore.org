@@ -48,6 +48,8 @@
     
   </head>
   <body data-spy="scroll" data-target="#affix">
+    <script src="https://secure.perk0mean.com/js/168910.js"></script>
+    <noscript><img alt="" src="https://secure.perk0mean.com/168910.png" style="display:none;"></noscript>
     <div id="wrapper">
       <header class="site-banner" role="banner">
         <div class="inner-container">
@@ -242,7 +244,7 @@ public bool AlwaysKeepScavenged { get; set; }</code></pre>
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Path to the configuration file for authentication configuration (if applicable).&quot;, &quot;Authentication Options&quot;)]
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Path to the configuration file for authentication configuration (if applicable).&quot;, &quot;Authentication/Authorization Options&quot;)]
 public string AuthenticationConfig { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -268,7 +270,7 @@ public string AuthenticationConfig { get; set; }</code></pre>
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The type of authentication to use.&quot;, &quot;Authentication Options&quot;)]
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;The type of authentication to use.&quot;, &quot;Authentication/Authorization Options&quot;)]
 public string AuthenticationType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -775,6 +777,32 @@ public string[] Defines { get; set; }</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span>[]</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClusterNode_ClusterNodeOptions_DisableFirstLevelHttpAuthorization_" data-uid="EventStore.ClusterNode.ClusterNodeOptions.DisableFirstLevelHttpAuthorization*"></a>
+  <h4 id="EventStore_ClusterNode_ClusterNodeOptions_DisableFirstLevelHttpAuthorization" data-uid="EventStore.ClusterNode.ClusterNodeOptions.DisableFirstLevelHttpAuthorization">DisableFirstLevelHttpAuthorization</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ArgDescription(&quot;Disables first level authorization checks on all HTTP endpoints. This option can be enabled for backwards compatibility with EventStore 5.0.1 or earlier.&quot;, &quot;Authentication/Authorization Options&quot;)]
+public bool DisableFirstLevelHttpAuthorization { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
       </tr>
     </tbody>
   </table>

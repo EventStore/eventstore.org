@@ -46,6 +46,8 @@
     
   </head>
   <body data-spy="scroll" data-target="#affix">
+    <script src="https://secure.perk0mean.com/js/168910.js"></script>
+    <noscript><img alt="" src="https://secure.perk0mean.com/168910.png" style="display:none;"></noscript>
     <div id="wrapper">
       <header class="site-banner" role="banner">
         <div class="inner-container">
@@ -96,9 +98,10 @@
 <h2 id="default-users">Default Users</h2>
 <p>Event Store provides two default users, <code>$ops</code> and <code>$admin</code>.</p>
 <p><code>$admin</code> has full access to everything in Event Store. It can read and write to protected streams, which is any stream that starts with $, such as <code>$projections-master</code>. Protected streams are usually system streams, for example, <code>$projections-master</code> manages some of the projections&#39; states. The <code>$admin</code> user can also run operational commands, such as scavenges and shutdowns on Event Store.</p>
-<p><code>$ops</code> can run operational commands like the <code>$admin</code> user, but cannot read protected streams.</p>
+<p>An <code>$ops</code> user can do everything that an <code>$admin</code> can do except manage users and read from system streams (except for <code>$scavenges</code> and <code>$scavenges-streams</code>).</p>
 <h2 id="new-users">New Users</h2>
-<p>New users created in Event Store are standard users. They can&#39;t read protected streams or perform operations. If you add a user into the <code>$ops</code> or <code>$admins</code> group, they have the same level of access as those users.</p>
+<p>New users created in Event Store are standard non-authenticated users. Non-authenticated users are allowed <code>GET</code> access to the <code>/info</code>, <code>/ping</code>, <code>/stats</code>, <code>/elections</code>, and <code>/gossip</code> system streams.</p>
+<p><code>POST</code> access to the <code>/elections</code> and <code>/gossip</code> system streams is only allowed on the internal HTTP service.</p>
 <p>By default, any user can read any non-protected stream unless there is an ACL preventing that.</p>
 <h2 id="stream-acls">Stream ACLs</h2>
 <p>Event Store keeps the ACL of a stream in the streams <a href="../metadata-and-reserved-names/index.html">metadata</a> as JSON with the below definition:</p>

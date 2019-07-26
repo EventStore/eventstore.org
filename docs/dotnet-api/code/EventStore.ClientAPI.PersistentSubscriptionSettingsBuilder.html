@@ -1,0 +1,1039 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Class PersistentSubscriptionSettingsBuilder
+   | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PersistentSubscriptionSettingsBuilder
+   | Event Store ">
+    <meta name="generator" content="docfx 2.43.3.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <script src="https://secure.perk0mean.com/js/168910.js"></script>
+    <noscript><img alt="" src="https://secure.perk0mean.com/168910.png" style="display:none;"></noscript>
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder">
+  
+  
+  <h1 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder" class="text-break">Class PersistentSubscriptionSettingsBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>Builds a <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettings.html">PersistentSubscriptionSettings</a> object.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PersistentSubscriptionSettingsBuilder</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.ClientAPI.html">EventStore.ClientAPI</a></h6>
+  <h6><strong>Assembly</strong>: EventStore.ClientAPI.dll</h6>
+  <h5 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PersistentSubscriptionSettingsBuilder</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_Build_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.Build*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_Build" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.Build">Build()</h4>
+  <div class="markdown level1 summary"><p>Builds a <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettings.html">PersistentSubscriptionSettings</a> object from a <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionSettings Build()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettings.html">PersistentSubscriptionSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_CheckPointAfter_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.CheckPointAfter*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_CheckPointAfter_System_TimeSpan_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.CheckPointAfter(System.TimeSpan)">CheckPointAfter(TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Sets that the backend should try to checkpoint the subscription after some
+period of time. Note that if the increment of the checkpoint would be below
+the minimum the stream will not be checkpointed at this time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionSettingsBuilder CheckPointAfter(TimeSpan time)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">time</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_CheckPointAfter_System_TimeSpan__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>It is important to tweak checkpointing for high performance streams as they cause 
+writes to happen back in the system. There is a trade off between the number of
+writes that can happen in varying failure scenarios and the frequency of 
+writing out the checkpoints within the system. Normally settings such
+as once per second with a minimum of 5-10 messages and a high max to checkpoint should
+be a good compromise for most streams though you may want to change this if you
+for instance are doing hundreds of messages/second through the subscription.</p>
+</div>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_DoNotResolveLinkTos_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.DoNotResolveLinkTos*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_DoNotResolveLinkTos" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.DoNotResolveLinkTos">DoNotResolveLinkTos()</h4>
+  <div class="markdown level1 summary"><p>Sets the option to not resolve linktos on events that are found for this subscription.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionSettingsBuilder DoNotResolveLinkTos()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_DontTimeoutMessages_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.DontTimeoutMessages*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_DontTimeoutMessages" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.DontTimeoutMessages">DontTimeoutMessages()</h4>
+  <div class="markdown level1 summary"><p>Sets the timeout timespan to about 30k years. If you need larger please let us know.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionSettingsBuilder DontTimeoutMessages()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_MaximumCheckPointCountOf_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.MaximumCheckPointCountOf*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_MaximumCheckPointCountOf_System_Int32_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.MaximumCheckPointCountOf(System.Int32)">MaximumCheckPointCountOf(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the largest increment the subscription will checkpoint. If this value is 
+reached the subscription will immediately write a checkpoint. As such this value
+should normally be reasonably large so as not to cause too many writes to occur in 
+the subscription</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionSettingsBuilder MaximumCheckPointCountOf(int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_MaximumCheckPointCountOf_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>It is important to tweak checkpointing for high performance streams as they cause 
+writes to happen back in the system. There is a trade off between the number of
+writes that can happen in varying failure scenarios and the frequency of 
+writing out the checkpoints within the system. Normally settings such
+as once per second with a minimum of 5-10 messages and a high max to checkpoint should
+be a good compromise for most streams though you may want to change this if you
+for instance are doing hundreds of messages/second through the subscription.</p>
+</div>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_MinimumCheckPointCountOf_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.MinimumCheckPointCountOf*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_MinimumCheckPointCountOf_System_Int32_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.MinimumCheckPointCountOf(System.Int32)">MinimumCheckPointCountOf(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the minimum checkpoint count. The subscription will not increment a checkpoint
+below this value eg if there is one item to checkpoint and it is set to five it
+will not checkpoint</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionSettingsBuilder MinimumCheckPointCountOf(int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_MinimumCheckPointCountOf_System_Int32__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>It is important to tweak checkpointing for high performance streams as they cause 
+writes to happen back in the system. There is a trade off between the number of
+writes that can happen in varying failure scenarios and the frequency of 
+writing out the checkpoints within the system. Normally settings such
+as once per second with a minimum of 5-10 messages and a high max to checkpoint should
+be a good compromise for most streams though you may want to change this if you
+for instance are doing hundreds of messages/second through the subscription.</p>
+</div>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_PreferDispatchToSingle_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.PreferDispatchToSingle*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_PreferDispatchToSingle" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.PreferDispatchToSingle">PreferDispatchToSingle()</h4>
+  <div class="markdown level1 summary"><p>If set the subscription will prefer if possible to dispatch only to a single of the connected
+clients. If however the buffer limits are reached on that client it will begin sending to other 
+clients.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionSettingsBuilder PreferDispatchToSingle()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_PreferRoundRobin_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.PreferRoundRobin*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_PreferRoundRobin" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.PreferRoundRobin">PreferRoundRobin()</h4>
+  <div class="markdown level1 summary"><p>If set the subscription will prefer if possible to round robin between the clients that
+are connected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionSettingsBuilder PreferRoundRobin()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_ResolveLinkTos_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.ResolveLinkTos*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_ResolveLinkTos" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.ResolveLinkTos">ResolveLinkTos()</h4>
+  <div class="markdown level1 summary"><p>Sets the option to resolve linktos on events that are found for this subscription.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionSettingsBuilder ResolveLinkTos()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_StartFrom_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.StartFrom*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_StartFrom_System_Int64_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.StartFrom(System.Int64)">StartFrom(Int64)</h4>
+  <div class="markdown level1 summary"><p>Sets that the subscription should start from a specified location of the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionSettingsBuilder StartFrom(long position)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">position</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_StartFromBeginning_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.StartFromBeginning*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_StartFromBeginning" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.StartFromBeginning">StartFromBeginning()</h4>
+  <div class="markdown level1 summary"><p>Sets that the subscription should start from the beginning of the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionSettingsBuilder StartFromBeginning()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_StartFromCurrent_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.StartFromCurrent*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_StartFromCurrent" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.StartFromCurrent">StartFromCurrent()</h4>
+  <div class="markdown level1 summary"><p>Sets that the subscription should start from where the stream is when the subscription is first connected.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionSettingsBuilder StartFromCurrent()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_WithBufferSizeOf_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.WithBufferSizeOf*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_WithBufferSizeOf_System_Int32_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.WithBufferSizeOf(System.Int32)">WithBufferSizeOf(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the size of the read batch used when paging in history for the subscription
+sizes should not be too big ...</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionSettingsBuilder WithBufferSizeOf(int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_WithExtraStatistics_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.WithExtraStatistics*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_WithExtraStatistics" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.WithExtraStatistics">WithExtraStatistics()</h4>
+  <div class="markdown level1 summary"><p>Sets the option to include further latency statistics. These statistics have a cost and should not be used
+in high performance situations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionSettingsBuilder WithExtraStatistics()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_WithLiveBufferSizeOf_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.WithLiveBufferSizeOf*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_WithLiveBufferSizeOf_System_Int32_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.WithLiveBufferSizeOf(System.Int32)">WithLiveBufferSizeOf(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the size of the live buffer for the subscription. This is the buffer used 
+to cache messages while sending messages as they happen. The count is
+in terms of the number of messages to cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionSettingsBuilder WithLiveBufferSizeOf(int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_WithMaxRetriesOf_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.WithMaxRetriesOf*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_WithMaxRetriesOf_System_Int32_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.WithMaxRetriesOf(System.Int32)">WithMaxRetriesOf(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the number of times a message should be retried before being considered a bad message</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionSettingsBuilder WithMaxRetriesOf(int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_WithMaxSubscriberCountOf_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.WithMaxSubscriberCountOf*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_WithMaxSubscriberCountOf_System_Int32_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.WithMaxSubscriberCountOf(System.Int32)">WithMaxSubscriberCountOf(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the maximum number of subscribers allowed to connect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionSettingsBuilder WithMaxSubscriberCountOf(int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_WithMessageTimeoutOf_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.WithMessageTimeoutOf*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_WithMessageTimeoutOf_System_TimeSpan_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.WithMessageTimeoutOf(System.TimeSpan)">WithMessageTimeoutOf(TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Sets the timeout for a message (will be retried if an ack is not received within this timespan)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionSettingsBuilder WithMessageTimeoutOf(TimeSpan timeout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">timeout</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_WithNamedConsumerStrategy_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.WithNamedConsumerStrategy*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_WithNamedConsumerStrategy_System_String_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.WithNamedConsumerStrategy(System.String)">WithNamedConsumerStrategy(String)</h4>
+  <div class="markdown level1 summary"><p>Sets the consumer strategy for distributing event to clients. See <a class="xref" href="EventStore.ClientAPI.Common.SystemConsumerStrategies.html">SystemConsumerStrategies</a> for system supported strategies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionSettingsBuilder WithNamedConsumerStrategy(string namedConsumerStrategy)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">namedConsumerStrategy</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_WithReadBatchOf_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.WithReadBatchOf*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_WithReadBatchOf_System_Int32_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.WithReadBatchOf(System.Int32)">WithReadBatchOf(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the size of the read batch used when paging in history for the subscription
+sizes should not be too big ...</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionSettingsBuilder WithReadBatchOf(int count)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">count</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></td>
+        <td><p>A new <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_op_Implicit_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.op_Implicit*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_op_Implicit_EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder__EventStore_ClientAPI_PersistentSubscriptionSettings" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.op_Implicit(EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder)~EventStore.ClientAPI.PersistentSubscriptionSettings">Implicit(PersistentSubscriptionSettingsBuilder to PersistentSubscriptionSettings)</h4>
+  <div class="markdown level1 summary"><p>Builds a <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettings.html">PersistentSubscriptionSettings</a> object from a <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator PersistentSubscriptionSettings(PersistentSubscriptionSettingsBuilder builder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.html">PersistentSubscriptionSettingsBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.PersistentSubscriptionSettings.html">PersistentSubscriptionSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJson_System_Object_">Json.ToJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_Serialize__1___0_">ProtobufExtensions.Serialize&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_SerializeToArray__1___0_">ProtobufExtensions.SerializeToArray&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

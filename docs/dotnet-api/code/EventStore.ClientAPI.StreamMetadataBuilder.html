@@ -1,0 +1,1647 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Class StreamMetadataBuilder
+   | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class StreamMetadataBuilder
+   | Event Store ">
+    <meta name="generator" content="docfx 2.43.3.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <script src="https://secure.perk0mean.com/js/168910.js"></script>
+    <noscript><img alt="" src="https://secure.perk0mean.com/168910.png" style="display:none;"></noscript>
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EventStore.ClientAPI.StreamMetadataBuilder">
+  
+  
+  <h1 id="EventStore_ClientAPI_StreamMetadataBuilder" data-uid="EventStore.ClientAPI.StreamMetadataBuilder" class="text-break">Class StreamMetadataBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>Builder for <a class="xref" href="EventStore.ClientAPI.StreamMetadata.html">StreamMetadata</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">StreamMetadataBuilder</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.ClientAPI.html">EventStore.ClientAPI</a></h6>
+  <h6><strong>Assembly</strong>: EventStore.ClientAPI.dll</h6>
+  <h5 id="EventStore_ClientAPI_StreamMetadataBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class StreamMetadataBuilder</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_CustomPropertyKeys_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.CustomPropertyKeys*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_CustomPropertyKeys" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.CustomPropertyKeys">CustomPropertyKeys</h4>
+  <div class="markdown level1 summary"><p>All existing custom property keys.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;string&gt; CustomPropertyKeys { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="EventStore_ClientAPI_StreamMetadataBuilder_CustomPropertyKeys_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Returns a copy of the key list so it&apos;s safe to enumerate whilst removing custom properties.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_Build_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.Build*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_Build" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.Build">Build()</h4>
+  <div class="markdown level1 summary"><p>Builds a <a class="xref" href="EventStore.ClientAPI.StreamMetadata.html">StreamMetadata</a> from a <a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadata Build()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadata.html">StreamMetadata</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_RemoveCustomProperty_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.RemoveCustomProperty*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_RemoveCustomProperty_System_String_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.RemoveCustomProperty(System.String)">RemoveCustomProperty(String)</h4>
+  <div class="markdown level1 summary"><p>Removes a custom property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder RemoveCustomProperty(string key)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetCacheControl_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCacheControl*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetCacheControl_System_TimeSpan_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCacheControl(System.TimeSpan)">SetCacheControl(TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Sets the amount of time for which the stream head is cachable.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetCacheControl(TimeSpan cacheControl)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">cacheControl</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_System_String_System_Boolean_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty(System.String,System.Boolean)">SetCustomProperty(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets a custom metadata property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetCustomProperty(string key, bool value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">value</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_System_String_System_Decimal_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty(System.String,System.Decimal)">SetCustomProperty(String, Decimal)</h4>
+  <div class="markdown level1 summary"><p>Sets a custom metadata property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetCustomProperty(string key, decimal value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Decimal</span></td>
+        <td><span class="parametername">value</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_System_String_System_Double_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty(System.String,System.Double)">SetCustomProperty(String, Double)</h4>
+  <div class="markdown level1 summary"><p>Sets a custom metadata property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetCustomProperty(string key, double value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">value</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_System_String_System_Int32_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty(System.String,System.Int32)">SetCustomProperty(String, Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets a custom metadata property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetCustomProperty(string key, int value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">value</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_System_String_System_Int64_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty(System.String,System.Int64)">SetCustomProperty(String, Int64)</h4>
+  <div class="markdown level1 summary"><p>Sets a custom metadata property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetCustomProperty(string key, long value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">value</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_System_String_System_Nullable_System_Boolean__" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty(System.String,System.Nullable{System.Boolean})">SetCustomProperty(String, Nullable&lt;Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Sets a custom metadata property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetCustomProperty(string key, bool? value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">value</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_System_String_System_Nullable_System_Decimal__" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty(System.String,System.Nullable{System.Decimal})">SetCustomProperty(String, Nullable&lt;Decimal&gt;)</h4>
+  <div class="markdown level1 summary"><p>Sets a custom metadata property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetCustomProperty(string key, decimal? value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Decimal</span>&gt;</td>
+        <td><span class="parametername">value</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_System_String_System_Nullable_System_Double__" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty(System.String,System.Nullable{System.Double})">SetCustomProperty(String, Nullable&lt;Double&gt;)</h4>
+  <div class="markdown level1 summary"><p>Sets a custom metadata property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetCustomProperty(string key, double? value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td><span class="parametername">value</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_System_String_System_Nullable_System_Int32__" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty(System.String,System.Nullable{System.Int32})">SetCustomProperty(String, Nullable&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Sets a custom metadata property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetCustomProperty(string key, int? value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">value</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_System_String_System_Nullable_System_Int64__" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty(System.String,System.Nullable{System.Int64})">SetCustomProperty(String, Nullable&lt;Int64&gt;)</h4>
+  <div class="markdown level1 summary"><p>Sets a custom metadata property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetCustomProperty(string key, long? value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td><span class="parametername">value</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_System_String_System_Nullable_System_Single__" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty(System.String,System.Nullable{System.Single})">SetCustomProperty(String, Nullable&lt;Single&gt;)</h4>
+  <div class="markdown level1 summary"><p>Sets a custom metadata property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetCustomProperty(string key, float? value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Single</span>&gt;</td>
+        <td><span class="parametername">value</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_System_String_System_Single_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty(System.String,System.Single)">SetCustomProperty(String, Single)</h4>
+  <div class="markdown level1 summary"><p>Sets a custom metadata property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetCustomProperty(string key, float value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">value</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomProperty_System_String_System_String_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomProperty(System.String,System.String)">SetCustomProperty(String, String)</h4>
+  <div class="markdown level1 summary"><p>Sets a custom metadata property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetCustomProperty(string key, string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomPropertyWithValueAsRawJsonString_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomPropertyWithValueAsRawJsonString*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetCustomPropertyWithValueAsRawJsonString_System_String_System_String_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetCustomPropertyWithValueAsRawJsonString(System.String,System.String)">SetCustomPropertyWithValueAsRawJsonString(String, String)</h4>
+  <div class="markdown level1 summary"><p>Sets a custom metadata property to a string of raw JSON.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetCustomPropertyWithValueAsRawJsonString(string key, string rawJson)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">key</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">rawJson</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetDeleteRole_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetDeleteRole*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetDeleteRole_System_String_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetDeleteRole(System.String)">SetDeleteRole(String)</h4>
+  <div class="markdown level1 summary"><p>Sets a single role name with delete permission for the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetDeleteRole(string role)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">role</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetDeleteRoles_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetDeleteRoles*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetDeleteRoles_System_String___" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetDeleteRoles(System.String[])">SetDeleteRoles(String[])</h4>
+  <div class="markdown level1 summary"><p>Sets role names with delete permission for the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetDeleteRoles(string[] roles)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">roles</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetMaxAge_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetMaxAge*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetMaxAge_System_TimeSpan_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetMaxAge(System.TimeSpan)">SetMaxAge(TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Sets the maximum age of events allowed in the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetMaxAge(TimeSpan maxAge)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">maxAge</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetMaxCount_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetMaxCount*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetMaxCount_System_Int64_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetMaxCount(System.Int64)">SetMaxCount(Int64)</h4>
+  <div class="markdown level1 summary"><p>Sets the maximum number of events allowed in the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetMaxCount(long maxCount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">maxCount</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetMetadataReadRole_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetMetadataReadRole*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetMetadataReadRole_System_String_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetMetadataReadRole(System.String)">SetMetadataReadRole(String)</h4>
+  <div class="markdown level1 summary"><p>Sets a single role name with metadata read permission for the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetMetadataReadRole(string role)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">role</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetMetadataReadRoles_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetMetadataReadRoles*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetMetadataReadRoles_System_String___" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetMetadataReadRoles(System.String[])">SetMetadataReadRoles(String[])</h4>
+  <div class="markdown level1 summary"><p>Sets role names with metadata read permission for the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetMetadataReadRoles(string[] roles)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">roles</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetMetadataWriteRole_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetMetadataWriteRole*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetMetadataWriteRole_System_String_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetMetadataWriteRole(System.String)">SetMetadataWriteRole(String)</h4>
+  <div class="markdown level1 summary"><p>Sets a single role name with metadata write permission for the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetMetadataWriteRole(string role)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">role</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetMetadataWriteRoles_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetMetadataWriteRoles*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetMetadataWriteRoles_System_String___" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetMetadataWriteRoles(System.String[])">SetMetadataWriteRoles(String[])</h4>
+  <div class="markdown level1 summary"><p>Sets role names with metadata write permission for the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetMetadataWriteRoles(string[] roles)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">roles</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetReadRole_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetReadRole*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetReadRole_System_String_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetReadRole(System.String)">SetReadRole(String)</h4>
+  <div class="markdown level1 summary"><p>Sets a single role name with read permission for the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetReadRole(string role)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">role</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetReadRoles_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetReadRoles*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetReadRoles_System_String___" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetReadRoles(System.String[])">SetReadRoles(String[])</h4>
+  <div class="markdown level1 summary"><p>Sets role names with read permission for the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetReadRoles(string[] roles)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">roles</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetTruncateBefore_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetTruncateBefore*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetTruncateBefore_System_Int64_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetTruncateBefore(System.Int64)">SetTruncateBefore(Int64)</h4>
+  <div class="markdown level1 summary"><p>Sets the event number from which previous events can be scavenged.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetTruncateBefore(long truncateBefore)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">truncateBefore</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetWriteRole_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetWriteRole*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetWriteRole_System_String_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetWriteRole(System.String)">SetWriteRole(String)</h4>
+  <div class="markdown level1 summary"><p>Sets a single role name with write permission for the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetWriteRole(string role)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">role</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_SetWriteRoles_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetWriteRoles*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_SetWriteRoles_System_String___" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.SetWriteRoles(System.String[])">SetWriteRoles(String[])</h4>
+  <div class="markdown level1 summary"><p>Sets role names with write permission for the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamMetadataBuilder SetWriteRoles(string[] roles)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">roles</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><p>The builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  
+  
+  <a id="EventStore_ClientAPI_StreamMetadataBuilder_op_Implicit_" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.op_Implicit*"></a>
+  <h4 id="EventStore_ClientAPI_StreamMetadataBuilder_op_Implicit_EventStore_ClientAPI_StreamMetadataBuilder__EventStore_ClientAPI_StreamMetadata" data-uid="EventStore.ClientAPI.StreamMetadataBuilder.op_Implicit(EventStore.ClientAPI.StreamMetadataBuilder)~EventStore.ClientAPI.StreamMetadata">Implicit(StreamMetadataBuilder to StreamMetadata)</h4>
+  <div class="markdown level1 summary"><p>Builds a <a class="xref" href="EventStore.ClientAPI.StreamMetadata.html">StreamMetadata</a> from a <a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator StreamMetadata(StreamMetadataBuilder builder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadataBuilder.html">StreamMetadataBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.StreamMetadata.html">StreamMetadata</a></td>
+        <td><p>A <a class="xref" href="EventStore.ClientAPI.StreamMetadata.html">StreamMetadata</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJsonBytes_System_Object_">Json.ToJsonBytes(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToJson_System_Object_">Json.ToJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Common.Utils.Json.html#EventStore_Common_Utils_Json_ToCanonicalJson_System_Object_">Json.ToCanonicalJson(Object)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_Serialize__1___0_">ProtobufExtensions.Serialize&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Core.Services.Transport.Tcp.ProtobufExtensions.html#EventStore_Core_Services_Transport_Tcp_ProtobufExtensions_SerializeToArray__1___0_">ProtobufExtensions.SerializeToArray&lt;T&gt;(T)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

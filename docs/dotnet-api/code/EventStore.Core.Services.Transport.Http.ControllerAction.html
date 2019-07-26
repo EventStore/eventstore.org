@@ -48,6 +48,8 @@
     
   </head>
   <body data-spy="scroll" data-target="#affix">
+    <script src="https://secure.perk0mean.com/js/168910.js"></script>
+    <noscript><img alt="" src="https://secure.perk0mean.com/168910.png" style="display:none;"></noscript>
     <div id="wrapper">
       <header class="site-banner" role="banner">
         <div class="inner-container">
@@ -130,14 +132,14 @@
   
   
   <a id="EventStore_Core_Services_Transport_Http_ControllerAction__ctor_" data-uid="EventStore.Core.Services.Transport.Http.ControllerAction.#ctor*"></a>
-  <h4 id="EventStore_Core_Services_Transport_Http_ControllerAction__ctor_System_String_System_String_EventStore_Transport_Http_ICodec___EventStore_Transport_Http_ICodec___" data-uid="EventStore.Core.Services.Transport.Http.ControllerAction.#ctor(System.String,System.String,EventStore.Transport.Http.ICodec[],EventStore.Transport.Http.ICodec[])">ControllerAction(String, String, ICodec[], ICodec[])</h4>
+  <h4 id="EventStore_Core_Services_Transport_Http_ControllerAction__ctor_System_String_System_String_EventStore_Transport_Http_ICodec___EventStore_Transport_Http_ICodec___EventStore_Core_Services_Transport_Http_AuthorizationLevel_" data-uid="EventStore.Core.Services.Transport.Http.ControllerAction.#ctor(System.String,System.String,EventStore.Transport.Http.ICodec[],EventStore.Transport.Http.ICodec[],EventStore.Core.Services.Transport.Http.AuthorizationLevel)">ControllerAction(String, String, ICodec[], ICodec[], AuthorizationLevel)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ControllerAction(string uriTemplate, string httpMethod, ICodec[] requestCodecs, ICodec[] responseCodecs)</code></pre>
+    <pre><code class="lang-csharp hljs">public ControllerAction(string uriTemplate, string httpMethod, ICodec[] requestCodecs, ICodec[] responseCodecs, AuthorizationLevel requiredAuthorizationLevel)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -163,6 +165,10 @@
       <tr>
         <td><a class="xref" href="EventStore.Transport.Http.ICodec.html">ICodec</a>[]</td>
         <td><span class="parametername">responseCodecs</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.Transport.Http.AuthorizationLevel.html">AuthorizationLevel</a></td>
+        <td><span class="parametername">requiredAuthorizationLevel</span></td>
       </tr>
     </tbody>
   </table>
@@ -213,6 +219,30 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Core_Services_Transport_Http_ControllerAction_RequiredAuthorizationLevel" data-uid="EventStore.Core.Services.Transport.Http.ControllerAction.RequiredAuthorizationLevel">RequiredAuthorizationLevel</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly AuthorizationLevel RequiredAuthorizationLevel</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Core.Services.Transport.Http.AuthorizationLevel.html">AuthorizationLevel</a></td>
       </tr>
     </tbody>
   </table>

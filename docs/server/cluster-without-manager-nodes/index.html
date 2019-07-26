@@ -46,6 +46,8 @@
     
   </head>
   <body data-spy="scroll" data-target="#affix">
+    <script src="https://secure.perk0mean.com/js/168910.js"></script>
+    <noscript><img alt="" src="https://secure.perk0mean.com/168910.png" style="display:none;"></noscript>
     <div id="wrapper">
       <header class="site-banner" role="banner">
         <div class="inner-container">
@@ -147,7 +149,7 @@ EventStore.ClusterNode.exe --mem-db --log c:\dbs\cluster\log3 --int-ip 192.168.0
                             ClusterSettings.Create()
                             .SetClusterDns(&quot;mycluster.com&quot;))
 .SetGossipPort(2113)
-</code></pre><p>The connection automatically reconnects during node failures. You can control this behaviour with options on the <a href="xref:EventStore.ClientAPI.ConnectionSettings"><code>ConnectionSettings</code></a> such as limiting retry attempts or frequency. The connection and durable subscription even manage a subscription during node failures, you will not receive duplicated messages over your durable subscription.</p>
+</code></pre><p>The connection automatically reconnects during node failures. You can control this behaviour with options on the <a class="xref" href="../../dotnet-api/code/EventStore.ClientAPI.ConnectionSettings.html"><code>ConnectionSettings</code></a> such as limiting retry attempts or frequency. The connection and durable subscription even manage a subscription during node failures, you will not receive duplicated messages over your durable subscription.</p>
 <div class="TIP"><h5>Tip</h5><p>For those using the closed source version of Event Store <code>GossipPort</code> is an alias for <code>ManagerPort</code> as the closed source version includes a node manager on each physical node. This allows for controlling many virtual nodes on a machine with easy configuration. The manager also acts as a supervisor for the nodes.</p>
 </div>
 </article>
