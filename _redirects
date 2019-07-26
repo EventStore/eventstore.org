@@ -3,3 +3,5 @@
 /downloads/win/*  http://eventstore.org.s3-website.eu-west-2.amazonaws.com/downloads/win/:splat 200
 /downloads/macos/*  http://eventstore.org.s3-website.eu-west-2.amazonaws.com/downloads/macos/:splat 200
 /downloads/*  http://eventstore.org.s3-website.eu-west-2.amazonaws.com/downloads/:splat 200
+
+/docs/introduction/*    /docs/getting-started   200
