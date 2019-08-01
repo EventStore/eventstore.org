@@ -1,0 +1,433 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Class PersistentSubscriptionsManager
+   | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PersistentSubscriptionsManager
+   | Event Store ">
+    <meta name="generator" content="docfx 2.43.3.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+      <link rel="stylesheet" href="../../../styles/main12.css">
+        <link rel="stylesheet" href="../../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <script src="https://secure.perk0mean.com/js/168910.js"></script>
+    <noscript><img alt="" src="https://secure.perk0mean.com/168910.png" style="display:none;"></noscript>
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EventStore.ClientAPI.PersistentSubscriptions.PersistentSubscriptionsManager">
+  
+  
+  <h1 id="EventStore_ClientAPI_PersistentSubscriptions_PersistentSubscriptionsManager" data-uid="EventStore.ClientAPI.PersistentSubscriptions.PersistentSubscriptionsManager" class="text-break">Class PersistentSubscriptionsManager
+  </h1>
+  <div class="markdown level0 summary"><p>API for managing persistent subscriptions in Event Store through C# code. Communicates
+with Event Store over the RESTful API.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PersistentSubscriptionsManager</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.ClientAPI.PersistentSubscriptions.html">EventStore.ClientAPI.PersistentSubscriptions</a></h6>
+  <h6><strong>Assembly</strong>: EventStore.ClientAPI.dll</h6>
+  <h5 id="EventStore_ClientAPI_PersistentSubscriptions_PersistentSubscriptionsManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PersistentSubscriptionsManager</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptions_PersistentSubscriptionsManager__ctor_" data-uid="EventStore.ClientAPI.PersistentSubscriptions.PersistentSubscriptionsManager.#ctor*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptions_PersistentSubscriptionsManager__ctor_EventStore_ClientAPI_ILogger_System_Net_EndPoint_System_TimeSpan_System_String_" data-uid="EventStore.ClientAPI.PersistentSubscriptions.PersistentSubscriptionsManager.#ctor(EventStore.ClientAPI.ILogger,System.Net.EndPoint,System.TimeSpan,System.String)">PersistentSubscriptionsManager(ILogger, EndPoint, TimeSpan, String)</h4>
+  <div class="markdown level1 summary"><p>Creates a new instance of <a class="xref" href="../net452/EventStore.ClientAPI.PersistentSubscriptions.PersistentSubscriptionsManager.html">PersistentSubscriptionsManager</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistentSubscriptionsManager(ILogger log, EndPoint httpEndPoint, TimeSpan operationTimeout, string httpSchema = &quot;http&quot;)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../net452/EventStore.ClientAPI.ILogger.html">ILogger</a></td>
+        <td><span class="parametername">log</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.EndPoint</span></td>
+        <td><span class="parametername">httpEndPoint</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">operationTimeout</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">httpSchema</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptions_PersistentSubscriptionsManager_Describe_" data-uid="EventStore.ClientAPI.PersistentSubscriptions.PersistentSubscriptionsManager.Describe*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptions_PersistentSubscriptionsManager_Describe_System_String_System_String_EventStore_ClientAPI_SystemData_UserCredentials_" data-uid="EventStore.ClientAPI.PersistentSubscriptions.PersistentSubscriptionsManager.Describe(System.String,System.String,EventStore.ClientAPI.SystemData.UserCredentials)">Describe(String, String, UserCredentials)</h4>
+  <div class="markdown level1 summary"><p>Gets the details of the persistent subscription <code data-dev-comment-type="paramref" class="paramref">subscriptionName</code> on <code data-dev-comment-type="paramref" class="paramref">stream</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PersistentSubscriptionDetails&gt; Describe(string stream, string subscriptionName, UserCredentials userCredentials = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">stream</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">subscriptionName</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.SystemData.UserCredentials.html">UserCredentials</a></td>
+        <td><span class="parametername">userCredentials</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="../net452/EventStore.ClientAPI.PersistentSubscriptions.PersistentSubscriptionDetails.html">PersistentSubscriptionDetails</a>&gt;</td>
+        <td><p>A PersistentSubscriptionDetails object representing the persistent subscription <code data-dev-comment-type="paramref" class="paramref">subscriptionName</code> on <code data-dev-comment-type="paramref" class="paramref">stream</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptions_PersistentSubscriptionsManager_List_" data-uid="EventStore.ClientAPI.PersistentSubscriptions.PersistentSubscriptionsManager.List*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptions_PersistentSubscriptionsManager_List_EventStore_ClientAPI_SystemData_UserCredentials_" data-uid="EventStore.ClientAPI.PersistentSubscriptions.PersistentSubscriptionsManager.List(EventStore.ClientAPI.SystemData.UserCredentials)">List(UserCredentials)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously lists all persistent subscriptions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;PersistentSubscriptionDetails&gt;&gt; List(UserCredentials userCredentials = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.SystemData.UserCredentials.html">UserCredentials</a></td>
+        <td><span class="parametername">userCredentials</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="../net452/EventStore.ClientAPI.PersistentSubscriptions.PersistentSubscriptionDetails.html">PersistentSubscriptionDetails</a>&gt;&gt;</td>
+        <td><p>List of all the PersistentSubscriptionDetails items containing persistent subscription details.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptions_PersistentSubscriptionsManager_List_" data-uid="EventStore.ClientAPI.PersistentSubscriptions.PersistentSubscriptionsManager.List*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptions_PersistentSubscriptionsManager_List_System_String_EventStore_ClientAPI_SystemData_UserCredentials_" data-uid="EventStore.ClientAPI.PersistentSubscriptions.PersistentSubscriptionsManager.List(System.String,EventStore.ClientAPI.SystemData.UserCredentials)">List(String, UserCredentials)</h4>
+  <div class="markdown level1 summary"><p>Asynchronously lists all persistent subscriptions subscribed to <code data-dev-comment-type="paramref" class="paramref">stream</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;PersistentSubscriptionDetails&gt;&gt; List(string stream, UserCredentials userCredentials = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">stream</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.SystemData.UserCredentials.html">UserCredentials</a></td>
+        <td><span class="parametername">userCredentials</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="../net452/EventStore.ClientAPI.PersistentSubscriptions.PersistentSubscriptionDetails.html">PersistentSubscriptionDetails</a>&gt;&gt;</td>
+        <td><p>List of all the PersistentSubscriptionDetails items containing persistent subscription details on <code data-dev-comment-type="paramref" class="paramref">stream</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_PersistentSubscriptions_PersistentSubscriptionsManager_ReplayParkedMessages_" data-uid="EventStore.ClientAPI.PersistentSubscriptions.PersistentSubscriptionsManager.ReplayParkedMessages*"></a>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptions_PersistentSubscriptionsManager_ReplayParkedMessages_System_String_System_String_EventStore_ClientAPI_SystemData_UserCredentials_" data-uid="EventStore.ClientAPI.PersistentSubscriptions.PersistentSubscriptionsManager.ReplayParkedMessages(System.String,System.String,EventStore.ClientAPI.SystemData.UserCredentials)">ReplayParkedMessages(String, String, UserCredentials)</h4>
+  <div class="markdown level1 summary"><p>Replays all parked messages for a particular persistent subscription <code data-dev-comment-type="paramref" class="paramref">subscriptionName</code> on <code data-dev-comment-type="paramref" class="paramref">stream</code>. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task ReplayParkedMessages(string stream, string subscriptionName, UserCredentials userCredentials = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">stream</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">subscriptionName</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.SystemData.UserCredentials.html">UserCredentials</a></td>
+        <td><span class="parametername">userCredentials</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task representing the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

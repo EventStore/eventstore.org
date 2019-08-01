@@ -119,19 +119,20 @@
 </li>
 </ul>
 <section id="tabpanel_Imwg03Et86_tabid-1" role="tabpanel" data-tab="tabid-1">
-<p>The prerequisites for Installing on Windows are:</p>
+<p>The prerequisites for installing on Windows are:</p>
 <ul>
 <li>NET Framework 4.0+</li>
-<li>Windows platform SDK with compilers (v7.1) or Visual C++ installed (Only required for a full build)</li>
+<li>Windows platform SDK with compilers (v7.1) or Visual C++ installed (only required for a full build)</li>
 </ul>
 <p>Event Store has <a href="https://chocolatey.org/packages/eventstore-oss">Chocolatey packages</a> available that you can install with the following command:</p>
 <pre><code class="lang-powershell">choco install eventstore-oss
-</code></pre><p>You can also <a href="https://eventstore.org/downloads/">download</a> a binary, unzip the archive and run from the folder location with an administrator console:</p>
+</code></pre><p>You can also <a href="https://eventstore.org/downloads/">download</a> a binary, unzip the archive and run from the folder location with an administrator console.</p>
+<p>The following command starts Event Store with the database stored at the path <em>./db</em> and the logs in <em>./logs</em>. You can view further command line arguments in the <a href="index.html">server docs</a>.</p>
 <pre><code class="lang-powershell">EventStore.ClusterNode.exe --db ./db --log ./logs
-</code></pre><p>This command starts Event Store with the database stored at the path <em>./db</em> and the logs in <em>./logs</em>. You can view further command line arguments in the <a href="index.html">server docs</a>.</p>
-<p>Event Store runs in an administration context because it starts an HTTP server through <code>http.sys</code>. For permanent or production instances you need to provide an ACL such as:</p>
+</code></pre><p>Event Store runs in an administration context because it starts an HTTP server through <code>http.sys</code>. For permanent or production instances you need to provide an ACL such as:</p>
 <pre><code class="lang-powershell">netsh http add urlacl url=http://+:2113/ user=DOMAIN\username
-</code></pre></section>
+</code></pre><p>For more information, refer to Microsoft&#39;s <code>add urlacl</code> <a href="https://docs.microsoft.com/en-us/windows/win32/http/add-urlacl">documentation</a>.</p>
+</section>
 <section id="tabpanel_Imwg03Et86_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
 <p>The prerequisites for Installing on Linux are:</p>
 <ul>
@@ -189,7 +190,7 @@ Read <a href="deploy-kubernetes-aks/index.html">this guide</a> for more details 
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/server/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/EventStore/documentation/blob/master/server/index.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -1,0 +1,881 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Class ConnectionSettings
+   | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ConnectionSettings
+   | Event Store ">
+    <meta name="generator" content="docfx 2.43.3.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+      <link rel="stylesheet" href="../../../styles/main12.css">
+        <link rel="stylesheet" href="../../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <script src="https://secure.perk0mean.com/js/168910.js"></script>
+    <noscript><img alt="" src="https://secure.perk0mean.com/168910.png" style="display:none;"></noscript>
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EventStore.ClientAPI.ConnectionSettings">
+  
+  
+  <h1 id="EventStore_ClientAPI_ConnectionSettings" data-uid="EventStore.ClientAPI.ConnectionSettings" class="text-break">Class ConnectionSettings
+  </h1>
+  <div class="markdown level0 summary"><p>A <a class="xref" href="../net452/EventStore.ClientAPI.ConnectionSettings.html">ConnectionSettings</a> object is an immutable representation of the settings for an
+<a class="xref" href="../net452/EventStore.ClientAPI.IEventStoreConnection.html">IEventStoreConnection</a>. You can build a <a class="xref" href="../net452/EventStore.ClientAPI.ConnectionSettings.html">ConnectionSettings</a> object using
+a <a class="xref" href="EventStore.ClientAPI.ConnectionSettingsBuilder.html">ConnectionSettingsBuilder</a>, either via the <a class="xref" href="../net452/EventStore.ClientAPI.ConnectionSettings.html#EventStore_ClientAPI_ConnectionSettings_Create">Create()</a> method, or via
+the constructor of <a class="xref" href="EventStore.ClientAPI.ConnectionSettingsBuilder.html">ConnectionSettingsBuilder</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ConnectionSettings</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../netstandard2.0/EventStore.ClientAPI.html">EventStore.ClientAPI</a></h6>
+  <h6><strong>Assembly</strong>: EventStore.ClientAPI.dll</h6>
+  <h5 id="EventStore_ClientAPI_ConnectionSettings_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class ConnectionSettings</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_ClientConnectionTimeout" data-uid="EventStore.ClientAPI.ConnectionSettings.ClientConnectionTimeout">ClientConnectionTimeout</h4>
+  <div class="markdown level1 summary"><p>The interval after which a client will time out during connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly TimeSpan ClientConnectionTimeout</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_ClusterDns" data-uid="EventStore.ClientAPI.ConnectionSettings.ClusterDns">ClusterDns</h4>
+  <div class="markdown level1 summary"><p>The DNS name to use for discovering endpoints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string ClusterDns</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_DefaultUserCredentials" data-uid="EventStore.ClientAPI.ConnectionSettings.DefaultUserCredentials">DefaultUserCredentials</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="../netstandard2.0/EventStore.ClientAPI.SystemData.UserCredentials.html">UserCredentials</a> to use for operations where other <a class="xref" href="../netstandard2.0/EventStore.ClientAPI.SystemData.UserCredentials.html">UserCredentials</a> are not explicitly supplied.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly UserCredentials DefaultUserCredentials</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../netstandard2.0/EventStore.ClientAPI.SystemData.UserCredentials.html">UserCredentials</a></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_ExternalGossipPort" data-uid="EventStore.ClientAPI.ConnectionSettings.ExternalGossipPort">ExternalGossipPort</h4>
+  <div class="markdown level1 summary"><p>The well-known endpoint on which cluster managers are running.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int ExternalGossipPort</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_FailOnNoServerResponse" data-uid="EventStore.ClientAPI.ConnectionSettings.FailOnNoServerResponse">FailOnNoServerResponse</h4>
+  <div class="markdown level1 summary"><p>Whether to raise an error if no response is received from the server for an operation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool FailOnNoServerResponse</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_GossipSeeds" data-uid="EventStore.ClientAPI.ConnectionSettings.GossipSeeds">GossipSeeds</h4>
+  <div class="markdown level1 summary"><p>Endpoints for seeding gossip if not using DNS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly GossipSeed[] GossipSeeds</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../netstandard2.0/EventStore.ClientAPI.GossipSeed.html">GossipSeed</a>[]</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_GossipTimeout" data-uid="EventStore.ClientAPI.ConnectionSettings.GossipTimeout">GossipTimeout</h4>
+  <div class="markdown level1 summary"><p>Timeout for cluster gossip.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly TimeSpan GossipTimeout</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_HeartbeatInterval" data-uid="EventStore.ClientAPI.ConnectionSettings.HeartbeatInterval">HeartbeatInterval</h4>
+  <div class="markdown level1 summary"><p>The interval at which to send heartbeat messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly TimeSpan HeartbeatInterval</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_HeartbeatTimeout" data-uid="EventStore.ClientAPI.ConnectionSettings.HeartbeatTimeout">HeartbeatTimeout</h4>
+  <div class="markdown level1 summary"><p>The interval after which an unacknowledged heartbeat will cause the connection to be considered faulted and disconnect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly TimeSpan HeartbeatTimeout</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_Log" data-uid="EventStore.ClientAPI.ConnectionSettings.Log">Log</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="../net452/EventStore.ClientAPI.ILogger.html">ILogger</a> that this connection will use.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ILogger Log</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../net452/EventStore.ClientAPI.ILogger.html">ILogger</a></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_MaxConcurrentItems" data-uid="EventStore.ClientAPI.ConnectionSettings.MaxConcurrentItems">MaxConcurrentItems</h4>
+  <div class="markdown level1 summary"><p>The maximum number of allowed asynchronous operations to be in process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int MaxConcurrentItems</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_MaxDiscoverAttempts" data-uid="EventStore.ClientAPI.ConnectionSettings.MaxDiscoverAttempts">MaxDiscoverAttempts</h4>
+  <div class="markdown level1 summary"><p>The maximum number of attempts for discovering endpoints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int MaxDiscoverAttempts</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_MaxQueueSize" data-uid="EventStore.ClientAPI.ConnectionSettings.MaxQueueSize">MaxQueueSize</h4>
+  <div class="markdown level1 summary"><p>The maximum number of outstanding items allowed in the queue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int MaxQueueSize</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_MaxReconnections" data-uid="EventStore.ClientAPI.ConnectionSettings.MaxReconnections">MaxReconnections</h4>
+  <div class="markdown level1 summary"><p>The maximum number of times to allow for reconnection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int MaxReconnections</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_MaxRetries" data-uid="EventStore.ClientAPI.ConnectionSettings.MaxRetries">MaxRetries</h4>
+  <div class="markdown level1 summary"><p>The maximum number of retry attempts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly int MaxRetries</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_NodePreference" data-uid="EventStore.ClientAPI.ConnectionSettings.NodePreference">NodePreference</h4>
+  <div class="markdown level1 summary"><p>Whether to randomly choose a node that&apos;s alive from the known nodes. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly NodePreference NodePreference</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../net452/EventStore.ClientAPI.NodePreference.html">NodePreference</a></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_OperationTimeout" data-uid="EventStore.ClientAPI.ConnectionSettings.OperationTimeout">OperationTimeout</h4>
+  <div class="markdown level1 summary"><p>The amount of time before an operation is considered to have timed out.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly TimeSpan OperationTimeout</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_OperationTimeoutCheckPeriod" data-uid="EventStore.ClientAPI.ConnectionSettings.OperationTimeoutCheckPeriod">OperationTimeoutCheckPeriod</h4>
+  <div class="markdown level1 summary"><p>The amount of time that timeouts are checked in the system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly TimeSpan OperationTimeoutCheckPeriod</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_QueueTimeout" data-uid="EventStore.ClientAPI.ConnectionSettings.QueueTimeout">QueueTimeout</h4>
+  <div class="markdown level1 summary"><p>The amount of time a request for an operation is permitted to be queued awaiting transmission to the server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly TimeSpan QueueTimeout</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_ReconnectionDelay" data-uid="EventStore.ClientAPI.ConnectionSettings.ReconnectionDelay">ReconnectionDelay</h4>
+  <div class="markdown level1 summary"><p>The amount of time to delay before attempting to reconnect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly TimeSpan ReconnectionDelay</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_RequireMaster" data-uid="EventStore.ClientAPI.ConnectionSettings.RequireMaster">RequireMaster</h4>
+  <div class="markdown level1 summary"><p>Whether to require EventStore to refuse serving read or write request if it is not master.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool RequireMaster</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_TargetHost" data-uid="EventStore.ClientAPI.ConnectionSettings.TargetHost">TargetHost</h4>
+  <div class="markdown level1 summary"><p>The host name of the server expected on the SSL certificate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string TargetHost</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_UseSslConnection" data-uid="EventStore.ClientAPI.ConnectionSettings.UseSslConnection">UseSslConnection</h4>
+  <div class="markdown level1 summary"><p>Whether the connection is encrypted using SSL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool UseSslConnection</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_ValidateServer" data-uid="EventStore.ClientAPI.ConnectionSettings.ValidateServer">ValidateServer</h4>
+  <div class="markdown level1 summary"><p>Whether to validate the server SSL certificate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool ValidateServer</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_VerboseLogging" data-uid="EventStore.ClientAPI.ConnectionSettings.VerboseLogging">VerboseLogging</h4>
+  <div class="markdown level1 summary"><p>Whether to use excessive logging of <a class="xref" href="../net452/EventStore.ClientAPI.EventStoreConnection.html">EventStoreConnection</a> internal logic.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool VerboseLogging</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="EventStore_ClientAPI_ConnectionSettings_Default_" data-uid="EventStore.ClientAPI.ConnectionSettings.Default*"></a>
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_Default" data-uid="EventStore.ClientAPI.ConnectionSettings.Default">Default</h4>
+  <div class="markdown level1 summary"><p>The default <a class="xref" href="../net452/EventStore.ClientAPI.ConnectionSettings.html">ConnectionSettings</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ConnectionSettings Default { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../net452/EventStore.ClientAPI.ConnectionSettings.html">ConnectionSettings</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="EventStore_ClientAPI_ConnectionSettings_Create_" data-uid="EventStore.ClientAPI.ConnectionSettings.Create*"></a>
+  <h4 id="EventStore_ClientAPI_ConnectionSettings_Create" data-uid="EventStore.ClientAPI.ConnectionSettings.Create">Create()</h4>
+  <div class="markdown level1 summary"><p>Creates a new set of <a class="xref" href="../net452/EventStore.ClientAPI.ConnectionSettings.html">ConnectionSettings</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ConnectionSettingsBuilder Create()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.ConnectionSettingsBuilder.html">ConnectionSettingsBuilder</a></td>
+        <td><p>A <a class="xref" href="EventStore.ClientAPI.ConnectionSettingsBuilder.html">ConnectionSettingsBuilder</a> you can use to build up a <a class="xref" href="../net452/EventStore.ClientAPI.ConnectionSettings.html">ConnectionSettings</a></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

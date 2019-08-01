@@ -98,10 +98,14 @@
 <p>This getting started guide shows you how to get started with Event Store using the Atom publishing protocol as the primary interface. </p>
 <div class="NOTE"><h5>Note</h5><p>The described is for development and evaluation of Event Store. It does not describe a production setup. The HTTP examples use cURL, but you can read Atom feeds with a wide variety of applications and languages.</p>
 </div>
+<p>Projections is an Event Store subsystem that lets you write new events or link existing events to streams in a reactive manner.</p>
+<p>Projections are good at solving one specific query type, a category known as &#39;temporal correlation queries&#39;. This query type is common in business systems and few can execute these queries well.</p>
+<div class="NOTE"><h5>Note</h5><p>Projections require the event body to be in JSON.</p>
+</div>
 <p>When running a projection, you can choose whether the query should run and give you all results present or whether the query should continue running into the future finding new results as they happen and updating its result set.</p>
-<h2 id="setting-up-projections">Setting up Projections</h2>
+<h2 id="setting-up-projections">Setting up projections</h2>
 <p>You enable projections with the command line argument <code>--run-projections</code>. For example, the command below enables all projection modes (system and user-defined):</p>
-<div class="TIP"><h5>Tip</h5><p><a href="../../server/command-line-arguments/index.html#projections-options">read this guide</a> for all the possible parameter values.</p>
+<div class="TIP"><h5>Tip</h5><p><a href="../../server/command-line-arguments/index.html#projections-options">Read this guide</a> for all the possible parameter values.</p>
 </div>
 <div class="tabGroup" id="tabgroup_-zRZHSVchy">
 <ul role="tablist">
@@ -142,7 +146,7 @@
 </div>
 </section>
 </div>
-<p>You then see new tabs enabled in the Admin UI with the 4 system projections in a <code>Stopped</code> state:</p>
+<p>You then see new tabs enabled in the Admin UI with the four system projections in a <code>Stopped</code> state:</p>
 <p><img src="../../images/projections-menu-item.png" alt="Projections tab"></p>
 <p><img src="../../images/projections-default.png" alt="Projections default state"></p>
 <p>You can also query the state of all projections using the HTTP API.</p>
@@ -177,7 +181,7 @@
 &quot;statusUrl&quot;: &quot;http://localhost:2113/projection/$by_event_type&quot;
 </code></pre></section>
 </div>
-<h2 id="add-sample-data">Add Sample Data</h2>
+<h2 id="add-sample-data">Add sample data</h2>
 <p>Download the following files that contain sample data used throughout this step of the getting started guide.</p>
 <ul>
 <li><a href="../../code-examples/getting-started/shoppingCart-b989fe21-9469-4017-8d71-9820b8dd1164.json">shoppingCart-b989fe21-9469-4017-8d71-9820b8dd1164.json</a></li>
@@ -257,7 +261,7 @@ for (Object file : fileList) {
 <div class="TIP"><h5>Tip</h5><p>Read <a href="../../projections/user-defined-projections/index.html">this guide</a> to find out more about the user defined projection&#39;s API.</p>
 </div>
 <p>The projection counts the number of &#39;XBox One S&#39;s that customers added to their shopping carts.</p>
-<p>A Projection starts with a selector, in this case <code>fromAll()</code>. Another possibility is <code>fromCategory({category})</code> which this step discusses later, but for now, <code>fromAll</code> should do.</p>
+<p>A projection starts with a selector, in this case <code>fromAll()</code>. Another possibility is <code>fromCategory({category})</code> which this step discusses later, but for now, <code>fromAll</code> should do.</p>
 <p>The second part of a projection is a set of filters. There is a special filter called <code>$init</code> that sets up an initial state. You want to start a counter from 0 and each time Event Store observes an <code>ItemAdded</code> event for an &#39;Xbox One S,&#39; increment the counter.</p>
 <p>Here is the projection, you can download it as a file <a href="../../code-examples/getting-started/xbox-one-s-counter.json">here</a>:</p>
 <pre><code class="lang-json" name="getting-started-projections-projection">fromAll()
@@ -287,14 +291,14 @@ for (Object file : fileList) {
 </ul>
 <section id="tabpanel_-zRZHSVchy-3_tabid-create-proj-bash" role="tabpanel" data-tab="tabid-create-proj-bash">
 <pre><code class="lang-bash" name="getting-started-projections-create-projection">curl -i --data-binary &quot;@xbox-one-s-counter.json&quot; http://localhost:2113/projections/continuous?name=xbox-one-s-counter%26type=js%26enabled=true%26emit=true%26trackemittedstreams=true -u admin:changeit
-</code></pre><div class="NEXT"><h5>Next Steps</h5><p><a href="../../projections/api/index.html">read here</a> for more information on creating projections with the HTTP API and the parameters available, or <a href="../../projections/index.html">our projections section</a> for details on projection syntax.</p>
+</code></pre><div class="NEXT"><h5>Next Steps</h5><p><a href="../../projections/api/index.html">Read here</a> for more information on creating projections with the HTTP API and the parameters available, or <a href="../../projections/index.html">our projections section</a> for details on projection syntax.</p>
 </div>
 </section>
 <section id="tabpanel_-zRZHSVchy-3_tabid-create-proj-net" role="tabpanel" data-tab="tabid-create-proj-net" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-csharp" name="getting-started-projections-create-projection-dotnet">public static readonly ProjectionsManager Projection = new ProjectionsManager(new ConsoleLogger(),
     new IPEndPoint(IPAddress.Parse(&quot;127.0.0.1&quot;), 2113), TimeSpan.FromMilliseconds(5000));
 projection.CreateContinuousAsync(&quot;xbox-one-s-counter&quot;, countItemsProjection, adminCredentials).Wait();
-</code></pre><div class="NEXT"><h5>Next Steps</h5><p><a href="../../dotnet-api/projections/index.html">read here</a> for more information on creating projections with the .NET API and the parameters available, or <a href="../../projections/index.html">our projections section</a> for details on projection syntax.</p>
+</code></pre><div class="NEXT"><h5>Next Steps</h5><p><a href="../../dotnet-api/projections/index.html">Read here</a> for more information on creating projections with the .NET API and the parameters available, or <a href="../../projections/index.html">our projections section</a> for details on projection syntax.</p>
 </div>
 </section>
 </div>
@@ -325,9 +329,9 @@ Console.WriteLine(projectionState.Result);
 }
 </code></pre></section>
 </div>
-<h2 id="writing-to-streams-from-projections">Writing to Streams from Projections</h2>
+<h2 id="writing-to-streams-from-projections">Writing to streams from projections</h2>
 <p>The above gives you the correct result but requires you to poll for the state of a projection. What if you wanted Event Store to notify you about state updates via subscriptions?</p>
-<h3 id="output-state">Output State</h3>
+<h3 id="output-state">Output state</h3>
 <p>Update the projection to output the state to a stream by calling the <code>outputState()</code> method on the projection which by default produces a <code>$projections-{projection-name}-result</code> stream.</p>
 <p>Below is the updated projection, you can download it as a file <a href="../../code-examples/getting-started/xbox-one-s-counter-outputState.json">here</a>:</p>
 <pre><code class="lang-json" name="getting-started-projections-output-state">fromAll()
@@ -414,7 +418,7 @@ foreach (var evt in readEvents.Events)
 &quot;data&quot;: &quot;{\&quot;count\&quot;:1}&quot;,
 </code></pre></section>
 </div>
-<h2 id="configure-projection-properties">Configure Projection Properties</h2>
+<h2 id="configure-projection-properties">Configure projection properties</h2>
 <p>You can configure properties of the projection by updating values of the <code>options</code> object. For example, the following projection changes the name of the results stream, you can download it as a file <a href="../../code-examples/getting-started/update-projection-options.json">here</a>:</p>
 <pre><code class="lang-json" name="getting-started-projections-update-options">options({
   resultStreamName: &quot;xboxes&quot;
@@ -471,7 +475,7 @@ fromAll()
 }
 </code></pre></section>
 </div>
-<h2 id="the-number-of-items-per-shopping-cart">The Number of items per shopping cart</h2>
+<h2 id="the-number-of-items-per-shopping-cart">The number of items per shopping cart</h2>
 <p>The example in this step so far relied on a global state for the projection, but what if you wanted a count of the number of items in the shopping cart per shopping cart.</p>
 <p>Event Store has a built-in <code>$by_category</code> projection that lets you select events from a particular list of streams. Enable this projection with the following command.</p>
 <div class="tabGroup" id="tabgroup_-zRZHSVchy-10">
@@ -572,7 +576,7 @@ Console.WriteLine(projectionState.Result);
 }
 </code></pre></section>
 </div>
-<h2 id="next-step">Next Step</h2>
+<h2 id="next-step">Next step</h2>
 <p>In this third part of our getting started guide you learned about projections. The next, and final part covers which API or SDK to use, and when.</p>
 <ul>
 <li><a href="../which-api-sdk/index.html">Step 4 - Which API or SDK</a></li>
@@ -587,7 +591,7 @@ Console.WriteLine(projectionState.Result);
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/getting-started/projections.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/EventStore/documentation/blob/master/getting-started/projections.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -99,7 +99,7 @@
 <div class="NOTE"><h5>Note</h5><p>The described is for development and evaluation of Event Store. It does not describe a production setup. The HTTP examples use cURL, but you can read Atom feeds with a wide variety of applications and languages.</p>
 </div>
 <p>This second step covers reading events from a stream and subscribing to changes to events in a stream.</p>
-<h2 id="read-a-stream-of-events">Read a Stream of Events</h2>
+<h2 id="read-a-stream-of-events">Read a stream of events</h2>
 <p>Event Store exposes all streams as <a href="http://tools.ietf.org/html/rfc4287">atom feeds</a>, and you can read data from the stream by navigating to the <em>head URI</em> of the stream <a href="http://127.0.0.1:2113/streams/&lt;STREAM_ID">http://127.0.0.1:2113/streams/&lt;STREAM_ID</a>&gt; with cURL, or click the <em>Stream Browser</em> tab in the Admin UI and you see the stream you created in step 1.</p>
 <p><img src="../../images/es-web-admin-stream-browser.png" alt="The Admin UI Dashboard"></p>
 <div class="tabGroup" id="tabgroup_ewz4UtAAbO">
@@ -198,7 +198,7 @@ Keep-Alive: timeout=15,max=100
 <pre><code class="lang-csharp" name="getting-started-read-stream-request">var readEvents = conn.ReadStreamEventsForwardAsync(streamName, 0, 10, true).Result;
 foreach (var evt in readEvents.Events)
     Console.WriteLine(Encoding.UTF8.GetString(evt.Event.Data));
-</code></pre><div class="NEXT"><h5>Next Steps</h5><p><a href="../../dotnet-api/reading-events/index.html">read this guide</a> for more information on how to read events with the .NET API.</p>
+</code></pre><div class="NEXT"><h5>Next Steps</h5><p><a href="../../dotnet-api/reading-events/index.html">Read this guide</a> for more information on how to read events with the .NET API.</p>
 </div>
 </section>
 <section id="tabpanel_ewz4UtAAbO-1_tabid-jvm-client" role="tabpanel" data-tab="tabid-jvm-client" aria-hidden="true" hidden="hidden">
@@ -214,8 +214,8 @@ foreach (var evt in readEvents.Events)
         connection.tell(readEvent, readResult);
 </code></pre></section>
 </div>
-<h2 id="read-a-single-event">Read a Single Event</h2>
-<p>The feed has a single item inside of it, the one you posted in <a href="../index.html">part 1</a>. You can see details of the event in the <em>Stream Browser</em> tab in the Admin UI by clicking a stream to see its events, and then clicking an event. Or with cURL, issue a <code>GET</code> to the <code>alternate</code> URI value from the response above.</p>
+<h2 id="read-a-single-event">Read a single event</h2>
+<p>The feed has a single item inside of it, the one you posted in <a href="../index.html">part 1</a>. You can see details of the event in the <em>Stream Browser</em> tab in the Admin UI by selecting a stream to see its events, and then selecting an event. Or with cURL, issue a <code>GET</code> to the <code>alternate</code> URI value from the response above.</p>
 <div class="tabGroup" id="tabgroup_ewz4UtAAbO-2">
 <ul role="tablist">
 <li role="presentation">
@@ -275,10 +275,10 @@ Console.WriteLine(Encoding.UTF8.GetString(readResult.Event.Value.Event.Data));
         connection.tell(readEvent, readResult);
 </code></pre></section>
 </div>
-<h2 id="paginating-through-events">Paginating through Events</h2>
+<h2 id="paginating-through-events">Paginating through events</h2>
 <p>For longer feeds of events than this example, you need to paginate through the feed, reading a certain number of events at a time.</p>
 <p>You can use the HTTP API <a href="../../http-api/reading-streams/index.html#feed-paging">to paginate</a> through the feed using <em>previous</em> and <em>next</em> links within the stream. Or you can <a href="../../dotnet-api/reading-events/index.html#example-read-an-entire-stream-forwards-from-start-to-end">use a read method</a> of the .NET API (and JVM client), to loop through events a certain number at a time.</p>
-<h2 id="subscribing-to-receive-stream-updates">Subscribing to Receive Stream Updates</h2>
+<h2 id="subscribing-to-receive-stream-updates">Subscribing to receive stream updates</h2>
 <p>A common operation is to subscribe to a stream and receive notifications for changes. As new events arrive, you continue following them.</p>
 <p>You can create subscriptions and watch events as they arrive under the <em>Persistent Subscriptions</em> tab, or use an API method:</p>
 <p><img src="../../images/getting-started-subscriptions.png" alt="Subscriptions in the Admin UI"></p>
@@ -342,21 +342,22 @@ Console.ReadLine();
 </div>
 <!-- TODO: The dotnet example has reading events as they are added to subscription, HTTP does not, expand? -->
 <!-- TODO: And write more events, then what etc -->
-<p>There are three types of subscription patterns, useful in different situations.</p>
-<h3 id="volatile-subscriptions">Volatile Subscriptions</h3>
+<h3 id="subscription-types">Subscription types</h3>
+<p>There are three types of subscription patterns, useful in different situations</p>
+<h4 id="volatile-subscriptions">Volatile subscriptions</h4>
 <p>This subscription calls a given function for events written after establishing the subscription. They are useful when you need notification of new events with minimal latency, but where it&#39;s not necessary to process every event.</p>
 <!-- TODO: Example needed? -->
 <p>For example, if a stream has 100 events in it when a subscriber connects, the subscriber can expect to see event number 101 onwards until the time the subscription is closed or dropped.</p>
-<h3 id="catch-up-subscriptions">Catch-Up Subscriptions</h3>
+<h4 id="catch-up-subscriptions">Catch-up subscriptions</h4>
 <p>This subscription specifies a starting point, in the form of an event number or transaction file position. You call the function for events from the starting point until the end of the stream, and then for subsequently written events.</p>
 <!-- TODO: Example needed? -->
 <p>For example, if you specify a starting point of 50 when a stream has 100 events, the subscriber can expect to see events 51 through 100, and then any events are subsequently written until you drop or close the subscription.</p>
-<h3 id="persistent-subscriptions">Persistent Subscriptions</h3>
+<h4 id="persistent-subscriptions">Persistent subscriptions</h4>
 <div class="NOTE"><h5>Note</h5><p>Persistent subscriptions exist in version 3.2.0 and above of Event Store.</p>
 </div>
 <p>This subscription supports the &quot;<a href="https://docs.microsoft.com/en-us/azure/architecture/patterns/competing-consumers">competing consumers</a>&quot; messaging pattern and are useful when you need to distribute messages to many workers. Event Store saves the subscription state server-side and allows for at-least-once delivery guarantees across multiple consumers on the same stream. It is possible to have many groups of consumers compete on the same stream, with each group getting an at-least-once guarantee.</p>
 <!-- TODO: Example needed? -->
-<h2 id="next-step">Next Step</h2>
+<h2 id="next-step">Next step</h2>
 <p>In this second part of our getting started guide you learned how to read events from a stream and subscribe to changes. The next part covers projections, used to give you continuous queries of your data.</p>
 <ul>
 <li><a href="../projections/index.html">Step 3 - Projections</a></li>
@@ -371,7 +372,7 @@ Console.ReadLine();
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/getting-started/reading-subscribing-events.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/EventStore/documentation/blob/master/getting-started/reading-subscribing-events.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

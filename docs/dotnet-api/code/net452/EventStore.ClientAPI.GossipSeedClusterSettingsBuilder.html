@@ -1,0 +1,583 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Class GossipSeedClusterSettingsBuilder
+   | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class GossipSeedClusterSettingsBuilder
+   | Event Store ">
+    <meta name="generator" content="docfx 2.43.3.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+      <link rel="stylesheet" href="../../../styles/main12.css">
+        <link rel="stylesheet" href="../../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <script src="https://secure.perk0mean.com/js/168910.js"></script>
+    <noscript><img alt="" src="https://secure.perk0mean.com/168910.png" style="display:none;"></noscript>
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder">
+  
+  
+  <h1 id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder" class="text-break">Class GossipSeedClusterSettingsBuilder
+  </h1>
+  <div class="markdown level0 summary"><p>Fluent builder used to configure <a class="xref" href="../net46/EventStore.ClientAPI.ClusterSettings.html">ClusterSettings</a> for connecting to a cluster
+using gossip seeds.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">GossipSeedClusterSettingsBuilder</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="../netstandard2.0/EventStore.ClientAPI.html">EventStore.ClientAPI</a></h6>
+  <h6><strong>Assembly</strong>: EventStore.ClientAPI.dll</h6>
+  <h5 id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GossipSeedClusterSettingsBuilder</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_Build_" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.Build*"></a>
+  <h4 id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_Build" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.Build">Build()</h4>
+  <div class="markdown level1 summary"><p>Builds a <a class="xref" href="../net46/EventStore.ClientAPI.ClusterSettings.html">ClusterSettings</a> object from a <a class="xref" href="../net46/EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.html">GossipSeedClusterSettingsBuilder</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ClusterSettings Build()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../net46/EventStore.ClientAPI.ClusterSettings.html">ClusterSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_KeepDiscovering_" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.KeepDiscovering*"></a>
+  <h4 id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_KeepDiscovering" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.KeepDiscovering">KeepDiscovering()</h4>
+  <div class="markdown level1 summary"><p>Allows infinite nodes discovery attempts.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GossipSeedClusterSettingsBuilder KeepDiscovering()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../net46/EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.html">GossipSeedClusterSettingsBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_PreferRandomNode_" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.PreferRandomNode*"></a>
+  <h4 id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_PreferRandomNode" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.PreferRandomNode">PreferRandomNode()</h4>
+  <div class="markdown level1 summary"><p>Whether to randomly choose a node that&apos;s alive from the known nodes. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GossipSeedClusterSettingsBuilder PreferRandomNode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../net46/EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.html">GossipSeedClusterSettingsBuilder</a></td>
+        <td><p>A <a class="xref" href="EventStore.ClientAPI.DnsClusterSettingsBuilder.html">DnsClusterSettingsBuilder</a> for further configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_PreferSlaveNode_" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.PreferSlaveNode*"></a>
+  <h4 id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_PreferSlaveNode" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.PreferSlaveNode">PreferSlaveNode()</h4>
+  <div class="markdown level1 summary"><p>Whether to prioritize choosing a slave node that&apos;s alive from the known nodes. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GossipSeedClusterSettingsBuilder PreferSlaveNode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../net46/EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.html">GossipSeedClusterSettingsBuilder</a></td>
+        <td><p>A <a class="xref" href="EventStore.ClientAPI.DnsClusterSettingsBuilder.html">DnsClusterSettingsBuilder</a> for further configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetGossipSeedEndPoints_" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints*"></a>
+  <h4 id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetGossipSeedEndPoints_EventStore_ClientAPI_GossipSeed___" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints(EventStore.ClientAPI.GossipSeed[])">SetGossipSeedEndPoints(GossipSeed[])</h4>
+  <div class="markdown level1 summary"><p>Sets gossip seed endpoints for the client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GossipSeedClusterSettingsBuilder SetGossipSeedEndPoints(params GossipSeed[] gossipSeeds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../netstandard2.0/EventStore.ClientAPI.GossipSeed.html">GossipSeed</a>[]</td>
+        <td><span class="parametername">gossipSeeds</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../net46/EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.html">GossipSeedClusterSettingsBuilder</a></td>
+        <td><p>A <a class="xref" href="../netstandard2.0/EventStore.ClientAPI.ClusterSettingsBuilder.html">ClusterSettingsBuilder</a> for further configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>If no gossip seeds are specified.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetGossipSeedEndPoints_" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints*"></a>
+  <h4 id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetGossipSeedEndPoints_System_Net_IPEndPoint___" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints(System.Net.IPEndPoint[])">SetGossipSeedEndPoints(IPEndPoint[])</h4>
+  <div class="markdown level1 summary"><p>Sets gossip seed endpoints for the client.
+TODO: This was a note.
+This should be the external HTTP endpoint of the server, as it is required
+for the client to exchange gossip with the server. The standard port is 2113.</p>
+<p>If the server requires a specific Host header to be sent as part of the gossip
+request, use the overload of this method taking <a class="xref" href="../netstandard2.0/EventStore.ClientAPI.GossipSeed.html">GossipSeed</a> instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GossipSeedClusterSettingsBuilder SetGossipSeedEndPoints(params IPEndPoint[] gossipSeeds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.IPEndPoint</span>[]</td>
+        <td><span class="parametername">gossipSeeds</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../net46/EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.html">GossipSeedClusterSettingsBuilder</a></td>
+        <td><p>A <a class="xref" href="../netstandard2.0/EventStore.ClientAPI.ClusterSettingsBuilder.html">ClusterSettingsBuilder</a> for further configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>If no gossip seeds are specified.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetGossipTimeout_" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipTimeout*"></a>
+  <h4 id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetGossipTimeout_System_TimeSpan_" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipTimeout(System.TimeSpan)">SetGossipTimeout(TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Sets the period after which gossip times out if none is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GossipSeedClusterSettingsBuilder SetGossipTimeout(TimeSpan timeout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">timeout</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../net46/EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.html">GossipSeedClusterSettingsBuilder</a></td>
+        <td><p>A <a class="xref" href="../net46/EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.html">GossipSeedClusterSettingsBuilder</a> for further configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetMaxDiscoverAttempts_" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetMaxDiscoverAttempts*"></a>
+  <h4 id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetMaxDiscoverAttempts_System_Int32_" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetMaxDiscoverAttempts(System.Int32)">SetMaxDiscoverAttempts(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets the maximum number of attempts for discovery.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GossipSeedClusterSettingsBuilder SetMaxDiscoverAttempts(int maxDiscoverAttempts)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">maxDiscoverAttempts</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../net46/EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.html">GossipSeedClusterSettingsBuilder</a></td>
+        <td><p>A <a class="xref" href="../net46/EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.html">GossipSeedClusterSettingsBuilder</a> for further configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p>If <code data-dev-comment-type="paramref" class="paramref">maxDiscoverAttempts</code> is less than or equal to 0.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="operators">Operators
+  </h3>
+  
+  
+  <a id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_op_Implicit_" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.op_Implicit*"></a>
+  <h4 id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_op_Implicit_EventStore_ClientAPI_GossipSeedClusterSettingsBuilder__EventStore_ClientAPI_ClusterSettings" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.op_Implicit(EventStore.ClientAPI.GossipSeedClusterSettingsBuilder)~EventStore.ClientAPI.ClusterSettings">Implicit(GossipSeedClusterSettingsBuilder to ClusterSettings)</h4>
+  <div class="markdown level1 summary"><p>Builds a <a class="xref" href="../net46/EventStore.ClientAPI.ClusterSettings.html">ClusterSettings</a> object from a <a class="xref" href="../net46/EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.html">GossipSeedClusterSettingsBuilder</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator ClusterSettings(GossipSeedClusterSettingsBuilder builder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../net46/EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.html">GossipSeedClusterSettingsBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../net46/EventStore.ClientAPI.ClusterSettings.html">ClusterSettings</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

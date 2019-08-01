@@ -121,19 +121,20 @@
 </li>
 </ul>
 <section id="tabpanel_Imwg03Et86_tabid-1" role="tabpanel" data-tab="tabid-1">
-<p>The prerequisites for Installing on Windows are:</p>
+<p>The prerequisites for installing on Windows are:</p>
 <ul>
 <li>NET Framework 4.0+</li>
-<li>Windows platform SDK with compilers (v7.1) or Visual C++ installed (Only required for a full build)</li>
+<li>Windows platform SDK with compilers (v7.1) or Visual C++ installed (only required for a full build)</li>
 </ul>
 <p>Event Store has <a href="https://chocolatey.org/packages/eventstore-oss">Chocolatey packages</a> available that you can install with the following command:</p>
 <pre><code class="lang-powershell">choco install eventstore-oss
-</code></pre><p>You can also <a href="https://eventstore.org/downloads/">download</a> a binary, unzip the archive and run from the folder location with an administrator console:</p>
+</code></pre><p>You can also <a href="https://eventstore.org/downloads/">download</a> a binary, unzip the archive and run from the folder location with an administrator console.</p>
+<p>The following command starts Event Store with the database stored at the path <em>./db</em> and the logs in <em>./logs</em>. You can view further command line arguments in the <a href="../server/index.html">server docs</a>.</p>
 <pre><code class="lang-powershell">EventStore.ClusterNode.exe --db ./db --log ./logs
-</code></pre><p>This command starts Event Store with the database stored at the path <em>./db</em> and the logs in <em>./logs</em>. You can view further command line arguments in the <a href="../server/index.html">server docs</a>.</p>
-<p>Event Store runs in an administration context because it starts an HTTP server through <code>http.sys</code>. For permanent or production instances you need to provide an ACL such as:</p>
+</code></pre><p>Event Store runs in an administration context because it starts an HTTP server through <code>http.sys</code>. For permanent or production instances you need to provide an ACL such as:</p>
 <pre><code class="lang-powershell">netsh http add urlacl url=http://+:2113/ user=DOMAIN\username
-</code></pre></section>
+</code></pre><p>For more information, refer to Microsoft&#39;s <code>add urlacl</code> <a href="https://docs.microsoft.com/en-us/windows/win32/http/add-urlacl">documentation</a>.</p>
+</section>
 <section id="tabpanel_Imwg03Et86_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
 <p>The prerequisites for Installing on Linux are:</p>
 <ul>
@@ -167,7 +168,7 @@ Read <a href="../server/deploy-kubernetes-aks/index.html">this guide</a> for mor
 </code></pre><p>In each case you can run Event Store with the <code>eventstore</code> command, and stop it with <code>Ctrl+c</code>. To use the default database location you need to use <code>sudo</code>, or you can change the location with the <code>--db</code> parameter.</p>
 </section>
 </div>
-<h2 id="interacting-with-an-event-store-server">Interacting with an Event Store Server</h2>
+<h2 id="interacting-with-an-event-store-server">Interacting with an Event Store server</h2>
 <p>There are three ways to interact with Event Store:</p>
 <ol>
 <li><a href="../server/admin-ui/index.html">With the Admin UI</a>.</li>
@@ -184,7 +185,8 @@ Read <a href="../server/deploy-kubernetes-aks/index.html">this guide</a> for mor
 </li>
 </ul>
 <section id="tabpanel_dfgfloIX5I_tabid-dotnet-client" role="tabpanel" data-tab="tabid-dotnet-client">
-<p><a href="https://www.nuget.org/packages/EventStore.ClientAPI.NetCore/">Install the .NET Core client API</a> using your preferred method, add it to your project:</p>
+<p><a href="https://www.nuget.org/packages/EventStore.Client">Install the .NET client API</a> using your preferred method.</p>
+<p>Add it to your project:</p>
 <pre><code class="lang-shell">dotnet add package EventStore.Client
 </code></pre><p>And require it in your code:</p>
 <pre><code class="lang-csharp">using EventStore.ClientAPI;
@@ -219,7 +221,7 @@ Read <a href="../server/deploy-kubernetes-aks/index.html">this guide</a> for mor
 <p>When using the .NET client, you also need to give the connection a name.</p>
 <pre><code class="lang-csharp" name="getting-started-connection">var conn = EventStoreConnection.Create(new Uri(&quot;tcp://admin:changeit@localhost:1113&quot;),
     &quot;InputFromFileConsoleApp&quot;);
-</code></pre><div class="NEXT"><h5>Next Steps</h5><p>In this example we used the <a href="#EventStore.ClientAPI.EventStoreConnection.Create(System.String,System.String)"><code>EventStoreConnection.Create()</code></a> overloaded method but <a href="#EventStore.ClientAPI.EventStoreConnection">others are available</a>.</p>
+</code></pre><div class="NEXT"><h5>Next Steps</h5><p>In this example we used the <a class="xref" href="../dotnet-api/code/EventStore.ClientAPI.EventStoreConnection.html#EventStore_ClientAPI_EventStoreConnection_Create_System_String_System_String_"><code>EventStoreConnection.Create()</code></a> overloaded method but <a class="xref" href="../dotnet-api/code/EventStore.ClientAPI.EventStoreConnection.html">others are available</a>.</p>
 </div>
 </section>
 <section id="tabpanel_dfgfloIX5I-1_tabid-jvm-client-connect" role="tabpanel" data-tab="tabid-jvm-client-connect" aria-hidden="true" hidden="hidden">
@@ -233,7 +235,7 @@ final ActorRef connection = system.actorOf(ConnectionActor.getProps(settings));
 </div>
 </section>
 </div>
-<h2 id="writing-events-to-an-event-stream">Writing Events to an Event Stream</h2>
+<h2 id="writing-events-to-an-event-stream">Writing events to an Event Stream</h2>
 <p>Event Store operates on a concept of Event Streams, and the first operation we look at is how to write to a stream. If you are Event Sourcing a domain model, a stream equates to an aggregate function. Event Store can handle hundreds of millions of streams, so create as many as you need.</p>
 <p>If you post to a stream that doesn&#39;t exist, Event Store creates it before adding the events.</p>
 <p>You can write events using the Admin UI by clicking the <em>Stream Browser</em> tab, the <em>Add Event</em> button, filling in the form with relevant values and clicking the <em>Add</em> button at the bottom of the page.</p>
@@ -292,7 +294,7 @@ final ActorRef connection = system.actorOf(ConnectionActor.getProps(settings));
 }
 </code></pre></section>
 </div>
-<h2 id="next-step">Next Step</h2>
+<h2 id="next-step">Next step</h2>
 <p>In this first part of our getting started guide you learned how to install and run Event Store and write your first event. The next part covers reading events from a stream.</p>
 <ul>
 <li><a href="reading-subscribing-events/index.html">Step 2 - Read events from a stream and subscribe to changes</a></li>
@@ -307,7 +309,7 @@ final ActorRef connection = system.actorOf(ConnectionActor.getProps(settings));
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/getting-started/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/EventStore/documentation/blob/master/getting-started/index.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

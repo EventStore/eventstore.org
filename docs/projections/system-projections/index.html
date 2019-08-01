@@ -129,7 +129,8 @@
 </code></pre><p>You can configure the separator, as well as where to split the stream <code>id</code>. You can edit the projection and provide your own values if the defaults don&#39;t fit your particular scenario.</p>
 <p>The first parameter specifies how the separator is used, and the possible values for that parameter is <code>first</code> or <code>last</code>. The second parameter is the separator, and can be any character.</p>
 <p>For example, if the body of the projection is <code>first</code> and <code>-</code>, for a stream id of <code>account-1</code>, the stream name the projection creates is <code>$ce-account</code>.</p>
-<p>If the body of the projection is last and <code>-</code>, for a stream id of <code>shopping-cart-1</code>, the stream name the projection creates is <code>$ce-shopping-cart</code>.</p>
+<p>If the body of the projection is <code>last</code> and <code>-</code>, for a stream id of <code>shopping-cart-1</code>, the stream name the projection creates is <code>$ce-shopping-cart</code>.</p>
+<p>The use case of this project is subscribing to all events within a category.</p>
 <h2 id="by-event-type">By Event Type</h2>
 <p>The <code>$by_event_type</code> (<em><a href="http://127.0.0.1:2113/projection/$by_event_type">http://127.0.0.1:2113/projection/$by_event_type</a></em>) projection links existing events from streams to a new stream with a stream id in the format <code>$et-{event-type}</code>.</p>
 <p>You cannot configure this projection.</p>
@@ -143,8 +144,9 @@
 -
 </code></pre><p>By default the <code>$stream_by_category</code> projection links existing events from a stream id with a name such as <code>account-1</code> to a stream called <code>$category-account</code>. You can configure the separator as well as where to split the stream <code>id</code>. You can edit the projection and provide your own values if the defaults don&#39;t fit your particular scenario.</p>
 <p>The first parameter specifies how the separator is used, and the possible values for that parameter is <code>first</code> or <code>last</code>. The second parameter is the separator, and can be any character.</p>
-<p>For example, if the body of the projection is <code>first</code> and <code>-</code>, for a stream id of <code>account-1</code>, the stream name the projection creates is <code>$category-account</code>.</p>
-<p>If the body of the projection is last and <code>-</code>, for a stream id of <code>shopping-cart-1</code>, the stream name the projection creates is <code>$category-shopping-cart</code>.</p>
+<p>For example, if the body of the projection is <code>first</code> and <code>-</code>, for a stream id of <code>account-1</code>, the stream name the projection creates is <code>$category-account</code>, and the <code>account-1</code> stream is linked to it. Future streams prefixed with <code>account-</code> are likewise linked to the newly created <code>$category-account</code> stream.</p>
+<p>If the body of the projection is last and <code>-</code>, for a stream id of <code>shopping-cart-1</code>, the stream name the projection creates is <code>$category-shopping-cart</code>, and the <code>shopping-cart-1</code> stream is linked to it.  Future streams whose left-side split by the <strong>last</strong> &#39;-&#39; is <code>shopping-cart</code>, are likewise linked to the newly created <code>$category-shopping-cart</code> stream.</p>
+<p>The use case of this projection is subscribing to all stream instances of a category.</p>
 <h2 id="streams">Streams</h2>
 <p>The <code>$streams</code> (<em><a href="http://127.0.0.1:2113/projection/$streams">http://127.0.0.1:2113/projection/$streams</a></em>) projection links existing events from streams to a stream named <code>$streams</code></p>
 <p>You cannot configure this projection.</p>
@@ -158,7 +160,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/EventStore/docs.geteventstore.com/blob/master/projections/system-projections.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/EventStore/documentation/blob/master/projections/system-projections.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
