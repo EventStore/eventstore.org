@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Stream Metadata | Event Store </title>
+    <title>Stream metadata | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Stream Metadata | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="Stream metadata | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,20 +93,11 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="stream-metadata">Stream Metadata</h1>
+<h1 id="stream-metadata">Stream metadata</h1>
 
 <p>Every stream in Event Store has metadata associated with it. Internally, the metadata includes information such as the ACL of the stream and the maximum count and age for the events in the stream. Client code can also put information into stream metadata for use with projections or through the client API.</p>
 <p>This information is not part of the actual event but is metadata associated with the event. Event Store stores stream metadata as JSON, and you can access it over the HTTP APIs.</p>
-<h2 id="methods">Methods</h2>
-<h3 id="read-stream-metadata">Read Stream Metadata</h3>
-<!-- TODO: Link or embed to ref docs -->
-<pre><code class="lang-csharp">Task&lt;StreamMetadataResult&gt; GetStreamMetadataAsync(string stream, UserCredentials userCredentials = null)
-</code></pre><pre><code class="lang-csharp">Task&lt;RawStreamMetadataResult&gt; GetStreamMetadataAsRawBytesAsync(string stream, UserCredentials userCredentials = null)
-</code></pre><h3 id="write-stream-metadata">Write Stream Metadata</h3>
-<!-- TODO: Link or embed to ref docs -->
-<pre><code class="lang-csharp">Task&lt;WriteResult&gt; SetStreamMetadataAsync(string stream, long expectedMetastreamVersion, StreamMetadata metadata, UserCredentials userCredentials = null)
-</code></pre><pre><code class="lang-csharp">Task&lt;WriteResult&gt; SetStreamMetadataAsync(string stream, long expectedMetastreamVersion, byte[] metadata, UserCredentials userCredentials = null)
-</code></pre><h2 id="read-stream-metadata-1">Read Stream Metadata</h2>
+<h2 id="read-stream-metadata">Read stream metadata</h2>
 <p>To read stream metadata over the .NET API you can use methods found on the <code>EventStoreConnection</code>. You can use the <code>GetStreamMetadata</code> methods in two ways. The first is to return a fluent interface over the stream metadata, and the second is to return you the raw JSON of the stream metadata.</p>
 <pre><code class="lang-csharp">Task&lt;StreamMetadataResult&gt; GetStreamMetadataAsync(string stream, UserCredentials userCredentials = null)
 </code></pre><p>This returns a <code>StreamMetadataResult</code>. The fields on this result are:</p>
@@ -198,7 +189,7 @@
 </table>
 <div class="NOTE"><h5>Note</h5><p>If you enabled <a href="../connecting-to-a-server/index.html">enabled security</a>, reading metadata may require that you pass credentials. By default it is only allowed for admins though you can change this via default ACLs. If you do not pass credentials and they are required you will receive an <code>AccessedDeniedException</code>.</p>
 </div>
-<h2 id="writing-metadata">Writing Metadata</h2>
+<h2 id="writing-metadata">Writing metadata</h2>
 <p>You can write metadata in both a typed and a raw mechanism. When writing it is generally easier to use the typed mechanism. Both writing mechanisms support an <code>expectedVersion</code> which works the same as on any stream and you can use to control concurrency, read <a href="../optimistic-concurrency-and-idempotence/index.html">Expected Version</a> for further details.</p>
 <pre><code class="lang-csharp">Task&lt;WriteResult&gt; SetStreamMetadataAsync(string stream, long expectedMetastreamVersion, StreamMetadata metadata, UserCredentials userCredentials = null)
 </code></pre><p>The <code>StreamMetadata</code> passed above has a builder that you can access via the <code>StreamMetadata.Create()</code> method. The options available on the builder are:</p>

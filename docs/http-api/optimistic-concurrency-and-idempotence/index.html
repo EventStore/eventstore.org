@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Optimistic Concurrency &amp; Idempotence | Event Store </title>
+    <title>Optimistic concurrency and idempotence | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Optimistic Concurrency &amp; Idempotence | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="Optimistic concurrency and idempotence | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,10 +93,10 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="optimistic-concurrency--idempotence">Optimistic Concurrency &amp; Idempotence</h1>
+<h1 id="optimistic-concurrency-and-idempotence">Optimistic concurrency and idempotence</h1>
 
 <h2 id="idempotency">Idempotency</h2>
-<p>All operations on the HTTP interface are idempotent (unless the expected version is ignored). It is the responsibility of the client to retry operations under failure conditions, ensuring that the event IDs of the events posted are the same as the first attempt.</p>
+<p>All operations on the HTTP interface are idempotent (unless the <a href="../creating-writing-a-stream/index.html#expected-version-header">expected version</a> is ignored). It is the responsibility of the client to retry operations under failure conditions, ensuring that the event IDs of the events posted are the same as the first attempt.</p>
 <p>Provided the client maintains this Event Store will treat all operations as idempotent.</p>
 <p>For example:</p>
 <div class="tabGroup" id="tabgroup_YGzdzh4neF">

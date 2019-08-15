@@ -12,7 +12,7 @@
     <title>Events as a storage mechanism | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Events as a storage mechanism | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -154,7 +154,7 @@
 <p>One interesting possibility is that unlike when storing current state in a structural way, there is no coupling between the representation of current state in the domain and in storage. The representation of current state in the domain can vary without thought of the persistence mechanism.</p>
 <p>It is important to note the language in Figure 3. All of the verbs are in the past tense. These are Domain Events. Consider what would happen if the language were in the imperative tense, &quot;Add 2 socks item 137&quot;, &quot;Create Cart&quot;. What if there were behaviours associated with adding an item, such as reserving it from an inventory system via a webservice call? Should you include these behaviours when reconstituting an object?</p>
 <p>What if logic has changed so that this item could no longer be added given the context? This is one of many examples where dual contexts between commands and events are required, there is a contextual difference between returning to a given state and attempting to transition to a new one.</p>
-<h3 id="there-is-no-delete">There is no Delete</h3>
+<h3 id="there-is-no-delete">There is no delete</h3>
 <p>A common question that arises is how to delete information. It is not possible, as previously, to jump into the time machine and say that an event never happened (e.g. delete a previous event). As such, it is necessary to model a delete explicitly as a new transaction as shown below. Further discussion on the business value of handling deletes in this mechanism can be found in &quot;<a href="../business-value-of-the-event-log/index.html">Business Value of the Event Log</a>&quot;.</p>
 <!-- ![Transactional view of an order with delete][3] -->
 <p>In the event stream above, the two pairs of socks were added then later removed. The end state is equivalent to not having added the two pairs of socks. However, the data was not deleted, new data was added to bring the object to the state as if the first event had not happened, this process is known as a &quot;Reversal Transaction&quot;.</p>

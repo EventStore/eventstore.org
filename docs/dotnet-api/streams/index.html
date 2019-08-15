@@ -12,7 +12,7 @@
     <title>Streams | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Streams | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -95,7 +95,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="streams">Streams</h1>
 
-<h2 id="writing-to-a-stream">Writing to a Stream</h2>
+<h2 id="writing-to-a-stream">Writing to a stream</h2>
 <p>You can use the client API to write one or more events to a stream atomically. You do this by appending the events to the stream in one operation, or by starting a transaction on the stream, writing events in one or more operations in that transaction, and then committing the transaction.</p>
 <p>You can make an optimistic concurrency check during the write by specifying the version at which you expect the stream to be. Identical write operations are idempotent if the optimistic concurrency check is not disabled. You can find more information on optimistic concurrency and idempotence <a href="../optimistic-concurrency-and-idempotence/index.html">here</a>.</p>
 <h3 id="appending-to-a-stream-in-a-single-write">Appending to a stream in a single write</h3>
@@ -169,8 +169,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="deleting-a-stream">Deleting a Stream</h2>
-<h3 id="soft-delete">Soft Delete</h3>
+<h2 id="deleting-a-stream">Deleting a stream</h2>
+<h3 id="soft-delete">Soft delete</h3>
 <pre><code class="lang-csharp">Task&lt;DeleteResult&gt; DeleteStreamAsync(string stream, long expectedVersion, UserCredentials userCredentials = null);
 </code></pre><!-- TODO: Need a better explanation -->
 <p>By default when you delete a stream, Event Store soft deletes it. You can recreate the stream by appending new events to it. If you try to read a soft deleted stream you receive an error response.</p>

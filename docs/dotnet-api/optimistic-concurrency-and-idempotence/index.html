@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Optimistic Concurrency &amp; Idempotence | Event Store </title>
+    <title>Optimistic concurrency and idempotence | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Optimistic Concurrency &amp; Idempotence | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="Optimistic concurrency and idempotence | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,9 +93,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="optimistic-concurrency--idempotence">Optimistic Concurrency &amp; Idempotence</h1>
+<h1 id="optimistic-concurrency-and-idempotence">Optimistic concurrency and idempotence</h1>
 
-<p>Writing supports an optimistic concurrency check on the version of the stream to which events are written. The method of specifying what the expected version is depends whether you are making writes using the HTTP or .NET API.</p>
+<p>Writing supports an <a href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/optimistic-concurrency">optimistic concurrency</a> check on the version of the stream to which events are written. The method of specifying what the expected version is depends whether you are making writes using the HTTP or .NET API.</p>
 <p>The .NET API has constants which you can use to represent certain conditions:</p>
 <table>
 <thead>
@@ -150,7 +150,7 @@
 </li>
 </ul>
 <h3 id="if-you-specify-expectedversionany">If you specify <code>ExpectedVersion.Any</code></h3>
-<div class="NOTE"><h5>Note</h5><p>Idempotence is <strong>not</strong> guaranteed if you use <code>ExpectedVersion.Any</code>. The chance of a duplicate event is small, but is possible.</p>
+<div class="WARNING"><h5>Warning</h5><p>Idempotence is <strong>not</strong> guaranteed if you use <code>ExpectedVersion.Any</code>. The chance of a duplicate event is small, but is possible.</p>
 </div>
 <p>The idempotence check will yield one of three results:</p>
 <ul>

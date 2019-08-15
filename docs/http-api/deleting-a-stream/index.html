@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Deleting a Stream | Event Store </title>
+    <title>Deleting a stream | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Deleting a Stream | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="Deleting a stream | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,7 +93,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="deleting-a-stream">Deleting a Stream</h1>
+<h1 id="deleting-a-stream">Deleting a stream</h1>
 
 <h2 id="soft-deleting">Soft deleting</h2>
 <p>To delete a stream over the Atom interface, issue a <code>DELETE</code> request to the resource.</p>
@@ -136,7 +136,7 @@ Connection: close
 <pre><code class="lang-bash" name="http-api-get-deleted-stream-request">curl -X GET &quot;http://127.0.0.1:2113/streams/newstream&quot; -H &#39;Accept: application/vnd.eventstore.events+json&#39;
 </code></pre></section>
 <section id="tabpanel_NkqkHTcIhB-1_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-bash" name="http-api-get-deleted-stream-request">HTTP/1.1 404 Not Found
+<pre><code class="lang-bash" name="http-api-get-deleted-stream-request">HTTP/1.1 410 Deleted
 Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
 Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
 Access-Control-Allow-Origin: *
@@ -159,7 +159,7 @@ Connection: close
 </li>
 </ul>
 <section id="tabpanel_NkqkHTcIhB-2_tabid-3" role="tabpanel" data-tab="tabid-3">
-<pre><code class="lang-bash" name="http-api-recreate-request">curl -i -d &quot;@event-append.json&quot; &quot;http://127.0.0.1:2113/streams/newstream&quot; -H &quot;Content-Type:application/vnd.eventstore.events+json&quot;
+<pre><code class="lang-bash" name="http-api-recreate-request">curl -i -d &quot;@event-append.json&quot; &quot;http://127.0.0.1:2113/streams/newstream&quot; -H &quot;Content-Type:application/vnd.eventstore.events+json&quot; -H &quot;ES-EventType: SomeEvent&quot;
 </code></pre></section>
 <section id="tabpanel_NkqkHTcIhB-2_tabid-4" role="tabpanel" data-tab="tabid-4" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-json" name="http-api-recreate-response">HTTP/1.1 201 Created
@@ -218,7 +218,7 @@ Date: Thu, 13 Mar 2014 20:56:55 GMT
 <pre><code class="lang-bash" name="http-api-get-deleted-stream-request">curl -X GET &quot;http://127.0.0.1:2113/streams/newstream&quot; -H &#39;Accept: application/vnd.eventstore.events+json&#39;
 </code></pre></section>
 <section id="tabpanel_NkqkHTcIhB-4_tabid-12" role="tabpanel" data-tab="tabid-12" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-bash" name="http-api-get-deleted-stream-request">HTTP/1.1 404 Not Found
+<pre><code class="lang-bash" name="http-api-get-deleted-stream-request">HTTP/1.1 410 Deleted
 Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
 Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
 Access-Control-Allow-Origin: *
@@ -241,10 +241,10 @@ Connection: close
 </li>
 </ul>
 <section id="tabpanel_NkqkHTcIhB-5_tabid-13" role="tabpanel" data-tab="tabid-13">
-<pre><code class="lang-bash" name="http-api-recreate-request">curl -i -d &quot;@event-append.json&quot; &quot;http://127.0.0.1:2113/streams/newstream&quot; -H &quot;Content-Type:application/vnd.eventstore.events+json&quot;
+<pre><code class="lang-bash" name="http-api-recreate-request">curl -i -d &quot;@event-append.json&quot; &quot;http://127.0.0.1:2113/streams/newstream&quot; -H &quot;Content-Type:application/vnd.eventstore.events+json&quot; -H &quot;ES-EventType: SomeEvent&quot;
 </code></pre></section>
 <section id="tabpanel_NkqkHTcIhB-5_tabid-14" role="tabpanel" data-tab="tabid-14" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-json" name="http-api-recreate-response">HTTP/1.1 201 Created
+<pre><code class="lang-json" name="http-api-recreate-response">HTTP/1.1 410 Deleted
 Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
 Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-PINGOTHER
 Access-Control-Allow-Origin: *

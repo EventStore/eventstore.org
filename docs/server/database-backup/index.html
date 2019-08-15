@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Database Backup | Event Store </title>
+    <title>Database backup | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Database Backup | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="Database backup | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,7 +93,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="database-backup">Database Backup</h1>
+<h1 id="database-backup">Database backup</h1>
 
 <p>Backing up an Event Store database is straightforward, but relies on you carrying out the steps below in the correct order.</p>
 <h2 id="backing-up-a-database">Backing up a database</h2>
@@ -115,7 +115,7 @@ rsync -a /data/eventstore/db/*.0* /backup/eventstore/db/
 <h2 id="differential-backup">Differential backup</h2>
 <p>Event Store keep most data in <em>chunk files</em>, named <code>chunkX.Y</code>, where X is the chunk number, and Y is the version of that chunk file. As Event Store scavenges, it creates new versions of scavenged chunks which are interchangeable with older versions (but for the removed data).</p>
 <p>It&#39;s only necessary to keep the file whose name has the highest <code>Y</code> for each <code>X</code>, as well as the checkpoint files and the index directory (to avoid expensive index rebuilding).</p>
-<h2 id="other-options">Other Options</h2>
+<h2 id="other-options">Other options</h2>
 <p>There are many other options available for backing up an Event Store database. For example, you can set up a durable subscription that writes all events to another storage mechanism such as a key/value or column store. These methods would require a manual set up for restoring back to a cluster group.</p>
 <p>You can expand upon this option to use a second Event Store node/cluster as a back up. This is commonly known as a primary/secondary back up scheme. The primary cluster runs and asynchronously pushes data to a second cluster as described above. The second cluster/node is available in case of disaster on the primary cluster. If you are using this strategy then we recommend you only support manual failover from Primary to Secondary as automated strategies risk causing a <a href="http://en.wikipedia.org/wiki/Split-brain_%28computing%29">split brain</a> problem.</p>
 </article>

@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Performance and Scalability | Event Store </title>
+    <title>Performance and scalability | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Performance and Scalability | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="Performance and scalability | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,16 +93,16 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="performance-and-scalability">Performance and Scalability</h1>
+<h1 id="performance-and-scalability">Performance and scalability</h1>
 
 <p>There are also architectural benefits to not deleting data. The storage system becomes an append-only architecture. Append-only architectures typically distribute and scale more easily than updating architectures because there are fewer locks to deal with.</p>
 <p>A common performance optimization is the use of &quot;horizontal partitioning&quot; (or &quot;sharding&quot;), where the same schema will exist in many places and a key within the data will determine in which place the data exists.</p>
 <p>One problem with horizontal partitioning with an RDMS is that it is necessary to define the key with which the partitioning should operate. This problem goes away when using events. Aggregate IDs are the only partition point in the system. No matter how many aggregates exist or how they may change structures, the aggregate ID associated with events is the only partition point in the system. Horizontally partitioning an Event Store is a simpler process.</p>
-<h2 id="saving-objects">Saving Objects</h2>
+<h2 id="saving-objects">Saving objects</h2>
 <p>When dealing with a stereotypical system utilizing an RDMS it can be complex to figure out what has changed within the aggregate. Many tools have been built to help alleviate the pain that arises from this task but is the need for a tool a sign of a bigger problem?</p>
 <p>Most Object-relational mapping (ORM) tools figure out the changes that occurred within a graph. They do this by maintaining two copies of a given graph. The first held in memory and the second for applications to interact with. When it&#39;s time to save, the database logic traverses the graph that the code has interacted with and uses the copy of the original graph to determine what has changed while the graph was in use by the code. These changes are then saved to the data storage system.</p>
 <p>In a system that is Domain Event centric, the aggregates are themselves tracking strong events as to what has changed within them. There is no complex process for comparing to another copy of a graph. Instead ask the aggregate for its changes. The operation to ask for changes is far more efficient than having to figure out what has changed.</p>
-<h2 id="loading-objects">Loading Objects</h2>
+<h2 id="loading-objects">Loading objects</h2>
 <p>A similar issue exists when loading objects. Consider the work that involved with loading a graph of objects in a stereotypical relational database backed system. Often there are many queries that must be issued to build the aggregate. To help minimize the latency cost of these queries many ORMs have introduced a heuristic of &quot;Lazy Loading&quot; also known as &quot;Delayed Loading&quot;, where a proxy is given in lieu of the real object. The data is only loaded when some code attempts to use that particular object.</p>
 <p>Lazy loading is useful because often a given behavior will only use a certain portion of data out of the aggregate and it prevents the developer from having to explicitly represent which data that is while reducing the cost of the loading of the aggregate. It is this need for reducing cost that shows a problem.</p>
 <blockquote><p>Aggregates are considered as a whole represented by the Aggregate Root. Conceptually an Aggregate is loaded and saved in its entirety. <cite>Evans, 2001</cite></p>

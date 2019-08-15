@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Projections Management | Event Store </title>
+    <title>Projections management | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Projections Management | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="Projections management | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,47 +93,46 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="projections-management">Projections Management</h1>
+<h1 id="projections-management">Projections management</h1>
 
 <p>The Event Store Client API includes helper methods that use the HTTP API to allow you to manage projections. This document describes the methods found in the <code>ProjectionsManager</code> class. All methods in this class are asynchronous.</p>
-<h2 id="methods">Methods</h2>
-<h3 id="enable-a-projection">Enable a Projection</h3>
+<h2 id="enable-a-projection">Enable a projection</h2>
 <p>Enables an existing projection by name. You must have access to a projection to enable it.</p>
 <pre><code class="lang-csharp">public Task EnableAsync(string name, UserCredentials userCredentials = null)
-</code></pre><h3 id="disable-a-projection">Disable a Projection</h3>
+</code></pre><h2 id="disable-a-projection">Disable a projection</h2>
 <p>Disables an existing projection by name. You must have access to a projection to disable it.</p>
 <pre><code class="lang-csharp">public Task DisableAsync(string name, UserCredentials userCredentials = null)
-</code></pre><h3 id="abort-a-projection">Abort a Projection</h3>
+</code></pre><h2 id="abort-a-projection">Abort a projection</h2>
 <p>Aborts an existing projection by name. You must have access to a projection to abort it.</p>
 <pre><code class="lang-csharp">public Task AbortAsync(string name, UserCredentials userCredentials = null)
-</code></pre><h3 id="create-a-one-time-projection">Create a One-Time Projection</h3>
+</code></pre><h2 id="create-a-one-time-projection">Create a one-time projection</h2>
 <p>Creates a projection that runs until the end of the log and then stops. The query parameter contains the JavaScript you want created as a one time projection.</p>
 <pre><code class="lang-csharp">public Task CreateOneTimeAsync(string query, UserCredentials userCredentials = null)
-</code></pre><h3 id="create-a-continuous-projection">Create a Continuous Projection</h3>
+</code></pre><h2 id="create-a-continuous-projection">Create a continuous projection</h2>
 <p>Creates a projection that runs until the end of the log and then continues running. The query parameter contains the JavaScript you want created as a one time projection. Continuous projections have explicit names and you can enable or disable them via this name.</p>
 <pre><code class="lang-csharp">public Task CreateContinuousAsync(string name, string query, UserCredentials userCredentials = null)
-</code></pre><h3 id="list-all-projections">List all Projections</h3>
+</code></pre><h2 id="list-all-projections">List all projections</h2>
 <p>Returns a list of all projections.</p>
 <pre><code class="lang-csharp">public Task&lt;List&lt;ProjectionDetails&gt;&gt; ListAllAsync(UserCredentials userCredentials = null)
-</code></pre><h3 id="list-one-time-projections">List One-Time Projections</h3>
+</code></pre><h2 id="list-one-time-projections">List one-time projections</h2>
 <p>Returns a list of all One-Time Projections.</p>
 <pre><code class="lang-csharp">public Task&lt;List&lt;ProjectionDetails&gt;&gt; ListOneTimeAsync(UserCredentials userCredentials = null)
-</code></pre><h3 id="get-statistics-on-a-projection">Get Statistics on a Projection</h3>
+</code></pre><h2 id="get-statistics-on-a-projection">Get statistics on a projection</h2>
 <p>Returns the statistics associated with a named projection.</p>
 <pre><code class="lang-csharp">public Task&lt;string&gt; GetStatisticsAsync(string name, UserCredentials userCredentials = null)
-</code></pre><h3 id="delete-projection">Delete Projection</h3>
+</code></pre><h2 id="delete-projection">Delete projection</h2>
 <p>Deletes a named projection. You must have access to a projection to delete it.</p>
 <pre><code class="lang-csharp">public Task DeleteAsync(string name, UserCredentials userCredentials = null)
-</code></pre><h3 id="get-state">Get State</h3>
+</code></pre><h2 id="get-state">Get state</h2>
 <p>Retrieves the state of a projection.</p>
 <pre><code class="lang-csharp">public Task&lt;string&gt; GetState(string name, UserCredentials userCredentials = null)
-</code></pre><h3 id="get-partition-state">Get Partition State</h3>
+</code></pre><h2 id="get-partition-state">Get partition state</h2>
 <p>Retrieves the state of the projection via the given partition.</p>
 <pre><code class="lang-csharp">public Task&lt;string&gt; GetPartitionStateAsync(string name, string partition, UserCredentials userCredentials = null)
-</code></pre><h3 id="get-result">Get Result</h3>
+</code></pre><h2 id="get-result">Get result</h2>
 <p>Retrieves the result of the projection.</p>
 <pre><code class="lang-csharp">public Task&lt;string&gt; GetResult(string name, UserCredentials userCredentials = null)
-</code></pre><h3 id="get-partition-result">Get Partition Result</h3>
+</code></pre><h2 id="get-partition-result">Get partition result</h2>
 <p>Retrieves the result of the projection via the given partition.</p>
 <pre><code class="lang-csharp">public Task&lt;string&gt; GetPartitionResultAsync(string name, string partition, UserCredentials userCredentials = null)
 </code></pre></article>

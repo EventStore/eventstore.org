@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Metadata and Reserved Names | Event Store </title>
+    <title>Metadata and reserved names | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Metadata and Reserved Names | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="Metadata and reserved names | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,11 +93,11 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="metadata-and-reserved-names">Metadata and Reserved Names</h1>
+<h1 id="metadata-and-reserved-names">Metadata and reserved names</h1>
 
-<h2 id="stream-metadata">Stream Metadata</h2>
+<h2 id="stream-metadata">Stream metadata</h2>
 <p>Every stream in Event Store has metadata associated with it. Event Store allows you to change some values in the metadata, and you can write your own data into stream metadata that you can refer to in your code.</p>
-<h3 id="reserved-names">Reserved Names</h3>
+<h3 id="reserved-names">Reserved names</h3>
 <p>All internal data used by Event Store is prefixed with a <code>$</code> character (for example <code>$maxCount</code> on a stream&#39;s metadata). Because of this you should not use names with a <code>$</code> prefix as event names, metadata keys, or stream names, except where detailed below.</p>
 <p>The supported internal settings are:</p>
 <table>
@@ -158,7 +158,7 @@
 </table>
 
 <p>You can find more details on access control lists can <a href="../users-and-access-control-lists/index.html">here</a>.</p>
-<h2 id="event-metadata">Event Metadata</h2>
+<h2 id="event-metadata">Event metadata</h2>
 <p>Every event in Event Store has metadata associated with it. Event Store allows you to change some values in the metadata, and you can write your own data into event metadata that you can refer to in your code.</p>
 <p>All names starting with <code>$</code> are reserved space for internal use. The currently supported reserved internal names are:</p>
 <ul>

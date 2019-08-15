@@ -12,7 +12,7 @@
     <title>Creating and writing to a stream | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Creating and writing to a stream | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -211,7 +211,7 @@ Keep-Alive: timeout=15,max=100
 <pre><code class="lang-bash" name="http-api-write-event-no-type-request">curl -i -d &quot;@event.json&quot; &quot;http://127.0.0.1:2113/streams/newstream&quot; -H &quot;Content-Type:application/json&quot;
 </code></pre></section>
 <section id="tabpanel_e5OAF5pzdi-3_tabid-8" role="tabpanel" data-tab="tabid-8" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-json" name="http-api-write-event-no-type-response">HTTP/1.1 400 Must include an event type with the request either in body or as ES-EventType header.
+<pre><code class="lang-json" name="http-api-write-event-no-type-response" highlight-lines="1">HTTP/1.1 400 Must include an event type with the request either in body or as ES-EventType header.
 Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
 Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
 Access-Control-Allow-Origin: *
@@ -269,7 +269,7 @@ Keep-Alive: timeout=15,max=100
 </code></pre></section>
 </div>
 <h3 id="appending-events">Appending events</h3>
-<p>To append events, issue a <code>POST</code> request to the same resource again and edit the <code>eventId</code>:</p>
+<p>To append events, issue a <code>POST</code> request to the same resource with a new <code>eventId</code>:</p>
 <pre><code class="lang-json" name="http-api-append-event">[
     {
         &quot;eventId&quot;: &quot;fbf4a1a1-b4a3-4dfe-a01f-ec52c34e16e5&quot;,
@@ -289,7 +289,7 @@ Keep-Alive: timeout=15,max=100
 </li>
 </ul>
 <section id="tabpanel_e5OAF5pzdi-5_tabid-11" role="tabpanel" data-tab="tabid-11">
-<pre><code class="lang-bash" name="http-api-write-event-append-request">curl -i -d &quot;@event-append.json&quot; &quot;http://127.0.0.1:2113/streams/newstream&quot; -H &quot;Content-Type:application/vnd.eventstore.events+json&quot;
+<pre><code class="lang-bash" name="http-api-write-event-append-request">curl -i -d &quot;@event-append.json&quot; &quot;http://127.0.0.1:2113/streams/newstream&quot; -H &quot;Content-Type:application/vnd.eventstore.events+json&quot; -H &quot;ES-EventType: SomeEvent&quot;
 </code></pre></section>
 <section id="tabpanel_e5OAF5pzdi-5_tabid-12" role="tabpanel" data-tab="tabid-12" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-json" name="http-api-write-event-append-response">HTTP/1.1 201 Created
@@ -389,7 +389,7 @@ Keep-Alive: timeout=15,max=100
 <pre><code class="lang-bash" name="http-api-write-event-wrong-version-request">curl -i -d @event-version.json &quot;http://127.0.0.1:2113/streams/newstream&quot; -H &quot;Content-Type:application/vnd.eventstore.events+json&quot; -H &quot;ES-ExpectedVersion: 3&quot;
 </code></pre></section>
 <section id="tabpanel_e5OAF5pzdi-8_tabid-18" role="tabpanel" data-tab="tabid-18" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-json" name="http-api-write-event-wrong-version-response">HTTP/1.1 400 Wrong expected EventNumber
+<pre><code class="lang-json" name="http-api-write-event-wrong-version-response" highlight-lines="1">HTTP/1.1 400 Wrong expected EventNumber
 Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
 Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
 Access-Control-Allow-Origin: *

@@ -12,7 +12,7 @@
     <title>Ports and networking | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Ports and networking | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -95,12 +95,12 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="ports-and-networking">Ports and networking</h1>
 
-<h2 id="single-node">Single Node</h2>
+<h2 id="single-node">Single node</h2>
 <p>If you run Event Store as a single node, it only uses two ports. The first port is the external HTTP port, and the default value is <code>2113</code>. Event Store uses this port for both the client HTTP APIs and for the management HTTP interface.</p>
 <p>The second port used is the TCP interface for clients connecting over the client API, and the default for the port is <code>1113</code>.</p>
 <p>Event Store in Windows tries to add access via <code>http.sys</code> automatically for the <code>2113</code> port.</p>
 <p>You should ensure that these ports are open and allowed via a firewall.</p>
-<h2 id="cluster-node">Cluster Node</h2>
+<h2 id="cluster-node">Cluster node</h2>
 <p>When running in cluster mode the networking for Event Store is more complex. Cluster mode requires 4 ports to run. The ports are for internal HTTP, internal TCP, external HTTP, and external TCP.</p>
 <!-- TODO: And they are? -->
 <p>The internal and external interfaces allow for separation of traffic. The internal network is where cluster communications runs, while the external interfaces is where client communications runs.</p>
@@ -109,7 +109,7 @@
 <p>You can control whether the admin interface is available on the external HTTP interface using the <code>admin-on-ext</code> <a href="../command-line-arguments/index.html">option</a>. You can control whether gossip is enabled on external interfaces with the <code>gossip-on-ext</code> <a href="../command-line-arguments/index.html">option</a> (you normally want it enabled).</p>
 <p>You configure the internal TCP and HTTP ports in the same way as the external. All internal communications for the cluster happen over these interfaces. Elections and internal gossip happen over HTTP. Replication and forwarding of client requests happens over the TCP channel.</p>
 <p>When setting up a cluster the nodes must be able to reach each other over both the internal HTTP channel and the internal TCP channel. You should ensure that these ports are open on firewalls on the machines and between the machines.</p>
-<h2 id="heartbeat-timeouts">Heartbeat Timeouts</h2>
+<h2 id="heartbeat-timeouts">Heartbeat timeouts</h2>
 <p>Event Store uses heartbeats over all TCP connections to discover dead clients and nodes. Setting heartbeat timeouts requires thought. Set them too short and you receive false positives, set them too long and discovery of dead clients and nodes is slower.</p>
 <p>Each heartbeat has two points of configuration. The first is the &#39;interval&#39;, this represents how often the system should consider a heartbeat. Event Store doesn&#39;t send a heartbeat for every interval. Event Store sends heartbeat requests if it has not heard from a node within the configured interval. On a busy cluster, you may never see any heartbeats.</p>
 <p>The second point of configuration is the &#39;timeout&#39;. This determines how long Event Store waits for a client or node to respond to a heartbeat request.</p>
@@ -120,7 +120,7 @@
 </ul>
 <div class="TIP"><h5>Tip</h5><p>If in doubt, choose higher numbers. This adds a small period of time to discover a dead client or node and is better than the alternative, which is false positives.</p>
 </div>
-<h2 id="advertise-as">Advertise As</h2>
+<h2 id="advertise-as">Advertise as</h2>
 <p>Due to NAT, or other reasons a node may not be bound to the address it is reachable from other nodes. For example, the machine has an IP address of 192.168.1.13, but the node is visible to other nodes as 10.114.12.112.</p>
 <p>The <a href="../command-line-arguments/index.html">option</a> <code>advertise-as</code> allows you to tell the node that even though it is bound to a given address it should not gossip that address. Instead it uses the address that you tell it to use. In the example above you would configure&quot;</p>
 <pre><code class="lang-bash">--ext-ip 192.168.1.13 --advertise-as 10.114.12.112

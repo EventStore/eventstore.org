@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Configuring Projections | Event Store </title>
+    <title>Configuring projections | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Configuring Projections | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="Configuring projections | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,7 +93,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="configuring-projections">Configuring Projections</h1>
+<h1 id="configuring-projections">Configuring projections</h1>
 
 <!-- TODO: And how do you change them? UI, .NET, HTTP etc -->
 <p>By changing these settings, you can lessen the amount of pressure projections put on an Event Store node or improve projection performance. You can change these settings on a case-by-case basis, and monitor potential improvements.</p>
@@ -128,19 +128,19 @@ conn.CreatePersistentSubscriptionAsync(streamName, &quot;examplegroup&quot;, set
 <h2 id="emit-options">Emit options</h2>
 <p>These options control how projections write events.</p>
 <p>In busy systems, projections can put a lot of extra pressure on the master node. This is especially true for Event Store servers that also have persistent subscriptions running, which only the master node can process. If you see a lot of commit timeouts and slow writes from your projections and other clients, then start with these settings.</p>
-<h3 id="emit-enabled">Emit Enabled</h3>
+<h3 id="emit-enabled">Emit enabled</h3>
 <p>The <code>emit</code> boolean setting determines whether a projection can emit events and any projection that calls <code>emit()</code> or <code>linkTo()</code> requires it. If this option is not set and a projection attempts to emit events, you see an error message like the following:</p>
 <!-- TODO: Is it emit or emitenabled? Or are .NET and HTTP different -->
 <pre><code class="lang-bash">&#39;emit&#39; is not allowed by the projection/configuration/mode
 </code></pre><p>Event Store disables this setting by default, and is usually set when you create the projection and if you need the projection to emit events.</p>
-<h3 id="track-emitted-streams">Track Emitted Streams</h3>
+<h3 id="track-emitted-streams">Track emitted streams</h3>
 <p>The <code>trackemittedstreams</code> boolean setting enables tracking of a projection&#39;s emitted streams. It only has an affect if the projection has <code>EmitEnabled</code> enabled.</p>
 <p>Tracking emitted streams enables you to delete a projection and all the streams that it has created. You should only the setting if you intend to delete a projection and create new ones that project to the same stream.</p>
 <div class="WARNING"><h5>Warning</h5><p>By default Event Store disables the <code>trackemittedstreams</code> setting for projections. When enabled, an event written records the stream name (in <code>$projections-{projection_name}-emittedstreams</code>) of each event emitted by the projection. This means that write amplification is a possibility, as each event that the projection emits writes a separate event. As such, this option is not recommended for projections that emit a lot of events, and you should enable only where necessary.</p>
 </div>
 <div class="TIP"><h5>Tip</h5><p>Between Event Store versions 3.8.0 and 4.0.2, this option was enabled by default when a projection was created through the UI. If you have any projections created during this time frame, it&#39;s worth checking whether this option is enabled.</p>
 </div>
-<h3 id="max-allowed-writes-in-flight">Max Allowed Writes in Flight</h3>
+<h3 id="max-allowed-writes-in-flight">Max allowed writes in flight</h3>
 <!-- TODO: Why is this not in the GUI for new projection? -->
 <!-- TODO: Is the setting name correct? Especially in HTTP -->
 <p>The <code>AllowedInFlightMessages</code> setting sets the maximum number of writes to allow for a projection. Because a projection can write to multiple different streams, it&#39;s possible for the projection to send multiple writes at the same time. This option sets the number of concurrent writes that a projection can perform.</p>
@@ -148,7 +148,7 @@ conn.CreatePersistentSubscriptionAsync(streamName, &quot;examplegroup&quot;, set
 <div class="NOTE"><h5>Note</h5><p>Lower values may cause the projection to slow down as the number of writes are throttled, but the trade off for this is cleaner logs and fewer commit timeouts.</p>
 </div>
 <p>By default, this is unbounded, allowing a projection to write as fast as it can.</p>
-<h3 id="max-write-batch-length">Max Write Batch Length</h3>
+<h3 id="max-write-batch-length">Max write batch length</h3>
 <!-- TODO: Why is this not in the GUI for new projection? -->
 <!-- TODO: Is the setting name correct? Especially in HTTP -->
 <p>The <code>MaxWriteBatchLength</code> setting sets the maximum number of events the projection can write in a batch at a time.
@@ -156,19 +156,19 @@ The default for this option is 500.</p>
 <h2 id="checkpoint-options">Checkpoint options</h2>
 <p>Checkpoints store how far along a projection is in the streams it is processing from. There is a performance overhead with writing a checkpoint, as it does more than write an event, and writing them too often can slow projections down.</p>
 <p>We recommend you try other methods of improving projections before changing these values, as checkpoints are an important part of running projections.</p>
-<h3 id="checkpoint-after-ms">Checkpoint After Ms</h3>
+<h3 id="checkpoint-after-ms">Checkpoint after Ms</h3>
 <p>The <code>CheckpointAfterMs</code> setting prevents a new checkpoint from being written within a certain time frame from the previous one.
 The setting is to keep a projection from writing too many checkpoints too quickly, something that can happen in a busy system.</p>
 <p>The default setting is 0 seconds, which means there is no limit to how quickly checkpoints can be written.</p>
-<h3 id="checkpoint-handled-threshold">Checkpoint Handled Threshold</h3>
+<h3 id="checkpoint-handled-threshold">Checkpoint handled threshold</h3>
 <p>The <code>CheckpointHandledThreshold</code> setting controls the number of events that a projection can handle before attempting to write a checkpoint. An event is considered handled if it actually passed through the projection&#39;s filter. If the projection is set to checkpoint every 4,000 events, but it only reads from the <code>foo</code> stream, the projection only checkpoints every 4,000 <code>foo</code> events.</p>
 <p>The default setting is 4,000 events.</p>
-<h3 id="checkpoint-unhandled-bytes-threshold">Checkpoint Unhandled Bytes Threshold</h3>
+<h3 id="checkpoint-unhandled-bytes-threshold">Checkpoint unhandled bytes threshold</h3>
 <p>The <code>CheckpointUnhandledBytesThreshold</code> setting specifies the number of bytes a projection can process before attempting to write a checkpoint. Unhandled bytes are the events that are not processed by the projection itself.</p>
 <p>For example, if the projection reads from the <code>foo</code> stream, but writes from the <code>bar</code> stream comes through, a checkpoint is written after this number of bytes have been processed. This prevents the projection from having to read through a potentially large number of unrelated events again because none of them passed its filter.</p>
 <p>The default setting is 10mb.</p>
 <h2 id="processing-options">Processing options</h2>
-<h3 id="pending-events-threshold">Pending Events Threshold</h3>
+<h3 id="pending-events-threshold">Pending events threshold</h3>
 <p>The <code>PendingEventsThreshold</code> setting determines the number of events that can be pending before the projection is paused.
 Pausing the projection stops the projection from reading, allowing it to finish with the current events that are waiting to be processed. Once the pending queue has drained to half the threshold, the projection starts reading again.</p>
 <p>The default setting is 5000.</p>

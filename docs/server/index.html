@@ -12,7 +12,7 @@
     <title>Running Event Store | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Running Event Store | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../assets/favicon.ico">
@@ -148,9 +148,13 @@
 </div>
 </section>
 <section id="tabpanel_Imwg03Et86_tabid-3" role="tabpanel" data-tab="tabid-3" aria-hidden="true" hidden="hidden">
-<p>Event Store has <a href="https://hub.docker.com/r/eventstore/eventstore/">a Docker image</a> available for any platform that supports Docker:</p>
+<p>Event Store has a Docker image available for any platform that supports Docker.</p>
+<p>Pull the Docker image:</p>
+<pre><code class="lang-bash">docker pull eventstore/eventstore
+</code></pre><p>Run the container:</p>
 <pre><code class="lang-bash">docker run --name eventstore-node -it -p 2113:2113 -p 1113:1113 eventstore/eventstore
-</code></pre></section>
+</code></pre><p>Refer to the <a href="https://hub.docker.com/r/eventstore/eventstore/">image overview</a> for more information.</p>
+</section>
 <section id="tabpanel_Imwg03Et86_tabid-k8" role="tabpanel" data-tab="tabid-k8" aria-hidden="true" hidden="hidden">
 <p>Event Store has <a href="https://github.com/EventStore/EventStore.Charts">a Helm chart</a> available for installing Event Store on Kubernetes clusters:</p>
 <pre><code class="lang-bash">helm repo add eventstore https://eventstore.github.io/EventStore.Charts
@@ -167,7 +171,7 @@ Read <a href="deploy-kubernetes-aks/index.html">this guide</a> for more details 
 </section>
 </div>
 <h2 id="solving-503-errors-from-the-admin-ui">Solving 503 errors from the Admin UI</h2>
-<p>There is a <a href="http://stackoverflow.com/questions/8142396/what-causes-a-httplistener-http-503-error">known issue</a> with the .NET <code>HTTPListener</code> class (which Event Store uses) and bad URL ACL registrations which can cause servers to return 503 errors for every request. If you see this, you can issue the following commands:</p>
+<p>There is a <a href="http://stackoverflow.com/questions/8142396/what-causes-a-httplistener-http-503-error">known issue</a> with the .NET <code>HTTPListener</code> class (which Event Store uses) and bad URL ACL registrations, which can cause servers to return 503 errors for every request. If you see this, you can issue the following commands:</p>
 <pre><code class="lang-posh">netsh http show urlacl
 </code></pre><p>Look for an entry on the port you&#39;re trying to use (<code>2113</code> unless you&#39;ve specified a custom port), then issue:</p>
 <pre><code class="lang-posh">netsh http delete urlacl &lt;the entry you just found&gt;

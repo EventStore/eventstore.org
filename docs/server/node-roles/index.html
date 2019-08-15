@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Cluster Node Roles | Event Store </title>
+    <title>Cluster node roles | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Cluster Node Roles | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="Cluster node roles | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,7 +93,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="cluster-node-roles">Cluster Node Roles</h1>
+<h1 id="cluster-node-roles">Cluster node roles</h1>
 
 <p>Every node in an Event Store cluster can have one of three roles.</p>
 <h2 id="master">Master</h2>
@@ -107,7 +107,7 @@
 <p>You can control which clones the cluster promotes with the <code>NodePriority</code> <a href="../command-line-arguments/index.html">command line option</a>. The default value is <code>0</code>, and the cluster is more likely to promote clones with higher values.</p>
 <div class="NOTE"><h5>Note</h5><p>Changing <code>NodePriority</code> doesn&#39;t guarantee that the cluster won&#39;t promote the clone. It&#39;s only one of the criteria that the Election Service considers.</p>
 </div>
-<h2 id="non-promotable-clone">Non Promotable Clone</h2>
+<h2 id="non-promotable-clone">Non-promotable clone</h2>
 <p>If you want the cluster to never promote a node with the <code>Clone</code> role, set the <code>--is-promotable</code> <a href="../command-line-arguments/index.html">command line option</a> to <code>false</code> when starting a clone node. The node never acknowledges any writes and is never part of the quorum until you change the option to <code>true</code>.</p>
 <p>Non promotable clones are best used for data redundancy, or for locally hosted nodes you use for application testing.</p>
 </article>

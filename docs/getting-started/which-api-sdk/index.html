@@ -12,7 +12,7 @@
     <title>Step 4 - Which API or SDK to use | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Step 4 - Which API or SDK to use | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -98,12 +98,12 @@
 <p>This getting started guide shows you how to get started with Event Store using the Atom publishing protocol as the primary interface. This final step covers the different APIs, and client SDKs Event Store has available with the aim of helping you choose which one suits your use case.</p>
 <h2 id="tcp">TCP</h2>
 <p>Event Store offers a low-level protocol in the form of an asynchronous TCP protocol that exchanges protobuf objects. At present this protocol has adapters for .NET and the JVM.</p>
-<h3 id="event-store-supported-clients">Event Store Supported Clients</h3>
+<h3 id="event-store-supported-clients">Event Store supported clients</h3>
 <ul>
 <li><a href="http://www.nuget.org/packages/EventStore.Client">.NET Client</a></li>
 <li><a href="https://github.com/EventStore/EventStore.JVM">JVM Client</a></li>
 </ul>
-<h3 id="community-developed-clients">Community Developed Clients</h3>
+<h3 id="community-developed-clients">Community developed clients</h3>
 <ul>
 <li><a href="https://www.nuget.org/packages/EventStore.ClientAPI.NetCore/">.NET Core</a></li>
 <li><a href="https://www.npmjs.com/package/event-store-client">Node.js</a></li>
@@ -120,11 +120,11 @@
 </ul>
 <h2 id="http">HTTP</h2>
 <p>Event Store also offers an HTTP-based interface, based specifically on the <a href="http://tools.ietf.org/html/rfc5023">AtomPub protocol</a>. As it operates over HTTP, this is less efficient, but nearly every environment supports it.</p>
-<h3 id="event-store-supported-clients-1">Event Store Supported Clients</h3>
+<h3 id="event-store-supported-clients-1">Event Store supported clients</h3>
 <ul>
 <li><a href="../../http-api/index.html">HTTP API</a></li>
 </ul>
-<h3 id="community-developed-clients-1">Community Developed Clients</h3>
+<h3 id="community-developed-clients-1">Community developed clients</h3>
 <ul>
 <li><a href="https://github.com/dbellettini/php-eventstore-client">PHP</a></li>
 <li><a href="https://github.com/madedotcom/atomicpuppy">Python</a></li>
@@ -143,7 +143,7 @@
 <p>Most platforms have good existing tooling for Atom including feed readers. None of this tooling exists for analyzing traffic with the TCP protocol.</p>
 <div class="NOTE"><h5>Note</h5><p>Our recommendation would be to use AtomPub as your primary protocol unless you have low subscriber SLAs or need higher throughput on reads and writes than Atom can offer. This is due to the open nature and ease of use of the Atom protocol. Often in integration scenarios, these are more important than raw performance.</p>
 </div>
-<h2 id="next-step">Next Step</h2>
+<h2 id="next-step">Next step</h2>
 <p>Congratulations! You&#39;ve reached the end of our getting started guide, what&#39;s next?</p>
 <ul>
 <li><strong>Want to use the .NET client?</strong> <a href="../../dotnet-api/index.html">Find more here</a>.</li>

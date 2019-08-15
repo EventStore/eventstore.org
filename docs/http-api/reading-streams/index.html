@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Reading Streams and Events | Event Store </title>
+    <title>Reading streams and events | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Reading Streams and Events | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="Reading streams and events | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,7 +93,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="reading-streams-and-events">Reading Streams and Events</h1>
+<h1 id="reading-streams-and-events">Reading streams and events</h1>
 
 <h2 id="reading-a-stream">Reading a stream</h2>
 <p>Event Store exposes streams as a resource located at <em>http(s)://{yourdomain.com}:{port}/streams/{stream}</em>. If you issue a simple <code>GET</code> request to this resource, you receive a standard AtomFeed document as a response.</p>
@@ -110,7 +110,7 @@
 <pre><code class="lang-bash" name="getting-started-read-stream-request">curl -i -H &quot;Accept:application/vnd.eventstore.atom+json&quot; &quot;http://127.0.0.1:2113/streams/newstream&quot;
 </code></pre></section>
 <section id="tabpanel_LGtvxSPeFV_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-http" name="getting-started-read-stream-response">HTTP/1.1 200 OK
+<pre><code class="lang-http" name="getting-started-read-stream-response" highlight-lines="9">HTTP/1.1 200 OK
 Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
 Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
 Access-Control-Allow-Origin: *
@@ -220,7 +220,7 @@ Keep-Alive: timeout=15,max=100
 }
 </code></pre></section>
 </div>
-<h2 id="feed-paging">Feed Paging</h2>
+<h2 id="feed-paging">Feed paging</h2>
 <p>The next step in understanding how to read a stream is the <code>first</code>/<code>last</code>/<code>previous</code>/<code>next</code> links within a stream. Event Store supplies these links so you can read through a stream, and they follow the pattern defined in <a href="http://tools.ietf.org/html/rfc5005">RFC 5005</a>.</p>
 <p>In the example above the server returned the following <code>links</code> as part of its result:</p>
 <pre><code class="lang-http" name="getting-started-read-event-response">&quot;links&quot;: [
@@ -473,9 +473,9 @@ Keep-Alive: timeout=15,max=100
 <p>You then follow <code>previous</code> links until you are back to the head of the stream, where you can continue reading events in real time by polling the <code>previous</code> link.</p>
 <div class="NOTE"><h5>Note</h5><p>All links except the head link are fully cacheable as you can see in the HTTP header <code>Cache-Control: max-age=31536000, public</code>. This is important when discussing intermediaries and performance as you commonly replay a stream from storage. You should <strong>never</strong> bookmark links aside from the head of the stream resource, and always follow links. We may in the future change how internal links work, and bookmarking links other than the head may break.</p>
 </div>
-<h2 id="reading-all-events">Reading All Events</h2>
+<h2 id="reading-all-events">Reading all events</h2>
 <p><code>$all</code> is a special paged stream for all events. You can use the same paged form of reading described above to read all events for a node by pointing the stream at <em>/streams/$all</em>. As it&#39;s a stream like any other, you can perform all operations, except posting to it.</p>
-<div class="NOTE"><h5>Note</h5><p>To access the <code>$all</code> stream, you must use admin details, find more information on the <a href="../security/index.html">security</a> page.</p>
+<div class="NOTE"><h5>Note</h5><p>To access the <code>$all</code> stream, you must use admin details. Find more information on the <a href="../security/index.html">security</a> page.</p>
 </div>
 <div class="tabGroup" id="tabgroup_LGtvxSPeFV-6">
 <ul role="tablist">
@@ -543,7 +543,7 @@ Keep-Alive: timeout=15,max=100
 # TODO: Make complete
 </code></pre></section>
 </div>
-<h2 id="conditional-gets">Conditional Gets</h2>
+<h2 id="conditional-gets">Conditional GETs</h2>
 <p>The head link supports conditional <code>GET</code>s with the use of <a href="http://en.wikipedia.org/wiki/HTTP_ETag">ETAGS</a>, a well-known HTTP construct. You can include the ETAG of your last request and issue a conditional <code>GET</code> to the server. If nothing has changed, it won&#39;t return the full feed. For example the earlier request has an ETAG:</p>
 <div class="tabGroup" id="tabgroup_LGtvxSPeFV-7">
 <ul role="tablist">
@@ -575,7 +575,7 @@ Keep-Alive: timeout=15,max=100
 <pre><code class="lang-bash" name="http-api-etag-request">curl -i http://127.0.0.1:2113/streams/alphabet -H &quot;Accept:application/vnd.eventstore.atom+json&quot; -H &quot;If-None-Match:26;-2060438500&quot;
 </code></pre></section>
 <section id="tabpanel_LGtvxSPeFV-8_tabid-18" role="tabpanel" data-tab="tabid-18" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-http" name="http-api-etag-response">HTTP/1.1 304 Not Modified
+<pre><code class="lang-http" name="http-api-etag-response" highlight-lines="1">HTTP/1.1 304 Not Modified
 Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
 Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
 Access-Control-Allow-Origin: *
@@ -589,15 +589,15 @@ Keep-Alive: timeout=15,max=100
 </div>
 <div class="NOTE"><h5>Note</h5><p>You create Etags using the version of the stream and the media type of the stream you are reading. You can&#39;t read an Etag from a stream in one media type and use it with another media type.</p>
 </div>
-<h2 id="embedding-data-into-streams-in-json-format">Embedding Data into Streams in JSON format</h2>
+<h2 id="embedding-data-into-streams-in-json-format">Embedding data into streams in JSON format</h2>
 <p>So far in this guide, the feeds returned have contained links that refer to the actual event data. This is normally a preferable mechanism for several reasons:</p>
 <ul>
-<li>They can be in a different media type than the feed, and you can negotiate them separately from the feed itself (e.g., the feed in JSON, the event in XML). You can cache the event data separately from the feed, and you can point it to different feeds. If you use a <code>linkTo()</code> in your <a href="../../projections/index.html">projection</a> this is what happens in your atom feeds.</li>
+<li>They can be in a different media type than the feed, and you can negotiate them separately from the feed itself (for example, the feed in JSON, the event in XML). You can cache the event data separately from the feed, and you can point it to different feeds. If you use a <code>linkTo()</code> in your <a href="../../projections/index.html">projection</a> this is what happens in your atom feeds.</li>
 <li>If you are using JSON, you can embed the events into the atom feed events. This can help cut down on the number of requests in some situations, but the messages are larger.</li>
 </ul>
 <p>There are ways of embedding events and further metadata into your stream by using the <code>embed=</code> parameter.</p>
 <h3 id="rich-embed-mode">Rich embed mode</h3>
-<p>The <code>rich</code> embed mode returns more properties about the event (<code>eventtype</code>, <code>streamid</code>, <code>position</code>, etc.) as you can see in the following request.</p>
+<p>The <code>rich</code> embed mode returns more properties about the event (<code>eventtype</code>, <code>streamid</code>, <code>position</code>, and so on) as you can see in the following request.</p>
 <div class="tabGroup" id="tabgroup_LGtvxSPeFV-9">
 <ul role="tablist">
 <li role="presentation">
@@ -785,7 +785,7 @@ Keep-Alive: timeout=15,max=100
 <li><code>PrettyBody</code> tries to reformat the JSON to make it &quot;pretty to read&quot;.</li>
 <li><code>TryHarder</code> works harder to try to parse and reformat the JSON from an event to return it in the feed. These do not include further information and are focused on how the feed looks.</li>
 </ul>
-<h2 id="embedding-data-into-streams-in-xml-format">Embedding Data into Streams in XML format</h2>
+<h2 id="embedding-data-into-streams-in-xml-format">Embedding data into streams in XML format</h2>
 <p>The XML format embeds no additional data, as only JSON supports embedding.</p>
 <div class="tabGroup" id="tabgroup_LGtvxSPeFV-11">
 <ul role="tablist">

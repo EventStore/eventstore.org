@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Competing Consumers | Event Store </title>
+    <title>Competing consumers | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Competing Consumers | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="Competing consumers | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,22 +93,21 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="competing-consumers">Competing Consumers</h1>
+<h1 id="competing-consumers">Competing consumers</h1>
 
 <p>This document explains how to use .NET API for setting up and consuming competing consumer subscription groups. For an overview of competing consumers and how they relate to other subscription types, please see the <a href="../../getting-started/projections/index.html">overview document</a>.</p>
 <div class="NOTE"><h5>Note</h5><p>The Administration UI includes a <em>Competing Consumers</em> section where a user can create, update, delete and view subscriptions and their statuses.</p>
 </div>
-<h1 id="methods">Methods</h1>
-<h2 id="creating-a-persistent-subscription">Creating a Persistent Subscription</h2>
+<h2 id="creating-a-persistent-subscription">Creating a persistent subscription</h2>
 <p>Before interacting with a subscription group, you need to create one. You will receive an error if you attempt to create a subscription group more than once. This requires <a href="../../server/users-and-access-control-lists/index.html">admin permissions</a>.</p>
 <pre><code class="lang-csharp">Task&lt;PersistentSubscriptionCreateResult&gt; CreatePersistentSubscriptionAsync(string stream, string groupName, PersistentSubscriptionSettings settings, UserCredentials credentials);
-</code></pre><h2 id="updating-a-persistent-subscription">Updating a Persistent Subscription</h2>
+</code></pre><h2 id="updating-a-persistent-subscription">Updating a persistent subscription</h2>
 <p>You can edit the settings of an existing subscription while it is running. This action drops the current subscribers and resets the subscription internally. This requires <a href="../../server/users-and-access-control-lists/index.html">admin permissions</a>.</p>
 <pre><code class="lang-csharp">Task&lt;PersistentSubscriptionUpdateResult&gt; UpdatePersistentSubscriptionAsync(string stream, string groupName, PersistentSubscriptionSettings settings, UserCredentials credentials);
-</code></pre><h2 id="deleting-a-persistent-subscription">Deleting a Persistent Subscription</h2>
+</code></pre><h2 id="deleting-a-persistent-subscription">Deleting a persistent subscription</h2>
 <!-- TODO: Explanation? -->
 <pre><code class="lang-csharp">Task&lt;PersistentSubscriptionDeleteResult&gt; DeletePersistentSubscriptionAsync(string stream, string groupName, UserCredentials userCredentials = null);
-</code></pre><h2 id="connecting-to-a-persistent-subscription">Connecting to a Persistent Subscription</h2>
+</code></pre><h2 id="connecting-to-a-persistent-subscription">Connecting to a persistent subscription</h2>
 <!-- TODO: Explanation? -->
 <pre><code class="lang-csharp">EventStorePersistentSubscription ConnectToPersistentSubscription(
    string groupName,
@@ -118,7 +117,7 @@
    UserCredentials userCredentials = null,
    int bufferSize = 10,
    bool autoAck = true);
-</code></pre><h2 id="persistent-subscription-settings">Persistent Subscription Settings</h2>
+</code></pre><h2 id="persistent-subscription-settings">Persistent subscription settings</h2>
 <p>Both the <code>Create</code> and <code>Update</code> methods take a <code>PersistentSubscriptionSettings</code> object as a parameter. The methods use this object to provide the settings for the persistent subscription. A fluent builder is available for these options that you can locate using the <code>Create()</code> method. The following table shows the options you can set on a persistent subscription.</p>
 <table>
 <thead>
@@ -194,7 +193,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="creating-a-subscription-group">Creating a Subscription Group</h2>
+<h2 id="creating-a-subscription-group">Creating a subscription group</h2>
 <p>The first step of dealing with a subscription group is to create one. You will receive an error if you attempt to create a subscription group multiple times. You must have admin permissions to create a persistent subscription group.</p>
 <div class="NOTE"><h5>Note</h5><p>Normally you wouldn&#39;t create the subscription group in your general executable code. Instead, you create it as a step during an install or as an admin task when setting up Event Store. You should assume the subscription exists in your code.</p>
 </div>
@@ -231,7 +230,7 @@ _result = _conn.CreatePersistentSubscriptionAsync(_stream,
 </tr>
 </tbody>
 </table>
-<h2 id="updating-a-subscription-group">Updating a Subscription Group</h2>
+<h2 id="updating-a-subscription-group">Updating a subscription group</h2>
 <p>You can edit the settings of an existing subscription group while it is running, you don&#39;t need to delete and recreate it to change settings. When you update the subscription group, it resets itself internally dropping the connections and having them reconnect. You must have admin permissions to update a persistent subscription group.</p>
 <pre><code class="lang-csharp">PersistentSubscriptionSettings settings = PersistentSubscriptionSettings.Create()
                                                                 .DoNotResolveLinkTos()
@@ -268,7 +267,7 @@ _result = _conn.UpdatePersistentSubscriptionAsync(_stream,
 </tr>
 </tbody>
 </table>
-<h2 id="deleting-a-subscription-group">Deleting a Subscription Group</h2>
+<h2 id="deleting-a-subscription-group">Deleting a subscription group</h2>
 <p>Remove a subscription group with the delete operation. Like the creation of groups, you rarely do this in your runtime code and is undertaken by an administrator running a script.</p>
 <pre><code class="lang-csharp">var result = _conn.DeletePersistentSubscriptionAsync(stream,
                                                      &quot;groupname&quot;,
@@ -295,7 +294,7 @@ _result = _conn.UpdatePersistentSubscriptionAsync(_stream,
 </tr>
 </tbody>
 </table>
-<h2 id="connecting-to-a-subscription-group">Connecting to a Subscription Group</h2>
+<h2 id="connecting-to-a-subscription-group">Connecting to a subscription group</h2>
 <p>Once you have created a subscription group, clients can connect to that subscription group. A subscription in your application should only have the connection in your code, you should assume that the subscription was created via the client API, the restful API, or manually in the UI.</p>
 <p>The most important parameter to pass when connecting is the buffer size. This parameter represents how many outstanding messages the server should allow this client. If this number is too small, your subscription will spend much of its time idle as it waits for an acknowledgment to come back from the client. If it&#39;s too big, you waste resources and can start causing time out messages depending on the speed of your processing.</p>
 <pre><code class="lang-csharp">var subscription = _conn.ConnectToPersistentSubscription(&quot;foo&quot;,
@@ -343,7 +342,7 @@ _result = _conn.UpdatePersistentSubscriptionAsync(_stream,
 <h2 id="acknowledgements">Acknowledgements</h2>
 <p>Clients must acknowledge (or not acknowledge) messages in the competing consumer model. If you enable auto-ack the subscription will automatically acknowledge messages once your handler completes them. If you throw an exception, it will shut down your subscription with a message and the uncaught exception.</p>
 <p>You can choose to not auto-ack messages. This can be useful when you have multi-threaded processing of messages in your subscriber and need to pass control to something else. There are methods on the subscription object that you can call <code>Acknowledge,</code> and <code>NotAcknowledge</code> both take a <code>ResolvedEvent</code> (the one you processed) both also have overloads for passing and <code>IEnumerable&lt;ResolvedEvent&gt;</code>.</p>
-<h2 id="consumer-strategies">Consumer Strategies</h2>
+<h2 id="consumer-strategies">Consumer strategies</h2>
 <p>When creating a persistent subscription, the settings allow for different consumer strategies via the <code>WithNamedConsumerStrategy</code> method. Built-in strategies are defined in the enum <code>SystemConsumerStrategies</code>.</p>
 <div class="NOTE"><h5>Note</h5><p>HTTP clients bypass the consumer strategy which means it ignores any ordering or pinning.</p>
 </div>

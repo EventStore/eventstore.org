@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Rolling Snapshots | Event Store </title>
+    <title>Rolling snapshots | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Rolling Snapshots | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="Rolling snapshots | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,7 +93,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="rolling-snapshots">Rolling Snapshots</h1>
+<h1 id="rolling-snapshots">Rolling snapshots</h1>
 
 <p>A rolling snapshot is a projection of the current state of an aggregate at a given point. It represents the state when all events to that point have been replayed. You use rolling snapshots as a heuristic to prevent the need to load all events for the entire history of an aggregate. One way of processing events in the event stream is to replay the events from the beginning of time until the end of the event stream.</p>
 <p>The problem is that there may be a large number of events between the beginning of time and the current point. You can imagine that an event stream with a million or more events would be inefficient to load.</p>

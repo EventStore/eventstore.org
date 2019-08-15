@@ -12,7 +12,7 @@
     <title>Deploy with Kubernetes to Azure Cloud AKS | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Deploy with Kubernetes to Azure Cloud AKS | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -138,7 +138,7 @@ subjects:
 <pre><code class="lang-shell">kubectl create -f ./rbac-config.yaml
 </code></pre><p>To access the dashboard you can now use the <code>browse</code> command. This command is a wrapper around the <code>proxy</code> command of kubectl. It creates a local web server with a tunnel to the cluster hosted in Azure AKS web server</p>
 <pre><code class="lang-shell">az aks browse -n {clustername} -g {groupname}
-</code></pre><h4 id="deploy-event-store-cluster-with-helm">Deploy Event Store Cluster with Helm</h4>
+</code></pre><h4 id="deploy-event-store-cluster-with-helm">Deploy Event Store cluster with Helm</h4>
 <p>Helm is the package manager for Kubernetes. After you&#39;ve created a new Kubernetes cluster you need to configure Helm for your local helm CLI to connect to a configured service account on the server side. The service account used by Helm is called Tiller. Give Tiller access to the cluster and initialise it with the following commands:</p>
 <pre><code class="lang-shell">kubectl -n kube-system create serviceaccount tiller
 kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller

@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Internal Architectural Overview | Event Store </title>
+    <title>Internal architectural overview | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Internal Architectural Overview | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="Internal architectural overview | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,17 +93,17 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="internal-architectural-overview">Internal Architectural Overview</h1>
+<h1 id="internal-architectural-overview">Internal architectural overview</h1>
 
 <!-- TODO:  Overview image or intro? -->
 <h2 id="messaging">Messaging</h2>
-<p>The architecture style of Event Store is <a href="https://en.wikipedia.org/wiki/Staged_event-driven_architecture">SEDA (Staged Event Driven Architecture)</a>. Messages flow forward through queues internally, including the Transaction File which is also a queue. There are communication endpoints that flow forward through series of queues to be processed. All operations are purely asynchronous. The core processing runs on a single thread reading requests off of a single concurrent queue.</p>
+<p>The architecture style of Event Store is <a href="https://en.wikipedia.org/wiki/Staged_event-driven_architecture">SEDA (Staged Event Driven Architecture)</a>. Messages flow forward through queues internally, including the transaction file, which is also a queue. There are communication endpoints that flow forward through series of queues to be processed. All operations are purely asynchronous. The core processing runs on a single thread reading requests off of a single concurrent queue.</p>
 <p>Messages first flow through a state machine that represents the state of the node. In a distributed scenario a node is not always allowed to write (slaves forward writes, not write themselves), or if the node is still initializing its not allowed to read. Each request is handled by a state machine that manages the lifecycle of that request including time outs and acknowledgements throughout the cluster.</p>
 <p>Because of this architecture, the main monitoring points of Event Store is the status of the queues. You can view the status in the <em>health</em> area of the admin interface or through the HTTP API. It&#39;s also periodically written to a special <code>$statistics-node:port</code> stream.</p>
 <!-- TODO: Which endpoint -->
 <!-- TODO:  IMAGE(s)-->
-<p>The most common queue to be slow is the storage writer as it writes to storage in a durable fashion. It uses <code>fsync</code> and <code>flushfile</code> buffers to ensure that data is persisted to disk and survives, say a power outage on the machine. The storage writer is capable of writing more than 15,000 transactions to disk per second on the open source single node version.</p>
-<h2 id="transaction-file">Transaction File</h2>
+<p>The most common queue to be slow is the storage writer as it writes to storage in a durable fashion. It uses <code>fsync</code> and <code>flushfile</code> buffers to ensure that data is persisted to disk and survives, say, a power outage on the machine. The storage writer is capable of writing more than 15,000 transactions to disk per second on the open source single node version.</p>
+<h2 id="transaction-file">Transaction file</h2>
 <p>Event Store provides durable storage including handling cases where the power may be turned off to a machine through the use of a commit log. The commit log is a conceptual constantly appending file (though it is not implemented this way <!-- TODO:  This is confusing, link to more details? -->). Every write to Event Store appends to this file.</p>
 <p>The commit log is built not as one large file but as a series of small files implemented with an abstraction called a &#39;TFChunk&#39;. For all files it writes, Event Store always writes sequentially, except for checkpoints, although there is a non-performing sequential version of checkpoints.</p>
 <p>This results in seeks not being necessary for writes. While less of a problem with SSDs, this can drastically help with performance of spindle drives. It also allows for the possibility to store data for Event Store (both indexes and the transaction file) on write once media.</p>
@@ -125,17 +125,17 @@
 </ul>
 <p>This identifier of a record is useful as you can avoid additional lookups when writing the record to disk, this can change due to scavenging of the transaction file.</p>
 <p>As transactions are written to the transaction file, where an in-memory index is appended. A query hits the in memory index. The in-memory index is implemented as a hash of sorted lists with a fine grained lock on the stream.</p>
-<p>When there are enough items in the in-memory index, the index is flushed to disk (known as a &#39;PTable&#39; or &#39;Persistent Table&#39;). A PTable is a sorted group of index entries (remember that they are only 16 bytes each). A binary search across the PTables is used to search. The search function has been memoized by storing midpoints in memory. Mid point caching reduces the number of seeks from log(n) by the depth to which midpoints are filled and often all are in memory.</p>
-<h2 id="index-rebuilds">Index Rebuilds</h2>
+<p>When there are enough items in the in-memory index, the index is flushed to disk (known as a &#39;PTable&#39; or &#39;Persistent Table&#39;). A PTable is a sorted group of index entries (remember that they are only 16 bytes each). A binary search across the PTables is used to search. The search function has been <a href="https://en.wikipedia.org/wiki/Memoization">memoized</a> by storing midpoints in memory. Mid point caching reduces the number of seeks from log(n) by the depth to which midpoints are filled and often all are in memory.</p>
+<h2 id="index-rebuilds">Index rebuilds</h2>
 <p>You can copy indexes from machine to machine providing the data structure is the same. This guide explains how the index rebuild process works when you add new nodes to a cluster, or backup and restore an index.</p>
 <p>TFiles make up a transaction log, but conceptually they are one continuous file. Event Store breaks them up into many files instead of one big file for operational reasons such as incremental back ups. This mechanism also tends to play better with the filesystem.</p>
 <p>Rebuilding an index requires starting from position 0 in this large continuous file and then moving forward indexing every item one at a time.</p>
-<h3 id="rebuilds-on-a-new-node">Rebuilds on a New Node</h3>
-<p>When Event Store starts on a blank machine there are no persistent indexes, there is only a memtable (in memory index). There is a limit to how many items the memory index can store (1 million). When an index hits this number, the index is then moved to a disk based format known as a PTable. Event Store stores what the position was in the TFile for what the PTable represents. In a single index file example it may be <code>0,12345678</code> meaning the index covers all transactions between position <code>0</code> and <code>12345678s</code>.</p>
+<h3 id="rebuilds-on-a-new-node">Rebuilds on a new node</h3>
+<p>When Event Store starts on a blank machine there are no persistent indexes, there is only a memtable (in memory index). There is a limit to how many items the memory index can store (1 million). When an index hits this number, the index is then moved to a disk based format known as a PTable. Event Store stores what the position was in the TFile for what the PTable represents. In a single index file example it may be <code>0,12345678</code> meaning the index covers all transactions between positions <code>0</code> and <code>12345678</code>.</p>
 <p>When Event Store loads the index, it calculates the position that the persistent index covers, in this example, <code>12345678</code>.</p>
 <p>After loading the index, Event Store then knows that the index covers all events before positions <code>12345678</code>, and does not need to take them into account. Event Store then rebuilds the memory index from position <code>12345678</code> up to the current, which you can see in log output when Event Store starts.</p>
-<p>PTables get merged into larger PTables over time. During this operation they are scavenged for items to be removed. The merging of N PTables to 1 larger PTable is a linear operation as they are all sorted. Once written to disk, PTables are immutable and have like TFchunks MD5 checksums. Unlike a failure in a TFChunk checksum, if a problem is found within the index it&#39;s simply rebuilt.</p>
-<h3 id="backup-and-restore">Backup and Restore</h3>
+<p>PTables get merged into larger PTables over time. During this operation they are scavenged for items to be removed. The merging of N PTables to one larger PTable is a linear operation as they are all sorted. Once written to disk, PTables are immutable and have like TFchunks MD5 checksums. Unlike a failure in a TFChunk checksum, if a problem is found within the index it is simply rebuilt.</p>
+<h3 id="backup-and-restore">Backup and restore</h3>
 <p>When it comes to restoring Event Store from a backup, Event Store loads the persistent indexes, and finds out the highest logical position covered in the index. Event Store then creates a memtable from that point forward, this process is asynchronous and does not hold up start up.</p>
 </article>
           </div>

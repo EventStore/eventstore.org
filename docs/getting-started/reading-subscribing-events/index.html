@@ -12,7 +12,7 @@
     <title>Step 2 - Read events from a stream and subscribe to changes | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Step 2 - Read events from a stream and subscribe to changes | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -190,7 +190,7 @@ Keep-Alive: timeout=15,max=100
 <a href="#tabpanel_ewz4UtAAbO-1_tabid-dotnet-client" role="tab" aria-controls="tabpanel_ewz4UtAAbO-1_tabid-dotnet-client" data-tab="tabid-dotnet-client" tabindex="0" aria-selected="true">.NET Client API</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_ewz4UtAAbO-1_tabid-jvm-client" role="tab" aria-controls="tabpanel_ewz4UtAAbO-1_tabid-jvm-client" data-tab="tabid-jvm-client" tabindex="-1">JVM Client</a>
+<a href="#tabpanel_ewz4UtAAbO-1_tabid-jvm-client" role="tab" aria-controls="tabpanel_ewz4UtAAbO-1_tabid-jvm-client" data-tab="tabid-jvm-client" tabindex="-1">JVM client</a>
 </li>
 </ul>
 <section id="tabpanel_ewz4UtAAbO-1_tabid-dotnet-client" role="tabpanel" data-tab="tabid-dotnet-client">
@@ -251,10 +251,10 @@ Keep-Alive: timeout=15,max=100
 <div class="tabGroup" id="tabgroup_ewz4UtAAbO-3">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_ewz4UtAAbO-3_tabid-dotnet-read-event" role="tab" aria-controls="tabpanel_ewz4UtAAbO-3_tabid-dotnet-read-event" data-tab="tabid-dotnet-read-event" tabindex="0" aria-selected="true">.NET Client API</a>
+<a href="#tabpanel_ewz4UtAAbO-3_tabid-dotnet-read-event" role="tab" aria-controls="tabpanel_ewz4UtAAbO-3_tabid-dotnet-read-event" data-tab="tabid-dotnet-read-event" tabindex="0" aria-selected="true">.NET client API</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_ewz4UtAAbO-3_tabid-jvm-read-event" role="tab" aria-controls="tabpanel_ewz4UtAAbO-3_tabid-jvm-read-event" data-tab="tabid-jvm-read-event" tabindex="-1">JVM Client</a>
+<a href="#tabpanel_ewz4UtAAbO-3_tabid-jvm-read-event" role="tab" aria-controls="tabpanel_ewz4UtAAbO-3_tabid-jvm-read-event" data-tab="tabid-jvm-read-event" tabindex="-1">JVM client</a>
 </li>
 </ul>
 <section id="tabpanel_ewz4UtAAbO-3_tabid-dotnet-read-event" role="tabpanel" data-tab="tabid-dotnet-read-event">
@@ -280,8 +280,17 @@ Console.WriteLine(Encoding.UTF8.GetString(readResult.Event.Value.Event.Data));
 <p>You can use the HTTP API <a href="../../http-api/reading-streams/index.html#feed-paging">to paginate</a> through the feed using <em>previous</em> and <em>next</em> links within the stream. Or you can <a href="../../dotnet-api/reading-events/index.html#example-read-an-entire-stream-forwards-from-start-to-end">use a read method</a> of the .NET API (and JVM client), to loop through events a certain number at a time.</p>
 <h2 id="subscribing-to-receive-stream-updates">Subscribing to receive stream updates</h2>
 <p>A common operation is to subscribe to a stream and receive notifications for changes. As new events arrive, you continue following them.</p>
-<p>You can create subscriptions and watch events as they arrive under the <em>Persistent Subscriptions</em> tab, or use an API method:</p>
+<p>You can create subscriptions and watch events as they arrive under the <em>Persistent Subscriptions</em> tab, or use an API method.</p>
+<h3 id="create-subscription-in-the-admin-ui">Create subscription in the admin UI</h3>
+<ol>
+<li>Click <em>Persistent Subscriptions</em></li>
+<li>Enter a name for this subscription group (this can be any value you choose).</li>
+<li>Enter the name of the stream you want to subscribe to.</li>
+<li>Configure the other options. You can find more information about the options in the <a class="xref" href="../../dotnet-api/code/EventStore.ClientAPI.PersistentSubscriptionSettings.html">.NET API PersistentSubscriptionSettings object</a>.</li>
+<li>Click <em>Create</em> to create the new subscription.</li>
+</ol>
 <p><img src="../../images/getting-started-subscriptions.png" alt="Subscriptions in the Admin UI"></p>
+<h3 id="create-a-subscription-programmatically">Create a subscription programmatically</h3>
 <div class="tabGroup" id="tabgroup_ewz4UtAAbO-4">
 <ul role="tablist">
 <li role="presentation">
@@ -291,7 +300,7 @@ Console.WriteLine(Encoding.UTF8.GetString(readResult.Event.Value.Event.Data));
 <a href="#tabpanel_ewz4UtAAbO-4_tabid-create-sub-dotnet" role="tab" aria-controls="tabpanel_ewz4UtAAbO-4_tabid-create-sub-dotnet" data-tab="tabid-create-sub-dotnet" tabindex="-1">.NET API</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_ewz4UtAAbO-4_tabid-create-sub-java" role="tab" aria-controls="tabpanel_ewz4UtAAbO-4_tabid-create-sub-java" data-tab="tabid-create-sub-java" tabindex="-1">JVM Client API</a>
+<a href="#tabpanel_ewz4UtAAbO-4_tabid-create-sub-java" role="tab" aria-controls="tabpanel_ewz4UtAAbO-4_tabid-create-sub-java" data-tab="tabid-create-sub-java" tabindex="-1">JVM client API</a>
 </li>
 </ul>
 <section id="tabpanel_ewz4UtAAbO-4_tabid-create-sub-http" role="tabpanel" data-tab="tabid-create-sub-http">

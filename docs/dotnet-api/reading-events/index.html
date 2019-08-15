@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Reading Events | Event Store </title>
+    <title>Reading events | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Reading Events | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="Reading events | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,7 +93,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="reading-events">Reading Events</h1>
+<h1 id="reading-events">Reading events</h1>
 
 <p>You can use the client API to read events from a stream starting from either end of the stream. There is a method for each direction and one for reading a single event.</p>
 <h2 id="methods">Methods</h2>
@@ -108,7 +108,7 @@
 <pre><code class="lang-csharp">Task&lt;AllEventsSlice&gt; ReadAllEventsForwardAsync(Position position, int maxCount, bool resolveLinkTos);
 </code></pre><h3 id="read-all-events-backwards">Read all events backwards</h3>
 <pre><code class="lang-csharp">Task&lt;AllEventsSlice&gt; ReadAllEventsBackwardAsync(Position position, int maxCount, bool resolveLinkTos);
-</code></pre><div class="NOTE"><h5>Note</h5><p>These methods also have an optional parameter which allows you to specify the <code>UserCredentials</code> to use for the request. If you don&#39;t supply any, the default credentials for the <code>EventStoreConnection</code> are used (<a href="../connecting-to-a-server/index.html#user-credentials">See Connecting to a Server - User Credentials</a>).</p>
+</code></pre><div class="NOTE"><h5>Note</h5><p>These methods also have an optional parameter which allows you to specify the <code>UserCredentials</code> to use for the request. If you don&#39;t supply any, the default credentials for the <code>EventStoreConnection</code> are used (<a href="../connecting-to-a-server/index.html#user-credentials">see Connecting to a server - user credentials</a>).</p>
 </div>
 <h2 id="streameventsslice">StreamEventsSlice</h2>
 <p>The reading methods for individual streams each return a <code>StreamEventsSlice</code>, which is immutable. The available members on <code>StreamEventsSlice</code> are:</p>

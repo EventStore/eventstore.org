@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Setting up a Cluster with Manager Nodes | Event Store </title>
+    <title>Setting up a cluster with manager nodes | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Setting up a Cluster with Manager Nodes | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="Setting up a cluster with manager nodes | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,7 +93,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="setting-up-a-cluster-with-manager-nodes">Setting up a Cluster with Manager Nodes</h1>
+<h1 id="setting-up-a-cluster-with-manager-nodes">Setting up a cluster with manager nodes</h1>
 <!-- TODO: How much of this is also relevant to OSS? -->
 
 <p>High availability Event Store allows you to run more than one node as a cluster. There are two modes available for clustering:</p>
@@ -103,11 +103,11 @@
 </ul>
 <p>This document covers setting up Event Store with manager nodes and database nodes.</p>
 <div class="TIP"><h5>Tip</h5><p>When setting up a cluster, you generally want an odd number of nodes as Event Store uses a quorum based algorithm to handle high availability. We recommended you define an odd number of nodes to avoid split brain problems.</p>
-<p>Common values for the ‘ClusterSize’ setting are 3 or 5 (to have a majority of 2 nodes and a majority of 3 nodes).</p>
+<p>Common values for the ‘ClusterSize’ setting are three or five (to have a majority of two nodes and a majority of three nodes).</p>
 </div>
 <div class="NEXT"><h5>Next Steps</h5><p><a href="../node-roles/index.html">Read here</a> for more information on the roles available for nodes in an Event Store cluster.</p>
 </div>
-<h2 id="manager-nodes">Manager Nodes</h2>
+<h2 id="manager-nodes">Manager nodes</h2>
 <p>Each physical (or virtual) machine in an Event Store cluster typically runs one manager node and one database node. It&#39;s also possible to have multiple database nodes per physical machine, running under one manager node.</p>
 <p>Manager nodes have a number of responsibilities:</p>
 <ul>
@@ -116,7 +116,7 @@
 <li>They provide a known endpoint for clients to connect to and discover cluster information.</li>
 <li>When running on Windows, manager nodes run as Windows services.</li>
 </ul>
-<h2 id="configuring-nodes">Configuring Nodes</h2>
+<h2 id="configuring-nodes">Configuring nodes</h2>
 <p>Each database or manager node <a href="../command-line-arguments/index.html">can have a variety of configuration sources</a>. Each source has a priority and determines running configuration by evaluating each source and applying the option from the source with the highest priority.</p>
 <p>From lowest to highest priority, the sources of configuration are:</p>
 <ul>
@@ -126,12 +126,12 @@
 <li>Settings specified as command line options to the node.</li>
 </ul>
 <p>You can check the configuration of a node by passing the <code>-WhatIf</code> flag to the process.</p>
-<h2 id="typical-deployment-topologies">Typical Deployment Topologies</h2>
+<h2 id="typical-deployment-topologies">Typical deployment topologies</h2>
 <p>Event Store clusters follow a &quot;shared nothing&quot; philosophy, meaning that clustering requires no shared disks for clustering to work. Instead, several database nodes store your data to ensure it isn&#39;t lost in case of a drive failure or a node crashing.</p>
 <p>Event Store uses a quorum-based replication model, in which a majority of nodes in the cluster must acknowledge that they committed a write to disk before acknowledging the write to the client. This means that to be able to tolerate the failure of <em>n</em> nodes, the cluster must be of size <em>(2n + 1)</em>. A three-database-node cluster can continue to accept writes if one node is unavailable. A five-database-node cluster can continue to accept writes if two nodes are unavailable, and so forth.</p>
 <p>A typical deployment topology consists of three physical machines, each running one manager node and one database node. Each of the physical machines may have two network interfaces, one for communicating with other cluster members, and one for serving clients. Although it may be preferable in some situations to run over two separate networks. It&#39;s also possible to use different TCP ports on one interface.</p>
 <h2 id="cluster-gossip">Cluster gossip</h2>
-<p>Event Store uses a quorum-based replication model. When working normally, a cluster has one database node known as a <em>master</em>, and the remaining nodes are <em>slaves</em>. The master node is responsible for coordinating writes while it is the master. Database nodes use a consensus algorithm to determine which database node should be master and which should be slaves. Event Store bases the decision as to which node should be the master on a number of factors (<a href="../command-line-arguments/index.html#cluster-options">some of which are configurable</a>).</p>
+<p>Event Store uses a quorum-based replication model. When working normally, a cluster has one database node known as a master, and the remaining nodes are slaves. The master node is responsible for coordinating writes while it is the master. Database nodes use a consensus algorithm to determine which database node should be master and which should be slaves. Event Store bases the decision as to which node should be the master on a number of factors (<a href="../command-line-arguments/index.html#cluster-options">some of which are configurable</a>).</p>
 <p>For database nodes to have this information available to them, the nodes gossip with other nodes in the cluster. Gossip runs over the internal (and optionally the external) HTTP interfaces of database nodes, and over both internal and external interfaces of manager nodes.</p>
 <h2 id="discovering-cluster-members">Discovering cluster members</h2>
 <p>Manager and database nodes need to know about one another to gossip. To start this process, you provide gossip seeds or the addresses where it can find other nodes, to each node. When running with manager nodes, it normally uses the following approach:</p>
@@ -147,7 +147,7 @@
 </ul>
 <p>The preferred method is via a DNS entry. To set this up, create a DNS entry for the cluster with an A record pointing to each member of the cluster. Each manager looks up other nodes in the cluster during the startup process based on the DNS name. Since DNS only provides information about addresses, you need to use a consistent TCP port across the cluster for gossip.</p>
 <!-- TODO: Should this be more practical? -->
-<h2 id="example-1---a-three-machine-cluster">Example 1 - A Three-Machine Cluster</h2>
+<h2 id="example-1---a-three-machine-cluster">Example 1 - a three-machine cluster</h2>
 <p>This example shows the configuration for a three node cluster, running in the typical setup of one manager node and one database node per physical machine, with cluster discovery via DNS. Each machine has one network interface, therefore uses different ports for the internal and external traffic. All nodes, in this case, are running Windows, so the manager nodes run as Windows services.</p>
 <p>The important points for writing configuration files are:</p>
 <ul>
@@ -192,7 +192,7 @@ Name: cluster.eventstore.local
 Address:  192.168.1.12
 Name: cluster.eventstore.local
 Address:  192.168.1.13
-</code></pre><h3 id="database-node-configuration">Database Node Configuration</h3>
+</code></pre><h3 id="database-node-configuration">Database node configuration</h3>
 <p>All three nodes are similar in configuration.</p>
 <p>The important configuration points are the:</p>
 <ul>
@@ -216,7 +216,7 @@ DiscoverViaDns: false
 GossipSeed: [&#39;192.168.1.11:30777&#39;]
 ClusterSize: 3
 </code></pre><p>For each following node, the IP Addresses change, as does the gossip seed, since it is the manager running on the same physical machine as each node.</p>
-<h3 id="manager-configuration">Manager Configuration</h3>
+<h3 id="manager-configuration">Manager configuration</h3>
 <p>Again, all three nodes are similar in configuration.</p>
 <p>The important configuration points are the:</p>
 <ul>
@@ -238,14 +238,14 @@ ClusterGossipPort: 30777
 EnableWatchdog: true
 WatchdogConfig: c:\EventStore-Config\watchdog.esconfig
 Log: d:\manager-log
-</code></pre><h3 id="watchdog-configuration">Watchdog Configuration</h3>
+</code></pre><h3 id="watchdog-configuration">Watchdog configuration</h3>
 <p>The watchdog configuration file details which database nodes the manager is responsible for starting and supervising. Unlike the other configuration files, the manager configuration uses a custom format instead of YAML. Each node for which the manager is responsible has one line in the file, which starts with a <code>#</code> symbol and then details the command line options given to the database node when it starts it. Under normal circumstances, this is the path to the database node&#39;s configuration file.</p>
 <p>For the first node in the example cluster, the watchdog configuration file reads as follows:</p>
 <pre><code class="lang-text"># --config c:\EventStore-Config\database.yaml
 </code></pre><h3 id="deploying-event-store-software-and-configuration">Deploying Event Store software and configuration</h3>
 <p>With configuration files for each node written, you can now deploy Event Store and the configuration. Although it&#39;s possible to use relative paths when writing configuration files, it&#39;s preferable to use absolute paths to reduce the potential for confusion.</p>
 <p>In this example, Event Store is deployed on each node in _c:\EventStore-HA-v_, and the configuration files for that node are deployed into _C:\EventStore-Config_. No installation process is necessary, you unzip the packaged distribution into your preferred location.</p>
-<h3 id="adding-http-acl-entries-for-http-servers-windows-specific">Adding HTTP ACL entries for HTTP servers (Windows-Specific)</h3>
+<h3 id="adding-http-acl-entries-for-http-servers-windows-specific">Adding HTTP ACL entries for HTTP servers (Windows-specific)</h3>
 <!-- TODO: Check this -->
 <p>To allow for non-elevated users to run HTTP servers on Windows, you must add entries to the access control list using <code>netsh</code>. By default, the manager node runs as <code>NT AUTHORITY\Local Service</code>, so this is the user who must have permission to run the HTTP server.</p>
 <p>The commands used to add these entries on node one are as follows (Run as an elevated user):</p>
@@ -260,7 +260,7 @@ netsh http add urlacl url=http://192.168.1.11:30777/ user=&quot;NT AUTHORITY\LOC
 
 # Manager Node External HTTP Interface
 netsh http add urlacl url=http://192.168.1.11:30778/ user=&quot;NT AUTHORITY\LOCAL SERVICE&quot;
-</code></pre><h3 id="configure-the-manager-node-as-a-service-windows-specific">Configure the Manager Node as a service (Windows-Specific)</h3>
+</code></pre><h3 id="configure-the-manager-node-as-a-service-windows-specific">Configure the manager node as a service (Windows-specific)</h3>
 <p>You can install manager nodes as a Windows service so they can start on boot rather than running in interactive mode. Each manager service is given an instance name, which becomes the name of the service (and part of the description for easy identification). The service is installed by default with a startup type of &quot;Automatic (Delayed Start)&quot;.</p>
 <h4 id="installing-the-service">Installing the service</h4>
 <p>To install the manager node on machine 1, use the following command:</p>

@@ -12,7 +12,7 @@
     <title>Event Sourcing Basics | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Event Sourcing Basics | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../assets/favicon.ico">
@@ -100,7 +100,7 @@
 <div class="NOTE"><h5>Note</h5><p>If you are familiar with functional programming you may wish to jump to the <a href="event-store-as-a-functional-database/index.html">Event Store viewed as a functional database section</a>.</p>
 </div>
 <p>Production systems often rely on storing their current state to process transactions, but this has not always been the case. Before the general acceptance of relational database management systems (RDBMS) as the center of system architectures many did not store the current state. This was especially true in high performance, mission critical, and highly secure systems. If you look at the inner workings of an RDBMS you will find that most do not themselves work by managing current state.</p>
-<h3 id="what-is-an-event">What is an Event?</h3>
+<h3 id="what-is-an-event">What is an event?</h3>
 <p>An event is something that happened in the past, and so you should represent events as verbs in the past tense such as <code>CustomerRelocated</code>, <code>CargoShipped</code>, or <code>InventoryLossageRecorded</code>. If you are taking a <a href="https://en.wikipedia.org/wiki/Domain-driven_design">domain driven design</a> approach, it&#39;s imperative that events are verbs in the past tense, as they are part of the Ubiquitous Language.</p>
 <p>Consider the differences with ubiquitous language when relocating a customer. An event makes the concept explicit where previously the changes would occur within an aggregate or between multiple aggregates and were left as an implicit concept that you needed to explore and define.</p>
 <p>In most applications, a developer discovers that a side effect occurred with a tool such as Hibernate or Entity Framework. If there is a change to the side effects of a use case, it is an implicit concept. The introduction of the event makes the concept explicit and part of the Ubiquitous Language. Relocating a customer does not change something, relocating a customer produces a <code>CustomerRelocatedEvent</code> event which is explicitly defined within the language.</p>
@@ -115,7 +115,7 @@
         Reason = reason;
     }
 }
-</code></pre><h3 id="other-definitions-of-domain-events">Other Definitions of Domain Events</h3>
+</code></pre><h3 id="other-definitions-of-domain-events">Other definitions of domain events</h3>
 <p>There is a concept related to a Domain Event defined in <a href="http://www.streamlinedmodeling.com">Streamlined Object Modeling</a> (SOM). The term “Domain Event” is often used in SOM when discussing “The Event Principle”.</p>
 <blockquote><p>Model the event of people interacting at a place with a thing with a transaction object. Model a point-in-time interaction as a transaction with a single timestamp; model a time-interval interaction as a transaction with multiple timestamps. <cite>Jill Nicola, 2002ll, p. 23</cite></p>
 </blockquote>
@@ -132,7 +132,7 @@
 <p>You can see a further example of the linguistic problems involved in error conditions. How should the domain handle the fact that a client told it to do something that it cannot? This condition can exist for many reasons but let’s imagine a simple one of the client not having enough information to source the event in a known correct way.</p>
 <p>Linguistically the command/event separation makes more sense here as the command arrives in the imperative “Place Sale” while the event is in the past tense “Sale Completed”. It&#39;s natural for the domain to reject a client attempting to “Place a sale”, it&#39;s not natural for the domain to tell the client that something in the past tense no longer happened. Consider the discussion with a domain expert. Does the domain have a time machine? Parallel realities are far too complex and costly to model in most business systems.</p>
 <p>These are the problems that led to the separation of the concepts of Commands and Events. This separation makes the language much clearer and although subtle, it tends to lead developers towards a clearer understanding of context based solely on the language used. Dual definitions of a concept force the developer to recognize and distinguish context. This weight can translate into both ramp up time for new developers on a project and another thing a member of the team needs to remember. Anytime a team member needs to remember something to distinguish context there is a higher probability that they will overlook it or mistaken for another context. Being explicit in the language and avoiding dual definitions helps make things clearer both for domain experts, the developers, and anyone who may be consuming the API.</p>
-<h2 id="further-reading">Further Reading</h2>
+<h2 id="further-reading">Further reading</h2>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=whCk1Q87_ZI">DDD CQRS Video</a></li>
 <li><a href="http://martinfowler.com/eaaDev/EventSourcing.html">Event Sourcing</a></li>

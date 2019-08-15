@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Users and Access Control Lists | Event Store </title>
+    <title>Users and access control lists | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Users and Access Control Lists | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="Users and access control lists | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,13 +93,13 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="users-and-access-control-lists">Users and Access Control Lists</h1>
+<h1 id="users-and-access-control-lists">Users and access control lists</h1>
 
-<h2 id="default-users">Default Users</h2>
+<h2 id="default-users">Default users</h2>
 <p>Event Store provides two default users, <code>$ops</code> and <code>$admin</code>.</p>
 <p><code>$admin</code> has full access to everything in Event Store. It can read and write to protected streams, which is any stream that starts with $, such as <code>$projections-master</code>. Protected streams are usually system streams, for example, <code>$projections-master</code> manages some of the projections&#39; states. The <code>$admin</code> user can also run operational commands, such as scavenges and shutdowns on Event Store.</p>
 <p>An <code>$ops</code> user can do everything that an <code>$admin</code> can do except manage users and read from system streams (except for <code>$scavenges</code> and <code>$scavenges-streams</code>).</p>
-<h2 id="new-users">New Users</h2>
+<h2 id="new-users">New users</h2>
 <p>New users created in Event Store are standard non-authenticated users. Non-authenticated users are allowed <code>GET</code> access to the <code>/info</code>, <code>/ping</code>, <code>/stats</code>, <code>/elections</code>, and <code>/gossip</code> system streams.</p>
 <p><code>POST</code> access to the <code>/elections</code> and <code>/gossip</code> system streams is only allowed on the internal HTTP service.</p>
 <p>By default, any user can read any non-protected stream unless there is an ACL preventing that.</p>
@@ -126,7 +126,7 @@
 <div class="NOTE"><h5>Note</h5><p>We recommend you don&#39;t give people access to <code>$mw</code> as then they can then change the ACL.</p>
 </div>
 <h3 id="example">Example</h3>
-<p>The ACL below would give <code>writer</code> read and write permission on the stream, while <code>reader</code> would have read permission on the stream. Only users in the <code>$admins</code> group would be able to delete the stream or read and write the metadata.</p>
+<p>The ACL below gives <code>writer</code> read and write permission on the stream, while <code>reader</code> has read permission on the stream. Only users in the <code>$admins</code> group can delete the stream or read and write the metadata.</p>
 <div class="tabGroup" id="tabgroup_O8ucbqjusK">
 <ul role="tablist">
 <li role="presentation">
@@ -233,7 +233,7 @@ conn.SetStreamMetadataAsync(streamName, ExpectedVersion.Any, metadata, adminCred
     &quot;$mw&quot;: &quot;$admins&quot;
   }
 }
-</code></pre><p>This default ACL would give <code>ouro</code> and <code>$admins</code> create and write permissions on all streams, while everyone else can read from them. Be careful allowing default access to system streams to non-admins as they would also have access to <code>$settings</code> unless you specifically override it.</p>
+</code></pre><p>This default ACL gives <code>ouro</code> and <code>$admins</code> create and write permissions on all streams, while everyone else can read from them. Be careful allowing default access to system streams to non-admins as they would also have access to <code>$settings</code> unless you specifically override it.</p>
 <div class="tabGroup" id="tabgroup_O8ucbqjusK-1">
 <ul role="tablist">
 <li role="presentation">
@@ -270,7 +270,7 @@ conn.SetStreamMetadataAsync(streamName, ExpectedVersion.Any, metadata, adminCred
     }
 ]
 </code></pre><pre><code class="lang-bash" name="http-api-update-metadata-request">curl -i -d @override-default.json http://127.0.0.1:2113/streams/%24settings/metadata --user admin:changeit -H &quot;Content-Type: application/vnd.eventstore.events+json&quot;
-</code></pre><div class="WARNING"><h5>Warning</h5><p>You should not copy/paste the UUID in the command line above but generate a new one or not provide one (you will be redirected to a URI with one as described in writing events in the HTTP API).</p>
+</code></pre><div class="WARNING"><h5>Warning</h5><p>You should not copy/paste the UUID in the command line above but generate a new one or not provide one (you will be redirected to a URI with one as described in <a href="../../http-api/creating-writing-a-stream/index.html#writing-a-single-event">writing events</a> in the HTTP API).</p>
 </div>
 </section>
 <section id="tabpanel_O8ucbqjusK-1_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">

@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Stream Metadata | Event Store </title>
+    <title>Stream metadata | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Stream Metadata | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="Stream metadata | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,11 +93,11 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="stream-metadata">Stream Metadata</h1>
+<h1 id="stream-metadata">Stream metadata</h1>
 
 <p>By default streams you create in Event Store have no metadata associated with them. Internally, the metadata includes information such as the ACL of the stream, the maximum count and age for the events in the stream. Client code can also add information into stream metadata for use with projections or the client API.</p>
 <p>Stream metadata is stored internally as JSON, and you can access it over the HTTP API.</p>
-<h2 id="reading-stream-metadata">Reading Stream Metadata</h2>
+<h2 id="reading-stream-metadata">Reading stream metadata</h2>
 <p>To read the metadata, issue a <code>GET</code> request to the attached metadata resource, which is typically of the form:</p>
 <pre><code class="lang-http">http://{eventstore-ip-address}/streams/{stream-name}/metadata
 </code></pre><p>You should not access metadata by constructing this URL yourself, as the right to change the resource address is reserved. Instead, you should follow the link from the stream itself, which enables your client to tolerate future changes to the addressing structure.</p>
@@ -200,7 +200,7 @@ Content-Length: 0
 Keep-Alive: timeout=15,max=100
 </code></pre></section>
 </div>
-<h2 id="writing-metadata">Writing Metadata</h2>
+<h2 id="writing-metadata">Writing metadata</h2>
 <p>To update the metadata for a stream, issue a <code>POST</code> request to the metadata resource.</p>
 <p>Inside a file named <em>metadata.json</em>:</p>
 <pre><code class="lang-json" name="http-api-metadata-json">[

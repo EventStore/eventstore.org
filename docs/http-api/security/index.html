@@ -12,7 +12,7 @@
     <title>Security | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Security | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -165,7 +165,7 @@ Keep-Alive: timeout=15,max=100
 </div>
 <p>As you pass the username and password in the request we recommend you run Event Store over HTTP, and enable SSL to encrypt the user information. <a href="../../server/setting-up-ssl/index.html">Read this guide for instructions</a>. If you are running the clustered version you can also setup SSL for the replication protocol.</p>
 <!-- TODO: Does this need further explanation? Any more details anywhere? -->
-<h2 id="access-control-lists">Access Control Lists</h2>
+<h2 id="access-control-lists">Access control lists</h2>
 <p>Alongside authentication, Event Store supports per stream configuration of Access Control Lists (ACL). To configure the ACL of a stream go to its head and look for the <code>metadata</code> relationship link to fetch the metadata for the stream.</p>
 <p>To set access control lists over HTTP you can post to the metadata stream as <a href="../stream-metadata/index.html">with setting any other metadata</a>. You can also set Access Control Lists for a stream in the admin UI.</p>
 <p><img src="../../images/http-api-create-user.png" alt="Setting ACL with the admin UI"></p>

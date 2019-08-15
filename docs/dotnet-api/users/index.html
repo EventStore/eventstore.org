@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>User Management | Event Store </title>
+    <title>User management | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="User Management | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="User management | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,33 +93,32 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="user-management">User Management</h1>
+<h1 id="user-management">User management</h1>
 
 <p>The Event Store Client API includes helper methods that use the HTTP API to allow for the management of users. This document describes the methods found in the <code>UsersManager</code> class. All methods in this class are asynchronous.</p>
-<h2 id="methods">Methods</h2>
-<h3 id="create-a-user">Create a User</h3>
+<h2 id="create-a-user">Create a user</h2>
 <p>Creates a user, the credentials for this operation must be a member of the <code>$admins</code> group.</p>
 <pre><code class="lang-csharp">public Task CreateUserAsync(string login, string fullName, string[] groups, string password, UserCredentials userCredentials = null)
-</code></pre><h3 id="disable-a-user">Disable a User</h3>
+</code></pre><h2 id="disable-a-user">Disable a user</h2>
 <p>Disables a user, the credentials for this operation must be a member of the <code>$admins</code> group.</p>
 <pre><code class="lang-csharp">public Task DisableAsync(string login, UserCredentials userCredentials = null)
-</code></pre><h3 id="enable-a-user">Enable a User</h3>
+</code></pre><h2 id="enable-a-user">Enable a User</h2>
 <p>Enables a user, the credentials for this operation must be a member of the <code>$admins</code> group.</p>
 <pre><code class="lang-csharp">public Task EnableAsync(string login, UserCredentials userCredentials = null)
-</code></pre><h3 id="delete-a-user">Delete a User</h3>
+</code></pre><h2 id="delete-a-user">Delete a user</h2>
 <p>Deletes (non-recoverable) a user, the credentials for this operation must be a member of the <code>$admins</code> group. If you prefer this action to be recoverable, disable the user as opposed to deleting the user.</p>
 <pre><code class="lang-csharp">public Task DeleteUserAsync(string login, UserCredentials userCredentials = null)
-</code></pre><h3 id="list-all-users">List all Users</h3>
+</code></pre><h2 id="list-all-users">List all users</h2>
 <p>Lists all users.</p>
 <pre><code class="lang-csharp">public Task&lt;List&lt;UserDetails&gt;&gt; ListAllAsync(UserCredentials userCredentials = null)
-</code></pre><h3 id="get-details-of-user">Get Details of User</h3>
+</code></pre><h2 id="get-details-of-user">Get details of user</h2>
 <p>Return the details of the user supplied in user credentials (e.g. the user making the request).</p>
 <pre><code class="lang-csharp">public Task&lt;UserDetails&gt; GetCurrentUserAsync(UserCredentials userCredentials)
-</code></pre><h3 id="get-details-of-logged-in-user">Get Details of Logged in User</h3>
+</code></pre><h2 id="get-details-of-logged-in-user">Get details of logged in user</h2>
 <pre><code class="lang-csharp">public Task&lt;UserDetails&gt; GetUserAsync(string login, UserCredentials userCredentials)
-</code></pre><h3 id="update-user-details">Update User Details</h3>
+</code></pre><h3 id="update-user-details">Update user details</h3>
 <pre><code class="lang-csharp">public Task UpdateUserAsync(string login, string fullName, string[] groups, UserCredentials userCredentials = null)
-</code></pre><h3 id="reset-user-password">Reset User Password</h3>
+</code></pre><h3 id="reset-user-password">Reset user password</h3>
 <p>Resets the password of a user. The credentials doing this operation must be part of the <code>$admins</code> group.</p>
 <pre><code class="lang-csharp">public Task ResetPasswordAsync(string login, string newPassword, UserCredentials userCredentials = null)
 </code></pre></article>

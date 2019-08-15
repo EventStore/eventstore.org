@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ExpectedVersion
    | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -183,7 +183,8 @@ Event Store does its best to assure idempotency but does not guarantee idempoten
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int EmptyStream = -1</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;ExpectedVersion.EmptyStream has been deprecated. Use ExpectedVersion.NoStream instead&quot;)]
+public const int EmptyStream = -1</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">

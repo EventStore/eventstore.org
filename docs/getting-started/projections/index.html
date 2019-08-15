@@ -12,7 +12,7 @@
     <title>Step 3 - Projections | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Step 3 - Projections | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -199,7 +199,7 @@
 <a href="#tabpanel_-zRZHSVchy-2_tabid-net-api" role="tab" aria-controls="tabpanel_-zRZHSVchy-2_tabid-net-api" data-tab="tabid-net-api" tabindex="-1">.NET API</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_-zRZHSVchy-2_tabid-jvm-api" role="tab" aria-controls="tabpanel_-zRZHSVchy-2_tabid-jvm-api" data-tab="tabid-jvm-api" tabindex="-1">JVM Client</a>
+<a href="#tabpanel_-zRZHSVchy-2_tabid-jvm-api" role="tab" aria-controls="tabpanel_-zRZHSVchy-2_tabid-jvm-api" data-tab="tabid-jvm-api" tabindex="-1">JVM client</a>
 </li>
 </ul>
 <section id="tabpanel_-zRZHSVchy-2_tabid-http-api" role="tabpanel" data-tab="tabid-http-api">
@@ -279,7 +279,7 @@ for (Object file : fileList) {
 })
 </code></pre><p>You create a projection by calling the projection API and providing it with the definition of the projection. Here you decide how to run the projection, declaring that you want the projection to start from the beginning and keep running. You can create a projection using the Admin UI by opening the <em>Projections</em> tab, clicking the <em>New Projection</em> button and filling in the details of your projection.</p>
 <p><img src="../../assets/getting-started-create-projection.png" alt="Creating a projection with the Event Store Admin UI"></p>
-<p>And to use the HTTP or .NET API:</p>
+<p>To use the HTTP or .NET API, pass the projection JSON file as a parameter of your request, along with any other settings:</p>
 <div class="tabGroup" id="tabgroup_-zRZHSVchy-3">
 <ul role="tablist">
 <li role="presentation">
@@ -420,7 +420,7 @@ foreach (var evt in readEvents.Events)
 </div>
 <h2 id="configure-projection-properties">Configure projection properties</h2>
 <p>You can configure properties of the projection by updating values of the <code>options</code> object. For example, the following projection changes the name of the results stream, you can download it as a file <a href="../../code-examples/getting-started/update-projection-options.json">here</a>:</p>
-<pre><code class="lang-json" name="getting-started-projections-update-options">options({
+<pre><code class="lang-json" name="getting-started-projections-update-options" highlight-lines="2">options({
   resultStreamName: &quot;xboxes&quot;
 })
 fromAll()
@@ -518,7 +518,7 @@ fromAll()
 </tr>
 </tbody>
 </table>
-<p>You want to define a projection that produces a count per stream for a category, but the state needs to be per stream. To do so, use <code>$by_category</code> and it&#39;s <code>fromCategory</code> API method.</p>
+<p>You want to define a projection that produces a count per stream for a category, but the state needs to be per stream. To do so, use <code>$by_category</code> and its <code>fromCategory</code> API method.</p>
 <p>Below is the projection, you can download the file <a href="../../code-examples/getting-started/shopping-cart-counter.json">here</a>:</p>
 <pre><code class="lang-json" name="getting-started-projections-count-per-stream">fromCategory(&#39;shoppingCart&#39;)
 .foreachStream()

@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Indexing | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Indexing | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <script src="https://secure.perk0mean.com/js/168910.js"></script>
+    <noscript><img alt="" src="https://secure.perk0mean.com/168910.png" style="display:none;"></noscript>
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="indexing">Indexing</h1>
+
+<p>Event Store stores indexes separately from the main data files, accessing records by stream name.</p>
+<h2 id="overview">Overview</h2>
+<p>Event Store creates index entries as it processes commit events. It holds these in memory (called <em>memtables</em>) until it reaches the <code>MaxMemTableSize</code> and then persisted on disk in the <em>index</em> folder along with an index map file.
+The index files are uniquely named, and the index map file called <em>indexmap</em>. The index map describes the order and the level of the index file as well as containing the data checkpoint for the last written file, the version of the index map file and a checksum for the index map file. The logs refer to the index files as a <em>PTable</em>.</p>
+<p>Indexes are sorted lists based on the hashes of stream names. To speed up seeking the correct location in the file of an entry for a stream, Event Store keeps midpoints to relate the stream hash to the physical offset in the file.</p>
+<p>As Event Store saves more files, they are automatically merged together whenever there are more than 2 files at the same level into a single file at the next level. Each index entry is 24 bytes and the index file size is approximately 24Mb per 1M events.</p>
+<p>Level 0 is the level of the <em>memtable</em> that is kept in memory. Generally there is only 1 level 0 table unless an ongoing merge operation produces multiple level 0 tables.</p>
+<p>Assuming the default <code>MaxMemTableSize</code> of 1M, the index files by level are:</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Number of entries</th>
+<th>Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1M</td>
+<td>24MB</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2M</td>
+<td>48MB</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4M</td>
+<td>96MB</td>
+</tr>
+<tr>
+<td>4</td>
+<td>8M</td>
+<td>192MB</td>
+</tr>
+<tr>
+<td>5</td>
+<td>16M</td>
+<td>384MB</td>
+</tr>
+<tr>
+<td>6</td>
+<td>32M</td>
+<td>768MB</td>
+</tr>
+<tr>
+<td>7</td>
+<td>64M</td>
+<td>1536MB</td>
+</tr>
+<tr>
+<td>8</td>
+<td>128M</td>
+<td>3072MB</td>
+</tr>
+<tr>
+<td>n</td>
+<td>(2^n) * 1M</td>
+<td>(2^n-1) * 24Mb</td>
+</tr>
+</tbody>
+</table>
+<p>Each index entry is 24 bytes and the index file size is approximately 24Mb per M events.</p>
+<h2 id="configuration-options">Configuration Options</h2>
+<p>The configuration options that effect indexing are:</p>
+<ul>
+<li><code>Index</code> : where the indexes are stored</li>
+<li><code>MaxMemTableSize</code> : how many entries to have in memory before writing out to disk</li>
+<li><code>IndexCacheDepth</code> : sets the minimum number of midpoints to calculate for an index file</li>
+<li><code>SkipIndexVerify</code> : skips reading and verification of PTables during start-up</li>
+<li><code>MaxAutoMergeIndexLevel</code> : the maximum level of index file to merge automatically before manual merge</li>
+<li><code>OptimizeIndexMerge</code> : Bypasses the checking of file hashes of indexes during startup and after index merges (allows for faster startup and less disk pressure after merges)</li>
+</ul>
+<p>See <a href="../command-line-arguments/index.html">Command line arguments</a> for how to specify these options.</p>
+<h3 id="index">Index</h3>
+<p><code>Index</code> effects the location of the index files. We recommend you place index files on a separate drive to avoid competition for IO between the data, index and log files.</p>
+<h3 id="maxmemtablesize">MaxMemTableSize</h3>
+<p><code>MaxMemTableSize</code> effects disk IO when Event Store writes files to disk, index seek time and database startup time. The default size is a good tradeoff between low disk IO and startup time. Increasing the <code>MaxMemTableSize</code> results in longer database startup time because a node has to read through the data files from the last position in the <code>indexmap</code> file and rebuild the in memory index table before it starts.</p>
+<!-- TODO: Polish a little more -->
+<p>Increasing <code>MaxMemTableSize</code> also decreases the number of times Event Store writes index files to disk and how often it merges them together, which increases IO operations. It also reduces the number of seek operations when stream entries span multiple files as Event Store needs to search each file for the stream entries. This affects streams written to over longer periods of time more than streams written to over a shorter time, where time is measured by the number of events created, not time passed. This is because streams written to over longer time periods are more likely to have entries in multiple index files.</p>
+<h3 id="indexcachedepth">IndexCacheDepth</h3>
+<p><code>IndexCacheDepth</code> effects the how many midpoints Event Store calculates for an index file which effects file size slightly, but can effect lookup times significantly. Looking up a stream entry in a file requires a binary search on the midpoints to find the nearest midpoint, and then a seek through the entries to find the entry or entries that match. Increasing this value decreases the second part of the operation and increase the first for extremely large indexes.</p>
+<p><strong>The default value of 16</strong> results in files up to about 1.5GB in size being fully searchable through midpoints. After that a maximum distance between midpoints of 4096 bytes for the seek, which is buffered from disk, up to a maximum level of 2TB where the seek distance starts to grow. Reducing this value can relieve a small amount of memory pressure in highly constrained environments. Increasing it causes index files larger than 1.5GB, and less than 2TB to have more dense midpoint populations which means the binary search is not used for long before switching back to scanning the entries between. The maximum number of entries scanned in this way is <code>distance/24b</code>, so with the default setting and a 2TB index file this is approximately 170 entries. Most clusters should not need to change this setting.</p>
+<h3 id="skipindexverify">SkipIndexVerify</h3>
+<p><code>SkipIndexVerify</code> skips reading and verification of index file hashes during startup. Instead of recalculating midpoints when Event Store reads the file, it reads the midpoints directly from the footer of the index file. You can set <code>SkipIndexVerify</code> to <code>true</code> to reduce startup time in exchange for the acceptance of a small risk that the index file becomes corrupted. This corruption could lead to a failure if you read the corrupted entries, and a message saying the index needs to be rebuilt. You can safely disable this setting for ZFS on Linux as the filesystem takes care of file checksums.</p>
+<p>In the event of corruption indexes will be rebuilt by reading through all the chunk files and recreating the indexes from scratch.</p>
+<h3 id="maxautomergeindexlevel">MaxAutoMergeIndexLevel</h3>
+<p><code>MaxAutoMergeIndexLevel</code> allows you to specify the maximum index file level to automatically merge. By default Event Store merges all levels. Depending on the specification of the host running Event Store, at some point index merges will use a large amount of disk IO.</p>
+<p>For example:</p>
+<blockquote><p>Merging 2 level 7 files results in at least 3072MB reads (2 * 1536MB), and 3072MB writes while merging 2 level 8 files together results in at least 6144MB reads (2 * 3072MB) and 6144MB writes. Setting <code>MaxAutoMergeLevel</code> to 7 allows all levels up to and including level 7 to be automatically merged, but to merge the level 8 files together, you need to trigger a manual merge. This manual merge allows better control over when these larger merges happen and which nodes they happen on. Due to the replication process, all nodes tend to merge at about the same time.</p>
+</blockquote>
+<h3 id="optimizeindexmerge">OptimizeIndexMerge</h3>
+<p><code>OptimizeIndexMerge</code> allows faster merging of indexes when Event Store has scavenged a chunk. This option has no effect on unscavenged chunks. When Event Store has scavenged a chunk, and this option is set to <code>true</code>, it uses a bloom filter before reading the chunk to see if the value exists before reading the chunk to make sure that it still exists.</p>
+<h2 id="indexing-in-depth">Indexing in depth</h2>
+<p>For general operation of Event Store the following information is not critical but useful for developers wanting to make changes in the indexing subsystem and for understanding crash recovery and tuning scenarios.</p>
+<h3 id="index-map-files">Index map files</h3>
+<p><em>Indexmap</em> files are text files made up of line delimited values. The line delimiter varies based on operating system, so while you can consider <em>indexmap</em> files valid when transferred between operating systems, if you make changes to fix an issue (for example, disk corruption) it is best to make them on the same operating system as the cluster.</p>
+<p>The <em>indexmap</em> structure is as follows:</p>
+<ul>
+<li><code>hash</code> - an md5 hash of the rest of the file</li>
+<li><code>version</code> - the version of the <em>indexmap</em> file</li>
+<li><code>checkpoint</code> - the maximum prepare/commit position of the persisted <em>ptables</em></li>
+<li><code>maxAutoMergeLevel</code> - either the value of <code>MaxAutoMergeLevel</code> or <code>int32.MaxValue</code> if it was not set. This is primarily used to detect increases in <code>MaxAutoMergeLevel</code>, which is not supported.</li>
+<li><code>ptable</code>,<code>level</code>,<code>index</code>- List of all the <em>ptables</em> used by this index map with the level of the <em>ptable</em> and it&#39;s order.</li>
+</ul>
+<p>Event Store writes <em>indexmap</em> files to a temporary file and then deletes the original and renames the temporary file. Event Store attempts this 5 times before failing. Because of the order, this operation can only fail if there is an issue with the underlying file system or the disk is full. This is a 2 phase process, and in the unlikely event of a crash during this process, Event Store recovers by rebuilding the indexes using the same process used if it detects corrupted files during startup.</p>
+<h3 id="writing-and-merging-of-index-files">Writing and Merging of index files</h3>
+<p>Merging <em>ptables</em>, updating the <em>indexmap</em> and persisting <em>memtable</em> operations happen on a background thread. These operations are performed on a single thread with any additional operations queued and completed later. Event Store runs these operations on a thread pool thread rather than a dedicated thread. Generally there is only one operation queued at a time, but if merging to <em>ptables</em> at one level causes 2 tables to be available at the next level, then the next merge operation is immediately queued. While merge operations are in progress, if Event Store is writing large numbers of events, it may queue 1 or more <em>memtables</em> for persistence. The number of pending operations is logged.</p>
+<p>For safety <em>ptables</em> Event Store is currently merging are only deleted after the new <em>ptable</em> has persisted and the <em>indexmap</em>  updated. In the event of a crash, Event Store recovers by deleting any files not in the <em>indexmap</em> and reindexing from the prepare/commit position stored in the <em>indexmap</em> file.</p>
+<h3 id="manual-merging">Manual Merging</h3>
+<p>If you have set the maximum level (<code>MaxAutoMergeIndexLevel</code>) for automatically merging indexes, then you need to trigger merging indexes above this level manually by using the <code>[/admin/mergeindexes](xref:eventstore.org%2FHTTP%20API%2F5.0.0%2FMerge%20Indexes)</code> endpoint, or  the ES-CLI tool that is available with commercial support.</p>
+<p>Triggering a manual merge causes Event Store to merge all tables that have a level equal to the maximum merge level or above into a single table.  If there is only 1 table at the maximum level or above, no merge is performed.</p>
+<h2 id="tuning">Tuning</h2>
+<p>For most Event Store clusters, the default settings are enough to give consistent and good performance. For clusters with larger numbers of events, or those that run in constrained environments the configuration options allow for some tuning to meet operational constraints.</p>
+<p>The most common optimization needed is to set a <code>MaxAutoMergeLevel</code> to avoid large merges occurring across all nodes at approximately the same time.  Large index merges use a lot of IOPS and in IOPS constrained environments it is often desirable to have better control over when these happen. Because increasing this value requires an index rebuild you should start with a higher value and decrease until the desired balance between triggering manual merges (operational cost) and automatic merges (IOPS) cost.  The exact value to set this varies between environments due to IOPS generated by other operations such as read and write load on the cluster.</p>
+<p>For example:</p>
+<blockquote><p>A cluster with 3000 256b IOPS can read/write about 0.73Gb/sec (This level of IOPS represents a small cloud instance). Assuming sustained read/write throughput of 0.73Gb/s. When an index merge of level 7 or above starts, it consumes as many IOPS up to all on the node until it completes. Because Event Store has a shared nothing architecture for clustering this operation is likely to cause all nodes to appear to stall simultaneously as they all try and perform an index merge at the same time. By setting <code>MaxAutoMergeLevel</code> to 6 or below you can avoid this, and you can run the merge on each node individually keeping read/write latency in the cluster consistent.</p>
+</blockquote>
+<!-- TODO: the 64 bit index bits should probably come under this indexing doc -->
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/documentation/blob/master/server/indexing.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

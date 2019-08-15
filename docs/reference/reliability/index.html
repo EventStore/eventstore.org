@@ -12,7 +12,7 @@
     <title>Reliability | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Reliability | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -97,7 +97,7 @@
 
 <p>You should look at reliability from a holistic perspective. Event Store treats data transactionally with full durability assurances, but this doesn&#39;t help you if the hardware on your machine does not support it.</p>
 <p>Many consumer grade disks (and SSDs especially) lie about durability to appear faster. This is fine until you have a power outage and lose information.</p>
-<p>These issues do not just affect Event Store. Other vendors and projects have created tests to check whether you may be losing data. We recommend running one of <a href="https://brad.livejournal.com/2116715.html">these such tests</a> against your production environment.</p>
+<p>These issues do not just affect Event Store. Other vendors and projects have created tests to check whether you may be losing data. We recommend running one of <a href="https://brad.livejournal.com/2116715.html">these tests</a> against your production environment.</p>
 <p>You can check the state of your drives on Linux by using the following command:</p>
 <pre><code class="lang-bash">sudo hdparm -I {drive}
 </code></pre><p>For example, check <em>/dev/sda</em> to see if caching is enabled on your drive. Be wary though, just because caching is disabled does not mean that all writes are fully durable. If you are running Linux you might want to consider adding the following to <em>/etc/hdparm.conf</em>:</p>

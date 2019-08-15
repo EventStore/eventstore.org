@@ -1,6 +1,6 @@
 curl -X GET "http://127.0.0.1:2113/streams/newstream" -H 'Accept: application/vnd.eventstore.events+json'
 
-HTTP/1.1 404 Not Found
+HTTP/1.1 410 Deleted
 Access-Control-Allow-Methods: POST, DELETE, GET, OPTIONS
 Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
 Access-Control-Allow-Origin: *

@@ -12,7 +12,7 @@
     <title>Step 1 - Install, run, and write your first event | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Step 1 - Install, run, and write your first event | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../assets/favicon.ico">
@@ -150,9 +150,13 @@
 </div>
 </section>
 <section id="tabpanel_Imwg03Et86_tabid-3" role="tabpanel" data-tab="tabid-3" aria-hidden="true" hidden="hidden">
-<p>Event Store has <a href="https://hub.docker.com/r/eventstore/eventstore/">a Docker image</a> available for any platform that supports Docker:</p>
+<p>Event Store has a Docker image available for any platform that supports Docker.</p>
+<p>Pull the Docker image:</p>
+<pre><code class="lang-bash">docker pull eventstore/eventstore
+</code></pre><p>Run the container:</p>
 <pre><code class="lang-bash">docker run --name eventstore-node -it -p 2113:2113 -p 1113:1113 eventstore/eventstore
-</code></pre></section>
+</code></pre><p>Refer to the <a href="https://hub.docker.com/r/eventstore/eventstore/">image overview</a> for more information.</p>
+</section>
 <section id="tabpanel_Imwg03Et86_tabid-k8" role="tabpanel" data-tab="tabid-k8" aria-hidden="true" hidden="hidden">
 <p>Event Store has <a href="https://github.com/EventStore/EventStore.Charts">a Helm chart</a> available for installing Event Store on Kubernetes clusters:</p>
 <pre><code class="lang-bash">helm repo add eventstore https://eventstore.github.io/EventStore.Charts
@@ -178,10 +182,10 @@ Read <a href="../server/deploy-kubernetes-aks/index.html">this guide</a> for mor
 <div class="tabGroup" id="tabgroup_dfgfloIX5I">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_dfgfloIX5I_tabid-dotnet-client" role="tab" aria-controls="tabpanel_dfgfloIX5I_tabid-dotnet-client" data-tab="tabid-dotnet-client" tabindex="0" aria-selected="true">.NET Client</a>
+<a href="#tabpanel_dfgfloIX5I_tabid-dotnet-client" role="tab" aria-controls="tabpanel_dfgfloIX5I_tabid-dotnet-client" data-tab="tabid-dotnet-client" tabindex="0" aria-selected="true">.NET client</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_dfgfloIX5I_tabid-jvm-client" role="tab" aria-controls="tabpanel_dfgfloIX5I_tabid-jvm-client" data-tab="tabid-jvm-client" tabindex="-1">JVM Client</a>
+<a href="#tabpanel_dfgfloIX5I_tabid-jvm-client" role="tab" aria-controls="tabpanel_dfgfloIX5I_tabid-jvm-client" data-tab="tabid-jvm-client" tabindex="-1">JVM client</a>
 </li>
 </ul>
 <section id="tabpanel_dfgfloIX5I_tabid-dotnet-client" role="tabpanel" data-tab="tabid-dotnet-client">
@@ -211,10 +215,10 @@ Read <a href="../server/deploy-kubernetes-aks/index.html">this guide</a> for mor
 <div class="tabGroup" id="tabgroup_dfgfloIX5I-1">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_dfgfloIX5I-1_tabid-dotnet-client-connect" role="tab" aria-controls="tabpanel_dfgfloIX5I-1_tabid-dotnet-client-connect" data-tab="tabid-dotnet-client-connect" tabindex="0" aria-selected="true">.NET Client</a>
+<a href="#tabpanel_dfgfloIX5I-1_tabid-dotnet-client-connect" role="tab" aria-controls="tabpanel_dfgfloIX5I-1_tabid-dotnet-client-connect" data-tab="tabid-dotnet-client-connect" tabindex="0" aria-selected="true">.NET client</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_dfgfloIX5I-1_tabid-jvm-client-connect" role="tab" aria-controls="tabpanel_dfgfloIX5I-1_tabid-jvm-client-connect" data-tab="tabid-jvm-client-connect" tabindex="-1">JVM Client</a>
+<a href="#tabpanel_dfgfloIX5I-1_tabid-jvm-client-connect" role="tab" aria-controls="tabpanel_dfgfloIX5I-1_tabid-jvm-client-connect" data-tab="tabid-jvm-client-connect" tabindex="-1">JVM client</a>
 </li>
 </ul>
 <section id="tabpanel_dfgfloIX5I-1_tabid-dotnet-client-connect" role="tabpanel" data-tab="tabid-dotnet-client-connect">
@@ -238,6 +242,7 @@ final ActorRef connection = system.actorOf(ConnectionActor.getProps(settings));
 <h2 id="writing-events-to-an-event-stream">Writing events to an Event Stream</h2>
 <p>Event Store operates on a concept of Event Streams, and the first operation we look at is how to write to a stream. If you are Event Sourcing a domain model, a stream equates to an aggregate function. Event Store can handle hundreds of millions of streams, so create as many as you need.</p>
 <p>If you post to a stream that doesn&#39;t exist, Event Store creates it before adding the events.</p>
+<h3 id="writing-events-using-the-admin-ui">Writing events using the admin UI</h3>
 <p>You can write events using the Admin UI by clicking the <em>Stream Browser</em> tab, the <em>Add Event</em> button, filling in the form with relevant values and clicking the <em>Add</em> button at the bottom of the page.</p>
 <p><img src="../images/getting-started-add-event.gif" alt="Creating an event with the Admin UI interface"></p>
 <p>Open a text editor, copy and paste the following event definition, and save it as <em>event.json</em>.</p>
@@ -250,7 +255,8 @@ final ActorRef connection = system.actorOf(ConnectionActor.getProps(settings));
     }
   }
 ]
-</code></pre><div class="tabGroup" id="tabgroup_dfgfloIX5I-2">
+</code></pre><h3 id="writing-events-programmatically">Writing events programmatically</h3>
+<div class="tabGroup" id="tabgroup_dfgfloIX5I-2">
 <ul role="tablist">
 <li role="presentation">
 <a href="#tabpanel_dfgfloIX5I-2_tabid-4" role="tab" aria-controls="tabpanel_dfgfloIX5I-2_tabid-4" data-tab="tabid-4" tabindex="0" aria-selected="true">HTTP API</a>
@@ -259,7 +265,7 @@ final ActorRef connection = system.actorOf(ConnectionActor.getProps(settings));
 <a href="#tabpanel_dfgfloIX5I-2_tabid-5" role="tab" aria-controls="tabpanel_dfgfloIX5I-2_tabid-5" data-tab="tabid-5" tabindex="-1">.NET API</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_dfgfloIX5I-2_tabid-6" role="tab" aria-controls="tabpanel_dfgfloIX5I-2_tabid-6" data-tab="tabid-6" tabindex="-1">JVM Client</a>
+<a href="#tabpanel_dfgfloIX5I-2_tabid-6" role="tab" aria-controls="tabpanel_dfgfloIX5I-2_tabid-6" data-tab="tabid-6" tabindex="-1">JVM client</a>
 </li>
 </ul>
 <section id="tabpanel_dfgfloIX5I-2_tabid-4" role="tabpanel" data-tab="tabid-4">

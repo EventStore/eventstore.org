@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Rebuilding Indexes | Event Store </title>
+    <title>Rebuilding indexes | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Rebuilding Indexes | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="Rebuilding indexes | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,7 +93,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="rebuilding-indexes">Rebuilding Indexes</h1>
+<h1 id="rebuilding-indexes">Rebuilding indexes</h1>
 
 <p>As of version 3.9.0 all future indexes use 64-bit hashes instead of 32-bit hashes. Event Store automatically transitions your indexes from 32-bit to 64-bit by writing all new indexes as 64-bit indexes during the merge process.</p>
 <p>If you prefer to use only 64-bit indexes immediately you can force this change. For a small database, delete the <em>index</em> folder in your database folder, and let it rebuild (this might take a while)</p>

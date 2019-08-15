@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Command Line Arguments | Event Store </title>
+    <title>Command line arguments | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Command Line Arguments | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="Command line arguments | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,7 +93,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="command-line-arguments">Command Line Arguments</h1>
+<h1 id="command-line-arguments">Command line arguments</h1>
 
 <p>Event Store supports many configuration options. There are three distinct ways to set any parameter, all with their own advantages and disadvantages.</p>
 <ol>
@@ -105,11 +105,11 @@
 <p>To pass a configuration value over the command line you add the configuration to the line executing Event Store, for example:</p>
 <pre><code class="lang-powershell">EventStore.ClusterNode.exe --log ~/logs
 </code></pre><p>While command line arguments are useful during development, they are not the preferred way to handle configuration in a production system.</p>
-<h2 id="environment-variables">Environment Variables</h2>
+<h2 id="environment-variables">Environment variables</h2>
 <p>You can set all arguments can also as environment variables. This mechanism is often used in UNIX based systems. For example:</p>
 <pre><code class="lang-bash">log=~/logs
 </code></pre><p>You can reference another environment variable by setting the variable’s value to <code>${env:REFERENCED_ENV_VAR}</code>. For example, if you’re using Azure Service Fabric, some predefined environment variables exist. You can use <code>EVENTSTORE_EXT_IP={env:Fabric_NodeIPOrFQDN}</code> to reference the node&#39;s IP address.</p>
-<h2 id="yaml-files">YAML Files</h2>
+<h2 id="yaml-files">YAML files</h2>
 <p>The last way you can set arguments is to put them into one or more configuration files. To tell Event Store to use a different configuration file, you pass the file path on the command line with <code>--config=filename</code>, or use the <code>CONFIG</code> enivornment variable. The basic format of the YAML configuration file is as follows:</p>
 <pre><code class="lang-yaml">---
 Log: &quot;~/logs&quot;
@@ -122,7 +122,7 @@ IntHttpPort: 2111
 <p>The order of precedence between multiple configuration sources is important as you can set them in multiple ways. The command line is the highest priority followed by environment variables. Files are the lowest precedence and are processed in the order given on the command line. When starting Event Store it lists the major parameters in the log (including what set them).</p>
 <h2 id="parameter-list">Parameter list</h2>
 <p>Event Store supports the following parameters.</p>
-<h3 id="application-options">Application Options</h3>
+<h3 id="application-options">Application options</h3>
 <table>
 <thead>
 <tr>
@@ -225,7 +225,7 @@ IntHttpPort: 2111
 </tr>
 </tbody>
 </table>
-<h3 id="authentication-options">Authentication Options</h3>
+<h3 id="authentication-options">Authentication options</h3>
 <table>
 <thead>
 <tr>
@@ -250,7 +250,7 @@ IntHttpPort: 2111
 </tr>
 </tbody>
 </table>
-<h3 id="certificate-options">Certificate Options</h3>
+<h3 id="certificate-options">Certificate options</h3>
 <table>
 <thead>
 <tr>
@@ -299,7 +299,7 @@ IntHttpPort: 2111
 </tr>
 </tbody>
 </table>
-<h3 id="cluster-options">Cluster Options</h3>
+<h3 id="cluster-options">Cluster options</h3>
 <table>
 <thead>
 <tr>
@@ -400,9 +400,27 @@ IntHttpPort: 2111
 <td>DisableFirstLevelHttpAuthorization</td>
 <td>Disables authorization layer on endpoints. (Default: True)</td>
 </tr>
+<tr>
+<td>-SkipIndexVerify<br>--skip-index-verify=VALUE</td>
+<td>SKIP_INDEX_VERIFY</td>
+<td>SkipIndexVerify</td>
+<td>Skips reading and verification of PTables during start-up. (Default: False)</td>
+</tr>
+<tr>
+<td>-MaxAutoMergeIndexLevel<br>--max-auto-merge-index-level=VALUE</td>
+<td>MAX_AUTO_MERGE_INDEX_LEVEL</td>
+<td>MaxAutoMergeIndexLevel</td>
+<td>Maximum level of index file to merge automatically before manual merge. (Default: 1000)</td>
+</tr>
+<tr>
+<td>-OptimizeIndexMerge<br>--optimize-index-merge=VALUE</td>
+<td>OPTIMIZE_INDEX_MERGE</td>
+<td>OptimizeIndexMerge</td>
+<td>Bypasses the checking of file hashes of indexes during startup and after index merges. (Default: False)</td>
+</tr>
 </tbody>
 </table>
-<h3 id="database-options">Database Options</h3>
+<h3 id="database-options">Database options</h3>
 <table>
 <thead>
 <tr>
@@ -541,7 +559,7 @@ IntHttpPort: 2111
 </tr>
 </tbody>
 </table>
-<h3 id="interface-options">Interface Options</h3>
+<h3 id="interface-options">Interface options</h3>
 <table>
 <thead>
 <tr>
@@ -758,7 +776,7 @@ IntHttpPort: 2111
 </tr>
 </tbody>
 </table>
-<h3 id="projections-options">Projections Options</h3>
+<h3 id="projections-options">Projections options</h3>
 <table>
 <thead>
 <tr>

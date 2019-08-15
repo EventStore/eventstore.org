@@ -9,10 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Connecting to a Server | Event Store </title>
+    <title>Connecting to a server | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Connecting to a Server | Event Store ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="title" content="Connecting to a server | Event Store ">
+    <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -93,7 +93,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="connecting-to-a-server">Connecting to a Server</h1>
+<h1 id="connecting-to-a-server">Connecting to a server</h1>
 
 <h2 id="eventstoreconnection">EventStoreConnection</h2>
 <p>The <code>EventStoreConnection</code> class maintains a full-duplex connection between the client and the Event Store server. <code>EventStoreConnection</code> is thread-safe and we recommend that you create one instance per application.</p>
@@ -101,7 +101,7 @@
 <p>To get maximum performance from the connection we recommend that you use it asynchronously.</p>
 <div class="NOTE"><h5>Note</h5><p>The <code>Create</code> methods have changed since version 3.0.2 as connection strings are now supported. The old mechanisms will still work but are marked obsolete and will be removed in the future.</p>
 </div>
-<h2 id="creating-a-connection">Creating a Connection</h2>
+<h2 id="creating-a-connection">Creating a connection</h2>
 <p>The <code>EventStoreConnection</code> classes uses the static <code>Create</code> methods to create a new connection. All method overloads allow you to optionally specify a name for the connection, which the connection returns when it raises events (see <a href="#connection-events">Connection Events</a>).</p>
 <table>
 <thead>
@@ -149,11 +149,11 @@
 <p>With the URI based mechanism you can pass a domain name and the client will resolve it.</p>
 <div class="NOTE"><h5>Note</h5><p>The client performs a blocking DNS call for single node. If you are worried about blocking DNS due to network issues etc., you should resolve the DNS yourself and pass in an IP address.</p>
 </div>
-<h2 id="customising-connection-settings">Customising Connection Settings</h2>
-<h3 id="connection-string">Connection String</h3>
+<h2 id="customising-connection-settings">Customising connection settings</h2>
+<h3 id="connection-string">Connection string</h3>
 <p>Many of the overloads accept a connection string that you can use to control settings of the connection. A benefit to having these as a connection string instead of using the fluent API is that you can change them between environments without recompiling (i.e. a single node in <code>dev</code> and a cluster in <code>production</code>).</p>
 <p>The connection string format should look familiar to those who have used connection strings in the past. It consists of a series of key/value pairs separated by semicolons.</p>
-<p>You can set the following values using the connection string.</p>
+<p>You can set the following values using the connection string:</p>
 <!-- TODO: Moved, to check and what about ConnectTo? -->
 <table>
 <thead>
@@ -276,9 +276,8 @@
 </tr>
 </tbody>
 </table>
-<blockquote><p>[!INFO]
-You can also use spacing instead of camel casing in your connection string.</p>
-</blockquote>
+<div class="NOTE"><h5>Note</h5><p>You can also use spacing instead of camel casing in your connection string.</p>
+</div>
 <pre><code class="lang-csharp">var connectionString = &quot;ConnectTo=tcp://admin:changeit@localhost:1113; HeartBeatTimeout=500&quot;
 </code></pre><p>Sets the connection string to connect to <code>localhost</code> on the default port and sets the heartbeat timeout to 500ms.</p>
 <pre><code class="lang-csharp">var connectionString = &quot;Connect To = tcp://admin:changeit@localhost:1113; Gossip Timeout = 500&quot;
@@ -326,7 +325,7 @@ You can also use spacing instead of camel casing in your connection string.</p>
 </tbody>
 </table>
 <p>By default information about connection, disconnection and errors are logged, however it can be useful to have more information about specific operations as they are occuring.</p>
-<h3 id="user-credentials">User Credentials</h3>
+<h3 id="user-credentials">User credentials</h3>
 <p>Event Store supports <a href="../../server/users-and-access-control-lists/index.html">Access Control Lists</a> that restrict permissions for a stream based on users and groups. <code>EventStoreConnection</code> allows you to supply credentials for each operation, however it is often more convenient to set default credentials for all operations on the connection.</p>
 <table>
 <thead>
@@ -351,7 +350,7 @@ You can also use spacing instead of camel casing in your connection string.</p>
 </code></pre><p>Uses an SSL-encrypted connection where <code>targetHost</code> is the name specified on the SSL certificate installed on the server, and <code>validateServer</code> controls whether the connection validates the server certificate.</p>
 <div class="WARNING"><h5>Warning</h5><p>In production systems where credentials are sent from the client to Event Store, you should always use SSL encryption and you should set <code>validateServer</code> to <code>true</code>.</p>
 </div>
-<h3 id="node-preference">Node Preference</h3>
+<h3 id="node-preference">Node preference</h3>
 <p>When connecting to an Event Store HA cluster you can specify that operations are performed on any node, or only on the node that is the master.</p>
 <table>
 <thead>
@@ -371,7 +370,7 @@ You can also use spacing instead of camel casing in your connection string.</p>
 </tr>
 </tbody>
 </table>
-<h3 id="handling-failures">Handling Failures</h3>
+<h3 id="handling-failures">Handling failures</h3>
 <p>The following methods on the <code>ConnectionSettingsBuilder</code> allow you to change the way the connection handles operation failures and connection issues.</p>
 <h4 id="reconnections">Reconnections</h4>
 <table>
@@ -447,9 +446,9 @@ You can also use spacing instead of camel casing in your connection string.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="cluster-settings">Cluster Settings</h2>
+<h2 id="cluster-settings">Cluster settings</h2>
 <p>When connecting to an Event Store HA cluster you must pass an instance of <code>ClusterSettings</code> as well as the usual <code>ConnectionSettings</code>. Primarily yu use this to tell the <code>EventStoreConnection</code> how to discover all the nodes in the cluster. A connection to a cluster will automatically handle reconnecting to a new node if the current connection fails.</p>
-<h3 id="using-dns-discovery">Using DNS Discovery</h3>
+<h3 id="using-dns-discovery">Using DNS discovery</h3>
 <p>DNS discovery uses a single DNS entry with several records listing all node IP addresses. The <code>EventStoreConnection</code> will then use a well known port to gossip with the nodes.</p>
 <p>Use <code>ClusterSettings.Create().DiscoverClusterViaDns()</code> followed by:</p>
 <!-- TODO: Moved, to check. -->
@@ -481,7 +480,7 @@ You can also use spacing instead of camel casing in your connection string.</p>
 </table>
 <div class="NOTE"><h5>Note</h5><p>If you are using the commercial edition of Event Store HA with Manager nodes in place, the gossip port should be the port number of the external HTTP port on which the managers are running. If you are using the open source edition of Event Store HA the gossip port should be the External HTTP port that the nodes are running on. If you cannot use a well-known port for this across all nodes you can instead use gossip seed discovery and set the <code>IPEndPoint</code> of some seed nodes instead.</p>
 </div>
-<h3 id="connecting-using-gossip-seeds">Connecting Using Gossip Seeds</h3>
+<h3 id="connecting-using-gossip-seeds">Connecting using gossip seeds</h3>
 <p>The second supported method for node discovery uses a hardcoded set of <code>IPEndPoint</code>s as gossip seeds.</p>
 <p>Use <code>ClusterSettings.Create().DiscoverClusterViaGossipSeeds()</code> followed by:</p>
 <!-- TODO: Moved, to check. -->
@@ -511,8 +510,8 @@ You can also use spacing instead of camel casing in your connection string.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="connection-events">Connection Events</h2>
-<p><code>EventStoreConnection</code> exposes events that your application can use to be notifed of changes to the status of the connection.</p>
+<h2 id="connection-events">Connection events</h2>
+<p><code>EventStoreConnection</code> exposes events that your application can use to be notified of changes to the status of the connection.</p>
 <!-- TODO: Not moved. -->
 <table>
 <thead>
