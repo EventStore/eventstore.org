@@ -124,7 +124,6 @@
 <p>The prerequisites for installing on Windows are:</p>
 <ul>
 <li>NET Framework 4.0+</li>
-<li>Windows platform SDK with compilers (v7.1) or Visual C++ installed (only required for a full build)</li>
 </ul>
 <p>Event Store has <a href="https://chocolatey.org/packages/eventstore-oss">Chocolatey packages</a> available that you can install with the following command:</p>
 <pre><code class="lang-powershell">choco install eventstore-oss
@@ -134,9 +133,10 @@
 </code></pre><p>Event Store runs in an administration context because it starts an HTTP server through <code>http.sys</code>. For permanent or production instances you need to provide an ACL such as:</p>
 <pre><code class="lang-powershell">netsh http add urlacl url=http://+:2113/ user=DOMAIN\username
 </code></pre><p>For more information, refer to Microsoft&#39;s <code>add urlacl</code> <a href="https://docs.microsoft.com/en-us/windows/win32/http/add-urlacl">documentation</a>.</p>
+<p>To build Event Store from source, refer to the <a href="https://github.com/EventStore/EventStore#windows">Event Store README</a>.</p>
 </section>
 <section id="tabpanel_Imwg03Et86_tabid-2" role="tabpanel" data-tab="tabid-2" aria-hidden="true" hidden="hidden">
-<p>The prerequisites for Installing on Linux are:</p>
+<p>The prerequisites for installing on Linux are:</p>
 <ul>
 <li>We recommend <a href="https://www.mono-project.com/download/stable/">Mono 5.16.0</a>, but other versions may also work.</li>
 </ul>
@@ -170,6 +170,7 @@ Read <a href="../server/deploy-kubernetes-aks/index.html">this guide</a> for mor
 <p>Event Store has a macOS package <a href="https://eventstore.org/downloads/">you can download</a> and install, and we maintain a Homebrew Cask formula you can install:</p>
 <pre><code class="lang-shell">brew cask install eventstore
 </code></pre><p>In each case you can run Event Store with the <code>eventstore</code> command, and stop it with <code>Ctrl+c</code>. To use the default database location you need to use <code>sudo</code>, or you can change the location with the <code>--db</code> parameter.</p>
+<p>To build Event Store from source, refer to the <a href="https://github.com/EventStore/EventStore#mac-os-x">Event Store README</a>.</p>
 </section>
 </div>
 <h2 id="interacting-with-an-event-store-server">Interacting with an Event Store server</h2>
