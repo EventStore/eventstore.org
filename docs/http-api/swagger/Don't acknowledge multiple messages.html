@@ -9,9 +9,9 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <title>Scavenging events | Event Store </title>
+    <title>Don't acknowledge multiple messages | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Scavenging events | Event Store ">
+    <meta name="title" content="Don't acknowledge multiple messages | Event Store ">
     <meta name="generator" content="docfx 2.44.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
@@ -92,88 +92,110 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h1 id="scavenging-events">Scavenging events</h1>
+            <article class="content wrap" id="_content" data-uid="eventstore.org/HTTP API/5.0.0/Don't acknowledge multiple messages">
 
-<p>When you delete events or streams in Event Store, they aren&#39;t removed immediately. To permanently delete these events you need to run a &#39;scavenge&#39; on your database.</p>
-<p>A scavenge reclaims disk space by rewriting your database chunks, minus the events to delete, and then deleting the old chunks. Scavenges only affect completed chunks, so deleted events in the current chunk are still there after you run a scavenge.</p>
-<p>After processing the chunks, the operation updates the chunk indexes using a merge sort algorithm, skipping events whose data is no longer available.</p>
-<div class="WARNING"><h5>Warning</h5><p>Once a scavenge has run, you cannot recover any deleted events.</p>
+<h1 id="eventstore_org_HTTP_API_5_0_0_Don_t_acknowledge_multiple_messages" data-uid="eventstore.org/HTTP API/5.0.0/Don't acknowledge multiple messages" class="text-capitalize text-break">Don't acknowledge multiple messages</h1>
+<div class="markdown level0 description"><p>Clients must acknowledge (or not acknowledge) messages in the competing consumer model. If the client fails to respond in the given timeout period, the message will be retried. You should use the <code>rel</code> links in the feed for acknowledgements not bookmark URIs as they are subject to change in future versions.</p>
 </div>
-<div class="NOTE"><h5>Note</h5><p>Before version 4.0.2, a scavenge operation only worked with database chunk files. Since version 4.0.2 that reordering also happens inside the index files.</p>
-</div>
-<h2 id="starting-a-scavenge">Starting a scavenge</h2>
-<p>Scavenges are not run automatically by Event Store. We recommendation that you set up a scheduled task, for example using cron or Windows Scheduler, to trigger a scavenge as often as you need.</p>
-<p>You start a scavenge by issuing an empty <code>POST</code> request to the HTTP API with the credentials of an <code>admin</code> or <code>ops</code> user:</p>
-<div class="tabGroup" id="tabgroup_anzGsTKshJ">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_anzGsTKshJ_tabid-8" role="tab" aria-controls="tabpanel_anzGsTKshJ_tabid-8" data-tab="tabid-8" tabindex="0" aria-selected="true">Request</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_anzGsTKshJ_tabid-9" role="tab" aria-controls="tabpanel_anzGsTKshJ_tabid-9" data-tab="tabid-9" tabindex="-1">Response</a>
-</li>
-</ul>
-<section id="tabpanel_anzGsTKshJ_tabid-8" role="tabpanel" data-tab="tabid-8">
-<pre><code class="lang-bash" name="server-scavenge-request">curl -i -d {} -X POST http://localhost:2113/admin/scavenge -u &quot;admin:changeit&quot;
-</code></pre><div class="NEXT"><h5>Next Steps</h5><p>Scavenge operations have other options you can set to improve performance, <a class="xref" href="../../http-api/swagger/Scavenge%20a%20node.html">read the API docs</a> for more details.</p>
-</div>
-</section>
-<section id="tabpanel_anzGsTKshJ_tabid-9" role="tabpanel" data-tab="tabid-9" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-http" name="server-scavenge-response">HTTP/1.1 200 OK
-Access-Control-Allow-Methods: POST, OPTIONS
-Access-Control-Allow-Headers: Content-Type, X-Requested-With, X-Forwarded-Host, X-Forwarded-Prefix, X-PINGOTHER, Authorization, ES-LongPoll, ES-ExpectedVersion, ES-EventId, ES-EventType, ES-RequiresMaster, ES-HardDelete, ES-ResolveLinkTos
-Access-Control-Allow-Origin: *
-Access-Control-Expose-Headers: Location, ES-Position, ES-CurrentVersion
-Content-Type:
-Server: Mono-HTTPAPI/1.0
-Date: Wed, 19 Sep 2018 10:25:55 GMT
-Content-Length: 0
-Keep-Alive: timeout=15,max=100
-</code></pre></section>
-</div>
-<div class="NEXT"><h5>Next Steps</h5><p>For better scavenge performance, you can set the number of threads to use. If you need to restart a stopped scavenge, you can specify the starting chunk ID. <a class="xref" href="../../http-api/swagger/Scavenge%20a%20node.html">Find out more in the API reference</a>.</p>
-</div>
-<p>You can also start scavenges from the <em>Admin</em> page of the Admin UI.</p>
-<p><img src="../../images/admin-scavenge.png" alt="Start a scavenge in the Admin UI"></p>
-<div class="TIP"><h5>Tip</h5><p>Each node in a cluster has its own independent database. As such, when you run a scavenge, you need to issue a scavenge request to each node.</p>
-</div>
-<h3 id="how-often-to-run-a-scavenge">How often to run a scavenge</h3>
-<p>This depends on the following:</p>
-<ul>
-<li>How often you delete streams.</li>
-<li>Depending on how you set <code>$maxAge</code>, <code>$maxCount</code> or <code>$tb</code> metadata on your streams.</li>
-</ul>
-<h2 id="stopping-a-scavenge">Stopping a scavenge</h2>
-<p>Stop a running scavenge operation by issuing a <code>DELETE</code> request to the HTTP API with the credentials of an <code>admin</code> or <code>ops</code> user and the ID of the scavenge you want to stop:</p>
-<pre><code class="lang-bash">curl -i -X DELETE http://localhost:2113/admin/scavenge/{scavengeId} -u &quot;admin:changeit&quot;
-</code></pre><p>You can also stop scavenges from the <em>Admin</em> page of the Admin UI.</p>
-<div class="TIP"><h5>Tip</h5><p>Each node in a cluster has its own independent database. As such, when you run a scavenge, you need to issue a scavenge request to each node.</p>
-</div>
-<h2 id="how-often-should-you-run-a-scavenge">How often should you run a scavenge</h2>
-<p>This depends on the following:</p>
-<ul>
-<li>How often you delete streams.</li>
-<li>How you set <code>$maxAge</code>, <code>$maxCount</code> or <code>$tb</code> metadata on your streams.</li>
-</ul>
-<div class="TIP"><h5>Tip</h5><p>Read the <a href="../../dotnet-api/stream-metadata/index.html">.NET API</a> or <a href="../../http-api/stream-metadata/index.html">HTTP API</a> docs for more details on setting metadata.</p>
-</div>
-<h2 id="scavenging-while-event-store-is-online">Scavenging while Event Store is online</h2>
-<p>It&#39;s safe to run a scavenge while Event Store is running and processing events, as it&#39;s designed to be an online operation.</p>
-<div class="WARNING"><h5>Warning</h5><p>Scavenging increases the number of reads/writes made to disk, and it is not recommended when your system is under heavy load.</p>
-</div>
+  
+  <h2>Request</h2>
+  <div class="codewrapper">
+    <pre><code class="lang-restApi hljs">POST /subscriptions/{stream}/{subscription}/nack[?ids&amp;action]</code></pre>
+  </div>
+  <h2>Parameters</h2>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Value</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">*stream</span></td>
+        <td>
+        string
+  </td>
+        <td></td>
+        <td><p>The stream the persistent subscription is on</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">*subscription</span></td>
+        <td>
+        string
+  </td>
+        <td></td>
+        <td><p>The name of the subscription group</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">ids</span></td>
+        <td>
+        string
+  </td>
+        <td></td>
+        <td><p>The ids of the messages that need to be nacked separated by commas</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">action</span></td>
+        <td>
+        string
+  </td>
+        <td></td>
+        <td><ul><li><strong>Park</strong> - Don&#39;t retry the message, park it until a request is sent to reply the parked messages<li><strong>Retry</strong> - Retry the message<li><strong>Skip</strong> - Discard the message<li><strong>Stop</strong> - Stop the subscription</li></li></li></li></ul></td>
+      </tr>
+      </tbody>
+  </table>
+    
+  
+  
+  <div class="responses">
+    <h2>Responses</h2>
+    <table class="table table-bordered table-striped table-condensed">
+      <thead>
+        <tr>
+          <th>Status Code</th>
+          <th>Description</th>
+          <th>Samples</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><span class="status">200</span></td>
+        <td><p>New persistant subscription</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      <tr>
+        <td><span class="status">400</span></td>
+        <td><p>bad input parameter</p>
+</td>
+        <td class="sample-response">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
 </article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
             <div class="sinceversion">
-            <b>Since version:</b> 4.0.2
             </div>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/EventStore/documentation/blob/master/server/scavenging.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/EventStore/documentation/new/master/apiSpec/new?filename=eventstore_org_HTTP_API_5_0_0_Don_t_acknowledge_multiple_messages.md&amp;value=---%0Auid%3A%20eventstore.org%2FHTTP%20API%2F5.0.0%2FDon't%20acknowledge%20multiple%20messages%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/EventStore/documentation/blob/master/http-api/swagger.json/#L1" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
