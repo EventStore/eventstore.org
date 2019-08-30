@@ -2673,7 +2673,7 @@
       "output": {
         ".html": {
           "relative_path": "getting-started/index.html",
-          "hash": "flBEFkhEd0qR1V3DOEZ1Tg=="
+          "hash": "f3PrWRHTrgDz2CORgMYfqg=="
         }
       },
       "is_incremental": false,
@@ -2939,6 +2939,114 @@
       "source_relative_path": "http-api/swagger.json",
       "output": {
         ".html": {
+          "relative_path": "http-api/swagger/Get configuration for node.html",
+          "hash": "KKLJGOpHB2W4M3VE9h9Odg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Read a stream.html",
+          "hash": "hkBYbQrjXGCDtGXtPnNHDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Write to a stream.html",
+          "hash": "cyRBE4Reutw7j37ULNcyMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Delete a stream.html",
+          "hash": "QRE8k7zxkqKdccWtVpyT1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Alternative stream URL.html",
+          "hash": "gWzcpdqoK9qKWYtv4m78xQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Read stream event.html",
+          "hash": "IW2nIlVYQYIHjuP+suT/UQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Get {n} events.html",
+          "hash": "6lhEby2LC5LhstXUlY0eZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Page back through events.html",
+          "hash": "Ni+0/6pVHmhYg/bFvPtefA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Page forward through events.html",
+          "hash": "gse9EGA8vVBucQoM/nCkzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
           "relative_path": "http-api/swagger/Read stream metadata.html",
           "hash": "0Klqqm6YG/1XbLSwHKC5Dg=="
         }
@@ -3121,246 +3229,6 @@
         ".html": {
           "relative_path": "http-api/swagger/Replay previously parked messages.html",
           "hash": "oLxqTsiMGulZLtCZo9vGBA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger.html",
-          "hash": "wqvN7XKMZLtcMX7INlfCgA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Shutdown a node.html",
-          "hash": "+mzV+5i6bejw+PNpProI+A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Scavenge a node.html",
-          "hash": "UNoJvX2MLDIrnOw1f6xa2w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Stop a scavenge.html",
-          "hash": "yu2cbDjjKa4ybHtzDnUuQQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Merge Indexes.html",
-          "hash": "qj+gPK+ekWJcD4oLKjvgQA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Get info for node.html",
-          "hash": "PlxVkS/s6fWFGJ+kKncwRA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Get configuration for node.html",
-          "hash": "KKLJGOpHB2W4M3VE9h9Odg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Read a stream.html",
-          "hash": "hkBYbQrjXGCDtGXtPnNHDg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Write to a stream.html",
-          "hash": "cyRBE4Reutw7j37ULNcyMQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Delete a stream.html",
-          "hash": "QRE8k7zxkqKdccWtVpyT1Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Alternative stream URL.html",
-          "hash": "gWzcpdqoK9qKWYtv4m78xQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Read stream event.html",
-          "hash": "IW2nIlVYQYIHjuP+suT/UQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Get {n} events.html",
-          "hash": "6lhEby2LC5LhstXUlY0eZg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Page back through events.html",
-          "hash": "Ni+0/6pVHmhYg/bFvPtefA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Page forward through events.html",
-          "hash": "gse9EGA8vVBucQoM/nCkzQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Delete a projection.html",
-          "hash": "xF4vA1fNltFA/uqB6SJv+g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Get all stats.html",
-          "hash": "GTpTgrzt8yxp4M4Gnb+ySw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Get specified stat.html",
-          "hash": "7Th5xOxWnH3OEdKZn/FvbA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Return Gossip details.html",
-          "hash": "RbQSQOmRMkUGvOk8PNJgJg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Update Gossip details.html",
-          "hash": "neP5nN7zgcAxLK0yokSgmQ=="
         }
       },
       "is_incremental": false,
@@ -3721,6 +3589,138 @@
         ".html": {
           "relative_path": "http-api/swagger/Get a projection.html",
           "hash": "lWBm0yi6B+uLTbg8yZZ+Zw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Delete a projection.html",
+          "hash": "xF4vA1fNltFA/uqB6SJv+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Get all stats.html",
+          "hash": "GTpTgrzt8yxp4M4Gnb+ySw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Get specified stat.html",
+          "hash": "7Th5xOxWnH3OEdKZn/FvbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Return Gossip details.html",
+          "hash": "RbQSQOmRMkUGvOk8PNJgJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Update Gossip details.html",
+          "hash": "neP5nN7zgcAxLK0yokSgmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger.html",
+          "hash": "wqvN7XKMZLtcMX7INlfCgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Shutdown a node.html",
+          "hash": "+mzV+5i6bejw+PNpProI+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Scavenge a node.html",
+          "hash": "UNoJvX2MLDIrnOw1f6xa2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Stop a scavenge.html",
+          "hash": "yu2cbDjjKa4ybHtzDnUuQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Merge Indexes.html",
+          "hash": "qj+gPK+ekWJcD4oLKjvgQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Get info for node.html",
+          "hash": "PlxVkS/s6fWFGJ+kKncwRA=="
         }
       },
       "is_incremental": false,
@@ -4204,7 +4204,7 @@
       "output": {
         ".html": {
           "relative_path": "server/index.html",
-          "hash": "acrwj7RT0F8j128Gk6pm4Q=="
+          "hash": "L9OBUx82liS4kXhnxhbntA=="
         }
       },
       "is_incremental": false,

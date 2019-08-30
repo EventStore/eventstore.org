@@ -144,9 +144,7 @@
 </code></pre><p>When you install the Event Store package, the service doesn&#39;t start by default. This is to allow you to change the configuration, located at <em>/etc/eventstore/eventstore.conf</em> and to prevent creating a default database.</p>
 <div class="TIP"><h5>Tip</h5><p>To start Event Store on port 80 as a service, refer to <a href="configuring/index.html#start-as-a-service-on-a-custom-port">Configuring your installation</a></p>
 </div>
-<p>In all other cases you can run the Event Store binary or use our <em>run-node.sh</em> shell script which exports the environment variable <code>LD_LIBRARY_PATH</code> to include the installation path of Event Store, which is necessary if you are planning to use projections.</p>
-<pre><code class="lang-bash">./run-node.sh --db ./ESData
-</code></pre><div class="NOTE"><h5>Note</h5><p>We recommend that when using Linux you set the &#39;open file limit&#39; to a high number. The precise value depends on your use case, but at least between <code>30,000</code> and <code>60,000</code>.</p>
+<div class="TIP"><h5>Tip</h5><p>We recommend that when using Linux you set the &#39;open file limit&#39; to a high number. The precise value depends on your use case, but at least between <code>30,000</code> and <code>60,000</code>.</p>
 </div>
 </section>
 <section id="tabpanel_Imwg03Et86_tabid-3" role="tabpanel" data-tab="tabid-3" aria-hidden="true" hidden="hidden">
