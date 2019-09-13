@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GossipSeed
    | Event Store ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="generator" content="docfx 2.45.1.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -142,7 +142,7 @@
   
   
   <a id="EventStore_ClientAPI_GossipSeed__ctor_" data-uid="EventStore.ClientAPI.GossipSeed.#ctor*"></a>
-  <h4 id="EventStore_ClientAPI_GossipSeed__ctor_System_Net_IPEndPoint_System_String_" data-uid="EventStore.ClientAPI.GossipSeed.#ctor(System.Net.IPEndPoint,System.String)">GossipSeed(IPEndPoint, String)</h4>
+  <h4 id="EventStore_ClientAPI_GossipSeed__ctor_System_Net_IPEndPoint_System_String_System_Boolean_" data-uid="EventStore.ClientAPI.GossipSeed.#ctor(System.Net.IPEndPoint,System.String,System.Boolean)">GossipSeed(IPEndPoint, String, Boolean)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="EventStore.ClientAPI.GossipSeed.html">GossipSeed</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -150,7 +150,7 @@
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GossipSeed(IPEndPoint endPoint, string hostHeader = &quot;&quot;)</code></pre>
+    <pre><code class="lang-csharp hljs">public GossipSeed(IPEndPoint endPoint, string hostHeader = &quot;&quot;, bool seedOverTls = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -168,6 +168,10 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">hostHeader</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">seedOverTls</span></td>
       </tr>
     </tbody>
   </table>
@@ -223,6 +227,31 @@ used here is 2113.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_GossipSeed_SeedOverTls" data-uid="EventStore.ClientAPI.GossipSeed.SeedOverTls">SeedOverTls</h4>
+  <div class="markdown level1 summary"><p>If Gossip should be requested</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly bool SeedOverTls</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
       </tr>
     </tbody>
   </table>

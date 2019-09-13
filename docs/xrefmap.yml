@@ -801,6 +801,19 @@ references:
   isSpec: "True"
   fullName: EventStore.ClientAPI.ConnectionSettings.Create
   nameWithType: ConnectionSettings.Create
+- uid: EventStore.ClientAPI.ConnectionSettings.CustomHttpClient
+  name: CustomHttpClient
+  href: dotnet-api/code/EventStore.ClientAPI.ConnectionSettings.html#EventStore_ClientAPI_ConnectionSettings_CustomHttpClient
+  commentId: P:EventStore.ClientAPI.ConnectionSettings.CustomHttpClient
+  fullName: EventStore.ClientAPI.ConnectionSettings.CustomHttpClient
+  nameWithType: ConnectionSettings.CustomHttpClient
+- uid: EventStore.ClientAPI.ConnectionSettings.CustomHttpClient*
+  name: CustomHttpClient
+  href: dotnet-api/code/EventStore.ClientAPI.ConnectionSettings.html#EventStore_ClientAPI_ConnectionSettings_CustomHttpClient_
+  commentId: Overload:EventStore.ClientAPI.ConnectionSettings.CustomHttpClient
+  isSpec: "True"
+  fullName: EventStore.ClientAPI.ConnectionSettings.CustomHttpClient
+  nameWithType: ConnectionSettings.CustomHttpClient
 - uid: EventStore.ClientAPI.ConnectionSettings.Default
   name: Default
   href: dotnet-api/code/EventStore.ClientAPI.ConnectionSettings.html#EventStore_ClientAPI_ConnectionSettings_Default
@@ -1207,6 +1220,15 @@ references:
   fullName.vb: EventStore.ClientAPI.ConnectionSettingsBuilder.SetGossipSeedEndPoints(EventStore.ClientAPI.GossipSeed())
   nameWithType: ConnectionSettingsBuilder.SetGossipSeedEndPoints(GossipSeed[])
   nameWithType.vb: ConnectionSettingsBuilder.SetGossipSeedEndPoints(GossipSeed())
+- uid: EventStore.ClientAPI.ConnectionSettingsBuilder.SetGossipSeedEndPoints(System.Boolean,System.Net.IPEndPoint[])
+  name: SetGossipSeedEndPoints(Boolean, IPEndPoint[])
+  href: dotnet-api/code/EventStore.ClientAPI.ConnectionSettingsBuilder.html#EventStore_ClientAPI_ConnectionSettingsBuilder_SetGossipSeedEndPoints_System_Boolean_System_Net_IPEndPoint___
+  commentId: M:EventStore.ClientAPI.ConnectionSettingsBuilder.SetGossipSeedEndPoints(System.Boolean,System.Net.IPEndPoint[])
+  name.vb: SetGossipSeedEndPoints(Boolean, IPEndPoint())
+  fullName: EventStore.ClientAPI.ConnectionSettingsBuilder.SetGossipSeedEndPoints(System.Boolean, System.Net.IPEndPoint[])
+  fullName.vb: EventStore.ClientAPI.ConnectionSettingsBuilder.SetGossipSeedEndPoints(System.Boolean, System.Net.IPEndPoint())
+  nameWithType: ConnectionSettingsBuilder.SetGossipSeedEndPoints(Boolean, IPEndPoint[])
+  nameWithType.vb: ConnectionSettingsBuilder.SetGossipSeedEndPoints(Boolean, IPEndPoint())
 - uid: EventStore.ClientAPI.ConnectionSettingsBuilder.SetGossipSeedEndPoints(System.Net.IPEndPoint[])
   name: SetGossipSeedEndPoints(IPEndPoint[])
   href: dotnet-api/code/EventStore.ClientAPI.ConnectionSettingsBuilder.html#EventStore_ClientAPI_ConnectionSettingsBuilder_SetGossipSeedEndPoints_System_Net_IPEndPoint___
@@ -1340,6 +1362,19 @@ references:
   isSpec: "True"
   fullName: EventStore.ClientAPI.ConnectionSettingsBuilder.UseConsoleLogger
   nameWithType: ConnectionSettingsBuilder.UseConsoleLogger
+- uid: EventStore.ClientAPI.ConnectionSettingsBuilder.UseCustomHttpClient(EventStore.ClientAPI.Transport.Http.IHttpClient)
+  name: UseCustomHttpClient(IHttpClient)
+  href: dotnet-api/code/EventStore.ClientAPI.ConnectionSettingsBuilder.html#EventStore_ClientAPI_ConnectionSettingsBuilder_UseCustomHttpClient_EventStore_ClientAPI_Transport_Http_IHttpClient_
+  commentId: M:EventStore.ClientAPI.ConnectionSettingsBuilder.UseCustomHttpClient(EventStore.ClientAPI.Transport.Http.IHttpClient)
+  fullName: EventStore.ClientAPI.ConnectionSettingsBuilder.UseCustomHttpClient(EventStore.ClientAPI.Transport.Http.IHttpClient)
+  nameWithType: ConnectionSettingsBuilder.UseCustomHttpClient(IHttpClient)
+- uid: EventStore.ClientAPI.ConnectionSettingsBuilder.UseCustomHttpClient*
+  name: UseCustomHttpClient
+  href: dotnet-api/code/EventStore.ClientAPI.ConnectionSettingsBuilder.html#EventStore_ClientAPI_ConnectionSettingsBuilder_UseCustomHttpClient_
+  commentId: Overload:EventStore.ClientAPI.ConnectionSettingsBuilder.UseCustomHttpClient
+  isSpec: "True"
+  fullName: EventStore.ClientAPI.ConnectionSettingsBuilder.UseCustomHttpClient
+  nameWithType: ConnectionSettingsBuilder.UseCustomHttpClient
 - uid: EventStore.ClientAPI.ConnectionSettingsBuilder.UseCustomLogger(EventStore.ClientAPI.ILogger)
   name: UseCustomLogger(ILogger)
   href: dotnet-api/code/EventStore.ClientAPI.ConnectionSettingsBuilder.html#EventStore_ClientAPI_ConnectionSettingsBuilder_UseCustomLogger_EventStore_ClientAPI_ILogger_
@@ -3061,12 +3096,12 @@ references:
   commentId: T:EventStore.ClientAPI.GossipSeed
   fullName: EventStore.ClientAPI.GossipSeed
   nameWithType: GossipSeed
-- uid: EventStore.ClientAPI.GossipSeed.#ctor(System.Net.IPEndPoint,System.String)
-  name: GossipSeed(IPEndPoint, String)
-  href: dotnet-api/code/EventStore.ClientAPI.GossipSeed.html#EventStore_ClientAPI_GossipSeed__ctor_System_Net_IPEndPoint_System_String_
-  commentId: M:EventStore.ClientAPI.GossipSeed.#ctor(System.Net.IPEndPoint,System.String)
-  fullName: EventStore.ClientAPI.GossipSeed.GossipSeed(System.Net.IPEndPoint, System.String)
-  nameWithType: GossipSeed.GossipSeed(IPEndPoint, String)
+- uid: EventStore.ClientAPI.GossipSeed.#ctor(System.Net.IPEndPoint,System.String,System.Boolean)
+  name: GossipSeed(IPEndPoint, String, Boolean)
+  href: dotnet-api/code/EventStore.ClientAPI.GossipSeed.html#EventStore_ClientAPI_GossipSeed__ctor_System_Net_IPEndPoint_System_String_System_Boolean_
+  commentId: M:EventStore.ClientAPI.GossipSeed.#ctor(System.Net.IPEndPoint,System.String,System.Boolean)
+  fullName: EventStore.ClientAPI.GossipSeed.GossipSeed(System.Net.IPEndPoint, System.String, System.Boolean)
+  nameWithType: GossipSeed.GossipSeed(IPEndPoint, String, Boolean)
 - uid: EventStore.ClientAPI.GossipSeed.#ctor*
   name: GossipSeed
   href: dotnet-api/code/EventStore.ClientAPI.GossipSeed.html#EventStore_ClientAPI_GossipSeed__ctor_
@@ -3086,6 +3121,12 @@ references:
   commentId: F:EventStore.ClientAPI.GossipSeed.HostHeader
   fullName: EventStore.ClientAPI.GossipSeed.HostHeader
   nameWithType: GossipSeed.HostHeader
+- uid: EventStore.ClientAPI.GossipSeed.SeedOverTls
+  name: SeedOverTls
+  href: dotnet-api/code/EventStore.ClientAPI.GossipSeed.html#EventStore_ClientAPI_GossipSeed_SeedOverTls
+  commentId: F:EventStore.ClientAPI.GossipSeed.SeedOverTls
+  fullName: EventStore.ClientAPI.GossipSeed.SeedOverTls
+  nameWithType: GossipSeed.SeedOverTls
 - uid: EventStore.ClientAPI.GossipSeedClusterSettingsBuilder
   name: GossipSeedClusterSettingsBuilder
   href: dotnet-api/code/EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.html
@@ -3172,6 +3213,15 @@ references:
   fullName.vb: EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints(EventStore.ClientAPI.GossipSeed())
   nameWithType: GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints(GossipSeed[])
   nameWithType.vb: GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints(GossipSeed())
+- uid: EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints(System.Boolean,System.Net.IPEndPoint[])
+  name: SetGossipSeedEndPoints(Boolean, IPEndPoint[])
+  href: dotnet-api/code/EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.html#EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetGossipSeedEndPoints_System_Boolean_System_Net_IPEndPoint___
+  commentId: M:EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints(System.Boolean,System.Net.IPEndPoint[])
+  name.vb: SetGossipSeedEndPoints(Boolean, IPEndPoint())
+  fullName: EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints(System.Boolean, System.Net.IPEndPoint[])
+  fullName.vb: EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints(System.Boolean, System.Net.IPEndPoint())
+  nameWithType: GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints(Boolean, IPEndPoint[])
+  nameWithType.vb: GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints(Boolean, IPEndPoint())
 - uid: EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints(System.Net.IPEndPoint[])
   name: SetGossipSeedEndPoints(IPEndPoint[])
   href: dotnet-api/code/EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.html#EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetGossipSeedEndPoints_System_Net_IPEndPoint___
@@ -5401,12 +5451,12 @@ references:
   commentId: T:EventStore.ClientAPI.Projections.ProjectionsManager
   fullName: EventStore.ClientAPI.Projections.ProjectionsManager
   nameWithType: ProjectionsManager
-- uid: EventStore.ClientAPI.Projections.ProjectionsManager.#ctor(EventStore.ClientAPI.ILogger,System.Net.EndPoint,System.TimeSpan,System.String)
-  name: ProjectionsManager(ILogger, EndPoint, TimeSpan, String)
-  href: dotnet-api/code/EventStore.ClientAPI.Projections.ProjectionsManager.html#EventStore_ClientAPI_Projections_ProjectionsManager__ctor_EventStore_ClientAPI_ILogger_System_Net_EndPoint_System_TimeSpan_System_String_
-  commentId: M:EventStore.ClientAPI.Projections.ProjectionsManager.#ctor(EventStore.ClientAPI.ILogger,System.Net.EndPoint,System.TimeSpan,System.String)
-  fullName: EventStore.ClientAPI.Projections.ProjectionsManager.ProjectionsManager(EventStore.ClientAPI.ILogger, System.Net.EndPoint, System.TimeSpan, System.String)
-  nameWithType: ProjectionsManager.ProjectionsManager(ILogger, EndPoint, TimeSpan, String)
+- uid: EventStore.ClientAPI.Projections.ProjectionsManager.#ctor(EventStore.ClientAPI.ILogger,System.Net.EndPoint,System.TimeSpan,EventStore.ClientAPI.Transport.Http.IHttpClient,System.String)
+  name: ProjectionsManager(ILogger, EndPoint, TimeSpan, IHttpClient, String)
+  href: dotnet-api/code/EventStore.ClientAPI.Projections.ProjectionsManager.html#EventStore_ClientAPI_Projections_ProjectionsManager__ctor_EventStore_ClientAPI_ILogger_System_Net_EndPoint_System_TimeSpan_EventStore_ClientAPI_Transport_Http_IHttpClient_System_String_
+  commentId: M:EventStore.ClientAPI.Projections.ProjectionsManager.#ctor(EventStore.ClientAPI.ILogger,System.Net.EndPoint,System.TimeSpan,EventStore.ClientAPI.Transport.Http.IHttpClient,System.String)
+  fullName: EventStore.ClientAPI.Projections.ProjectionsManager.ProjectionsManager(EventStore.ClientAPI.ILogger, System.Net.EndPoint, System.TimeSpan, EventStore.ClientAPI.Transport.Http.IHttpClient, System.String)
+  nameWithType: ProjectionsManager.ProjectionsManager(ILogger, EndPoint, TimeSpan, IHttpClient, String)
 - uid: EventStore.ClientAPI.Projections.ProjectionsManager.#ctor*
   name: ProjectionsManager
   href: dotnet-api/code/EventStore.ClientAPI.Projections.ProjectionsManager.html#EventStore_ClientAPI_Projections_ProjectionsManager__ctor_
@@ -5714,12 +5764,12 @@ references:
   commentId: T:EventStore.ClientAPI.Projections.QueryManager
   fullName: EventStore.ClientAPI.Projections.QueryManager
   nameWithType: QueryManager
-- uid: EventStore.ClientAPI.Projections.QueryManager.#ctor(EventStore.ClientAPI.ILogger,System.Net.EndPoint,System.TimeSpan,System.TimeSpan)
-  name: QueryManager(ILogger, EndPoint, TimeSpan, TimeSpan)
-  href: dotnet-api/code/EventStore.ClientAPI.Projections.QueryManager.html#EventStore_ClientAPI_Projections_QueryManager__ctor_EventStore_ClientAPI_ILogger_System_Net_EndPoint_System_TimeSpan_System_TimeSpan_
-  commentId: M:EventStore.ClientAPI.Projections.QueryManager.#ctor(EventStore.ClientAPI.ILogger,System.Net.EndPoint,System.TimeSpan,System.TimeSpan)
-  fullName: EventStore.ClientAPI.Projections.QueryManager.QueryManager(EventStore.ClientAPI.ILogger, System.Net.EndPoint, System.TimeSpan, System.TimeSpan)
-  nameWithType: QueryManager.QueryManager(ILogger, EndPoint, TimeSpan, TimeSpan)
+- uid: EventStore.ClientAPI.Projections.QueryManager.#ctor(EventStore.ClientAPI.ILogger,System.Net.EndPoint,System.TimeSpan,System.TimeSpan,EventStore.ClientAPI.Transport.Http.IHttpClient)
+  name: QueryManager(ILogger, EndPoint, TimeSpan, TimeSpan, IHttpClient)
+  href: dotnet-api/code/EventStore.ClientAPI.Projections.QueryManager.html#EventStore_ClientAPI_Projections_QueryManager__ctor_EventStore_ClientAPI_ILogger_System_Net_EndPoint_System_TimeSpan_System_TimeSpan_EventStore_ClientAPI_Transport_Http_IHttpClient_
+  commentId: M:EventStore.ClientAPI.Projections.QueryManager.#ctor(EventStore.ClientAPI.ILogger,System.Net.EndPoint,System.TimeSpan,System.TimeSpan,EventStore.ClientAPI.Transport.Http.IHttpClient)
+  fullName: EventStore.ClientAPI.Projections.QueryManager.QueryManager(EventStore.ClientAPI.ILogger, System.Net.EndPoint, System.TimeSpan, System.TimeSpan, EventStore.ClientAPI.Transport.Http.IHttpClient)
+  nameWithType: QueryManager.QueryManager(ILogger, EndPoint, TimeSpan, TimeSpan, IHttpClient)
 - uid: EventStore.ClientAPI.Projections.QueryManager.#ctor*
   name: QueryManager
   href: dotnet-api/code/EventStore.ClientAPI.Projections.QueryManager.html#EventStore_ClientAPI_Projections_QueryManager__ctor_
@@ -7018,6 +7068,245 @@ references:
   commentId: F:EventStore.ClientAPI.SystemSettings.UserStreamAcl
   fullName: EventStore.ClientAPI.SystemSettings.UserStreamAcl
   nameWithType: SystemSettings.UserStreamAcl
+- uid: EventStore.ClientAPI.Transport.Http
+  name: EventStore.ClientAPI.Transport.Http
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.html
+  commentId: N:EventStore.ClientAPI.Transport.Http
+  fullName: EventStore.ClientAPI.Transport.Http
+  nameWithType: EventStore.ClientAPI.Transport.Http
+- uid: EventStore.ClientAPI.Transport.Http.HttpAsyncClient
+  name: HttpAsyncClient
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpAsyncClient.html
+  commentId: T:EventStore.ClientAPI.Transport.Http.HttpAsyncClient
+  fullName: EventStore.ClientAPI.Transport.Http.HttpAsyncClient
+  nameWithType: HttpAsyncClient
+- uid: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.#ctor(System.TimeSpan,System.Net.Http.HttpClientHandler)
+  name: HttpAsyncClient(TimeSpan, HttpClientHandler)
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpAsyncClient.html#EventStore_ClientAPI_Transport_Http_HttpAsyncClient__ctor_System_TimeSpan_System_Net_Http_HttpClientHandler_
+  commentId: M:EventStore.ClientAPI.Transport.Http.HttpAsyncClient.#ctor(System.TimeSpan,System.Net.Http.HttpClientHandler)
+  fullName: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.HttpAsyncClient(System.TimeSpan, System.Net.Http.HttpClientHandler)
+  nameWithType: HttpAsyncClient.HttpAsyncClient(TimeSpan, HttpClientHandler)
+- uid: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.#ctor*
+  name: HttpAsyncClient
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpAsyncClient.html#EventStore_ClientAPI_Transport_Http_HttpAsyncClient__ctor_
+  commentId: Overload:EventStore.ClientAPI.Transport.Http.HttpAsyncClient.#ctor
+  isSpec: "True"
+  fullName: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.HttpAsyncClient
+  nameWithType: HttpAsyncClient.HttpAsyncClient
+- uid: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Delete(System.String,EventStore.ClientAPI.SystemData.UserCredentials,System.Action{EventStore.ClientAPI.Transport.Http.HttpResponse},System.Action{System.Exception})
+  name: Delete(String, UserCredentials, Action<HttpResponse>, Action<Exception>)
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpAsyncClient.html#EventStore_ClientAPI_Transport_Http_HttpAsyncClient_Delete_System_String_EventStore_ClientAPI_SystemData_UserCredentials_System_Action_EventStore_ClientAPI_Transport_Http_HttpResponse__System_Action_System_Exception__
+  commentId: M:EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Delete(System.String,EventStore.ClientAPI.SystemData.UserCredentials,System.Action{EventStore.ClientAPI.Transport.Http.HttpResponse},System.Action{System.Exception})
+  name.vb: Delete(String, UserCredentials, Action(Of HttpResponse), Action(Of Exception))
+  fullName: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Delete(System.String, EventStore.ClientAPI.SystemData.UserCredentials, System.Action<EventStore.ClientAPI.Transport.Http.HttpResponse>, System.Action<System.Exception>)
+  fullName.vb: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Delete(System.String, EventStore.ClientAPI.SystemData.UserCredentials, System.Action(Of EventStore.ClientAPI.Transport.Http.HttpResponse), System.Action(Of System.Exception))
+  nameWithType: HttpAsyncClient.Delete(String, UserCredentials, Action<HttpResponse>, Action<Exception>)
+  nameWithType.vb: HttpAsyncClient.Delete(String, UserCredentials, Action(Of HttpResponse), Action(Of Exception))
+- uid: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Delete*
+  name: Delete
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpAsyncClient.html#EventStore_ClientAPI_Transport_Http_HttpAsyncClient_Delete_
+  commentId: Overload:EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Delete
+  isSpec: "True"
+  fullName: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Delete
+  nameWithType: HttpAsyncClient.Delete
+- uid: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Get(System.String,EventStore.ClientAPI.SystemData.UserCredentials,System.Action{EventStore.ClientAPI.Transport.Http.HttpResponse},System.Action{System.Exception},System.String)
+  name: Get(String, UserCredentials, Action<HttpResponse>, Action<Exception>, String)
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpAsyncClient.html#EventStore_ClientAPI_Transport_Http_HttpAsyncClient_Get_System_String_EventStore_ClientAPI_SystemData_UserCredentials_System_Action_EventStore_ClientAPI_Transport_Http_HttpResponse__System_Action_System_Exception__System_String_
+  commentId: M:EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Get(System.String,EventStore.ClientAPI.SystemData.UserCredentials,System.Action{EventStore.ClientAPI.Transport.Http.HttpResponse},System.Action{System.Exception},System.String)
+  name.vb: Get(String, UserCredentials, Action(Of HttpResponse), Action(Of Exception), String)
+  fullName: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Get(System.String, EventStore.ClientAPI.SystemData.UserCredentials, System.Action<EventStore.ClientAPI.Transport.Http.HttpResponse>, System.Action<System.Exception>, System.String)
+  fullName.vb: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Get(System.String, EventStore.ClientAPI.SystemData.UserCredentials, System.Action(Of EventStore.ClientAPI.Transport.Http.HttpResponse), System.Action(Of System.Exception), System.String)
+  nameWithType: HttpAsyncClient.Get(String, UserCredentials, Action<HttpResponse>, Action<Exception>, String)
+  nameWithType.vb: HttpAsyncClient.Get(String, UserCredentials, Action(Of HttpResponse), Action(Of Exception), String)
+- uid: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Get*
+  name: Get
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpAsyncClient.html#EventStore_ClientAPI_Transport_Http_HttpAsyncClient_Get_
+  commentId: Overload:EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Get
+  isSpec: "True"
+  fullName: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Get
+  nameWithType: HttpAsyncClient.Get
+- uid: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Post(System.String,System.String,System.String,EventStore.ClientAPI.SystemData.UserCredentials,System.Action{EventStore.ClientAPI.Transport.Http.HttpResponse},System.Action{System.Exception})
+  name: Post(String, String, String, UserCredentials, Action<HttpResponse>, Action<Exception>)
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpAsyncClient.html#EventStore_ClientAPI_Transport_Http_HttpAsyncClient_Post_System_String_System_String_System_String_EventStore_ClientAPI_SystemData_UserCredentials_System_Action_EventStore_ClientAPI_Transport_Http_HttpResponse__System_Action_System_Exception__
+  commentId: M:EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Post(System.String,System.String,System.String,EventStore.ClientAPI.SystemData.UserCredentials,System.Action{EventStore.ClientAPI.Transport.Http.HttpResponse},System.Action{System.Exception})
+  name.vb: Post(String, String, String, UserCredentials, Action(Of HttpResponse), Action(Of Exception))
+  fullName: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Post(System.String, System.String, System.String, EventStore.ClientAPI.SystemData.UserCredentials, System.Action<EventStore.ClientAPI.Transport.Http.HttpResponse>, System.Action<System.Exception>)
+  fullName.vb: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Post(System.String, System.String, System.String, EventStore.ClientAPI.SystemData.UserCredentials, System.Action(Of EventStore.ClientAPI.Transport.Http.HttpResponse), System.Action(Of System.Exception))
+  nameWithType: HttpAsyncClient.Post(String, String, String, UserCredentials, Action<HttpResponse>, Action<Exception>)
+  nameWithType.vb: HttpAsyncClient.Post(String, String, String, UserCredentials, Action(Of HttpResponse), Action(Of Exception))
+- uid: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Post*
+  name: Post
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpAsyncClient.html#EventStore_ClientAPI_Transport_Http_HttpAsyncClient_Post_
+  commentId: Overload:EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Post
+  isSpec: "True"
+  fullName: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Post
+  nameWithType: HttpAsyncClient.Post
+- uid: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Put(System.String,System.String,System.String,EventStore.ClientAPI.SystemData.UserCredentials,System.Action{EventStore.ClientAPI.Transport.Http.HttpResponse},System.Action{System.Exception})
+  name: Put(String, String, String, UserCredentials, Action<HttpResponse>, Action<Exception>)
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpAsyncClient.html#EventStore_ClientAPI_Transport_Http_HttpAsyncClient_Put_System_String_System_String_System_String_EventStore_ClientAPI_SystemData_UserCredentials_System_Action_EventStore_ClientAPI_Transport_Http_HttpResponse__System_Action_System_Exception__
+  commentId: M:EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Put(System.String,System.String,System.String,EventStore.ClientAPI.SystemData.UserCredentials,System.Action{EventStore.ClientAPI.Transport.Http.HttpResponse},System.Action{System.Exception})
+  name.vb: Put(String, String, String, UserCredentials, Action(Of HttpResponse), Action(Of Exception))
+  fullName: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Put(System.String, System.String, System.String, EventStore.ClientAPI.SystemData.UserCredentials, System.Action<EventStore.ClientAPI.Transport.Http.HttpResponse>, System.Action<System.Exception>)
+  fullName.vb: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Put(System.String, System.String, System.String, EventStore.ClientAPI.SystemData.UserCredentials, System.Action(Of EventStore.ClientAPI.Transport.Http.HttpResponse), System.Action(Of System.Exception))
+  nameWithType: HttpAsyncClient.Put(String, String, String, UserCredentials, Action<HttpResponse>, Action<Exception>)
+  nameWithType.vb: HttpAsyncClient.Put(String, String, String, UserCredentials, Action(Of HttpResponse), Action(Of Exception))
+- uid: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Put*
+  name: Put
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpAsyncClient.html#EventStore_ClientAPI_Transport_Http_HttpAsyncClient_Put_
+  commentId: Overload:EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Put
+  isSpec: "True"
+  fullName: EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Put
+  nameWithType: HttpAsyncClient.Put
+- uid: EventStore.ClientAPI.Transport.Http.HttpResponse
+  name: HttpResponse
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpResponse.html
+  commentId: T:EventStore.ClientAPI.Transport.Http.HttpResponse
+  fullName: EventStore.ClientAPI.Transport.Http.HttpResponse
+  nameWithType: HttpResponse
+- uid: EventStore.ClientAPI.Transport.Http.HttpResponse.#ctor(System.Net.Http.HttpResponseMessage)
+  name: HttpResponse(HttpResponseMessage)
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpResponse.html#EventStore_ClientAPI_Transport_Http_HttpResponse__ctor_System_Net_Http_HttpResponseMessage_
+  commentId: M:EventStore.ClientAPI.Transport.Http.HttpResponse.#ctor(System.Net.Http.HttpResponseMessage)
+  fullName: EventStore.ClientAPI.Transport.Http.HttpResponse.HttpResponse(System.Net.Http.HttpResponseMessage)
+  nameWithType: HttpResponse.HttpResponse(HttpResponseMessage)
+- uid: EventStore.ClientAPI.Transport.Http.HttpResponse.#ctor*
+  name: HttpResponse
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpResponse.html#EventStore_ClientAPI_Transport_Http_HttpResponse__ctor_
+  commentId: Overload:EventStore.ClientAPI.Transport.Http.HttpResponse.#ctor
+  isSpec: "True"
+  fullName: EventStore.ClientAPI.Transport.Http.HttpResponse.HttpResponse
+  nameWithType: HttpResponse.HttpResponse
+- uid: EventStore.ClientAPI.Transport.Http.HttpResponse.Body
+  name: Body
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpResponse.html#EventStore_ClientAPI_Transport_Http_HttpResponse_Body
+  commentId: P:EventStore.ClientAPI.Transport.Http.HttpResponse.Body
+  fullName: EventStore.ClientAPI.Transport.Http.HttpResponse.Body
+  nameWithType: HttpResponse.Body
+- uid: EventStore.ClientAPI.Transport.Http.HttpResponse.Body*
+  name: Body
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpResponse.html#EventStore_ClientAPI_Transport_Http_HttpResponse_Body_
+  commentId: Overload:EventStore.ClientAPI.Transport.Http.HttpResponse.Body
+  isSpec: "True"
+  fullName: EventStore.ClientAPI.Transport.Http.HttpResponse.Body
+  nameWithType: HttpResponse.Body
+- uid: EventStore.ClientAPI.Transport.Http.HttpResponse.CharacterSet
+  name: CharacterSet
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpResponse.html#EventStore_ClientAPI_Transport_Http_HttpResponse_CharacterSet
+  commentId: F:EventStore.ClientAPI.Transport.Http.HttpResponse.CharacterSet
+  fullName: EventStore.ClientAPI.Transport.Http.HttpResponse.CharacterSet
+  nameWithType: HttpResponse.CharacterSet
+- uid: EventStore.ClientAPI.Transport.Http.HttpResponse.ContentEncoding
+  name: ContentEncoding
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpResponse.html#EventStore_ClientAPI_Transport_Http_HttpResponse_ContentEncoding
+  commentId: F:EventStore.ClientAPI.Transport.Http.HttpResponse.ContentEncoding
+  fullName: EventStore.ClientAPI.Transport.Http.HttpResponse.ContentEncoding
+  nameWithType: HttpResponse.ContentEncoding
+- uid: EventStore.ClientAPI.Transport.Http.HttpResponse.ContentLength
+  name: ContentLength
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpResponse.html#EventStore_ClientAPI_Transport_Http_HttpResponse_ContentLength
+  commentId: F:EventStore.ClientAPI.Transport.Http.HttpResponse.ContentLength
+  fullName: EventStore.ClientAPI.Transport.Http.HttpResponse.ContentLength
+  nameWithType: HttpResponse.ContentLength
+- uid: EventStore.ClientAPI.Transport.Http.HttpResponse.ContentType
+  name: ContentType
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpResponse.html#EventStore_ClientAPI_Transport_Http_HttpResponse_ContentType
+  commentId: F:EventStore.ClientAPI.Transport.Http.HttpResponse.ContentType
+  fullName: EventStore.ClientAPI.Transport.Http.HttpResponse.ContentType
+  nameWithType: HttpResponse.ContentType
+- uid: EventStore.ClientAPI.Transport.Http.HttpResponse.Headers
+  name: Headers
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpResponse.html#EventStore_ClientAPI_Transport_Http_HttpResponse_Headers
+  commentId: F:EventStore.ClientAPI.Transport.Http.HttpResponse.Headers
+  fullName: EventStore.ClientAPI.Transport.Http.HttpResponse.Headers
+  nameWithType: HttpResponse.Headers
+- uid: EventStore.ClientAPI.Transport.Http.HttpResponse.HttpStatusCode
+  name: HttpStatusCode
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpResponse.html#EventStore_ClientAPI_Transport_Http_HttpResponse_HttpStatusCode
+  commentId: F:EventStore.ClientAPI.Transport.Http.HttpResponse.HttpStatusCode
+  fullName: EventStore.ClientAPI.Transport.Http.HttpResponse.HttpStatusCode
+  nameWithType: HttpResponse.HttpStatusCode
+- uid: EventStore.ClientAPI.Transport.Http.HttpResponse.Method
+  name: Method
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpResponse.html#EventStore_ClientAPI_Transport_Http_HttpResponse_Method
+  commentId: F:EventStore.ClientAPI.Transport.Http.HttpResponse.Method
+  fullName: EventStore.ClientAPI.Transport.Http.HttpResponse.Method
+  nameWithType: HttpResponse.Method
+- uid: EventStore.ClientAPI.Transport.Http.HttpResponse.StatusDescription
+  name: StatusDescription
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpResponse.html#EventStore_ClientAPI_Transport_Http_HttpResponse_StatusDescription
+  commentId: F:EventStore.ClientAPI.Transport.Http.HttpResponse.StatusDescription
+  fullName: EventStore.ClientAPI.Transport.Http.HttpResponse.StatusDescription
+  nameWithType: HttpResponse.StatusDescription
+- uid: EventStore.ClientAPI.Transport.Http.IHttpClient
+  name: IHttpClient
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.IHttpClient.html
+  commentId: T:EventStore.ClientAPI.Transport.Http.IHttpClient
+  fullName: EventStore.ClientAPI.Transport.Http.IHttpClient
+  nameWithType: IHttpClient
+- uid: EventStore.ClientAPI.Transport.Http.IHttpClient.Delete(System.String,EventStore.ClientAPI.SystemData.UserCredentials,System.Action{EventStore.ClientAPI.Transport.Http.HttpResponse},System.Action{System.Exception})
+  name: Delete(String, UserCredentials, Action<HttpResponse>, Action<Exception>)
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.IHttpClient.html#EventStore_ClientAPI_Transport_Http_IHttpClient_Delete_System_String_EventStore_ClientAPI_SystemData_UserCredentials_System_Action_EventStore_ClientAPI_Transport_Http_HttpResponse__System_Action_System_Exception__
+  commentId: M:EventStore.ClientAPI.Transport.Http.IHttpClient.Delete(System.String,EventStore.ClientAPI.SystemData.UserCredentials,System.Action{EventStore.ClientAPI.Transport.Http.HttpResponse},System.Action{System.Exception})
+  name.vb: Delete(String, UserCredentials, Action(Of HttpResponse), Action(Of Exception))
+  fullName: EventStore.ClientAPI.Transport.Http.IHttpClient.Delete(System.String, EventStore.ClientAPI.SystemData.UserCredentials, System.Action<EventStore.ClientAPI.Transport.Http.HttpResponse>, System.Action<System.Exception>)
+  fullName.vb: EventStore.ClientAPI.Transport.Http.IHttpClient.Delete(System.String, EventStore.ClientAPI.SystemData.UserCredentials, System.Action(Of EventStore.ClientAPI.Transport.Http.HttpResponse), System.Action(Of System.Exception))
+  nameWithType: IHttpClient.Delete(String, UserCredentials, Action<HttpResponse>, Action<Exception>)
+  nameWithType.vb: IHttpClient.Delete(String, UserCredentials, Action(Of HttpResponse), Action(Of Exception))
+- uid: EventStore.ClientAPI.Transport.Http.IHttpClient.Delete*
+  name: Delete
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.IHttpClient.html#EventStore_ClientAPI_Transport_Http_IHttpClient_Delete_
+  commentId: Overload:EventStore.ClientAPI.Transport.Http.IHttpClient.Delete
+  isSpec: "True"
+  fullName: EventStore.ClientAPI.Transport.Http.IHttpClient.Delete
+  nameWithType: IHttpClient.Delete
+- uid: EventStore.ClientAPI.Transport.Http.IHttpClient.Get(System.String,EventStore.ClientAPI.SystemData.UserCredentials,System.Action{EventStore.ClientAPI.Transport.Http.HttpResponse},System.Action{System.Exception},System.String)
+  name: Get(String, UserCredentials, Action<HttpResponse>, Action<Exception>, String)
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.IHttpClient.html#EventStore_ClientAPI_Transport_Http_IHttpClient_Get_System_String_EventStore_ClientAPI_SystemData_UserCredentials_System_Action_EventStore_ClientAPI_Transport_Http_HttpResponse__System_Action_System_Exception__System_String_
+  commentId: M:EventStore.ClientAPI.Transport.Http.IHttpClient.Get(System.String,EventStore.ClientAPI.SystemData.UserCredentials,System.Action{EventStore.ClientAPI.Transport.Http.HttpResponse},System.Action{System.Exception},System.String)
+  name.vb: Get(String, UserCredentials, Action(Of HttpResponse), Action(Of Exception), String)
+  fullName: EventStore.ClientAPI.Transport.Http.IHttpClient.Get(System.String, EventStore.ClientAPI.SystemData.UserCredentials, System.Action<EventStore.ClientAPI.Transport.Http.HttpResponse>, System.Action<System.Exception>, System.String)
+  fullName.vb: EventStore.ClientAPI.Transport.Http.IHttpClient.Get(System.String, EventStore.ClientAPI.SystemData.UserCredentials, System.Action(Of EventStore.ClientAPI.Transport.Http.HttpResponse), System.Action(Of System.Exception), System.String)
+  nameWithType: IHttpClient.Get(String, UserCredentials, Action<HttpResponse>, Action<Exception>, String)
+  nameWithType.vb: IHttpClient.Get(String, UserCredentials, Action(Of HttpResponse), Action(Of Exception), String)
+- uid: EventStore.ClientAPI.Transport.Http.IHttpClient.Get*
+  name: Get
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.IHttpClient.html#EventStore_ClientAPI_Transport_Http_IHttpClient_Get_
+  commentId: Overload:EventStore.ClientAPI.Transport.Http.IHttpClient.Get
+  isSpec: "True"
+  fullName: EventStore.ClientAPI.Transport.Http.IHttpClient.Get
+  nameWithType: IHttpClient.Get
+- uid: EventStore.ClientAPI.Transport.Http.IHttpClient.Post(System.String,System.String,System.String,EventStore.ClientAPI.SystemData.UserCredentials,System.Action{EventStore.ClientAPI.Transport.Http.HttpResponse},System.Action{System.Exception})
+  name: Post(String, String, String, UserCredentials, Action<HttpResponse>, Action<Exception>)
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.IHttpClient.html#EventStore_ClientAPI_Transport_Http_IHttpClient_Post_System_String_System_String_System_String_EventStore_ClientAPI_SystemData_UserCredentials_System_Action_EventStore_ClientAPI_Transport_Http_HttpResponse__System_Action_System_Exception__
+  commentId: M:EventStore.ClientAPI.Transport.Http.IHttpClient.Post(System.String,System.String,System.String,EventStore.ClientAPI.SystemData.UserCredentials,System.Action{EventStore.ClientAPI.Transport.Http.HttpResponse},System.Action{System.Exception})
+  name.vb: Post(String, String, String, UserCredentials, Action(Of HttpResponse), Action(Of Exception))
+  fullName: EventStore.ClientAPI.Transport.Http.IHttpClient.Post(System.String, System.String, System.String, EventStore.ClientAPI.SystemData.UserCredentials, System.Action<EventStore.ClientAPI.Transport.Http.HttpResponse>, System.Action<System.Exception>)
+  fullName.vb: EventStore.ClientAPI.Transport.Http.IHttpClient.Post(System.String, System.String, System.String, EventStore.ClientAPI.SystemData.UserCredentials, System.Action(Of EventStore.ClientAPI.Transport.Http.HttpResponse), System.Action(Of System.Exception))
+  nameWithType: IHttpClient.Post(String, String, String, UserCredentials, Action<HttpResponse>, Action<Exception>)
+  nameWithType.vb: IHttpClient.Post(String, String, String, UserCredentials, Action(Of HttpResponse), Action(Of Exception))
+- uid: EventStore.ClientAPI.Transport.Http.IHttpClient.Post*
+  name: Post
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.IHttpClient.html#EventStore_ClientAPI_Transport_Http_IHttpClient_Post_
+  commentId: Overload:EventStore.ClientAPI.Transport.Http.IHttpClient.Post
+  isSpec: "True"
+  fullName: EventStore.ClientAPI.Transport.Http.IHttpClient.Post
+  nameWithType: IHttpClient.Post
+- uid: EventStore.ClientAPI.Transport.Http.IHttpClient.Put(System.String,System.String,System.String,EventStore.ClientAPI.SystemData.UserCredentials,System.Action{EventStore.ClientAPI.Transport.Http.HttpResponse},System.Action{System.Exception})
+  name: Put(String, String, String, UserCredentials, Action<HttpResponse>, Action<Exception>)
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.IHttpClient.html#EventStore_ClientAPI_Transport_Http_IHttpClient_Put_System_String_System_String_System_String_EventStore_ClientAPI_SystemData_UserCredentials_System_Action_EventStore_ClientAPI_Transport_Http_HttpResponse__System_Action_System_Exception__
+  commentId: M:EventStore.ClientAPI.Transport.Http.IHttpClient.Put(System.String,System.String,System.String,EventStore.ClientAPI.SystemData.UserCredentials,System.Action{EventStore.ClientAPI.Transport.Http.HttpResponse},System.Action{System.Exception})
+  name.vb: Put(String, String, String, UserCredentials, Action(Of HttpResponse), Action(Of Exception))
+  fullName: EventStore.ClientAPI.Transport.Http.IHttpClient.Put(System.String, System.String, System.String, EventStore.ClientAPI.SystemData.UserCredentials, System.Action<EventStore.ClientAPI.Transport.Http.HttpResponse>, System.Action<System.Exception>)
+  fullName.vb: EventStore.ClientAPI.Transport.Http.IHttpClient.Put(System.String, System.String, System.String, EventStore.ClientAPI.SystemData.UserCredentials, System.Action(Of EventStore.ClientAPI.Transport.Http.HttpResponse), System.Action(Of System.Exception))
+  nameWithType: IHttpClient.Put(String, String, String, UserCredentials, Action<HttpResponse>, Action<Exception>)
+  nameWithType.vb: IHttpClient.Put(String, String, String, UserCredentials, Action(Of HttpResponse), Action(Of Exception))
+- uid: EventStore.ClientAPI.Transport.Http.IHttpClient.Put*
+  name: Put
+  href: dotnet-api/code/EventStore.ClientAPI.Transport.Http.IHttpClient.html#EventStore_ClientAPI_Transport_Http_IHttpClient_Put_
+  commentId: Overload:EventStore.ClientAPI.Transport.Http.IHttpClient.Put
+  isSpec: "True"
+  fullName: EventStore.ClientAPI.Transport.Http.IHttpClient.Put
+  nameWithType: IHttpClient.Put
 - uid: EventStore.ClientAPI.UserManagement
   name: EventStore.ClientAPI.UserManagement
   href: dotnet-api/code/EventStore.ClientAPI.UserManagement.html
@@ -7132,12 +7421,12 @@ references:
   commentId: T:EventStore.ClientAPI.UserManagement.UsersManager
   fullName: EventStore.ClientAPI.UserManagement.UsersManager
   nameWithType: UsersManager
-- uid: EventStore.ClientAPI.UserManagement.UsersManager.#ctor(EventStore.ClientAPI.ILogger,System.Net.IPEndPoint,System.TimeSpan)
-  name: UsersManager(ILogger, IPEndPoint, TimeSpan)
-  href: dotnet-api/code/EventStore.ClientAPI.UserManagement.UsersManager.html#EventStore_ClientAPI_UserManagement_UsersManager__ctor_EventStore_ClientAPI_ILogger_System_Net_IPEndPoint_System_TimeSpan_
-  commentId: M:EventStore.ClientAPI.UserManagement.UsersManager.#ctor(EventStore.ClientAPI.ILogger,System.Net.IPEndPoint,System.TimeSpan)
-  fullName: EventStore.ClientAPI.UserManagement.UsersManager.UsersManager(EventStore.ClientAPI.ILogger, System.Net.IPEndPoint, System.TimeSpan)
-  nameWithType: UsersManager.UsersManager(ILogger, IPEndPoint, TimeSpan)
+- uid: EventStore.ClientAPI.UserManagement.UsersManager.#ctor(EventStore.ClientAPI.ILogger,System.Net.EndPoint,System.TimeSpan,System.Boolean,EventStore.ClientAPI.Transport.Http.IHttpClient)
+  name: UsersManager(ILogger, EndPoint, TimeSpan, Boolean, IHttpClient)
+  href: dotnet-api/code/EventStore.ClientAPI.UserManagement.UsersManager.html#EventStore_ClientAPI_UserManagement_UsersManager__ctor_EventStore_ClientAPI_ILogger_System_Net_EndPoint_System_TimeSpan_System_Boolean_EventStore_ClientAPI_Transport_Http_IHttpClient_
+  commentId: M:EventStore.ClientAPI.UserManagement.UsersManager.#ctor(EventStore.ClientAPI.ILogger,System.Net.EndPoint,System.TimeSpan,System.Boolean,EventStore.ClientAPI.Transport.Http.IHttpClient)
+  fullName: EventStore.ClientAPI.UserManagement.UsersManager.UsersManager(EventStore.ClientAPI.ILogger, System.Net.EndPoint, System.TimeSpan, System.Boolean, EventStore.ClientAPI.Transport.Http.IHttpClient)
+  nameWithType: UsersManager.UsersManager(ILogger, EndPoint, TimeSpan, Boolean, IHttpClient)
 - uid: EventStore.ClientAPI.UserManagement.UsersManager.#ctor*
   name: UsersManager
   href: dotnet-api/code/EventStore.ClientAPI.UserManagement.UsersManager.html#EventStore_ClientAPI_UserManagement_UsersManager__ctor_

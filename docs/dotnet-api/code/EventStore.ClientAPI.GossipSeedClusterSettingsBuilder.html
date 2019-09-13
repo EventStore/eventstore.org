@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GossipSeedClusterSettingsBuilder
    | Event Store ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="generator" content="docfx 2.45.1.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -200,7 +200,7 @@ using gossip seeds.</p>
   
   <a id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_PreferRandomNode_" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.PreferRandomNode*"></a>
   <h4 id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_PreferRandomNode" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.PreferRandomNode">PreferRandomNode()</h4>
-  <div class="markdown level1 summary"><p>Whether to randomly choose a node that&apos;s alive from the known nodes. </p>
+  <div class="markdown level1 summary"><p>Whether to randomly choose a node that&apos;s alive from the known nodes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   
@@ -229,7 +229,7 @@ using gossip seeds.</p>
   
   <a id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_PreferSlaveNode_" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.PreferSlaveNode*"></a>
   <h4 id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_PreferSlaveNode" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.PreferSlaveNode">PreferSlaveNode()</h4>
-  <div class="markdown level1 summary"><p>Whether to prioritize choosing a slave node that&apos;s alive from the known nodes. </p>
+  <div class="markdown level1 summary"><p>Whether to prioritize choosing a slave node that&apos;s alive from the known nodes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   
@@ -278,6 +278,75 @@ using gossip seeds.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.ClientAPI.GossipSeed.html">GossipSeed</a>[]</td>
+        <td><span class="parametername">gossipSeeds</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.html">GossipSeedClusterSettingsBuilder</a></td>
+        <td><p>A <a class="xref" href="EventStore.ClientAPI.ClusterSettingsBuilder.html">ClusterSettingsBuilder</a> for further configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>If no gossip seeds are specified.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetGossipSeedEndPoints_" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints*"></a>
+  <h4 id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetGossipSeedEndPoints_System_Boolean_System_Net_IPEndPoint___" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints(System.Boolean,System.Net.IPEndPoint[])">SetGossipSeedEndPoints(Boolean, IPEndPoint[])</h4>
+  <div class="markdown level1 summary"><p>Sets gossip seed endpoints for the client.
+TODO: This was a note.
+This should be the external HTTP endpoint of the server, as it is required
+for the client to exchange gossip with the server. The standard port is 2113.</p>
+<p>If the server requires a specific Host header to be sent as part of the gossip
+request, use the overload of this method taking <a class="xref" href="EventStore.ClientAPI.GossipSeed.html">GossipSeed</a> instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GossipSeedClusterSettingsBuilder SetGossipSeedEndPoints(bool tlsTerminatedEndpoints, params IPEndPoint[] gossipSeeds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">tlsTerminatedEndpoints</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.IPEndPoint</span>[]</td>
         <td><span class="parametername">gossipSeeds</span></td>
       </tr>
     </tbody>

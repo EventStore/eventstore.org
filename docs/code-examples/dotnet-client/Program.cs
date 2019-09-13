@@ -190,7 +190,7 @@ namespace DocsExample
                     }).outputState()";
 
             projection.UpdateQueryAsync("xbox-one-s-counter", countItemsProjectionUpdate, adminCredentials).Wait();
-            projection.ResetAsynsc("xbox-one-s-counter", countItemsProjectionUpdate, adminCredentials).Wait();
+            projection.ResetAsync("xbox-one-s-counter", adminCredentials).Wait();
 
             var readEvents = conn.ReadStreamEventsForwardAsync("$projections-xbox-one-s-counter-result", 0, 10, true)
                 .Result;

@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class UsersManager
    | Event Store ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="generator" content="docfx 2.45.1.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -143,7 +143,7 @@ with Event Store over the RESTful API. All methods in this class are asynchronou
   
   
   <a id="EventStore_ClientAPI_UserManagement_UsersManager__ctor_" data-uid="EventStore.ClientAPI.UserManagement.UsersManager.#ctor*"></a>
-  <h4 id="EventStore_ClientAPI_UserManagement_UsersManager__ctor_EventStore_ClientAPI_ILogger_System_Net_IPEndPoint_System_TimeSpan_" data-uid="EventStore.ClientAPI.UserManagement.UsersManager.#ctor(EventStore.ClientAPI.ILogger,System.Net.IPEndPoint,System.TimeSpan)">UsersManager(ILogger, IPEndPoint, TimeSpan)</h4>
+  <h4 id="EventStore_ClientAPI_UserManagement_UsersManager__ctor_EventStore_ClientAPI_ILogger_System_Net_EndPoint_System_TimeSpan_System_Boolean_EventStore_ClientAPI_Transport_Http_IHttpClient_" data-uid="EventStore.ClientAPI.UserManagement.UsersManager.#ctor(EventStore.ClientAPI.ILogger,System.Net.EndPoint,System.TimeSpan,System.Boolean,EventStore.ClientAPI.Transport.Http.IHttpClient)">UsersManager(ILogger, EndPoint, TimeSpan, Boolean, IHttpClient)</h4>
   <div class="markdown level1 summary"><p>Creates a new instance of <a class="xref" href="EventStore.ClientAPI.UserManagement.UsersManager.html">UsersManager</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -151,7 +151,7 @@ with Event Store over the RESTful API. All methods in this class are asynchronou
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UsersManager(ILogger log, IPEndPoint httpEndPoint, TimeSpan operationTimeout)</code></pre>
+    <pre><code class="lang-csharp hljs">public UsersManager(ILogger log, EndPoint httpEndPoint, TimeSpan operationTimeout, bool tlsTerminatedEndpoint = false, IHttpClient client = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -167,12 +167,20 @@ with Event Store over the RESTful API. All methods in this class are asynchronou
         <td><span class="parametername">log</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Net.IPEndPoint</span></td>
+        <td><span class="xref">System.Net.EndPoint</span></td>
         <td><span class="parametername">httpEndPoint</span></td>
       </tr>
       <tr>
         <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">operationTimeout</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">tlsTerminatedEndpoint</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.Transport.Http.IHttpClient.html">IHttpClient</a></td>
+        <td><span class="parametername">client</span></td>
       </tr>
     </tbody>
   </table>

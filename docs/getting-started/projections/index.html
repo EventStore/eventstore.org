@@ -12,7 +12,7 @@
     <title>Step 3 - Projections | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Step 3 - Projections | Event Store ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="generator" content="docfx 2.45.1.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -381,7 +381,7 @@ Console.WriteLine(projectionState.Result);
 <pre><code class="lang-bash" name="getting-started-projections-reset-request">curl -i -X POST &quot;http://localhost:2113/projection/xbox-one-s-counter/command/reset&quot; -H &quot;accept:application/json&quot; -H &quot;Content-Length:0&quot; -u admin:changeit
 </code></pre></section>
 <section id="tabpanel_-zRZHSVchy-6_tabid-reset-dotnet" role="tabpanel" data-tab="tabid-reset-dotnet" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-csharp" name="getting-started-projections-reset">projection.ResetAsynsc(&quot;xbox-one-s-counter&quot;, countItemsProjectionUpdate, adminCredentials).Wait();
+<pre><code class="lang-csharp" name="getting-started-projections-reset">projection.ResetAsync(&quot;xbox-one-s-counter&quot;, adminCredentials).Wait();
 </code></pre></section>
 <section id="tabpanel_-zRZHSVchy-6_tabid-11" role="tabpanel" data-tab="tabid-11" aria-hidden="true" hidden="hidden">
 <pre><code class="lang-json" name="getting-started-projections-reset-response">{

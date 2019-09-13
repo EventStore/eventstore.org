@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ConnectionSettingsBuilder
    | Event Store ">
-    <meta name="generator" content="docfx 2.44.0.0">
+    <meta name="generator" content="docfx 2.45.1.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -555,7 +555,7 @@
   
   <a id="EventStore_ClientAPI_ConnectionSettingsBuilder_PreferRandomNode_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.PreferRandomNode*"></a>
   <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_PreferRandomNode" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.PreferRandomNode">PreferRandomNode()</h4>
-  <div class="markdown level1 summary"><p>Whether to randomly choose a node that&apos;s alive from the known nodes. </p>
+  <div class="markdown level1 summary"><p>Whether to randomly choose a node that&apos;s alive from the known nodes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   
@@ -584,7 +584,7 @@
   
   <a id="EventStore_ClientAPI_ConnectionSettingsBuilder_PreferSlaveNode_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.PreferSlaveNode*"></a>
   <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_PreferSlaveNode" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.PreferSlaveNode">PreferSlaveNode()</h4>
-  <div class="markdown level1 summary"><p>Whether to prioritize choosing a slave node that&apos;s alive from the known nodes. </p>
+  <div class="markdown level1 summary"><p>Whether to prioritize choosing a slave node that&apos;s alive from the known nodes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   
@@ -788,6 +788,77 @@ If user credentials are not given for an operation, these credentials will be us
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.ClientAPI.GossipSeed.html">GossipSeed</a>[]</td>
+        <td><span class="parametername">gossipSeeds</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.ConnectionSettingsBuilder.html">ConnectionSettingsBuilder</a></td>
+        <td><p>A <a class="xref" href="EventStore.ClientAPI.ClusterSettingsBuilder.html">ClusterSettingsBuilder</a> for further configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>If no gossip seeds are specified.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetGossipSeedEndPoints_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetGossipSeedEndPoints*"></a>
+  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetGossipSeedEndPoints_System_Boolean_System_Net_IPEndPoint___" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetGossipSeedEndPoints(System.Boolean,System.Net.IPEndPoint[])">SetGossipSeedEndPoints(Boolean, IPEndPoint[])</h4>
+  <div class="markdown level1 summary"><p>Sets gossip seed endpoints for the client.</p>
+<div class="NOTE"><h5>note</h5><p>
+This should be the external HTTP endpoint of the server, as it is required
+for the client to exchange gossip with the server. The standard port is 2113.
+</p></div>
+
+<p>If the server requires a specific Host header to be sent as part of the gossip
+request, use the overload of this method taking <a class="xref" href="EventStore.ClientAPI.GossipSeed.html">GossipSeed</a> instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConnectionSettingsBuilder SetGossipSeedEndPoints(bool seedOverTls, params IPEndPoint[] gossipSeeds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">seedOverTls</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Net.IPEndPoint</span>[]</td>
         <td><span class="parametername">gossipSeeds</span></td>
       </tr>
     </tbody>
@@ -1266,6 +1337,48 @@ request, use the overload of this method taking <a class="xref" href="EventStore
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public ConnectionSettingsBuilder UseConsoleLogger()</code></pre>
   </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.ConnectionSettingsBuilder.html">ConnectionSettingsBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_ConnectionSettingsBuilder_UseCustomHttpClient_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.UseCustomHttpClient*"></a>
+  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_UseCustomHttpClient_EventStore_ClientAPI_Transport_Http_IHttpClient_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.UseCustomHttpClient(EventStore.ClientAPI.Transport.Http.IHttpClient)">UseCustomHttpClient(IHttpClient)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConnectionSettingsBuilder UseCustomHttpClient(IHttpClient client)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.Transport.Http.IHttpClient.html">IHttpClient</a></td>
+        <td><span class="parametername">client</span></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
