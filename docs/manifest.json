@@ -2987,438 +2987,6 @@
       "source_relative_path": "http-api/swagger.json",
       "output": {
         ".html": {
-          "relative_path": "http-api/swagger/Page forward through events.html",
-          "hash": "Vz+1cozA9Ltekp6j8vAyxQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Read stream metadata.html",
-          "hash": "Yy1swJLf71vvRKSo9pMYbA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Update stream metadata.html",
-          "hash": "Cz9TM7tydgE8hXxXK4JcWQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Get all events.html",
-          "hash": "I4Q6UldaI1iU++/MXjnCvA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Get all subscriptions.html",
-          "hash": "OpMBP82doha274v4FbyPGg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Get subscription stream information.html",
-          "hash": "g441iu1PEzGcvHqMftelGw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Get subscription information.html",
-          "hash": "oLycJf+KXaFULp8D7JJrLQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Get a stream.html",
-          "hash": "pt/Rn0ZWqEUOaud2iEmVCA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Update subscription.html",
-          "hash": "SZomnZXD2PmeXMOymmqtbg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Create subscription.html",
-          "hash": "VcYeqMc9kZ8clYX1HPXGrw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Delete subscription.html",
-          "hash": "7avudWgaisKna3aVZ1THGA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Get {n} subscription events.html",
-          "hash": "yiDcZ95y7Uy91NNRSPapAg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Acknowledge a single message.html",
-          "hash": "H5rEme0sL47NHnwONWUzWA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Acknowledge multiple messages.html",
-          "hash": "8f63eUbAhAt0sEOn5H4AJw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Don't acknowledge a single message.html",
-          "hash": "/wFTwq6NOVA0x/OQ7KswaA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Don't acknowledge multiple messages.html",
-          "hash": "F8cR+FHKvyaV442NQOwlFg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Replay previously parked messages.html",
-          "hash": "oLZwSVGgTVfV+SfLGIW1yw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Get all users.html",
-          "hash": "NGSh7uO44ls+HsDWV7dOCw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Create a user.html",
-          "hash": "CuigkTDt6WUcL03W+/Dryg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Get a user.html",
-          "hash": "ufyjuM9grmqy1kx1YvFF/w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Update a user.html",
-          "hash": "ytNiqWPMSUsyAm/GMp+3Ug=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Delete a user.html",
-          "hash": "QCkRLbl+ZIWbLBrj4ZTYyA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Enable a user.html",
-          "hash": "PshoEiw7MJflA9znpZk5Kg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Disable a user.html",
-          "hash": "Yk27FvEKUHLgm/eXuxfOsg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Reset password.html",
-          "hash": "ovxXDAT+sYSJsGrdcE7LRw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Change password.html",
-          "hash": "d/sZfGUjOW7/I6Uz5zHtAA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Get all projections.html",
-          "hash": "D7NFrd+tf8UDTxObsd3suw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Get all non-transient projections.html",
-          "hash": "WCsgSe/Fx80JvWrP1K2jSQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Get all queries.html",
-          "hash": "mQafO+EM/UrWa4yg3EGfdQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Create a onetime projection.html",
-          "hash": "qjk4iAZLqArkzL6oLod8rQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Get all continious projections.html",
-          "hash": "ydq6NLWa2Tv6AWyF8SGq5g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Create a continious projection.html",
-          "hash": "XfJRmWD16RSfS8EIzqjQjg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Get all stats.html",
-          "hash": "KSpeTQsOdoFD1dyuTv+RUw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Get specified stat.html",
-          "hash": "2sD8XyebZNVciAXLBOgORQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Return Gossip details.html",
-          "hash": "UotphXJdfkWC7xcyIXE/MA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
-          "relative_path": "http-api/swagger/Update Gossip details.html",
-          "hash": "hPdmbPzNy+FO1ofAN6CWag=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "RestApi",
-      "source_relative_path": "http-api/swagger.json",
-      "output": {
-        ".html": {
           "relative_path": "http-api/swagger.html",
           "hash": "xU3KOT7BwoQgcBCFSztzWQ=="
         }
@@ -3577,6 +3145,198 @@
         ".html": {
           "relative_path": "http-api/swagger/Page back through events.html",
           "hash": "sLa7foJDUDYXINF7QiSi4Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Page forward through events.html",
+          "hash": "Vz+1cozA9Ltekp6j8vAyxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Read stream metadata.html",
+          "hash": "Yy1swJLf71vvRKSo9pMYbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Update stream metadata.html",
+          "hash": "Cz9TM7tydgE8hXxXK4JcWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Get all events.html",
+          "hash": "I4Q6UldaI1iU++/MXjnCvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Get all subscriptions.html",
+          "hash": "OpMBP82doha274v4FbyPGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Get subscription stream information.html",
+          "hash": "g441iu1PEzGcvHqMftelGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Enable a user.html",
+          "hash": "PshoEiw7MJflA9znpZk5Kg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Disable a user.html",
+          "hash": "Yk27FvEKUHLgm/eXuxfOsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Reset password.html",
+          "hash": "ovxXDAT+sYSJsGrdcE7LRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Change password.html",
+          "hash": "d/sZfGUjOW7/I6Uz5zHtAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Get all projections.html",
+          "hash": "D7NFrd+tf8UDTxObsd3suw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Get all non-transient projections.html",
+          "hash": "WCsgSe/Fx80JvWrP1K2jSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Get all queries.html",
+          "hash": "mQafO+EM/UrWa4yg3EGfdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Create a onetime projection.html",
+          "hash": "qjk4iAZLqArkzL6oLod8rQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Get all continious projections.html",
+          "hash": "ydq6NLWa2Tv6AWyF8SGq5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Create a continious projection.html",
+          "hash": "XfJRmWD16RSfS8EIzqjQjg=="
         }
       },
       "is_incremental": false,
@@ -3769,6 +3529,246 @@
         ".html": {
           "relative_path": "http-api/swagger/Delete a projection.html",
           "hash": "tSeOt0fS/wWOmSM5w2WTZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Get all stats.html",
+          "hash": "KSpeTQsOdoFD1dyuTv+RUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Get specified stat.html",
+          "hash": "2sD8XyebZNVciAXLBOgORQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Return Gossip details.html",
+          "hash": "UotphXJdfkWC7xcyIXE/MA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Update Gossip details.html",
+          "hash": "hPdmbPzNy+FO1ofAN6CWag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Get subscription information.html",
+          "hash": "oLycJf+KXaFULp8D7JJrLQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Get a stream.html",
+          "hash": "pt/Rn0ZWqEUOaud2iEmVCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Update subscription.html",
+          "hash": "SZomnZXD2PmeXMOymmqtbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Create subscription.html",
+          "hash": "VcYeqMc9kZ8clYX1HPXGrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Delete subscription.html",
+          "hash": "7avudWgaisKna3aVZ1THGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Get {n} subscription events.html",
+          "hash": "yiDcZ95y7Uy91NNRSPapAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Acknowledge a single message.html",
+          "hash": "H5rEme0sL47NHnwONWUzWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Acknowledge multiple messages.html",
+          "hash": "8f63eUbAhAt0sEOn5H4AJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Don't acknowledge a single message.html",
+          "hash": "/wFTwq6NOVA0x/OQ7KswaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Don't acknowledge multiple messages.html",
+          "hash": "F8cR+FHKvyaV442NQOwlFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Replay previously parked messages.html",
+          "hash": "oLZwSVGgTVfV+SfLGIW1yw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Get all users.html",
+          "hash": "NGSh7uO44ls+HsDWV7dOCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Create a user.html",
+          "hash": "CuigkTDt6WUcL03W+/Dryg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Get a user.html",
+          "hash": "ufyjuM9grmqy1kx1YvFF/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Update a user.html",
+          "hash": "ytNiqWPMSUsyAm/GMp+3Ug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "RestApi",
+      "source_relative_path": "http-api/swagger.json",
+      "output": {
+        ".html": {
+          "relative_path": "http-api/swagger/Delete a user.html",
+          "hash": "QCkRLbl+ZIWbLBrj4ZTYyA=="
         }
       },
       "is_incremental": false,
@@ -4288,7 +4288,7 @@
       "output": {
         ".html": {
           "relative_path": "server/node-roles/index.html",
-          "hash": "mar1zlN46DCdMa0cvTNPFw=="
+          "hash": "Vy6PWRlGleprWvlIfYEmbw=="
         }
       },
       "is_incremental": false,
@@ -4417,6 +4417,13 @@
         "full_build_reason_code": "ForceRebuild"
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -4434,13 +4441,6 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 111,
-          "skipped_file_count": 0
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "RestApiDocumentProcessor": {
