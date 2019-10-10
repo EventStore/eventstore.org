@@ -5,7 +5,7 @@ author: Arwin Neil Baichoo
 ---
 # Event Store packages for Amazon Linux 2
 
-Event Store Commercial package for Amazon Linux 2 AMI is now available!
+An Event Store Commercial package for Amazon Linux 2 is now available!
 
 #### Changes moving from Amazon Linux 1 to Amazon Linux 2 Packages
 ---
