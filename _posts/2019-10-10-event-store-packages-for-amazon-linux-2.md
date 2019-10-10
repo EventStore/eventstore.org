@@ -13,7 +13,7 @@ Event Store Commercial package for Amazon Linux 2 AMI is now available!
 #### Phasing out support for AWS Auto Scaling groups 
 Running Event Store in AWS EC2 Auto Scaling groups (AGS) is no longer a recommended practice because AGS can end up simultaneously or near simultaneously deleting all instances
 
-To learn more about running Event Store clusters, click [here](https://eventstore.org/docs/server/cluster-with-manager-nodes/index.html).
+To learn more about running Event Store clusters, [read this guide](https://eventstore.org/docs/server/cluster-with-manager-nodes/index.html).
 
 #### Systemd instead of System V init system
 As of Amazon Linux 2, [System V init has been replaced with systemd service and systems manager](https://aws.amazon.com/amazon-linux-2/release-notes/). Event Store is now started using `systemctl` instead of `initctl` 
