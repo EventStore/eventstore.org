@@ -11,7 +11,7 @@ Event Store Commercial package for Amazon Linux 2 AMI is now available!
 ---
 
 #### Phasing out support for AWS Auto Scaling groups 
-Running Event Store as in AWS EC2 Auto Scaling groups is no more a recommended practice because AGS can end up simultaneously or near simultaneously deleting all instances
+Running Event Store in AWS EC2 Auto Scaling groups (AGS) is no longer a recommended practice because AGS can end up simultaneously or near simultaneously deleting all instances
 
 To learn more about running Event Store clusters, click [here](https://eventstore.org/docs/server/cluster-with-manager-nodes/index.html).
 
