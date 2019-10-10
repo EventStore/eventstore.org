@@ -29,7 +29,7 @@ systemctl start eventstore
 ```
 
 #### Event Store not exposed on external IP by default
-Event Store is does not run on external IP by default anymore. Additional configuration is needed to access Event Store on public IP & DNS after opening ports EC2 Security Groups as follows :
+Event Store does not run on an external IP by default anymore. Additional configuration is needed to access Event Store on public IP & DNS after opening ports in EC2 Security Groups as follows :
 
 ```
 IntIp: <Private IP>
