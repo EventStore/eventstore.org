@@ -44,7 +44,7 @@ AddInterfacePrefixes: false
 DiscoverViaDns: false
 ```
 
-Private IP can be fetched using an [Instance Metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) query for scripting this process.
+A Private IP can be fetched using an [Instance Metadata](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) query for scripting this process.
 
 ```
 PRIVATE_IP=`curl --silent --location http://169.254.169.254/latest/meta-data/local-ipv4`
