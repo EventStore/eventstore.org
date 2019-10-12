@@ -210,6 +210,30 @@ conn.SetStreamMetadataAsync(streamName, ExpectedVersion.Any, metadata, adminCred
     &quot;$mw&quot;: &quot;$admins&quot;
   }
 }
+</code></pre><p>You can rewrite these to the <code>$settings</code> stream with the following cURL command:</p>
+<pre><code class="lang-bash" name="default-settings-request">curl -i &quot;http://127.0.0.1:2113/streams/%24settings&quot; \
+    --user admin:changeit \
+    -H &quot;Content-Type: application/vnd.eventstore.events+json&quot; \
+    -d $&#39;[{
+        &quot;eventId&quot;: &quot;7c314750-05e1-439f-b2eb-f5b0e019be72&quot;,
+        &quot;eventType&quot;: &quot;update-default-acl&quot;,
+        &quot;data&quot;: {
+            &quot;$userStreamAcl&quot; : {
+                &quot;$r&quot;  : [&quot;$admin&quot;, &quot;$ops&quot;, &quot;service-a&quot;, &quot;service-b&quot;],
+                &quot;$w&quot;  : [&quot;$admin&quot;, &quot;$ops&quot;, &quot;service-a&quot;, &quot;service-b&quot;],
+                &quot;$d&quot;  : [&quot;$admin&quot;, &quot;$ops&quot;],
+                &quot;$mr&quot; : [&quot;$admin&quot;, &quot;$ops&quot;],
+                &quot;$mw&quot; : [&quot;$admin&quot;, &quot;$ops&quot;]
+            },
+            &quot;$systemStreamAcl&quot; : {
+                &quot;$r&quot;  : &quot;$admins&quot;,
+                &quot;$w&quot;  : &quot;$admins&quot;,
+                &quot;$d&quot;  : &quot;$admins&quot;,
+                &quot;$mr&quot; : &quot;$admins&quot;,
+                &quot;$mw&quot; : &quot;$admins&quot;
+            }
+        }
+    }]&#39;
 </code></pre><p>The <code>$userStreamAcl</code> controls the default ACL for user streams, while all system streams use the <code>$systemStreamAcl</code> as the default.</p>
 <div class="NOTE"><h5>Note</h5><p>The <code>$w</code> in <code>$userStreamAcl</code> also applies to the ability to create a stream. Members of <code>$admins</code> always have access to everything, you cannot remove this permission.</p>
 </div>
@@ -251,7 +275,7 @@ conn.SetStreamMetadataAsync(streamName, ExpectedVersion.Any, metadata, adminCred
     {
         &quot;eventId&quot;: &quot;7c314750-05e1-439f-b2eb-f5b0e019be72&quot;,
         &quot;eventType&quot;: &quot;update-default-acl&quot;,
-        &quot;metadata&quot;: {
+        &quot;data&quot;: {
             &quot;$userStreamAcl&quot;: {
                 &quot;$r&quot;: &quot;$all&quot;,
                 &quot;$w&quot;: &quot;ouro&quot;,

@@ -96,7 +96,7 @@
 <h1 id="metadata-and-reserved-names">Metadata and reserved names</h1>
 
 <h2 id="stream-metadata">Stream metadata</h2>
-<p>Every stream in Event Store has metadata associated with it. Event Store allows you to change some values in the metadata, and you can write your own data into stream metadata that you can refer to in your code.</p>
+<p>Every stream in Event Store has metadata stream associated with it, prefixed by <code>$$</code>, so the metadata stream from a stream called <code>foo</code> is <code>$$foo</code>. Event Store allows you to change some values in the metadata, and you can write your own data into stream metadata that you can refer to in your code.</p>
 <h3 id="reserved-names">Reserved names</h3>
 <p>All internal data used by Event Store is prefixed with a <code>$</code> character (for example <code>$maxCount</code> on a stream&#39;s metadata). Because of this you should not use names with a <code>$</code> prefix as event names, metadata keys, or stream names, except where detailed below.</p>
 <p>The supported internal settings are:</p>

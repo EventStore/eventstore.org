@@ -1,6 +1,399 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: 127.0.0.1:2113/HTTP API/5.0.0
+  name: HTTP API
+  href: http-api/swagger.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Abort projection
+  name: Abort projection
+  href: http-api/swagger/Abort%20projection.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Abort projection/operation
+  name: Abort projection
+  href: http-api/swagger/Abort%20projection.html#127_0_0_1_2113_HTTP_API_5_0_0_Abort_projection_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Acknowledge a single message
+  name: Acknowledge a single message
+  href: http-api/swagger/Acknowledge%20a%20single%20message.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Acknowledge a single message/operation
+  name: Acknowledge a single message
+  href: http-api/swagger/Acknowledge%20a%20single%20message.html#127_0_0_1_2113_HTTP_API_5_0_0_Acknowledge_a_single_message_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Acknowledge multiple messages
+  name: Acknowledge multiple messages
+  href: http-api/swagger/Acknowledge%20multiple%20messages.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Acknowledge multiple messages/operation
+  name: Acknowledge multiple messages
+  href: http-api/swagger/Acknowledge%20multiple%20messages.html#127_0_0_1_2113_HTTP_API_5_0_0_Acknowledge_multiple_messages_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Alternative stream URL
+  name: Alternative stream URL
+  href: http-api/swagger/Alternative%20stream%20URL.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Alternative stream URL/operation
+  name: Alternative stream URL
+  href: http-api/swagger/Alternative%20stream%20URL.html#127_0_0_1_2113_HTTP_API_5_0_0_Alternative_stream_URL_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Change password
+  name: Change password
+  href: http-api/swagger/Change%20password.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Change password/operation
+  name: Change password
+  href: http-api/swagger/Change%20password.html#127_0_0_1_2113_HTTP_API_5_0_0_Change_password_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Create a continious projection
+  name: Create a continious projection
+  href: http-api/swagger/Create%20a%20continious%20projection.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Create a continious projection/operation
+  name: Create a continious projection
+  href: http-api/swagger/Create%20a%20continious%20projection.html#127_0_0_1_2113_HTTP_API_5_0_0_Create_a_continious_projection_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Create a onetime projection
+  name: Create a onetime projection
+  href: http-api/swagger/Create%20a%20onetime%20projection.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Create a onetime projection/operation
+  name: Create a onetime projection
+  href: http-api/swagger/Create%20a%20onetime%20projection.html#127_0_0_1_2113_HTTP_API_5_0_0_Create_a_onetime_projection_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Create a transient projection
+  name: Create a transient projection
+  href: http-api/swagger/Create%20a%20transient%20projection.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Create a transient projection/operation
+  name: Create a transient projection
+  href: http-api/swagger/Create%20a%20transient%20projection.html#127_0_0_1_2113_HTTP_API_5_0_0_Create_a_transient_projection_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Create a user
+  name: Create a user
+  href: http-api/swagger/Create%20a%20user.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Create a user/operation
+  name: Create a user
+  href: http-api/swagger/Create%20a%20user.html#127_0_0_1_2113_HTTP_API_5_0_0_Create_a_user_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Create subscription
+  name: Create subscription
+  href: http-api/swagger/Create%20subscription.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Create subscription/operation
+  name: Create subscription
+  href: http-api/swagger/Create%20subscription.html#127_0_0_1_2113_HTTP_API_5_0_0_Create_subscription_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Delete a projection
+  name: Delete a projection
+  href: http-api/swagger/Delete%20a%20projection.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Delete a projection/operation
+  name: Delete a projection
+  href: http-api/swagger/Delete%20a%20projection.html#127_0_0_1_2113_HTTP_API_5_0_0_Delete_a_projection_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Delete a stream
+  name: Delete a stream
+  href: http-api/swagger/Delete%20a%20stream.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Delete a stream/operation
+  name: Delete a stream
+  href: http-api/swagger/Delete%20a%20stream.html#127_0_0_1_2113_HTTP_API_5_0_0_Delete_a_stream_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Delete a user
+  name: Delete a user
+  href: http-api/swagger/Delete%20a%20user.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Delete a user/operation
+  name: Delete a user
+  href: http-api/swagger/Delete%20a%20user.html#127_0_0_1_2113_HTTP_API_5_0_0_Delete_a_user_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Delete subscription
+  name: Delete subscription
+  href: http-api/swagger/Delete%20subscription.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Delete subscription/operation
+  name: Delete subscription
+  href: http-api/swagger/Delete%20subscription.html#127_0_0_1_2113_HTTP_API_5_0_0_Delete_subscription_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Disable a user
+  name: Disable a user
+  href: http-api/swagger/Disable%20a%20user.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Disable a user/operation
+  name: Disable a user
+  href: http-api/swagger/Disable%20a%20user.html#127_0_0_1_2113_HTTP_API_5_0_0_Disable_a_user_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Disable projection
+  name: Disable projection
+  href: http-api/swagger/Disable%20projection.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Disable projection/operation
+  name: Disable projection
+  href: http-api/swagger/Disable%20projection.html#127_0_0_1_2113_HTTP_API_5_0_0_Disable_projection_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Don't acknowledge a single message
+  name: Don't acknowledge a single message
+  href: http-api/swagger/Don%27t%20acknowledge%20a%20single%20message.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Don't acknowledge a single message/operation
+  name: Don't acknowledge a single message
+  href: http-api/swagger/Don%27t%20acknowledge%20a%20single%20message.html#127_0_0_1_2113_HTTP_API_5_0_0_Don_t_acknowledge_a_single_message_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Don't acknowledge multiple messages
+  name: Don't acknowledge multiple messages
+  href: http-api/swagger/Don%27t%20acknowledge%20multiple%20messages.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Don't acknowledge multiple messages/operation
+  name: Don't acknowledge multiple messages
+  href: http-api/swagger/Don%27t%20acknowledge%20multiple%20messages.html#127_0_0_1_2113_HTTP_API_5_0_0_Don_t_acknowledge_multiple_messages_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Enable a user
+  name: Enable a user
+  href: http-api/swagger/Enable%20a%20user.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Enable a user/operation
+  name: Enable a user
+  href: http-api/swagger/Enable%20a%20user.html#127_0_0_1_2113_HTTP_API_5_0_0_Enable_a_user_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Enable projection
+  name: Enable projection
+  href: http-api/swagger/Enable%20projection.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Enable projection/operation
+  name: Enable projection
+  href: http-api/swagger/Enable%20projection.html#127_0_0_1_2113_HTTP_API_5_0_0_Enable_projection_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get {n} events
+  name: Get {n} events
+  href: http-api/swagger/Get%20%7Bn%7D%20events.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get {n} events/operation
+  name: Get {n} events
+  href: http-api/swagger/Get%20%7Bn%7D%20events.html#127_0_0_1_2113_HTTP_API_5_0_0_Get__n__events_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get {n} subscription events
+  name: Get {n} subscription events
+  href: http-api/swagger/Get%20%7Bn%7D%20subscription%20events.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get {n} subscription events/operation
+  name: Get {n} subscription events
+  href: http-api/swagger/Get%20%7Bn%7D%20subscription%20events.html#127_0_0_1_2113_HTTP_API_5_0_0_Get__n__subscription_events_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get a projection
+  name: Get a projection
+  href: http-api/swagger/Get%20a%20projection.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get a projection/operation
+  name: Get a projection
+  href: http-api/swagger/Get%20a%20projection.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_a_projection_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get a stream
+  name: Get a stream
+  href: http-api/swagger/Get%20a%20stream.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get a stream/operation
+  name: Get a stream
+  href: http-api/swagger/Get%20a%20stream.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_a_stream_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get a user
+  name: Get a user
+  href: http-api/swagger/Get%20a%20user.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get a user/operation
+  name: Get a user
+  href: http-api/swagger/Get%20a%20user.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_a_user_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get all continious projections
+  name: Get all continious projections
+  href: http-api/swagger/Get%20all%20continious%20projections.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get all continious projections/operation
+  name: Get all continious projections
+  href: http-api/swagger/Get%20all%20continious%20projections.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_all_continious_projections_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get all events
+  name: Get all events
+  href: http-api/swagger/Get%20all%20events.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get all events/operation
+  name: Get all events
+  href: http-api/swagger/Get%20all%20events.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_all_events_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get all non-transient projections
+  name: Get all non-transient projections
+  href: http-api/swagger/Get%20all%20non-transient%20projections.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get all non-transient projections/operation
+  name: Get all non-transient projections
+  href: http-api/swagger/Get%20all%20non-transient%20projections.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_all_non_transient_projections_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get all projections
+  name: Get all projections
+  href: http-api/swagger/Get%20all%20projections.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get all projections/operation
+  name: Get all projections
+  href: http-api/swagger/Get%20all%20projections.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_all_projections_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get all queries
+  name: Get all queries
+  href: http-api/swagger/Get%20all%20queries.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get all queries/operation
+  name: Get all queries
+  href: http-api/swagger/Get%20all%20queries.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_all_queries_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get all stats
+  name: Get all stats
+  href: http-api/swagger/Get%20all%20stats.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get all stats/operation
+  name: Get all stats
+  href: http-api/swagger/Get%20all%20stats.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_all_stats_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get all subscriptions
+  name: Get all subscriptions
+  href: http-api/swagger/Get%20all%20subscriptions.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get all subscriptions/operation
+  name: Get all subscriptions
+  href: http-api/swagger/Get%20all%20subscriptions.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_all_subscriptions_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get all transient projections
+  name: Get all transient projections
+  href: http-api/swagger/Get%20all%20transient%20projections.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get all transient projections/operation
+  name: Get all transient projections
+  href: http-api/swagger/Get%20all%20transient%20projections.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_all_transient_projections_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get all users
+  name: Get all users
+  href: http-api/swagger/Get%20all%20users.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get all users/operation
+  name: Get all users
+  href: http-api/swagger/Get%20all%20users.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_all_users_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get configuration for node
+  name: Get configuration for node
+  href: http-api/swagger/Get%20configuration%20for%20node.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get configuration for node/operation
+  name: Get configuration for node
+  href: http-api/swagger/Get%20configuration%20for%20node.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_configuration_for_node_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get info for node
+  name: Get info for node
+  href: http-api/swagger/Get%20info%20for%20node.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get info for node/operation
+  name: Get info for node
+  href: http-api/swagger/Get%20info%20for%20node.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_info_for_node_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get projection config
+  name: Get projection config
+  href: http-api/swagger/Get%20projection%20config.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get projection config/operation
+  name: Get projection config
+  href: http-api/swagger/Get%20projection%20config.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_projection_config_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get projection definition
+  name: Get projection definition
+  href: http-api/swagger/Get%20projection%20definition.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get projection definition/operation
+  name: Get projection definition
+  href: http-api/swagger/Get%20projection%20definition.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_projection_definition_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get projection statistics
+  name: Get projection statistics
+  href: http-api/swagger/Get%20projection%20statistics.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get projection statistics/operation
+  name: Get projection statistics
+  href: http-api/swagger/Get%20projection%20statistics.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_projection_statistics_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get result of projection
+  name: Get result of projection
+  href: http-api/swagger/Get%20result%20of%20projection.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get result of projection/operation
+  name: Get result of projection
+  href: http-api/swagger/Get%20result%20of%20projection.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_result_of_projection_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get specified stat
+  name: Get specified stat
+  href: http-api/swagger/Get%20specified%20stat.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get specified stat/operation
+  name: Get specified stat
+  href: http-api/swagger/Get%20specified%20stat.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_specified_stat_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get subscription information
+  name: Get subscription information
+  href: http-api/swagger/Get%20subscription%20information.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get subscription information/operation
+  name: Get subscription information
+  href: http-api/swagger/Get%20subscription%20information.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_subscription_information_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get subscription stream information
+  name: Get subscription stream information
+  href: http-api/swagger/Get%20subscription%20stream%20information.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get subscription stream information/operation
+  name: Get subscription stream information
+  href: http-api/swagger/Get%20subscription%20stream%20information.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_subscription_stream_information_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get the projection state
+  name: Get the projection state
+  href: http-api/swagger/Get%20the%20projection%20state.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Get the projection state/operation
+  name: Get the projection state
+  href: http-api/swagger/Get%20the%20projection%20state.html#127_0_0_1_2113_HTTP_API_5_0_0_Get_the_projection_state_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Merge Indexes
+  name: Merge Indexes
+  href: http-api/swagger/Merge%20Indexes.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Merge Indexes/operation
+  name: Merge Indexes
+  href: http-api/swagger/Merge%20Indexes.html#127_0_0_1_2113_HTTP_API_5_0_0_Merge_Indexes_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Page back through events
+  name: Page back through events
+  href: http-api/swagger/Page%20back%20through%20events.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Page back through events/operation
+  name: Page back through events
+  href: http-api/swagger/Page%20back%20through%20events.html#127_0_0_1_2113_HTTP_API_5_0_0_Page_back_through_events_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Page forward through events
+  name: Page forward through events
+  href: http-api/swagger/Page%20forward%20through%20events.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Page forward through events/operation
+  name: Page forward through events
+  href: http-api/swagger/Page%20forward%20through%20events.html#127_0_0_1_2113_HTTP_API_5_0_0_Page_forward_through_events_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Read a stream
+  name: Read a stream
+  href: http-api/swagger/Read%20a%20stream.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Read a stream/operation
+  name: Read a stream
+  href: http-api/swagger/Read%20a%20stream.html#127_0_0_1_2113_HTTP_API_5_0_0_Read_a_stream_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Read projection events based on a query
+  name: Read projection events based on a query
+  href: http-api/swagger/Read%20projection%20events%20based%20on%20a%20query.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Read projection events based on a query/operation
+  name: Read projection events based on a query
+  href: http-api/swagger/Read%20projection%20events%20based%20on%20a%20query.html#127_0_0_1_2113_HTTP_API_5_0_0_Read_projection_events_based_on_a_query_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Read stream event
+  name: Read stream event
+  href: http-api/swagger/Read%20stream%20event.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Read stream event/operation
+  name: Read stream event
+  href: http-api/swagger/Read%20stream%20event.html#127_0_0_1_2113_HTTP_API_5_0_0_Read_stream_event_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Read stream metadata
+  name: Read stream metadata
+  href: http-api/swagger/Read%20stream%20metadata.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Read stream metadata/operation
+  name: Read stream metadata
+  href: http-api/swagger/Read%20stream%20metadata.html#127_0_0_1_2113_HTTP_API_5_0_0_Read_stream_metadata_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Replay previously parked messages
+  name: Replay previously parked messages
+  href: http-api/swagger/Replay%20previously%20parked%20messages.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Replay previously parked messages/operation
+  name: Replay previously parked messages
+  href: http-api/swagger/Replay%20previously%20parked%20messages.html#127_0_0_1_2113_HTTP_API_5_0_0_Replay_previously_parked_messages_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Reset password
+  name: Reset password
+  href: http-api/swagger/Reset%20password.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Reset password/operation
+  name: Reset password
+  href: http-api/swagger/Reset%20password.html#127_0_0_1_2113_HTTP_API_5_0_0_Reset_password_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Reset projection
+  name: Reset projection
+  href: http-api/swagger/Reset%20projection.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Reset projection/operation
+  name: Reset projection
+  href: http-api/swagger/Reset%20projection.html#127_0_0_1_2113_HTTP_API_5_0_0_Reset_projection_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Return Gossip details
+  name: Return Gossip details
+  href: http-api/swagger/Return%20Gossip%20details.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Return Gossip details/operation
+  name: Return Gossip details
+  href: http-api/swagger/Return%20Gossip%20details.html#127_0_0_1_2113_HTTP_API_5_0_0_Return_Gossip_details_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Scavenge a node
+  name: Scavenge a node
+  href: http-api/swagger/Scavenge%20a%20node.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Scavenge a node/operation
+  name: Scavenge a node
+  href: http-api/swagger/Scavenge%20a%20node.html#127_0_0_1_2113_HTTP_API_5_0_0_Scavenge_a_node_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Shutdown a node
+  name: Shutdown a node
+  href: http-api/swagger/Shutdown%20a%20node.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Shutdown a node/operation
+  name: Shutdown a node
+  href: http-api/swagger/Shutdown%20a%20node.html#127_0_0_1_2113_HTTP_API_5_0_0_Shutdown_a_node_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Stop a scavenge
+  name: Stop a scavenge
+  href: http-api/swagger/Stop%20a%20scavenge.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Stop a scavenge/operation
+  name: Stop a scavenge
+  href: http-api/swagger/Stop%20a%20scavenge.html#127_0_0_1_2113_HTTP_API_5_0_0_Stop_a_scavenge_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Update a user
+  name: Update a user
+  href: http-api/swagger/Update%20a%20user.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Update a user/operation
+  name: Update a user
+  href: http-api/swagger/Update%20a%20user.html#127_0_0_1_2113_HTTP_API_5_0_0_Update_a_user_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Update Gossip details
+  name: Update Gossip details
+  href: http-api/swagger/Update%20Gossip%20details.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Update Gossip details/operation
+  name: Update Gossip details
+  href: http-api/swagger/Update%20Gossip%20details.html#127_0_0_1_2113_HTTP_API_5_0_0_Update_Gossip_details_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Update projection config
+  name: Update projection config
+  href: http-api/swagger/Update%20projection%20config.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Update projection config/operation
+  name: Update projection config
+  href: http-api/swagger/Update%20projection%20config.html#127_0_0_1_2113_HTTP_API_5_0_0_Update_projection_config_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Update projection definition
+  name: Update projection definition
+  href: http-api/swagger/Update%20projection%20definition.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Update projection definition/operation
+  name: Update projection definition
+  href: http-api/swagger/Update%20projection%20definition.html#127_0_0_1_2113_HTTP_API_5_0_0_Update_projection_definition_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Update stream metadata
+  name: Update stream metadata
+  href: http-api/swagger/Update%20stream%20metadata.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Update stream metadata/operation
+  name: Update stream metadata
+  href: http-api/swagger/Update%20stream%20metadata.html#127_0_0_1_2113_HTTP_API_5_0_0_Update_stream_metadata_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Update subscription
+  name: Update subscription
+  href: http-api/swagger/Update%20subscription.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Update subscription/operation
+  name: Update subscription
+  href: http-api/swagger/Update%20subscription.html#127_0_0_1_2113_HTTP_API_5_0_0_Update_subscription_operation
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Write to a stream
+  name: Write to a stream
+  href: http-api/swagger/Write%20to%20a%20stream.html
+- uid: 127.0.0.1:2113/HTTP API/5.0.0/Write to a stream/operation
+  name: Write to a stream
+  href: http-api/swagger/Write%20to%20a%20stream.html#127_0_0_1_2113_HTTP_API_5_0_0_Write_to_a_stream_operation
 - uid: EventStore.ClientAPI
   name: EventStore.ClientAPI
   href: dotnet-api/code/EventStore.ClientAPI.html
@@ -7601,396 +7994,3 @@ references:
   commentId: F:EventStore.ClientAPI.WriteResult.NextExpectedVersion
   fullName: EventStore.ClientAPI.WriteResult.NextExpectedVersion
   nameWithType: WriteResult.NextExpectedVersion
-- uid: eventstore.org/HTTP API/5.0.0
-  name: HTTP API
-  href: http-api/swagger.html
-- uid: eventstore.org/HTTP API/5.0.0/Abort projection
-  name: Abort projection
-  href: http-api/swagger/Abort%20projection.html
-- uid: eventstore.org/HTTP API/5.0.0/Abort projection/operation
-  name: Abort projection
-  href: http-api/swagger/Abort%20projection.html#eventstore_org_HTTP_API_5_0_0_Abort_projection_operation
-- uid: eventstore.org/HTTP API/5.0.0/Acknowledge a single message
-  name: Acknowledge a single message
-  href: http-api/swagger/Acknowledge%20a%20single%20message.html
-- uid: eventstore.org/HTTP API/5.0.0/Acknowledge a single message/operation
-  name: Acknowledge a single message
-  href: http-api/swagger/Acknowledge%20a%20single%20message.html#eventstore_org_HTTP_API_5_0_0_Acknowledge_a_single_message_operation
-- uid: eventstore.org/HTTP API/5.0.0/Acknowledge multiple messages
-  name: Acknowledge multiple messages
-  href: http-api/swagger/Acknowledge%20multiple%20messages.html
-- uid: eventstore.org/HTTP API/5.0.0/Acknowledge multiple messages/operation
-  name: Acknowledge multiple messages
-  href: http-api/swagger/Acknowledge%20multiple%20messages.html#eventstore_org_HTTP_API_5_0_0_Acknowledge_multiple_messages_operation
-- uid: eventstore.org/HTTP API/5.0.0/Alternative stream URL
-  name: Alternative stream URL
-  href: http-api/swagger/Alternative%20stream%20URL.html
-- uid: eventstore.org/HTTP API/5.0.0/Alternative stream URL/operation
-  name: Alternative stream URL
-  href: http-api/swagger/Alternative%20stream%20URL.html#eventstore_org_HTTP_API_5_0_0_Alternative_stream_URL_operation
-- uid: eventstore.org/HTTP API/5.0.0/Change password
-  name: Change password
-  href: http-api/swagger/Change%20password.html
-- uid: eventstore.org/HTTP API/5.0.0/Change password/operation
-  name: Change password
-  href: http-api/swagger/Change%20password.html#eventstore_org_HTTP_API_5_0_0_Change_password_operation
-- uid: eventstore.org/HTTP API/5.0.0/Create a continious projection
-  name: Create a continious projection
-  href: http-api/swagger/Create%20a%20continious%20projection.html
-- uid: eventstore.org/HTTP API/5.0.0/Create a continious projection/operation
-  name: Create a continious projection
-  href: http-api/swagger/Create%20a%20continious%20projection.html#eventstore_org_HTTP_API_5_0_0_Create_a_continious_projection_operation
-- uid: eventstore.org/HTTP API/5.0.0/Create a onetime projection
-  name: Create a onetime projection
-  href: http-api/swagger/Create%20a%20onetime%20projection.html
-- uid: eventstore.org/HTTP API/5.0.0/Create a onetime projection/operation
-  name: Create a onetime projection
-  href: http-api/swagger/Create%20a%20onetime%20projection.html#eventstore_org_HTTP_API_5_0_0_Create_a_onetime_projection_operation
-- uid: eventstore.org/HTTP API/5.0.0/Create a transient projection
-  name: Create a transient projection
-  href: http-api/swagger/Create%20a%20transient%20projection.html
-- uid: eventstore.org/HTTP API/5.0.0/Create a transient projection/operation
-  name: Create a transient projection
-  href: http-api/swagger/Create%20a%20transient%20projection.html#eventstore_org_HTTP_API_5_0_0_Create_a_transient_projection_operation
-- uid: eventstore.org/HTTP API/5.0.0/Create a user
-  name: Create a user
-  href: http-api/swagger/Create%20a%20user.html
-- uid: eventstore.org/HTTP API/5.0.0/Create a user/operation
-  name: Create a user
-  href: http-api/swagger/Create%20a%20user.html#eventstore_org_HTTP_API_5_0_0_Create_a_user_operation
-- uid: eventstore.org/HTTP API/5.0.0/Create subscription
-  name: Create subscription
-  href: http-api/swagger/Create%20subscription.html
-- uid: eventstore.org/HTTP API/5.0.0/Create subscription/operation
-  name: Create subscription
-  href: http-api/swagger/Create%20subscription.html#eventstore_org_HTTP_API_5_0_0_Create_subscription_operation
-- uid: eventstore.org/HTTP API/5.0.0/Delete a projection
-  name: Delete a projection
-  href: http-api/swagger/Delete%20a%20projection.html
-- uid: eventstore.org/HTTP API/5.0.0/Delete a projection/operation
-  name: Delete a projection
-  href: http-api/swagger/Delete%20a%20projection.html#eventstore_org_HTTP_API_5_0_0_Delete_a_projection_operation
-- uid: eventstore.org/HTTP API/5.0.0/Delete a stream
-  name: Delete a stream
-  href: http-api/swagger/Delete%20a%20stream.html
-- uid: eventstore.org/HTTP API/5.0.0/Delete a stream/operation
-  name: Delete a stream
-  href: http-api/swagger/Delete%20a%20stream.html#eventstore_org_HTTP_API_5_0_0_Delete_a_stream_operation
-- uid: eventstore.org/HTTP API/5.0.0/Delete a user
-  name: Delete a user
-  href: http-api/swagger/Delete%20a%20user.html
-- uid: eventstore.org/HTTP API/5.0.0/Delete a user/operation
-  name: Delete a user
-  href: http-api/swagger/Delete%20a%20user.html#eventstore_org_HTTP_API_5_0_0_Delete_a_user_operation
-- uid: eventstore.org/HTTP API/5.0.0/Delete subscription
-  name: Delete subscription
-  href: http-api/swagger/Delete%20subscription.html
-- uid: eventstore.org/HTTP API/5.0.0/Delete subscription/operation
-  name: Delete subscription
-  href: http-api/swagger/Delete%20subscription.html#eventstore_org_HTTP_API_5_0_0_Delete_subscription_operation
-- uid: eventstore.org/HTTP API/5.0.0/Disable a user
-  name: Disable a user
-  href: http-api/swagger/Disable%20a%20user.html
-- uid: eventstore.org/HTTP API/5.0.0/Disable a user/operation
-  name: Disable a user
-  href: http-api/swagger/Disable%20a%20user.html#eventstore_org_HTTP_API_5_0_0_Disable_a_user_operation
-- uid: eventstore.org/HTTP API/5.0.0/Disable projection
-  name: Disable projection
-  href: http-api/swagger/Disable%20projection.html
-- uid: eventstore.org/HTTP API/5.0.0/Disable projection/operation
-  name: Disable projection
-  href: http-api/swagger/Disable%20projection.html#eventstore_org_HTTP_API_5_0_0_Disable_projection_operation
-- uid: eventstore.org/HTTP API/5.0.0/Don't acknowledge a single message
-  name: Don't acknowledge a single message
-  href: http-api/swagger/Don%27t%20acknowledge%20a%20single%20message.html
-- uid: eventstore.org/HTTP API/5.0.0/Don't acknowledge a single message/operation
-  name: Don't acknowledge a single message
-  href: http-api/swagger/Don%27t%20acknowledge%20a%20single%20message.html#eventstore_org_HTTP_API_5_0_0_Don_t_acknowledge_a_single_message_operation
-- uid: eventstore.org/HTTP API/5.0.0/Don't acknowledge multiple messages
-  name: Don't acknowledge multiple messages
-  href: http-api/swagger/Don%27t%20acknowledge%20multiple%20messages.html
-- uid: eventstore.org/HTTP API/5.0.0/Don't acknowledge multiple messages/operation
-  name: Don't acknowledge multiple messages
-  href: http-api/swagger/Don%27t%20acknowledge%20multiple%20messages.html#eventstore_org_HTTP_API_5_0_0_Don_t_acknowledge_multiple_messages_operation
-- uid: eventstore.org/HTTP API/5.0.0/Enable a user
-  name: Enable a user
-  href: http-api/swagger/Enable%20a%20user.html
-- uid: eventstore.org/HTTP API/5.0.0/Enable a user/operation
-  name: Enable a user
-  href: http-api/swagger/Enable%20a%20user.html#eventstore_org_HTTP_API_5_0_0_Enable_a_user_operation
-- uid: eventstore.org/HTTP API/5.0.0/Enable projection
-  name: Enable projection
-  href: http-api/swagger/Enable%20projection.html
-- uid: eventstore.org/HTTP API/5.0.0/Enable projection/operation
-  name: Enable projection
-  href: http-api/swagger/Enable%20projection.html#eventstore_org_HTTP_API_5_0_0_Enable_projection_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get {n} events
-  name: Get {n} events
-  href: http-api/swagger/Get%20%7Bn%7D%20events.html
-- uid: eventstore.org/HTTP API/5.0.0/Get {n} events/operation
-  name: Get {n} events
-  href: http-api/swagger/Get%20%7Bn%7D%20events.html#eventstore_org_HTTP_API_5_0_0_Get__n__events_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get {n} subscription events
-  name: Get {n} subscription events
-  href: http-api/swagger/Get%20%7Bn%7D%20subscription%20events.html
-- uid: eventstore.org/HTTP API/5.0.0/Get {n} subscription events/operation
-  name: Get {n} subscription events
-  href: http-api/swagger/Get%20%7Bn%7D%20subscription%20events.html#eventstore_org_HTTP_API_5_0_0_Get__n__subscription_events_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get a projection
-  name: Get a projection
-  href: http-api/swagger/Get%20a%20projection.html
-- uid: eventstore.org/HTTP API/5.0.0/Get a projection/operation
-  name: Get a projection
-  href: http-api/swagger/Get%20a%20projection.html#eventstore_org_HTTP_API_5_0_0_Get_a_projection_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get a stream
-  name: Get a stream
-  href: http-api/swagger/Get%20a%20stream.html
-- uid: eventstore.org/HTTP API/5.0.0/Get a stream/operation
-  name: Get a stream
-  href: http-api/swagger/Get%20a%20stream.html#eventstore_org_HTTP_API_5_0_0_Get_a_stream_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get a user
-  name: Get a user
-  href: http-api/swagger/Get%20a%20user.html
-- uid: eventstore.org/HTTP API/5.0.0/Get a user/operation
-  name: Get a user
-  href: http-api/swagger/Get%20a%20user.html#eventstore_org_HTTP_API_5_0_0_Get_a_user_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get all continious projections
-  name: Get all continious projections
-  href: http-api/swagger/Get%20all%20continious%20projections.html
-- uid: eventstore.org/HTTP API/5.0.0/Get all continious projections/operation
-  name: Get all continious projections
-  href: http-api/swagger/Get%20all%20continious%20projections.html#eventstore_org_HTTP_API_5_0_0_Get_all_continious_projections_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get all events
-  name: Get all events
-  href: http-api/swagger/Get%20all%20events.html
-- uid: eventstore.org/HTTP API/5.0.0/Get all events/operation
-  name: Get all events
-  href: http-api/swagger/Get%20all%20events.html#eventstore_org_HTTP_API_5_0_0_Get_all_events_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get all non-transient projections
-  name: Get all non-transient projections
-  href: http-api/swagger/Get%20all%20non-transient%20projections.html
-- uid: eventstore.org/HTTP API/5.0.0/Get all non-transient projections/operation
-  name: Get all non-transient projections
-  href: http-api/swagger/Get%20all%20non-transient%20projections.html#eventstore_org_HTTP_API_5_0_0_Get_all_non_transient_projections_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get all projections
-  name: Get all projections
-  href: http-api/swagger/Get%20all%20projections.html
-- uid: eventstore.org/HTTP API/5.0.0/Get all projections/operation
-  name: Get all projections
-  href: http-api/swagger/Get%20all%20projections.html#eventstore_org_HTTP_API_5_0_0_Get_all_projections_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get all queries
-  name: Get all queries
-  href: http-api/swagger/Get%20all%20queries.html
-- uid: eventstore.org/HTTP API/5.0.0/Get all queries/operation
-  name: Get all queries
-  href: http-api/swagger/Get%20all%20queries.html#eventstore_org_HTTP_API_5_0_0_Get_all_queries_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get all stats
-  name: Get all stats
-  href: http-api/swagger/Get%20all%20stats.html
-- uid: eventstore.org/HTTP API/5.0.0/Get all stats/operation
-  name: Get all stats
-  href: http-api/swagger/Get%20all%20stats.html#eventstore_org_HTTP_API_5_0_0_Get_all_stats_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get all subscriptions
-  name: Get all subscriptions
-  href: http-api/swagger/Get%20all%20subscriptions.html
-- uid: eventstore.org/HTTP API/5.0.0/Get all subscriptions/operation
-  name: Get all subscriptions
-  href: http-api/swagger/Get%20all%20subscriptions.html#eventstore_org_HTTP_API_5_0_0_Get_all_subscriptions_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get all transient projections
-  name: Get all transient projections
-  href: http-api/swagger/Get%20all%20transient%20projections.html
-- uid: eventstore.org/HTTP API/5.0.0/Get all transient projections/operation
-  name: Get all transient projections
-  href: http-api/swagger/Get%20all%20transient%20projections.html#eventstore_org_HTTP_API_5_0_0_Get_all_transient_projections_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get all users
-  name: Get all users
-  href: http-api/swagger/Get%20all%20users.html
-- uid: eventstore.org/HTTP API/5.0.0/Get all users/operation
-  name: Get all users
-  href: http-api/swagger/Get%20all%20users.html#eventstore_org_HTTP_API_5_0_0_Get_all_users_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get configuration for node
-  name: Get configuration for node
-  href: http-api/swagger/Get%20configuration%20for%20node.html
-- uid: eventstore.org/HTTP API/5.0.0/Get configuration for node/operation
-  name: Get configuration for node
-  href: http-api/swagger/Get%20configuration%20for%20node.html#eventstore_org_HTTP_API_5_0_0_Get_configuration_for_node_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get info for node
-  name: Get info for node
-  href: http-api/swagger/Get%20info%20for%20node.html
-- uid: eventstore.org/HTTP API/5.0.0/Get info for node/operation
-  name: Get info for node
-  href: http-api/swagger/Get%20info%20for%20node.html#eventstore_org_HTTP_API_5_0_0_Get_info_for_node_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get projection config
-  name: Get projection config
-  href: http-api/swagger/Get%20projection%20config.html
-- uid: eventstore.org/HTTP API/5.0.0/Get projection config/operation
-  name: Get projection config
-  href: http-api/swagger/Get%20projection%20config.html#eventstore_org_HTTP_API_5_0_0_Get_projection_config_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get projection definition
-  name: Get projection definition
-  href: http-api/swagger/Get%20projection%20definition.html
-- uid: eventstore.org/HTTP API/5.0.0/Get projection definition/operation
-  name: Get projection definition
-  href: http-api/swagger/Get%20projection%20definition.html#eventstore_org_HTTP_API_5_0_0_Get_projection_definition_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get projection statistics
-  name: Get projection statistics
-  href: http-api/swagger/Get%20projection%20statistics.html
-- uid: eventstore.org/HTTP API/5.0.0/Get projection statistics/operation
-  name: Get projection statistics
-  href: http-api/swagger/Get%20projection%20statistics.html#eventstore_org_HTTP_API_5_0_0_Get_projection_statistics_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get result of projection
-  name: Get result of projection
-  href: http-api/swagger/Get%20result%20of%20projection.html
-- uid: eventstore.org/HTTP API/5.0.0/Get result of projection/operation
-  name: Get result of projection
-  href: http-api/swagger/Get%20result%20of%20projection.html#eventstore_org_HTTP_API_5_0_0_Get_result_of_projection_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get specified stat
-  name: Get specified stat
-  href: http-api/swagger/Get%20specified%20stat.html
-- uid: eventstore.org/HTTP API/5.0.0/Get specified stat/operation
-  name: Get specified stat
-  href: http-api/swagger/Get%20specified%20stat.html#eventstore_org_HTTP_API_5_0_0_Get_specified_stat_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get subscription information
-  name: Get subscription information
-  href: http-api/swagger/Get%20subscription%20information.html
-- uid: eventstore.org/HTTP API/5.0.0/Get subscription information/operation
-  name: Get subscription information
-  href: http-api/swagger/Get%20subscription%20information.html#eventstore_org_HTTP_API_5_0_0_Get_subscription_information_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get subscription stream information
-  name: Get subscription stream information
-  href: http-api/swagger/Get%20subscription%20stream%20information.html
-- uid: eventstore.org/HTTP API/5.0.0/Get subscription stream information/operation
-  name: Get subscription stream information
-  href: http-api/swagger/Get%20subscription%20stream%20information.html#eventstore_org_HTTP_API_5_0_0_Get_subscription_stream_information_operation
-- uid: eventstore.org/HTTP API/5.0.0/Get the projection state
-  name: Get the projection state
-  href: http-api/swagger/Get%20the%20projection%20state.html
-- uid: eventstore.org/HTTP API/5.0.0/Get the projection state/operation
-  name: Get the projection state
-  href: http-api/swagger/Get%20the%20projection%20state.html#eventstore_org_HTTP_API_5_0_0_Get_the_projection_state_operation
-- uid: eventstore.org/HTTP API/5.0.0/Merge Indexes
-  name: Merge Indexes
-  href: http-api/swagger/Merge%20Indexes.html
-- uid: eventstore.org/HTTP API/5.0.0/Merge Indexes/operation
-  name: Merge Indexes
-  href: http-api/swagger/Merge%20Indexes.html#eventstore_org_HTTP_API_5_0_0_Merge_Indexes_operation
-- uid: eventstore.org/HTTP API/5.0.0/Page back through events
-  name: Page back through events
-  href: http-api/swagger/Page%20back%20through%20events.html
-- uid: eventstore.org/HTTP API/5.0.0/Page back through events/operation
-  name: Page back through events
-  href: http-api/swagger/Page%20back%20through%20events.html#eventstore_org_HTTP_API_5_0_0_Page_back_through_events_operation
-- uid: eventstore.org/HTTP API/5.0.0/Page forward through events
-  name: Page forward through events
-  href: http-api/swagger/Page%20forward%20through%20events.html
-- uid: eventstore.org/HTTP API/5.0.0/Page forward through events/operation
-  name: Page forward through events
-  href: http-api/swagger/Page%20forward%20through%20events.html#eventstore_org_HTTP_API_5_0_0_Page_forward_through_events_operation
-- uid: eventstore.org/HTTP API/5.0.0/Read a stream
-  name: Read a stream
-  href: http-api/swagger/Read%20a%20stream.html
-- uid: eventstore.org/HTTP API/5.0.0/Read a stream/operation
-  name: Read a stream
-  href: http-api/swagger/Read%20a%20stream.html#eventstore_org_HTTP_API_5_0_0_Read_a_stream_operation
-- uid: eventstore.org/HTTP API/5.0.0/Read projection events based on a query
-  name: Read projection events based on a query
-  href: http-api/swagger/Read%20projection%20events%20based%20on%20a%20query.html
-- uid: eventstore.org/HTTP API/5.0.0/Read projection events based on a query/operation
-  name: Read projection events based on a query
-  href: http-api/swagger/Read%20projection%20events%20based%20on%20a%20query.html#eventstore_org_HTTP_API_5_0_0_Read_projection_events_based_on_a_query_operation
-- uid: eventstore.org/HTTP API/5.0.0/Read stream event
-  name: Read stream event
-  href: http-api/swagger/Read%20stream%20event.html
-- uid: eventstore.org/HTTP API/5.0.0/Read stream event/operation
-  name: Read stream event
-  href: http-api/swagger/Read%20stream%20event.html#eventstore_org_HTTP_API_5_0_0_Read_stream_event_operation
-- uid: eventstore.org/HTTP API/5.0.0/Read stream metadata
-  name: Read stream metadata
-  href: http-api/swagger/Read%20stream%20metadata.html
-- uid: eventstore.org/HTTP API/5.0.0/Read stream metadata/operation
-  name: Read stream metadata
-  href: http-api/swagger/Read%20stream%20metadata.html#eventstore_org_HTTP_API_5_0_0_Read_stream_metadata_operation
-- uid: eventstore.org/HTTP API/5.0.0/Replay previously parked messages
-  name: Replay previously parked messages
-  href: http-api/swagger/Replay%20previously%20parked%20messages.html
-- uid: eventstore.org/HTTP API/5.0.0/Replay previously parked messages/operation
-  name: Replay previously parked messages
-  href: http-api/swagger/Replay%20previously%20parked%20messages.html#eventstore_org_HTTP_API_5_0_0_Replay_previously_parked_messages_operation
-- uid: eventstore.org/HTTP API/5.0.0/Reset password
-  name: Reset password
-  href: http-api/swagger/Reset%20password.html
-- uid: eventstore.org/HTTP API/5.0.0/Reset password/operation
-  name: Reset password
-  href: http-api/swagger/Reset%20password.html#eventstore_org_HTTP_API_5_0_0_Reset_password_operation
-- uid: eventstore.org/HTTP API/5.0.0/Reset projection
-  name: Reset projection
-  href: http-api/swagger/Reset%20projection.html
-- uid: eventstore.org/HTTP API/5.0.0/Reset projection/operation
-  name: Reset projection
-  href: http-api/swagger/Reset%20projection.html#eventstore_org_HTTP_API_5_0_0_Reset_projection_operation
-- uid: eventstore.org/HTTP API/5.0.0/Return Gossip details
-  name: Return Gossip details
-  href: http-api/swagger/Return%20Gossip%20details.html
-- uid: eventstore.org/HTTP API/5.0.0/Return Gossip details/operation
-  name: Return Gossip details
-  href: http-api/swagger/Return%20Gossip%20details.html#eventstore_org_HTTP_API_5_0_0_Return_Gossip_details_operation
-- uid: eventstore.org/HTTP API/5.0.0/Scavenge a node
-  name: Scavenge a node
-  href: http-api/swagger/Scavenge%20a%20node.html
-- uid: eventstore.org/HTTP API/5.0.0/Scavenge a node/operation
-  name: Scavenge a node
-  href: http-api/swagger/Scavenge%20a%20node.html#eventstore_org_HTTP_API_5_0_0_Scavenge_a_node_operation
-- uid: eventstore.org/HTTP API/5.0.0/Shutdown a node
-  name: Shutdown a node
-  href: http-api/swagger/Shutdown%20a%20node.html
-- uid: eventstore.org/HTTP API/5.0.0/Shutdown a node/operation
-  name: Shutdown a node
-  href: http-api/swagger/Shutdown%20a%20node.html#eventstore_org_HTTP_API_5_0_0_Shutdown_a_node_operation
-- uid: eventstore.org/HTTP API/5.0.0/Stop a scavenge
-  name: Stop a scavenge
-  href: http-api/swagger/Stop%20a%20scavenge.html
-- uid: eventstore.org/HTTP API/5.0.0/Stop a scavenge/operation
-  name: Stop a scavenge
-  href: http-api/swagger/Stop%20a%20scavenge.html#eventstore_org_HTTP_API_5_0_0_Stop_a_scavenge_operation
-- uid: eventstore.org/HTTP API/5.0.0/Update a user
-  name: Update a user
-  href: http-api/swagger/Update%20a%20user.html
-- uid: eventstore.org/HTTP API/5.0.0/Update a user/operation
-  name: Update a user
-  href: http-api/swagger/Update%20a%20user.html#eventstore_org_HTTP_API_5_0_0_Update_a_user_operation
-- uid: eventstore.org/HTTP API/5.0.0/Update Gossip details
-  name: Update Gossip details
-  href: http-api/swagger/Update%20Gossip%20details.html
-- uid: eventstore.org/HTTP API/5.0.0/Update Gossip details/operation
-  name: Update Gossip details
-  href: http-api/swagger/Update%20Gossip%20details.html#eventstore_org_HTTP_API_5_0_0_Update_Gossip_details_operation
-- uid: eventstore.org/HTTP API/5.0.0/Update projection config
-  name: Update projection config
-  href: http-api/swagger/Update%20projection%20config.html
-- uid: eventstore.org/HTTP API/5.0.0/Update projection config/operation
-  name: Update projection config
-  href: http-api/swagger/Update%20projection%20config.html#eventstore_org_HTTP_API_5_0_0_Update_projection_config_operation
-- uid: eventstore.org/HTTP API/5.0.0/Update projection definition
-  name: Update projection definition
-  href: http-api/swagger/Update%20projection%20definition.html
-- uid: eventstore.org/HTTP API/5.0.0/Update projection definition/operation
-  name: Update projection definition
-  href: http-api/swagger/Update%20projection%20definition.html#eventstore_org_HTTP_API_5_0_0_Update_projection_definition_operation
-- uid: eventstore.org/HTTP API/5.0.0/Update stream metadata
-  name: Update stream metadata
-  href: http-api/swagger/Update%20stream%20metadata.html
-- uid: eventstore.org/HTTP API/5.0.0/Update stream metadata/operation
-  name: Update stream metadata
-  href: http-api/swagger/Update%20stream%20metadata.html#eventstore_org_HTTP_API_5_0_0_Update_stream_metadata_operation
-- uid: eventstore.org/HTTP API/5.0.0/Update subscription
-  name: Update subscription
-  href: http-api/swagger/Update%20subscription.html
-- uid: eventstore.org/HTTP API/5.0.0/Update subscription/operation
-  name: Update subscription
-  href: http-api/swagger/Update%20subscription.html#eventstore_org_HTTP_API_5_0_0_Update_subscription_operation
-- uid: eventstore.org/HTTP API/5.0.0/Write to a stream
-  name: Write to a stream
-  href: http-api/swagger/Write%20to%20a%20stream.html
-- uid: eventstore.org/HTTP API/5.0.0/Write to a stream/operation
-  name: Write to a stream
-  href: http-api/swagger/Write%20to%20a%20stream.html#eventstore_org_HTTP_API_5_0_0_Write_to_a_stream_operation

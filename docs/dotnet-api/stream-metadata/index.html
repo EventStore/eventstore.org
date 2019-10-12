@@ -95,7 +95,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="stream-metadata">Stream metadata</h1>
 
-<p>Every stream in Event Store has metadata associated with it. Internally, the metadata includes information such as the ACL of the stream and the maximum count and age for the events in the stream. Client code can also put information into stream metadata for use with projections or through the client API.</p>
+<p>Every stream in Event Store has metadata stream associated with it, prefixed by <code>$$</code>, so the metadata stream from a stream called <code>foo</code> is <code>$$foo</code>. Internally, the metadata includes information such as the ACL of the stream and the maximum count and age for the events in the stream. Client code can also put information into stream metadata for use with projections or through the client API.</p>
 <p>This information is not part of the actual event but is metadata associated with the event. Event Store stores stream metadata as JSON, and you can access it over the HTTP APIs.</p>
 <h2 id="read-stream-metadata">Read stream metadata</h2>
 <p>To read stream metadata over the .NET API you can use methods found on the <code>EventStoreConnection</code>. You can use the <code>GetStreamMetadata</code> methods in two ways. The first is to return a fluent interface over the stream metadata, and the second is to return you the raw JSON of the stream metadata.</p>

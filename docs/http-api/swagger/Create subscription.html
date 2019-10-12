@@ -92,9 +92,9 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="eventstore.org/HTTP API/5.0.0/Create subscription">
+            <article class="content wrap" id="_content" data-uid="127.0.0.1:2113/HTTP API/5.0.0/Create subscription">
 
-<h1 id="eventstore_org_HTTP_API_5_0_0_Create_subscription" data-uid="eventstore.org/HTTP API/5.0.0/Create subscription" class="text-capitalize text-break">Create subscription</h1>
+<h1 id="127_0_0_1_2113_HTTP_API_5_0_0_Create_subscription" data-uid="127.0.0.1:2113/HTTP API/5.0.0/Create subscription" class="text-capitalize text-break">Create subscription</h1>
 <div class="markdown level0 description"><p>Before interacting with a subscription group, you need to create one. You will receive an error if you attempt to create a subscription group more than once. This requires <a href="/server/access-control-lists">admin permissions</a>.</p>
 </div>
   
@@ -116,7 +116,7 @@
       <tr>
         <td><span class="parametername">*stream</span></td>
         <td>
-        string
+          string
   </td>
         <td></td>
         <td><p>The stream the persistent subscription is on</p>
@@ -125,7 +125,7 @@
       <tr>
         <td><span class="parametername">*subscription</span></td>
         <td>
-        string
+          string
   </td>
         <td></td>
         <td><p>The name of the subscription group</p>
@@ -134,62 +134,50 @@
       <tr>
         <td><span class="parametername">subscriptionItem</span></td>
         <td>
-        object
-              <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr><td>ResolveLinkTos</td><td>boolean</td><td><p>Whether to resolve link events</p>
+          object
+          <table class="table table-bordered table-striped table-condensed">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr><td>ResolveLinkTos</td><td>boolean</td><td><p>Whether to resolve link events</p>
 </td></tr>
-
-        <tr><td>startFrom</td><td>integer</td><td><p>Which event position in the stream the subscription should start from</p>
+                            <tr><td>startFrom</td><td>integer</td><td><p>Which event position in the stream the subscription should start from</p>
 </td></tr>
-
-        <tr><td>extraStatistics</td><td>boolean</td><td><p>Whether to track latency statistics on this subscription</p>
+                            <tr><td>extraStatistics</td><td>boolean</td><td><p>Whether to track latency statistics on this subscription</p>
 </td></tr>
-
-        <tr><td>checkPointAfterMilliseconds</td><td>integer</td><td><p>The amount of time to try to checkpoint after</p>
+                            <tr><td>checkPointAfterMilliseconds</td><td>integer</td><td><p>The amount of time to try to checkpoint after</p>
 </td></tr>
-
-        <tr><td>liveBufferSize</td><td>integer</td><td><p>The size of the buffer (in-memory) listening to live messages as they happen before paging occurs</p>
+                            <tr><td>liveBufferSize</td><td>integer</td><td><p>The size of the buffer (in-memory) listening to live messages as they happen before paging occurs</p>
 </td></tr>
-
-        <tr><td>readBatchSize</td><td>integer</td><td><p>The number of events to read per batch when reading the history</p>
+                            <tr><td>readBatchSize</td><td>integer</td><td><p>The number of events to read per batch when reading the history</p>
 </td></tr>
-
-        <tr><td>bufferSize</td><td>integer</td><td><p>The number of events to cache when paging through history</p>
+                            <tr><td>bufferSize</td><td>integer</td><td><p>The number of events to cache when paging through history</p>
 </td></tr>
-
-        <tr><td>maxCheckPointCount</td><td>integer</td><td><p>The maximum number of messages not checkpointed before forcing a checkpoint</p>
+                            <tr><td>maxCheckPointCount</td><td>integer</td><td><p>The maximum number of messages not checkpointed before forcing a checkpoint</p>
 </td></tr>
-
-        <tr><td>maxRetryCount</td><td>integer</td><td><p>The maximum number of retries (due to timeout) before a message is considered to be parked</p>
+                            <tr><td>maxRetryCount</td><td>integer</td><td><p>The maximum number of retries (due to timeout) before a message is considered to be parked</p>
 </td></tr>
-
-        <tr><td>maxSubscriberCount</td><td>integer</td><td><p>The maximum number of subscribers allowed</p>
+                            <tr><td>maxSubscriberCount</td><td>integer</td><td><p>The maximum number of TCP subscribers allowed</p>
 </td></tr>
-
-        <tr><td>messageTimeoutMilliseconds</td><td>integer</td><td><p>The amount of time after which to consider a message as timedout and retried</p>
+                            <tr><td>messageTimeoutMilliseconds</td><td>integer</td><td><p>The amount of time after which to consider a message as timedout and retried</p>
 </td></tr>
-
-        <tr><td>minCheckPointCount</td><td>integer</td><td><p>The minimum number of messages to write to a checkpoint</p>
+                            <tr><td>minCheckPointCount</td><td>integer</td><td><p>The minimum number of messages to write to a checkpoint</p>
 </td></tr>
-
-        <tr><td>namedConsumerStrategy</td><td>string</td><td><p>The strategy to use for distributing events to client consumers</p>
+                            <tr><td>namedConsumerStrategy</td><td>string</td><td><p>The strategy to use for distributing events to client consumers</p>
 </td></tr>
-
-        </tbody></table></td>
+              </tbody></table>
+        </td>
         <td></td>
         <td><p>Subscription to create</p>
 </td>
       </tr>
-      
-  
+      </tbody>
+  </table>
     
   
   
@@ -207,7 +195,9 @@
       <tr>
         <td><span class="status">200</span></td>
         <td><p>Subscription created</p>
-</td>
+
+
+  </td>
         <td class="sample-response">
         </td>
       </tr>
@@ -215,7 +205,7 @@
     </table>
   </div>
 
-</tbody></table></article>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -225,7 +215,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/EventStore/documentation/new/master/apiSpec/new?filename=eventstore_org_HTTP_API_5_0_0_Create_subscription.md&amp;value=---%0Auid%3A%20eventstore.org%2FHTTP%20API%2F5.0.0%2FCreate%20subscription%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/EventStore/documentation/new/master/apiSpec/new?filename=127_0_0_1_2113_HTTP_API_5_0_0_Create_subscription.md&amp;value=---%0Auid%3A%20127.0.0.1%3A2113%2FHTTP%20API%2F5.0.0%2FCreate%20subscription%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
                     <a href="https://github.com/EventStore/documentation/blob/master/http-api/swagger.json/#L1" class="contribution-link">View Source</a>

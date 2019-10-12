@@ -92,9 +92,9 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="eventstore.org/HTTP API/5.0.0/Update stream metadata">
+            <article class="content wrap" id="_content" data-uid="127.0.0.1:2113/HTTP API/5.0.0/Update stream metadata">
 
-<h1 id="eventstore_org_HTTP_API_5_0_0_Update_stream_metadata" data-uid="eventstore.org/HTTP API/5.0.0/Update stream metadata" class="text-capitalize text-break">Update stream metadata</h1>
+<h1 id="127_0_0_1_2113_HTTP_API_5_0_0_Update_stream_metadata" data-uid="127.0.0.1:2113/HTTP API/5.0.0/Update stream metadata" class="text-capitalize text-break">Update stream metadata</h1>
 <div class="markdown level0 description"><p>Update the metadata of a stream.</p>
 </div>
   
@@ -116,7 +116,7 @@
       <tr>
         <td><span class="parametername">*stream</span></td>
         <td>
-        string
+          string
   </td>
         <td></td>
         <td><p>The name of the stream</p>
@@ -125,31 +125,29 @@
       <tr>
         <td><span class="parametername">streamMetadataItem</span></td>
         <td>
-        object
-              <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr><td>eventId</td><td>string</td><td><p>Alphanumeric ID</p>
+          object
+          <table class="table table-bordered table-striped table-condensed">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr><td>eventId</td><td>string</td><td><p>Alphanumeric ID</p>
 </td></tr>
-
-        <tr><td>eventType</td><td>string</td><td><p>The type of event</p>
+                            <tr><td>eventType</td><td>string</td><td><p>The type of event</p>
 </td></tr>
-
-        <tr><td>data</td><td></td><td></td></tr>
-
-        </tbody></table></td>
+                            <tr><td>data</td><td></td><td></td></tr>
+              </tbody></table>
+        </td>
         <td></td>
         <td><p>Metadata object</p>
 </td>
       </tr>
-      
-  
+      </tbody>
+  </table>
     
   
   
@@ -167,14 +165,18 @@
       <tr>
         <td><span class="status">201</span></td>
         <td><p>New stream created</p>
-</td>
+
+
+  </td>
         <td class="sample-response">
         </td>
       </tr>
       <tr>
         <td><span class="status">400</span></td>
         <td><p>Bad request</p>
-</td>
+
+
+  </td>
         <td class="sample-response">
         </td>
       </tr>
@@ -182,7 +184,7 @@
     </table>
   </div>
 
-</tbody></table></article>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -192,7 +194,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/EventStore/documentation/new/master/apiSpec/new?filename=eventstore_org_HTTP_API_5_0_0_Update_stream_metadata.md&amp;value=---%0Auid%3A%20eventstore.org%2FHTTP%20API%2F5.0.0%2FUpdate%20stream%20metadata%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/EventStore/documentation/new/master/apiSpec/new?filename=127_0_0_1_2113_HTTP_API_5_0_0_Update_stream_metadata.md&amp;value=---%0Auid%3A%20127.0.0.1%3A2113%2FHTTP%20API%2F5.0.0%2FUpdate%20stream%20metadata%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
                     <a href="https://github.com/EventStore/documentation/blob/master/http-api/swagger.json/#L1" class="contribution-link">View Source</a>

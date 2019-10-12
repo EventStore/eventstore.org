@@ -95,7 +95,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="stream-metadata">Stream metadata</h1>
 
-<p>By default streams you create in Event Store have no metadata associated with them. Internally, the metadata includes information such as the ACL of the stream, the maximum count and age for the events in the stream. Client code can also add information into stream metadata for use with projections or the client API.</p>
+<p>Every stream in Event Store has metadata stream associated with it, prefixed by <code>$$</code>, so the metadata stream from a stream called <code>foo</code> is <code>$$foo</code>. Internally, the metadata includes information such as the ACL of the stream, the maximum count and age for the events in the stream. Client code can also add information into stream metadata for use with projections or the client API.</p>
 <p>Stream metadata is stored internally as JSON, and you can access it over the HTTP API.</p>
 <h2 id="reading-stream-metadata">Reading stream metadata</h2>
 <p>To read the metadata, issue a <code>GET</code> request to the attached metadata resource, which is typically of the form:</p>
