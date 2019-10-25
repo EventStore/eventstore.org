@@ -13,6 +13,7 @@ Event Store 5.0.3 is out! It is available for the following operating systems:
 - CentOS 7 (Commercial version)
 - Amazon Linux AMI (Commercial version)
 - Amazon Linux 2 AMI (Commercial version)
+- Oracle Linux 7 (Commercial version)
 
 Please note that Ubuntu 14.04 (Trusty Tahr) has reached its end-of-life and thus we will stop releasing packages for it as from the next version.
 
@@ -49,6 +50,11 @@ To upgrade a cluster, a usual rolling upgrade can be done:
 
 ### Miscellaneous
 * [#1991](https://github.com/EventStore/EventStore/pull/1991) - **(Core Database)** We have provided the ability to configure the connection queue size threshold. There are scenarios where a client might run into the maximum connection queue size. A likely scenario where this might occur is when a client is overwhelmed by a large number of events being ingested into Event Store and then being delivered to a subscription.
+
+### Commercial
+* Release of Amazon Linux 2 and Oracle 7 packages
+* Fixed issue on Amazon Linux package where manual changes to the EventStore configuration file would be overwritten when the node starts up
+
 
 
 ## How do I provide feedback?
