@@ -12,7 +12,7 @@
     <title>Step 2 - Read events from a stream and subscribe to changes | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Step 2 - Read events from a stream and subscribe to changes | Event Store ">
-    <meta name="generator" content="docfx 2.45.1.0">
+    <meta name="generator" content="docfx 2.47.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -203,16 +203,8 @@ foreach (var evt in readEvents.Events)
 </section>
 <section id="tabpanel_ewz4UtAAbO-1_tabid-jvm-client" role="tabpanel" data-tab="tabid-jvm-client" aria-hidden="true" hidden="hidden">
 <p>To use the JVM client, use the following method passing the stream name, the start point in the stream, and whether to follow links to the event data:</p>
-<pre><code class="lang-java" name="getting-started-read">        final ActorRef readResult = system.actorOf(Props.create(ReadResult.class));
-
-//TODO: How to read ten events?
-        final ReadEvent readEvent = new ReadEventBuilder(&quot;newstream&quot;)
-                .first()
-                .resolveLinkTos(false)
-                .build();
-
-        connection.tell(readEvent, readResult);
-</code></pre></section>
+<!-- Can not find reference ../../EventStore.Samples.Java/src/main/java/org/eventstore/sample/ReadEventExample.java -->
+</section>
 </div>
 <h2 id="read-a-single-event">Read a single event</h2>
 <p>The feed has a single item inside of it, the one you posted in <a href="../index.html">part 1</a>. You can see details of the event in the <em>Stream Browser</em> tab in the Admin UI by selecting a stream to see its events, and then selecting an event. Or with cURL, issue a <code>GET</code> to the <code>alternate</code> URI value from the response above.</p>
@@ -264,16 +256,8 @@ Console.WriteLine(Encoding.UTF8.GetString(readResult.Event.Value.Event.Data));
 </code></pre></section>
 <section id="tabpanel_ewz4UtAAbO-3_tabid-jvm-read-event" role="tabpanel" data-tab="tabid-jvm-read-event" aria-hidden="true" hidden="hidden">
 <p>To use the Java client, use the following method passing the stream name, the event you want to read and if you want to also return the event data:</p>
-<pre><code class="lang-java" name="getting-started-read">        final ActorRef readResult = system.actorOf(Props.create(ReadResult.class));
-
-//TODO: How to read ten events?
-        final ReadEvent readEvent = new ReadEventBuilder(&quot;newstream&quot;)
-                .first()
-                .resolveLinkTos(false)
-                .build();
-
-        connection.tell(readEvent, readResult);
-</code></pre></section>
+<!-- Can not find reference ../../EventStore.Samples.Java/src/main/java/org/eventstore/sample/ReadEventExample.java -->
+</section>
 </div>
 <h2 id="paginating-through-events">Paginating through events</h2>
 <p>For longer feeds of events than this example, you need to paginate through the feed, reading a certain number of events at a time.</p>
@@ -326,28 +310,8 @@ Console.ReadLine();
 </div>
 </section>
 <section id="tabpanel_ewz4UtAAbO-4_tabid-create-sub-java" role="tabpanel" data-tab="tabid-create-sub-java" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-java" name="getting-started-read">final Closeable closeable = connection.subscribeToStream(&quot;newstream&quot;, new SubscriptionObserver&lt;Event&gt;() {
-    @Override
-    public void onLiveProcessingStart(Closeable subscription) {
-        system.log().info(&quot;live processing started&quot;);
-    }
-
-    @Override
-    public void onEvent(Event event, Closeable subscription) {
-        system.log().info(event.toString());
-    }
-
-    @Override
-    public void onError(Throwable e) {
-        system.log().error(e.toString());
-    }
-
-    @Override
-    public void onClose() {
-        system.log().error(&quot;subscription closed&quot;);
-    }
-}, false, null);
-</code></pre></section>
+<!-- Can not find reference ../../EventStore.Samples.Java/src/main/java/org/eventstore/sample/SubscriptionExample.java -->
+</section>
 </div>
 <!-- TODO: The dotnet example has reading events as they are added to subscription, HTTP does not, expand? -->
 <!-- TODO: And write more events, then what etc -->

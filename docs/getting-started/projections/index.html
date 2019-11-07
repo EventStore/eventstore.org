@@ -12,7 +12,7 @@
     <title>Step 3 - Projections | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Step 3 - Projections | Event Store ">
-    <meta name="generator" content="docfx 2.45.1.0">
+    <meta name="generator" content="docfx 2.47.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -219,41 +219,8 @@ curl -i -d &quot;@shoppingCart-b989fe21-9469-4017-8d71-9820b8dd1167.json&quot; &
 }
 </code></pre></section>
 <section id="tabpanel_-zRZHSVchy-2_tabid-jvm-api" role="tabpanel" data-tab="tabid-jvm-api" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-java" name="getting-started-write-multiple">final Collection fileList = getAllFilesThatMatchFilenameExtension(&quot;/Users/chrisward/Workspace/EventStore/docs.geteventstore.com/code-examples/getting-started&quot;, &quot;shoppingCart-*&quot;);
-
-for (Object file : fileList) {
-    String streamName = FilenameUtils.getBaseName(removeExtension(file.toString()));
-    System.out.println(&quot;value= &quot; + streamName);
-
-    JSONParser parser = new JSONParser();
-    try {
-        JSONArray events = (JSONArray) parser.parse(new FileReader(file.toString()));
-
-        for (Object e : events) {
-            JSONObject event = (JSONObject) e;
-
-            final EventData json = new EventDataBuilder(&quot;json&quot;)
-                    .eventId(UUID.fromString((String) event.get(&quot;eventId&quot;)))
-                    .jsonData((event.get(&quot;data&quot;)).toString())
-                    .jsonMetadata(event.get(&quot;metadata&quot;).toString())
-                    .build();
-
-            final WriteEvents writeEvents = new WriteEventsBuilder(&quot;newstream&quot;)
-                    .addEvent(json)
-                    .expectAnyVersion()
-                    .build();
-
-            connection.tell(writeEvents, writeResult);
-        }
-    } catch (FileNotFoundException e) {
-        e.printStackTrace();
-    } catch (IOException e) {
-        e.printStackTrace();
-    } catch (ParseException e) {
-        e.printStackTrace();
-    }
-}
-</code></pre></section>
+<!-- Can not find reference ../../EventStore.Samples.Java/src/main/java/org/eventstore/sample/WriteMultipleEventsExample.java -->
+</section>
 </div>
 <div class="NOTE"><h5>Note</h5><p>While it&#39;s not the fastest method, you can also use the Admin UI for creating the streams, and all the tasks in this step, as we saw in <a href="../index.html">step 1</a>.</p>
 </div>
