@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Interface IEventStoreConnection
    | Event Store ">
-    <meta name="generator" content="docfx 2.45.1.0">
+    <meta name="generator" content="docfx 2.47.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -492,7 +492,7 @@ will do its best to provide idempotency but does not guarantee idempotency.</p>
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">EventStorePersistentSubscriptionBase ConnectToPersistentSubscription(string stream, string groupName, Func&lt;EventStorePersistentSubscriptionBase, ResolvedEvent, int? , Task&gt; eventAppeared, Action&lt;EventStorePersistentSubscriptionBase, SubscriptionDropReason, Exception&gt; subscriptionDropped = null, UserCredentials userCredentials = null, int bufferSize = 10, bool autoAck = true)</code></pre>
+    <pre><code class="lang-csharp hljs">EventStorePersistentSubscriptionBase ConnectToPersistentSubscription(string stream, string groupName, Func&lt;EventStorePersistentSubscriptionBase, ResolvedEvent, int?, Task&gt; eventAppeared, Action&lt;EventStorePersistentSubscriptionBase, SubscriptionDropReason, Exception&gt; subscriptionDropped = null, UserCredentials userCredentials = null, int bufferSize = 10, bool autoAck = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -567,7 +567,7 @@ you attempt to connect to a group that does not exist you will be given an excep
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;EventStorePersistentSubscriptionBase&gt; ConnectToPersistentSubscriptionAsync(string stream, string groupName, Func&lt;EventStorePersistentSubscriptionBase, ResolvedEvent, int? , Task&gt; eventAppeared, Action&lt;EventStorePersistentSubscriptionBase, SubscriptionDropReason, Exception&gt; subscriptionDropped = null, UserCredentials userCredentials = null, int bufferSize = 10, bool autoAck = true)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;EventStorePersistentSubscriptionBase&gt; ConnectToPersistentSubscriptionAsync(string stream, string groupName, Func&lt;EventStorePersistentSubscriptionBase, ResolvedEvent, int?, Task&gt; eventAppeared, Action&lt;EventStorePersistentSubscriptionBase, SubscriptionDropReason, Exception&gt; subscriptionDropped = null, UserCredentials userCredentials = null, int bufferSize = 10, bool autoAck = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

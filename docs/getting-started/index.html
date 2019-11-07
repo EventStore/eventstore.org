@@ -12,7 +12,7 @@
     <title>Step 1 - Install, run, and write your first event | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Step 1 - Install, run, and write your first event | Event Store ">
-    <meta name="generator" content="docfx 2.45.1.0">
+    <meta name="generator" content="docfx 2.47.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../assets/favicon.ico">
@@ -230,12 +230,12 @@ Read <a href="../server/deploy-kubernetes-aks/index.html">this guide</a> for mor
 </div>
 </section>
 <section id="tabpanel_dfgfloIX5I-1_tabid-jvm-client-connect" role="tabpanel" data-tab="tabid-jvm-client-connect" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-java" name="getting-started-connection">final ActorSystem system = ActorSystem.create();
-final Settings settings = new SettingsBuilder()
-        .address(new InetSocketAddress(&quot;127.0.0.1&quot;, 1113))
-        .defaultCredentials(&quot;admin&quot;, &quot;changeit&quot;)
-        .build();
-final ActorRef connection = system.actorOf(ConnectionActor.getProps(settings));
+<pre><code class="lang-java" name="getting-started-connection">
+final EventData event = new EventDataBuilder(&quot;my-event&quot;).eventId(UUID.randomUUID()).data(&quot;my event data&quot;)
+        .metadata(&quot;my first event&quot;).build();
+
+final WriteEvents writeEvents = new WriteEventsBuilder(&quot;my-stream&quot;).addEvent(event).expectAnyVersion().build();
+
 </code></pre><div class="NOTE"><h5>Note</h5><p>For our JVM examples we use <a href="https://akka.io">akka</a>, a toolkit for building highly concurrent and distributed JVM applications.</p>
 </div>
 </section>
@@ -285,20 +285,20 @@ final ActorRef connection = system.actorOf(ConnectionActor.getProps(settings));
 </section>
 <section id="tabpanel_dfgfloIX5I-2_tabid-6" role="tabpanel" data-tab="tabid-6" aria-hidden="true" hidden="hidden">
 <p>To use the JVM Client, use the following method, passing the name of the stream, the version, and the events to write:</p>
-<pre><code class="lang-java" name="getting-started-connection">    final ActorRef writeResult = system.actorOf(Props.create(WriteResult.class));
-
-    final EventData event = new EventDataBuilder(&quot;event-type&quot;)
-            .eventId(UUID.randomUUID())
-            .jsonData(&quot;{\&quot;a\&quot;: \&quot;1\&quot;}&quot;)
-            .build();
-
-    final WriteEvents writeEvents = new WriteEventsBuilder(&quot;newstream&quot;)
-            .addEvent(event)
-            .expectAnyVersion()
-            .build();
-
-    connection.tell(writeEvents, writeResult);
+<pre><code class="lang-java" name="getting-started-connection">    connection.tell(writeEvents, writeResult);
 }
+
+public static class WriteResult extends AbstractActor {
+
+    final LoggingAdapter log = Logging.getLogger(getContext().system(), this);
+
+    @Override
+    public Receive createReceive() {
+        return receiveBuilder().match(WriteEventsCompleted.class, m -&gt; {
+            log.info(&quot;range: {}, position: {}&quot;, m.numbersRange(), m.position());
+            context().system().terminate();
+        }).match(Status.Failure.class, f -&gt; {
+            final EsException exception = (EsException) f.cause();
 </code></pre></section>
 </div>
 <h2 id="next-step">Next step</h2>

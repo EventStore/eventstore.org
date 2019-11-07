@@ -12,7 +12,7 @@
     <title>Indexing | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Indexing | Event Store ">
-    <meta name="generator" content="docfx 2.45.1.0">
+    <meta name="generator" content="docfx 2.47.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -207,7 +207,7 @@ The index files are uniquely named, and the index map file called <em>indexmap</
 <p>Merging <em>ptables</em>, updating the <em>indexmap</em> and persisting <em>memtable</em> operations happen on a background thread. These operations are performed on a single thread with any additional operations queued and completed later. Event Store runs these operations on a thread pool thread rather than a dedicated thread. Generally there is only one operation queued at a time, but if merging to <em>ptables</em> at one level causes 2 tables to be available at the next level, then the next merge operation is immediately queued. While merge operations are in progress, if Event Store is writing large numbers of events, it may queue 1 or more <em>memtables</em> for persistence. The number of pending operations is logged.</p>
 <p>For safety <em>ptables</em> Event Store is currently merging are only deleted after the new <em>ptable</em> has persisted and the <em>indexmap</em>  updated. In the event of a crash, Event Store recovers by deleting any files not in the <em>indexmap</em> and reindexing from the prepare/commit position stored in the <em>indexmap</em> file.</p>
 <h3 id="manual-merging">Manual Merging</h3>
-<p>If you have set the maximum level (<code>MaxAutoMergeIndexLevel</code>) for automatically merging indexes, then you need to trigger merging indexes above this level manually by using the <code>[/admin/mergeindexes](xref:eventstore.org%2FHTTP%20API%2F5.0.0%2FMerge%20Indexes)</code> endpoint, or  the ES-CLI tool that is available with commercial support.</p>
+<p>If you have set the maximum level (<code>MaxAutoMergeIndexLevel</code>) for automatically merging indexes, then you need to trigger merging indexes above this level manually by using the <code>[/admin/mergeindexes](xref:eventstore.org%2FHTTP%20API%2F5.0.4%2FMerge%20Indexes)</code> endpoint, or  the ES-CLI tool that is available with commercial support.</p>
 <p>Triggering a manual merge causes Event Store to merge all tables that have a level equal to the maximum merge level or above into a single table.  If there is only 1 table at the maximum level or above, no merge is performed.</p>
 <h2 id="tuning">Tuning</h2>
 <p>For most Event Store clusters, the default settings are enough to give consistent and good performance. For clusters with larger numbers of events, or those that run in constrained environments the configuration options allow for some tuning to meet operational constraints.</p>
