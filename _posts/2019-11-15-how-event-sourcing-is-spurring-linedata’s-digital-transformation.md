@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-title: How Event Sourcing is Spurring Linedata’s Digital Transformation
+title: Case Study - How Event Sourcing is Spurring Linedata’s Digital Transformation
 author: Dave Remy
 ---
 > **About Linedata**
