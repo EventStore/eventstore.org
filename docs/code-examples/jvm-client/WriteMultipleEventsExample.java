@@ -4,10 +4,15 @@ import akka.actor.*;
 import akka.event.Logging;
 import akka.event.LoggingAdapter;
 import eventstore.*;
+import eventstore.akka.Settings;
+import eventstore.core.EsException;
+import eventstore.core.EventData;
+import eventstore.core.WriteEvents;
+import eventstore.core.WriteEventsCompleted;
 import eventstore.j.EventDataBuilder;
 import eventstore.j.SettingsBuilder;
 import eventstore.j.WriteEventsBuilder;
-import eventstore.tcp.ConnectionActor;
+import eventstore.akka.tcp.ConnectionActor;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -201,11 +201,11 @@ Read <a href="../server/deploy-kubernetes-aks/index.html">this guide</a> for mor
 <pre><code class="lang-xml">&lt;dependency&gt;
     &lt;groupId&gt;com.geteventstore&lt;/groupId&gt;
     &lt;artifactId&gt;eventstore-client_2.12&lt;/artifactId&gt;
-    &lt;version&gt;5.0.8&lt;/version&gt;
+    &lt;version&gt;7.0.2&lt;/version&gt;
 &lt;/dependency&gt;
-</code></pre><p>And require it in your code:</p>
-<pre><code class="lang-java">import eventstore.*;
-</code></pre></section>
+</code></pre><p>And import it in your code.</p>
+<!-- TODO: Add more detail -->
+</section>
 </div>
 <h2 id="connecting-to-event-store">Connecting to Event Store</h2>
 <p>If you want to use the Admin UI or the HTTP API, then you use port <code>2113</code>. For example, <a href="http://127.0.0.1:2113/">http://127.0.0.1:2113/</a> in your web browser, or <code>curl -i http://127.0.0.1:2113</code> for the HTTP API.</p>
@@ -230,12 +230,8 @@ Read <a href="../server/deploy-kubernetes-aks/index.html">this guide</a> for mor
 </div>
 </section>
 <section id="tabpanel_dfgfloIX5I-1_tabid-jvm-client-connect" role="tabpanel" data-tab="tabid-jvm-client-connect" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-java" name="getting-started-connection">
-final EventData event = new EventDataBuilder(&quot;my-event&quot;).eventId(UUID.randomUUID()).data(&quot;my event data&quot;)
-        .metadata(&quot;my first event&quot;).build();
-
-final WriteEvents writeEvents = new WriteEventsBuilder(&quot;my-stream&quot;).addEvent(event).expectAnyVersion().build();
-
+<pre><code class="lang-java" name="getting-started-connection">final ActorSystem system = ActorSystem.create();
+final ActorRef connection = system.actorOf(ConnectionActor.getProps());
 </code></pre><div class="NOTE"><h5>Note</h5><p>For our JVM examples we use <a href="https://akka.io">akka</a>, a toolkit for building highly concurrent and distributed JVM applications.</p>
 </div>
 </section>
@@ -284,8 +280,13 @@ final WriteEvents writeEvents = new WriteEventsBuilder(&quot;my-stream&quot;).ad
 </div>
 </section>
 <section id="tabpanel_dfgfloIX5I-2_tabid-6" role="tabpanel" data-tab="tabid-6" aria-hidden="true" hidden="hidden">
-<p>To use the JVM Client, use the following method, passing the name of the stream, the version, and the events to write:</p>
-<pre><code class="lang-java" name="getting-started-connection">    connection.tell(writeEvents, writeResult);
+<p>To use the JVM Client, use the following method, passing the name of the stream, the version, and the events to write. You also need an Akka <code>AbstractActor</code> to return the response from Event Store:</p>
+<pre><code class="lang-java" name="getting-started-connection">    final EventData event = new EventDataBuilder(&quot;my-event&quot;).eventId(UUID.randomUUID()).data(&quot;my event data&quot;)
+            .metadata(&quot;my first event&quot;).build();
+
+    final WriteEvents writeEvents = new WriteEventsBuilder(&quot;my-stream&quot;).addEvent(event).expectAnyVersion().build();
+
+    connection.tell(writeEvents, writeResult);
 }
 
 public static class WriteResult extends AbstractActor {
@@ -299,6 +300,11 @@ public static class WriteResult extends AbstractActor {
             context().system().terminate();
         }).match(Status.Failure.class, f -&gt; {
             final EsException exception = (EsException) f.cause();
+            log.error(exception, exception.toString());
+        }).build();
+    }
+
+}
 </code></pre></section>
 </div>
 <h2 id="next-step">Next step</h2>

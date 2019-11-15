@@ -203,15 +203,14 @@ foreach (var evt in readEvents.Events)
 </section>
 <section id="tabpanel_ewz4UtAAbO-1_tabid-jvm-client" role="tabpanel" data-tab="tabid-jvm-client" aria-hidden="true" hidden="hidden">
 <p>To use the JVM client, use the following method passing the stream name, the start point in the stream, and whether to follow links to the event data:</p>
-<pre><code class="lang-java" name="getting-started-read">        final ActorRef readResult = system.actorOf(Props.create(ReadResult.class));
+<pre><code class="lang-java" name="getting-started-read">final ActorRef readResult = system.actorOf(Props.create(ReadResult.class));
 
-//TODO: How to read ten events?
-        final ReadEvent readEvent = new ReadEventBuilder(&quot;newstream&quot;)
-                .first()
-                .resolveLinkTos(false)
-                .build();
+final ReadEvent readEvent = new ReadEventBuilder(&quot;my-stream&quot;)
+        .resolveLinkTos(false)
+        .requireMaster(true)
+        .build();
 
-        connection.tell(readEvent, readResult);
+connection.tell(readEvent, readResult);
 </code></pre></section>
 </div>
 <h2 id="read-a-single-event">Read a single event</h2>
@@ -264,15 +263,15 @@ Console.WriteLine(Encoding.UTF8.GetString(readResult.Event.Value.Event.Data));
 </code></pre></section>
 <section id="tabpanel_ewz4UtAAbO-3_tabid-jvm-read-event" role="tabpanel" data-tab="tabid-jvm-read-event" aria-hidden="true" hidden="hidden">
 <p>To use the Java client, use the following method passing the stream name, the event you want to read and if you want to also return the event data:</p>
-<pre><code class="lang-java" name="getting-started-read">        final ActorRef readResult = system.actorOf(Props.create(ReadResult.class));
+<pre><code class="lang-java" name="getting-started-read">final ActorRef readResult = system.actorOf(Props.create(ReadResult.class));
 
-//TODO: How to read ten events?
-        final ReadEvent readEvent = new ReadEventBuilder(&quot;newstream&quot;)
-                .first()
-                .resolveLinkTos(false)
-                .build();
+final ReadEvent readEvent = new ReadEventBuilder(&quot;my-stream&quot;)
+        .first()
+        .resolveLinkTos(false)
+        .requireMaster(true)
+        .build();
 
-        connection.tell(readEvent, readResult);
+connection.tell(readEvent, readResult);
 </code></pre></section>
 </div>
 <h2 id="paginating-through-events">Paginating through events</h2>
@@ -326,14 +325,14 @@ Console.ReadLine();
 </div>
 </section>
 <section id="tabpanel_ewz4UtAAbO-4_tabid-create-sub-java" role="tabpanel" data-tab="tabid-create-sub-java" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-java" name="getting-started-read">final Closeable closeable = connection.subscribeToStream(&quot;newstream&quot;, new SubscriptionObserver&lt;Event&gt;() {
+<pre><code class="lang-java" name="getting-started-read">final Closeable closeable = connection.subscribeToAll(new SubscriptionObserver&lt;IndexedEvent&gt;() {
     @Override
     public void onLiveProcessingStart(Closeable subscription) {
         system.log().info(&quot;live processing started&quot;);
     }
 
     @Override
-    public void onEvent(Event event, Closeable subscription) {
+    public void onEvent(IndexedEvent event, Closeable subscription) {
         system.log().info(event.toString());
     }
 

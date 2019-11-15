@@ -9,7 +9,7 @@ import eventstore.core.*;
 import eventstore.akka.Settings;
 import eventstore.akka.tcp.ConnectionActor;
 
-public class ReadEventExample {
+public class ReadMultipleEventsExample {
 
     public static void main(String[] args) {
         final ActorSystem system = ActorSystem.create();
@@ -21,7 +21,6 @@ public class ReadEventExample {
         final ActorRef readResult = system.actorOf(Props.create(ReadResult.class));
 
         final ReadEvent readEvent = new ReadEventBuilder("my-stream")
-                .first()
                 .resolveLinkTos(false)
                 .requireMaster(true)
                 .build();

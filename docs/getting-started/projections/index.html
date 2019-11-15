@@ -219,38 +219,64 @@ curl -i -d &quot;@shoppingCart-b989fe21-9469-4017-8d71-9820b8dd1167.json&quot; &
 }
 </code></pre></section>
 <section id="tabpanel_-zRZHSVchy-2_tabid-jvm-api" role="tabpanel" data-tab="tabid-jvm-api" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-java" name="getting-started-write-multiple">final Collection fileList = getAllFilesThatMatchFilenameExtension(&quot;/Users/chrisward/Workspace/EventStore/docs.geteventstore.com/code-examples/getting-started&quot;, &quot;shoppingCart-*&quot;);
+<pre><code class="lang-java" name="getting-started-write-multiple">        final Collection fileList = getAllFilesThatMatchFilenameExtension(&quot;/Users/chrisward/Workspace/EventStore/docs.geteventstore.com/code-examples/getting-started&quot;, &quot;shoppingCart-*&quot;);
 
-for (Object file : fileList) {
-    String streamName = FilenameUtils.getBaseName(removeExtension(file.toString()));
-    System.out.println(&quot;value= &quot; + streamName);
+        for (Object file : fileList) {
+            String streamName = FilenameUtils.getBaseName(removeExtension(file.toString()));
+            System.out.println(&quot;value= &quot; + streamName);
 
-    JSONParser parser = new JSONParser();
-    try {
-        JSONArray events = (JSONArray) parser.parse(new FileReader(file.toString()));
+            JSONParser parser = new JSONParser();
+            try {
+                JSONArray events = (JSONArray) parser.parse(new FileReader(file.toString()));
 
-        for (Object e : events) {
-            JSONObject event = (JSONObject) e;
+                for (Object e : events) {
+                    JSONObject event = (JSONObject) e;
 
-            final EventData json = new EventDataBuilder(&quot;json&quot;)
-                    .eventId(UUID.fromString((String) event.get(&quot;eventId&quot;)))
-                    .jsonData((event.get(&quot;data&quot;)).toString())
-                    .jsonMetadata(event.get(&quot;metadata&quot;).toString())
-                    .build();
+                    final EventData json = new EventDataBuilder(&quot;json&quot;)
+                            .eventId(UUID.fromString((String) event.get(&quot;eventId&quot;)))
+                            .jsonData((event.get(&quot;data&quot;)).toString())
+                            .jsonMetadata(event.get(&quot;metadata&quot;).toString())
+                            .build();
 
-            final WriteEvents writeEvents = new WriteEventsBuilder(&quot;newstream&quot;)
-                    .addEvent(json)
-                    .expectAnyVersion()
-                    .build();
+                    final WriteEvents writeEvents = new WriteEventsBuilder(&quot;newstream&quot;)
+                            .addEvent(json)
+                            .expectAnyVersion()
+                            .build();
 
-            connection.tell(writeEvents, writeResult);
+                    connection.tell(writeEvents, writeResult);
+                }
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
-    } catch (FileNotFoundException e) {
-        e.printStackTrace();
-    } catch (IOException e) {
-        e.printStackTrace();
-    } catch (ParseException e) {
-        e.printStackTrace();
+    }
+
+
+    public static class WriteResult extends UntypedActor {
+        final LoggingAdapter log = Logging.getLogger(getContext().system(), this);
+
+        public void onReceive(Object message) throws Exception {
+            if (message instanceof WriteEventsCompleted) {
+                final WriteEventsCompleted completed = (WriteEventsCompleted) message;
+                log.info(&quot;range: {}, position: {}&quot;, completed.numbersRange(), completed.position());
+            } else if (message instanceof Status.Failure) {
+                final Status.Failure failure = ((Status.Failure) message);
+                final EsException exception = (EsException) failure.cause();
+                log.error(exception, exception.toString());
+            } else
+                unhandled(message);
+
+//            context().system().shutdown();
+        }
+    }
+
+    static Collection getAllFilesThatMatchFilenameExtension(String directoryName, String extension) {
+        File directory = new File(directoryName);
+        return FileUtils.listFiles(directory, new WildcardFileFilter(extension), null);
     }
 }
 </code></pre></section>
