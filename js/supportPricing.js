@@ -41,7 +41,7 @@ currentDefaults = document.querySelectorAll('#pricing-table .default');
 
 // Change currency
 async function getPricing() {
-const response = await fetch('/_data/pricing.json');
+const response = await fetch('/js/pricing.json');
 const json = await response.json();
 return json; };
 getPricing();
