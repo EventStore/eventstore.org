@@ -111,6 +111,11 @@ article#pricing-table h4, article#pricing-table ul.support-level-select {
 	color: rgb(255, 255, 255);
 	font-weight: 400;
 }
+.community-button:focus, .community-button:hover {
+	background: #546E7A;
+	border-color: #546E7A;
+	color:white;
+}
 .community-section {
 	background: rgba(69, 90, 100, 0.2);
 	padding: 0.8em 1.25em 1.25em;
