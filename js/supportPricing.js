@@ -40,8 +40,11 @@ currentDefaults = document.querySelectorAll('#pricing-table .default');
 };
 
 // Change currency
+async function getPricing() {
 const response = await fetch('/_data/pricing.json');
 const json = await response.json();
+return json; };
+getPricing();
 var currency = "GBP";
 var obj = JSON.parse(json);
 function changeCurrency(currency) {
