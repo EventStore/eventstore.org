@@ -2,9 +2,9 @@
 article#pricing-table {
 	width:100%;
 	margin:0 auto;
-	height:1000px;
 	position:relative;
 	text-align: center;
+	overflow: auto;
 }
 #pricing-table h1 {
 	max-width: none;
