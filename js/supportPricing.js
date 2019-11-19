@@ -38,3 +38,20 @@ newDefaults[i].classList.add('default')
 };
 currentDefaults = document.querySelectorAll('#pricing-table .default');
 };
+
+// Change currency
+const response = await fetch('/_data/pricing.json');
+const json = await response.json();
+var currency = "GBP";
+var obj = JSON.parse(json);
+function changeCurrency(currency) {
+document.getElementById('prePrice').innerHTML = obj.currencies[currency].symbol + obj.currencies[currency].prices.preproduction;
+document.getElementById('prodPrice1').innerHTML = obj.currencies[currency].symbol + obj.currencies[currency].prices.productionnextday;
+document.getElementById('prodPrice2').innerHTML = obj.currencies[currency].symbol + obj.currencies[currency].prices.productionsameday;
+document.getElementById('entPrice1').innerHTML = obj.currencies[currency].symbol + obj.currencies[currency].prices.enterprise8hour;
+document.getElementById('entPrice1').innerHTML = obj.currencies[currency].symbol + obj.currencies[currency].prices.enterprise2hour;
+document.getElementById('suppAvail1').innerHTML = obj.currencies[currency].supportdays.preproduction;
+var perClusterPrices = document.querySelectorAll('#pricing-table .clusterPrice');
+for (var i = 0; i < perClusterPrices.length; i++) {
+perClusterPrices[i].innerHTML = obj.currencies[currency].symbol + obj.currencies[currency].prices.percluster;
+};};
