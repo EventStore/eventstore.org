@@ -56,36 +56,36 @@ description: "Get free community support, or paid production and enterprise supp
 					<tr>
 						<th scope="row">Annual price</th>
 						<td class="pre-production-level">
-							<strong>£1199</strong>
+							<strong id="prePrice">£1199</strong>
 						</td>
 						<td class="production-level default">
-							<strong>£4999</strong>
+							<strong id="prodPrice1">£4999</strong>
 							<br/>
-							<em>+£1299 per cluster</em>
+							<em class="clusterPrice">+£1299 per cluster</em>
 							<br/>
 						</td>
 						<td class="production-level default">
-							<strong>£9999</strong>
+							<strong id="prodPrice2">£9999</strong>
 							<br/>
-							<em>+£1299 per cluster</em>
+							<em class="clusterPrice">+£1299 per cluster</em>
 							<br/>
 						</td>
 						<td class="enterprise-level">
-							<strong>£19999</strong>
+							<strong id="entPrice1">£19999</strong>
 							<br/>
-							<em>+£1299 per cluster</em>
+							<em class="clusterPrice">+£1299 per cluster</em>
 							<br/>
 						</td>
 						<td class="enterprise-level">
-							<strong>£39999</strong>
+							<strong id="entPrice2">£39999</strong>
 							<br/>
-							<em>+£1299 per cluster</em>
+							<em class="clusterPrice">+£1299 per cluster</em>
 							<br/>
 						</td>
 					</tr>
 					<tr>
 						<th scope="row">Support availability</th>
-						<td class="pre-production-level">9am to 5pm&dagger;<br/>Monday to Friday&Dagger;</td>
+						<td class="pre-production-level">9am to 5pm&dagger;<br/><span id="suppAvail1">Monday to Friday&Dagger;</span></td>
 						<td class="production-level default">9am to 5pm&dagger;<br/>Every day</td>
 						<td class="production-level default">9am to 5pm&dagger;<br/>Every day</td>
 						<td class="enterprise-level">All day<br/>Every day</td>
@@ -192,7 +192,16 @@ description: "Get free community support, or paid production and enterprise supp
 				</tbody>
 				<tfoot>
 					<tr>
-						<td colspan="6">&dagger; All times refer to London, UK time<br/>&Dagger; Excluding England and Wales public holidays<br/>&ast; For tickets received by 2pm</td>
+						<td colspan="6">
+							<p><strong>Change currency</strong></p>
+						<select id="currencySelect" onchange="changeCurrency(this.options[this.selectedIndex].value)">
+							<option value="CAD">CAD</option>
+							<option value="EUR">EUR</option>
+							<option value="GBP" selected="selected">GBP</option>
+							<option value="USD">USD</option>
+						</select>
+						<br/><br/>
+							&dagger; All times refer to London, UK time<br/>&Dagger; Excluding England and Wales public holidays<br/>&ast; For tickets received by 2pm</td>
 					</tr>
 				</tfoot>
 			</table>
