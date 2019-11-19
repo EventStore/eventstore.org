@@ -105,3 +105,14 @@ article#pricing-table {
 article#pricing-table h4, article#pricing-table ul.support-level-select {
 	display: none;
 }
+.community-button {
+	background: rgb(69, 90, 100);
+	border-color: rgb(69, 90, 100);
+	color: rgb(255, 255, 255);
+	font-weight: 400;
+}
+.community-section {
+	background: rgba(69, 90, 100, 0.2);
+	padding: 0.8em 1.25em 1.25em;
+	text-align: center;
+}
