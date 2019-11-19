@@ -23,37 +23,180 @@ description: "Get free community support, or paid production and enterprise supp
     </div>
     <div class="inner-container">
         <div class="page-section">
-            <h2>Support Options</h2>
-            <div class="three-col">
-                <div class="col">
-                    <h3 class="col__title--community">Community</h3>
-                    <p>Event Store has an active Google Group with new posts every day. This is the best place to share your questions and answers with the community.</p>
-                    <p class="call-to-action"><a href="/community" class="btn btn--primary">Community Page</a></p>
-                </div>
-                <div class="col">
-                    <h3 class="col__title--commercial">Production</h3>
-                    <ul class="checkmark-list">
-                        <li>Available 9am–5pm (UK time)</li>
-                        <li>Next day response</li>
-                        <li>Developer support tickets</li>
-                        <li>Production support tickets</li>
-                        <li>Fix committment</li>
-                    </ul>
-                    <p class="call-to-action"><a href="/enquiries" class="btn btn--primary">Ask us about production support</a></p>
-                </div>
-                <div class="col">
-                    <h3 class="col__title--enterprise">Enterprise</h3>
-                    <ul class="checkmark-list">
-                        <li><strong>Available 24&times;7</strong></li>
-                        <li><strong>Up to two hour response time</strong></li>
-                        <li><strong>Custom builds</strong></li>
-                        <li>Developer support tickets</li>
-                        <li>Production support tickets</li>
-                        <li>Fix committment</li>
-                    </ul>
-                    <p class="call-to-action"><a href="/enquiries" class="btn btn--primary">Ask us about enterprise support</a></p>
-                </div>
-            </div>
+            <article id="pricing-table">
+		    <h1>Support plans</h1>
+			<h4>Choose a level to compare:</h4>
+			<ul class="support-level-select">
+				<li class="btn" id="pre-production-level-btn" onclick="selectLevel('pre-production');">Pre-production</li>
+				<li class="btn active" id="production-level-btn" onclick="selectLevel('production');">Production</li>
+				<li class="btn" id="enterprise-level-btn" onclick="selectLevel('enterprise');">Enterprise</li>
+			</ul>
+			<table>
+				<thead>
+					<tr>
+						<td></td>
+						<th scope="col" colspan="1" class="pre-production-level">
+							<strong>Pre-production</strong>
+							<span>The ideal choice whilst still in development environment.</span>
+							<a href="/enquiries" class="btn btn--primary">Find out more</a>
+						</th>
+						<th scope="col" colspan="2" class="production-level default">
+							<strong>Production</strong>
+							<span>Our most popular choice for production environments.</span>
+							<a href="/enquiries" class="btn btn--primary">Find out more</a>
+						</th>
+						<th scope="col" colspan="2" class="enterprise-level">
+							<strong>Enterprise</strong>
+							<span>When you need 24/7 support and the fastest response times.</span>
+							<a href="/enquiries" class="btn btn--primary">Find out more</a>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">Annual price</th>
+						<td class="pre-production-level">
+							<strong>£1199</strong>
+						</td>
+						<td class="production-level default">
+							<strong>£4999</strong>
+							<br/>
+							<em>+£1299 per cluster</em>
+							<br/>
+						</td>
+						<td class="production-level default">
+							<strong>£9999</strong>
+							<br/>
+							<em>+£1299 per cluster</em>
+							<br/>
+						</td>
+						<td class="enterprise-level">
+							<strong>£19999</strong>
+							<br/>
+							<em>+£1299 per cluster</em>
+							<br/>
+						</td>
+						<td class="enterprise-level">
+							<strong>£39999</strong>
+							<br/>
+							<em>+£1299 per cluster</em>
+							<br/>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">Support availability</th>
+						<td class="pre-production-level">9am to 5pm&dagger;<br/>Monday to Friday&Dagger;</td>
+						<td class="production-level default">9am to 5pm&dagger;<br/>Every day</td>
+						<td class="production-level default">9am to 5pm&dagger;<br/>Every day</td>
+						<td class="enterprise-level">All day<br/>Every day</td>
+						<td class="enterprise-level">All day<br/>Every day</td>
+					</tr>
+					<tr>
+						<th scope="row">Response time</th>
+						<td class="pre-production-level">Next day&ast;</td>
+						<td class="production-level default">Next day&ast;</td>
+						<td class="production-level default">Same day&ast;</td>
+						<td class="enterprise-level">8 hours</td>
+						<td class="enterprise-level">2 hours</td>
+					</tr>
+					<tr>
+						<th scope="row">Developer support tickets</th>
+						<td class="pre-production-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">Production support tickets</th>
+						<td class="pre-production-level">
+							<i class="fa fa-times-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">Operational tools</th>
+						<td class="pre-production-level">
+							<i class="fa fa-times-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">Fix commitment</th>
+						<td class="pre-production-level">
+							<i class="fa fa-times-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">Custom builds</th>
+						<td class="pre-production-level">
+							<i class="fa fa-times-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-times-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-times-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="6">&dagger; All times refer to London, UK time<br/>&Dagger; Excluding England and Wales public holidays<br/>&ast; For tickets received by 2pm</td>
+					</tr>
+				</tfoot>
+			</table>
+		</article>
         </div>
     </div>
     <div class="inner-container">
