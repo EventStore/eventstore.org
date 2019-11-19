@@ -58,5 +58,5 @@ document.getElementById('entPrice1').innerHTML = obj.currencies[currency].symbol
 document.getElementById('suppAvail1').innerHTML = obj.currencies[currency].supportdays.preproduction;
 var perClusterPrices = document.querySelectorAll('#pricing-table .clusterPrice');
 for (var i = 0; i < perClusterPrices.length; i++) {
-perClusterPrices[i].innerHTML = obj.currencies[currency].symbol + obj.currencies[currency].prices.percluster;
+perClusterPrices[i].innerHTML = "+" + obj.currencies[currency].symbol + obj.currencies[currency].prices.percluster + " per cluster";
 };};
