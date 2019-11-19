@@ -40,13 +40,14 @@ currentDefaults = document.querySelectorAll('#pricing-table .default');
 };
 
 // Change currency
+var json;
 async function getPricing() {
 const response = await fetch('/js/pricing.json');
-const json = await response.json();
-return json; };
+json = await response.json();
+return json; }
 getPricing();
 var currency = "GBP";
-var obj = JSON.parse(json);
+var obj = json;
 function changeCurrency(currency) {
 document.getElementById('prePrice').innerHTML = obj.currencies[currency].symbol + obj.currencies[currency].prices.preproduction;
 document.getElementById('prodPrice1').innerHTML = obj.currencies[currency].symbol + obj.currencies[currency].prices.productionnextday;
