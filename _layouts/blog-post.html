@@ -12,7 +12,9 @@
                     <time datetime="{{ page.date | date_to_xml_schema }}">{{ page.date | date_to_long_string }}</time>
                 </header>
                 {{ content }}
-            </article>
+            	<hr>
+		{% include author.html %}
+		</article>
             <ul class="post-list">
             {% for post in site.posts %}
                 <li class="post-list__item">
