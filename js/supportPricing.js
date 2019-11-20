@@ -50,12 +50,14 @@ return json; }
 getPricing();
 var currency = "GBP";
 function changeCurrency(currency) {
+document.getElementById('from-price').innerHTML = obj.currencies[currency].symbol + obj.currencies[currency].prices.preproduction;
 document.getElementById('prePrice').innerHTML = obj.currencies[currency].symbol + obj.currencies[currency].prices.preproduction;
 document.getElementById('prodPrice1').innerHTML = obj.currencies[currency].symbol + obj.currencies[currency].prices.productionnextday;
 document.getElementById('prodPrice2').innerHTML = obj.currencies[currency].symbol + obj.currencies[currency].prices.productionsameday;
 document.getElementById('entPrice1').innerHTML = obj.currencies[currency].symbol + obj.currencies[currency].prices.enterprise8hour;
 document.getElementById('entPrice2').innerHTML = obj.currencies[currency].symbol + obj.currencies[currency].prices.enterprise2hour;
-document.getElementById('suppAvail1').innerHTML = obj.currencies[currency].supportdays.preproduction;
+document.getElementById('suppAvail1').innerHTML = obj.currencies[currency].footnotes;
+document.getElementById('pricing-footnotes').innerHTML = obj.currencies[currency].supportdays.preproduction;
 var perClusterPrices = document.querySelectorAll('#pricing-table .clusterPrice');
 for (var i = 0; i < perClusterPrices.length; i++) {
 perClusterPrices[i].innerHTML = "+" + obj.currencies[currency].symbol + obj.currencies[currency].prices.percluster + " per cluster";
