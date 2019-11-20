@@ -357,3 +357,23 @@
         color: $color-blue-grey-100;
     }
 }
+
+hr#post-footer-divider {
+    margin-bottom: 30px;
+}
+#author-bio img {
+    float: left;
+    width: 175px;
+    margin-right:20px;
+}
+#author-bio h3 {
+    font-weight: bold;
+}
+#author-bio p {
+    font-size: 14px;
+}
+@media only screen and (max-width: 640px) {
+    #author-bio img {
+        float:none;
+    }
+}
