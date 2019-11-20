@@ -12,7 +12,7 @@
                     <time datetime="{{ page.date | date_to_xml_schema }}">{{ page.date | date_to_long_string }}</time>
                 </header>
                 {{ content }}
-            	<hr>
+            	<hr id="post-footer-divider">
 		{% include author.html %}
 		</article>
             <ul class="post-list">
