@@ -23,6 +23,12 @@ description: "Get free community support, or paid production and enterprise supp
     </div>
     <div class="inner-container">
         <div class="page-section">
+	<select id="currencySelect" onchange="changeCurrency(this.options[this.selectedIndex].value)">
+		<option value="CAD">CAD</option>
+		<option value="EUR">EUR</option>
+		<option value="GBP" selected="selected">GBP</option>
+		<option value="USD">USD</option>
+	</select>
             <article id="pricing-table">
 		    <h1>Support plans</h1>
 			<h4>Choose a level to compare:</h4>
@@ -193,15 +199,7 @@ description: "Get free community support, or paid production and enterprise supp
 				<tfoot>
 					<tr>
 						<td colspan="6">
-							<p><strong>Change currency</strong></p>
-						<select id="currencySelect" onchange="changeCurrency(this.options[this.selectedIndex].value)">
-							<option value="CAD">CAD</option>
-							<option value="EUR">EUR</option>
-							<option value="GBP" selected="selected">GBP</option>
-							<option value="USD">USD</option>
-						</select>
-						<br/><br/>
-							<span id="pricing-footnotes">&dagger; All times refer to London, UK time<br/>&Dagger; Excluding England and Wales public holidays<br/>&ast; For tickets received by 2pm</span></td>
+						<span id="pricing-footnotes">&dagger; All times refer to London, UK time<br/>&Dagger; Excluding England and Wales public holidays<br/>&ast; For tickets received by 2pm</span></td>
 					</tr>
 				</tfoot>
 			</table>
