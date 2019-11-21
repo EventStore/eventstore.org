@@ -124,8 +124,31 @@ article#pricing-table h4, article#pricing-table ul.support-level-select {
 	padding: 0.8em 1.25em 1.25em;
 	text-align: center;
 }
+#currencySelectDiv {
+    width: auto;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    border: 1px solid #bbb;
+    border-radius: 0.25rem;
+    background: #fff url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48cGF0aCBkPSJNNC4zMyA4LjVMMCAxTDguNjYgMXoiIGZpbGw9IiM2NjYiLz48L3N2Zz4=) right 13px center no-repeat;
+    float: right;
+    margin-bottom: 8px;
+    margin-top: -2vh;
+}
+
 #currencySelect {
-	float: right;
-	margin-bottom: 8px;
-	margin-top: -2vh;
+    padding: 8px 40px 8px 8px;
+    color: #666;
+    width: auto;
+    border: none;
+    box-shadow: none;
+    background: 0 0;
+    background-image: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    -moz-appearance: none;
+    text-indent: .01px;
+    text-overflow: '';
 }
