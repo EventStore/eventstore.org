@@ -13,11 +13,13 @@
 			    <time datetime="{{ page.date | date_to_xml_schema }}">{{ page.date | date_to_long_string }}</time>
 			    {% assign author = site.authors[page.author] %}
 			      {% if author.name %}<span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{% if author.link %}<a href="{{ author.link }}" title="Click to find out more about {{ author.name }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}</span>{% endif %}
+			    <div class="sharethis-inline-share-buttons"></div>
 			</div>
 			<hr>
                 </header>
                 {{ content }}
             	<hr id="post-footer-divider">
+		    <div class="sharethis-inline-share-buttons"></div>
 		{% include author.html %}
 		</article>
             <ul class="post-list">
