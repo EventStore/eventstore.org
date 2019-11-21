@@ -359,6 +359,11 @@ hr#post-footer-divider {
 }
 #author-bio h3 {
     font-weight: bold;
+    margin-top: 0;
+}
+#author-bio {
+    overflow: auto;
+    margin-top: 1.5rem;
 }
 #author-bio p {
     font-size: 14px;
