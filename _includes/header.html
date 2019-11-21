@@ -17,6 +17,9 @@
     <link href="https://eventstore.org/blog/feed/index.xml" rel="alternate" title="Event Store"
         type="application/rss+xml">
     {% include tagmanager1.html %}
+    {% if page.layout == "blog-post" %}
+	{% include sharethis.html %}
+	{% endif %}
 </head>
 
 <body>

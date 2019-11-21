@@ -161,10 +161,10 @@
     padding: 3rem 1.5rem;
     margin: 0 0 1.5rem;
     h1 {
-        max-width: 36rem !important;
-        margin: 0 auto;
-        text-align: center;
         font-weight: 700;
+    }
+    #header-meta {
+	margin-bottom: 1rem;
     }
     figure {
         margin: 1.5rem 0;
@@ -175,20 +175,11 @@
     figure, img {
         width: 100%;
     }
-    time {
-        display: block;
-        text-align: center;
-        margin: 1.5rem 0 3rem;
-        color: $color-blue-grey-600;
-    }
     @media (min-width: 600px) {
         padding: 3rem;
     }
     @media (min-width: 1000px) {
         padding: 6rem;
-        time {
-            margin: 1.5rem 0 6rem;
-        }
     }
     p:first-of-type {
         font-size: 1.25rem;
@@ -356,4 +347,40 @@
     p {
         color: $color-blue-grey-100;
     }
+}
+
+hr#post-footer-divider {
+    margin-bottom: 30px;
+}
+#author-bio img {
+    float: left;
+    width: 175px;
+    margin-right:20px;
+}
+#author-bio h3 {
+    font-weight: bold;
+    margin-top: 0;
+}
+#author-bio {
+    overflow: auto;
+    margin-top: 1.5rem;
+}
+#author-bio p {
+    font-size: 14px;
+}
+@media only screen and (max-width: 640px) {
+    #author-bio img {
+        float:none;
+    }
+}
+#header-meta * {
+    color: #546E7A;
+}
+
+#header-meta a {
+    text-decoration: underline;
+}
+
+header hr {
+    margin-top: 1.5rem;
 }
