@@ -23,12 +23,14 @@ description: "Get free community support, or paid production and enterprise supp
     </div>
     <div class="inner-container">
         <div class="page-section">
+	<div id="currencySelectDiv">
 	<select id="currencySelect" onchange="changeCurrency(this.options[this.selectedIndex].value)">
 		<option value="CAD">CAD</option>
 		<option value="EUR">EUR</option>
 		<option value="GBP" selected="selected">GBP</option>
 		<option value="USD">USD</option>
 	</select>
+	</div>
             <article id="pricing-table">
 		    <h1>Support plans</h1>
 			<h4>Choose a level to compare:</h4>
@@ -43,12 +45,12 @@ description: "Get free community support, or paid production and enterprise supp
 						<td></td>
 						<th scope="col" colspan="1" class="pre-production-level">
 							<strong>Pre-production</strong>
-							<span>The ideal choice whilst still in development environment.</span>
+							<span>The ideal choice whilst still in development environments.</span>
 							<a href="/enquiries" class="btn btn--primary">Find out more</a>
 						</th>
 						<th scope="col" colspan="2" class="production-level default">
 							<strong>Production</strong>
-							<span>Our most popular choice for production environments.</span>
+							<span>Our standard level of support for production environments.</span>
 							<a href="/enquiries" class="btn btn--primary">Find out more</a>
 						</th>
 						<th scope="col" colspan="2" class="enterprise-level">
@@ -106,7 +108,7 @@ description: "Get free community support, or paid production and enterprise supp
 						<td class="enterprise-level">2 hours</td>
 					</tr>
 					<tr>
-						<th scope="row">Developer support tickets</th>
+						<th scope="row">Commercial version <i class="fa fa-info-circle" data-tippy-content="Commercial packages also available for Ubuntu, Windows, MacOS"></i></th>
 						<td class="pre-production-level">
 							<i class="fa fa-check-circle"></i>
 						</td>
@@ -124,7 +126,25 @@ description: "Get free community support, or paid production and enterprise supp
 						</td>
 					</tr>
 					<tr>
-						<th scope="row">Production support tickets</th>
+						<th scope="row">Developer support tickets <i class="fa fa-info-circle" data-tippy-content="Support tickets for a non-operational development environment."></i></th>
+						<td class="pre-production-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">Production support tickets <i class="fa fa-info-circle" data-tippy-content="Support tickets for an operational production environment."></i></th>
 						<td class="pre-production-level">
 							<i class="fa fa-times-circle"></i>
 						</td>
@@ -226,4 +246,5 @@ description: "Get free community support, or paid production and enterprise supp
             </div>
         </div>
     </div>
+		{% include tooltip.html %}
 {% include footer.html %}
