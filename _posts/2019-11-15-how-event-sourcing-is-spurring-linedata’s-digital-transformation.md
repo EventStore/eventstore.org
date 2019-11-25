@@ -1,7 +1,9 @@
 ---
 layout: blog-post
 title: 'Case Study: How Event Sourcing is Spurring Linedata’s Digital Transformation'
-author: "Dave Remy"
+author: 'Example Author'
+category: ['Case Study']
+tags: ['Test','Test 2','Things']
 ---
 > **About Linedata**
 >

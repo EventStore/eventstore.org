@@ -1,0 +1,12 @@
+{% assign author = site.authors[page.author] %}
+{% if author.name %}
+  <div id="author-bio">
+    {% if author.image %}
+    <img src="{{ author.image }}" alt="Photo of {{ author.name }}" title="{{ author.name}} bio photo"/>
+    {% endif %}
+    <h3>Written by: {{ author.name }}</h3>
+    {% if author.bio %}
+    <p>{{ author.bio }}</p>
+    {% endif %}
+  </div>
+{% endif %}

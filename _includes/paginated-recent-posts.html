@@ -1,0 +1,21 @@
+<ul class="post-list">
+{% for post in paginator.posts %}
+	<article class="blog-post">
+	<header>
+		<a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
+		<div id="header-meta">
+			<time datetime="{{ post.date | date_to_xml_schema }}">{{ post.date | date_to_long_string }}</time>
+			{% include author.html %}
+			{% include categories.html %}
+		</div>
+	</header>
+	<p>{{ post.excerpt }}</p>
+	<span class="c2a"><a class="btn btn--secondary" href="{{ post.url }}" title="Read article">Read article</a></span> 
+	<footer>
+		{% include tags.html %}
+	</footer>
+	</article>
+	{% unless forloop.last %}<hr>{% endunless %}
+	{% endfor %}
+	{% include pagination.html %}
+</ul>

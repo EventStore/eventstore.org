@@ -2,6 +2,7 @@
 title: "Event Store 5.0.0 Release Candidate 1"
 author: "Shaan Nobee"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 Event Store 5.0.0 RC 1 is out! It is available for the following operating systems:

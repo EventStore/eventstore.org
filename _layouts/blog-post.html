@@ -11,30 +11,20 @@
                     <h1>{{ page.title }}</h1>
                     <div id="header-meta">
 			    <time datetime="{{ page.date | date_to_xml_schema }}">{{ page.date | date_to_long_string }}</time>
-			    {% assign author = site.authors[page.author] %}
-			      {% if author.name %}
-				  <span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{% if author.link %}<a href="{{ author.link }}" title="Click to find out more about {{ author.name }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}</span>
-				  {% else %}<span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ page.author }}</span>
-			      {% endif %}
+			    {% include author.html %}
+				{% include categories.html %}
 			</div>
 			<!-- Go to www.addthis.com/dashboard to customize your tools --><div class="addthis_inline_share_toolbox"></div>
 			<hr>
                 </header>
                 {{ content }}
             	<hr id="post-footer-divider">
+				{% include tags.html %}
 		    <!-- Go to www.addthis.com/dashboard to customize your tools --><div class="addthis_inline_share_toolbox"></div>
-		{% include author.html %}
+		{% include author-bio.html %}
 		</article>
-            <ul class="post-list">
-            {% for post in site.posts %}
-                <li class="post-list__item">
-                    <a href="{{ post.url }}">
-                        <h2>{{ post.title }}</h2>
-                        <time datetime="{{ post.date | date_to_xml_schema }}">{{ post.date | date_to_long_string }}</time>
-                    </a>
-                </li>
-            {% endfor %}
-            </ul>
+  <div id="recent-posts"><h2>You might also like</h2>
+	{% include recent-posts.html %}</div>
 		</div>
 	</div>
 {% include footer.html %}

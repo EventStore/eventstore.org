@@ -5,8 +5,8 @@
 		</div>
 		<div class="page-main page-main--blog">
 			{% for posts in site.posts %}
-				<h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
-				<p class="blog-meta">By {{ page.author }}</p>
+				<h2><a href="{{ page.url }}">{{ post.title }}</a></h2>
+				<p class="blog-meta">By {{ post.author }}</p>
 			{% endfor %}
 		</div>
 	</div>

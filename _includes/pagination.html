@@ -1,0 +1,24 @@
+{% if paginator.total_pages > 1 %}
+	<ul id="pagination-links">
+	  {% if paginator.page_trail %}
+	  {% if paginator.page > 3 %}
+	  <li><a href="{{ paginator.first_page_path | remove_first: 'index.html'| prepend: site.baseurl | replace: '//', '/' }}" title="{{trail.title}}">&lt;&lt;</a><span>&nbsp;&nbsp;&nbsp;</span>
+	  {% endif %}
+	  {% if paginator.previous_page %}
+	  <li><a href="{{ paginator.previous_page_path  | remove_first: 'index.html'| prepend: site.baseurl | replace: '//', '/' }}" title="{{trail.title}}">&lt;</a><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+	  {% endif %}
+  {% for trail in paginator.page_trail %}
+    {% if page.url == trail.path %}<li class="selected"><strong>Page {{ trail.num }}</strong>{% unless forloop.last %}<span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;</span>{% endunless %}</li>
+	{% else %}<li><a href="{{ trail.path | remove_first: 'index.html'| prepend: site.baseurl }}" title="{{trail.title}}">Page {{ trail.num }}</a>{% unless forloop.last %}<span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;</span>{% endunless %}</li>
+	{% endif %}
+  {% endfor %}
+	  {% if paginator.next_page %}
+	  <li><span>&nbsp;&nbsp;&nbsp;</span><a href="{{ paginator.next_page_path  | remove_first: 'index.html'| prepend: site.baseurl | replace: '//', '/' }}" title="{{trail.title}}">&gt;</a></li>
+	  {% endif %}
+	  {% assign notNearEnd = paginator.page | plus:1 %}
+    {% if notNearEnd < paginator.total_pages  %}
+    <li><span>&nbsp;&nbsp;&nbsp;</span><a href="{{ paginator.last_page_path  | remove_first: 'index.html'| prepend: site.baseurl | replace: '//', '/' }}" title="{{trail.title}}">&gt;&gt;</a></li>
+    {% endif %}
+{% endif %}
+	</ul>
+{% endif %}
