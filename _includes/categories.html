@@ -1,7 +1,7 @@
 {% if post %}{% assign category = post.category %}
 {% else %}{% assign category = page.category %}{% endif %}
 {% if category %}<span>&nbsp;&nbsp;|&nbsp;&nbsp;
-{% for category in category %}
-<a href="{{site.baseurl}}/category/{{category|slugify|downcase}}">{{category}}</a></span>
+    {% for category in category %}
+    <a href="{{site.baseurl}}/blog/category/{{category|slugify|downcase}}">{{category}}</a></span>
 {% unless forloop.last %}<span>&nbsp;{% endunless %}
-{% endfor %}{% endif %}
+    {% endfor %}{% endif %}
