@@ -8,13 +8,13 @@ var mediaQuery = window.matchMedia('(min-width: 640px)');
 mediaQuery.addListener(mobileTable);
 function mobileTable(mediaQuery) {    
 if (mediaQuery.matches) {
-document.querySelector("#pricing-table thead th:not(:first-of-type)".colSpan = 2;
-document.querySelector("#pricing-table thead th:first-of-type)".colSpan = 1;
+document.querySelector("#pricing-table thead th:not(:first-of-type)").colSpan = 2;
+document.querySelector("#pricing-table thead th:first-of-type").colSpan = 1;
 } else {
-var colHeaders = document.querySelectorAll("#pricing-table thead th")
+var colHeaders = document.querySelectorAll("#pricing-table thead th");
 for (var i = 0; i < colHeaders.length; i++) {
 colHeaders[i].colSpan = 3;
-};
+}
 }
 }
 mobileTable(mediaQuery);
@@ -24,20 +24,20 @@ var currentDefaults = document.querySelectorAll('#pricing-table .default');
 var buttons = document.querySelectorAll('#pricing-table li.btn');
 function selectLevel(level) {
 for (var i = 0; i < currentDefaults.length; i++) {
-currentDefaults[i].classList.remove('default')
-};
+currentDefaults[i].classList.remove('default');
+}
 for (var i = 0; i < buttons.length; i++) {
-buttons[i].classList.remove('active')
-};
+buttons[i].classList.remove('active');
+}
 var newActives = level + "-level-btn"; 
 document.getElementById(newActives).classList.add('active');
 var newDefaults = level + "-level";
 newDefaults = document.querySelectorAll('#pricing-table .' + newDefaults);
 for (var i = 0; i < newDefaults.length; i++) {
-newDefaults[i].classList.add('default')
-};
+newDefaults[i].classList.add('default');
+}
 currentDefaults = document.querySelectorAll('#pricing-table .default');
-};
+}
 
 // Change currency
 var json;
@@ -46,7 +46,7 @@ async function getPricing() {
 const response = await fetch('/js/pricing.json');
 json = await response.json();
 obj = json;
-return json; }
+}
 getPricing();
 var currency = "GBP";
 function changeCurrency(currency) {
@@ -61,4 +61,4 @@ document.getElementById('pricing-footnotes').innerHTML = obj.currencies[currency
 var perClusterPrices = document.querySelectorAll('#pricing-table .clusterPrice');
 for (var i = 0; i < perClusterPrices.length; i++) {
 perClusterPrices[i].innerHTML = "+" + obj.currencies[currency].symbol + obj.currencies[currency].prices.percluster + " per cluster";
-};};
+}}
