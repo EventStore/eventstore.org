@@ -8,8 +8,8 @@ var mediaQuery = window.matchMedia('(min-width: 640px)');
 mediaQuery.addListener(mobileTable);
 function mobileTable(mediaQuery) {    
 if (mediaQuery.matches) {
-document.querySelector("#pricing-table thead th:not(:first-of-type").colSpan = 2;
-document.querySelector("#pricing-table thead th:first-of-type").colSpan = 1;
+document.querySelector("#pricing-table thead th:not(:first-of-type)".colSpan = 2;
+document.querySelector("#pricing-table thead th:first-of-type)".colSpan = 1;
 } else {
 var colHeaders = document.querySelectorAll("#pricing-table thead th")
 for (var i = 0; i < colHeaders.length; i++) {
