@@ -1,7 +1,9 @@
 // Load responsive compare table CSS if JS enabled
-document.getElementsByTagName("head")[0].insertAdjacentHTML(
-"beforeend",
-"<link rel=\"stylesheet\" href=\"/css/responsive-compare-table.css\" />");
+var element = document.createElement("link");
+element.setAttribute("rel", "stylesheet");
+element.setAttribute("type", "text/css");
+element.setAttribute("href", "/css/responsive-compare-table.css");
+document.getElementsByTagName("head")[0].appendChild(element);
 
 // Resize column headers on mobile
 var mediaQuery = window.matchMedia('(min-width: 640px)');

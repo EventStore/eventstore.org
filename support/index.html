@@ -247,4 +247,18 @@ description: "Get free community support, or paid production and enterprise supp
         </div>
     </div>
 		{% include tooltip.html %}
+		<noscript>
+			<style>
+				[class*="fa-check-"]:before
+				{
+					content:"✔";
+					font-style: normal;
+				}
+				[class*="fa-times-"]:before
+				{
+					content:"✖";
+					font-style: normal;
+				}
+			</style>
+		</noscript>
 {% include footer.html %}
