@@ -1,5 +1,5 @@
 ---
-title: "Developer Blog"
+title: "Blog"
 description: "News and ideas from the developer team at Event Store."
 pagination: 
   enabled: true
@@ -8,7 +8,8 @@ pagination:
 {% include header.html %}
 <div class="page-title">
 	<div class="inner-container">
-		<h1>{{ page.title }}</h1>
+		{% include breadcrumb.html %}
+		<h1>Developer Blog</h1>
 	</div>
 </div>
 <div class="page-section page-section--post-list">

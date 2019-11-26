@@ -1,5 +1,4 @@
 {% if post %}{% assign tags = post.tags %}{% else %}{% assign tags = page.tags %}{% endif %}{% unless tags == empty %}
 <div id="footer-tags"><strong>Tags:</strong> {% endunless %}
-    {% for tag in tags %}<a
-        href="{{site.baseurl}}/blog/tag/{{tag|slugify|downcase}}">{{tag}}</a></span>{% unless forloop.last %}<span>,&nbsp;{% endunless %}{% endfor %}{% unless tags == empty %}
+    {% for tag in tags %}<a href="{{site.baseurl}}/blog/tags/{{tag|slugify|downcase}}/">{{tag}}</a></span>{% unless forloop.last %}<span>,&nbsp;{% endunless %}{% endfor %}{% unless tags == empty %}
 </div>{% endunless %}

@@ -1,0 +1,30 @@
+---
+title: "Tags"
+description: "View a list of tags from the Event Store blog."
+pagination: 
+  enabled: true
+---
+
+{% include header.html %}
+<div class="page-title">
+	<div class="inner-container">
+		{% include breadcrumb.html %}
+		<h1>Developer Blog - Tags</h1>
+		</div></div>
+		<div class="page-section page-section--post-list">
+	<div class="inner-container">
+			<ul>
+{% assign tags_list = site.tags %}
+  {% if tags_list.first[0] == null %}
+    {% for tag in tags_list %}
+      <li><a href="{{site.baseurl}}/blog/tags/{{tag|slugify|downcase}}/">{{ tag | camelcase }} ({{ site.tags[tag].size }})</a></li>
+    {% endfor %}
+  {% else %}
+    {% for tag in tags_list %}
+      <li><a href="{{site.baseurl}}/blog/tags/{{tag[0]|slugify|downcase}}/">{{ tag[0] | camelcase }} ({{ tag[1].size }})</a></li>
+    {% endfor %}
+  {% endif %}
+{% assign tags_list = nil %}
+</ul>
+		</div></div>
+{% include footer.html %}

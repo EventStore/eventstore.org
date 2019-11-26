@@ -1,0 +1,17 @@
+<div class="breadcrumb-trail">
+	<span>
+		{% if page.layout == "blog-post" %}
+		{% assign category = page.category %}
+		{% capture firstcategory %}{% for category in page.category %}{% if forloop.first == true %}{{category|slugify|downcase}}{% endif %}{% endfor %}{% endcapture %}
+		{% capture postcrumbs %}{{site.baseurl}}/blog/categories/{{firstcategory}}/{{ page.title }}{% endcapture %}{% assign crumbs = {{postcrumbs}} | remove:'/index.html' | split: '/' %}
+		{% else %}{% assign crumbs = page.url | remove:'/index.html' | split: '/' %}{% endif %}
+		<a href="/">Home</a>
+		{% for crumb in crumbs offset: 1 %}
+		  {% if forloop.last %}
+			&nbsp;>&nbsp; {% if page.autopages %}{{page.autopages.display_name}}{% else %}{{ page.title }}{% endif %}
+		  {% else %}
+			&nbsp;>&nbsp; <a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
+		  {% endif %}
+		{% endfor %}
+	</span>
+</div>
