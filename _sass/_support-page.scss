@@ -1,0 +1,156 @@
+article#pricing-table {
+	width:100%;
+	margin:0 auto;
+	position:relative;
+	text-align: center;
+	overflow: auto;
+}
+#pricing-table h1 {
+	max-width: none;
+}
+#pricing-table .btn {
+	white-space: nowrap;
+}
+#pricing-table th > .btn {
+	margin-bottom: 12px;
+}
+#pricing-table table {
+	width:100%;
+	border-collapse: collapse;
+	font-size: 14px;
+	border: none;
+}
+#pricing-table td, #pricing-table th {
+	vertical-align: top;
+	padding: 8px 1.4vw;
+	background: none;
+	border: none;
+	height: auto;
+}
+#pricing-table thead th, #pricing-table tbody td {
+	text-align:center;
+}
+#pricing-table thead tr, #pricing-table tbody tr {
+	border-bottom: 1px solid #d0d0d0;
+}
+#pricing-table thead th strong {
+	text-transform: uppercase;
+	font-weight: bold;
+	display:block;
+}
+#pricing-table thead th span {
+	font-weight:normal;
+	display: block;
+	padding: 8px 0px 16px;
+}
+#pricing-table tbody th {
+	text-align: left;
+	font-weight:600;
+}
+#pricing-table tbody tr:first-child td strong {
+	color:#4caf50;
+	font-size:1.3em;
+}
+#pricing-table tbody tr:first-child td em {
+	font-style: normal;
+	font-size: 0.9em;
+}
+#pricing-table tfoot {
+	display: table-footer-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+#pricing-table tfoot td {
+	font-size: 0.9em;
+}
+#pricing-table td.default, #pricing-table th.default, #pricing-table th[scope="row"], #pricing-table tfoot td {
+	display:table-cell;
+}
+#pricing-table th[scope="row"] {
+	width:125px;
+	box-sizing:content-box;
+}
+#pricing-table .fa-check-circle, #pricing-table .fa-times-circle {
+	font-size:1.8em;
+}
+#pricing-table .fa-check-circle {
+	color: #4caf50;
+}
+#pricing-table .fa-times-circle {
+	color: #d87777;
+}
+#pricing-table ul.support-level-select {
+	padding: 0;
+	margin-bottom: 36px;
+	display:flex;
+	top:0px;
+	z-index:10;
+	padding-bottom:14px;
+}
+#pricing-table ul.support-level-select li {
+	list-style: none;
+	display: inline-block;
+	padding: 6px 12px;
+	color: #43A047;
+	cursor: pointer;
+	margin-right: 7px;
+	font-size: 0.9em;
+	height: auto;
+}
+#pricing-table li.btn.active {
+	background: rgb(231,231,231);
+	font-weight: bold;
+}
+#pricing-table .production-level {
+	background: #f5f5f5;
+}
+.community-button {
+	background: rgb(69, 90, 100);
+	border-color: rgb(69, 90, 100);
+	color: rgb(255, 255, 255);
+	font-weight: 400;
+}
+.community-button:focus, .community-button:hover {
+	background: #546E7A;
+	border-color: #546E7A;
+	color:white;
+}
+.community-section {
+	background: rgba(69, 90, 100, 0.2);
+	padding: 0.8em 1.25em 1.25em;
+	text-align: center;
+}
+#currencySelectDiv {
+    width: auto;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    border: 1px solid #bbb;
+    border-radius: 0.25rem;
+    background: #fff url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48cGF0aCBkPSJNNC4zMyA4LjVMMCAxTDguNjYgMXoiIGZpbGw9IiM2NjYiLz48L3N2Zz4=) right 13px center no-repeat;
+    float: right;
+    margin-bottom: 8px;
+    margin-top: -2vh;
+}
+
+#currencySelect {
+    padding: 8px 40px 8px 8px;
+    color: #666;
+    width: auto;
+    border: none;
+    box-shadow: none;
+    background: 0 0;
+    background-image: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    -moz-appearance: none;
+    text-indent: .01px;
+    text-overflow: '';
+}
+#currencySelect::-ms-expand {
+    display: none;
+}
+article#pricing-table h4, article#pricing-table ul.support-level-select, #currencySelectDiv {
+	display: none;
+}

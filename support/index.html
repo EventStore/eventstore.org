@@ -12,7 +12,7 @@ description: "Get free community support, or paid production and enterprise supp
     <div class="page-section--support-banner">
         <div class="inner-container">
             <div class="page-section__half">
-                <p class="lead">Get support from the Event Store community in our Google Group, or purchase a developer-led support plan from only £1199.</p>
+                <p class="lead">Get support from the Event Store community in our Google Group, or purchase a developer-led support plan from only <span id="from-price">£1199</span>.</p>
             </div>
             <div class="page-section__half">
                 <div class="support-intro-placeholder">
@@ -23,38 +23,219 @@ description: "Get free community support, or paid production and enterprise supp
     </div>
     <div class="inner-container">
         <div class="page-section">
-            <h2>Support Options</h2>
-            <div class="three-col">
-                <div class="col">
-                    <h3 class="col__title--community">Community</h3>
-                    <p>Event Store has an active Google Group with new posts every day. This is the best place to share your questions and answers with the community.</p>
-                    <p class="call-to-action"><a href="/community" class="btn btn--primary">Community Page</a></p>
-                </div>
-                <div class="col">
-                    <h3 class="col__title--commercial">Production</h3>
-                    <ul class="checkmark-list">
-                        <li>Available 9am–5pm (UK time)</li>
-                        <li>Next day response</li>
-                        <li>Developer support tickets</li>
-                        <li>Production support tickets</li>
-                        <li>Fix committment</li>
-                    </ul>
-                    <p class="call-to-action"><a href="/enquiries" class="btn btn--primary">Ask us about production support</a></p>
-                </div>
-                <div class="col">
-                    <h3 class="col__title--enterprise">Enterprise</h3>
-                    <ul class="checkmark-list">
-                        <li><strong>Available 24&times;7</strong></li>
-                        <li><strong>Up to two hour response time</strong></li>
-                        <li><strong>Custom builds</strong></li>
-                        <li>Developer support tickets</li>
-                        <li>Production support tickets</li>
-                        <li>Fix committment</li>
-                    </ul>
-                    <p class="call-to-action"><a href="/enquiries" class="btn btn--primary">Ask us about enterprise support</a></p>
-                </div>
-            </div>
+	<div id="currencySelectDiv">
+	<select id="currencySelect" onchange="changeCurrency(this.options[this.selectedIndex].value)">
+		<option value="CAD">CAD</option>
+		<option value="EUR">EUR</option>
+		<option value="GBP" selected="selected">GBP</option>
+		<option value="USD">USD</option>
+	</select>
+	</div>
+            <article id="pricing-table">
+		    <h1>Support plans</h1>
+			<h4>Choose a level to compare:</h4>
+			<ul class="support-level-select">
+				<li class="btn" id="pre-production-level-btn" onclick="selectLevel('pre-production');">Pre-production</li>
+				<li class="btn active" id="production-level-btn" onclick="selectLevel('production');">Production</li>
+				<li class="btn" id="enterprise-level-btn" onclick="selectLevel('enterprise');">Enterprise</li>
+			</ul>
+			<table>
+				<thead>
+					<tr>
+						<td></td>
+						<th scope="col" colspan="1" class="pre-production-level">
+							<strong>Pre-production</strong>
+							<span>The ideal choice whilst still in development environments.</span>
+							<a href="/enquiries" class="btn btn--primary">Find out more</a>
+						</th>
+						<th scope="col" colspan="2" class="production-level default">
+							<strong>Production</strong>
+							<span>Our standard level of support for production environments.</span>
+							<a href="/enquiries" class="btn btn--primary">Find out more</a>
+						</th>
+						<th scope="col" colspan="2" class="enterprise-level">
+							<strong>Enterprise</strong>
+							<span>When you need 24/7 support and the fastest response times.</span>
+							<a href="/enquiries" class="btn btn--primary">Find out more</a>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">Annual price</th>
+						<td class="pre-production-level">
+							<strong id="prePrice">£1199</strong>
+						</td>
+						<td class="production-level default">
+							<strong id="prodPrice1">£4999</strong>
+							<br/>
+							<em class="clusterPrice">+£1299 per cluster</em>
+							<br/>
+						</td>
+						<td class="production-level default">
+							<strong id="prodPrice2">£9999</strong>
+							<br/>
+							<em class="clusterPrice">+£1299 per cluster</em>
+							<br/>
+						</td>
+						<td class="enterprise-level">
+							<strong id="entPrice1">£19999</strong>
+							<br/>
+							<em class="clusterPrice">+£1299 per cluster</em>
+							<br/>
+						</td>
+						<td class="enterprise-level">
+							<strong id="entPrice2">£39999</strong>
+							<br/>
+							<em class="clusterPrice">+£1299 per cluster</em>
+							<br/>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">Support availability</th>
+						<td class="pre-production-level">9am to 5pm&dagger;<br/><span id="suppAvail1">Monday to Friday&Dagger;</span></td>
+						<td class="production-level default">9am to 5pm&dagger;<br/>Every day</td>
+						<td class="production-level default">9am to 5pm&dagger;<br/>Every day</td>
+						<td class="enterprise-level">All day<br/>Every day</td>
+						<td class="enterprise-level">All day<br/>Every day</td>
+					</tr>
+					<tr>
+						<th scope="row">Response time</th>
+						<td class="pre-production-level">Next day&ast;</td>
+						<td class="production-level default">Next day&ast;</td>
+						<td class="production-level default">Same day&ast;</td>
+						<td class="enterprise-level">8 hours</td>
+						<td class="enterprise-level">2 hours</td>
+					</tr>
+					<tr>
+						<th scope="row">Commercial version <i class="fa fa-info-circle" data-tippy-content="Commercial packages also available for Ubuntu, Windows, MacOS"></i></th>
+						<td class="pre-production-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">Developer support tickets <i class="fa fa-info-circle" data-tippy-content="Support tickets for a non-operational development environment."></i></th>
+						<td class="pre-production-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">Production support tickets <i class="fa fa-info-circle" data-tippy-content="Support tickets for an operational production environment."></i></th>
+						<td class="pre-production-level">
+							<i class="fa fa-times-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">Operational tools</th>
+						<td class="pre-production-level">
+							<i class="fa fa-times-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">Fix commitment</th>
+						<td class="pre-production-level">
+							<i class="fa fa-times-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">Custom builds</th>
+						<td class="pre-production-level">
+							<i class="fa fa-times-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-times-circle"></i>
+						</td>
+						<td class="production-level default">
+							<i class="fa fa-times-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+						<td class="enterprise-level">
+							<i class="fa fa-check-circle"></i>
+						</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="6">
+						<span id="pricing-footnotes">&dagger; All times refer to London, UK time<br/>&Dagger; Excluding England and Wales public holidays<br/>&ast; For tickets received by 2pm</span></td>
+					</tr>
+				</tfoot>
+			</table>
+		</article>
         </div>
+    </div>
+    <div class="inner-container">
+	<div class="page-section">
+		<div class="community-section">
+			<h2>Community Support</h2>
+			<p>Ask the Event Store community your questions on our Google Group with over 1,200 members.</p>
+			<p>
+				<a class="btn community-button" href="/community">Ask the community</a>
+			</p>
+		</div>
+	</div>
     </div>
     <div class="inner-container">
         <div class="page-section--oem">
@@ -65,47 +246,19 @@ description: "Get free community support, or paid production and enterprise supp
             </div>
         </div>
     </div>
-    <div class="inner-container">
-        <div class="page-section--appliances">
-            <div class="three-col">
-                <div class="col">
-                    <h2>Appliances</h2>
-                    <p class="left">Purpose built Event Store appliances are available in two models; Standard and Pro. Support costs are significantly reduced for appliance owners.</p>
-                    <p class="left">If you are interested in buying Event Store appliances please get in touch so we can discuss your needs and how best to fulfill them.</p>
-                    <p class="call-to-action"><a href="/enquiries" class="btn">Ask us about Appliances</a></p>
-                </div>
-                <div class="col">
-                    <h3 class="col__title--commercial">Standard Appliance</h3>
-                    <ul class="checkmark-list">
-                        <li>1U half-depth chassis</li>
-                        <li>Dual gigabit LAN</li>
-                        <li>Intel Core i3-4130 3.4GHz (3MB cache)</li>
-                        <li>Single CPU</li>
-                        <li>240GB SSD<br>2TB 7200rpm HDD</li>
-                        <li>32GB RAM</li>
-                    </ul>
-                    <p>
-                        <span class="price">£1,995</span><br>
-                        <span class="price-sub">+ £995/year per cluster support</span>
-                    </p>
-                </div>
-                <div class="col">
-                    <h3 class="col__title--enterprise">Pro Appliance</h3>
-                    <ul class="checkmark-list">
-                        <li><strong>1U full-depth chassis with rails</strong></li>
-                        <li><strong>Quad gigabit LAN</strong></li>
-                        <li><strong>Intel Xeon E5-2603 1.6GHz six core (15MB cache)</strong></li>
-                        <li><strong>Dual CPU</strong></li>
-                        <li><strong>80GB SSD<br>4&times; 2TB 7200rpm HDD</strong></li>
-                        <li><strong>72GB RAM</strong></li>
-                        <li>Hardware RAID with NAND-flash backup</li>
-                    </ul>
-                    <p>
-                        <span class="price">£3,995</span><br>
-                        <span class="price-sub">+ £995/year per cluster support</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+		{% include tooltip.html %}
+		<noscript>
+			<style>
+				[class*="fa-check-"]:before
+				{
+					content:"✔";
+					font-style: normal;
+				}
+				[class*="fa-times-"]:before
+				{
+					content:"✖";
+					font-style: normal;
+				}
+			</style>
+		</noscript>
 {% include footer.html %}
