@@ -3,6 +3,7 @@ title: "v2.0 binaries released"
 date: 2013-07-19T17:40Z
 author: "Greg Young"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 Version 2.0 binaries are now available for download at [eventstore.org/downloads](/downloads).

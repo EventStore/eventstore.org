@@ -3,6 +3,7 @@ title: "Event Store 3.0.1 Released"
 date: 2014-10-28T12:00Z
 author: "James Nugent"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 Hot on the heels of version 3.0.0, which was released at our Birthday Party in London on September 17th, 2014, we’re pleased to announce a service release of Event Store, version 3.0.1. This fixes a number of small bugs and updates the bundled version of the uder interface. The release notes are below.

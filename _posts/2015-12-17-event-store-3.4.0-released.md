@@ -2,6 +2,7 @@
 title: "Event Store 3.4.0 Released"
 author: "Pieter Germishuys"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 Event Store 3.4.0 is now released! The headline feature is the addition of the [HTTP API for “competing consumers”](/docs/http-api/competing-consumers/), but there have been numerous other improvements and bug fixes. We have also moved from self hosting our Event Store packages to hosting the packages on [packagecloud](https://packagecloud.io/EventStore/EventStore-OSS).

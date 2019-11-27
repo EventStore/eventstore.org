@@ -3,6 +3,7 @@ title: "Øredev Developer Conference: A deep look into the Event Store"
 date: 2012-11-19T09:21Z
 author: "Dan Leech"
 layout: blog-post
+category: 'News'
 ---
 
 > What if I told you that the new Event Store (OSS [eventstore.org](/)) is an ACID compliant database with only 24 bytes of mutable data? This session will look deep inside the Event Store and architectural decisions and trade offs made in the development of it.

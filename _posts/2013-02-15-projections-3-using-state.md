@@ -3,6 +3,7 @@ title: "Projections 3: Using state"
 date: 2013-02-15T08:50Z
 author: "Greg Young"
 layout: blog-post
+category: 'Tutorials'
 ---
 
 In [Projections 2](/blog/20130213/projections-2-a-simple-sep-projection) we looked at creating a very simple projection that would analyze our statistics inside of the Event Store. The projection was:

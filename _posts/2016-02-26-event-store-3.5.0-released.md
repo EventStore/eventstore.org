@@ -2,6 +2,7 @@
 title: "Event Store 3.5.0 Released"
 author: "Pieter Germishuys"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 Event Store 3.5.0 is now released! As we are moving forward from 3.5.0, projections will be the main focus of the releases leading up to version 4.0 (The intended version for projections to be a supported production feature). There have been numerous other improvements and bug fixes.

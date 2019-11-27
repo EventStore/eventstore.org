@@ -2,6 +2,7 @@
 title: "Event Store 4.0.0 Release Candidate 2"
 author: "Pieter Germishuys"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 We are happy and excited to announce the release candidate 2 packages for Event Store 4.0.0. They are available for the following operating systems:

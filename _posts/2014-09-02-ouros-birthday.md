@@ -3,6 +3,7 @@ title: "Ouro's Birthday!"
 date: 2014-09-02T12:00Z
 author: "Greg Young"
 layout: blog-post
+category: 'News'
 ---
 
 <p class="lead">It's now approaching two years since Event Store was open-sourced on September

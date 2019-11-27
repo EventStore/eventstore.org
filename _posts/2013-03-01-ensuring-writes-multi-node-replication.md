@@ -3,6 +3,7 @@ title: "Ensuring writes – multi-node replication"
 date: 2013-03-01T16:08Z
 author: "Greg Young"
 layout: blog-post
+category: 'Articles'
 ---
 
 We have gotten the question very often how the multi-node version works with replication. After typing it up about five times in email I figured it might be valuable to do a longer write-up that we can suck into our documentation (and a blog post).

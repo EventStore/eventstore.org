@@ -3,6 +3,7 @@ title: "Getting Started: Part 3 – Subscriptions"
 date: 2013-03-06T18:05Z
 author: "James Nugent"
 layout: blog-post
+category: 'Tutorials'
 ---
 
 In part 2 we looked at hooking up the CommonDomain repository. In this post we’ll look at subscriptions. In part 3(a) we’ll look at how you might hook up denormalizers to produce read models (for example).

@@ -3,6 +3,7 @@ title: "Projections (intermission)"
 date: 2013-02-17T08:37Z
 author: "Greg Young"
 layout: blog-post
+category: 'Tutorials'
 ---
 
 Yesterday I was meeting with a company. We were going through some of their problems and looking at whether the Event Store and in particular stream querying might be a viable solution to any of their problems. It turned out one of the problems was a perfect example of where projections can make a big project tiny.

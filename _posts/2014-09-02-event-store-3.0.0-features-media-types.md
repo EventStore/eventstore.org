@@ -3,6 +3,7 @@ title: "Event Store 3.0.0 - New Media Types"
 date: 2014-09-02T13:00Z
 author: "James Nugent"
 layout: blog-post
+category: 'News'
 ---
 
 *As we gear up to launch version 3.0.0 of Event Store, we decided it would be a good idea to run a short series of articles describing some of the new features and changes for those who haven’t seen them. If there are things you want to know about in particular, please get in touch on Twitter, [@eventstore](https://twitter.com/eventstore)!*

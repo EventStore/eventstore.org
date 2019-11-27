@@ -2,6 +2,7 @@
 title: "Event Store 3.7.0 Released"
 author: "Hayley Campbell"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 Event Store 3.7.0 is now released! This release contains a number of improvements and bug fixes, as well as a rather large update to the Embedded Client. The next release will mainly focus on improving the stability of projections in preparation for version 4.0.

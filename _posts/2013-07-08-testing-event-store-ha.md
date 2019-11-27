@@ -3,6 +3,7 @@ title: "Testing Event Store HA"
 date: 2013-07-08T18:21Z
 author: "Greg Young"
 layout: blog-post
+category: 'Articles'
 ---
 
 As we prepare to release Event Store 2.0.0 binaries (the source code was just merged to the master branch over on [GitHub](http://github.com/EventStore/EventStore)), we also will be opening up access to one of the test environments that we’ve been using for our commercial high availability clustered product, Event Store HA.

@@ -2,6 +2,7 @@
 title: "Event Store 4.0.3 Hotfix"
 author: "Hayley Campbell"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 A hotfix for Event Store 4.0.3 has been released.

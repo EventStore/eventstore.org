@@ -3,6 +3,7 @@ title: "Greg Young launches Event Store"
 date: 2012-09-18T12:00Z
 author: "Chris Watt"
 layout: blog-post
+category: 'News'
 ---
 
 The recent launch of the open-source version of Event Store—a rock-solid, super-fast persistence engine for supporting event sourcing—has been received with considerable interest by the developer community.

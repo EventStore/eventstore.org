@@ -3,6 +3,7 @@ title: "Catch-up subscriptions with the Event Store"
 date: 2013-07-07T14:51Z
 author: "James Nugent"
 layout: blog-post
+category: 'Tutorials'
 ---
 
 We have had many questions about how to use the catch-up subscriptions in the C# Event Store Client API. In this post I'll build out a simple example of a console application which receives a callback each time an event is written to the built-in statistics stream.

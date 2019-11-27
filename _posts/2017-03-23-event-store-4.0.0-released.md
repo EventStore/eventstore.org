@@ -2,6 +2,7 @@
 title: "Event Store 4.0.0 Released"
 author: "Event Store Team"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 # Overview

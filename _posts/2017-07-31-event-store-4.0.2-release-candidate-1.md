@@ -2,6 +2,7 @@
 title: "Event Store 4.0.2 Release Candidate 1"
 author: "Hayley Campbell"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 The first release candidate for Event Store 4.0.2 is now available! It is available for the following operating systems:

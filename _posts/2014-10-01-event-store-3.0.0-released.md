@@ -3,6 +3,7 @@ title: "Event Store 3.0.0 Released"
 date: 2014-10-01T12:00Z
 author: "James Nugent"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 As many people know, we released version 3.0.0 of Event Store at our birthday party in London on September 17th, 2014. Traditionally when we've released, we've posted the release notes here - but better late than never!

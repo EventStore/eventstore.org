@@ -2,6 +2,7 @@
 layout: blog-post
 title: Event Store mentioned in 3 Gartner Reports as Event Driven Architecture vendor
 author: Dave Remy
+category: 'News'
 ---
 For the past few years now Gartner Group has been mentioning the critical importance of Event Driven Architecture to the modern enterprise (one of the top 10 trends). Event Store are pleased to be listed in 3 recent reports by Gartner as one of the vendors, along with Amazon Web Services, Confluent, Google, IBM, and others who are offering Event Driven Architecture enabling technology.
 

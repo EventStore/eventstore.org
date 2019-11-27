@@ -2,6 +2,7 @@
 title: "Event Store 3.9.0 Released"
 author: "Pieter Germishuys"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 Event Store 3.9.0 is now released! This release contains a number of improvements and bug fixes. The main feature around this release was the introduction of 64bit indexes.

@@ -27,7 +27,7 @@
 				{% include categories.html %}
 			</div>
 		</header>
-		<p>{{ post.excerpt }}</p>
+		<p>{% if post.description %}{{ post.description %}}{% else %}{{ post.excerpt }}{% endif %}</p>
 		<span class="c2a"><a class="btn btn--secondary" href="{{ post.url }}" title="Read article">Read article</a></span> 
 		</article>
 	{% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
@@ -49,7 +49,7 @@
 				{% include categories.html %}
 			</div>
 		</header>
-		<p>{{ post.excerpt }}</p>
+		<p>{% if post.description %}{{ post.description %}}{% else %}{{ post.excerpt }}{% endif %}</p>
 		<span class="c2a"><a class="btn btn--secondary" href="{{ post.url }}" title="Read article">Read article</a></span> 
 		</article>
 		{% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}

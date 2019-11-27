@@ -3,6 +3,7 @@ title: "Projections 7: Multiple Streams"
 date: 2013-03-09T12:00Z
 author: "Greg Young"
 layout: blog-post
+category: 'Tutorials'
 ---
 
 Up until this point we have only used two event selection methods for our projections. We have used `fromStream(‘stream’)` which will select all of the events in a stream and we have used `fromAll()` which selects all events in the system. There is another quite useful selection that will move us from SEP (Simple Event Processing) to CEP (Complex Event Processing). This is the ability to select between multiple streams.

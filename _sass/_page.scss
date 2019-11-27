@@ -196,6 +196,9 @@
 		#footer-tags {
 			padding-top: 30px;
 		}
+		p:first-of-type {
+			font-size: 1rem;
+		}
 	}
 	hr {
 			margin-bottom: 2.7rem;
@@ -397,6 +400,11 @@ header hr {
     margin-bottom: 1.5em;
 	a {
 		color: #546E7A;
+		display: inline-block;
+		background: #eee;
+		padding: 2px 6px;
+		margin-right: 8px;
+		margin-bottom: 8px;
 	}
 }
 #recent-posts h2 {

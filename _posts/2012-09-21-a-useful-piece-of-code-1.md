@@ -3,6 +3,7 @@ title: "A useful piece of code 1"
 date: 2012-09-21T09:34Z
 author: "Greg Young"
 layout: blog-post
+category: 'Articles'
 ---
 
 **Updated November 25th, 2015 to fix broken links to code on GitHub.**

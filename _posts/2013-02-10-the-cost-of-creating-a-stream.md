@@ -3,9 +3,10 @@ title: "The cost of creating a stream"
 date: 2013-02-10T14:57
 author: "Greg Young"
 layout: blog-post
+category: 'Articles'
 ---
 
-Travelling and watching people using the Event Store I have seen many with a confusion about how streams work. In particular people are worried about the cost of creating a new stream in the system. The Event Store is buit with an expectation that you will have many (**millions!**) streams.
+Travelling and watching people using the Event Store I have seen many with a confusion about how streams work. In particular people are worried about the cost of creating a new stream in the system. The Event Store is built with an expectation that you will have many (**millions!**) streams.
 
 When people talk about doing Event Sourcing for most models they end up with a stream for every *instance* of an aggregate. Many have been confused into wanting to build a stream for every type of aggregate or for every type of event. This causes a few issues.
 

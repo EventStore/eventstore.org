@@ -3,6 +3,7 @@ title: "Using JS projections from the browser"
 date: 2012-09-27T14:03Z
 author: "Greg Young"
 layout: blog-post
+category: 'Tutorials'
 ---
 
 One of the main use cases we had for using Javascript as our query language was the the same code could be hosted in a browser. You can see a more in depth example of this in the "Event store chat example" that is reachable from the main screen in the management console.

@@ -3,6 +3,7 @@ title: "Version 2.0.1 released"
 layout: blog-post
 author: "Greg Young"
 date: 2013-08-01T17:15Z
+category: 'Release Notes'
 ---
 
 For this release you probably want to upgrade. We admit it—we were muppets. One of the changes in the release is to lock down the admin operations in the Open Source version such as force scavenging. This does not affect anyone using the commercial version as in the commercial version all admin operations are run on a separate interface than the public interface.

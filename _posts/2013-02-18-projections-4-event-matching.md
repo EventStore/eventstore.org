@@ -3,6 +3,7 @@ title: "Projections 4: Event matching"
 date: 2013-02-18T00:38Z
 author: "Greg Young"
 layout: blog-post
+category: 'Tutorials'
 ---
 
 In the [“intermission” post](/blog/20130217/projections-intermission) we jumped ahead quite a bit in terms of the complexity of the projection we were building. Let’s jump back into our progression of learning bits.

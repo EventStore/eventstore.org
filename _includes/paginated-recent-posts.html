@@ -9,13 +9,15 @@
 			{% include categories.html %}
 		</div>
 	</header>
-	<p>{{ post.excerpt }}</p>
+	<p>{% if post.description %}{{ post.description %}}{% else %}{{ post.excerpt }}{% endif %}</p>
 	<span class="c2a"><a class="btn btn--secondary" href="{{ post.url }}" title="Read article">Read article</a></span> 
 	<footer>
 		{% include tags.html %}
 	</footer>
 	</article>
 	{% unless forloop.last %}<hr>{% endunless %}
-	{% endfor %}
+	{% else %}
+  <h3>Sorry, no articles found.</h3>
+{% endfor %}
 	{% include pagination.html %}
 </ul>
