@@ -20,7 +20,7 @@
 	{% if sameTagCount >= minCommonTags %}		
 		<article class="blog-post">
 		<header>
-			<a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
+			<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
 			<div id="header-meta">
 				<time datetime="{{ page.date | date_to_xml_schema }}">{{ post.date | date_to_long_string }}</time>
 				{% include author.html %}
@@ -42,7 +42,7 @@
 	{% if post.url != page.url %}
 		<article class="blog-post">
 		<header>
-			<a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
+			<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
 			<div id="header-meta">
 				<time datetime="{{ page.date | date_to_xml_schema }}">{{ post.date | date_to_long_string }}</time>
 				{% include author.html %}
