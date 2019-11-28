@@ -1,5 +1,5 @@
-{% if post %}{% assign author = site.authors[post.author] %}
-{% else %}{% assign author = site.authors[page.author] %}{% endif %}
+{% if post %}{% assign author = site.data.authors[post.author] %}
+{% else %}{% assign author = site.data.authors[page.author] %}{% endif %}
 			      {% if author.name %}
 				  <span>&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Written by: {% if page.layout == "blog-post" %}<a href="#post-footer-divider" title="Click to find out more about {{ author.name }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}</span>
 				  {% else %}<span>&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Written by: Event Store Team</span>
