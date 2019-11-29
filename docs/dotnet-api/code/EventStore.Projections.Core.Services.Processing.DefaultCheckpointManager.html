@@ -1,0 +1,740 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Class DefaultCheckpointManager
+   | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DefaultCheckpointManager
+   | Event Store ">
+    <meta name="generator" content="docfx 2.47.0.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <script src="https://secure.perk0mean.com/js/168910.js"></script>
+    <noscript><img alt="" src="https://secure.perk0mean.com/168910.png" style="display:none;"></noscript>
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager">
+  
+  
+  <h1 id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager" class="text-break">Class DefaultCheckpointManager
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html">CoreProjectionCheckpointManager</a></div>
+    <div class="level2"><span class="xref">DefaultCheckpointManager</span></div>
+      <div class="level3"><a class="xref" href="EventStore.Projections.Core.Services.Processing.MultiStreamMultiOutputCheckpointManager.html">MultiStreamMultiOutputCheckpointManager</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="EventStore.Projections.Core.Messages.IProjectionCheckpointManager.html">IProjectionCheckpointManager</a></div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<span class="xref">CoreProjectionProcessingMessage.ReadyForCheckpoint</span>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<span class="xref">CoreProjectionProcessingMessage.RestartRequested</span>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<span class="xref">CoreProjectionProcessingMessage.Failed</span>&gt;</div>
+    <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.ICoreProjectionCheckpointManager.html">ICoreProjectionCheckpointManager</a></div>
+    <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.IEmittedEventWriter.html">IEmittedEventWriter</a></div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.CoreProjectionCheckpointWriterMessage.CheckpointWritten.html">CoreProjectionCheckpointWriterMessage.CheckpointWritten</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.CoreProjectionCheckpointWriterMessage.RestartRequested.html">CoreProjectionCheckpointWriterMessage.RestartRequested</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__namingBuilder">CoreProjectionCheckpointManager._namingBuilder</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__projectionConfig">CoreProjectionCheckpointManager._projectionConfig</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__logger">CoreProjectionCheckpointManager._logger</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__publisher">CoreProjectionCheckpointManager._publisher</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__currentCheckpoint">CoreProjectionCheckpointManager._currentCheckpoint</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__stopping">CoreProjectionCheckpointManager._stopping</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager__stopped">CoreProjectionCheckpointManager._stopped</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Start_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Projections_Core_Services_Processing_PartitionState_">CoreProjectionCheckpointManager.Start(CheckpointTag, PartitionState)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Stopping">CoreProjectionCheckpointManager.Stopping()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Stopped">CoreProjectionCheckpointManager.Stopped()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_StateUpdated_System_String_EventStore_Projections_Core_Services_Processing_PartitionState_EventStore_Projections_Core_Services_Processing_PartitionState_">CoreProjectionCheckpointManager.StateUpdated(String, PartitionState, PartitionState)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_EventProcessed_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_Single_">CoreProjectionCheckpointManager.EventProcessed(CheckpointTag, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_EventsEmitted_EventStore_Projections_Core_Services_Processing_EmittedEventEnvelope___Guid_System_String_">CoreProjectionCheckpointManager.EventsEmitted(EmittedEventEnvelope[], Guid, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_CheckpointSuggested_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_Single_">CoreProjectionCheckpointManager.CheckpointSuggested(CheckpointTag, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Progress_System_Single_">CoreProjectionCheckpointManager.Progress(Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_LastProcessedEventPosition">CoreProjectionCheckpointManager.LastProcessedEventPosition</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Handle_CoreProjectionProcessingMessage_ReadyForCheckpoint_">CoreProjectionCheckpointManager.Handle(CoreProjectionProcessingMessage.ReadyForCheckpoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Handle_CoreProjectionProcessingMessage_RestartRequested_">CoreProjectionCheckpointManager.Handle(CoreProjectionProcessingMessage.RestartRequested)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Handle_CoreProjectionProcessingMessage_Failed_">CoreProjectionCheckpointManager.Handle(CoreProjectionProcessingMessage.Failed)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_PrerecordedEventsLoaded_EventStore_Projections_Core_Services_Processing_CheckpointTag_">CoreProjectionCheckpointManager.PrerecordedEventsLoaded(CheckpointTag)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_EnsureStarted">CoreProjectionCheckpointManager.EnsureStarted()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_SendPrerecordedEvent_EventStore_Core_Data_ResolvedEvent_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_Int64_">CoreProjectionCheckpointManager.SendPrerecordedEvent(ResolvedEvent, CheckpointTag, Int64)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_RequestRestart_System_String_">CoreProjectionCheckpointManager.RequestRestart(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_CheckpointWritten_EventStore_Projections_Core_Services_Processing_CheckpointTag_">CoreProjectionCheckpointManager.CheckpointWritten(CheckpointTag)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_BeginLoadPrerecordedEvents_EventStore_Projections_Core_Services_Processing_CheckpointTag_">CoreProjectionCheckpointManager.BeginLoadPrerecordedEvents(CheckpointTag)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Services.Processing.html">EventStore.Projections.Core.Services.Processing</a></h6>
+  <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
+  <h5 id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DefaultCheckpointManager : CoreProjectionCheckpointManager, IProjectionCheckpointManager, IHandle&lt;CoreProjectionProcessingMessage.ReadyForCheckpoint&gt;, IHandle&lt;CoreProjectionProcessingMessage.RestartRequested&gt;, IHandle&lt;CoreProjectionProcessingMessage.Failed&gt;, ICoreProjectionCheckpointManager, IEmittedEventWriter, IHandle&lt;CoreProjectionCheckpointWriterMessage.CheckpointWritten&gt;, IHandle&lt;CoreProjectionCheckpointWriterMessage.RestartRequested&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager__ctor_" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.#ctor*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager__ctor_EventStore_Core_Bus_IPublisher_Guid_EventStore_Projections_Core_Services_Processing_ProjectionVersion_IPrincipal_EventStore_Core_Helpers_IODispatcher_EventStore_Projections_Core_Services_ProjectionConfig_System_String_EventStore_Projections_Core_Services_Processing_PositionTagger_EventStore_Projections_Core_Services_Processing_ProjectionNamesBuilder_System_Boolean_System_Boolean_System_Boolean_EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointWriter_" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.#ctor(EventStore.Core.Bus.IPublisher,Guid,EventStore.Projections.Core.Services.Processing.ProjectionVersion,IPrincipal,EventStore.Core.Helpers.IODispatcher,EventStore.Projections.Core.Services.ProjectionConfig,System.String,EventStore.Projections.Core.Services.Processing.PositionTagger,EventStore.Projections.Core.Services.Processing.ProjectionNamesBuilder,System.Boolean,System.Boolean,System.Boolean,EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointWriter)">DefaultCheckpointManager(IPublisher, Guid, ProjectionVersion, IPrincipal, IODispatcher, ProjectionConfig, String, PositionTagger, ProjectionNamesBuilder, Boolean, Boolean, Boolean, CoreProjectionCheckpointWriter)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DefaultCheckpointManager(IPublisher publisher, Guid projectionCorrelationId, ProjectionVersion projectionVersion, IPrincipal runAs, IODispatcher ioDispatcher, ProjectionConfig projectionConfig, string name, PositionTagger positionTagger, ProjectionNamesBuilder namingBuilder, bool usePersistentCheckpoints, bool producesRunningResults, bool definesFold, CoreProjectionCheckpointWriter coreProjectionCheckpointWriter)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EventStore.Core.Bus.IPublisher</span></td>
+        <td><span class="parametername">publisher</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">projectionCorrelationId</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ProjectionVersion.html">ProjectionVersion</a></td>
+        <td><span class="parametername">projectionVersion</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IPrincipal</span></td>
+        <td><span class="parametername">runAs</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">EventStore.Core.Helpers.IODispatcher</span></td>
+        <td><span class="parametername">ioDispatcher</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.ProjectionConfig.html">ProjectionConfig</a></td>
+        <td><span class="parametername">projectionConfig</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.PositionTagger.html">PositionTagger</a></td>
+        <td><span class="parametername">positionTagger</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ProjectionNamesBuilder.html">ProjectionNamesBuilder</a></td>
+        <td><span class="parametername">namingBuilder</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">usePersistentCheckpoints</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">producesRunningResults</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">definesFold</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointWriter.html">CoreProjectionCheckpointWriter</a></td>
+        <td><span class="parametername">coreProjectionCheckpointWriter</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager__ioDispatcher" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager._ioDispatcher">_ioDispatcher</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly IODispatcher _ioDispatcher</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EventStore.Core.Helpers.IODispatcher</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager__projectionVersion" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager._projectionVersion">_projectionVersion</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly ProjectionVersion _projectionVersion</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ProjectionVersion.html">ProjectionVersion</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_BeginLoadPartitionStateAt_" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.BeginLoadPartitionStateAt*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_BeginLoadPartitionStateAt_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_Action_EventStore_Projections_Core_Services_Processing_PartitionState__" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.BeginLoadPartitionStateAt(System.String,EventStore.Projections.Core.Services.Processing.CheckpointTag,Action{EventStore.Projections.Core.Services.Processing.PartitionState})">BeginLoadPartitionStateAt(String, CheckpointTag, Action&lt;PartitionState&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void BeginLoadPartitionStateAt(string statePartition, CheckpointTag requestedStateCheckpointTag, Action&lt;PartitionState&gt; loadCompleted)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">statePartition</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">requestedStateCheckpointTag</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.Projections.Core.Services.Processing.PartitionState.html">PartitionState</a>&gt;</td>
+        <td><span class="parametername">loadCompleted</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_BeginLoadPartitionStateAt_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_Action_EventStore_Projections_Core_Services_Processing_PartitionState__">CoreProjectionCheckpointManager.BeginLoadPartitionStateAt(String, CheckpointTag, Action&lt;PartitionState&gt;)</a></div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_BeginWriteCheckpoint_" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.BeginWriteCheckpoint*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_BeginWriteCheckpoint_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_String_" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.BeginWriteCheckpoint(EventStore.Projections.Core.Services.Processing.CheckpointTag,System.String)">BeginWriteCheckpoint(CheckpointTag, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void BeginWriteCheckpoint(CheckpointTag requestedCheckpointPosition, string requestedCheckpointState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">requestedCheckpointPosition</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">requestedCheckpointState</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_BeginWriteCheckpoint_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_String_">CoreProjectionCheckpointManager.BeginWriteCheckpoint(CheckpointTag, String)</a></div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_CapturePartitionStateUpdated_" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.CapturePartitionStateUpdated*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_CapturePartitionStateUpdated_System_String_EventStore_Projections_Core_Services_Processing_PartitionState_EventStore_Projections_Core_Services_Processing_PartitionState_" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.CapturePartitionStateUpdated(System.String,EventStore.Projections.Core.Services.Processing.PartitionState,EventStore.Projections.Core.Services.Processing.PartitionState)">CapturePartitionStateUpdated(String, PartitionState, PartitionState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void CapturePartitionStateUpdated(string partition, PartitionState oldState, PartitionState newState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">partition</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.PartitionState.html">PartitionState</a></td>
+        <td><span class="parametername">oldState</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.PartitionState.html">PartitionState</a></td>
+        <td><span class="parametername">newState</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_CapturePartitionStateUpdated_System_String_EventStore_Projections_Core_Services_Processing_PartitionState_EventStore_Projections_Core_Services_Processing_PartitionState_">CoreProjectionCheckpointManager.CapturePartitionStateUpdated(String, PartitionState, PartitionState)</a></div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_CreateProjectionCheckpoint_" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.CreateProjectionCheckpoint*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_CreateProjectionCheckpoint_EventStore_Projections_Core_Services_Processing_CheckpointTag_" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.CreateProjectionCheckpoint(EventStore.Projections.Core.Services.Processing.CheckpointTag)">CreateProjectionCheckpoint(CheckpointTag)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override ProjectionCheckpoint CreateProjectionCheckpoint(CheckpointTag checkpointPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">checkpointPosition</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ProjectionCheckpoint.html">ProjectionCheckpoint</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_CreateProjectionCheckpoint_EventStore_Projections_Core_Services_Processing_CheckpointTag_">CoreProjectionCheckpointManager.CreateProjectionCheckpoint(CheckpointTag)</a></div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_EmitPartitionCheckpoints_" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.EmitPartitionCheckpoints*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_EmitPartitionCheckpoints" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.EmitPartitionCheckpoints">EmitPartitionCheckpoints()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void EmitPartitionCheckpoints()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_EmitPartitionCheckpoints">CoreProjectionCheckpointManager.EmitPartitionCheckpoints()</a></div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_GetStatistics_" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.GetStatistics*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_GetStatistics_EventStore_Projections_Core_Services_ProjectionStatistics_" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.GetStatistics(EventStore.Projections.Core.Services.ProjectionStatistics)">GetStatistics(ProjectionStatistics)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void GetStatistics(ProjectionStatistics info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.ProjectionStatistics.html">ProjectionStatistics</a></td>
+        <td><span class="parametername">info</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_GetStatistics_EventStore_Projections_Core_Services_ProjectionStatistics_">CoreProjectionCheckpointManager.GetStatistics(ProjectionStatistics)</a></div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_Handle_EventStore_Projections_Core_Messages_CoreProjectionCheckpointWriterMessage_CheckpointWritten_" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.Handle(EventStore.Projections.Core.Messages.CoreProjectionCheckpointWriterMessage.CheckpointWritten)">Handle(CoreProjectionCheckpointWriterMessage.CheckpointWritten)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(CoreProjectionCheckpointWriterMessage.CheckpointWritten message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.CoreProjectionCheckpointWriterMessage.CheckpointWritten.html">CoreProjectionCheckpointWriterMessage.CheckpointWritten</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_Handle_EventStore_Projections_Core_Messages_CoreProjectionCheckpointWriterMessage_RestartRequested_" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.Handle(EventStore.Projections.Core.Messages.CoreProjectionCheckpointWriterMessage.RestartRequested)">Handle(CoreProjectionCheckpointWriterMessage.RestartRequested)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(CoreProjectionCheckpointWriterMessage.RestartRequested message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.CoreProjectionCheckpointWriterMessage.RestartRequested.html">CoreProjectionCheckpointWriterMessage.RestartRequested</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_Initialize_" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.Initialize*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_Initialize" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.Initialize">Initialize()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Initialize()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_Initialize">CoreProjectionCheckpointManager.Initialize()</a></div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_PartitionCompleted_" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.PartitionCompleted*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_PartitionCompleted_System_String_" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.PartitionCompleted(System.String)">PartitionCompleted(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void PartitionCompleted(string partition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">partition</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_PartitionCompleted_System_String_">CoreProjectionCheckpointManager.PartitionCompleted(String)</a></div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_RecordEventOrder_" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.RecordEventOrder*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_DefaultCheckpointManager_RecordEventOrder_EventStore_Projections_Core_Services_Processing_ResolvedEvent_EventStore_Projections_Core_Services_Processing_CheckpointTag_Action_" data-uid="EventStore.Projections.Core.Services.Processing.DefaultCheckpointManager.RecordEventOrder(EventStore.Projections.Core.Services.Processing.ResolvedEvent,EventStore.Projections.Core.Services.Processing.CheckpointTag,Action)">RecordEventOrder(ResolvedEvent, CheckpointTag, Action)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void RecordEventOrder(ResolvedEvent resolvedEvent, CheckpointTag orderCheckpointTag, Action committed)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ResolvedEvent.html">ResolvedEvent</a></td>
+        <td><span class="parametername">resolvedEvent</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">orderCheckpointTag</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span></td>
+        <td><span class="parametername">committed</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionCheckpointManager.html#EventStore_Projections_Core_Services_Processing_CoreProjectionCheckpointManager_RecordEventOrder_EventStore_Projections_Core_Services_Processing_ResolvedEvent_EventStore_Projections_Core_Services_Processing_CheckpointTag_Action_">CoreProjectionCheckpointManager.RecordEventOrder(ResolvedEvent, CheckpointTag, Action)</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="EventStore.Projections.Core.Messages.IProjectionCheckpointManager.html">IProjectionCheckpointManager</a>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.ICoreProjectionCheckpointManager.html">ICoreProjectionCheckpointManager</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.IEmittedEventWriter.html">IEmittedEventWriter</a>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

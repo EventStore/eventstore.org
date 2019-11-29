@@ -107,35 +107,11 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">EventStoreConnection</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.ClientAPI.html">EventStore.ClientAPI</a></h6>
   <h6><strong>Assembly</strong>: EventStore.ClientAPI.dll</h6>
   <h5 id="EventStore_ClientAPI_EventStoreConnection_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class EventStoreConnection</code></pre>
+    <pre><code class="lang-csharp hljs">public static class EventStoreConnection : object</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -247,7 +223,7 @@ using specific <a class="xref" href="EventStore.ClientAPI.ConnectionSettings.htm
   
   
   <a id="EventStore_ClientAPI_EventStoreConnection_Create_" data-uid="EventStore.ClientAPI.EventStoreConnection.Create*"></a>
-  <h4 id="EventStore_ClientAPI_EventStoreConnection_Create_EventStore_ClientAPI_ConnectionSettings_System_Net_IPEndPoint_System_String_" data-uid="EventStore.ClientAPI.EventStoreConnection.Create(EventStore.ClientAPI.ConnectionSettings,System.Net.IPEndPoint,System.String)">Create(ConnectionSettings, IPEndPoint, String)</h4>
+  <h4 id="EventStore_ClientAPI_EventStoreConnection_Create_EventStore_ClientAPI_ConnectionSettings_IPEndPoint_System_String_" data-uid="EventStore.ClientAPI.EventStoreConnection.Create(EventStore.ClientAPI.ConnectionSettings,IPEndPoint,System.String)">Create(ConnectionSettings, IPEndPoint, String)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="EventStore.ClientAPI.IEventStoreConnection.html">IEventStoreConnection</a> to single node using specific <a class="xref" href="EventStore.ClientAPI.ConnectionSettings.html">ConnectionSettings</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -271,7 +247,7 @@ using specific <a class="xref" href="EventStore.ClientAPI.ConnectionSettings.htm
         <td><span class="parametername">connectionSettings</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Net.IPEndPoint</span></td>
+        <td><span class="xref">IPEndPoint</span></td>
         <td><span class="parametername">tcpEndPoint</span></td>
       </tr>
       <tr>
@@ -347,7 +323,7 @@ using specific <a class="xref" href="EventStore.ClientAPI.ConnectionSettings.htm
   
   
   <a id="EventStore_ClientAPI_EventStoreConnection_Create_" data-uid="EventStore.ClientAPI.EventStoreConnection.Create*"></a>
-  <h4 id="EventStore_ClientAPI_EventStoreConnection_Create_EventStore_ClientAPI_ConnectionSettings_System_Uri_System_String_" data-uid="EventStore.ClientAPI.EventStoreConnection.Create(EventStore.ClientAPI.ConnectionSettings,System.Uri,System.String)">Create(ConnectionSettings, Uri, String)</h4>
+  <h4 id="EventStore_ClientAPI_EventStoreConnection_Create_EventStore_ClientAPI_ConnectionSettings_Uri_System_String_" data-uid="EventStore.ClientAPI.EventStoreConnection.Create(EventStore.ClientAPI.ConnectionSettings,Uri,System.String)">Create(ConnectionSettings, Uri, String)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="EventStore.ClientAPI.IEventStoreConnection.html">IEventStoreConnection</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -371,7 +347,7 @@ using specific <a class="xref" href="EventStore.ClientAPI.ConnectionSettings.htm
         <td><span class="parametername">connectionSettings</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Uri</span></td>
+        <td><span class="xref">Uri</span></td>
         <td><span class="parametername">uri</span></td>
       </tr>
       <tr>
@@ -396,13 +372,13 @@ using specific <a class="xref" href="EventStore.ClientAPI.ConnectionSettings.htm
       </tr>
     </tbody>
   </table>
-  <h5 id="EventStore_ClientAPI_EventStoreConnection_Create_EventStore_ClientAPI_ConnectionSettings_System_Uri_System_String__remarks">Remarks</h5>
+  <h5 id="EventStore_ClientAPI_EventStoreConnection_Create_EventStore_ClientAPI_ConnectionSettings_Uri_System_String__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>You must pass a uri or set gossip seeds in the connection settings.</p>
 </div>
   
   
   <a id="EventStore_ClientAPI_EventStoreConnection_Create_" data-uid="EventStore.ClientAPI.EventStoreConnection.Create*"></a>
-  <h4 id="EventStore_ClientAPI_EventStoreConnection_Create_System_Net_IPEndPoint_System_String_" data-uid="EventStore.ClientAPI.EventStoreConnection.Create(System.Net.IPEndPoint,System.String)">Create(IPEndPoint, String)</h4>
+  <h4 id="EventStore_ClientAPI_EventStoreConnection_Create_IPEndPoint_System_String_" data-uid="EventStore.ClientAPI.EventStoreConnection.Create(IPEndPoint,System.String)">Create(IPEndPoint, String)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="EventStore.ClientAPI.IEventStoreConnection.html">IEventStoreConnection</a> to single node using default <a class="xref" href="EventStore.ClientAPI.ConnectionSettings.html">ConnectionSettings</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -422,7 +398,7 @@ using specific <a class="xref" href="EventStore.ClientAPI.ConnectionSettings.htm
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Net.IPEndPoint</span></td>
+        <td><span class="xref">IPEndPoint</span></td>
         <td><span class="parametername">tcpEndPoint</span></td>
       </tr>
       <tr>
@@ -550,7 +526,7 @@ using specific <a class="xref" href="EventStore.ClientAPI.ConnectionSettings.htm
   
   
   <a id="EventStore_ClientAPI_EventStoreConnection_Create_" data-uid="EventStore.ClientAPI.EventStoreConnection.Create*"></a>
-  <h4 id="EventStore_ClientAPI_EventStoreConnection_Create_System_Uri_System_String_" data-uid="EventStore.ClientAPI.EventStoreConnection.Create(System.Uri,System.String)">Create(Uri, String)</h4>
+  <h4 id="EventStore_ClientAPI_EventStoreConnection_Create_Uri_System_String_" data-uid="EventStore.ClientAPI.EventStoreConnection.Create(Uri,System.String)">Create(Uri, String)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="EventStore.ClientAPI.IEventStoreConnection.html">IEventStoreConnection</a> to single node using default <a class="xref" href="EventStore.ClientAPI.ConnectionSettings.html">ConnectionSettings</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -570,7 +546,7 @@ using specific <a class="xref" href="EventStore.ClientAPI.ConnectionSettings.htm
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Uri</span></td>
+        <td><span class="xref">Uri</span></td>
         <td><span class="parametername">uri</span></td>
       </tr>
       <tr>

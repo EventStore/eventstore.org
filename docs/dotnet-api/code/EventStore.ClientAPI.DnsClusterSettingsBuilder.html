@@ -108,35 +108,11 @@ using DNS discovery.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">DnsClusterSettingsBuilder</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.ClientAPI.html">EventStore.ClientAPI</a></h6>
   <h6><strong>Assembly</strong>: EventStore.ClientAPI.dll</h6>
   <h5 id="EventStore_ClientAPI_DnsClusterSettingsBuilder_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DnsClusterSettingsBuilder</code></pre>
+    <pre><code class="lang-csharp hljs">public class DnsClusterSettingsBuilder : object</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -298,22 +274,6 @@ using DNS discovery.</p>
       </tr>
     </tbody>
   </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.ArgumentNullException</span></td>
-        <td><p>If <code data-dev-comment-type="paramref" class="paramref">clusterDns</code> is null or empty.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="EventStore_ClientAPI_DnsClusterSettingsBuilder_SetClusterGossipPort_" data-uid="EventStore.ClientAPI.DnsClusterSettingsBuilder.SetClusterGossipPort*"></a>
@@ -325,7 +285,7 @@ managers are running.</p>
 <p>If you are using the open source edition of Event Store HA, this should be the
 External HTTP port that the nodes are running on. If you cannot use a well-known
 port for this across all nodes, you can instead use gossip seed discovery and set
-the <span class="xref">System.Net.IPEndPoint</span> of some seed nodes instead.</p>
+the <see cref="!:IPEndPoint"></see> of some seed nodes instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   
@@ -368,7 +328,7 @@ the <span class="xref">System.Net.IPEndPoint</span> of some seed nodes instead.<
   
   
   <a id="EventStore_ClientAPI_DnsClusterSettingsBuilder_SetGossipTimeout_" data-uid="EventStore.ClientAPI.DnsClusterSettingsBuilder.SetGossipTimeout*"></a>
-  <h4 id="EventStore_ClientAPI_DnsClusterSettingsBuilder_SetGossipTimeout_System_TimeSpan_" data-uid="EventStore.ClientAPI.DnsClusterSettingsBuilder.SetGossipTimeout(System.TimeSpan)">SetGossipTimeout(TimeSpan)</h4>
+  <h4 id="EventStore_ClientAPI_DnsClusterSettingsBuilder_SetGossipTimeout_TimeSpan_" data-uid="EventStore.ClientAPI.DnsClusterSettingsBuilder.SetGossipTimeout(TimeSpan)">SetGossipTimeout(TimeSpan)</h4>
   <div class="markdown level1 summary"><p>Sets the period after which gossip times out if none is received.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -388,7 +348,7 @@ the <span class="xref">System.Net.IPEndPoint</span> of some seed nodes instead.<
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">timeout</span></td>
       </tr>
     </tbody>
@@ -449,22 +409,6 @@ the <span class="xref">System.Net.IPEndPoint</span> of some seed nodes instead.<
       <tr>
         <td><a class="xref" href="EventStore.ClientAPI.DnsClusterSettingsBuilder.html">DnsClusterSettingsBuilder</a></td>
         <td><p>A <a class="xref" href="EventStore.ClientAPI.DnsClusterSettingsBuilder.html">DnsClusterSettingsBuilder</a> for further configuration.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
-        <td><p>If <code data-dev-comment-type="paramref" class="paramref">maxDiscoverAttempts</code> is less than or equal to 0.</p>
 </td>
       </tr>
     </tbody>

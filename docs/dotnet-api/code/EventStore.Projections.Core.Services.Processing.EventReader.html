@@ -1,0 +1,666 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Class EventReader
+   | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class EventReader
+   | Event Store ">
+    <meta name="generator" content="docfx 2.47.0.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <script src="https://secure.perk0mean.com/js/168910.js"></script>
+    <noscript><img alt="" src="https://secure.perk0mean.com/168910.png" style="display:none;"></noscript>
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EventStore.Projections.Core.Services.Processing.EventReader">
+  
+  
+  <h1 id="EventStore_Projections_Core_Services_Processing_EventReader" data-uid="EventStore.Projections.Core.Services.Processing.EventReader" class="text-break">Class EventReader
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">EventReader</span></div>
+      <div class="level2"><a class="xref" href="EventStore.Projections.Core.Services.Processing.AllStreamsCatalogEventReader.html">AllStreamsCatalogEventReader</a></div>
+      <div class="level2"><a class="xref" href="EventStore.Projections.Core.Services.Processing.ByStreamCatalogEventReader.html">ByStreamCatalogEventReader</a></div>
+      <div class="level2"><a class="xref" href="EventStore.Projections.Core.Services.Processing.EventByTypeIndexEventReader.html">EventByTypeIndexEventReader</a></div>
+      <div class="level2"><a class="xref" href="EventStore.Projections.Core.Services.Processing.ExternallyFedByStreamEventReader.html">ExternallyFedByStreamEventReader</a></div>
+      <div class="level2"><a class="xref" href="EventStore.Projections.Core.Services.Processing.MultiStreamEventReader.html">MultiStreamEventReader</a></div>
+      <div class="level2"><a class="xref" href="EventStore.Projections.Core.Services.Processing.StreamEventReader.html">StreamEventReader</a></div>
+      <div class="level2"><a class="xref" href="EventStore.Projections.Core.Services.Processing.TransactionFileEventReader.html">TransactionFileEventReader</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.IEventReader.html">IEventReader</a></div>
+    <div><span class="xref">IDisposable</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Services.Processing.html">EventStore.Projections.Core.Services.Processing</a></h6>
+  <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
+  <h5 id="EventStore_Projections_Core_Services_Processing_EventReader_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class EventReader : object, IEventReader, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReader__ctor_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.#ctor*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader__ctor_EventStore_Core_Bus_IPublisher_Guid_IPrincipal_System_Boolean_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.#ctor(EventStore.Core.Bus.IPublisher,Guid,IPrincipal,System.Boolean)">EventReader(IPublisher, Guid, IPrincipal, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected EventReader(IPublisher publisher, Guid eventReaderCorrelationId, IPrincipal readAs, bool stopOnEof)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EventStore.Core.Bus.IPublisher</span></td>
+        <td><span class="parametername">publisher</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">eventReaderCorrelationId</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">IPrincipal</span></td>
+        <td><span class="parametername">readAs</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">stopOnEof</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader__disposed" data-uid="EventStore.Projections.Core.Services.Processing.EventReader._disposed">_disposed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool _disposed</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader__publisher" data-uid="EventStore.Projections.Core.Services.Processing.EventReader._publisher">_publisher</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly IPublisher _publisher</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EventStore.Core.Bus.IPublisher</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader__stopOnEof" data-uid="EventStore.Projections.Core.Services.Processing.EventReader._stopOnEof">_stopOnEof</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly bool _stopOnEof</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_EventReaderCorrelationId" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.EventReaderCorrelationId">EventReaderCorrelationId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly Guid EventReaderCorrelationId</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReader_Paused_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.Paused*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_Paused" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.Paused">Paused</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool Paused { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReader_PauseRequested_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.PauseRequested*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_PauseRequested" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.PauseRequested">PauseRequested</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool PauseRequested { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReader_ReadAs_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.ReadAs*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_ReadAs" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.ReadAs">ReadAs</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IPrincipal ReadAs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IPrincipal</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReader_AreEventsRequested_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.AreEventsRequested*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_AreEventsRequested" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.AreEventsRequested">AreEventsRequested()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract bool AreEventsRequested()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReader_Dispose_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.Dispose*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_Dispose" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReader_GetLastCommitPositionFrom_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.GetLastCommitPositionFrom*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_GetLastCommitPositionFrom_EventStore_Core_Messages_ClientMessage_ReadStreamEventsForwardCompleted_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.GetLastCommitPositionFrom(EventStore.Core.Messages.ClientMessage.ReadStreamEventsForwardCompleted)">GetLastCommitPositionFrom(ClientMessage.ReadStreamEventsForwardCompleted)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static long? GetLastCommitPositionFrom(ClientMessage.ReadStreamEventsForwardCompleted msg)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EventStore.Core.Messages.ClientMessage.ReadStreamEventsForwardCompleted</span></td>
+        <td><span class="parametername">msg</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReader_NotifyIfStarting_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.NotifyIfStarting*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_NotifyIfStarting_System_Int64_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.NotifyIfStarting(System.Int64)">NotifyIfStarting(Int64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void NotifyIfStarting(long startingLastCommitPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+        <td><span class="parametername">startingLastCommitPosition</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReader_Pause_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.Pause*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_Pause" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.Pause">Pause()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Pause()</code></pre>
+  </div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReader_PauseOrContinueProcessing_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.PauseOrContinueProcessing*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_PauseOrContinueProcessing" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.PauseOrContinueProcessing">PauseOrContinueProcessing()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void PauseOrContinueProcessing()</code></pre>
+  </div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReader_RequestEvents_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.RequestEvents*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_RequestEvents" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.RequestEvents">RequestEvents()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void RequestEvents()</code></pre>
+  </div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReader_Resume_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.Resume*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_Resume" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.Resume">Resume()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Resume()</code></pre>
+  </div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReader_SendEof_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.SendEof*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_SendEof" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.SendEof">SendEof()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SendEof()</code></pre>
+  </div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReader_SendNotAuthorized_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.SendNotAuthorized*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_SendNotAuthorized" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.SendNotAuthorized">SendNotAuthorized()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SendNotAuthorized()</code></pre>
+  </div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReader_SendPartitionDeleted_WhenReadingDataStream_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.SendPartitionDeleted_WhenReadingDataStream*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_SendPartitionDeleted_WhenReadingDataStream_System_String_System_Nullable_System_Int64__System_Nullable_EventStore_Core_Data_TFPos__System_Nullable_EventStore_Core_Data_TFPos__System_String_System_Nullable_System_Int32__EventStore_Projections_Core_Services_Processing_CheckpointTag_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.SendPartitionDeleted_WhenReadingDataStream(System.String,System.Nullable{System.Int64},System.Nullable{EventStore.Core.Data.TFPos},System.Nullable{EventStore.Core.Data.TFPos},System.String,System.Nullable{System.Int32},EventStore.Projections.Core.Services.Processing.CheckpointTag)">SendPartitionDeleted_WhenReadingDataStream(String, Nullable&lt;Int64&gt;, Nullable&lt;TFPos&gt;, Nullable&lt;TFPos&gt;, String, Nullable&lt;Int32&gt;, CheckpointTag)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SendPartitionDeleted_WhenReadingDataStream(string partition, long? lastEventNumber, TFPos? deletedLinkOrEventPosition, TFPos? deletedEventPosition, string positionStreamId, int? positionEventNumber, CheckpointTag preTagged = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">partition</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
+        <td><span class="parametername">lastEventNumber</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">EventStore.Core.Data.TFPos</span>&gt;</td>
+        <td><span class="parametername">deletedLinkOrEventPosition</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">EventStore.Core.Data.TFPos</span>&gt;</td>
+        <td><span class="parametername">deletedEventPosition</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">positionStreamId</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">positionEventNumber</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">preTagged</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReader_SendPartitionEof_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.SendPartitionEof*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReader_SendPartitionEof_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_" data-uid="EventStore.Projections.Core.Services.Processing.EventReader.SendPartitionEof(System.String,EventStore.Projections.Core.Services.Processing.CheckpointTag)">SendPartitionEof(String, CheckpointTag)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SendPartitionEof(string partition, CheckpointTag preTagged)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">partition</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">preTagged</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.IEventReader.html">IEventReader</a>
+  </div>
+  <div>
+      <span class="xref">IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

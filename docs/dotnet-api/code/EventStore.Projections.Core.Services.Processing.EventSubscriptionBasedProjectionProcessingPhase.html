@@ -1,0 +1,2135 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Class EventSubscriptionBasedProjectionProcessingPhase
+   | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class EventSubscriptionBasedProjectionProcessingPhase
+   | Event Store ">
+    <meta name="generator" content="docfx 2.47.0.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <script src="https://secure.perk0mean.com/js/168910.js"></script>
+    <noscript><img alt="" src="https://secure.perk0mean.com/168910.png" style="display:none;"></noscript>
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase">
+  
+  
+  <h1 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase" class="text-break">Class EventSubscriptionBasedProjectionProcessingPhase
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">EventSubscriptionBasedProjectionProcessingPhase</span></div>
+      <div class="level2"><a class="xref" href="EventStore.Projections.Core.Services.Processing.EventProcessingProjectionProcessingPhase.html">EventProcessingProjectionProcessingPhase</a></div>
+      <div class="level2"><a class="xref" href="EventStore.Projections.Core.Services.Processing.ParallelQueryMasterProjectionProcessingPhase.html">ParallelQueryMasterProjectionProcessingPhase</a></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.IProjectionPhaseCompleter.html">IProjectionPhaseCompleter</a></div>
+    <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.IProjectionPhaseCheckpointManager.html">IProjectionPhaseCheckpointManager</a></div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.ProgressChanged.html">EventReaderSubscriptionMessage.ProgressChanged</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.SubscriptionStarted.html">EventReaderSubscriptionMessage.SubscriptionStarted</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.NotAuthorized.html">EventReaderSubscriptionMessage.NotAuthorized</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.EofReached.html">EventReaderSubscriptionMessage.EofReached</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.CheckpointSuggested.html">EventReaderSubscriptionMessage.CheckpointSuggested</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.ReaderAssignedReader.html">EventReaderSubscriptionMessage.ReaderAssignedReader</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.Failed.html">EventReaderSubscriptionMessage.Failed</a>&gt;</div>
+    <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.IProjectionProcessingPhase.html">IProjectionProcessingPhase</a></div>
+    <div><span class="xref">IDisposable</span></div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.CoreProjectionManagementMessage.GetState.html">CoreProjectionManagementMessage.GetState</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.CoreProjectionManagementMessage.GetResult.html">CoreProjectionManagementMessage.GetResult</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<span class="xref">CoreProjectionProcessingMessage.PrerecordedEventsLoaded</span>&gt;</div>
+    <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.IProjectionPhaseStateManager.html">IProjectionPhaseStateManager</a></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Services.Processing.html">EventStore.Projections.Core.Services.Processing</a></h6>
+  <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
+  <h5 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class EventSubscriptionBasedProjectionProcessingPhase : object, IProjectionPhaseCompleter, IProjectionPhaseCheckpointManager, IHandle&lt;EventReaderSubscriptionMessage.ProgressChanged&gt;, IHandle&lt;EventReaderSubscriptionMessage.SubscriptionStarted&gt;, IHandle&lt;EventReaderSubscriptionMessage.NotAuthorized&gt;, IHandle&lt;EventReaderSubscriptionMessage.EofReached&gt;, IHandle&lt;EventReaderSubscriptionMessage.CheckpointSuggested&gt;, IHandle&lt;EventReaderSubscriptionMessage.ReaderAssignedReader&gt;, IHandle&lt;EventReaderSubscriptionMessage.Failed&gt;, IProjectionProcessingPhase, IDisposable, IHandle&lt;CoreProjectionManagementMessage.GetState&gt;, IHandle&lt;CoreProjectionManagementMessage.GetResult&gt;, IHandle&lt;CoreProjectionProcessingMessage.PrerecordedEventsLoaded&gt;, IProjectionPhaseStateManager</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__ctor_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.#ctor*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__ctor_EventStore_Core_Bus_IPublisher_EventStore_Core_Bus_IPublisher_EventStore_Projections_Core_Services_Processing_ICoreProjectionForProcessingPhase_Guid_EventStore_Projections_Core_Services_Processing_ICoreProjectionCheckpointManager_EventStore_Projections_Core_Services_ProjectionConfig_System_String_EventStore_Common_Log_ILogger_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Projections_Core_Services_Processing_PartitionStateCache_EventStore_Projections_Core_Services_Processing_IResultWriter_Action_EventStore_Projections_Core_Services_ReaderSubscriptionDispatcher_EventStore_Projections_Core_Services_Processing_IReaderStrategy_System_Boolean_System_Boolean_System_Boolean_System_Boolean_EventStore_Projections_Core_Services_Processing_IEmittedStreamsTracker_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.#ctor(EventStore.Core.Bus.IPublisher,EventStore.Core.Bus.IPublisher,EventStore.Projections.Core.Services.Processing.ICoreProjectionForProcessingPhase,Guid,EventStore.Projections.Core.Services.Processing.ICoreProjectionCheckpointManager,EventStore.Projections.Core.Services.ProjectionConfig,System.String,EventStore.Common.Log.ILogger,EventStore.Projections.Core.Services.Processing.CheckpointTag,EventStore.Projections.Core.Services.Processing.PartitionStateCache,EventStore.Projections.Core.Services.Processing.IResultWriter,Action,EventStore.Projections.Core.Services.ReaderSubscriptionDispatcher,EventStore.Projections.Core.Services.Processing.IReaderStrategy,System.Boolean,System.Boolean,System.Boolean,System.Boolean,EventStore.Projections.Core.Services.Processing.IEmittedStreamsTracker)">EventSubscriptionBasedProjectionProcessingPhase(IPublisher, IPublisher, ICoreProjectionForProcessingPhase, Guid, ICoreProjectionCheckpointManager, ProjectionConfig, String, ILogger, CheckpointTag, PartitionStateCache, IResultWriter, Action, ReaderSubscriptionDispatcher, IReaderStrategy, Boolean, Boolean, Boolean, Boolean, IEmittedStreamsTracker)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected EventSubscriptionBasedProjectionProcessingPhase(IPublisher publisher, IPublisher inputQueue, ICoreProjectionForProcessingPhase coreProjection, Guid projectionCorrelationId, ICoreProjectionCheckpointManager checkpointManager, ProjectionConfig projectionConfig, string projectionName, ILogger logger, CheckpointTag zeroCheckpointTag, PartitionStateCache partitionStateCache, IResultWriter resultWriter, Action updateStatistics, ReaderSubscriptionDispatcher subscriptionDispatcher, IReaderStrategy readerStrategy, bool useCheckpoints, bool stopOnEof, bool orderedPartitionProcessing, bool isBiState, IEmittedStreamsTracker emittedStreamsTracker)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EventStore.Core.Bus.IPublisher</span></td>
+        <td><span class="parametername">publisher</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">EventStore.Core.Bus.IPublisher</span></td>
+        <td><span class="parametername">inputQueue</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ICoreProjectionForProcessingPhase.html">ICoreProjectionForProcessingPhase</a></td>
+        <td><span class="parametername">coreProjection</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">projectionCorrelationId</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ICoreProjectionCheckpointManager.html">ICoreProjectionCheckpointManager</a></td>
+        <td><span class="parametername">checkpointManager</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.ProjectionConfig.html">ProjectionConfig</a></td>
+        <td><span class="parametername">projectionConfig</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">projectionName</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">EventStore.Common.Log.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">zeroCheckpointTag</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.PartitionStateCache.html">PartitionStateCache</a></td>
+        <td><span class="parametername">partitionStateCache</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.IResultWriter.html">IResultWriter</a></td>
+        <td><span class="parametername">resultWriter</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span></td>
+        <td><span class="parametername">updateStatistics</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.ReaderSubscriptionDispatcher.html">ReaderSubscriptionDispatcher</a></td>
+        <td><span class="parametername">subscriptionDispatcher</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.IReaderStrategy.html">IReaderStrategy</a></td>
+        <td><span class="parametername">readerStrategy</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">useCheckpoints</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">stopOnEof</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">orderedPartitionProcessing</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isBiState</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.IEmittedStreamsTracker.html">IEmittedStreamsTracker</a></td>
+        <td><span class="parametername">emittedStreamsTracker</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__checkpointManager" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._checkpointManager">_checkpointManager</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly ICoreProjectionCheckpointManager _checkpointManager</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ICoreProjectionCheckpointManager.html">ICoreProjectionCheckpointManager</a></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__coreProjection" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._coreProjection">_coreProjection</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly ICoreProjectionForProcessingPhase _coreProjection</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ICoreProjectionForProcessingPhase.html">ICoreProjectionForProcessingPhase</a></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__currentSubscriptionId" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._currentSubscriptionId">_currentSubscriptionId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Guid _currentSubscriptionId</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__emittedStreamsTracker" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._emittedStreamsTracker">_emittedStreamsTracker</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly IEmittedStreamsTracker _emittedStreamsTracker</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.IEmittedStreamsTracker.html">IEmittedStreamsTracker</a></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__expectedSubscriptionMessageSequenceNumber" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._expectedSubscriptionMessageSequenceNumber">_expectedSubscriptionMessageSequenceNumber</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected long _expectedSubscriptionMessageSequenceNumber</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__logger" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._logger">_logger</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly ILogger _logger</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EventStore.Common.Log.ILogger</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__partitionStateCache" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._partitionStateCache">_partitionStateCache</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly PartitionStateCache _partitionStateCache</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.PartitionStateCache.html">PartitionStateCache</a></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__processingQueue" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._processingQueue">_processingQueue</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly CoreProjectionQueue _processingQueue</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CoreProjectionQueue.html">CoreProjectionQueue</a></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__progressResultWriter" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._progressResultWriter">_progressResultWriter</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly IProgressResultWriter _progressResultWriter</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.IProgressResultWriter.html">IProgressResultWriter</a></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__projectionConfig" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._projectionConfig">_projectionConfig</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly ProjectionConfig _projectionConfig</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.ProjectionConfig.html">ProjectionConfig</a></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__projectionCorrelationId" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._projectionCorrelationId">_projectionCorrelationId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly Guid _projectionCorrelationId</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__projectionName" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._projectionName">_projectionName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly string _projectionName</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__publisher" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._publisher">_publisher</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly IPublisher _publisher</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EventStore.Core.Bus.IPublisher</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__readerStrategy" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._readerStrategy">_readerStrategy</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly IReaderStrategy _readerStrategy</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.IReaderStrategy.html">IReaderStrategy</a></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__resultWriter" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._resultWriter">_resultWriter</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly IResultWriter _resultWriter</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.IResultWriter.html">IResultWriter</a></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__state" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._state">_state</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected PhaseState _state</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.PhaseState.html">PhaseState</a></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__stopOnEof" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._stopOnEof">_stopOnEof</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly bool _stopOnEof</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__subscribed" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._subscribed">_subscribed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool _subscribed</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__subscriptionDispatcher" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._subscriptionDispatcher">_subscriptionDispatcher</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly ReaderSubscriptionDispatcher _subscriptionDispatcher</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.ReaderSubscriptionDispatcher.html">ReaderSubscriptionDispatcher</a></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__subscriptionStartedAtLastCommitPosition" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._subscriptionStartedAtLastCommitPosition">_subscriptionStartedAtLastCommitPosition</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected long _subscriptionStartedAtLastCommitPosition</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int64</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__useCheckpoints" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._useCheckpoints">_useCheckpoints</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly bool _useCheckpoints</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase__zeroCheckpointTag" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase._zeroCheckpointTag">_zeroCheckpointTag</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly CheckpointTag _zeroCheckpointTag</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_CheckpointManager_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.CheckpointManager*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_CheckpointManager" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.CheckpointManager">CheckpointManager</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICoreProjectionCheckpointManager CheckpointManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ICoreProjectionCheckpointManager.html">ICoreProjectionCheckpointManager</a></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_EmittedStreamsTracker_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.EmittedStreamsTracker*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_EmittedStreamsTracker" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.EmittedStreamsTracker">EmittedStreamsTracker</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEmittedStreamsTracker EmittedStreamsTracker { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.IEmittedStreamsTracker.html">IEmittedStreamsTracker</a></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_LastProcessedEventPosition_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.LastProcessedEventPosition*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_LastProcessedEventPosition" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.LastProcessedEventPosition">LastProcessedEventPosition</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CheckpointTag LastProcessedEventPosition { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_AdjustTag_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.AdjustTag*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_AdjustTag_EventStore_Projections_Core_Services_Processing_CheckpointTag_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.AdjustTag(EventStore.Projections.Core.Services.Processing.CheckpointTag)">AdjustTag(CheckpointTag)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CheckpointTag AdjustTag(CheckpointTag tag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">tag</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_AssignSlaves_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.AssignSlaves*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_AssignSlaves_EventStore_Projections_Core_Messages_SlaveProjectionCommunicationChannels_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.AssignSlaves(EventStore.Projections.Core.Messages.SlaveProjectionCommunicationChannels)">AssignSlaves(SlaveProjectionCommunicationChannels)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void AssignSlaves(SlaveProjectionCommunicationChannels slaveProjections)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.SlaveProjectionCommunicationChannels.html">SlaveProjectionCommunicationChannels</a></td>
+        <td><span class="parametername">slaveProjections</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_BeginGetPartitionStateAt_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.BeginGetPartitionStateAt*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_BeginGetPartitionStateAt_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_Action_EventStore_Projections_Core_Services_Processing_PartitionState__System_Boolean_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.BeginGetPartitionStateAt(System.String,EventStore.Projections.Core.Services.Processing.CheckpointTag,Action{EventStore.Projections.Core.Services.Processing.PartitionState},System.Boolean)">BeginGetPartitionStateAt(String, CheckpointTag, Action&lt;PartitionState&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void BeginGetPartitionStateAt(string statePartition, CheckpointTag at, Action&lt;PartitionState&gt; loadCompleted, bool lockLoaded)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">statePartition</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">at</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.Projections.Core.Services.Processing.PartitionState.html">PartitionState</a>&gt;</td>
+        <td><span class="parametername">loadCompleted</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">lockLoaded</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Complete_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Complete*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Complete" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Complete">Complete()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Complete()</code></pre>
+  </div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Dispose_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Dispose*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Dispose" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_EmitEofResult_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.EmitEofResult*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_EmitEofResult_System_String_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_Guid_System_String_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.EmitEofResult(System.String,System.String,EventStore.Projections.Core.Services.Processing.CheckpointTag,Guid,System.String)">EmitEofResult(String, String, CheckpointTag, Guid, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EmitEofResult(string partition, string resultBody, CheckpointTag causedBy, Guid causedByGuid, string correlationId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">partition</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">resultBody</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">causedBy</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">causedByGuid</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">correlationId</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_EnsureTickPending_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.EnsureTickPending*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_EnsureTickPending" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.EnsureTickPending">EnsureTickPending()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void EnsureTickPending()</code></pre>
+  </div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_EnsureUnsubscribed_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.EnsureUnsubscribed*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_EnsureUnsubscribed" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.EnsureUnsubscribed">EnsureUnsubscribed()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnsureUnsubscribed()</code></pre>
+  </div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_FinalizeEventProcessing_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.FinalizeEventProcessing*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_FinalizeEventProcessing_EventStore_Projections_Core_Services_Processing_EventProcessedResult_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_Single_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.FinalizeEventProcessing(EventStore.Projections.Core.Services.Processing.EventProcessedResult,EventStore.Projections.Core.Services.Processing.CheckpointTag,System.Single)">FinalizeEventProcessing(EventProcessedResult, CheckpointTag, Single)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FinalizeEventProcessing(EventProcessedResult result, CheckpointTag eventCheckpointTag, float progress)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.EventProcessedResult.html">EventProcessedResult</a></td>
+        <td><span class="parametername">result</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">eventCheckpointTag</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">progress</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_GetBufferedEventCount_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.GetBufferedEventCount*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_GetBufferedEventCount" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.GetBufferedEventCount">GetBufferedEventCount()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetBufferedEventCount()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_GetStatistics_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.GetStatistics*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_GetStatistics_EventStore_Projections_Core_Services_ProjectionStatistics_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.GetStatistics(EventStore.Projections.Core.Services.ProjectionStatistics)">GetStatistics(ProjectionStatistics)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void GetStatistics(ProjectionStatistics info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.ProjectionStatistics.html">ProjectionStatistics</a></td>
+        <td><span class="parametername">info</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_GetStatus_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.GetStatus*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_GetStatus" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.GetStatus">GetStatus()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetStatus()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_GetSubscriptionOptions_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.GetSubscriptionOptions*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_GetSubscriptionOptions" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.GetSubscriptionOptions">GetSubscriptionOptions()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReaderSubscriptionOptions GetSubscriptionOptions()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ReaderSubscriptionOptions.html">ReaderSubscriptionOptions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_CoreProjectionProcessingMessage_PrerecordedEventsLoaded_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Handle(CoreProjectionProcessingMessage.PrerecordedEventsLoaded)">Handle(CoreProjectionProcessingMessage.PrerecordedEventsLoaded)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(CoreProjectionProcessingMessage.PrerecordedEventsLoaded message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">CoreProjectionProcessingMessage.PrerecordedEventsLoaded</span></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_EventStore_Projections_Core_Messages_CoreProjectionManagementMessage_GetResult_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Handle(EventStore.Projections.Core.Messages.CoreProjectionManagementMessage.GetResult)">Handle(CoreProjectionManagementMessage.GetResult)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(CoreProjectionManagementMessage.GetResult message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.CoreProjectionManagementMessage.GetResult.html">CoreProjectionManagementMessage.GetResult</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_EventStore_Projections_Core_Messages_CoreProjectionManagementMessage_GetState_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Handle(EventStore.Projections.Core.Messages.CoreProjectionManagementMessage.GetState)">Handle(CoreProjectionManagementMessage.GetState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(CoreProjectionManagementMessage.GetState message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.CoreProjectionManagementMessage.GetState.html">CoreProjectionManagementMessage.GetState</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_CheckpointSuggested_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Handle(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.CheckpointSuggested)">Handle(EventReaderSubscriptionMessage.CheckpointSuggested)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(EventReaderSubscriptionMessage.CheckpointSuggested message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.CheckpointSuggested.html">EventReaderSubscriptionMessage.CheckpointSuggested</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_EofReached_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Handle(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.EofReached)">Handle(EventReaderSubscriptionMessage.EofReached)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(EventReaderSubscriptionMessage.EofReached message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.EofReached.html">EventReaderSubscriptionMessage.EofReached</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_Failed_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Handle(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.Failed)">Handle(EventReaderSubscriptionMessage.Failed)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(EventReaderSubscriptionMessage.Failed message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.Failed.html">EventReaderSubscriptionMessage.Failed</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_NotAuthorized_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Handle(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.NotAuthorized)">Handle(EventReaderSubscriptionMessage.NotAuthorized)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(EventReaderSubscriptionMessage.NotAuthorized message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.NotAuthorized.html">EventReaderSubscriptionMessage.NotAuthorized</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_ProgressChanged_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Handle(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.ProgressChanged)">Handle(EventReaderSubscriptionMessage.ProgressChanged)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(EventReaderSubscriptionMessage.ProgressChanged message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.ProgressChanged.html">EventReaderSubscriptionMessage.ProgressChanged</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_ReaderAssignedReader_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Handle(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.ReaderAssignedReader)">Handle(EventReaderSubscriptionMessage.ReaderAssignedReader)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(EventReaderSubscriptionMessage.ReaderAssignedReader message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.ReaderAssignedReader.html">EventReaderSubscriptionMessage.ReaderAssignedReader</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_SubscriptionStarted_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Handle(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.SubscriptionStarted)">Handle(EventReaderSubscriptionMessage.SubscriptionStarted)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(EventReaderSubscriptionMessage.SubscriptionStarted message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.SubscriptionStarted.html">EventReaderSubscriptionMessage.SubscriptionStarted</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_InitializeFromCheckpoint_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.InitializeFromCheckpoint*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_InitializeFromCheckpoint_EventStore_Projections_Core_Services_Processing_CheckpointTag_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.InitializeFromCheckpoint(EventStore.Projections.Core.Services.Processing.CheckpointTag)">InitializeFromCheckpoint(CheckpointTag)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitializeFromCheckpoint(CheckpointTag checkpointTag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">checkpointTag</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_InternalCommittedEventProcessed_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.InternalCommittedEventProcessed*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_InternalCommittedEventProcessed_System_String_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_CommittedEventReceived_EventStore_Projections_Core_Services_Processing_EmittedEventEnvelope___EventStore_Projections_Core_Services_Processing_PartitionState_EventStore_Projections_Core_Services_Processing_PartitionState_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.InternalCommittedEventProcessed(System.String,EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.CommittedEventReceived,EventStore.Projections.Core.Services.Processing.EmittedEventEnvelope[],EventStore.Projections.Core.Services.Processing.PartitionState,EventStore.Projections.Core.Services.Processing.PartitionState)">InternalCommittedEventProcessed(String, EventReaderSubscriptionMessage.CommittedEventReceived, EmittedEventEnvelope[], PartitionState, PartitionState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected EventProcessedResult InternalCommittedEventProcessed(string partition, EventReaderSubscriptionMessage.CommittedEventReceived message, EmittedEventEnvelope[] emittedEvents, PartitionState newPartitionState, PartitionState newSharedPartitionState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">partition</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.CommittedEventReceived.html">EventReaderSubscriptionMessage.CommittedEventReceived</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.EmittedEventEnvelope.html">EmittedEventEnvelope</a>[]</td>
+        <td><span class="parametername">emittedEvents</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.PartitionState.html">PartitionState</a></td>
+        <td><span class="parametername">newPartitionState</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.PartitionState.html">PartitionState</a></td>
+        <td><span class="parametername">newSharedPartitionState</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.EventProcessedResult.html">EventProcessedResult</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_InternalPartitionDeletedProcessed_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.InternalPartitionDeletedProcessed*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_InternalPartitionDeletedProcessed_System_String_EventStore_Projections_Core_Services_Processing_CheckpointTag_EventStore_Projections_Core_Services_Processing_PartitionState_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.InternalPartitionDeletedProcessed(System.String,EventStore.Projections.Core.Services.Processing.CheckpointTag,EventStore.Projections.Core.Services.Processing.PartitionState)">InternalPartitionDeletedProcessed(String, CheckpointTag, PartitionState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected EventProcessedResult InternalPartitionDeletedProcessed(string partition, CheckpointTag deletePosition, PartitionState newPartitionState)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">partition</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">deletePosition</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.PartitionState.html">PartitionState</a></td>
+        <td><span class="parametername">newPartitionState</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.EventProcessedResult.html">EventProcessedResult</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_IsOutOfOrderSubscriptionMessage_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.IsOutOfOrderSubscriptionMessage*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_IsOutOfOrderSubscriptionMessage_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessageBase_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.IsOutOfOrderSubscriptionMessage(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessageBase)">IsOutOfOrderSubscriptionMessage(EventReaderSubscriptionMessageBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool IsOutOfOrderSubscriptionMessage(EventReaderSubscriptionMessageBase message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessageBase.html">EventReaderSubscriptionMessageBase</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_MakeZeroCheckpointTag_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.MakeZeroCheckpointTag*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_MakeZeroCheckpointTag" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.MakeZeroCheckpointTag">MakeZeroCheckpointTag()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public CheckpointTag MakeZeroCheckpointTag()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_NewCheckpointStarted_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.NewCheckpointStarted*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_NewCheckpointStarted_EventStore_Projections_Core_Services_Processing_CheckpointTag_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.NewCheckpointStarted(EventStore.Projections.Core.Services.Processing.CheckpointTag)">NewCheckpointStarted(CheckpointTag)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void NewCheckpointStarted(CheckpointTag at)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">at</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_ProcessEvent_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.ProcessEvent*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_ProcessEvent" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.ProcessEvent">ProcessEvent()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ProcessEvent()</code></pre>
+  </div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_RecordEventOrder_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.RecordEventOrder*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_RecordEventOrder_EventStore_Projections_Core_Services_Processing_ResolvedEvent_EventStore_Projections_Core_Services_Processing_CheckpointTag_Action_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.RecordEventOrder(EventStore.Projections.Core.Services.Processing.ResolvedEvent,EventStore.Projections.Core.Services.Processing.CheckpointTag,Action)">RecordEventOrder(ResolvedEvent, CheckpointTag, Action)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RecordEventOrder(ResolvedEvent resolvedEvent, CheckpointTag orderCheckpointTag, Action completed)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ResolvedEvent.html">ResolvedEvent</a></td>
+        <td><span class="parametername">resolvedEvent</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">orderCheckpointTag</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span></td>
+        <td><span class="parametername">completed</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_RegisterSubscriptionMessage_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.RegisterSubscriptionMessage*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_RegisterSubscriptionMessage_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessageBase_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.RegisterSubscriptionMessage(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessageBase)">RegisterSubscriptionMessage(EventReaderSubscriptionMessageBase)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void RegisterSubscriptionMessage(EventReaderSubscriptionMessageBase message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessageBase.html">EventReaderSubscriptionMessageBase</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_SetCurrentCheckpointSuggestedWorkItem_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.SetCurrentCheckpointSuggestedWorkItem*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_SetCurrentCheckpointSuggestedWorkItem_EventStore_Projections_Core_Services_Processing_CheckpointSuggestedWorkItem_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.SetCurrentCheckpointSuggestedWorkItem(EventStore.Projections.Core.Services.Processing.CheckpointSuggestedWorkItem)">SetCurrentCheckpointSuggestedWorkItem(CheckpointSuggestedWorkItem)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetCurrentCheckpointSuggestedWorkItem(CheckpointSuggestedWorkItem checkpointSuggestedWorkItem)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointSuggestedWorkItem.html">CheckpointSuggestedWorkItem</a></td>
+        <td><span class="parametername">checkpointSuggestedWorkItem</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_SetFaulting_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.SetFaulting*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_SetFaulting_System_String_Exception_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.SetFaulting(System.String,Exception)">SetFaulting(String, Exception)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SetFaulting(string faultedReason, Exception ex = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">faultedReason</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Exception</span></td>
+        <td><span class="parametername">ex</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_SetProjectionState_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.SetProjectionState*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_SetProjectionState_EventStore_Projections_Core_Services_Processing_PhaseState_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.SetProjectionState(EventStore.Projections.Core.Services.Processing.PhaseState)">SetProjectionState(PhaseState)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetProjectionState(PhaseState state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.PhaseState.html">PhaseState</a></td>
+        <td><span class="parametername">state</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Subscribe_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Subscribe*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Subscribe_EventStore_Projections_Core_Services_Processing_CheckpointTag_System_Boolean_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Subscribe(EventStore.Projections.Core.Services.Processing.CheckpointTag,System.Boolean)">Subscribe(CheckpointTag, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void Subscribe(CheckpointTag from, bool fromCheckpoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">from</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">fromCheckpoint</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Subscribed_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Subscribed*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Subscribed_Guid_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Subscribed(Guid)">Subscribed(Guid)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Subscribed(Guid subscriptionId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">subscriptionId</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_SubscribeReaders_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.SubscribeReaders*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_SubscribeReaders_EventStore_Projections_Core_Services_Processing_CheckpointTag_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.SubscribeReaders(EventStore.Projections.Core.Services.Processing.CheckpointTag)">SubscribeReaders(CheckpointTag)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void SubscribeReaders(CheckpointTag checkpointTag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">checkpointTag</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_SubscribeToPreRecordedOrderEvents_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.SubscribeToPreRecordedOrderEvents*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_SubscribeToPreRecordedOrderEvents" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.SubscribeToPreRecordedOrderEvents">SubscribeToPreRecordedOrderEvents()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SubscribeToPreRecordedOrderEvents()</code></pre>
+  </div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_UnlockAndForgetBefore_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.UnlockAndForgetBefore*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_UnlockAndForgetBefore_EventStore_Projections_Core_Services_Processing_CheckpointTag_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.UnlockAndForgetBefore(EventStore.Projections.Core.Services.Processing.CheckpointTag)">UnlockAndForgetBefore(CheckpointTag)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UnlockAndForgetBefore(CheckpointTag checkpointTag)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.CheckpointTag.html">CheckpointTag</a></td>
+        <td><span class="parametername">checkpointTag</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Unsubscribed_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Unsubscribed*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_Unsubscribed" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.Unsubscribed">Unsubscribed()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Unsubscribed()</code></pre>
+  </div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_UnsubscribeFromPreRecordedOrderEvents_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.UnsubscribeFromPreRecordedOrderEvents*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_UnsubscribeFromPreRecordedOrderEvents" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.UnsubscribeFromPreRecordedOrderEvents">UnsubscribeFromPreRecordedOrderEvents()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void UnsubscribeFromPreRecordedOrderEvents()</code></pre>
+  </div>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_ValidateEmittedEvents_" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.ValidateEmittedEvents*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_ValidateEmittedEvents_EventStore_Projections_Core_Services_Processing_EmittedEventEnvelope___" data-uid="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.ValidateEmittedEvents(EventStore.Projections.Core.Services.Processing.EmittedEventEnvelope[])">ValidateEmittedEvents(EmittedEventEnvelope[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected bool ValidateEmittedEvents(EmittedEventEnvelope[] emittedEvents)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.EmittedEventEnvelope.html">EmittedEventEnvelope</a>[]</td>
+        <td><span class="parametername">emittedEvents</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.IProjectionPhaseCompleter.html">IProjectionPhaseCompleter</a>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.IProjectionPhaseCheckpointManager.html">IProjectionPhaseCheckpointManager</a>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.IProjectionProcessingPhase.html">IProjectionProcessingPhase</a>
+  </div>
+  <div>
+      <span class="xref">IDisposable</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <a class="xref" href="EventStore.Projections.Core.Services.Processing.IProjectionPhaseStateManager.html">IProjectionPhaseStateManager</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

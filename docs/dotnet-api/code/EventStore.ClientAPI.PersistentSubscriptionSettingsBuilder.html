@@ -107,35 +107,11 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">PersistentSubscriptionSettingsBuilder</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.ClientAPI.html">EventStore.ClientAPI</a></h6>
   <h6><strong>Assembly</strong>: EventStore.ClientAPI.dll</h6>
   <h5 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PersistentSubscriptionSettingsBuilder</code></pre>
+    <pre><code class="lang-csharp hljs">public class PersistentSubscriptionSettingsBuilder : object</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -170,7 +146,7 @@
   
   
   <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_CheckPointAfter_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.CheckPointAfter*"></a>
-  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_CheckPointAfter_System_TimeSpan_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.CheckPointAfter(System.TimeSpan)">CheckPointAfter(TimeSpan)</h4>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_CheckPointAfter_TimeSpan_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.CheckPointAfter(TimeSpan)">CheckPointAfter(TimeSpan)</h4>
   <div class="markdown level1 summary"><p>Sets that the backend should try to checkpoint the subscription after some
 period of time. Note that if the increment of the checkpoint would be below
 the minimum the stream will not be checkpointed at this time.</p>
@@ -192,7 +168,7 @@ the minimum the stream will not be checkpointed at this time.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">time</span></td>
       </tr>
     </tbody>
@@ -213,7 +189,7 @@ the minimum the stream will not be checkpointed at this time.</p>
       </tr>
     </tbody>
   </table>
-  <h5 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_CheckPointAfter_System_TimeSpan__remarks">Remarks</h5>
+  <h5 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_CheckPointAfter_TimeSpan__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>It is important to tweak checkpointing for high performance streams as they cause 
 writes to happen back in the system. There is a trade off between the number of
 writes that can happen in varying failure scenarios and the frequency of 
@@ -793,7 +769,7 @@ in terms of the number of messages to cache.</p>
   
   
   <a id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_WithMessageTimeoutOf_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.WithMessageTimeoutOf*"></a>
-  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_WithMessageTimeoutOf_System_TimeSpan_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.WithMessageTimeoutOf(System.TimeSpan)">WithMessageTimeoutOf(TimeSpan)</h4>
+  <h4 id="EventStore_ClientAPI_PersistentSubscriptionSettingsBuilder_WithMessageTimeoutOf_TimeSpan_" data-uid="EventStore.ClientAPI.PersistentSubscriptionSettingsBuilder.WithMessageTimeoutOf(TimeSpan)">WithMessageTimeoutOf(TimeSpan)</h4>
   <div class="markdown level1 summary"><p>Sets the timeout for a message (will be retried if an ack is not received within this timespan)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -813,7 +789,7 @@ in terms of the number of messages to cache.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">timeout</span></td>
       </tr>
     </tbody>
