@@ -99,7 +99,7 @@
   
   <h1 id="EventStore_ClientAPI_Common_Log_ConsoleLogger" data-uid="EventStore.ClientAPI.Common.Log.ConsoleLogger" class="text-break">Class ConsoleLogger
   </h1>
-  <div class="markdown level0 summary"><p>Implementation of <a class="xref" href="EventStore.ClientAPI.ILogger.html">ILogger</a> which outputs to <span class="xref">System.Console</span>.</p>
+  <div class="markdown level0 summary"><p>Implementation of <a class="xref" href="EventStore.ClientAPI.ILogger.html">ILogger</a> which outputs to <see cref="!:Console"></see>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -111,42 +111,18 @@
     <h5>Implements</h5>
     <div><a class="xref" href="EventStore.ClientAPI.ILogger.html">ILogger</a></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.ClientAPI.Common.Log.html">EventStore.ClientAPI.Common.Log</a></h6>
   <h6><strong>Assembly</strong>: EventStore.ClientAPI.dll</h6>
   <h5 id="EventStore_ClientAPI_Common_Log_ConsoleLogger_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ConsoleLogger : ILogger</code></pre>
+    <pre><code class="lang-csharp hljs">public class ConsoleLogger : object, ILogger</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   
   
   <a id="EventStore_ClientAPI_Common_Log_ConsoleLogger_Debug_" data-uid="EventStore.ClientAPI.Common.Log.ConsoleLogger.Debug*"></a>
-  <h4 id="EventStore_ClientAPI_Common_Log_ConsoleLogger_Debug_System_Exception_System_String_System_Object___" data-uid="EventStore.ClientAPI.Common.Log.ConsoleLogger.Debug(System.Exception,System.String,System.Object[])">Debug(Exception, String, Object[])</h4>
+  <h4 id="EventStore_ClientAPI_Common_Log_ConsoleLogger_Debug_Exception_System_String_System_Object___" data-uid="EventStore.ClientAPI.Common.Log.ConsoleLogger.Debug(Exception,System.String,System.Object[])">Debug(Exception, String, Object[])</h4>
   <div class="markdown level1 summary"><p>Writes a debug message to the logger</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -166,7 +142,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><span class="xref">Exception</span></td>
         <td><span class="parametername">ex</span></td>
       </tr>
       <tr>
@@ -214,7 +190,7 @@
   
   
   <a id="EventStore_ClientAPI_Common_Log_ConsoleLogger_Error_" data-uid="EventStore.ClientAPI.Common.Log.ConsoleLogger.Error*"></a>
-  <h4 id="EventStore_ClientAPI_Common_Log_ConsoleLogger_Error_System_Exception_System_String_System_Object___" data-uid="EventStore.ClientAPI.Common.Log.ConsoleLogger.Error(System.Exception,System.String,System.Object[])">Error(Exception, String, Object[])</h4>
+  <h4 id="EventStore_ClientAPI_Common_Log_ConsoleLogger_Error_Exception_System_String_System_Object___" data-uid="EventStore.ClientAPI.Common.Log.ConsoleLogger.Error(Exception,System.String,System.Object[])">Error(Exception, String, Object[])</h4>
   <div class="markdown level1 summary"><p>Writes an error to the logger</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -234,7 +210,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><span class="xref">Exception</span></td>
         <td><span class="parametername">ex</span></td>
       </tr>
       <tr>
@@ -282,7 +258,7 @@
   
   
   <a id="EventStore_ClientAPI_Common_Log_ConsoleLogger_Info_" data-uid="EventStore.ClientAPI.Common.Log.ConsoleLogger.Info*"></a>
-  <h4 id="EventStore_ClientAPI_Common_Log_ConsoleLogger_Info_System_Exception_System_String_System_Object___" data-uid="EventStore.ClientAPI.Common.Log.ConsoleLogger.Info(System.Exception,System.String,System.Object[])">Info(Exception, String, Object[])</h4>
+  <h4 id="EventStore_ClientAPI_Common_Log_ConsoleLogger_Info_Exception_System_String_System_Object___" data-uid="EventStore.ClientAPI.Common.Log.ConsoleLogger.Info(Exception,System.String,System.Object[])">Info(Exception, String, Object[])</h4>
   <div class="markdown level1 summary"><p>Writes an information message to the logger</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -302,7 +278,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Exception</span></td>
+        <td><span class="xref">Exception</span></td>
         <td><span class="parametername">ex</span></td>
       </tr>
       <tr>

@@ -108,42 +108,18 @@ with the Event Store over the RESTful API.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ProjectionsManager</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.ClientAPI.Projections.html">EventStore.ClientAPI.Projections</a></h6>
   <h6><strong>Assembly</strong>: EventStore.ClientAPI.dll</h6>
   <h5 id="EventStore_ClientAPI_Projections_ProjectionsManager_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ProjectionsManager</code></pre>
+    <pre><code class="lang-csharp hljs">public class ProjectionsManager : object</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   
   
   <a id="EventStore_ClientAPI_Projections_ProjectionsManager__ctor_" data-uid="EventStore.ClientAPI.Projections.ProjectionsManager.#ctor*"></a>
-  <h4 id="EventStore_ClientAPI_Projections_ProjectionsManager__ctor_EventStore_ClientAPI_ILogger_System_Net_EndPoint_System_TimeSpan_EventStore_ClientAPI_Transport_Http_IHttpClient_System_String_" data-uid="EventStore.ClientAPI.Projections.ProjectionsManager.#ctor(EventStore.ClientAPI.ILogger,System.Net.EndPoint,System.TimeSpan,EventStore.ClientAPI.Transport.Http.IHttpClient,System.String)">ProjectionsManager(ILogger, EndPoint, TimeSpan, IHttpClient, String)</h4>
+  <h4 id="EventStore_ClientAPI_Projections_ProjectionsManager__ctor_EventStore_ClientAPI_ILogger_EndPoint_TimeSpan_EventStore_ClientAPI_Transport_Http_IHttpClient_System_String_" data-uid="EventStore.ClientAPI.Projections.ProjectionsManager.#ctor(EventStore.ClientAPI.ILogger,EndPoint,TimeSpan,EventStore.ClientAPI.Transport.Http.IHttpClient,System.String)">ProjectionsManager(ILogger, EndPoint, TimeSpan, IHttpClient, String)</h4>
   <div class="markdown level1 summary"><p>Creates a new instance of <a class="xref" href="EventStore.ClientAPI.Projections.ProjectionsManager.html">ProjectionsManager</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -151,7 +127,7 @@ with the Event Store over the RESTful API.</p>
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProjectionsManager(ILogger log, EndPoint httpEndPoint, TimeSpan operationTimeout, IHttpClient client = null, string httpSchema = &quot;http&quot;)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProjectionsManager(ILogger log, EndPoint httpEndPoint, TimeSpan operationTimeout, IHttpClient client = null, string httpSchema = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -167,11 +143,11 @@ with the Event Store over the RESTful API.</p>
         <td><span class="parametername">log</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Net.EndPoint</span></td>
+        <td><span class="xref">EndPoint</span></td>
         <td><span class="parametername">httpEndPoint</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">operationTimeout</span></td>
       </tr>
       <tr>
@@ -228,7 +204,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td><p>A task representing the operation.</p>
 </td>
       </tr>
@@ -280,7 +256,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -335,7 +311,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -382,7 +358,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -433,7 +409,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -480,7 +456,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td><p>A task representing the operation.</p>
 </td>
       </tr>
@@ -532,7 +508,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td><p>A task representing the operation.</p>
 </td>
       </tr>
@@ -580,7 +556,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td><p>A task representing the operation.</p>
 </td>
       </tr>
@@ -628,7 +604,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td><p>A task representing the operation.</p>
 </td>
       </tr>
@@ -676,7 +652,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="EventStore.ClientAPI.Projections.ProjectionConfig.html">ProjectionConfig</a>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="EventStore.ClientAPI.Projections.ProjectionConfig.html">ProjectionConfig</a>&gt;</td>
         <td><p>String of JSON containing projection config.</p>
 </td>
       </tr>
@@ -728,7 +704,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><p>String of JSON containing projection state.</p>
 </td>
       </tr>
@@ -780,7 +756,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><p>String of JSON containing projection state.</p>
 </td>
       </tr>
@@ -828,7 +804,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><p>String of JSON containing query status.</p>
 </td>
       </tr>
@@ -876,7 +852,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><p>String of JSON containing projection state.</p>
 </td>
       </tr>
@@ -924,7 +900,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><p>String of JSON containing projection state.</p>
 </td>
       </tr>
@@ -972,7 +948,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><p>String of JSON containing projection statistics.</p>
 </td>
       </tr>
@@ -1020,7 +996,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><p>String of JSON containing projection status.</p>
 </td>
       </tr>
@@ -1064,7 +1040,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="EventStore.ClientAPI.Projections.ProjectionDetails.html">ProjectionDetails</a>&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">List</span>&lt;<a class="xref" href="EventStore.ClientAPI.Projections.ProjectionDetails.html">ProjectionDetails</a>&gt;&gt;</td>
         <td><p>List of all ProjectionDetails items containing projection statuses.</p>
 </td>
       </tr>
@@ -1108,7 +1084,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="EventStore.ClientAPI.Projections.ProjectionDetails.html">ProjectionDetails</a>&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">List</span>&lt;<a class="xref" href="EventStore.ClientAPI.Projections.ProjectionDetails.html">ProjectionDetails</a>&gt;&gt;</td>
         <td><p>List of continuous ProjectionDetails items containing projection statuses.</p>
 </td>
       </tr>
@@ -1152,7 +1128,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="EventStore.ClientAPI.Projections.ProjectionDetails.html">ProjectionDetails</a>&gt;&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">List</span>&lt;<a class="xref" href="EventStore.ClientAPI.Projections.ProjectionDetails.html">ProjectionDetails</a>&gt;&gt;</td>
         <td><p>List of one-time ProjectionDetails items containing projection statuses.</p>
 </td>
       </tr>
@@ -1200,7 +1176,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td><p>A task representing the operation.</p>
 </td>
       </tr>
@@ -1252,7 +1228,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1303,7 +1279,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1319,7 +1295,7 @@ with the Event Store over the RESTful API.</p>
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task UpdateQueryAsync(string name, string query, bool? emitEnabled = default(bool? ), UserCredentials userCredentials = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task UpdateQueryAsync(string name, string query, bool? emitEnabled = null, UserCredentials userCredentials = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1358,7 +1334,7 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>
