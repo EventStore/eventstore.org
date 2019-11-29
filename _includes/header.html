@@ -9,6 +9,8 @@
     <link href="//fonts.googleapis.com" rel="preconnect">
     <link href="//www.google-analytics.com" rel="preconnect">
     {% if page.layout == "blog-post" %}{% assign category = page.category %}{% capture firstcategory %}{% for category in page.category %}{% if forloop.first == true %}{{category}}{% endif %}{% endfor %}{% endcapture %}{% capture seo-title %}{% if page.seo-title %}{{page.seo-title}}{% else %}{{page.title}}{% endif %} - {{firstcategory}} | Event Store Blog{% endcapture %}<title>{{seo-title}}</title>
+	{% elsif page.layout == 'autopage_category' %}{% assign seo-title = page.autopages.display_name %}<title>Posts in {{seo-title}} | Event Store Blog</title>
+	{% elsif page.layout == 'autopage_tags' %}{% assign seo-title = page.autopages.display_name %}<title>Posts tagged {{seo-title}} | Event Store Blog</title>
 	{% else %}<title>{{ page.title }}{% unless page.title contains "| Event Store" or contains "- Event Store" %} | {{ site.name }}{% endunless %}</title>{% endif %}
     <meta content="#4CAF50" name="theme-color">
     <link href="/manifest.json" rel="manifest">
