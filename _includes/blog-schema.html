@@ -5,7 +5,7 @@
   "headline": "{{ page.title }}",
   "description": "{% if page.description %}{{ page.description %}}"{% else %}{{page.excerpt | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip_html | strip |  truncatewords: 30}}{% endif %}",
   "author": {
-  {% assign author = site.authors[page.author] %}{% if author.name %}"@type": "Person",
+  {% assign author = site.data.authors[page.author] %}{% if author.name %}"@type": "Person",
     "name": "{{author.name}}"},{% else %}"@type": "Organization",
     "name": "Event Store Ltd"},{% endif %}    
   "publisher": {

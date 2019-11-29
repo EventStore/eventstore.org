@@ -2,6 +2,6 @@
 {% else %}{% assign category = page.category %}{% endif %}
 {% if category %}<span>&nbsp;&nbsp;|&nbsp;&nbsp;
     {% for category in category %}
-    <a href="{{site.baseurl}}/blog/categories/{{category|slugify|downcase}}/">{{category}}</a></span>
+    <a href="{{site.baseurl}}/blog/{{category|slugify|downcase}}/">{{category}}</a></span>
 {% unless forloop.last %}<span>&nbsp;{% endunless %}
     {% endfor %}{% endif %}
