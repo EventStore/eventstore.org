@@ -3,7 +3,8 @@ title: "Projections 2: a simple SEP projection"
 date: 2013-02-13T14:17Z
 author: "Greg Young"
 layout: blog-post
-category: 'Tutorials'
+category: "Tutorials"
+tags: ["Event Store","Projections","Event sourcing"]
 ---
 
 In the [first post on projections](http://goodenoughsoftware.net/2013/02/12/projections-1-the-theory) we talked a bit about the theory behind projections. In this post we are going to try to create a very simple projection and talk about how it actually works.

@@ -4,6 +4,7 @@ date: 2012-11-21T12:09Z
 author: "James Nugent"
 layout: blog-post
 category: 'Articles'
+tags: ["Event Store","Code examples"]
 ---
 
 We had a question on Twitter about whether events stored in the Event Store have to implement any interfaces or inherit from a base class or similar. Fundamentally, the Event Store doesn’t care what you store inside it - you are responsible for serialization. The remainder of this post talks about the TCP Client API.

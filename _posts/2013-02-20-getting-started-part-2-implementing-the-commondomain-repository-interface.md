@@ -3,7 +3,8 @@ title: "Getting Started: Part 2 – Implementing the CommonDomain repository int
 date: 2013-02-20T17:56Z
 author: "James Nugent"
 layout: blog-post
-category: 'Tutorials'
+category: "Tutorials"
+tags: ["Event Store","Event sourcing"]
 ---
 
 <b>Updates: August 31, 2016</b>

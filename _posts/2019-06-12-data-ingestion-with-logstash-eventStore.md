@@ -2,7 +2,8 @@
 layout: blog-post
 title: Data ingestion with Logstash and EventStore
 author: Riccardo Di Nuzzo
-category: 'Tutorials'
+category: "Tutorials"
+tags: ["Event Store"]
 ---
 
 In this post our challenge is to load a CSV file and ingest it using the Event Store HTTP API to be ingested.

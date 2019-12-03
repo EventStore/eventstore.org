@@ -3,7 +3,8 @@ title: "Projections 8: internal indexing"
 date: 2013-03-09T16:04Z
 author: "Greg Young"
 layout: blog-post
-category: 'Tutorials'
+category: "Tutorials"
+tags: ["Event Store","Projections","Event sourcing"]
 ---
 
 In the [last post](/blog/20130309/projections-7-multiple-streams) we introduced the new concept of `fromStreams([])` that will join multiple streams into a single stream for your fold to be run against. We also introduced options and two options that can be used to control the re-ordering behaviour in a distributed environment. In this post we are going to look at how this concept is used internally in the Event Store in order to provide indexing of queries.

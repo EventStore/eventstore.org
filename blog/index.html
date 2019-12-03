@@ -3,6 +3,13 @@ title: "Latest Articles On Event Sourcing | Event Store Developer Blog"
 description: "News, articles and tutorials on all things to do with event sourcing from the developer team at Event Store - the stream database built for event sourcing."
 pagination: 
   enabled: true
+  categories:
+    values:
+      - articles
+      - news
+      - tutorials
+      - case studies
+    matching: any
 ---
 
 {% include header.html %}
@@ -14,6 +21,7 @@ pagination:
 </div>
 <div class="page-section page-section--post-list">
 	<div class="inner-container">
+	{% include blog-signup-form.html %}<br>
 		{% include paginated-recent-posts.html %}
 	</div>
 </div>

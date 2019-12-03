@@ -2,7 +2,8 @@
 layout: blog-post
 title: How to avoid Dirty Reads with Event Store
 author: Riccardo Di Nuzzo
-category: 'Tutorials'
+category: "Tutorials"
+tags: ["Event Store"]
 ---
 
 Dirty Reads are not frequent but are possible with the default Event Store configuration. In this article, I discuss why they occur and how to avoid them.
