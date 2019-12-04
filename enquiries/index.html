@@ -1,15 +1,36 @@
 ---
-title: "Enquiries"
+title: "Enquiries - Consultancy &amp; Support For Event Sourcing | Event Store"
 description: "Contact us to discuss your project and find out how we can help you."
 ---
 
 {% include header.html %}
     <div class="container">
 		<div class="page-header page-header--support">
-			<h1>{{ page.title }}</h1>
+			<h1>Enquiries</h1>
             <p>We’re always happy to discuss your Event Store project requirements. Drop us an email here and we’ll get back to you.</p>
 		</div>
 		<div class="page-main">
+			<script>
+			var WebFormEvent =
+			{afterInstall: function(){console.log("After installation hook triggered.");dataLayer.push({
+			  'event': 'GAEvent',
+			  'eventCategory': 'Form',
+			  'eventAction': 'Submitted',
+			  'eventLabel': window.location.pathname, 
+			  'eventValue': undefined,
+			  'eventNI': false 
+			});},
+			beforeSubmit: function(){console.log("Before submit hook triggered.");},
+			afterSubmit: function(event, data, error){console.log("After submit hook triggered.");
+			dataLayer.push({
+			  'event': 'GAEvent',
+			  'eventCategory': 'Form',
+			  'eventAction': 'Submitted',
+			  'eventLabel': window.location.pathname, 
+			  'eventValue': undefined,
+			  'eventNI': false 
+			});}}
+			</script>
             <script src='https://eventstore.freshsales.io/web_forms/acc22d4b3c91a09c3c7f3190a24fd1bcf4da1b27216d9c061c6aec390f7fb350/form.js' crossorigin='anonymous' id='fs_acc22d4b3c91a09c3c7f3190a24fd1bcf4da1b27216d9c061c6aec390f7fb350'></script>
             <style>
                 .fserv-container {
