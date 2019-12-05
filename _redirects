@@ -6,4 +6,4 @@
 
 /docs/introduction/*    /docs/getting-started
 
-/blog/:title /blog/:year:month:day/:title/ 200
+/blog/:title/ /blog/:year:month:date/:title/ 200
