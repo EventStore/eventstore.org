@@ -5,3 +5,5 @@
 /downloads/*  http://eventstore.org.s3-website.eu-west-2.amazonaws.com/downloads/:splat 200
 
 /docs/introduction/*    /docs/getting-started
+
+/blog/:slug /blog/:year:month:date/:slug 200
