@@ -35,6 +35,7 @@
   {%- endfor %}
   {%- if maxRelatedCounter < maxRelated %}
 	{%- for post in site.posts %}
+	{%- unless post.categories contains "Release Notes" %}
 	{%- if post.url != page.url %}
 		<article class="blog-post">
 		<header>
@@ -53,6 +54,7 @@
         {%- break %}
       {%- endif %}
 	{%- endif %}
+	{%- endunless %}
 	{%- endfor %}
 	{%- endif %}
 </ul>
