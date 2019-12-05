@@ -12,16 +12,9 @@ description: "Contact us to discuss your project and find out how we can help yo
 		<div class="page-main">
 			<script>
 			var WebFormEvent =
-			{afterInstall: function(){console.log("After installation hook triggered.");dataLayer.push({
-			  'event': 'GAEvent',
-			  'eventCategory': 'Form',
-			  'eventAction': 'Submitted',
-			  'eventLabel': window.location.pathname, 
-			  'eventValue': undefined,
-			  'eventNI': false 
-			});},
-			beforeSubmit: function(){console.log("Before submit hook triggered.");},
-			afterSubmit: function(event, data, error){console.log("After submit hook triggered.");
+			{afterInstall: function(){},
+			beforeSubmit: function(){},
+			afterSubmit: function(event, data, error){
 			dataLayer.push({
 			  'event': 'GAEvent',
 			  'eventCategory': 'Form',
