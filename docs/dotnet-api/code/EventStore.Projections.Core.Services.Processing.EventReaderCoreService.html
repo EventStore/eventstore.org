@@ -1,0 +1,780 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="preconnect" href="//eventstore.org">
+    <link rel="preconnect" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//code.jquery.com">
+    <link rel="preconnect" href="//www.googletagmanager.com">
+    <title>Class EventReaderCoreService
+   | Event Store </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class EventReaderCoreService
+   | Event Store ">
+    <meta name="generator" content="docfx 2.47.0.0">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+      <link rel="stylesheet" href="../../styles/main12.css">
+        <link rel="stylesheet" href="../../styles/print.css" media="print">
+              <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Source+Code+Pro:400,700">
+              <style media="print">
+                  pre {
+                      white-space: pre-wrap;
+                  }
+                  .site-navigation-toggle, .docs-toc-toggle, .footer__menu {
+                      display: none;
+                  }
+                  p, ul, ol {
+                      max-width: 100% !important;
+                  }
+                  .version-dropdown__selected {
+  
+                  }
+                  .version-dropdown__options {
+  
+                  }
+              </style>
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <script src="https://secure.perk0mean.com/js/168910.js"></script>
+    <noscript><img alt="" src="https://secure.perk0mean.com/168910.png" style="display:none;"></noscript>
+    <div id="wrapper">
+      <header class="site-banner" role="banner">
+        <div class="inner-container">
+            <h1 class="site-logo">
+                <a href="/">
+                    <img src="../../logo.svg" alt="Event Store logo">
+                </a>
+            </h1>
+            <ul class="site-navigation">
+                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
+                <li class="site-navigation__item"><a href="/docs">Docs</a></li>
+                <li class="site-navigation__item"><a href="/downloads">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
+                <li class="site-navigation__item"><a href="/contact">Contact</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search-query" placeholder="Search the docs" autocomplete="off">
+                </div>
+            </form>
+            <a href="javascript:void(0)" class="site-navigation-toggle">Menu</a>
+        </div>      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <!--  TODO: Currently override (git history) shouldn't need to.-->
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService">
+  
+  
+  <h1 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService" class="text-break">Class EventReaderCoreService
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">EventReaderCoreService</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderCoreServiceMessage.StartReader.html">ReaderCoreServiceMessage.StartReader</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderCoreServiceMessage.StopReader.html">ReaderCoreServiceMessage.StopReader</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Subscribe.html">ReaderSubscriptionManagement.Subscribe</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Unsubscribe.html">ReaderSubscriptionManagement.Unsubscribe</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Pause.html">ReaderSubscriptionManagement.Pause</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Resume.html">ReaderSubscriptionManagement.Resume</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.SpoolStreamReadingCore.html">ReaderSubscriptionManagement.SpoolStreamReadingCore</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.CompleteSpooledStreamReading.html">ReaderSubscriptionManagement.CompleteSpooledStreamReading</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.CommittedEventDistributed.html">ReaderSubscriptionMessage.CommittedEventDistributed</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderIdle.html">ReaderSubscriptionMessage.EventReaderIdle</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderStarting.html">ReaderSubscriptionMessage.EventReaderStarting</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderNotAuthorized.html">ReaderSubscriptionMessage.EventReaderNotAuthorized</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderEof.html">ReaderSubscriptionMessage.EventReaderEof</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderPartitionEof.html">ReaderSubscriptionMessage.EventReaderPartitionEof</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderPartitionDeleted.html">ReaderSubscriptionMessage.EventReaderPartitionDeleted</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderPartitionMeasured.html">ReaderSubscriptionMessage.EventReaderPartitionMeasured</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.Faulted.html">ReaderSubscriptionMessage.Faulted</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderCoreServiceMessage.ReaderTick.html">ReaderCoreServiceMessage.ReaderTick</a>&gt;</div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Services.Processing.html">EventStore.Projections.Core.Services.Processing</a></h6>
+  <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
+  <h5 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class EventReaderCoreService : object, IHandle&lt;ReaderCoreServiceMessage.StartReader&gt;, IHandle&lt;ReaderCoreServiceMessage.StopReader&gt;, IHandle&lt;ReaderSubscriptionManagement.Subscribe&gt;, IHandle&lt;ReaderSubscriptionManagement.Unsubscribe&gt;, IHandle&lt;ReaderSubscriptionManagement.Pause&gt;, IHandle&lt;ReaderSubscriptionManagement.Resume&gt;, IHandle&lt;ReaderSubscriptionManagement.SpoolStreamReadingCore&gt;, IHandle&lt;ReaderSubscriptionManagement.CompleteSpooledStreamReading&gt;, IHandle&lt;ReaderSubscriptionMessage.CommittedEventDistributed&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderIdle&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderStarting&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderNotAuthorized&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderEof&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderPartitionEof&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderPartitionDeleted&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderPartitionMeasured&gt;, IHandle&lt;ReaderSubscriptionMessage.Faulted&gt;, IHandle&lt;ReaderCoreServiceMessage.ReaderTick&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService__ctor_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.#ctor*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService__ctor_EventStore_Core_Bus_IPublisher_EventStore_Core_Helpers_IODispatcher_System_Int32_EventStore_Core_TransactionLog_Checkpoint_ICheckpoint_System_Boolean_System_Boolean_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.#ctor(EventStore.Core.Bus.IPublisher,EventStore.Core.Helpers.IODispatcher,System.Int32,EventStore.Core.TransactionLog.Checkpoint.ICheckpoint,System.Boolean,System.Boolean)">EventReaderCoreService(IPublisher, IODispatcher, Int32, ICheckpoint, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventReaderCoreService(IPublisher publisher, IODispatcher ioDispatcher, int eventCacheSize, ICheckpoint writerCheckpoint, bool runHeadingReader, bool faultOutOfOrderProjections)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EventStore.Core.Bus.IPublisher</span></td>
+        <td><span class="parametername">publisher</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">EventStore.Core.Helpers.IODispatcher</span></td>
+        <td><span class="parametername">ioDispatcher</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">eventCacheSize</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">EventStore.Core.TransactionLog.Checkpoint.ICheckpoint</span></td>
+        <td><span class="parametername">writerCheckpoint</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">runHeadingReader</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">faultOutOfOrderProjections</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderCoreServiceMessage_ReaderTick_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderCoreServiceMessage.ReaderTick)">Handle(ReaderCoreServiceMessage.ReaderTick)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ReaderCoreServiceMessage.ReaderTick message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderCoreServiceMessage.ReaderTick.html">ReaderCoreServiceMessage.ReaderTick</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderCoreServiceMessage_StartReader_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderCoreServiceMessage.StartReader)">Handle(ReaderCoreServiceMessage.StartReader)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ReaderCoreServiceMessage.StartReader message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderCoreServiceMessage.StartReader.html">ReaderCoreServiceMessage.StartReader</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderCoreServiceMessage_StopReader_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderCoreServiceMessage.StopReader)">Handle(ReaderCoreServiceMessage.StopReader)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ReaderCoreServiceMessage.StopReader message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderCoreServiceMessage.StopReader.html">ReaderCoreServiceMessage.StopReader</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_CompleteSpooledStreamReading_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.CompleteSpooledStreamReading)">Handle(ReaderSubscriptionManagement.CompleteSpooledStreamReading)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionManagement.CompleteSpooledStreamReading message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.CompleteSpooledStreamReading.html">ReaderSubscriptionManagement.CompleteSpooledStreamReading</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_Pause_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Pause)">Handle(ReaderSubscriptionManagement.Pause)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionManagement.Pause message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Pause.html">ReaderSubscriptionManagement.Pause</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_Resume_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Resume)">Handle(ReaderSubscriptionManagement.Resume)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionManagement.Resume message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Resume.html">ReaderSubscriptionManagement.Resume</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_SpoolStreamReadingCore_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.SpoolStreamReadingCore)">Handle(ReaderSubscriptionManagement.SpoolStreamReadingCore)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionManagement.SpoolStreamReadingCore message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.SpoolStreamReadingCore.html">ReaderSubscriptionManagement.SpoolStreamReadingCore</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_Subscribe_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Subscribe)">Handle(ReaderSubscriptionManagement.Subscribe)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionManagement.Subscribe message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Subscribe.html">ReaderSubscriptionManagement.Subscribe</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_Unsubscribe_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Unsubscribe)">Handle(ReaderSubscriptionManagement.Unsubscribe)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionManagement.Unsubscribe message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.Unsubscribe.html">ReaderSubscriptionManagement.Unsubscribe</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_CommittedEventDistributed_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.CommittedEventDistributed)">Handle(ReaderSubscriptionMessage.CommittedEventDistributed)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionMessage.CommittedEventDistributed message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.CommittedEventDistributed.html">ReaderSubscriptionMessage.CommittedEventDistributed</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderEof_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderEof)">Handle(ReaderSubscriptionMessage.EventReaderEof)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionMessage.EventReaderEof message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderEof.html">ReaderSubscriptionMessage.EventReaderEof</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderIdle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderIdle)">Handle(ReaderSubscriptionMessage.EventReaderIdle)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionMessage.EventReaderIdle message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderIdle.html">ReaderSubscriptionMessage.EventReaderIdle</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderNotAuthorized_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderNotAuthorized)">Handle(ReaderSubscriptionMessage.EventReaderNotAuthorized)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionMessage.EventReaderNotAuthorized message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderNotAuthorized.html">ReaderSubscriptionMessage.EventReaderNotAuthorized</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderPartitionDeleted_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderPartitionDeleted)">Handle(ReaderSubscriptionMessage.EventReaderPartitionDeleted)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionMessage.EventReaderPartitionDeleted message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderPartitionDeleted.html">ReaderSubscriptionMessage.EventReaderPartitionDeleted</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderPartitionEof_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderPartitionEof)">Handle(ReaderSubscriptionMessage.EventReaderPartitionEof)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionMessage.EventReaderPartitionEof message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderPartitionEof.html">ReaderSubscriptionMessage.EventReaderPartitionEof</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderPartitionMeasured_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderPartitionMeasured)">Handle(ReaderSubscriptionMessage.EventReaderPartitionMeasured)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionMessage.EventReaderPartitionMeasured message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderPartitionMeasured.html">ReaderSubscriptionMessage.EventReaderPartitionMeasured</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderStarting_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderStarting)">Handle(ReaderSubscriptionMessage.EventReaderStarting)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionMessage.EventReaderStarting message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderStarting.html">ReaderSubscriptionMessage.EventReaderStarting</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Processing_EventReaderCoreService_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_Faulted_" data-uid="EventStore.Projections.Core.Services.Processing.EventReaderCoreService.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.Faulted)">Handle(ReaderSubscriptionMessage.Faulted)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionMessage.Faulted message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.Faulted.html">ReaderSubscriptionMessage.Faulted</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+            <div class="sinceversion">
+            </div>
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer site-footer">
+          <div class="container inner-container">
+                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <ul class="footer__menu">
+                          <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.zendesk.com">Support Sign In</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/terms/">Terms</a></li>
+                          <li class="footer__menu__item"><a href="https://eventstore.org/contact/">Contact</a></li>
+                      </ul>
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+      <script src="https://eventstore.org/js/scripts.min.js"></script>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-46209892-15"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-46209892-15');
+        </script>  </body>
+</html>

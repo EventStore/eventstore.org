@@ -108,42 +108,18 @@ with the Event Store over the RESTful API.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">QueryManager</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.ClientAPI.Projections.html">EventStore.ClientAPI.Projections</a></h6>
   <h6><strong>Assembly</strong>: EventStore.ClientAPI.dll</h6>
   <h5 id="EventStore_ClientAPI_Projections_QueryManager_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class QueryManager</code></pre>
+    <pre><code class="lang-csharp hljs">public class QueryManager : object</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   
   
   <a id="EventStore_ClientAPI_Projections_QueryManager__ctor_" data-uid="EventStore.ClientAPI.Projections.QueryManager.#ctor*"></a>
-  <h4 id="EventStore_ClientAPI_Projections_QueryManager__ctor_EventStore_ClientAPI_ILogger_System_Net_EndPoint_System_TimeSpan_System_TimeSpan_EventStore_ClientAPI_Transport_Http_IHttpClient_" data-uid="EventStore.ClientAPI.Projections.QueryManager.#ctor(EventStore.ClientAPI.ILogger,System.Net.EndPoint,System.TimeSpan,System.TimeSpan,EventStore.ClientAPI.Transport.Http.IHttpClient)">QueryManager(ILogger, EndPoint, TimeSpan, TimeSpan, IHttpClient)</h4>
+  <h4 id="EventStore_ClientAPI_Projections_QueryManager__ctor_EventStore_ClientAPI_ILogger_EndPoint_TimeSpan_TimeSpan_EventStore_ClientAPI_Transport_Http_IHttpClient_" data-uid="EventStore.ClientAPI.Projections.QueryManager.#ctor(EventStore.ClientAPI.ILogger,EndPoint,TimeSpan,TimeSpan,EventStore.ClientAPI.Transport.Http.IHttpClient)">QueryManager(ILogger, EndPoint, TimeSpan, TimeSpan, IHttpClient)</h4>
   <div class="markdown level1 summary"><p>Creates a new instance of <a class="xref" href="EventStore.ClientAPI.Projections.QueryManager.html">QueryManager</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -167,15 +143,15 @@ with the Event Store over the RESTful API.</p>
         <td><span class="parametername">log</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Net.EndPoint</span></td>
+        <td><span class="xref">EndPoint</span></td>
         <td><span class="parametername">httpEndPoint</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">projectionOperationTimeout</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">queryTimeout</span></td>
       </tr>
       <tr>
@@ -189,7 +165,7 @@ with the Event Store over the RESTful API.</p>
   
   
   <a id="EventStore_ClientAPI_Projections_QueryManager_ExecuteAsync_" data-uid="EventStore.ClientAPI.Projections.QueryManager.ExecuteAsync*"></a>
-  <h4 id="EventStore_ClientAPI_Projections_QueryManager_ExecuteAsync_System_String_System_String_System_TimeSpan_System_TimeSpan_EventStore_ClientAPI_SystemData_UserCredentials_" data-uid="EventStore.ClientAPI.Projections.QueryManager.ExecuteAsync(System.String,System.String,System.TimeSpan,System.TimeSpan,EventStore.ClientAPI.SystemData.UserCredentials)">ExecuteAsync(String, String, TimeSpan, TimeSpan, UserCredentials)</h4>
+  <h4 id="EventStore_ClientAPI_Projections_QueryManager_ExecuteAsync_System_String_System_String_TimeSpan_TimeSpan_EventStore_ClientAPI_SystemData_UserCredentials_" data-uid="EventStore.ClientAPI.Projections.QueryManager.ExecuteAsync(System.String,System.String,TimeSpan,TimeSpan,EventStore.ClientAPI.SystemData.UserCredentials)">ExecuteAsync(String, String, TimeSpan, TimeSpan, UserCredentials)</h4>
   <div class="markdown level1 summary"><p>Asynchronously executes a query.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -217,11 +193,11 @@ with the Event Store over the RESTful API.</p>
         <td><span class="parametername">query</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">initialPollingDelay</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">maximumPollingDelay</span></td>
       </tr>
       <tr>
@@ -240,13 +216,13 @@ with the Event Store over the RESTful API.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td><p>String of JSON containing query result.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 id="EventStore_ClientAPI_Projections_QueryManager_ExecuteAsync_System_String_System_String_System_TimeSpan_System_TimeSpan_EventStore_ClientAPI_SystemData_UserCredentials__remarks">Remarks</h5>
+  <h5 id="EventStore_ClientAPI_Projections_QueryManager_ExecuteAsync_System_String_System_String_TimeSpan_TimeSpan_EventStore_ClientAPI_SystemData_UserCredentials__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>Creates a new transient projection and polls its status until it is Completed.</p>
 </div>
 </article>

@@ -107,35 +107,11 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">SystemMetadata</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.ClientAPI.Common.html">EventStore.ClientAPI.Common</a></h6>
   <h6><strong>Assembly</strong>: EventStore.ClientAPI.dll</h6>
   <h5 id="EventStore_ClientAPI_Common_SystemMetadata_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class SystemMetadata</code></pre>
+    <pre><code class="lang-csharp hljs">public static class SystemMetadata : object</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -149,7 +125,7 @@
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string Acl = &quot;$acl&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public const string Acl = null</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -174,7 +150,7 @@
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string AclDelete = &quot;$d&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public const string AclDelete = null</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -199,7 +175,7 @@
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string AclMetaRead = &quot;$mr&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public const string AclMetaRead = null</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -224,7 +200,7 @@
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string AclMetaWrite = &quot;$mw&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public const string AclMetaWrite = null</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -249,7 +225,7 @@
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string AclRead = &quot;$r&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public const string AclRead = null</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -274,7 +250,7 @@
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string AclWrite = &quot;$w&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public const string AclWrite = null</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -299,7 +275,7 @@
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string CacheControl = &quot;$cacheControl&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public const string CacheControl = null</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -325,7 +301,7 @@ Setting this allows all events older than the limit to be deleted</p>
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string MaxAge = &quot;$maxAge&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public const string MaxAge = null</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -351,7 +327,7 @@ setting this allows all events with a sequence less than current -maxcount to be
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string MaxCount = &quot;$maxCount&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public const string MaxCount = null</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -376,7 +352,7 @@ setting this allows all events with a sequence less than current -maxcount to be
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string SystemStreamAcl = &quot;$systemStreamAcl&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public const string SystemStreamAcl = null</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -402,7 +378,7 @@ setting this allows all events prior to the integer value to be deleted</p>
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string TruncateBefore = &quot;$tb&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public const string TruncateBefore = null</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -427,7 +403,7 @@ setting this allows all events prior to the integer value to be deleted</p>
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string UserStreamAcl = &quot;$userStreamAcl&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">public const string UserStreamAcl = null</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
