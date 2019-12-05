@@ -10,6 +10,20 @@ description: "Contact us to discuss any questions you may have."
             <p>We’re always happy to discuss your requirements for Event Store. Drop us an email here and we’ll get back to you.</p>
 		</div>
 		<div class="page-main">
+			<script>
+			var WebFormEvent =
+			{afterInstall: function(){},
+			beforeSubmit: function(){},
+			afterSubmit: function(event, data, error){
+			dataLayer.push({
+			  'event': 'GAEvent',
+			  'eventCategory': 'Form',
+			  'eventAction': 'Submitted',
+			  'eventLabel': window.location.pathname, 
+			  'eventValue': undefined,
+			  'eventNI': false 
+			});}}
+			</script>
             <script src='https://eventstore.freshsales.io/web_forms/acc22d4b3c91a09c3c7f3190a24fd1bcf4da1b27216d9c061c6aec390f7fb350/form.js' crossorigin='anonymous' id='fs_acc22d4b3c91a09c3c7f3190a24fd1bcf4da1b27216d9c061c6aec390f7fb350'></script>
             <style>
                 .fserv-container {
