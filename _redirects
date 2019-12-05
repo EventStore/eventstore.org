@@ -6,4 +6,4 @@
 
 /docs/introduction/*    /docs/getting-started
 
-/blog/201*/:title https://eventstore.com/blog/:title 302!
+/blog/201*/:title /blog/:title 302!
