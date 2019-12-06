@@ -4,7 +4,7 @@ title: "Case Study: How Event Sourcing is Spurring Linedata’s Digital Transfor
 seo-title: "Linedata’s Digital Transformation"
 author: "Dave Remy"
 description: "Event sourcing is relatively new to the financial services industry. By implementing Event Store’s approach to support its digital transformation strategy, Linedata can be more responsive to the changing needs of its customers and gain a competitive edge in the market. “The core benefits of event-driven architecture allowed us to improve quality, performance and respond quickly to our customers,” said Adrian Tovey, who leads Linedata’s global program management. “Event Store has helped us meet the demand for change in the industry, a change in the way applications are used to deliver services to our customers; Linedata is at the forefront of those changes.”"
-category: "Case Studies"
+category: "Articles"
 tags: ["Event sourcing","Event Store"]
 ---
 > **About Linedata**
