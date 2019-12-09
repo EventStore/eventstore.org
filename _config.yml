@@ -129,7 +129,7 @@ autopages:
   categories:
     enabled: true
     slugify:
-      mode: pretty
+      mode: default
       cased: true
     # Optional, the list of layouts that should be processed for every category found in the site
     layouts:
@@ -145,7 +145,7 @@ autopages:
   tags:
     enabled: true
     slugify:
-      mode: pretty
+      mode: default
       cased: true
     layouts:
       - "autopage_tags.html"
