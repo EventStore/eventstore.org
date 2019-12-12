@@ -261,7 +261,7 @@ color: #43A047;
  }
 
  function isStable(version) {
-  return version.indexOf("-rc") == -1 && version.indexOf("-alpha") == -1 && version.indexOf("-beta") == -1;
+  return version.indexOf("-preview") == -1 && version.indexOf("-rc") == -1 && version.indexOf("-alpha") == -1 && version.indexOf("-beta") == -1;
  }
 
  function getMajorMinorPatchVersion(version) {
