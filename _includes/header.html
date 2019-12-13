@@ -4,16 +4,16 @@
 {% capture postcategory %}{% for category in page.category %}{% if forloop.first == true %}{{category}}{% endif %}{% endfor %}{% endcapture %}
 {% capture seo-title %}{% if page.seo-title %}{{page.seo-title}}{% else %}{{page.title}}{% endif %} - {{postcategory}} | Event Store Blog{% endcapture %}
 {% elsif page.layout == 'autopage_category' %}
-{% assign autopagename = page.autopages.display_name | downcase | slugify %}{% assign seo = site.data.seo[autopagename] %}{% assign seo-title = seo.title %}
+{% assign autopagename = page.autopages.display_name | downcase | slugify %}{% assign seo = site.data.seo[autopagename] %}{% assign seo-title-1 = seo.title %}{% capture seo-title %}{% if paginator.page > 1 %}Page {{paginator.page}} - {% endif %}{{seo-title-1}}{% endcapture %}
 {% elsif page.layout == 'autopage_tags' %}
-{% assign tagname = page.autopages.display_name %}{% capture seo-title %}Posts tagged {{tagname}} | Event Store Blog{% endcapture %}
+{% assign tagname = page.autopages.display_name %}{% capture seo-title %}{% if paginator.page > 1 %}Page {{paginator.page}} - {% endif %}Posts tagged {{tagname}} | Event Store Blog{% endcapture %}
 {% else %}
 {% capture seo-title %}{{ page.title }}{% unless page.title contains "| Event Store" or contains "- Event Store" %} | {{ site.name }}{% endunless %}{% endcapture %}
 {% endif %}
 {% if page.description != null %}{% capture seo-description %}{{ page.description }}{% endcapture %}
 {% elsif page.layout == "blog-post" and page.description == null %}{% capture seo-description %}{{ page.content | strip_html | truncatewords:75 }}{% endcapture %}
-{% elsif page.layout == "autopage_category" %}{% assign autopagename = page.autopages.display_name | downcase | slugify %}{% assign seo = site.data.seo[autopagename] %}{% capture seo-description %}{{seo.description }}{% endcapture %}
-{% elsif page.layout == "autopage_tags" %}{% assign tagname = page.autopages.display_name | downcase | slugify %}{% capture seo-description %}Posts tagged {{ tagname }} from the Event Store blog{% endcapture %}
+{% elsif page.layout == "autopage_category" %}{% assign autopagename = page.autopages.display_name | downcase | slugify %}{% assign seo = site.data.seo[autopagename] %}{% capture seo-description %}{% if paginator.page > 1 %}Page {{paginator.page}} of {{paginator.total_pages}} - {% endif %}{{seo.description }}{% endcapture %}
+{% elsif page.layout == "autopage_tags" %}{% assign tagname = page.autopages.display_name | downcase | slugify %}{% capture seo-description %}{% if paginator.page > 1 %}Page {{paginator.page}} of {{paginator.total_pages}} - {% endif %}Posts tagged {{ page.autopages.display_name }} from the Event Store blog{% endcapture %}
 {% else %}{% capture seo-description %}{{ site.description }}{% endcapture %}
 {% endif %}
 <head>
