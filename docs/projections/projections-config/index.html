@@ -9,6 +9,7 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
+    <link rel="canonical" href="https://eventstore.com/docs/projections/projections-config/index.html">
     <title>Configuring projections | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Configuring projections | Event Store ">
@@ -116,11 +117,11 @@
 </code></pre></section>
 <section id="tabpanel_91M2l1Hlsb_tabid-6" role="tabpanel" data-tab="tabid-6" aria-hidden="true" hidden="hidden">
 <!-- TODO: Further explanation here -->
-<pre><code class="lang-csharp" name="getting-started-projections-create-projection-dotnet">PersistentSubscriptionSettings settings = PersistentSubscriptionSettings.Create()
-    .DoNotResolveLinkTos()
-    .StartFromCurrent();
+<pre><code class="lang-csharp" name="getting-started-projections-create-projection-dotnet">var streamName = Globals.streamName;
+var adminCredentials = Globals.AdminCredentials;
 
-conn.CreatePersistentSubscriptionAsync(streamName, &quot;examplegroup&quot;, settings, adminCredentials).Wait();
+PersistentSubscriptionSettings settings = PersistentSubscriptionSettings.Create()
+    .DoNotResolveLinkTos()
 </code></pre><!-- ## [JVM Client](#tab/tabid-7) -->
 <!-- TODO: Exists? -->
 </section>

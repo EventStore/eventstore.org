@@ -9,6 +9,7 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
+    <link rel="canonical" href="https://eventstore.com/docs/dotnet-api/code/EventStore.ClientAPI.EventStoreCatchUpSubscription.html">
     <title>Class EventStoreCatchUpSubscription
    | Event Store </title>
     <meta name="viewport" content="width=device-width">
@@ -107,44 +108,21 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">EventStoreCatchUpSubscription</span></div>
       <div class="level2"><a class="xref" href="EventStore.ClientAPI.EventStoreAllCatchUpSubscription.html">EventStoreAllCatchUpSubscription</a></div>
+      <div class="level2"><a class="xref" href="EventStore.ClientAPI.EventStoreAllFilteredCatchUpSubscription.html">EventStoreAllFilteredCatchUpSubscription</a></div>
       <div class="level2"><a class="xref" href="EventStore.ClientAPI.EventStoreStreamCatchUpSubscription.html">EventStoreStreamCatchUpSubscription</a></div>
-  </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.ClientAPI.html">EventStore.ClientAPI</a></h6>
   <h6><strong>Assembly</strong>: EventStore.ClientAPI.dll</h6>
   <h5 id="EventStore_ClientAPI_EventStoreCatchUpSubscription_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class EventStoreCatchUpSubscription</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class EventStoreCatchUpSubscription : object</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   
   
   <a id="EventStore_ClientAPI_EventStoreCatchUpSubscription__ctor_" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.#ctor*"></a>
-  <h4 id="EventStore_ClientAPI_EventStoreCatchUpSubscription__ctor_EventStore_ClientAPI_IEventStoreConnection_EventStore_ClientAPI_ILogger_System_String_EventStore_ClientAPI_SystemData_UserCredentials_System_Func_EventStore_ClientAPI_EventStoreCatchUpSubscription_EventStore_ClientAPI_ResolvedEvent_System_Threading_Tasks_Task__System_Action_EventStore_ClientAPI_EventStoreCatchUpSubscription__System_Action_EventStore_ClientAPI_EventStoreCatchUpSubscription_EventStore_ClientAPI_SubscriptionDropReason_System_Exception__EventStore_ClientAPI_CatchUpSubscriptionSettings_" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.#ctor(EventStore.ClientAPI.IEventStoreConnection,EventStore.ClientAPI.ILogger,System.String,EventStore.ClientAPI.SystemData.UserCredentials,System.Func{EventStore.ClientAPI.EventStoreCatchUpSubscription,EventStore.ClientAPI.ResolvedEvent,System.Threading.Tasks.Task},System.Action{EventStore.ClientAPI.EventStoreCatchUpSubscription},System.Action{EventStore.ClientAPI.EventStoreCatchUpSubscription,EventStore.ClientAPI.SubscriptionDropReason,System.Exception},EventStore.ClientAPI.CatchUpSubscriptionSettings)">EventStoreCatchUpSubscription(IEventStoreConnection, ILogger, String, UserCredentials, Func&lt;EventStoreCatchUpSubscription, ResolvedEvent, Task&gt;, Action&lt;EventStoreCatchUpSubscription&gt;, Action&lt;EventStoreCatchUpSubscription, SubscriptionDropReason, Exception&gt;, CatchUpSubscriptionSettings)</h4>
+  <h4 id="EventStore_ClientAPI_EventStoreCatchUpSubscription__ctor_EventStore_ClientAPI_IEventStoreConnection_EventStore_ClientAPI_ILogger_System_String_EventStore_ClientAPI_SystemData_UserCredentials_Func_EventStore_ClientAPI_EventStoreCatchUpSubscription_EventStore_ClientAPI_ResolvedEvent_Task__Action_EventStore_ClientAPI_EventStoreCatchUpSubscription__Action_EventStore_ClientAPI_EventStoreCatchUpSubscription_EventStore_ClientAPI_SubscriptionDropReason_Exception__EventStore_ClientAPI_CatchUpSubscriptionSettings_" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.#ctor(EventStore.ClientAPI.IEventStoreConnection,EventStore.ClientAPI.ILogger,System.String,EventStore.ClientAPI.SystemData.UserCredentials,Func{EventStore.ClientAPI.EventStoreCatchUpSubscription,EventStore.ClientAPI.ResolvedEvent,Task},Action{EventStore.ClientAPI.EventStoreCatchUpSubscription},Action{EventStore.ClientAPI.EventStoreCatchUpSubscription,EventStore.ClientAPI.SubscriptionDropReason,Exception},EventStore.ClientAPI.CatchUpSubscriptionSettings)">EventStoreCatchUpSubscription(IEventStoreConnection, ILogger, String, UserCredentials, Func&lt;EventStoreCatchUpSubscription, ResolvedEvent, Task&gt;, Action&lt;EventStoreCatchUpSubscription&gt;, Action&lt;EventStoreCatchUpSubscription, SubscriptionDropReason, Exception&gt;, CatchUpSubscriptionSettings)</h4>
   <div class="markdown level1 summary"><p>Constructs state for EventStoreCatchUpSubscription.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -180,15 +158,15 @@
         <td><span class="parametername">userCredentials</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html">EventStoreCatchUpSubscription</a>, <a class="xref" href="EventStore.ClientAPI.ResolvedEvent.html">ResolvedEvent</a>, <span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html">EventStoreCatchUpSubscription</a>, <a class="xref" href="EventStore.ClientAPI.ResolvedEvent.html">ResolvedEvent</a>, <span class="xref">Task</span>&gt;</td>
         <td><span class="parametername">eventAppeared</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html">EventStoreCatchUpSubscription</a>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html">EventStoreCatchUpSubscription</a>&gt;</td>
         <td><span class="parametername">liveProcessingStarted</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html">EventStoreCatchUpSubscription</a>, <a class="xref" href="EventStore.ClientAPI.SubscriptionDropReason.html">SubscriptionDropReason</a>, <span class="xref">System.Exception</span>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html">EventStoreCatchUpSubscription</a>, <a class="xref" href="EventStore.ClientAPI.SubscriptionDropReason.html">SubscriptionDropReason</a>, <span class="xref">Exception</span>&gt;</td>
         <td><span class="parametername">subscriptionDropped</span></td>
       </tr>
       <tr>
@@ -199,6 +177,56 @@
   </table>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="EventStore_ClientAPI_EventStoreCatchUpSubscription_AllowProcessing" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.AllowProcessing">AllowProcessing</h4>
+  <div class="markdown level1 summary"><p>Whether or not to process events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected volatile bool AllowProcessing</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_EventStoreCatchUpSubscription_Connection" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.Connection">Connection</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="EventStore.ClientAPI.IEventStoreConnection.html">IEventStoreConnection</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly IEventStoreConnection Connection</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.IEventStoreConnection.html">IEventStoreConnection</a></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="EventStore_ClientAPI_EventStoreCatchUpSubscription_EventAppeared" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.EventAppeared">EventAppeared</h4>
@@ -220,7 +248,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Func</span>&lt;<a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html">EventStoreCatchUpSubscription</a>, <a class="xref" href="EventStore.ClientAPI.ResolvedEvent.html">ResolvedEvent</a>, <span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
+        <td><span class="xref">Func</span>&lt;<a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html">EventStoreCatchUpSubscription</a>, <a class="xref" href="EventStore.ClientAPI.ResolvedEvent.html">ResolvedEvent</a>, <span class="xref">Task</span>&gt;</td>
       </tr>
     </tbody>
   </table>
@@ -301,6 +329,31 @@
   </table>
   
   
+  <h4 id="EventStore_ClientAPI_EventStoreCatchUpSubscription_ResolveLinkTos" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.ResolveLinkTos">ResolveLinkTos</h4>
+  <div class="markdown level1 summary"><p>Whether to resolve LinkTo events automatically</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly bool ResolveLinkTos</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="EventStore_ClientAPI_EventStoreCatchUpSubscription_ShouldStop" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.ShouldStop">ShouldStop</h4>
   <div class="markdown level1 summary"><p>stop has been called.</p>
 </div>
@@ -321,6 +374,56 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_EventStoreCatchUpSubscription_Subscription" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.Subscription">Subscription</h4>
+  <div class="markdown level1 summary"><p>The underlying <a class="xref" href="EventStore.ClientAPI.EventStoreSubscription.html">EventStoreSubscription</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected EventStoreSubscription Subscription</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.EventStoreSubscription.html">EventStoreSubscription</a></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_ClientAPI_EventStoreCatchUpSubscription_UserCredentials" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.UserCredentials">UserCredentials</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html#EventStore_ClientAPI_EventStoreCatchUpSubscription_UserCredentials">UserCredentials</a> associated with the subscription.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected readonly UserCredentials UserCredentials</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.SystemData.UserCredentials.html">UserCredentials</a></td>
       </tr>
     </tbody>
   </table>
@@ -435,6 +538,173 @@ a specific stream.</p>
   </h3>
   
   
+  <a id="EventStore_ClientAPI_EventStoreCatchUpSubscription_EnqueueAction_" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.EnqueueAction*"></a>
+  <h4 id="EventStore_ClientAPI_EventStoreCatchUpSubscription_EnqueueAction_Func_Task__" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.EnqueueAction(Func{Task})">EnqueueAction(Func&lt;Task&gt;)</h4>
+  <div class="markdown level1 summary"><p>Places an action on the queue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void EnqueueAction(Func&lt;Task&gt; action)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">Task</span>&gt;</td>
+        <td><span class="parametername">action</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_EventStoreCatchUpSubscription_EnqueuePushedEvent_" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.EnqueuePushedEvent*"></a>
+  <h4 id="EventStore_ClientAPI_EventStoreCatchUpSubscription_EnqueuePushedEvent_EventStore_ClientAPI_EventStoreSubscription_EventStore_ClientAPI_ResolvedEvent_" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.EnqueuePushedEvent(EventStore.ClientAPI.EventStoreSubscription,EventStore.ClientAPI.ResolvedEvent)">EnqueuePushedEvent(EventStoreSubscription, ResolvedEvent)</h4>
+  <div class="markdown level1 summary"><p>Enqueues a pushed event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Task EnqueuePushedEvent(EventStoreSubscription subscription, ResolvedEvent e)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.EventStoreSubscription.html">EventStoreSubscription</a></td>
+        <td><span class="parametername">subscription</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.ResolvedEvent.html">ResolvedEvent</a></td>
+        <td><span class="parametername">e</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_EventStoreCatchUpSubscription_EnqueueSubscriptionDropNotification_" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.EnqueueSubscriptionDropNotification*"></a>
+  <h4 id="EventStore_ClientAPI_EventStoreCatchUpSubscription_EnqueueSubscriptionDropNotification_EventStore_ClientAPI_SubscriptionDropReason_Exception_" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.EnqueueSubscriptionDropNotification(EventStore.ClientAPI.SubscriptionDropReason,Exception)">EnqueueSubscriptionDropNotification(SubscriptionDropReason, Exception)</h4>
+  <div class="markdown level1 summary"><p>Enqueues a dropped notification for later processing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void EnqueueSubscriptionDropNotification(SubscriptionDropReason reason, Exception error)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.SubscriptionDropReason.html">SubscriptionDropReason</a></td>
+        <td><span class="parametername">reason</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Exception</span></td>
+        <td><span class="parametername">error</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_EventStoreCatchUpSubscription_EnsureProcessingPushQueue_" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.EnsureProcessingPushQueue*"></a>
+  <h4 id="EventStore_ClientAPI_EventStoreCatchUpSubscription_EnsureProcessingPushQueue" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.EnsureProcessingPushQueue">EnsureProcessingPushQueue()</h4>
+  <div class="markdown level1 summary"><p>Forces the subscription to process the queue if necessary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void EnsureProcessingPushQueue()</code></pre>
+  </div>
+  
+  
+  <a id="EventStore_ClientAPI_EventStoreCatchUpSubscription_LiveProcessingStarted_" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.LiveProcessingStarted*"></a>
+  <h4 id="EventStore_ClientAPI_EventStoreCatchUpSubscription_LiveProcessingStarted_EventStore_ClientAPI_EventStoreCatchUpSubscription_EventStore_ClientAPI_Position_" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.LiveProcessingStarted(EventStore.ClientAPI.EventStoreCatchUpSubscription,EventStore.ClientAPI.Position)">LiveProcessingStarted(EventStoreCatchUpSubscription, Position)</h4>
+  <div class="markdown level1 summary"><p>The callback invoked when the subscription switches to push notifications.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Task LiveProcessingStarted(EventStoreCatchUpSubscription eventStoreCatchUpSubscription, Position lastPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html">EventStoreCatchUpSubscription</a></td>
+        <td><span class="parametername">eventStoreCatchUpSubscription</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.Position.html">Position</a></td>
+        <td><span class="parametername">lastPosition</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="EventStore_ClientAPI_EventStoreCatchUpSubscription_ReadEventsTillAsync_" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.ReadEventsTillAsync*"></a>
   <h4 id="EventStore_ClientAPI_EventStoreCatchUpSubscription_ReadEventsTillAsync_EventStore_ClientAPI_IEventStoreConnection_System_Boolean_EventStore_ClientAPI_SystemData_UserCredentials_System_Nullable_System_Int64__System_Nullable_System_Int64__" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.ReadEventsTillAsync(EventStore.ClientAPI.IEventStoreConnection,System.Boolean,EventStore.ClientAPI.SystemData.UserCredentials,System.Nullable{System.Int64},System.Nullable{System.Int64})">ReadEventsTillAsync(IEventStoreConnection, Boolean, UserCredentials, Nullable&lt;Int64&gt;, Nullable&lt;Int64&gt;)</h4>
   <div class="markdown level1 summary"><p>Read events until the given position or event number async.</p>
@@ -444,7 +714,7 @@ a specific stream.</p>
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract Task ReadEventsTillAsync(IEventStoreConnection connection, bool resolveLinkTos, UserCredentials userCredentials, long? lastCommitPosition, long? lastEventNumber)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract Task&lt;Position&gt; ReadEventsTillAsync(IEventStoreConnection connection, bool resolveLinkTos, UserCredentials userCredentials, long? lastCommitPosition, long? lastEventNumber)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -487,8 +757,71 @@ a specific stream.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="EventStore.ClientAPI.Position.html">Position</a>&gt;</td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_EventStoreCatchUpSubscription_ReadMissedHistoricEventsAsync_" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.ReadMissedHistoricEventsAsync*"></a>
+  <h4 id="EventStore_ClientAPI_EventStoreCatchUpSubscription_ReadMissedHistoricEventsAsync" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.ReadMissedHistoricEventsAsync">ReadMissedHistoricEventsAsync()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Task ReadMissedHistoricEventsAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_EventStoreCatchUpSubscription_ServerSubscriptionDropped_" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.ServerSubscriptionDropped*"></a>
+  <h4 id="EventStore_ClientAPI_EventStoreCatchUpSubscription_ServerSubscriptionDropped_EventStore_ClientAPI_EventStoreSubscription_EventStore_ClientAPI_SubscriptionDropReason_Exception_" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.ServerSubscriptionDropped(EventStore.ClientAPI.EventStoreSubscription,EventStore.ClientAPI.SubscriptionDropReason,Exception)">ServerSubscriptionDropped(EventStoreSubscription, SubscriptionDropReason, Exception)</h4>
+  <div class="markdown level1 summary"><p>Invoked when the subscription is dropped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void ServerSubscriptionDropped(EventStoreSubscription subscription, SubscriptionDropReason reason, Exception exc)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.EventStoreSubscription.html">EventStoreSubscription</a></td>
+        <td><span class="parametername">subscription</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.SubscriptionDropReason.html">SubscriptionDropReason</a></td>
+        <td><span class="parametername">reason</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Exception</span></td>
+        <td><span class="parametername">exc</span></td>
       </tr>
     </tbody>
   </table>
@@ -508,7 +841,7 @@ a specific stream.</p>
   
   
   <a id="EventStore_ClientAPI_EventStoreCatchUpSubscription_Stop_" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.Stop*"></a>
-  <h4 id="EventStore_ClientAPI_EventStoreCatchUpSubscription_Stop_System_TimeSpan_" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.Stop(System.TimeSpan)">Stop(TimeSpan)</h4>
+  <h4 id="EventStore_ClientAPI_EventStoreCatchUpSubscription_Stop_TimeSpan_" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.Stop(TimeSpan)">Stop(TimeSpan)</h4>
   <div class="markdown level1 summary"><p>Attempts to stop the subscription blocking for completion of stop.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -528,24 +861,36 @@ a specific stream.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">timeout</span></td>
       </tr>
     </tbody>
   </table>
-  <h5 class="exceptions">Exceptions</h5>
+  
+  
+  <a id="EventStore_ClientAPI_EventStoreCatchUpSubscription_SubscribeToStreamAsync_" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.SubscribeToStreamAsync*"></a>
+  <h4 id="EventStore_ClientAPI_EventStoreCatchUpSubscription_SubscribeToStreamAsync" data-uid="EventStore.ClientAPI.EventStoreCatchUpSubscription.SubscribeToStreamAsync">SubscribeToStreamAsync()</h4>
+  <div class="markdown level1 summary"><p>Subscribes to the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Task SubscribeToStreamAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Condition</th>
+        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.TimeoutException</span></td>
-        <td><p>Thrown if the subscription fails to stop within it&apos;s timeout period.</p>
-</td>
+        <td><span class="xref">Task</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -587,7 +932,7 @@ a specific stream.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><span class="xref">Task</span></td>
         <td></td>
       </tr>
     </tbody>

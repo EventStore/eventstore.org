@@ -9,6 +9,7 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
+    <link rel="canonical" href="https://eventstore.com/docs/getting-started/reading-subscribing-events/index.html">
     <title>Step 2 - Read events from a stream and subscribe to changes | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Step 2 - Read events from a stream and subscribe to changes | Event Store ">
@@ -195,9 +196,9 @@ Keep-Alive: timeout=15,max=100
 </ul>
 <section id="tabpanel_ewz4UtAAbO-1_tabid-dotnet-client" role="tabpanel" data-tab="tabid-dotnet-client">
 <p>To use the .NET API, use the following method passing the stream name, the start point in the stream, the number of events to read and whether to follow links to the event data:</p>
-<pre><code class="lang-csharp" name="getting-started-read-stream-request">var readEvents = conn.ReadStreamEventsForwardAsync(streamName, 0, 10, true).Result;
-foreach (var evt in readEvents.Events)
-    Console.WriteLine(Encoding.UTF8.GetString(evt.Event.Data));
+<pre><code class="lang-csharp" name="getting-started-read-stream-request">var conn = CreateConnection();
+var streamName = Globals.streamName;
+
 </code></pre><div class="NEXT"><h5>Next Steps</h5><p><a href="../../dotnet-api/reading-events/index.html">Read this guide</a> for more information on how to read events with the .NET API.</p>
 </div>
 </section>
@@ -258,8 +259,8 @@ Keep-Alive: timeout=15,max=100
 </ul>
 <section id="tabpanel_ewz4UtAAbO-3_tabid-dotnet-read-event" role="tabpanel" data-tab="tabid-dotnet-read-event">
 <p>To use the .NET API, use the following method passing the stream name, the event you want to read and wether to return the event data:</p>
-<pre><code class="lang-csharp" name="getting-started-read-stream-request">var readResult = conn.ReadEventAsync(streamName, 0, true).Result;
-Console.WriteLine(Encoding.UTF8.GetString(readResult.Event.Value.Event.Data));
+<pre><code class="lang-csharp" name="getting-started-read-stream-request">foreach (var evt in readEvents.Events)
+    Console.WriteLine(Encoding.UTF8.GetString(evt.Event.Data));
 </code></pre></section>
 <section id="tabpanel_ewz4UtAAbO-3_tabid-jvm-read-event" role="tabpanel" data-tab="tabid-jvm-read-event" aria-hidden="true" hidden="hidden">
 <p>To use the Java client, use the following method passing the stream name, the event you want to read and if you want to also return the event data:</p>
@@ -306,7 +307,10 @@ connection.tell(readEvent, readResult);
 <pre><code class="lang-bash" name="getting-started-create-subscription">curl -i -X PUT -d $&#39;{&quot;startFrom&quot;: 0,&quot;resolveLinktos&quot;: false}&#39; http://localhost:2113/subscriptions/newstream/examplegroup -u admin:changeit -H &quot;Content-Type: application/json&quot;
 </code></pre></section>
 <section id="tabpanel_ewz4UtAAbO-4_tabid-create-sub-dotnet" role="tabpanel" data-tab="tabid-create-sub-dotnet" aria-hidden="true" hidden="hidden">
-<pre><code class="lang-csharp" name="getting-started-read-stream-request">PersistentSubscriptionSettings settings = PersistentSubscriptionSettings.Create()
+<pre><code class="lang-csharp" name="getting-started-read-stream-request">var streamName = Globals.streamName;
+var adminCredentials = Globals.AdminCredentials;
+
+PersistentSubscriptionSettings settings = PersistentSubscriptionSettings.Create()
     .DoNotResolveLinkTos()
     .StartFromCurrent();
 
@@ -318,9 +322,6 @@ conn.ConnectToPersistentSubscription(streamName, &quot;examplegroup&quot;, (_, x
     Console.WriteLine(&quot;Received: &quot; + x.Event.EventStreamId + &quot;:&quot; + x.Event.EventNumber);
     Console.WriteLine(data);
 }, (sub, reason, ex) =&gt; { }, adminCredentials);
-
-Console.WriteLine(&quot;waiting for events. press enter to exit&quot;);
-Console.ReadLine();
 </code></pre><div class="NEXT"><h5>Next Steps</h5><p>Find more details on the parameters used in the example above, read the API documentation for <a class="xref" href="../../dotnet-api/code/EventStore.ClientAPI.PersistentSubscriptionSettings.html"><code>PersistentSubscriptionSettings</code></a>, <a class="xref" href="../../dotnet-api/code/EventStore.ClientAPI.IEventStoreConnection.html#EventStore_ClientAPI_IEventStoreConnection_CreatePersistentSubscriptionAsync_"><code>CreatePersistentSubscriptionAsync</code></a> and <a class="xref" href="../../dotnet-api/code/EventStore.ClientAPI.IEventStoreConnection.html#EventStore_ClientAPI_IEventStoreConnection_ConnectToPersistentSubscriptionAsync_"><code>ConnectToPersistentSubscription</code></a></p>
 </div>
 </section>

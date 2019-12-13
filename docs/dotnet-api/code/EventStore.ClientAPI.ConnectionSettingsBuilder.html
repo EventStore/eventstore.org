@@ -9,6 +9,7 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
+    <link rel="canonical" href="https://eventstore.com/docs/dotnet-api/code/EventStore.ClientAPI.ConnectionSettingsBuilder.html">
     <title>Class ConnectionSettingsBuilder
    | Event Store </title>
     <meta name="viewport" content="width=device-width">
@@ -107,35 +108,11 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ConnectionSettingsBuilder</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.ClientAPI.html">EventStore.ClientAPI</a></h6>
   <h6><strong>Assembly</strong>: EventStore.ClientAPI.dll</h6>
   <h5 id="EventStore_ClientAPI_ConnectionSettingsBuilder_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ConnectionSettingsBuilder</code></pre>
+    <pre><code class="lang-csharp hljs">public class ConnectionSettingsBuilder : object</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -582,6 +559,35 @@
   </table>
   
   
+  <a id="EventStore_ClientAPI_ConnectionSettingsBuilder_PreferReadOnlyReplica_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.PreferReadOnlyReplica*"></a>
+  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_PreferReadOnlyReplica" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.PreferReadOnlyReplica">PreferReadOnlyReplica()</h4>
+  <div class="markdown level1 summary"><p>Whether to prioritize choosing a read only replica that&apos;s alive from the known nodes. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConnectionSettingsBuilder PreferReadOnlyReplica()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.ConnectionSettingsBuilder.html">ConnectionSettingsBuilder</a></td>
+        <td><p>A <a class="xref" href="EventStore.ClientAPI.DnsClusterSettingsBuilder.html">DnsClusterSettingsBuilder</a> for further configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="EventStore_ClientAPI_ConnectionSettingsBuilder_PreferSlaveNode_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.PreferSlaveNode*"></a>
   <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_PreferSlaveNode" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.PreferSlaveNode">PreferSlaveNode()</h4>
   <div class="markdown level1 summary"><p>Whether to prioritize choosing a slave node that&apos;s alive from the known nodes.</p>
@@ -653,22 +659,6 @@
       </tr>
     </tbody>
   </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.ArgumentNullException</span></td>
-        <td><p>If <code data-dev-comment-type="paramref" class="paramref">clusterDns</code> is null or empty.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetClusterGossipPort_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetClusterGossipPort*"></a>
@@ -680,7 +670,7 @@ managers are running.</p>
 <p>If you are using the open source edition of Event Store HA, this should be the
 External HTTP port that the nodes are running on. If you cannot use a well-known
 port for this across all nodes, you can instead use gossip seed discovery and set
-the <span class="xref">System.Net.IPEndPoint</span> of some seed nodes instead.</p>
+the <see cref="!:IPEndPoint"></see> of some seed nodes instead.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   
@@ -767,6 +757,57 @@ If user credentials are not given for an operation, these credentials will be us
   
   
   <a id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetGossipSeedEndPoints_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetGossipSeedEndPoints*"></a>
+  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetGossipSeedEndPoints_EndPoint___" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetGossipSeedEndPoints(EndPoint[])">SetGossipSeedEndPoints(EndPoint[])</h4>
+  <div class="markdown level1 summary"><p>Sets gossip seed endpoints for the client.</p>
+<div class="NOTE"><h5>note</h5><p>
+This should be the external HTTP endpoint of the server, as it is required
+for the client to exchange gossip with the server. The standard port is 2113.
+</p></div>
+
+<p>If the server requires a specific Host header to be sent as part of the gossip
+request, use the overload of this method taking <a class="xref" href="EventStore.ClientAPI.GossipSeed.html">GossipSeed</a> instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConnectionSettingsBuilder SetGossipSeedEndPoints(params EndPoint[] gossipSeeds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">EndPoint</span>[]</td>
+        <td><span class="parametername">gossipSeeds</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.ConnectionSettingsBuilder.html">ConnectionSettingsBuilder</a></td>
+        <td><p>A <a class="xref" href="EventStore.ClientAPI.ClusterSettingsBuilder.html">ClusterSettingsBuilder</a> for further configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetGossipSeedEndPoints_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetGossipSeedEndPoints*"></a>
   <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetGossipSeedEndPoints_EventStore_ClientAPI_GossipSeed___" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetGossipSeedEndPoints(EventStore.ClientAPI.GossipSeed[])">SetGossipSeedEndPoints(GossipSeed[])</h4>
   <div class="markdown level1 summary"><p>Sets gossip seed endpoints for the client.</p>
 </div>
@@ -808,26 +849,10 @@ If user credentials are not given for an operation, these credentials will be us
       </tr>
     </tbody>
   </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.ArgumentException</span></td>
-        <td><p>If no gossip seeds are specified.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetGossipSeedEndPoints_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetGossipSeedEndPoints*"></a>
-  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetGossipSeedEndPoints_System_Boolean_System_Net_IPEndPoint___" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetGossipSeedEndPoints(System.Boolean,System.Net.IPEndPoint[])">SetGossipSeedEndPoints(Boolean, IPEndPoint[])</h4>
+  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetGossipSeedEndPoints_System_Boolean_EndPoint___" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetGossipSeedEndPoints(System.Boolean,EndPoint[])">SetGossipSeedEndPoints(Boolean, EndPoint[])</h4>
   <div class="markdown level1 summary"><p>Sets gossip seed endpoints for the client.</p>
 <div class="NOTE"><h5>note</h5><p>
 This should be the external HTTP endpoint of the server, as it is required
@@ -842,7 +867,7 @@ request, use the overload of this method taking <a class="xref" href="EventStore
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConnectionSettingsBuilder SetGossipSeedEndPoints(bool seedOverTls, params IPEndPoint[] gossipSeeds)</code></pre>
+    <pre><code class="lang-csharp hljs">public ConnectionSettingsBuilder SetGossipSeedEndPoints(bool seedOverTls, params EndPoint[] gossipSeeds)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -858,7 +883,7 @@ request, use the overload of this method taking <a class="xref" href="EventStore
         <td><span class="parametername">seedOverTls</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Net.IPEndPoint</span>[]</td>
+        <td><span class="xref">EndPoint</span>[]</td>
         <td><span class="parametername">gossipSeeds</span></td>
       </tr>
     </tbody>
@@ -875,89 +900,6 @@ request, use the overload of this method taking <a class="xref" href="EventStore
       <tr>
         <td><a class="xref" href="EventStore.ClientAPI.ConnectionSettingsBuilder.html">ConnectionSettingsBuilder</a></td>
         <td><p>A <a class="xref" href="EventStore.ClientAPI.ClusterSettingsBuilder.html">ClusterSettingsBuilder</a> for further configuration.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.ArgumentException</span></td>
-        <td><p>If no gossip seeds are specified.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetGossipSeedEndPoints_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetGossipSeedEndPoints*"></a>
-  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetGossipSeedEndPoints_System_Net_IPEndPoint___" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetGossipSeedEndPoints(System.Net.IPEndPoint[])">SetGossipSeedEndPoints(IPEndPoint[])</h4>
-  <div class="markdown level1 summary"><p>Sets gossip seed endpoints for the client.</p>
-<div class="NOTE"><h5>note</h5><p>
-This should be the external HTTP endpoint of the server, as it is required
-for the client to exchange gossip with the server. The standard port is 2113.
-</p></div>
-
-<p>If the server requires a specific Host header to be sent as part of the gossip
-request, use the overload of this method taking <a class="xref" href="EventStore.ClientAPI.GossipSeed.html">GossipSeed</a> instead.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  
-  <h5 class="decalaration">Declaration</h5>
-  
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConnectionSettingsBuilder SetGossipSeedEndPoints(params IPEndPoint[] gossipSeeds)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Net.IPEndPoint</span>[]</td>
-        <td><span class="parametername">gossipSeeds</span></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="EventStore.ClientAPI.ConnectionSettingsBuilder.html">ConnectionSettingsBuilder</a></td>
-        <td><p>A <a class="xref" href="EventStore.ClientAPI.ClusterSettingsBuilder.html">ClusterSettingsBuilder</a> for further configuration.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.ArgumentException</span></td>
-        <td><p>If no gossip seeds are specified.</p>
 </td>
       </tr>
     </tbody>
@@ -965,7 +907,7 @@ request, use the overload of this method taking <a class="xref" href="EventStore
   
   
   <a id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetGossipTimeout_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetGossipTimeout*"></a>
-  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetGossipTimeout_System_TimeSpan_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetGossipTimeout(System.TimeSpan)">SetGossipTimeout(TimeSpan)</h4>
+  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetGossipTimeout_TimeSpan_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetGossipTimeout(TimeSpan)">SetGossipTimeout(TimeSpan)</h4>
   <div class="markdown level1 summary"><p>Sets the period after which gossip times out if none is received.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -985,7 +927,7 @@ request, use the overload of this method taking <a class="xref" href="EventStore
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">timeout</span></td>
       </tr>
     </tbody>
@@ -1009,7 +951,7 @@ request, use the overload of this method taking <a class="xref" href="EventStore
   
   
   <a id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetHeartbeatInterval_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetHeartbeatInterval*"></a>
-  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetHeartbeatInterval_System_TimeSpan_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetHeartbeatInterval(System.TimeSpan)">SetHeartbeatInterval(TimeSpan)</h4>
+  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetHeartbeatInterval_TimeSpan_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetHeartbeatInterval(TimeSpan)">SetHeartbeatInterval(TimeSpan)</h4>
   <div class="markdown level1 summary"><p>Sets how often heartbeats should be expected on the connection (lower values detect broken sockets faster).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1029,7 +971,7 @@ request, use the overload of this method taking <a class="xref" href="EventStore
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">interval</span></td>
       </tr>
     </tbody>
@@ -1052,7 +994,7 @@ request, use the overload of this method taking <a class="xref" href="EventStore
   
   
   <a id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetHeartbeatTimeout_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetHeartbeatTimeout*"></a>
-  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetHeartbeatTimeout_System_TimeSpan_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetHeartbeatTimeout(System.TimeSpan)">SetHeartbeatTimeout(TimeSpan)</h4>
+  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetHeartbeatTimeout_TimeSpan_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetHeartbeatTimeout(TimeSpan)">SetHeartbeatTimeout(TimeSpan)</h4>
   <div class="markdown level1 summary"><p>Sets how long to wait without heartbeats before determining a connection to be dead (must be longer than heartbeat interval).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1072,7 +1014,7 @@ request, use the overload of this method taking <a class="xref" href="EventStore
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">timeout</span></td>
       </tr>
     </tbody>
@@ -1136,26 +1078,10 @@ request, use the overload of this method taking <a class="xref" href="EventStore
       </tr>
     </tbody>
   </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
-        <td><p>If <code data-dev-comment-type="paramref" class="paramref">maxDiscoverAttempts</code> is less than or equal to 0.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   
   
   <a id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetOperationTimeoutTo_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetOperationTimeoutTo*"></a>
-  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetOperationTimeoutTo_System_TimeSpan_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetOperationTimeoutTo(System.TimeSpan)">SetOperationTimeoutTo(TimeSpan)</h4>
+  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetOperationTimeoutTo_TimeSpan_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetOperationTimeoutTo(TimeSpan)">SetOperationTimeoutTo(TimeSpan)</h4>
   <div class="markdown level1 summary"><p>Sets the operation timeout duration.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1175,7 +1101,7 @@ request, use the overload of this method taking <a class="xref" href="EventStore
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">operationTimeout</span></td>
       </tr>
     </tbody>
@@ -1198,7 +1124,7 @@ request, use the overload of this method taking <a class="xref" href="EventStore
   
   
   <a id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetQueueTimeoutTo_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetQueueTimeoutTo*"></a>
-  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetQueueTimeoutTo_System_TimeSpan_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetQueueTimeoutTo(System.TimeSpan)">SetQueueTimeoutTo(TimeSpan)</h4>
+  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetQueueTimeoutTo_TimeSpan_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetQueueTimeoutTo(TimeSpan)">SetQueueTimeoutTo(TimeSpan)</h4>
   <div class="markdown level1 summary"><p>Sets the maximum permitted time a request may be queued awaiting transmission; if exceeded an <a class="xref" href="EventStore.ClientAPI.Exceptions.OperationExpiredException.html">OperationExpiredException</a> is thrown.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1218,7 +1144,7 @@ request, use the overload of this method taking <a class="xref" href="EventStore
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">queueTimeout</span></td>
       </tr>
     </tbody>
@@ -1241,7 +1167,7 @@ request, use the overload of this method taking <a class="xref" href="EventStore
   
   
   <a id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetReconnectionDelayTo_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetReconnectionDelayTo*"></a>
-  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetReconnectionDelayTo_System_TimeSpan_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetReconnectionDelayTo(System.TimeSpan)">SetReconnectionDelayTo(TimeSpan)</h4>
+  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetReconnectionDelayTo_TimeSpan_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetReconnectionDelayTo(TimeSpan)">SetReconnectionDelayTo(TimeSpan)</h4>
   <div class="markdown level1 summary"><p>Sets the delay between reconnection attempts.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1261,7 +1187,7 @@ request, use the overload of this method taking <a class="xref" href="EventStore
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">reconnectionDelay</span></td>
       </tr>
     </tbody>
@@ -1284,7 +1210,7 @@ request, use the overload of this method taking <a class="xref" href="EventStore
   
   
   <a id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetTimeoutCheckPeriodTo_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetTimeoutCheckPeriodTo*"></a>
-  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetTimeoutCheckPeriodTo_System_TimeSpan_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetTimeoutCheckPeriodTo(System.TimeSpan)">SetTimeoutCheckPeriodTo(TimeSpan)</h4>
+  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_SetTimeoutCheckPeriodTo_TimeSpan_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.SetTimeoutCheckPeriodTo(TimeSpan)">SetTimeoutCheckPeriodTo(TimeSpan)</h4>
   <div class="markdown level1 summary"><p>Sets how often timeouts should be checked for.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1304,7 +1230,7 @@ request, use the overload of this method taking <a class="xref" href="EventStore
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">timeoutCheckPeriod</span></td>
       </tr>
     </tbody>
@@ -1356,7 +1282,8 @@ request, use the overload of this method taking <a class="xref" href="EventStore
   
   <a id="EventStore_ClientAPI_ConnectionSettingsBuilder_UseCustomHttpClient_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.UseCustomHttpClient*"></a>
   <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_UseCustomHttpClient_EventStore_ClientAPI_Transport_Http_IHttpClient_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.UseCustomHttpClient(EventStore.ClientAPI.Transport.Http.IHttpClient)">UseCustomHttpClient(IHttpClient)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Configures the connection to use a custom <a class="xref" href="EventStore.ClientAPI.Transport.Http.IHttpClient.html">IHttpClient</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   
   <h5 class="decalaration">Declaration</h5>
@@ -1442,7 +1369,7 @@ request, use the overload of this method taking <a class="xref" href="EventStore
   <a id="EventStore_ClientAPI_ConnectionSettingsBuilder_UseDebugLogger_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.UseDebugLogger*"></a>
   <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_UseDebugLogger" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.UseDebugLogger">UseDebugLogger()</h4>
   <div class="markdown level1 summary"><p>Configures the connection to output log messages to the listeners
-configured on <span class="xref">System.Diagnostics.Debug</span>.</p>
+configured on <see cref="!:System.Diagnostics.Debug"></see>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   
@@ -1559,7 +1486,7 @@ configured on <span class="xref">System.Diagnostics.Debug</span>.</p>
   
   
   <a id="EventStore_ClientAPI_ConnectionSettingsBuilder_WithConnectionTimeoutOf_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.WithConnectionTimeoutOf*"></a>
-  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_WithConnectionTimeoutOf_System_TimeSpan_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.WithConnectionTimeoutOf(System.TimeSpan)">WithConnectionTimeoutOf(TimeSpan)</h4>
+  <h4 id="EventStore_ClientAPI_ConnectionSettingsBuilder_WithConnectionTimeoutOf_TimeSpan_" data-uid="EventStore.ClientAPI.ConnectionSettingsBuilder.WithConnectionTimeoutOf(TimeSpan)">WithConnectionTimeoutOf(TimeSpan)</h4>
   <div class="markdown level1 summary"><p>Sets the timeout for attempting to connect to a server before aborting and attempting a reconnect.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1579,7 +1506,7 @@ configured on <span class="xref">System.Diagnostics.Debug</span>.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">timeout</span></td>
       </tr>
     </tbody>

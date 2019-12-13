@@ -9,6 +9,7 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
+    <link rel="canonical" href="https://eventstore.com/docs/dotnet-api/code/EventStore.ClientAPI.NodePreference.html">
     <title>Enum NodePreference
    | Event Store </title>
     <meta name="viewport" content="width=device-width">
@@ -106,7 +107,7 @@
   <h6><strong>Assembly</strong>: EventStore.ClientAPI.dll</h6>
   <h5 id="EventStore_ClientAPI_NodePreference_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum NodePreference</code></pre>
+    <pre><code class="lang-csharp hljs">public enum NodePreference : int</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -129,12 +130,21 @@
 </td>
       </tr>
       <tr>
+        <td id="EventStore_ClientAPI_NodePreference_ReadOnlyReplica">ReadOnlyReplica</td>
+        <td><p>When attempting connection, prefers read only replicas.</p>
+</td>
+      </tr>
+      <tr>
         <td id="EventStore_ClientAPI_NodePreference_Slave">Slave</td>
         <td><p>When attempting connnection, prefers slave node.</p>
 </td>
       </tr>
     </tbody>
   </thead></thead></table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="EventStore.Projections.Core.Utils.EnumExtensions.html#EventStore_Projections_Core_Utils_EnumExtensions_EnumValueName__1___0_">EnumExtensions.EnumValueName&lt;NodePreference&gt;()</a>
+  </div>
 </article>
           </div>
           

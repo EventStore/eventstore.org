@@ -9,6 +9,7 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
+    <link rel="canonical" href="https://eventstore.com/docs/dotnet-api/code/EventStore.ClientAPI.ExpectedVersion.html">
     <title>Class ExpectedVersion
    | Event Store </title>
     <meta name="viewport" content="width=device-width">
@@ -107,35 +108,11 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">ExpectedVersion</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.ClientAPI.html">EventStore.ClientAPI</a></h6>
   <h6><strong>Assembly</strong>: EventStore.ClientAPI.dll</h6>
   <h5 id="EventStore_ClientAPI_ExpectedVersion_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class ExpectedVersion</code></pre>
+    <pre><code class="lang-csharp hljs">public static class ExpectedVersion : object</code></pre>
   </div>
   <h5 id="EventStore_ClientAPI_ExpectedVersion_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>The use of expected version can be a bit tricky especially when discussing idempotency assurances given by Event Store.</p>
@@ -158,7 +135,7 @@ Event Store does its best to assure idempotency but does not guarantee idempoten
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int Any = -2</code></pre>
+    <pre><code class="lang-csharp hljs">public const int Any = null</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -183,8 +160,7 @@ Event Store does its best to assure idempotency but does not guarantee idempoten
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;ExpectedVersion.EmptyStream has been deprecated. Use ExpectedVersion.NoStream instead&quot;)]
-public const int EmptyStream = -1</code></pre>
+    <pre><code class="lang-csharp hljs">public const int EmptyStream = null</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,7 +185,7 @@ public const int EmptyStream = -1</code></pre>
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int NoStream = -1</code></pre>
+    <pre><code class="lang-csharp hljs">public const int NoStream = null</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,7 +210,7 @@ public const int EmptyStream = -1</code></pre>
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int StreamExists = -4</code></pre>
+    <pre><code class="lang-csharp hljs">public const int StreamExists = null</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">

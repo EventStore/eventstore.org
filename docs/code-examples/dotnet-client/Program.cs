@@ -74,6 +74,9 @@ namespace DocsExample
                     case "step3options":
                         Step3ProjectionOptions();
                         break;
+                    case "checkState":
+                        checkState();
+                        break;
                 }
             }
             catch (Exception e)
@@ -111,7 +114,7 @@ namespace DocsExample
 
         static void Step2Subs()
         {
-//            Run this first
+            //            Run this first
             var conn = CreateConnection();
             var streamName = Globals.streamName;
             var adminCredentials = Globals.AdminCredentials;
@@ -138,7 +141,7 @@ namespace DocsExample
             var conn = CreateConnection();
             var adminCredentials = Globals.AdminCredentials;
             var projection = Globals.Projection;
-            
+
             foreach (string f in Directory.GetFiles("../", "shoppingCart-*"))
             {
                 var streamName = Path.GetFileNameWithoutExtension(f);
@@ -147,7 +150,7 @@ namespace DocsExample
                 conn.AppendToStreamAsync(streamName, ExpectedVersion.Any, eventData).Wait();
             }
 
-//            TODO: Parse
+            //            TODO: Parse
             string countItemsProjection = @"
                     fromAll().when({
                     $init: function(){
@@ -215,7 +218,7 @@ namespace DocsExample
                                     }
                                 }).outputState()";
 
-            projection.UpdateQueryAsync("xbox-one-s-counter", optionsProjectionOptionsUpdate,adminCredentials).Wait();
+            projection.UpdateQueryAsync("xbox-one-s-counter", optionsProjectionOptionsUpdate, adminCredentials).Wait();
 
             readEvents = conn.ReadStreamEventsForwardAsync("xboxes", 0, 10, true).Result;
             foreach (var evt in readEvents.Events)
@@ -224,10 +227,10 @@ namespace DocsExample
 
         static void Step3ProjectionOptions()
         {
-//            var conn = CreateConnection();
+            //            var conn = CreateConnection();
             var projection = Globals.Projection;
             var adminCredentials = Globals.AdminCredentials;
-            
+
             projection.EnableAsync("$by_category", adminCredentials).Wait();
 
             string itemCounterProjection = @"
@@ -244,10 +247,19 @@ namespace DocsExample
                         }
                     })
             ";
-            
+
             projection.CreateContinuousAsync("shopping-cart-item-counter", itemCounterProjection, true, adminCredentials).Wait();
-            
+
             var projectionState = projection.GetPartitionStateAsync("shopping-cart-item-counter", "shoppingCart-b989fe21-9469-4017-8d71-9820b8dd1164", adminCredentials);
+            Console.WriteLine(projectionState.Result);
+        }
+
+        static void checkState()
+        {
+            var conn = CreateConnection();
+            var projection = Globals.Projection;
+            var adminCredentials = Globals.AdminCredentials;
+            var projectionState = projection.GetStateAsync("%24by_correlation_id", Globals.AdminCredentials);
             Console.WriteLine(projectionState.Result);
         }
     }

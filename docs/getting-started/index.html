@@ -9,6 +9,7 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
+    <link rel="canonical" href="https://eventstore.com/docs/getting-started/index.html">
     <title>Step 1 - Install, run, and write your first event | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Step 1 - Install, run, and write your first event | Event Store ">
@@ -275,7 +276,7 @@ final ActorRef connection = system.actorOf(ConnectionActor.getProps());
 </section>
 <section id="tabpanel_dfgfloIX5I-2_tabid-5" role="tabpanel" data-tab="tabid-5" aria-hidden="true" hidden="hidden">
 <p>To use the .NET API, use the following method, passing the name of the stream, the version, and the events to write:</p>
-<pre><code class="lang-csharp" name="getting-started-write-event-request">conn.AppendToStreamAsync(streamName, ExpectedVersion.Any, eventData).Wait();
+<pre><code class="lang-csharp" name="getting-started-write-event-request">var step1EventData = ProcessEvents(Globals.filePath);
 </code></pre><div class="NEXT"><h5>Next Steps</h5><p>Read <a href="../http-api/creating-writing-a-stream/index.html">this guide</a> for more information on how to write events with the .NET API. We don&#39;t cover version checking in this guide, but you can read more in <a href="../dotnet-api/optimistic-concurrency-and-idempotence/index.html">the optimistic concurrency guide</a>.</p>
 </div>
 </section>

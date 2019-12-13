@@ -9,6 +9,7 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
+    <link rel="canonical" href="https://eventstore.com/docs/dotnet-api/code/EventStore.ClientAPI.Transport.Http.IHttpClient.html">
     <title>Interface IHttpClient
    | Event Store </title>
     <meta name="viewport" content="width=device-width">
@@ -99,7 +100,8 @@
   
   <h1 id="EventStore_ClientAPI_Transport_Http_IHttpClient" data-uid="EventStore.ClientAPI.Transport.Http.IHttpClient" class="text-break">Interface IHttpClient
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>An IHttpClient.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.ClientAPI.Transport.Http.html">EventStore.ClientAPI.Transport.Http</a></h6>
   <h6><strong>Assembly</strong>: EventStore.ClientAPI.dll</h6>
@@ -112,8 +114,9 @@
   
   
   <a id="EventStore_ClientAPI_Transport_Http_IHttpClient_Delete_" data-uid="EventStore.ClientAPI.Transport.Http.IHttpClient.Delete*"></a>
-  <h4 id="EventStore_ClientAPI_Transport_Http_IHttpClient_Delete_System_String_EventStore_ClientAPI_SystemData_UserCredentials_System_Action_EventStore_ClientAPI_Transport_Http_HttpResponse__System_Action_System_Exception__" data-uid="EventStore.ClientAPI.Transport.Http.IHttpClient.Delete(System.String,EventStore.ClientAPI.SystemData.UserCredentials,System.Action{EventStore.ClientAPI.Transport.Http.HttpResponse},System.Action{System.Exception})">Delete(String, UserCredentials, Action&lt;HttpResponse&gt;, Action&lt;Exception&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="EventStore_ClientAPI_Transport_Http_IHttpClient_Delete_System_String_EventStore_ClientAPI_SystemData_UserCredentials_Action_EventStore_ClientAPI_Transport_Http_HttpResponse__Action_Exception__" data-uid="EventStore.ClientAPI.Transport.Http.IHttpClient.Delete(System.String,EventStore.ClientAPI.SystemData.UserCredentials,Action{EventStore.ClientAPI.Transport.Http.HttpResponse},Action{Exception})">Delete(String, UserCredentials, Action&lt;HttpResponse&gt;, Action&lt;Exception&gt;)</h4>
+  <div class="markdown level1 summary"><p>Invokes a DELETE request.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   
   <h5 class="decalaration">Declaration</h5>
@@ -139,11 +142,11 @@
         <td><span class="parametername">userCredentials</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.ClientAPI.Transport.Http.HttpResponse.html">HttpResponse</a>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.ClientAPI.Transport.Http.HttpResponse.html">HttpResponse</a>&gt;</td>
         <td><span class="parametername">onSuccess</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Exception</span>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<span class="xref">Exception</span>&gt;</td>
         <td><span class="parametername">onException</span></td>
       </tr>
     </tbody>
@@ -151,8 +154,9 @@
   
   
   <a id="EventStore_ClientAPI_Transport_Http_IHttpClient_Get_" data-uid="EventStore.ClientAPI.Transport.Http.IHttpClient.Get*"></a>
-  <h4 id="EventStore_ClientAPI_Transport_Http_IHttpClient_Get_System_String_EventStore_ClientAPI_SystemData_UserCredentials_System_Action_EventStore_ClientAPI_Transport_Http_HttpResponse__System_Action_System_Exception__System_String_" data-uid="EventStore.ClientAPI.Transport.Http.IHttpClient.Get(System.String,EventStore.ClientAPI.SystemData.UserCredentials,System.Action{EventStore.ClientAPI.Transport.Http.HttpResponse},System.Action{System.Exception},System.String)">Get(String, UserCredentials, Action&lt;HttpResponse&gt;, Action&lt;Exception&gt;, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="EventStore_ClientAPI_Transport_Http_IHttpClient_Get_System_String_EventStore_ClientAPI_SystemData_UserCredentials_Action_EventStore_ClientAPI_Transport_Http_HttpResponse__Action_Exception__System_String_" data-uid="EventStore.ClientAPI.Transport.Http.IHttpClient.Get(System.String,EventStore.ClientAPI.SystemData.UserCredentials,Action{EventStore.ClientAPI.Transport.Http.HttpResponse},Action{Exception},System.String)">Get(String, UserCredentials, Action&lt;HttpResponse&gt;, Action&lt;Exception&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Invokes a GET request.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   
   <h5 class="decalaration">Declaration</h5>
@@ -178,11 +182,11 @@
         <td><span class="parametername">userCredentials</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.ClientAPI.Transport.Http.HttpResponse.html">HttpResponse</a>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.ClientAPI.Transport.Http.HttpResponse.html">HttpResponse</a>&gt;</td>
         <td><span class="parametername">onSuccess</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Exception</span>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<span class="xref">Exception</span>&gt;</td>
         <td><span class="parametername">onException</span></td>
       </tr>
       <tr>
@@ -194,8 +198,9 @@
   
   
   <a id="EventStore_ClientAPI_Transport_Http_IHttpClient_Post_" data-uid="EventStore.ClientAPI.Transport.Http.IHttpClient.Post*"></a>
-  <h4 id="EventStore_ClientAPI_Transport_Http_IHttpClient_Post_System_String_System_String_System_String_EventStore_ClientAPI_SystemData_UserCredentials_System_Action_EventStore_ClientAPI_Transport_Http_HttpResponse__System_Action_System_Exception__" data-uid="EventStore.ClientAPI.Transport.Http.IHttpClient.Post(System.String,System.String,System.String,EventStore.ClientAPI.SystemData.UserCredentials,System.Action{EventStore.ClientAPI.Transport.Http.HttpResponse},System.Action{System.Exception})">Post(String, String, String, UserCredentials, Action&lt;HttpResponse&gt;, Action&lt;Exception&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="EventStore_ClientAPI_Transport_Http_IHttpClient_Post_System_String_System_String_System_String_EventStore_ClientAPI_SystemData_UserCredentials_Action_EventStore_ClientAPI_Transport_Http_HttpResponse__Action_Exception__" data-uid="EventStore.ClientAPI.Transport.Http.IHttpClient.Post(System.String,System.String,System.String,EventStore.ClientAPI.SystemData.UserCredentials,Action{EventStore.ClientAPI.Transport.Http.HttpResponse},Action{Exception})">Post(String, String, String, UserCredentials, Action&lt;HttpResponse&gt;, Action&lt;Exception&gt;)</h4>
+  <div class="markdown level1 summary"><p>Invokes a POST request.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   
   <h5 class="decalaration">Declaration</h5>
@@ -229,11 +234,11 @@
         <td><span class="parametername">userCredentials</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.ClientAPI.Transport.Http.HttpResponse.html">HttpResponse</a>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.ClientAPI.Transport.Http.HttpResponse.html">HttpResponse</a>&gt;</td>
         <td><span class="parametername">onSuccess</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Exception</span>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<span class="xref">Exception</span>&gt;</td>
         <td><span class="parametername">onException</span></td>
       </tr>
     </tbody>
@@ -241,8 +246,9 @@
   
   
   <a id="EventStore_ClientAPI_Transport_Http_IHttpClient_Put_" data-uid="EventStore.ClientAPI.Transport.Http.IHttpClient.Put*"></a>
-  <h4 id="EventStore_ClientAPI_Transport_Http_IHttpClient_Put_System_String_System_String_System_String_EventStore_ClientAPI_SystemData_UserCredentials_System_Action_EventStore_ClientAPI_Transport_Http_HttpResponse__System_Action_System_Exception__" data-uid="EventStore.ClientAPI.Transport.Http.IHttpClient.Put(System.String,System.String,System.String,EventStore.ClientAPI.SystemData.UserCredentials,System.Action{EventStore.ClientAPI.Transport.Http.HttpResponse},System.Action{System.Exception})">Put(String, String, String, UserCredentials, Action&lt;HttpResponse&gt;, Action&lt;Exception&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="EventStore_ClientAPI_Transport_Http_IHttpClient_Put_System_String_System_String_System_String_EventStore_ClientAPI_SystemData_UserCredentials_Action_EventStore_ClientAPI_Transport_Http_HttpResponse__Action_Exception__" data-uid="EventStore.ClientAPI.Transport.Http.IHttpClient.Put(System.String,System.String,System.String,EventStore.ClientAPI.SystemData.UserCredentials,Action{EventStore.ClientAPI.Transport.Http.HttpResponse},Action{Exception})">Put(String, String, String, UserCredentials, Action&lt;HttpResponse&gt;, Action&lt;Exception&gt;)</h4>
+  <div class="markdown level1 summary"><p>Invokes a PUT request.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   
   <h5 class="decalaration">Declaration</h5>
@@ -276,11 +282,11 @@
         <td><span class="parametername">userCredentials</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EventStore.ClientAPI.Transport.Http.HttpResponse.html">HttpResponse</a>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="EventStore.ClientAPI.Transport.Http.HttpResponse.html">HttpResponse</a>&gt;</td>
         <td><span class="parametername">onSuccess</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Exception</span>&gt;</td>
+        <td><span class="xref">Action</span>&lt;<span class="xref">Exception</span>&gt;</td>
         <td><span class="parametername">onException</span></td>
       </tr>
     </tbody>
