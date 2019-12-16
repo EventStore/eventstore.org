@@ -13,7 +13,7 @@ If you encounter any issues, please don’t hesitate to [open an issue](https://
 
 You can download the packages from the [downloads page](https://eventstore.org/downloads/) under the Pre-Release section.
 
-If you are running on macOS, you will need to run Event Store in [docker](https://hub.docker.com/repository/docker/eventstore/eventstore).
+If you are running on macOS, you will need to run Event Store in [Docker](https://hub.docker.com/repository/docker/eventstore/eventstore), since currently servers using .NET Core's gRPC implementation require the platform to support server ALPN, which macOS did not until Catalina. As soon as this restriction is lifted by the .NET Core platform, Event Store will release packages for macOS.
 
 ## Important!
 
@@ -25,7 +25,7 @@ This requires a TLS certificate, but for ease of use we have introduced a develo
 
 There are a number of exciting features included in this preview:
 - The move to .NET Core 3.1
-- A gRPC client
+- A gRPC Client API and .NET SDK
 - Server Side Filtering
 - Read-Only Replicas
 - Master Resignation
@@ -35,7 +35,7 @@ There are a number of exciting features included in this preview:
 We are working on the documenting the new features fully for the release.  
 For the preview, a we have included an overview and brief guide to each feature in this post
 
-Additionally, you can reach out to us on [github](https://github.com/EventStore/EventStore) to ask questions or report any issues.
+Additionally, you can reach out to us on [GitHub](https://github.com/EventStore/EventStore) to ask questions or report any issues.
 
 ### .NET Core 3.1
 
@@ -389,4 +389,4 @@ HTTP prefixes were dropped with the move from HTTPListener to Kestrel.
 Please be aware that Event Store will fail if you try to specify HTTP Prefixes in the configuration.
 
 # Providing Feedback
-Please provide feedback by opening issues on Github.
+Please provide feedback by opening issues on GitHub.
