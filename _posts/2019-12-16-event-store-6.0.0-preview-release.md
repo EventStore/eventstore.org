@@ -61,7 +61,7 @@ The following code snippets show how to perform some common operations with the 
 
 ### Create the Client
 
-```cpp
+```csharp
 var eventStoreClient = new EventStore.Grpc.EventStoreGrpcClient(new Uri("https://localhost:2113/"));
 ```
 
@@ -71,7 +71,7 @@ When running in development mode, this would be the development certificates fou
 
 Alternatively, you can disable the validation checks by specifying a custom HttpClient when creating the client, for example:
 
-```cpp
+```csharp
 var eventStoreClient = new EventStore.Grpc.EventStoreGrpcClient(new Uri("https://localhost:2113/"),
     () => new HttpClient(new SocketsHttpHandler
     {
@@ -84,7 +84,7 @@ var eventStoreClient = new EventStore.Grpc.EventStoreGrpcClient(new Uri("https:/
 
 ### Writing to a Stream with Expected Version Any
 
-```cpp
+```csharp
 var eventData = new EventData(Uuid.NewUuid(), "type", System.Text.Json.JsonSerializer.SerializeToUtf8Bytes(new SomeEvent()));
 await eventStoreClient.AppendToStreamAsync(
   "stream", AnyStreamRevision.Any, new[] { eventData }, cancellationToken: cancellationToken);
@@ -92,7 +92,7 @@ await eventStoreClient.AppendToStreamAsync(
 
 ### Writing to a Stream with Expected Version
 
-```c#
+```csharp
 var eventData = new EventData(Uuid.NewUuid(), "type", System.Text.Json.JsonSerializer.SerializeToUtf8Bytes(new SomeEvent()));
 await eventStoreClient.AppendToStreamAsync(
   "stream", new StreamRevision(5), new[] { eventData }, cancellationToken: cancellationToken);
@@ -100,21 +100,21 @@ await eventStoreClient.AppendToStreamAsync(
 
 ### Reading a Stream
 
-```c#
+```csharp
 var events = eventStoreClient.ReadStreamForwardsAsync(
   streamName, StreamRevision.Start, int.MaxValue, cancellationToken: cancellationToken);
 ```
 
 ### Subscribe to All
 
-```c#
+```csharp
 using var subscription = eventStoreClient.SubscribeToAll(
   async (s, e, ct) => { await …; }, userCredentials: new UserCredentials(“admin”, “changeit”));
 ```
 
 ### Subscribe to a Stream
 
-```c#
+```csharp
 using var subscription = eventStoreClient.SubscribeToStream(
   streamName, async (s, e, ct) => await ...);
 ```
@@ -135,13 +135,13 @@ The API differs depending on whether you use the TCP or gRPC client. Below are s
 
 The server side filter is created using the new Filter class and you can choose to match either the event type or stream name against a prefix or regular expression.
 
-```c#
+```csharp
 var filter = Filter.EventType.Prefix("SimpleEvent");
 ```
 
 That filter can then be used when making calls to either `FilteredReadAllEventsForwardAsync` or `FilteredReadAllEventsBackwardAsync` on the connection.
 
-```c#
+```csharp
 var readEvents = await connection.ReadAllEventsForwardFilteredAsync(
     position: Position.Start, 
     maxCount: 4096, 
@@ -161,7 +161,7 @@ This is to overcome the scenario where the server might search through a large n
 
 The checkpoint delegate allows you to save a checkpoint periodically to avoid this.
 
-```c#
+```csharp
 await connection.FilteredSubscribeToAllAsync(
    true,
    filter,
@@ -184,7 +184,7 @@ The server side filter is created using the new `EventTypeFilter` or `StreamFilt
 
 For example:
 
-```c#
+```csharp
 var filter = new EventTypeFilter(new PrefixFilterExpression("SimpleEvent"));
 var readEvents = await client.ReadAllForwardsAsync(
   position: Position.Start,
@@ -198,7 +198,7 @@ When it comes to subscribing the client behaves in a similar manner allowing you
 
 For example:
 
-```c#
+```csharp
 var filter = new EventTypeFilter(new PrefixFilterExpression("SimpleEvent"));
 client.SubscribeToAll(
   eventAppeared: (sub, e, t) => Task.CompletedTask,
@@ -252,7 +252,7 @@ To start a node as a read-only replica, the `ReadOnlyReplica` option has been in
 
 The Event Store Client has also been adjusted to allow the user to set the node preference to ReadOnlyReplica.
 
-```c#
+```csharp
 var settings = EventStore.ClientAPI.ConnectionSettings.Create()
 .PerformOnAnyNode()
 .PreferReadOnlyReplica();
