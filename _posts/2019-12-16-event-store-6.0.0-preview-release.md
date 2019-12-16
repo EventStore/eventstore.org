@@ -11,6 +11,8 @@ This release is not intended to be used in production and is still rough around 
 
 If you encounter any issues, please don’t hesitate to [open an issue](https://github.com/EventStore/EventStore/issues/new) on GitHub if there isn’t one already.
 
+You can download the packages from the [downloads page](https://eventstore.org/downloads/) under the Pre-Release section.
+
 ## Important!
 
 With the preview release of Event Store, Event Store will only expose the external HTTP interface over HTTPS.
