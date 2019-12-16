@@ -4,20 +4,20 @@ author: "Hayley Campbell"
 layout: blog-post
 ---
 
-We are very excited to announce the first preview release of Event Store 6.0.0!  
+We are excited to announce the first preview release of Event Store 6.0.0!  
 With this release we want to show you where we are planning on taking Event Store in the future.
 
-This release is not intended to be used in production and is still rough around the edges, however we wanted to provide you with the release bits and we welcome your feedback.
+This release is not intended to be used in production and is still rough around the edges, however we want to provide you with a release candidate, and we welcome your feedback.
 
-If you encounter any issues, please don’t hesitate to open an issue on GitHub if there isn’t one already.
+If you encounter any issues, please don’t hesitate to [open an issue](https://github.com/EventStore/EventStore/issues/new) on GitHub if there isn’t one already.
 
 ## Important!
 
 With the preview release of Event Store, Event Store will only expose the external HTTP interface over HTTPS.
 
-This requires a TLS certificate, but for ease of use we have introduced a development mode which will use a self signed certificate intended for development use only. Development mode can be enabled by specifying the `--dev` option when starting Event Store.
+This requires a TLS certificate, but for ease of use we have introduced a development mode which uses a self signed certificate intended for development use only. Development mode can be enabled by specifying the `--dev` option when starting Event Store.
 
-# What’s new in Event Store
+## What’s new in Event Store
 
 There are a number of exciting features included in this preview:
 - The move to .NET Core 3.1
@@ -31,15 +31,15 @@ There are a number of exciting features included in this preview:
 Given that this is a preview release, there is no documentation on the new features at the moment.
 
 We have included details on how to get started with each feature further along in this blog post.  
-Additionally, you can reach out to us over github or google groups to ask questions or report any issues.
+Additionally, you can reach out to us over [github](https://github.com/EventStore/EventStore) or [google groups](https://groups.google.com/forum/#!forum/event-store) to ask questions or report any issues.
 
-## .NET Core 3.1
+### .NET Core 3.1
 
 Event Store 6 runs only on Core CLR 3.1.  
 Support for both .NET Framework and Mono have been dropped.  
 This has provided a variety of benefits, and is one of the most requested changes we have ever made.
 
-Much of the platform-specific code has been removed, and we benefit from the focus on performance that Microsoft has given the Core CLR.   We now use the Kestrel HTTP server, which has significant benefits over HttpListener which was used up to version 5.
+Much of the platform-specific code has been removed, and we benefit from the focus on performance that Microsoft has given the Core CLR. We now use the Kestrel HTTP server, which has significant benefits over HttpListener which was used up to version 5.
 
 Historically we have provided Linux and macOS binaries with the Mono runtime statically linked into them. Unfortunately this is not yet supported by .NET Core. Consequently we now ship the correct version of the runtime as part of our packages.
 
@@ -59,7 +59,7 @@ The following code snippets show how to perform some common operations with the 
 
 ### Create the Client
 
-```c#
+```cpp
 var eventStoreClient = new EventStore.Grpc.EventStoreGrpcClient(new Uri("https://localhost:2113/"));
 ```
 
@@ -69,7 +69,7 @@ When running in development mode, this would be the development certificates fou
 
 Alternatively, you can disable the validation checks by specifying a custom HttpClient when creating the client, for example:
 
-```c#
+```cpp
 var eventStoreClient = new EventStore.Grpc.EventStoreGrpcClient(new Uri("https://localhost:2113/"),
     () => new HttpClient(new SocketsHttpHandler
     {
@@ -82,7 +82,7 @@ var eventStoreClient = new EventStore.Grpc.EventStoreGrpcClient(new Uri("https:/
 
 ### Writing to a Stream with Expected Version Any
 
-```c#
+```cpp
 var eventData = new EventData(Uuid.NewUuid(), "type", JsonSerializer.SerializeToUtf8Bytes(new SomeEvent()));
 await eventStoreClient.AppendToStreamAsync(
   "stream", AnyStreamRevision.Any, new[] { eventData }, cancellationToken: cancellationToken);
