@@ -62,6 +62,22 @@ The following code snippets show how to perform some common operations with the 
 var eventStoreClient = new EventStore.Grpc.EventStoreGrpcClient(new Uri("https://localhost:2113/"));
 ```
 
+**Note:** In order for the gRPC client to connect successfully, the TLS certificate used by Event Store must be trusted by your machine.  
+When running in development mode, this would be the development certificates found in `dev-ca` in the extracted directory.
+
+Alternatively, you can disable the validation checks by specifying a custom HttpClient when creating the client, for example:
+
+```c#
+var eventStoreClient = new EventStore.Grpc.EventStoreGrpcClient(new Uri("https://localhost:2113/"),
+    () => new HttpClient(new SocketsHttpHandler
+    {
+        SslOptions = new SslClientAuthenticationOptions
+        {
+            RemoteCertificateValidationCallback = delegate { return true; }
+        }
+    }));
+```
+
 ### Writing to a Stream with Expected Version Any
 
 ```c#
