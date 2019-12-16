@@ -1,10 +1,10 @@
 ---
-title: "Event Store 6.0.0 Preview"
+title: "Event Store 6.0.0 Preview 1"
 author: "Hayley Campbell"
 layout: blog-post
 ---
 
-We are very excited to announce the first preview release of Event Store 6.0.0.  
+We are very excited to announce the first preview release of Event Store 6.0.0!  
 With this release we want to show you where we are planning on taking Event Store in the future.
 
 This release is not intended to be used in production and is still rough around the edges, however we wanted to provide you with the release bits and we welcome your feedback.
@@ -15,7 +15,7 @@ If you encounter any issues, please don’t hesitate to open an issue on GitHub 
 
 With the preview release of Event Store, Event Store will only expose the external HTTP interface over HTTPS.
 
-This requires an SSL certificate, but for ease of use we have introduced a development mode which will use a self signed certificate intended for development use only.
+This requires an TLS certificate, but for ease of use we have introduced a development mode which will use a self signed certificate intended for development use only.
 
 # What’s new in Event Store
 
@@ -170,7 +170,34 @@ await connection.FilteredSubscribeToAllAsync(
 
 ### gRPC Client
 
+The server side filter is created using the new `EventTypeFilter` or `StreamFilter` class and you can choose to match either against a prefix or regular expression.
 
+For example:
+
+```c#
+var filter = new EventTypeFilter(new PrefixFilterExpression("SimpleEvent"));
+var readEvents = await client.ReadAllForwardsAsync(
+  position: Position.Start,
+  maxCount: 4096,
+  resolveLinkTos: false,
+  filter: filter,
+  userCredentials: new UserCredentials("admin", "changeit")).ToArrayAsync();
+```
+
+When it comes to subscribing the client behaves in a similar manner allowing you provide a filter.
+
+For example:
+
+```c#
+var filter = new EventTypeFilter(new PrefixFilterExpression("SimpleEvent"));
+client.SubscribeToAll(
+  eventAppeared: (sub, e, t) => Task.CompletedTask,
+  resolveLinkTos: true,
+  filter: filter,
+  userCredentials: new UserCredentials("admin", "changeit"));
+```
+
+Please note that for the preview the checkpoint reached callback is not yet present in the gRPC .NET Client, the work can be tracked [here](https://github.com/EventStore/EventStore/pull/2145).
 
 ### HTTP API
 
