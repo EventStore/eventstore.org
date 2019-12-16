@@ -15,7 +15,7 @@ If you encounter any issues, please don’t hesitate to open an issue on GitHub 
 
 With the preview release of Event Store, Event Store will only expose the external HTTP interface over HTTPS.
 
-This requires an TLS certificate, but for ease of use we have introduced a development mode which will use a self signed certificate intended for development use only.
+This requires a TLS certificate, but for ease of use we have introduced a development mode which will use a self signed certificate intended for development use only. Development mode can be enabled by specifying the `--dev` option when starting Event Store.
 
 # What’s new in Event Store
 
@@ -35,7 +35,8 @@ Additionally, you can reach out to us over github or google groups to ask questi
 
 ## .NET Core 3.1
 
-Event Store 6 runs only on Core CLR 3.1. Support for both .NET Framework and Mono have been dropped.  
+Event Store 6 runs only on Core CLR 3.1.  
+Support for both .NET Framework and Mono have been dropped.  
 This has provided a variety of benefits, and is one of the most requested changes we have ever made.
 
 Much of the platform-specific code has been removed, and we benefit from the focus on performance that Microsoft has given the Core CLR.   We now use the Kestrel HTTP server, which has significant benefits over HttpListener which was used up to version 5.
@@ -52,7 +53,7 @@ To improve this situation, we have added a new default client protocol in Event 
 
 In Preview 1 of Event Store 6, we are shipping a .NET SDK for the new gRPC protocol. With the final version of Event Store 6, we will also ship first party, commercially supported client SDKs for Java, Node.js and Go in addition to .NET.
 
-The Event Store .NET gRPC SDK is available on NuGet.
+The Event Store .NET gRPC SDK is available on [NuGet](https://www.nuget.org/packages/EventStore.Grpc.Client/).
 
 The following code snippets show how to perform some common operations with the .NET SDK:
 
@@ -62,7 +63,8 @@ The following code snippets show how to perform some common operations with the 
 var eventStoreClient = new EventStore.Grpc.EventStoreGrpcClient(new Uri("https://localhost:2113/"));
 ```
 
-**Note:** In order for the gRPC client to connect successfully, the TLS certificate used by Event Store must be trusted by your machine.  
+**Note:**  
+In order for the gRPC client to connect successfully, the TLS certificate used by Event Store must be trusted by your machine.  
 When running in development mode, this would be the development certificates found in `dev-ca` in the extracted directory.
 
 Alternatively, you can disable the validation checks by specifying a custom HttpClient when creating the client, for example:
@@ -82,14 +84,16 @@ var eventStoreClient = new EventStore.Grpc.EventStoreGrpcClient(new Uri("https:/
 
 ```c#
 var eventData = new EventData(Uuid.NewUuid(), "type", JsonSerializer.SerializeToUtf8Bytes(new SomeEvent()));
-await eventStoreClient.AppendToStreamAsync("stream", AnyStreamRevision.Any, new[] { eventData }, cancellationToken: cancellationToken);
+await eventStoreClient.AppendToStreamAsync(
+  "stream", AnyStreamRevision.Any, new[] { eventData }, cancellationToken: cancellationToken);
 ```
 
 ### Writing to a Stream with Expected Version
 
 ```c#
 var eventData = new EventData(Uuid.NewUuid(), "type", JsonSerializer.SerializeToUtf8Bytes(new SomeEvent()));
-await eventStoreClient.AppendToStreamAsync("stream", new StreamRevision(5), new[] { eventData }, cancellationToken: cancellationToken);
+await eventStoreClient.AppendToStreamAsync(
+  "stream", new StreamRevision(5), new[] { eventData }, cancellationToken: cancellationToken);
 ```
 
 ### Reading a Stream
@@ -102,13 +106,15 @@ var events = eventStoreClient.ReadStreamForwardsAsync(
 ### Subscribe to All
 
 ```c#
-using var subscription = eventStoreClient.SubscribeToAll(async (s, e, ct) => { await …; }, userCredentials: new UserCredentials(“admin”, “changeit”));
+using var subscription = eventStoreClient.SubscribeToAll(
+  async (s, e, ct) => { await …; }, userCredentials: new UserCredentials(“admin”, “changeit”));
 ```
 
 ### Subscribe to a Stream
 
 ```c#
-using var subscription = eventStoreClient.SubscribeToStream(streamName, async (s, e, ct) => await ...);
+using var subscription = eventStoreClient.SubscribeToStream(
+  streamName, async (s, e, ct) => await ...);
 ```
 
 ## Server Side Filtering
@@ -230,7 +236,7 @@ https://localhost:2113/streams/streams/$all/filtered/0/forward/4095?context=even
 A common use case for adding more nodes to a cluster is being able to provide data from Event Store closer to the destination where it’s intended to be used. However, by adding more nodes to the cluster, you incur write latency as Event Store requires a majority of the nodes in the cluster to acknowledge the write before it’s deemed successful.
 
 Previously Event Store supported adding additional nodes to the cluster as clones for scaling out reads.  
-This has lead to a few issues as clones can be promoted into the cluster which can mean that clients end up reading from a node that starts participating in normal quorum operations. This has 2 undesired side effects, in that additional load can be inadvertently placed on a quorum node, and in the event of network segregation the cluster can end up in a split brain situation.
+This has led to a few issues as clones can be promoted into the cluster which can mean that clients end up reading from a node that starts participating in normal quorum operations. This has 2 undesired side effects, in that additional load can be inadvertently placed on a quorum node, and in the event of network segregation the cluster can end up in a split brain situation.
 
 To address both of these concerns, we have introduced the ability to mark a node as a read-only replica which avoids these scenarios. This type of node will not partake in elections, and will not be promotable to a clone, slave or master node.
 
@@ -310,7 +316,7 @@ Thanks to @StuartFergusonVme for this feature!
 
 ## Development Mode
 
-To make things easier when running Event Store for the first time, we have introduced a dev mode.
+To make things easier when running Event Store for the first time, we have introduced a development mode.
 
 You can set this by starting up Event Store with the dev flag, e.g:
 
