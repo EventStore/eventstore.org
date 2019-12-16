@@ -7,7 +7,7 @@ layout: blog-post
 We are excited to announce the first preview release of Event Store 6.0.0!  
 With this release we want to show you where we are planning on taking Event Store in the future.
 
-This release is not intended to be used in production and is still rough around the edges, however we want to provide you with a release candidate, and we welcome your feedback.
+This release is not intended to be used in production and is still rough around the edges, but we welcome your feedback as we prepare a release candidate.
 
 If you encounter any issues, please don’t hesitate to [open an issue](https://github.com/EventStore/EventStore/issues/new) on GitHub if there isn’t one already.
 
