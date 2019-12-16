@@ -13,6 +13,8 @@ If you encounter any issues, please don’t hesitate to [open an issue](https://
 
 You can download the packages from the [downloads page](https://eventstore.org/downloads/) under the Pre-Release section.
 
+If you are running on macOS, you will need to run Event Store in [docker](https://hub.docker.com/repository/docker/eventstore/eventstore).
+
 ## Important!
 
 With the preview release of Event Store, Event Store will only expose the external HTTP interface over HTTPS.
