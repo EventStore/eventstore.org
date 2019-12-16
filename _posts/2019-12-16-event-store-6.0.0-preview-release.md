@@ -121,7 +121,8 @@ using var subscription = eventStoreClient.SubscribeToStream(
 
 ## Server Side Filtering
 
-We have also added the ability to filter both reads and subscriptions on the server-side. You can filter by either event type or stream name.
+We have also added the ability to filter both reads and subscriptions on the server-side. You can filter by either event type or stream name.  
+Thanks for [@Yspadadden](https://github.com/Yspadadden) for providing the inspiration for this feature.
 
 The intention here is to remove the need for having to setup and use projections when you only want to subscribe to a stream containing specific events.
 
@@ -308,14 +309,14 @@ This command is a privileged command and requires a user in the $admins group to
 A new competing consumer strategy has been added to persistent subscriptions, which presents events to the same consumer if they have the same correlation id.
 
 In order to use this new strategy, the `$by_correlation_id` projection must be running, and you can now select this new strategy when creating the subscription through the UI or TCP client.
-Thanks to @sammosampson for this feature!
+Thanks to [@sammosampson](https://github.com/sammosampson) for this feature!
 
 ## Competing Consumers - View Parked Messages
 
 It is now possible to view the parked messages stream for a persistent subscription through the UI.
 
 You can view this by clicking the new “View Parked Messages” button in the persistent subscription’s details.
-Thanks to @StuartFergusonVme for this feature!
+Thanks to [@StuartFergusonVme](https://github.com/StuartFergusonVme) for this feature!
 
 ## Development Mode
 
