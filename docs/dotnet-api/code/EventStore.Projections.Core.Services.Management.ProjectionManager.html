@@ -9,6 +9,7 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
+    <link rel="canonical" href="https://eventstore.com/docs/dotnet-api/code/EventStore.Projections.Core.Services.Management.ProjectionManager.html">
     <title>Class ProjectionManager
    | Event Store </title>
     <meta name="viewport" content="width=device-width">
@@ -108,14 +109,12 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<span class="xref">EventStore.Core.Messages.SystemMessage.StateChangeMessage</span>&gt;</div>
-    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<span class="xref">EventStore.Core.Messages.SystemMessage.SystemCoreReady</span>&gt;</div>
-    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<span class="xref">EventStore.Core.Messages.SystemMessage.EpochWritten</span>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<span class="xref">EventStore.Core.Messages.ClientMessage.ReadStreamEventsBackwardCompleted</span>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<span class="xref">EventStore.Core.Messages.ClientMessage.ReadStreamEventsForwardCompleted</span>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<span class="xref">EventStore.Core.Messages.ClientMessage.WriteEventsCompleted</span>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<span class="xref">EventStore.Core.Messages.ClientMessage.DeleteStreamCompleted</span>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionManagementMessage.Command.Post.html">ProjectionManagementMessage.Command.Post</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionManagementMessage.Command.PostBatch.html">ProjectionManagementMessage.Command.PostBatch</a>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionManagementMessage.Command.UpdateQuery.html">ProjectionManagementMessage.Command.UpdateQuery</a>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionManagementMessage.Command.GetQuery.html">ProjectionManagementMessage.Command.GetQuery</a>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionManagementMessage.Command.Delete.html">ProjectionManagementMessage.Command.Delete</a>&gt;</div>
@@ -130,6 +129,8 @@
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionManagementMessage.Command.StartSlaveProjections.html">ProjectionManagementMessage.Command.StartSlaveProjections</a>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionManagementMessage.Command.GetConfig.html">ProjectionManagementMessage.Command.GetConfig</a>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionManagementMessage.Command.UpdateConfig.html">ProjectionManagementMessage.Command.UpdateConfig</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionSubsystemMessage.StartComponents.html">ProjectionSubsystemMessage.StartComponents</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionSubsystemMessage.StopComponents.html">ProjectionSubsystemMessage.StopComponents</a>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionManagementMessage.Internal.CleanupExpired.html">ProjectionManagementMessage.Internal.CleanupExpired</a>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionManagementMessage.Internal.Deleted.html">ProjectionManagementMessage.Internal.Deleted</a>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.CoreProjectionStatusMessage.Started.html">CoreProjectionStatusMessage.Started</a>&gt;</div>
@@ -148,7 +149,7 @@
   <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
   <h5 id="EventStore_Projections_Core_Services_Management_ProjectionManager_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ProjectionManager : IDisposable, IHandle&lt;SystemMessage.StateChangeMessage&gt;, IHandle&lt;SystemMessage.SystemCoreReady&gt;, IHandle&lt;SystemMessage.EpochWritten&gt;, IHandle&lt;ClientMessage.ReadStreamEventsBackwardCompleted&gt;, IHandle&lt;ClientMessage.ReadStreamEventsForwardCompleted&gt;, IHandle&lt;ClientMessage.WriteEventsCompleted&gt;, IHandle&lt;ClientMessage.DeleteStreamCompleted&gt;, IHandle&lt;ProjectionManagementMessage.Command.Post&gt;, IHandle&lt;ProjectionManagementMessage.Command.UpdateQuery&gt;, IHandle&lt;ProjectionManagementMessage.Command.GetQuery&gt;, IHandle&lt;ProjectionManagementMessage.Command.Delete&gt;, IHandle&lt;ProjectionManagementMessage.Command.GetStatistics&gt;, IHandle&lt;ProjectionManagementMessage.Command.GetState&gt;, IHandle&lt;ProjectionManagementMessage.Command.GetResult&gt;, IHandle&lt;ProjectionManagementMessage.Command.Disable&gt;, IHandle&lt;ProjectionManagementMessage.Command.Enable&gt;, IHandle&lt;ProjectionManagementMessage.Command.Abort&gt;, IHandle&lt;ProjectionManagementMessage.Command.SetRunAs&gt;, IHandle&lt;ProjectionManagementMessage.Command.Reset&gt;, IHandle&lt;ProjectionManagementMessage.Command.StartSlaveProjections&gt;, IHandle&lt;ProjectionManagementMessage.Command.GetConfig&gt;, IHandle&lt;ProjectionManagementMessage.Command.UpdateConfig&gt;, IHandle&lt;ProjectionManagementMessage.Internal.CleanupExpired&gt;, IHandle&lt;ProjectionManagementMessage.Internal.Deleted&gt;, IHandle&lt;CoreProjectionStatusMessage.Started&gt;, IHandle&lt;CoreProjectionStatusMessage.Stopped&gt;, IHandle&lt;CoreProjectionStatusMessage.Faulted&gt;, IHandle&lt;CoreProjectionStatusMessage.Prepared&gt;, IHandle&lt;CoreProjectionStatusMessage.StateReport&gt;, IHandle&lt;CoreProjectionStatusMessage.ResultReport&gt;, IHandle&lt;CoreProjectionStatusMessage.StatisticsReport&gt;, IHandle&lt;CoreProjectionManagementMessage.SlaveProjectionReaderAssigned&gt;, IHandle&lt;ProjectionManagementMessage.RegisterSystemProjection&gt;, IHandle&lt;CoreProjectionStatusMessage.ProjectionWorkerStarted&gt;, IHandle&lt;ProjectionManagementMessage.ReaderReady&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class ProjectionManager : IDisposable, IHandle&lt;ClientMessage.ReadStreamEventsBackwardCompleted&gt;, IHandle&lt;ClientMessage.ReadStreamEventsForwardCompleted&gt;, IHandle&lt;ClientMessage.WriteEventsCompleted&gt;, IHandle&lt;ClientMessage.DeleteStreamCompleted&gt;, IHandle&lt;ProjectionManagementMessage.Command.Post&gt;, IHandle&lt;ProjectionManagementMessage.Command.PostBatch&gt;, IHandle&lt;ProjectionManagementMessage.Command.UpdateQuery&gt;, IHandle&lt;ProjectionManagementMessage.Command.GetQuery&gt;, IHandle&lt;ProjectionManagementMessage.Command.Delete&gt;, IHandle&lt;ProjectionManagementMessage.Command.GetStatistics&gt;, IHandle&lt;ProjectionManagementMessage.Command.GetState&gt;, IHandle&lt;ProjectionManagementMessage.Command.GetResult&gt;, IHandle&lt;ProjectionManagementMessage.Command.Disable&gt;, IHandle&lt;ProjectionManagementMessage.Command.Enable&gt;, IHandle&lt;ProjectionManagementMessage.Command.Abort&gt;, IHandle&lt;ProjectionManagementMessage.Command.SetRunAs&gt;, IHandle&lt;ProjectionManagementMessage.Command.Reset&gt;, IHandle&lt;ProjectionManagementMessage.Command.StartSlaveProjections&gt;, IHandle&lt;ProjectionManagementMessage.Command.GetConfig&gt;, IHandle&lt;ProjectionManagementMessage.Command.UpdateConfig&gt;, IHandle&lt;ProjectionSubsystemMessage.StartComponents&gt;, IHandle&lt;ProjectionSubsystemMessage.StopComponents&gt;, IHandle&lt;ProjectionManagementMessage.Internal.CleanupExpired&gt;, IHandle&lt;ProjectionManagementMessage.Internal.Deleted&gt;, IHandle&lt;CoreProjectionStatusMessage.Started&gt;, IHandle&lt;CoreProjectionStatusMessage.Stopped&gt;, IHandle&lt;CoreProjectionStatusMessage.Faulted&gt;, IHandle&lt;CoreProjectionStatusMessage.Prepared&gt;, IHandle&lt;CoreProjectionStatusMessage.StateReport&gt;, IHandle&lt;CoreProjectionStatusMessage.ResultReport&gt;, IHandle&lt;CoreProjectionStatusMessage.StatisticsReport&gt;, IHandle&lt;CoreProjectionManagementMessage.SlaveProjectionReaderAssigned&gt;, IHandle&lt;ProjectionManagementMessage.RegisterSystemProjection&gt;, IHandle&lt;CoreProjectionStatusMessage.ProjectionWorkerStarted&gt;, IHandle&lt;ProjectionManagementMessage.ReaderReady&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -254,6 +255,30 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="EventStore_Projections_Core_Services_Management_ProjectionManager_ServiceName" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.ServiceName">ServiceName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string ServiceName = null</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
       </tr>
     </tbody>
   </table>
@@ -375,87 +400,6 @@
     <tbody>
       <tr>
         <td><span class="xref">EventStore.Core.Messages.ClientMessage.WriteEventsCompleted</span></td>
-        <td><span class="parametername">message</span></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="EventStore_Projections_Core_Services_Management_ProjectionManager_Handle_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.Handle*"></a>
-  <h4 id="EventStore_Projections_Core_Services_Management_ProjectionManager_Handle_EventStore_Core_Messages_SystemMessage_EpochWritten_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.Handle(EventStore.Core.Messages.SystemMessage.EpochWritten)">Handle(SystemMessage.EpochWritten)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  
-  <h5 class="decalaration">Declaration</h5>
-  
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Handle(SystemMessage.EpochWritten message)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">EventStore.Core.Messages.SystemMessage.EpochWritten</span></td>
-        <td><span class="parametername">message</span></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="EventStore_Projections_Core_Services_Management_ProjectionManager_Handle_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.Handle*"></a>
-  <h4 id="EventStore_Projections_Core_Services_Management_ProjectionManager_Handle_EventStore_Core_Messages_SystemMessage_StateChangeMessage_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.Handle(EventStore.Core.Messages.SystemMessage.StateChangeMessage)">Handle(SystemMessage.StateChangeMessage)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  
-  <h5 class="decalaration">Declaration</h5>
-  
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Handle(SystemMessage.StateChangeMessage message)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">EventStore.Core.Messages.SystemMessage.StateChangeMessage</span></td>
-        <td><span class="parametername">message</span></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="EventStore_Projections_Core_Services_Management_ProjectionManager_Handle_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.Handle*"></a>
-  <h4 id="EventStore_Projections_Core_Services_Management_ProjectionManager_Handle_EventStore_Core_Messages_SystemMessage_SystemCoreReady_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.Handle(EventStore.Core.Messages.SystemMessage.SystemCoreReady)">Handle(SystemMessage.SystemCoreReady)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  
-  <h5 class="decalaration">Declaration</h5>
-  
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Handle(SystemMessage.SystemCoreReady message)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">EventStore.Core.Messages.SystemMessage.SystemCoreReady</span></td>
         <td><span class="parametername">message</span></td>
       </tr>
     </tbody>
@@ -976,6 +920,33 @@
   
   
   <a id="EventStore_Projections_Core_Services_Management_ProjectionManager_Handle_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Management_ProjectionManager_Handle_EventStore_Projections_Core_Messages_ProjectionManagementMessage_Command_PostBatch_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.Handle(EventStore.Projections.Core.Messages.ProjectionManagementMessage.Command.PostBatch)">Handle(ProjectionManagementMessage.Command.PostBatch)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ProjectionManagementMessage.Command.PostBatch message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ProjectionManagementMessage.Command.PostBatch.html">ProjectionManagementMessage.Command.PostBatch</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Management_ProjectionManager_Handle_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.Handle*"></a>
   <h4 id="EventStore_Projections_Core_Services_Management_ProjectionManager_Handle_EventStore_Projections_Core_Messages_ProjectionManagementMessage_Command_Reset_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.Handle(EventStore.Projections.Core.Messages.ProjectionManagementMessage.Command.Reset)">Handle(ProjectionManagementMessage.Command.Reset)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -1212,6 +1183,60 @@
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.ProjectionManagementMessage.RegisterSystemProjection.html">ProjectionManagementMessage.RegisterSystemProjection</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Management_ProjectionManager_Handle_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Management_ProjectionManager_Handle_EventStore_Projections_Core_Messages_ProjectionSubsystemMessage_StartComponents_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.Handle(EventStore.Projections.Core.Messages.ProjectionSubsystemMessage.StartComponents)">Handle(ProjectionSubsystemMessage.StartComponents)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ProjectionSubsystemMessage.StartComponents message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ProjectionSubsystemMessage.StartComponents.html">ProjectionSubsystemMessage.StartComponents</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Services_Management_ProjectionManager_Handle_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_Services_Management_ProjectionManager_Handle_EventStore_Projections_Core_Messages_ProjectionSubsystemMessage_StopComponents_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.Handle(EventStore.Projections.Core.Messages.ProjectionSubsystemMessage.StopComponents)">Handle(ProjectionSubsystemMessage.StopComponents)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ProjectionSubsystemMessage.StopComponents message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ProjectionSubsystemMessage.StopComponents.html">ProjectionSubsystemMessage.StopComponents</a></td>
         <td><span class="parametername">message</span></td>
       </tr>
     </tbody>

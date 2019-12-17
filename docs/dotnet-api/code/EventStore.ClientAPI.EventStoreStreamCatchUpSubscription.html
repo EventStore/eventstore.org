@@ -9,6 +9,7 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
+    <link rel="canonical" href="https://eventstore.com/docs/dotnet-api/code/EventStore.ClientAPI.EventStoreStreamCatchUpSubscription.html">
     <title>Class EventStoreStreamCatchUpSubscription
    | Event Store </title>
     <meta name="viewport" content="width=device-width">
@@ -123,6 +124,15 @@
       <a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html#EventStore_ClientAPI_EventStoreCatchUpSubscription_Log">EventStoreCatchUpSubscription.Log</a>
     </div>
     <div>
+      <a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html#EventStore_ClientAPI_EventStoreCatchUpSubscription_Connection">EventStoreCatchUpSubscription.Connection</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html#EventStore_ClientAPI_EventStoreCatchUpSubscription_ResolveLinkTos">EventStoreCatchUpSubscription.ResolveLinkTos</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html#EventStore_ClientAPI_EventStoreCatchUpSubscription_UserCredentials">EventStoreCatchUpSubscription.UserCredentials</a>
+    </div>
+    <div>
       <a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html#EventStore_ClientAPI_EventStoreCatchUpSubscription_ReadBatchSize">EventStoreCatchUpSubscription.ReadBatchSize</a>
     </div>
     <div>
@@ -135,6 +145,12 @@
       <a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html#EventStore_ClientAPI_EventStoreCatchUpSubscription_Verbose">EventStoreCatchUpSubscription.Verbose</a>
     </div>
     <div>
+      <a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html#EventStore_ClientAPI_EventStoreCatchUpSubscription_Subscription">EventStoreCatchUpSubscription.Subscription</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html#EventStore_ClientAPI_EventStoreCatchUpSubscription_AllowProcessing">EventStoreCatchUpSubscription.AllowProcessing</a>
+    </div>
+    <div>
       <a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html#EventStore_ClientAPI_EventStoreCatchUpSubscription_ShouldStop">EventStoreCatchUpSubscription.ShouldStop</a>
     </div>
     <div>
@@ -142,6 +158,24 @@
     </div>
     <div>
       <a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html#EventStore_ClientAPI_EventStoreCatchUpSubscription_Stop">EventStoreCatchUpSubscription.Stop()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html#EventStore_ClientAPI_EventStoreCatchUpSubscription_ReadMissedHistoricEventsAsync">EventStoreCatchUpSubscription.ReadMissedHistoricEventsAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html#EventStore_ClientAPI_EventStoreCatchUpSubscription_EnqueuePushedEvent_EventStore_ClientAPI_EventStoreSubscription_EventStore_ClientAPI_ResolvedEvent_">EventStoreCatchUpSubscription.EnqueuePushedEvent(EventStoreSubscription, ResolvedEvent)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html#EventStore_ClientAPI_EventStoreCatchUpSubscription_ServerSubscriptionDropped_EventStore_ClientAPI_EventStoreSubscription_EventStore_ClientAPI_SubscriptionDropReason_Exception_">EventStoreCatchUpSubscription.ServerSubscriptionDropped(EventStoreSubscription, SubscriptionDropReason, Exception)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html#EventStore_ClientAPI_EventStoreCatchUpSubscription_EnqueueSubscriptionDropNotification_EventStore_ClientAPI_SubscriptionDropReason_Exception_">EventStoreCatchUpSubscription.EnqueueSubscriptionDropNotification(SubscriptionDropReason, Exception)</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html#EventStore_ClientAPI_EventStoreCatchUpSubscription_EnsureProcessingPushQueue">EventStoreCatchUpSubscription.EnsureProcessingPushQueue()</a>
+    </div>
+    <div>
+      <a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html#EventStore_ClientAPI_EventStoreCatchUpSubscription_EnqueueAction_Func_Task__">EventStoreCatchUpSubscription.EnqueueAction(Func&lt;Task&gt;)</a>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.ClientAPI.html">EventStore.ClientAPI</a></h6>
@@ -182,6 +216,55 @@
   </h3>
   
   
+  <a id="EventStore_ClientAPI_EventStoreStreamCatchUpSubscription_LiveProcessingStarted_" data-uid="EventStore.ClientAPI.EventStoreStreamCatchUpSubscription.LiveProcessingStarted*"></a>
+  <h4 id="EventStore_ClientAPI_EventStoreStreamCatchUpSubscription_LiveProcessingStarted_EventStore_ClientAPI_EventStoreCatchUpSubscription_EventStore_ClientAPI_Position_" data-uid="EventStore.ClientAPI.EventStoreStreamCatchUpSubscription.LiveProcessingStarted(EventStore.ClientAPI.EventStoreCatchUpSubscription,EventStore.ClientAPI.Position)">LiveProcessingStarted(EventStoreCatchUpSubscription, Position)</h4>
+  <div class="markdown level1 summary"><p>The callback invoked when the subscription switches to push notifications.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Task LiveProcessingStarted(EventStoreCatchUpSubscription eventStoreCatchUpSubscription, Position lastPosition)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html">EventStoreCatchUpSubscription</a></td>
+        <td><span class="parametername">eventStoreCatchUpSubscription</span></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.Position.html">Position</a></td>
+        <td><span class="parametername">lastPosition</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html#EventStore_ClientAPI_EventStoreCatchUpSubscription_LiveProcessingStarted_EventStore_ClientAPI_EventStoreCatchUpSubscription_EventStore_ClientAPI_Position_">EventStoreCatchUpSubscription.LiveProcessingStarted(EventStoreCatchUpSubscription, Position)</a></div>
+  
+  
   <a id="EventStore_ClientAPI_EventStoreStreamCatchUpSubscription_ReadEventsTillAsync_" data-uid="EventStore.ClientAPI.EventStoreStreamCatchUpSubscription.ReadEventsTillAsync*"></a>
   <h4 id="EventStore_ClientAPI_EventStoreStreamCatchUpSubscription_ReadEventsTillAsync_EventStore_ClientAPI_IEventStoreConnection_System_Boolean_EventStore_ClientAPI_SystemData_UserCredentials_System_Nullable_System_Int64__System_Nullable_System_Int64__" data-uid="EventStore.ClientAPI.EventStoreStreamCatchUpSubscription.ReadEventsTillAsync(EventStore.ClientAPI.IEventStoreConnection,System.Boolean,EventStore.ClientAPI.SystemData.UserCredentials,System.Nullable{System.Int64},System.Nullable{System.Int64})">ReadEventsTillAsync(IEventStoreConnection, Boolean, UserCredentials, Nullable&lt;Int64&gt;, Nullable&lt;Int64&gt;)</h4>
   <div class="markdown level1 summary"><p>Read events until the given event number async.</p>
@@ -191,7 +274,7 @@
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override Task ReadEventsTillAsync(IEventStoreConnection connection, bool resolveLinkTos, UserCredentials userCredentials, long? lastCommitPosition, long? lastEventNumber)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override Task&lt;Position&gt; ReadEventsTillAsync(IEventStoreConnection connection, bool resolveLinkTos, UserCredentials userCredentials, long? lastCommitPosition, long? lastEventNumber)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,13 +317,43 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span></td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="EventStore.ClientAPI.Position.html">Position</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html#EventStore_ClientAPI_EventStoreCatchUpSubscription_ReadEventsTillAsync_EventStore_ClientAPI_IEventStoreConnection_System_Boolean_EventStore_ClientAPI_SystemData_UserCredentials_System_Nullable_System_Int64__System_Nullable_System_Int64__">EventStoreCatchUpSubscription.ReadEventsTillAsync(IEventStoreConnection, Boolean, UserCredentials, Nullable&lt;Int64&gt;, Nullable&lt;Int64&gt;)</a></div>
+  
+  
+  <a id="EventStore_ClientAPI_EventStoreStreamCatchUpSubscription_SubscribeToStreamAsync_" data-uid="EventStore.ClientAPI.EventStoreStreamCatchUpSubscription.SubscribeToStreamAsync*"></a>
+  <h4 id="EventStore_ClientAPI_EventStoreStreamCatchUpSubscription_SubscribeToStreamAsync" data-uid="EventStore.ClientAPI.EventStoreStreamCatchUpSubscription.SubscribeToStreamAsync">SubscribeToStreamAsync()</h4>
+  <div class="markdown level1 summary"><p>Subscribes to the stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Task SubscribeToStreamAsync()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="EventStore.ClientAPI.EventStoreCatchUpSubscription.html#EventStore_ClientAPI_EventStoreCatchUpSubscription_SubscribeToStreamAsync">EventStoreCatchUpSubscription.SubscribeToStreamAsync()</a></div>
   
   
   <a id="EventStore_ClientAPI_EventStoreStreamCatchUpSubscription_TryProcessAsync_" data-uid="EventStore.ClientAPI.EventStoreStreamCatchUpSubscription.TryProcessAsync*"></a>

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
+    <link rel="canonical" href="https://eventstore.com/docs/dotnet-api/code/EventStore.ClientAPI.GossipSeed.html">
     <title>Class GossipSeed
    | Event Store </title>
     <meta name="viewport" content="width=device-width">
@@ -118,7 +119,7 @@
   
   
   <a id="EventStore_ClientAPI_GossipSeed__ctor_" data-uid="EventStore.ClientAPI.GossipSeed.#ctor*"></a>
-  <h4 id="EventStore_ClientAPI_GossipSeed__ctor_IPEndPoint_System_String_System_Boolean_" data-uid="EventStore.ClientAPI.GossipSeed.#ctor(IPEndPoint,System.String,System.Boolean)">GossipSeed(IPEndPoint, String, Boolean)</h4>
+  <h4 id="EventStore_ClientAPI_GossipSeed__ctor_EndPoint_System_String_System_Boolean_" data-uid="EventStore.ClientAPI.GossipSeed.#ctor(EndPoint,System.String,System.Boolean)">GossipSeed(EndPoint, String, Boolean)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="EventStore.ClientAPI.GossipSeed.html">GossipSeed</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -126,7 +127,7 @@
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GossipSeed(IPEndPoint endPoint, string hostHeader = &quot;&quot;, bool seedOverTls = false)</code></pre>
+    <pre><code class="lang-csharp hljs">public GossipSeed(EndPoint endPoint, string hostHeader = &quot;&quot;, bool seedOverTls = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -138,7 +139,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPEndPoint</span></td>
+        <td><span class="xref">EndPoint</span></td>
         <td><span class="parametername">endPoint</span></td>
       </tr>
       <tr>
@@ -156,7 +157,7 @@
   
   
   <h4 id="EventStore_ClientAPI_GossipSeed_EndPoint" data-uid="EventStore.ClientAPI.GossipSeed.EndPoint">EndPoint</h4>
-  <div class="markdown level1 summary"><p>The <see cref="!:IPEndPoint"></see> for the External HTTP endpoint of the gossip seed.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="EventStore.ClientAPI.GossipSeed.html#EventStore_ClientAPI_GossipSeed_EndPoint">EndPoint</a> for the External HTTP endpoint of the gossip seed.</p>
 <p>The HTTP endpoint is used rather than the TCP endpoint because it is required
 for the client to exchange gossip with the server. The standard port which should be
 used here is 2113.</p>
@@ -166,7 +167,7 @@ used here is 2113.</p>
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly IPEndPoint EndPoint</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly EndPoint EndPoint</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -177,7 +178,7 @@ used here is 2113.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPEndPoint</span></td>
+        <td><span class="xref">EndPoint</span></td>
       </tr>
     </tbody>
   </table>
@@ -209,7 +210,7 @@ used here is 2113.</p>
   
   
   <h4 id="EventStore_ClientAPI_GossipSeed_SeedOverTls" data-uid="EventStore.ClientAPI.GossipSeed.SeedOverTls">SeedOverTls</h4>
-  <div class="markdown level1 summary"><p>If Gossip should be requested</p>
+  <div class="markdown level1 summary"><p>If Gossip should be requested over Tls</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   

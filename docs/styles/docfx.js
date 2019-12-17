@@ -172,7 +172,7 @@ $(function () {
                 this.field('title', { boost: 80 });
                 this.field('keywords', { boost: 20 });
             });
-            lunr.tokenizer.seperator = /[\s\-\.]+/;
+            lunr.tokenizer.seperator = /[\s\-\.\(\)]+/;
             var searchData = {};
             var searchDataRequest = new XMLHttpRequest();
 
@@ -224,7 +224,7 @@ $(function () {
                 $("body").bind("queryReady", function () {
                     worker.postMessage({ q: query });
                 });
-                if (query && (query.length >= 3)) {
+                if (query && (query.length >= 3)) {                  
                     worker.postMessage({ q: query });
                 }
             });

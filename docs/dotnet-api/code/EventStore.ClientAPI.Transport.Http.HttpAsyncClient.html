@@ -9,6 +9,7 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
+    <link rel="canonical" href="https://eventstore.com/docs/dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpAsyncClient.html">
     <title>Class HttpAsyncClient
    | Event Store </title>
     <meta name="viewport" content="width=device-width">
@@ -99,7 +100,8 @@
   
   <h1 id="EventStore_ClientAPI_Transport_Http_HttpAsyncClient" data-uid="EventStore.ClientAPI.Transport.Http.HttpAsyncClient" class="text-break">Class HttpAsyncClient
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>An HttpAsyncClient.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -121,14 +123,15 @@
   
   
   <a id="EventStore_ClientAPI_Transport_Http_HttpAsyncClient__ctor_" data-uid="EventStore.ClientAPI.Transport.Http.HttpAsyncClient.#ctor*"></a>
-  <h4 id="EventStore_ClientAPI_Transport_Http_HttpAsyncClient__ctor_TimeSpan_HttpClientHandler_" data-uid="EventStore.ClientAPI.Transport.Http.HttpAsyncClient.#ctor(TimeSpan,HttpClientHandler)">HttpAsyncClient(TimeSpan, HttpClientHandler)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="EventStore_ClientAPI_Transport_Http_HttpAsyncClient__ctor_TimeSpan_HttpMessageHandler_" data-uid="EventStore.ClientAPI.Transport.Http.HttpAsyncClient.#ctor(TimeSpan,HttpMessageHandler)">HttpAsyncClient(TimeSpan, HttpMessageHandler)</h4>
+  <div class="markdown level1 summary"><p>Constructs an <a class="xref" href="EventStore.ClientAPI.Transport.Http.HttpAsyncClient.html">HttpAsyncClient</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HttpAsyncClient(TimeSpan timeout, HttpClientHandler clientHandler = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public HttpAsyncClient(TimeSpan timeout, HttpMessageHandler clientHandler = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -144,7 +147,7 @@
         <td><span class="parametername">timeout</span></td>
       </tr>
       <tr>
-        <td><span class="xref">HttpClientHandler</span></td>
+        <td><span class="xref">HttpMessageHandler</span></td>
         <td><span class="parametername">clientHandler</span></td>
       </tr>
     </tbody>
@@ -155,7 +158,8 @@
   
   <a id="EventStore_ClientAPI_Transport_Http_HttpAsyncClient_Delete_" data-uid="EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Delete*"></a>
   <h4 id="EventStore_ClientAPI_Transport_Http_HttpAsyncClient_Delete_System_String_EventStore_ClientAPI_SystemData_UserCredentials_Action_EventStore_ClientAPI_Transport_Http_HttpResponse__Action_Exception__" data-uid="EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Delete(System.String,EventStore.ClientAPI.SystemData.UserCredentials,Action{EventStore.ClientAPI.Transport.Http.HttpResponse},Action{Exception})">Delete(String, UserCredentials, Action&lt;HttpResponse&gt;, Action&lt;Exception&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Invokes a DELETE request.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   
   <h5 class="decalaration">Declaration</h5>
@@ -194,7 +198,8 @@
   
   <a id="EventStore_ClientAPI_Transport_Http_HttpAsyncClient_Get_" data-uid="EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Get*"></a>
   <h4 id="EventStore_ClientAPI_Transport_Http_HttpAsyncClient_Get_System_String_EventStore_ClientAPI_SystemData_UserCredentials_Action_EventStore_ClientAPI_Transport_Http_HttpResponse__Action_Exception__System_String_" data-uid="EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Get(System.String,EventStore.ClientAPI.SystemData.UserCredentials,Action{EventStore.ClientAPI.Transport.Http.HttpResponse},Action{Exception},System.String)">Get(String, UserCredentials, Action&lt;HttpResponse&gt;, Action&lt;Exception&gt;, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Invokes a GET request.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   
   <h5 class="decalaration">Declaration</h5>
@@ -237,7 +242,8 @@
   
   <a id="EventStore_ClientAPI_Transport_Http_HttpAsyncClient_Post_" data-uid="EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Post*"></a>
   <h4 id="EventStore_ClientAPI_Transport_Http_HttpAsyncClient_Post_System_String_System_String_System_String_EventStore_ClientAPI_SystemData_UserCredentials_Action_EventStore_ClientAPI_Transport_Http_HttpResponse__Action_Exception__" data-uid="EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Post(System.String,System.String,System.String,EventStore.ClientAPI.SystemData.UserCredentials,Action{EventStore.ClientAPI.Transport.Http.HttpResponse},Action{Exception})">Post(String, String, String, UserCredentials, Action&lt;HttpResponse&gt;, Action&lt;Exception&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Invokes a POST request.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   
   <h5 class="decalaration">Declaration</h5>
@@ -284,7 +290,8 @@
   
   <a id="EventStore_ClientAPI_Transport_Http_HttpAsyncClient_Put_" data-uid="EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Put*"></a>
   <h4 id="EventStore_ClientAPI_Transport_Http_HttpAsyncClient_Put_System_String_System_String_System_String_EventStore_ClientAPI_SystemData_UserCredentials_Action_EventStore_ClientAPI_Transport_Http_HttpResponse__Action_Exception__" data-uid="EventStore.ClientAPI.Transport.Http.HttpAsyncClient.Put(System.String,System.String,System.String,EventStore.ClientAPI.SystemData.UserCredentials,Action{EventStore.ClientAPI.Transport.Http.HttpResponse},Action{Exception})">Put(String, String, String, UserCredentials, Action&lt;HttpResponse&gt;, Action&lt;Exception&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Invokes a PUT request.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   
   <h5 class="decalaration">Declaration</h5>

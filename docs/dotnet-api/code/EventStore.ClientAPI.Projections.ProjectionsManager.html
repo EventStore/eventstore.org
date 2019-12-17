@@ -9,6 +9,7 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
+    <link rel="canonical" href="https://eventstore.com/docs/dotnet-api/code/EventStore.ClientAPI.Projections.ProjectionsManager.html">
     <title>Class ProjectionsManager
    | Event Store </title>
     <meta name="viewport" content="width=device-width">
@@ -119,7 +120,7 @@ with the Event Store over the RESTful API.</p>
   
   
   <a id="EventStore_ClientAPI_Projections_ProjectionsManager__ctor_" data-uid="EventStore.ClientAPI.Projections.ProjectionsManager.#ctor*"></a>
-  <h4 id="EventStore_ClientAPI_Projections_ProjectionsManager__ctor_EventStore_ClientAPI_ILogger_EndPoint_TimeSpan_EventStore_ClientAPI_Transport_Http_IHttpClient_System_String_" data-uid="EventStore.ClientAPI.Projections.ProjectionsManager.#ctor(EventStore.ClientAPI.ILogger,EndPoint,TimeSpan,EventStore.ClientAPI.Transport.Http.IHttpClient,System.String)">ProjectionsManager(ILogger, EndPoint, TimeSpan, IHttpClient, String)</h4>
+  <h4 id="EventStore_ClientAPI_Projections_ProjectionsManager__ctor_EventStore_ClientAPI_ILogger_EndPoint_TimeSpan_HttpMessageHandler_System_String_" data-uid="EventStore.ClientAPI.Projections.ProjectionsManager.#ctor(EventStore.ClientAPI.ILogger,EndPoint,TimeSpan,HttpMessageHandler,System.String)">ProjectionsManager(ILogger, EndPoint, TimeSpan, HttpMessageHandler, String)</h4>
   <div class="markdown level1 summary"><p>Creates a new instance of <a class="xref" href="EventStore.ClientAPI.Projections.ProjectionsManager.html">ProjectionsManager</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -127,7 +128,7 @@ with the Event Store over the RESTful API.</p>
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProjectionsManager(ILogger log, EndPoint httpEndPoint, TimeSpan operationTimeout, IHttpClient client = null, string httpSchema = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProjectionsManager(ILogger log, EndPoint httpEndPoint, TimeSpan operationTimeout, HttpMessageHandler httpMessageHandler = null, string httpSchema = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,8 +152,8 @@ with the Event Store over the RESTful API.</p>
         <td><span class="parametername">operationTimeout</span></td>
       </tr>
       <tr>
-        <td><a class="xref" href="EventStore.ClientAPI.Transport.Http.IHttpClient.html">IHttpClient</a></td>
-        <td><span class="parametername">client</span></td>
+        <td><span class="xref">HttpMessageHandler</span></td>
+        <td><span class="parametername">httpMessageHandler</span></td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>

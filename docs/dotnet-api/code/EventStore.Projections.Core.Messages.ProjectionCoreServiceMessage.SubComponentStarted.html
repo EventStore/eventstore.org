@@ -9,6 +9,7 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
+    <link rel="canonical" href="https://eventstore.com/docs/dotnet-api/code/EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStarted.html">
     <title>Class ProjectionCoreServiceMessage.SubComponentStarted
    | Event Store </title>
     <meta name="viewport" content="width=device-width">
@@ -124,14 +125,14 @@
   
   
   <a id="EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStarted__ctor_" data-uid="EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStarted.#ctor*"></a>
-  <h4 id="EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStarted__ctor_System_String_" data-uid="EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStarted.#ctor(System.String)">SubComponentStarted(String)</h4>
+  <h4 id="EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStarted__ctor_System_String_Guid_" data-uid="EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStarted.#ctor(System.String,Guid)">SubComponentStarted(String, Guid)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SubComponentStarted(string subComponent)</code></pre>
+    <pre><code class="lang-csharp hljs">public SubComponentStarted(string subComponent, Guid instanceCorrelationId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -146,22 +147,27 @@
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">subComponent</span></td>
       </tr>
+      <tr>
+        <td><span class="xref">Guid</span></td>
+        <td><span class="parametername">instanceCorrelationId</span></td>
+      </tr>
     </tbody>
   </table>
-  <h3 id="fields">Fields
+  <h3 id="properties">Properties
   </h3>
   
   
-  <h4 id="EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStarted_SubComponent" data-uid="EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStarted.SubComponent">SubComponent</h4>
+  <a id="EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStarted_InstanceCorrelationId_" data-uid="EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStarted.InstanceCorrelationId*"></a>
+  <h4 id="EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStarted_InstanceCorrelationId" data-uid="EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStarted.InstanceCorrelationId">InstanceCorrelationId</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly string SubComponent</code></pre>
+    <pre><code class="lang-csharp hljs">public Guid InstanceCorrelationId { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -170,12 +176,10 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">Guid</span></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
-  </h3>
   
   
   <a id="EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStarted_MsgTypeId_" data-uid="EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStarted.MsgTypeId*"></a>
@@ -203,6 +207,31 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">EventStore.Core.Messaging.Message.MsgTypeId</span></div>
+  
+  
+  <a id="EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStarted_SubComponent_" data-uid="EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStarted.SubComponent*"></a>
+  <h4 id="EventStore_Projections_Core_Messages_ProjectionCoreServiceMessage_SubComponentStarted_SubComponent" data-uid="EventStore.Projections.Core.Messages.ProjectionCoreServiceMessage.SubComponentStarted.SubComponent">SubComponent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SubComponent { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
