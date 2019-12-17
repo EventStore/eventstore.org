@@ -2,6 +2,7 @@
 title: "Event Store 4.1.1 Hotfix 1"
 author: "Shaan Nobee"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 We have released a hotfix for Event Store 4.1.1 to fix the following issue:

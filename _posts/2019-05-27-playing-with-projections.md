@@ -2,6 +2,8 @@
 title: "Playing with Projections"
 author: "Chris Ward"
 layout: blog-post
+category: "Tutorials"
+tags: ["Event Store","Projections"]
 ---
 
 Projections are common concept in event sourcing that allow you to create queries of your events and streams of events. Last year I attended Michel Grootjans's "[playing with projections](https://github.com/michelgrootjans/playing_with_projections)" workshop that taught attendees how to create projections in a variety of programming languages. I decided to convert the workshop exercises to use [Event Store's internal projections](/docs/projections/index.html) engine and show how to use our projections API.

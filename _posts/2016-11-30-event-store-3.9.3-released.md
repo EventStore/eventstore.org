@@ -2,6 +2,7 @@
 title: "Event Store 3.9.3 Released"
 author: "Pieter Germishuys"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 Happy thanksgiving to everyone that celebrates it. We have just released Event Store 3.9.3. This release includes a set of fixes and will likely be the last 3.x release before Event Store 4.0.0. The fixes in the release are mainly focussed around an issue that could have resulted in duplicate entries being written due to a hash conflict between stream names occurring.

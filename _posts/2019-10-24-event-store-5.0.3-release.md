@@ -2,6 +2,7 @@
 title: "Event Store 5.0.3"
 author: "Pieter Germishuys"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 Event Store 5.0.3 is out! It is available for the following operating systems:

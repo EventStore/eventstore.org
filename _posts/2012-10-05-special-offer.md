@@ -3,6 +3,7 @@ title: "Special offer"
 date: 2012-10-05T14:31Z
 author: "Chris Watt"
 layout: blog-post
+category: 'News'
 ---
 
 We will begin shipping our Event Store appliances in early November. For those early birds who can’t wait to get one (or three or more) then we have an introductory offer for you. For all appliance orders placed and invoiced before the 30th November 2012 users will get their first year Event Store support for free.

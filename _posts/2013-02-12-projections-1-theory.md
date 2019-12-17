@@ -3,6 +3,8 @@ title: "Projections 1: Theory"
 date: 2013-02-12T14:00Z
 author: "Greg Young"
 layout: blog-post
+category: "Tutorials"
+tags: ["Event Store","Projections","Event sourcing"]
 ---
 
 Over at [eventstore.org](/) we have 1.0’d the Event Store as an Event Store (i.e. storing/retrieving events/multinode version/etc) but in the process we did not release projections. They are still marked as experimental. Projections are however getting close to ready so its time to write a bit about them as the official documentation takes shape.

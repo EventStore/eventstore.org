@@ -1,0 +1,60 @@
+<ul class="post-list">
+	{%- assign maxRelated = 3 %}
+	{%- assign minCommonTags =  1 %}
+	{%- assign maxRelatedCounter = 0 %}
+	{%- for post in site.posts %}
+	{%- assign sameTagCount = 0 %}
+    {% assign commonTags = '' %}
+	{%- for category in post.category %}
+		{%- if post.url != page.url %}
+			{%- if page.category contains category %}
+				{%- assign sameTagCount = sameTagCount | plus: 1 %}
+				{%- capture tagmarkup %} <span class="label label-default">{{ category }}</span> {% endcapture %}
+				{%- assign commonTags = commonTags | append: tagmarkup %}
+			{%- endif %}
+      {%- endif %}
+    {%- endfor %}
+	{%- if sameTagCount >= minCommonTags %}		
+		<article class="blog-post">
+		<header>
+			<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+			<div id="header-meta">
+				<time datetime="{{ page.date | date_to_xml_schema }}">{{ post.date | date_to_long_string }}</time>
+				{% include author.html %}
+				{% include categories.html %}
+			</div>
+		</header>
+		<p>{% if post.description %}{{ post.description %}}{% else %}{{ post.content | strip_html | truncatewords:75 }}{% endif %}</p>
+		<span class="c2a"><a class="btn btn--secondary" href="{{ post.url }}" title="Read article">Read article</a></span> 
+		</article>
+	{%- assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+      {%- if maxRelatedCounter < maxRelated %}<hr>{% else %}
+        {%- break %}
+      {%- endif %}
+    {%- endif %}
+  {%- endfor %}
+  {%- if maxRelatedCounter < maxRelated %}
+	{%- for post in site.posts %}
+	{%- unless post.categories contains "Release Notes" %}
+	{%- if post.url != page.url %}
+		<article class="blog-post">
+		<header>
+			<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+			<div id="header-meta">
+				<time datetime="{{ page.date | date_to_xml_schema }}">{{ post.date | date_to_long_string }}</time>
+				{% include author.html %}
+				{% include categories.html %}
+			</div>
+		</header>
+		<p>{% if post.description %}{{ post.description %}}{% else %}{{ post.content | strip_html | truncatewords:75 }}{% endif %}</p>
+		<span class="c2a"><a class="btn btn--secondary" href="{{ post.url }}" title="Read article">Read article</a></span> 
+		</article>
+		{%- assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+      {%- if maxRelatedCounter < maxRelated %}<hr>{% else %}
+        {%- break %}
+      {%- endif %}
+	{%- endif %}
+	{%- endunless %}
+	{%- endfor %}
+	{%- endif %}
+</ul>

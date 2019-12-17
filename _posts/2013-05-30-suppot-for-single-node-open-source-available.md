@@ -3,6 +3,7 @@ title: "Support for Single Node (Open Source) available"
 date: 2013-05-30T18:35Z
 author: "Chris Watt"
 layout: blog-post
+category: 'News'
 ---
 
 It seems there are many of you happy with the Event Store running on a single node (and therefore the open source version) in production but still would like to buy support for it.

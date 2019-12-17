@@ -3,6 +3,8 @@ title: "Getting Started: Part 1 – Introduction"
 date: 2013-02-20T17:55Z
 author: "James Nugent"
 layout: blog-post
+category: "Tutorials"
+tags: ["Event Store","Event sourcing"]
 ---
 
 Two of the most common requests we've had is for more documentation for people getting started using the Event Store for event sourced applications. Another is how to hook up read models in the absence of a “dispatcher” concept as appears in Jon Oliver’s Event Store project (JOES from here in!), and a third is how to import events.

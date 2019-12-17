@@ -3,6 +3,7 @@ title: "It’s competition time!"
 date: 2012-12-24T11:59Z
 author: "James Nugent"
 layout: blog-post
+category: 'News'
 ---
 
 As Christmas and New Year fast approach us, we have lots of goodies we’re going to be announcing at Event Store!

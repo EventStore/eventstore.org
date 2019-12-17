@@ -2,6 +2,7 @@
 title: "Event Store 3.2.0 Released"
 author: "James Nugent"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 Event Store 3.2.0 is now released! The headline feature is support for the “competing consumers” messaging pattern with *Persistent Subscriptions*, but there have been numerous other improvements.

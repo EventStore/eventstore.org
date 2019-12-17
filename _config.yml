@@ -1,67 +1,153 @@
 name: "Event Store"
 description: "The stream database written from the ground up for event sourcing."
 url: "https://eventstore.org"
-permalink: /blog/:year:month:day/:title/
+permalink: /blog/:title/
 include:
-    - docs
-    - _redirects
+  - docs
+  - _redirects
 exclude: [CNAME]
 sass:
-    sass_dir: _sass
-    style: compressed
+  sass_dir: _sass
+  style: compressed
 
 top_level_sections:
-    - Introduction
-    - Server
-    - .NET API
-    - HTTP API
-    - Projections
+  - Introduction
+  - Server
+  - .NET API
+  - HTTP API
+  - Projections
 
 latest_versions:
-    server: 4.0.2
-    dotnet-api: 4.0.2
-    http-api: 4.0.2
-    introduction: 4.0.2
-    projections: 4.0.2
+  server: 4.0.2
+  dotnet-api: 4.0.2
+  http-api: 4.0.2
+  introduction: 4.0.2
+  projections: 4.0.2
 
 all_versions:
-    - 4.0.2
-    - 4.0.0
-    - 3.9.0
-    - 3.8.1
-    - 3.8.0
-    - 3.7.0
-    - 3.6.0
-    - 3.5.0
-    - 3.4.0
-    - 3.3.0
-    - 3.2.0
-    - 3.1.0
-    - 3.0.5
-    - 3.0.3
-    - 3.0.2
-    - 3.0.1
-    - 3.0.0
+  - 4.0.2
+  - 4.0.0
+  - 3.9.0
+  - 3.8.1
+  - 3.8.0
+  - 3.7.0
+  - 3.6.0
+  - 3.5.0
+  - 3.4.0
+  - 3.3.0
+  - 3.2.0
+  - 3.1.0
+  - 3.0.5
+  - 3.0.3
+  - 3.0.2
+  - 3.0.1
+  - 3.0.0
 
 all_dotnet_versions:
-    - 4.0.2
-    - 4.0.0
-    - 3.9.0
-    - 3.8.0
-    - 3.7.0
-    - 3.6.0
-    - 3.5.0
-    - 3.4.0
-    - 3.3.1
-    - 3.2.0
-    - 3.1.0
-    - 3.0.2
-    - 3.0.1
-    - 3.0.0
+  - 4.0.2
+  - 4.0.0
+  - 3.9.0
+  - 3.8.0
+  - 3.7.0
+  - 3.6.0
+  - 3.5.0
+  - 3.4.0
+  - 3.3.1
+  - 3.2.0
+  - 3.1.0
+  - 3.0.2
+  - 3.0.1
+  - 3.0.0
 
-authors:
-  Example Author:
-    name: First Last
-    bio: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    image: https://zcoin.io/storage/2017/01/blank-avatar-300x300.png
-    link: https://www.linkedin.com/in/exampleauthor/
+############################################################
+# Site configuration for the Jekyll 3 Pagination Gem
+# The values here represent the defaults if nothing is set
+plugins: [jekyll-paginate-v2]
+pagination:
+  # Site-wide kill switch, disabled here it doesn't run at all
+  enabled: true
+
+  # Set to 'true' to enable pagination debugging. This can be enabled in the site config or only for individual pagination pages
+  debug: false
+
+  # The default document collection to paginate if nothing is specified ('posts' is default)
+  collection: "posts"
+
+  # How many objects per paginated page, used to be `paginate` (default: 0, means all)
+  per_page: 10
+
+  # The permalink structure for the paginated pages (this can be any level deep)
+  permalink: "/page-:num/" # Pages are index.html inside this folder (default)
+  #permalink: '/page/:num.html' # Pages are simple html files
+  #permalink: '/page/:num' # Pages are html files, linked jekyll extensionless permalink style.
+
+  # Optional the title format for the paginated pages (supports :title for original page title, :num for pagination page number, :max for total number of pages)
+  title: ":title - page :num"
+
+  # Limit how many pagenated pages to create (default: 0, means all)
+  limit: 0
+
+  # Optional, defines the field that the posts should be sorted on (omit to default to 'date')
+  sort_field: "date"
+
+  # Optional, sorts the posts in reverse order (omit to default decending or sort_reverse: true)
+  sort_reverse: true
+
+  # Optional, the default category to use, omit or just leave this as 'posts' to get a backwards-compatible behavior (all posts)
+  category: "posts"
+
+  # Optional, the default tag to use, omit to disable
+  tag: ""
+
+  # Optional, the default locale to use, omit to disable (depends on a field 'locale' to be specified in the posts,
+  # in reality this can be any value, suggested are the Microsoft locale-codes (e.g. en_US, en_GB) or simply the ISO-639 language code )
+  locale: ""
+
+  # Optional,omit or set both before and after to zero to disable.
+  # Controls how the pagination trail for the paginated pages look like.
+  trail:
+    before: 2
+    after: 3
+
+  # Optional, the default file extension for generated pages (e.g html, json, xml).
+  # Internally this is set to html by default
+  extension: html
+
+  # Optional, the default name of the index file for generated pages (e.g. 'index.html')
+  # Without file extension
+  indexpage: "index"
+
+############################################################
+
+############################################################
+# Site configuration for the Auto-Pages feature
+# The values here represent the defaults if nothing is set
+autopages:
+  # Site-wide kill switch, disable here and it doesn't run at all
+  enabled: true
+  # Category pages, omit entire config element to disable
+  categories:
+    enabled: true
+    slugify:
+      mode: default
+      cased: true
+    # Optional, the list of layouts that should be processed for every category found in the site
+    layouts:
+      - "autopage_category.html"
+    # Optional, the title that each category paginate page should get (:cat is replaced by the Category name)
+    title: "Posts in category :cat"
+    # Optional, the permalink for the  pagination page (:cat is replaced),
+    # the pagination permalink path is then appended to this permalink structure
+    permalink: "/blog/:cat"
+  collections:
+    enabled: false
+  # Tag pages, omit to disable
+  tags:
+    enabled: true
+    slugify:
+      mode: default
+      cased: true
+    layouts:
+      - "autopage_tags.html"
+    title: "Posts tagged with :tag" # :tag is replaced by the tag name
+    permalink: "/blog/tags/:tag"

@@ -3,6 +3,8 @@ title: "Projections 5: Indexing"
 date: 2013-02-18T10:02Z
 author: "Greg Young"
 layout: blog-post
+category: "Tutorials"
+tags: ["Event Store","Projections","Event sourcing"]
 ---
 
 Now we can start getting to some of the interesting things in Projections. It was quite odd, as I was leading up to this post last night we got into a **very long** discussion about indexing inside the Event Store on twitter. Mike Brown noted that it would be really useful if we built lucene like indexing into the system so he could use the Event Store as an Audit Log that was easily searchable by things like correlationId and username. While the indexing is very different than something like lucene it is still quite possible.

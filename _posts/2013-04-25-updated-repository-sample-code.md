@@ -3,6 +3,7 @@ title: "Updated repository sample code"
 date: 2013-04-25T00:36Z
 author: "James Nugent"
 layout: blog-post
+category: 'News'
 ---
 
 As you may be aware, we’re removing the `$streamCreated` event which currently appears in all streams in favour of a metadata stream.

@@ -2,6 +2,7 @@
 title: "Event Store 4.1.1 Release"
 author: "Shaan Nobee"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 We are excited to announce that Event Store 4.1.1 has just been released! It is available for the following operating systems:

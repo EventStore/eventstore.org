@@ -2,6 +2,8 @@
 title: "Easier Development Builds on Unix-like Operating Systems"
 author: "James Nugent"
 layout: blog-post
+category: "Tutorials"
+tags: ["Event Store"]
 ---
 
 A common complaint we've heard about Event Store since it was originally open sourced is that it's complex to make development builds locally - and they were slow - and thus the project was hard to contribute to. As part of our recent work on Event Store v3.1.0 (more on this in another post) we decided to rectify this.

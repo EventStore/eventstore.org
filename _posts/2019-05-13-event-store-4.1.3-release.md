@@ -2,6 +2,7 @@
 title: "Event Store 4.1.3"
 author: "Shaan Nobee"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 Event Store 4.1.3 is out! It is available for the following operating systems:

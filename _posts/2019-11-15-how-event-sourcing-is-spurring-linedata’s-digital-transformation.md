@@ -1,18 +1,21 @@
 ---
 layout: blog-post
-title: 'Case Study: How Event Sourcing is Spurring Linedata’s Digital Transformation'
+title: "Case Study: How Event Sourcing is Spurring Linedata’s Digital Transformation"
+seo-title: "Linedata’s Digital Transformation"
 author: "Dave Remy"
+description: "Event sourcing is relatively new to the financial services industry. By implementing Event Store’s approach to support its digital transformation strategy, Linedata can be more responsive to the changing needs of its customers and gain a competitive edge in the market. “The core benefits of event-driven architecture allowed us to improve quality, performance and respond quickly to our customers,” said Adrian Tovey, who leads Linedata’s global program management. “Event Store has helped us meet the demand for change in the industry, a change in the way applications are used to deliver services to our customers; Linedata is at the forefront of those changes.”"
+category: "Articles"
+tags: ["Event sourcing","Event Store"]
 ---
 > **About Linedata**
 >
-> * Leading provider of integrated technology, data, and services that empower and support the diverse needs of global asset managers and
->   help them capably adapt to market dynamics
+> * Leading provider of integrated technology, data, and services that empower and support the diverse needs of global asset managers and help them capably adapt to market dynamics
 > * Founded in 1998, 1300 employees in 20 global offices with over 450 asset management clients
 > * Implemented Event Store’s event sourcing architecture for its flagship trading application beginning in 2018
 
 ## The challenge
 
-“Our goal was to utilize the best technologies available to give customers increased flexibility, greater transparency, reduced costs, and quicker response times to changes in the market,'' says Adrian Tovey, who leads Linedata’s global program management, about the company’s digital transformation. “The vision was to utilize microservices to modularise software development, deploy applications into the cloud, have the best UX and design practices, and underpin our strategy with a new, open, flexible database technology. We knew this would be a radically different approach from the monolithic enterprise applications, which are slower time-to-market and ill-equipped to deal with the changes in our industry.”
+“Our goal was to utilize the best technologies available to give customers increased flexibility, greater transparency, reduced costs, and quicker response times to changes in the market,” says Adrian Tovey, who leads Linedata’s global program management, about the company’s digital transformation. “The vision was to utilize microservices to modularise software development, deploy applications into the cloud, have the best UX and design practices, and underpin our strategy with a new, open, flexible database technology. We knew this would be a radically different approach from the monolithic enterprise applications, which are slower time-to-market and ill-equipped to deal with the changes in our industry.”
 
  According to Adrian, continuing to develop on a single core application utilizing a traditional relational database has significant disadvantages in today’s quickly evolving market. When new product features are deployed, the entire application has to be updated, slowing time to market for new enhancements. This process eats up valuable resources and decreases efficiency. “We needed to see better performance, scalability, and quality.”
 

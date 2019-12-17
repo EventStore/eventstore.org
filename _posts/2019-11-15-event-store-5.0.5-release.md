@@ -2,6 +2,7 @@
 title: "Event Store 5.0.5"
 author: "Hayley Campbell"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 Event Store 5.0.5 is out!

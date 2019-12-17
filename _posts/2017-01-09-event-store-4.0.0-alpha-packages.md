@@ -2,6 +2,7 @@
 title: "Event Store 4.0.0 Alpha Packages"
 author: "Pieter Germishuys"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 Merry Christmas and a Happy new year!

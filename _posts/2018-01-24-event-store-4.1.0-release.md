@@ -2,6 +2,7 @@
 title: "Event Store 4.1.0 Release"
 author: "Hayley Campbell"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 We are excited to announce that Event Store 4.1.0 has just been released! It is available for the following operating systems:

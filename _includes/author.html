@@ -1,12 +1,6 @@
-{% assign author = site.authors[page.author] %}
-{% if author.name %}
-  <div id="author-bio">
-    {% if author.image %}
-    <img src="{{ author.image }}" alt="Photo of {{ author.name }}" title="{{ author.name}} bio photo"/>
-    {% endif %}
-    <h3>Written by: {% if author.link %}<a href="{{ author.link }}" title="Click to find out more about {{ author.name }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}</h3>
-    {% if author.bio %}
-    <p>{{ author.bio }}</p>
-    {% endif %}
-  </div>
-{% endif %}
+{% if post %}{% assign author = site.data.authors[post.author] %}
+{% else %}{% assign author = site.data.authors[page.author] %}{% endif %}
+			      {% if author.name %}
+				  <span>&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Written by: {% if page.layout == "blog-post" %}<a href="#post-footer-divider" title="Click to find out more about {{ author.name }}">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}</span>
+				  {% else %}<span>&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Written by: Event Store Team</span>
+			      {% endif %}

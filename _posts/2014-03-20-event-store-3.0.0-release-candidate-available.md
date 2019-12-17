@@ -3,6 +3,7 @@ title: "Event Store 3.0.0 Release Candidate available"
 date: 2014-03-20T12:00Z
 author: "James Nugent"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 It's been quite a while since our last binary release, a fact which has been commented on by many people on Twitter! However, after a good few months of work, we’re finally "done" with version 3 (with some caveats below)! What we've made available today is a public Release Candidate of what we hope to become version 3.0.0 of Event Store.

@@ -2,6 +2,7 @@
 title: "Event Store 3.8.0 Released"
 author: "Pieter Germishuys"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 Event Store 3.8.0 is now released! This release contains a number of improvements and bug fixes. The release was focussed on an issue related to Projections whereby once a stream has been written to from one projection and the projection deleted, another projection could not write to that same stream.

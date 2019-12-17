@@ -3,6 +3,7 @@ title: "Debugging support"
 date: 2012-12-25T14:53Z
 author: "Greg Young"
 layout: blog-post
+category: 'News'
 ---
 
 Merry Christmas!

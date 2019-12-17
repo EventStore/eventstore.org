@@ -3,6 +3,8 @@ title: "Why can’t I update an event?"
 date: 2013-05-28T07:21Z
 author: "Greg Young"
 layout: blog-post
+category: "Articles"
+tags: ["Event sourcing","Event Store","Streams"]
 ---
 
 Last week on a call with someone the question came up about the Event Store about why can they not update and event and how should they handle the case where they need to. The conversation that came out of this was very rich in architectural insight into how the event store works as well as overall event sourcing understanding so I thought that it would be worth spending a bit of time to write up where the constraint comes from.

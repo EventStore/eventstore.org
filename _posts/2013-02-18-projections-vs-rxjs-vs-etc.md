@@ -3,6 +3,8 @@ title: "Projections vs RxJS vs etc"
 date: 2013-02-18T14:39Z
 author: "Greg Young"
 layout: blog-post
+category: "Articles"
+tags: ["Event Store","Projections","Event sourcing","Streams"]
 ---
 
 There was a pretty good question this morning when I checked comments on posts. “What is the difference between projections and, say, rxjs?”

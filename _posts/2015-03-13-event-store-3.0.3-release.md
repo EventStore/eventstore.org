@@ -3,6 +3,7 @@ title: "Event Store 3.0.3 Released"
 date: 2015-03-13T12:00Z
 author: "James Nugent"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 Hot on the heels of Event Store 3.0.2 last week is Event Store 3.0.3, which contains a fix for a problem some users experienced when scavenging databases with large numbers of merged transaction file chunks. There is no immediate need to upgrade for those using 3.0.2, though it's recommended anyone using any earlier version should upgrade if possible.

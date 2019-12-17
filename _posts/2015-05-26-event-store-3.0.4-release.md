@@ -2,6 +2,7 @@
 title: "Event Store 3.0.4 Released"
 author: "James Nugent"
 layout: blog-post
+category: 'Release Notes'
 ---
 
 Event Store 3.0.4 contains a fix for a bug in initial replication of merged transaction file chunks, and numerous fixes in the user interface. It is now available both to users of the open-source product, and to commercial customers. Commercial customers will find the release builds of Event Store 3.0.4 in their download areas.

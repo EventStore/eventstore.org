@@ -2,6 +2,7 @@
 title: "Event Store 6.0.0 Preview 1"
 author: "Hayley Campbell"
 layout: blog-post
+category: "Release Notes"
 ---
 
 We are excited to announce the first preview release of Event Store 6.0.0!  
@@ -145,8 +146,8 @@ That filter can then be used when making calls to either `FilteredReadAllEventsF
 
 ```csharp
 var readEvents = await connection.ReadAllEventsForwardFilteredAsync(
-    position: Position.Start, 
-    maxCount: 4096, 
+    position: Position.Start,
+    maxCount: 4096,
     resolveLinkTos: false,
     eventFilter: eventFilter,
     maxSearchWindow: 1000);

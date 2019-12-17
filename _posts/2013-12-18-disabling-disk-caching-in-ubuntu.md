@@ -3,6 +3,7 @@ title: "Disabling disk caching in Ubuntu"
 date: 2013-12-18T12:00Z
 author: "James Nugent"
 layout: blog-post
+category: 'Articles'
 ---
 
 Amongst the many interesting discussions I had at Build Stuff last week was about how it’s desirable to switch off disk caching for the disks used for Event Store databases to help ensure that data is durable in the face of power failures.

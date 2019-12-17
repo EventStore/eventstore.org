@@ -3,6 +3,8 @@ title: "Projections 6: An indexing use case"
 date: 2013-02-27T14:22Z
 author: "Greg Young"
 layout: blog-post
+category: "Tutorials"
+tags: ["Event Store","Projections","Event sourcing"]
 ---
 
 As we went through in [Projections 5 : Indexing](/blog/20130218/projections-5-indexing), the `linkTo()` function is capable of emitting pointers to another stream. This can allow you to break apart streams in order to change their partitioning and to allow fast indexing. In this post we will look at a use case of how you can use this functionality.
