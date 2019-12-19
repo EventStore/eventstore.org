@@ -8,7 +8,7 @@
 {% elsif page.layout == 'autopage_tags' %}
 {% assign tagname = page.autopages.display_name %}{% capture seo-title %}{% if paginator.page > 1 %}Page {{paginator.page}} - {% endif %}Posts tagged {{tagname}} | Event Store Blog{% endcapture %}
 {% else %}
-{% capture seo-title %}{{ page.title }}{% unless page.title contains "| Event Store" or contains "- Event Store" %} | {{ site.name }}{% endunless %}{% endcapture %}
+{% capture seo-title %}{% if page.seo-title %}{{page.seo-title}}{% else %}{{ page.title }}{% unless page.title contains "| Event Store" or contains "- Event Store" %} | {{ site.name }}{% endunless %}{% endif %}{% endcapture %}
 {% endif %}
 {% if page.description != null %}{% capture seo-description %}{{ page.description }}{% endcapture %}
 {% elsif page.layout == "blog-post" and page.description == null %}{% capture seo-description %}{{ page.content | strip_html | truncatewords:75 }}{% endcapture %}
