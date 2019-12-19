@@ -69,6 +69,11 @@ seo-title: "Careers | Work For Event Store"
     text-overflow: '';
     font-size: 0.9em;
   }
+  .job-spec {
+    font-weight:bold;
+    margin-top:1em;
+    display:inline-block;
+  }
 </style>
     <div class="page-title">
 		<div class="inner-container">
@@ -106,14 +111,19 @@ seo-title: "Careers | Work For Event Store"
                       <!-- check the filter is in the title array -->
                       <li>
                         <h3 class="job-title">{{ item.name }}</h3>
-                        <p><span class="vacancy-property">Department:</span> <span class="job-department">{{ item.department }}</span></p>
-                        <p><span class="vacancy-property">Location:</span> <span class="job-location">{{ item.location }}</span></p>
+                        <p><span class="vacancy-property">Department</span>: <span class="job-department">{{ item.department }}</span></p>
+                        <p><span class="vacancy-property">Location</span>: <span class="job-location">{{ item.location }}</span></p>
                         <span class="vacancy-divider">&nbsp;</span>
                         <p>{{ item.description }}</p>
+                        <a class="job-spec" href="{{ item.link }}">Download job description</a>
                       </li>
                   {% endfor %}
                 </ul>
                 <p id="noneMessage" style="display:none;">Sorry, there are no vacancies to show.</p>
+                {% assign jobs_size = site.data.vacancies.jobs | size %}
+                {% if jobs_size == 0 %}
+                <style>#noneMessage {display:block !important;}</style>
+                {% endif %}
                 <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
                 <script type="text/javascript">
                   const list = document.querySelector('ul#job-vacancies');
@@ -166,7 +176,7 @@ seo-title: "Careers | Work For Event Store"
                 </script>
             </div>
             <div class="page-section__minor">
-                <h2>Join our team</h2>
+                <h2>Apply for a role</h2>
                 <p><strong>Interested in applying</strong> for one of the vacancies listed? Or want to be considered for future vacancies at Event Store?</p><p><strong>Send your CV</strong> to <a href="mailto:team@eventstore.com">team@eventstore.com</a></p>
             </div>
         </div>
