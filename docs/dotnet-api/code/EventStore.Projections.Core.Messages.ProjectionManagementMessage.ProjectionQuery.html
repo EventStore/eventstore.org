@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ProjectionManagementMessage.ProjectionQuery
    | Event Store ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="generator" content="docfx 2.48.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -125,14 +125,14 @@
   
   
   <a id="EventStore_Projections_Core_Messages_ProjectionManagementMessage_ProjectionQuery__ctor_" data-uid="EventStore.Projections.Core.Messages.ProjectionManagementMessage.ProjectionQuery.#ctor*"></a>
-  <h4 id="EventStore_Projections_Core_Messages_ProjectionManagementMessage_ProjectionQuery__ctor_System_String_System_String_System_Boolean_EventStore_Projections_Core_Services_Processing_ProjectionSourceDefinition_EventStore_Projections_Core_Services_Processing_ProjectionOutputConfig_" data-uid="EventStore.Projections.Core.Messages.ProjectionManagementMessage.ProjectionQuery.#ctor(System.String,System.String,System.Boolean,EventStore.Projections.Core.Services.Processing.ProjectionSourceDefinition,EventStore.Projections.Core.Services.Processing.ProjectionOutputConfig)">ProjectionQuery(String, String, Boolean, ProjectionSourceDefinition, ProjectionOutputConfig)</h4>
+  <h4 id="EventStore_Projections_Core_Messages_ProjectionManagementMessage_ProjectionQuery__ctor_System_String_System_String_System_Boolean_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__EventStore_Projections_Core_Services_Processing_ProjectionSourceDefinition_EventStore_Projections_Core_Services_Processing_ProjectionOutputConfig_" data-uid="EventStore.Projections.Core.Messages.ProjectionManagementMessage.ProjectionQuery.#ctor(System.String,System.String,System.Boolean,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},EventStore.Projections.Core.Services.Processing.ProjectionSourceDefinition,EventStore.Projections.Core.Services.Processing.ProjectionOutputConfig)">ProjectionQuery(String, String, Boolean, String, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, ProjectionSourceDefinition, ProjectionOutputConfig)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProjectionQuery(string name, string query, bool emitEnabled, ProjectionSourceDefinition definition, ProjectionOutputConfig outputConfig)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProjectionQuery(string name, string query, bool emitEnabled, string projectionType, bool? trackEmittedStreams, bool? checkpointsEnabled, ProjectionSourceDefinition definition, ProjectionOutputConfig outputConfig)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,6 +156,18 @@
         <td><span class="parametername">emitEnabled</span></td>
       </tr>
       <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">projectionType</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">trackEmittedStreams</span></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">checkpointsEnabled</span></td>
+      </tr>
+      <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ProjectionSourceDefinition.html">ProjectionSourceDefinition</a></td>
         <td><span class="parametername">definition</span></td>
       </tr>
@@ -167,6 +179,31 @@
   </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="EventStore_Projections_Core_Messages_ProjectionManagementMessage_ProjectionQuery_CheckpointsEnabled_" data-uid="EventStore.Projections.Core.Messages.ProjectionManagementMessage.ProjectionQuery.CheckpointsEnabled*"></a>
+  <h4 id="EventStore_Projections_Core_Messages_ProjectionManagementMessage_ProjectionQuery_CheckpointsEnabled" data-uid="EventStore.Projections.Core.Messages.ProjectionManagementMessage.ProjectionQuery.CheckpointsEnabled">CheckpointsEnabled</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? CheckpointsEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="EventStore_Projections_Core_Messages_ProjectionManagementMessage_ProjectionQuery_Definition_" data-uid="EventStore.Projections.Core.Messages.ProjectionManagementMessage.ProjectionQuery.Definition*"></a>
@@ -305,6 +342,56 @@
   
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public string Query { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Messages_ProjectionManagementMessage_ProjectionQuery_TrackEmittedStreams_" data-uid="EventStore.Projections.Core.Messages.ProjectionManagementMessage.ProjectionQuery.TrackEmittedStreams*"></a>
+  <h4 id="EventStore_Projections_Core_Messages_ProjectionManagementMessage_ProjectionQuery_TrackEmittedStreams" data-uid="EventStore.Projections.Core.Messages.ProjectionManagementMessage.ProjectionQuery.TrackEmittedStreams">TrackEmittedStreams</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? TrackEmittedStreams { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_Messages_ProjectionManagementMessage_ProjectionQuery_Type_" data-uid="EventStore.Projections.Core.Messages.ProjectionManagementMessage.ProjectionQuery.Type*"></a>
+  <h4 id="EventStore_Projections_Core_Messages_ProjectionManagementMessage_ProjectionQuery_Type" data-uid="EventStore.Projections.Core.Messages.ProjectionManagementMessage.ProjectionQuery.Type">Type</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Type { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
