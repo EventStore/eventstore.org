@@ -430,5 +430,73 @@ header hr {
 	padding-top: 1rem;
 	li {
 		display: inline-block;
+		margin-bottom: 14px;
+	}
+}
+#signup-form-container {
+	display:block;
+	background: #37474F;
+	overflow: hidden;
+	color: white;
+	padding: 24px;
+	h3 {
+		font-size:36px;
+		margin: 0;
+		line-height: 1.1;
+		padding: 0px 10px;
+		}
+	#signup-form-text {
+		padding: 0px 0px 10px;
+		p {
+			font-size:24px;
+			margin: 0;
+			color: #43A047;
+			font-weight: bold;
+			line-height: 1.1;
+			padding: 8px 10px;
+			}
+	}
+}
+#signup-form input {
+	padding: 16px;
+	border-radius: 5px;
+	border: none;
+	font-size: 16px;
+	width: 100%;
+}
+#signup-form input[type="submit"] {
+	background-color: #0277BD;
+    border-color: #0277BD;
+    color: #fff;
+    font-weight: 700;
+	-webkit-appearance: none;
+	cursor: pointer;
+}
+#signup-form > form > div > div:not(#mce-responses) {
+	padding: 10px;
+	box-sizing: border-box;
+	}
+@media only screen and (min-width: 769px) {
+	#signup-form-container > div, #signup-form > form > div > div {
+		float:left;
+	}
+	#signup-form-text, #signup-form {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 768px) {
+	#signup-form-container {
+		text-align:center;
+	}
+}
+@media only screen and (min-width: 641px) {
+	#signup-form > form > div > div {
+		float: left;
+	}
+	#signup-form input {
+		width: 100%;
+	}
+	#signup-form > form > div > div:not(#mce-responses) {
+		width:33%;
 	}
 }
