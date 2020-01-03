@@ -13,7 +13,7 @@
     <title>Step 1 - Install, run, and write your first event | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Step 1 - Install, run, and write your first event | Event Store ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="generator" content="docfx 2.48.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../assets/favicon.ico">
@@ -126,7 +126,7 @@
 <ul>
 <li>NET Framework 4.0+</li>
 </ul>
-<p>Event Store has <a href="https://chocolatey.org/packages/eventstore-oss">Chocolatey packages</a> available that you can install with the following command:</p>
+<p>Event Store has <a href="https://chocolatey.org/packages/eventstore-oss">Chocolatey packages</a> available that you can install with the following command in an elevated terminal:</p>
 <pre><code class="lang-powershell">choco install eventstore-oss
 </code></pre><p>You can also <a href="https://eventstore.org/downloads/">download</a> a binary, unzip the archive and run from the folder location with an administrator console.</p>
 <p>The following command starts Event Store with the database stored at the path <em>./db</em> and the logs in <em>./logs</em>. You can view further command line arguments in the <a href="../server/index.html">server docs</a>.</p>
@@ -277,6 +277,10 @@ final ActorRef connection = system.actorOf(ConnectionActor.getProps());
 <section id="tabpanel_dfgfloIX5I-2_tabid-5" role="tabpanel" data-tab="tabid-5" aria-hidden="true" hidden="hidden">
 <p>To use the .NET API, use the following method, passing the name of the stream, the version, and the events to write:</p>
 <pre><code class="lang-csharp" name="getting-started-write-event-request">var step1EventData = ProcessEvents(Globals.filePath);
+var eventData = step1EventData.ToArray();
+
+conn.AppendToStreamAsync(streamName, ExpectedVersion.Any, eventData).Wait();
+Console.WriteLine($&quot;Published {step1EventData.Count} events to &#39;{Globals.streamName}&#39;&quot;);
 </code></pre><div class="NEXT"><h5>Next Steps</h5><p>Read <a href="../http-api/creating-writing-a-stream/index.html">this guide</a> for more information on how to write events with the .NET API. We don&#39;t cover version checking in this guide, but you can read more in <a href="../dotnet-api/optimistic-concurrency-and-idempotence/index.html">the optimistic concurrency guide</a>.</p>
 </div>
 </section>

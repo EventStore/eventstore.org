@@ -13,7 +13,7 @@
     <title>Database backup | Event Store </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Database backup | Event Store ">
-    <meta name="generator" content="docfx 2.47.0.0">
+    <meta name="generator" content="docfx 2.48.0.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -108,8 +108,9 @@ rsync -a /data/eventstore/db/index /backup/eventstore/db/
 rsync -a /data/eventstore/db/*.0* /backup/eventstore/db/
 </code></pre><h2 id="restoring-a-database">Restoring a database</h2>
 <ol>
-<li>Create a copy of <em>chaser.chk</em> and call it <em>truncate.chk</em>.</li>
+<li>Ensure your Event Store database is stopped. Restoring a database on running instance is not possible and in most cases will lead to data corruption.</li>
 <li>Copy all files to the desired location.</li>
+<li>Create a copy of <em>chaser.chk</em> and call it <em>truncate.chk</em> (which override already existing <em>truncate.chk</em>).</li>
 </ol>
 <div class="NOTE"><h5>Note</h5><p>Many people do not rely on hot backups in a highly available cluster but instead increase their node counts to keep further copies of data.</p>
 </div>
