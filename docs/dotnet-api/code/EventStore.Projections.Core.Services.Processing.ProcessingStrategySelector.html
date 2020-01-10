@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ProcessingStrategySelector
    | Event Store ">
-    <meta name="generator" content="docfx 2.48.0.0">
+    <meta name="generator" content="docfx 2.48.1.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -118,14 +118,14 @@
   
   
   <a id="EventStore_Projections_Core_Services_Processing_ProcessingStrategySelector__ctor_" data-uid="EventStore.Projections.Core.Services.Processing.ProcessingStrategySelector.#ctor*"></a>
-  <h4 id="EventStore_Projections_Core_Services_Processing_ProcessingStrategySelector__ctor_EventStore_Projections_Core_Services_ReaderSubscriptionDispatcher_EventStore_Projections_Core_Services_SpooledStreamReadingDispatcher_" data-uid="EventStore.Projections.Core.Services.Processing.ProcessingStrategySelector.#ctor(EventStore.Projections.Core.Services.ReaderSubscriptionDispatcher,EventStore.Projections.Core.Services.SpooledStreamReadingDispatcher)">ProcessingStrategySelector(ReaderSubscriptionDispatcher, SpooledStreamReadingDispatcher)</h4>
+  <h4 id="EventStore_Projections_Core_Services_Processing_ProcessingStrategySelector__ctor_EventStore_Projections_Core_Services_ReaderSubscriptionDispatcher_" data-uid="EventStore.Projections.Core.Services.Processing.ProcessingStrategySelector.#ctor(EventStore.Projections.Core.Services.ReaderSubscriptionDispatcher)">ProcessingStrategySelector(ReaderSubscriptionDispatcher)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProcessingStrategySelector(ReaderSubscriptionDispatcher subscriptionDispatcher, SpooledStreamReadingDispatcher spoolProcessingResponseDispatcher)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProcessingStrategySelector(ReaderSubscriptionDispatcher subscriptionDispatcher)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -139,10 +139,6 @@
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Services.ReaderSubscriptionDispatcher.html">ReaderSubscriptionDispatcher</a></td>
         <td><span class="parametername">subscriptionDispatcher</span></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="EventStore.Projections.Core.Services.SpooledStreamReadingDispatcher.html">SpooledStreamReadingDispatcher</a></td>
-        <td><span class="parametername">spoolProcessingResponseDispatcher</span></td>
       </tr>
     </tbody>
   </table>
@@ -218,80 +214,6 @@
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="EventStore_Projections_Core_Services_Processing_ProcessingStrategySelector_CreateSlaveProjectionProcessingStrategy_" data-uid="EventStore.Projections.Core.Services.Processing.ProcessingStrategySelector.CreateSlaveProjectionProcessingStrategy*"></a>
-  <h4 id="EventStore_Projections_Core_Services_Processing_ProcessingStrategySelector_CreateSlaveProjectionProcessingStrategy_System_String_EventStore_Projections_Core_Services_Processing_ProjectionVersion_EventStore_Projections_Core_Messages_IQuerySources_EventStore_Projections_Core_Services_ProjectionConfig_EventStore_Projections_Core_Services_IProjectionStateHandler_Guid_EventStore_Core_Bus_IPublisher_Guid_EventStore_Projections_Core_Services_Processing_ProjectionCoreService_" data-uid="EventStore.Projections.Core.Services.Processing.ProcessingStrategySelector.CreateSlaveProjectionProcessingStrategy(System.String,EventStore.Projections.Core.Services.Processing.ProjectionVersion,EventStore.Projections.Core.Messages.IQuerySources,EventStore.Projections.Core.Services.ProjectionConfig,EventStore.Projections.Core.Services.IProjectionStateHandler,Guid,EventStore.Core.Bus.IPublisher,Guid,EventStore.Projections.Core.Services.Processing.ProjectionCoreService)">CreateSlaveProjectionProcessingStrategy(String, ProjectionVersion, IQuerySources, ProjectionConfig, IProjectionStateHandler, Guid, IPublisher, Guid, ProjectionCoreService)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  
-  <h5 class="decalaration">Declaration</h5>
-  
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProjectionProcessingStrategy CreateSlaveProjectionProcessingStrategy(string name, ProjectionVersion projectionVersion, IQuerySources sourceDefinition, ProjectionConfig projectionConfig, IProjectionStateHandler stateHandler, Guid workerId, IPublisher publisher, Guid masterCoreProjectionId, ProjectionCoreService projectionCoreService)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ProjectionVersion.html">ProjectionVersion</a></td>
-        <td><span class="parametername">projectionVersion</span></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="EventStore.Projections.Core.Messages.IQuerySources.html">IQuerySources</a></td>
-        <td><span class="parametername">sourceDefinition</span></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="EventStore.Projections.Core.Services.ProjectionConfig.html">ProjectionConfig</a></td>
-        <td><span class="parametername">projectionConfig</span></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="EventStore.Projections.Core.Services.IProjectionStateHandler.html">IProjectionStateHandler</a></td>
-        <td><span class="parametername">stateHandler</span></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Guid</span></td>
-        <td><span class="parametername">workerId</span></td>
-      </tr>
-      <tr>
-        <td><span class="xref">EventStore.Core.Bus.IPublisher</span></td>
-        <td><span class="parametername">publisher</span></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Guid</span></td>
-        <td><span class="parametername">masterCoreProjectionId</span></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ProjectionCoreService.html">ProjectionCoreService</a></td>
-        <td><span class="parametername">projectionCoreService</span></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="EventStore.Projections.Core.Services.Processing.ProjectionProcessingStrategy.html">ProjectionProcessingStrategy</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           
@@ -315,7 +237,7 @@
         <div class="grad-bottom"></div>
         <div class="footer site-footer">
           <div class="container inner-container">
-                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <p class="footer__copyright">&copy; 2020 Event Store Limited</p>
                       <ul class="footer__menu">
                           <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
                           <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>

@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GossipSeedClusterSettingsBuilder
    | Event Store ">
-    <meta name="generator" content="docfx 2.48.0.0">
+    <meta name="generator" content="docfx 2.48.1.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -109,11 +109,35 @@ using gossip seeds.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GossipSeedClusterSettingsBuilder</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.ClientAPI.html">EventStore.ClientAPI</a></h6>
   <h6><strong>Assembly</strong>: EventStore.ClientAPI.dll</h6>
   <h5 id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GossipSeedClusterSettingsBuilder : object</code></pre>
+    <pre><code class="lang-csharp hljs">public class GossipSeedClusterSettingsBuilder</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -304,51 +328,18 @@ using gossip seeds.</p>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetGossipSeedEndPoints_" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints*"></a>
-  <h4 id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetGossipSeedEndPoints_IPEndPoint___" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints(IPEndPoint[])">SetGossipSeedEndPoints(IPEndPoint[])</h4>
-  <div class="markdown level1 summary"><p>Sets gossip seed endpoints for the client.
-TODO: This was a note.
-This should be the external HTTP endpoint of the server, as it is required
-for the client to exchange gossip with the server. The standard port is 2113.</p>
-<p>If the server requires a specific Host header to be sent as part of the gossip
-request, use the overload of this method taking <a class="xref" href="EventStore.ClientAPI.GossipSeed.html">GossipSeed</a> instead.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  
-  <h5 class="decalaration">Declaration</h5>
-  
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GossipSeedClusterSettingsBuilder SetGossipSeedEndPoints(params IPEndPoint[] gossipSeeds)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
+        <th>Condition</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IPEndPoint</span>[]</td>
-        <td><span class="parametername">gossipSeeds</span></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.html">GossipSeedClusterSettingsBuilder</a></td>
-        <td><p>A <a class="xref" href="EventStore.ClientAPI.ClusterSettingsBuilder.html">ClusterSettingsBuilder</a> for further configuration.</p>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>If no gossip seeds are specified.</p>
 </td>
       </tr>
     </tbody>
@@ -356,7 +347,7 @@ request, use the overload of this method taking <a class="xref" href="EventStore
   
   
   <a id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetGossipSeedEndPoints_" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints*"></a>
-  <h4 id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetGossipSeedEndPoints_System_Boolean_IPEndPoint___" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints(System.Boolean,IPEndPoint[])">SetGossipSeedEndPoints(Boolean, IPEndPoint[])</h4>
+  <h4 id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetGossipSeedEndPoints_System_Boolean_System_Net_IPEndPoint___" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints(System.Boolean,System.Net.IPEndPoint[])">SetGossipSeedEndPoints(Boolean, IPEndPoint[])</h4>
   <div class="markdown level1 summary"><p>Sets gossip seed endpoints for the client.
 TODO: This was a note.
 This should be the external HTTP endpoint of the server, as it is required
@@ -385,7 +376,7 @@ request, use the overload of this method taking <a class="xref" href="EventStore
         <td><span class="parametername">tlsTerminatedEndpoints</span></td>
       </tr>
       <tr>
-        <td><span class="xref">IPEndPoint</span>[]</td>
+        <td><span class="xref">System.Net.IPEndPoint</span>[]</td>
         <td><span class="parametername">gossipSeeds</span></td>
       </tr>
     </tbody>
@@ -406,10 +397,91 @@ request, use the overload of this method taking <a class="xref" href="EventStore
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>If no gossip seeds are specified.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetGossipSeedEndPoints_" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints*"></a>
+  <h4 id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetGossipSeedEndPoints_System_Net_IPEndPoint___" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipSeedEndPoints(System.Net.IPEndPoint[])">SetGossipSeedEndPoints(IPEndPoint[])</h4>
+  <div class="markdown level1 summary"><p>Sets gossip seed endpoints for the client.
+TODO: This was a note.
+This should be the external HTTP endpoint of the server, as it is required
+for the client to exchange gossip with the server. The standard port is 2113.</p>
+<p>If the server requires a specific Host header to be sent as part of the gossip
+request, use the overload of this method taking <a class="xref" href="EventStore.ClientAPI.GossipSeed.html">GossipSeed</a> instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GossipSeedClusterSettingsBuilder SetGossipSeedEndPoints(params IPEndPoint[] gossipSeeds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Net.IPEndPoint</span>[]</td>
+        <td><span class="parametername">gossipSeeds</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.html">GossipSeedClusterSettingsBuilder</a></td>
+        <td><p>A <a class="xref" href="EventStore.ClientAPI.ClusterSettingsBuilder.html">ClusterSettingsBuilder</a> for further configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>If no gossip seeds are specified.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetGossipTimeout_" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipTimeout*"></a>
-  <h4 id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetGossipTimeout_TimeSpan_" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipTimeout(TimeSpan)">SetGossipTimeout(TimeSpan)</h4>
+  <h4 id="EventStore_ClientAPI_GossipSeedClusterSettingsBuilder_SetGossipTimeout_System_TimeSpan_" data-uid="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.SetGossipTimeout(System.TimeSpan)">SetGossipTimeout(TimeSpan)</h4>
   <div class="markdown level1 summary"><p>Sets the period after which gossip times out if none is received.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -429,7 +501,7 @@ request, use the overload of this method taking <a class="xref" href="EventStore
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">timeout</span></td>
       </tr>
     </tbody>
@@ -490,6 +562,22 @@ request, use the overload of this method taking <a class="xref" href="EventStore
       <tr>
         <td><a class="xref" href="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.html">GossipSeedClusterSettingsBuilder</a></td>
         <td><p>A <a class="xref" href="EventStore.ClientAPI.GossipSeedClusterSettingsBuilder.html">GossipSeedClusterSettingsBuilder</a> for further configuration.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentOutOfRangeException</span></td>
+        <td><p>If <code data-dev-comment-type="paramref" class="paramref">maxDiscoverAttempts</code> is less than or equal to 0.</p>
 </td>
       </tr>
     </tbody>
@@ -562,7 +650,7 @@ request, use the overload of this method taking <a class="xref" href="EventStore
         <div class="grad-bottom"></div>
         <div class="footer site-footer">
           <div class="container inner-container">
-                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <p class="footer__copyright">&copy; 2020 Event Store Limited</p>
                       <ul class="footer__menu">
                           <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
                           <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>

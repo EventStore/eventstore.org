@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ProjectionConfig
    | Event Store ">
-    <meta name="generator" content="docfx 2.48.0.0">
+    <meta name="generator" content="docfx 2.48.1.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -118,14 +118,14 @@
   
   
   <a id="EventStore_Projections_Core_Services_ProjectionConfig__ctor_" data-uid="EventStore.Projections.Core.Services.ProjectionConfig.#ctor*"></a>
-  <h4 id="EventStore_Projections_Core_Services_ProjectionConfig__ctor_IPrincipal_System_Int32_System_Int32_System_Int32_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Int32_System_Int32_" data-uid="EventStore.Projections.Core.Services.ProjectionConfig.#ctor(IPrincipal,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Int32)">ProjectionConfig(IPrincipal, Int32, Int32, Int32, Int32, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Int32, Int32)</h4>
+  <h4 id="EventStore_Projections_Core_Services_ProjectionConfig__ctor_IPrincipal_System_Int32_System_Int32_System_Int32_System_Int32_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Int32_System_Int32_" data-uid="EventStore.Projections.Core.Services.ProjectionConfig.#ctor(IPrincipal,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Int32,System.Int32)">ProjectionConfig(IPrincipal, Int32, Int32, Int32, Int32, Boolean, Boolean, Boolean, Boolean, Boolean, Int32, Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProjectionConfig(IPrincipal runAs, int checkpointHandledThreshold, int checkpointUnhandledBytesThreshold, int pendingEventsThreshold, int maxWriteBatchLength, bool emitEventEnabled, bool checkpointsEnabled, bool createTempStreams, bool stopOnEof, bool isSlaveProjection, bool trackEmittedStreams, int checkpointAfterMs, int maximumAllowedWritesInFlight)</code></pre>
+    <pre><code class="lang-csharp hljs">public ProjectionConfig(IPrincipal runAs, int checkpointHandledThreshold, int checkpointUnhandledBytesThreshold, int pendingEventsThreshold, int maxWriteBatchLength, bool emitEventEnabled, bool checkpointsEnabled, bool createTempStreams, bool stopOnEof, bool trackEmittedStreams, int checkpointAfterMs, int maximumAllowedWritesInFlight)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -171,10 +171,6 @@
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">stopOnEof</span></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isSlaveProjection</span></td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
@@ -328,31 +324,6 @@
   
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool EmitEventEnabled { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="EventStore_Projections_Core_Services_ProjectionConfig_IsSlaveProjection_" data-uid="EventStore.Projections.Core.Services.ProjectionConfig.IsSlaveProjection*"></a>
-  <h4 id="EventStore_Projections_Core_Services_ProjectionConfig_IsSlaveProjection" data-uid="EventStore.Projections.Core.Services.ProjectionConfig.IsSlaveProjection">IsSlaveProjection</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  
-  <h5 class="decalaration">Declaration</h5>
-  
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsSlaveProjection { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -546,33 +517,6 @@
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="EventStore_Projections_Core_Services_ProjectionConfig_SetIsSlave_" data-uid="EventStore.Projections.Core.Services.ProjectionConfig.SetIsSlave*"></a>
-  <h4 id="EventStore_Projections_Core_Services_ProjectionConfig_SetIsSlave" data-uid="EventStore.Projections.Core.Services.ProjectionConfig.SetIsSlave">SetIsSlave()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  
-  <h5 class="decalaration">Declaration</h5>
-  
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProjectionConfig SetIsSlave()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="EventStore.Projections.Core.Services.ProjectionConfig.html">ProjectionConfig</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           
@@ -596,7 +540,7 @@
         <div class="grad-bottom"></div>
         <div class="footer site-footer">
           <div class="container inner-container">
-                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <p class="footer__copyright">&copy; 2020 Event Store Limited</p>
                       <ul class="footer__menu">
                           <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
                           <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>

@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ProjectionManager.NewProjectionInitializer
    | Event Store ">
-    <meta name="generator" content="docfx 2.48.0.0">
+    <meta name="generator" content="docfx 2.48.1.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -191,14 +191,14 @@
   
   
   <a id="EventStore_Projections_Core_Services_Management_ProjectionManager_NewProjectionInitializer_CreateAndInitializeNewProjection_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.NewProjectionInitializer.CreateAndInitializeNewProjection*"></a>
-  <h4 id="EventStore_Projections_Core_Services_Management_ProjectionManager_NewProjectionInitializer_CreateAndInitializeNewProjection_EventStore_Projections_Core_Services_Management_ProjectionManager_Guid_Guid_System_Boolean_Guid_Guid_System_Nullable_System_Int64__" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.NewProjectionInitializer.CreateAndInitializeNewProjection(EventStore.Projections.Core.Services.Management.ProjectionManager,Guid,Guid,System.Boolean,Guid,Guid,System.Nullable{System.Int64})">CreateAndInitializeNewProjection(ProjectionManager, Guid, Guid, Boolean, Guid, Guid, Nullable&lt;Int64&gt;)</h4>
+  <h4 id="EventStore_Projections_Core_Services_Management_ProjectionManager_NewProjectionInitializer_CreateAndInitializeNewProjection_EventStore_Projections_Core_Services_Management_ProjectionManager_Guid_Guid_System_Nullable_System_Int64__" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManager.NewProjectionInitializer.CreateAndInitializeNewProjection(EventStore.Projections.Core.Services.Management.ProjectionManager,Guid,Guid,System.Nullable{System.Int64})">CreateAndInitializeNewProjection(ProjectionManager, Guid, Guid, Nullable&lt;Int64&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CreateAndInitializeNewProjection(ProjectionManager projectionManager, Guid projectionCorrelationId, Guid workerId, bool isSlave = false, Guid slaveMasterWorkerId = null, Guid slaveMasterCorrelationId = null, long? version = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public void CreateAndInitializeNewProjection(ProjectionManager projectionManager, Guid projectionCorrelationId, Guid workerId, long? version = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -220,18 +220,6 @@
       <tr>
         <td><span class="xref">Guid</span></td>
         <td><span class="parametername">workerId</span></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">isSlave</span></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Guid</span></td>
-        <td><span class="parametername">slaveMasterWorkerId</span></td>
-      </tr>
-      <tr>
-        <td><span class="xref">Guid</span></td>
-        <td><span class="parametername">slaveMasterCorrelationId</span></td>
       </tr>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int64</span>&gt;</td>
@@ -262,7 +250,7 @@
         <div class="grad-bottom"></div>
         <div class="footer site-footer">
           <div class="container inner-container">
-                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <p class="footer__copyright">&copy; 2020 Event Store Limited</p>
                       <ul class="footer__menu">
                           <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
                           <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>

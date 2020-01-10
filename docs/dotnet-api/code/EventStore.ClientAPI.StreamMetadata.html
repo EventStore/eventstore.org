@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StreamMetadata
    | Event Store ">
-    <meta name="generator" content="docfx 2.48.0.0">
+    <meta name="generator" content="docfx 2.48.1.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -109,11 +109,35 @@ for system values and a dictionary-like interface for custom values.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">StreamMetadata</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.ClientAPI.html">EventStore.ClientAPI</a></h6>
   <h6><strong>Assembly</strong>: EventStore.ClientAPI.dll</h6>
   <h5 id="EventStore_ClientAPI_StreamMetadata_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StreamMetadata : object</code></pre>
+    <pre><code class="lang-csharp hljs">public class StreamMetadata</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -163,7 +187,7 @@ for system values and a dictionary-like interface for custom values.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">TimeSpan</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.TimeSpan</span>&gt;</td>
       </tr>
     </tbody>
   </table>
@@ -188,7 +212,7 @@ for system values and a dictionary-like interface for custom values.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">TimeSpan</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.TimeSpan</span>&gt;</td>
       </tr>
     </tbody>
   </table>
@@ -267,7 +291,7 @@ This is used to implement soft-deletion of streams.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
       </tr>
     </tbody>
   </table>
@@ -293,7 +317,7 @@ This is used to implement soft-deletion of streams.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">KeyValuePair</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
       </tr>
     </tbody>
   </table>
@@ -419,7 +443,7 @@ as JSON encoded as UTF8 with no byte order mark.</p>
   
   
   <a id="EventStore_ClientAPI_StreamMetadata_Create_" data-uid="EventStore.ClientAPI.StreamMetadata.Create*"></a>
-  <h4 id="EventStore_ClientAPI_StreamMetadata_Create_System_Nullable_System_Int64__System_Nullable_TimeSpan__System_Nullable_System_Int64__System_Nullable_TimeSpan__EventStore_ClientAPI_StreamAcl_" data-uid="EventStore.ClientAPI.StreamMetadata.Create(System.Nullable{System.Int64},System.Nullable{TimeSpan},System.Nullable{System.Int64},System.Nullable{TimeSpan},EventStore.ClientAPI.StreamAcl)">Create(Nullable&lt;Int64&gt;, Nullable&lt;TimeSpan&gt;, Nullable&lt;Int64&gt;, Nullable&lt;TimeSpan&gt;, StreamAcl)</h4>
+  <h4 id="EventStore_ClientAPI_StreamMetadata_Create_System_Nullable_System_Int64__System_Nullable_System_TimeSpan__System_Nullable_System_Int64__System_Nullable_System_TimeSpan__EventStore_ClientAPI_StreamAcl_" data-uid="EventStore.ClientAPI.StreamMetadata.Create(System.Nullable{System.Int64},System.Nullable{System.TimeSpan},System.Nullable{System.Int64},System.Nullable{System.TimeSpan},EventStore.ClientAPI.StreamAcl)">Create(Nullable&lt;Int64&gt;, Nullable&lt;TimeSpan&gt;, Nullable&lt;Int64&gt;, Nullable&lt;TimeSpan&gt;, StreamAcl)</h4>
   <div class="markdown level1 summary"><p>Creates a <a class="xref" href="EventStore.ClientAPI.StreamMetadata.html">StreamMetadata</a> with the specified parameters.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -427,7 +451,7 @@ as JSON encoded as UTF8 with no byte order mark.</p>
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static StreamMetadata Create(long? maxCount = null, TimeSpan? maxAge = null, long? truncateBefore = null, TimeSpan? cacheControl = null, StreamAcl acl = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static StreamMetadata Create(long? maxCount = default(long? ), TimeSpan? maxAge = default(TimeSpan? ), long? truncateBefore = default(long? ), TimeSpan? cacheControl = default(TimeSpan? ), StreamAcl acl = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -443,7 +467,7 @@ as JSON encoded as UTF8 with no byte order mark.</p>
         <td><span class="parametername">maxCount</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">TimeSpan</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.TimeSpan</span>&gt;</td>
         <td><span class="parametername">maxAge</span></td>
       </tr>
       <tr>
@@ -451,7 +475,7 @@ as JSON encoded as UTF8 with no byte order mark.</p>
         <td><span class="parametername">truncateBefore</span></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">TimeSpan</span>&gt;</td>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.TimeSpan</span>&gt;</td>
         <td><span class="parametername">cacheControl</span></td>
       </tr>
       <tr>
@@ -524,7 +548,7 @@ containing stream metadata.</p>
   <a id="EventStore_ClientAPI_StreamMetadata_GetValue_" data-uid="EventStore.ClientAPI.StreamMetadata.GetValue*"></a>
   <h4 id="EventStore_ClientAPI_StreamMetadata_GetValue__1_System_String_" data-uid="EventStore.ClientAPI.StreamMetadata.GetValue``1(System.String)">GetValue&lt;T&gt;(String)</h4>
   <div class="markdown level1 summary"><p>Get a value of type T for the given key from the custom metadata.
-This method will throw an <see cref="!:ArgumentException"></see> if the
+This method will throw an <span class="xref">System.ArgumentException</span> if the
 key is not found.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -621,6 +645,22 @@ key is not found.</p>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><p>String containing raw JSON value for the key.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>If the key does not exist.</p>
 </td>
       </tr>
     </tbody>
@@ -762,7 +802,7 @@ the value as an out parameter.</p>
         <div class="grad-bottom"></div>
         <div class="footer site-footer">
           <div class="container inner-container">
-                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <p class="footer__copyright">&copy; 2020 Event Store Limited</p>
                       <ul class="footer__menu">
                           <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
                           <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>

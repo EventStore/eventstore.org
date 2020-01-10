@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ProjectionManagerMessageDispatcher
    | Event Store ">
-    <meta name="generator" content="docfx 2.48.0.0">
+    <meta name="generator" content="docfx 2.48.1.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -109,16 +109,13 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ParallelQueryProcessingMessages.PartitionProcessingResultBase.html">PartitionProcessingResultBase</a>&gt;</div>
-    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.SpoolStreamReading.html">ReaderSubscriptionManagement.SpoolStreamReading</a>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.CoreProjectionManagementControlMessage.html">CoreProjectionManagementControlMessage</a>&gt;</div>
-    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ParallelQueryProcessingMessages.PartitionProcessingResultOutputBase.html">PartitionProcessingResultOutputBase</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.Services.Management.html">EventStore.Projections.Core.Services.Management</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
   <h5 id="EventStore_Projections_Core_Services_Management_ProjectionManagerMessageDispatcher_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ProjectionManagerMessageDispatcher : object, IHandle&lt;PartitionProcessingResultBase&gt;, IHandle&lt;ReaderSubscriptionManagement.SpoolStreamReading&gt;, IHandle&lt;CoreProjectionManagementControlMessage&gt;, IHandle&lt;PartitionProcessingResultOutputBase&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class ProjectionManagerMessageDispatcher : object, IHandle&lt;CoreProjectionManagementControlMessage&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -178,97 +175,7 @@
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="EventStore_Projections_Core_Services_Management_ProjectionManagerMessageDispatcher_Handle_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManagerMessageDispatcher.Handle*"></a>
-  <h4 id="EventStore_Projections_Core_Services_Management_ProjectionManagerMessageDispatcher_Handle_EventStore_Projections_Core_Messages_ParallelQueryProcessingMessages_PartitionProcessingResultBase_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManagerMessageDispatcher.Handle(EventStore.Projections.Core.Messages.ParallelQueryProcessingMessages.PartitionProcessingResultBase)">Handle(PartitionProcessingResultBase)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  
-  <h5 class="decalaration">Declaration</h5>
-  
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Handle(PartitionProcessingResultBase message)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="EventStore.Projections.Core.Messages.ParallelQueryProcessingMessages.PartitionProcessingResultBase.html">PartitionProcessingResultBase</a></td>
-        <td><span class="parametername">message</span></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="EventStore_Projections_Core_Services_Management_ProjectionManagerMessageDispatcher_Handle_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManagerMessageDispatcher.Handle*"></a>
-  <h4 id="EventStore_Projections_Core_Services_Management_ProjectionManagerMessageDispatcher_Handle_EventStore_Projections_Core_Messages_ParallelQueryProcessingMessages_PartitionProcessingResultOutputBase_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManagerMessageDispatcher.Handle(EventStore.Projections.Core.Messages.ParallelQueryProcessingMessages.PartitionProcessingResultOutputBase)">Handle(PartitionProcessingResultOutputBase)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  
-  <h5 class="decalaration">Declaration</h5>
-  
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Handle(PartitionProcessingResultOutputBase message)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="EventStore.Projections.Core.Messages.ParallelQueryProcessingMessages.PartitionProcessingResultOutputBase.html">PartitionProcessingResultOutputBase</a></td>
-        <td><span class="parametername">message</span></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="EventStore_Projections_Core_Services_Management_ProjectionManagerMessageDispatcher_Handle_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManagerMessageDispatcher.Handle*"></a>
-  <h4 id="EventStore_Projections_Core_Services_Management_ProjectionManagerMessageDispatcher_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionManagement_SpoolStreamReading_" data-uid="EventStore.Projections.Core.Services.Management.ProjectionManagerMessageDispatcher.Handle(EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.SpoolStreamReading)">Handle(ReaderSubscriptionManagement.SpoolStreamReading)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  
-  <h5 class="decalaration">Declaration</h5>
-  
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Handle(ReaderSubscriptionManagement.SpoolStreamReading message)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionManagement.SpoolStreamReading.html">ReaderSubscriptionManagement.SpoolStreamReading</a></td>
-        <td><span class="parametername">message</span></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
-  </div>
-  <div>
-      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
-  </div>
-  <div>
-      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
-  </div>
   <div>
       <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
   </div>
@@ -295,7 +202,7 @@
         <div class="grad-bottom"></div>
         <div class="footer site-footer">
           <div class="container inner-container">
-                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <p class="footer__copyright">&copy; 2020 Event Store Limited</p>
                       <ul class="footer__menu">
                           <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
                           <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>

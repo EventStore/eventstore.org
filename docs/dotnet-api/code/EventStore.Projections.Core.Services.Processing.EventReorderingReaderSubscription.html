@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class EventReorderingReaderSubscription
    | Event Store ">
-    <meta name="generator" content="docfx 2.48.0.0">
+    <meta name="generator" content="docfx 2.48.1.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -117,7 +117,6 @@
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderEof.html">ReaderSubscriptionMessage.EventReaderEof</a>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderPartitionEof.html">ReaderSubscriptionMessage.EventReaderPartitionEof</a>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderPartitionDeleted.html">ReaderSubscriptionMessage.EventReaderPartitionDeleted</a>&gt;</div>
-    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderPartitionMeasured.html">ReaderSubscriptionMessage.EventReaderPartitionMeasured</a>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ReaderSubscriptionMessage.EventReaderNotAuthorized.html">ReaderSubscriptionMessage.EventReaderNotAuthorized</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -153,9 +152,6 @@
       <a class="xref" href="EventStore.Projections.Core.Services.Processing.ReaderSubscriptionBase.html#EventStore_Projections_Core_Services_Processing_ReaderSubscriptionBase_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderEof_">ReaderSubscriptionBase.Handle(ReaderSubscriptionMessage.EventReaderEof)</a>
     </div>
     <div>
-      <a class="xref" href="EventStore.Projections.Core.Services.Processing.ReaderSubscriptionBase.html#EventStore_Projections_Core_Services_Processing_ReaderSubscriptionBase_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderPartitionMeasured_">ReaderSubscriptionBase.Handle(ReaderSubscriptionMessage.EventReaderPartitionMeasured)</a>
-    </div>
-    <div>
       <a class="xref" href="EventStore.Projections.Core.Services.Processing.ReaderSubscriptionBase.html#EventStore_Projections_Core_Services_Processing_ReaderSubscriptionBase_Handle_EventStore_Projections_Core_Messages_ReaderSubscriptionMessage_EventReaderNotAuthorized_">ReaderSubscriptionBase.Handle(ReaderSubscriptionMessage.EventReaderNotAuthorized)</a>
     </div>
     <div>
@@ -166,7 +162,7 @@
   <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
   <h5 id="EventStore_Projections_Core_Services_Processing_EventReorderingReaderSubscription_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class EventReorderingReaderSubscription : ReaderSubscriptionBase, IReaderSubscription, IHandle&lt;ReaderSubscriptionMessage.CommittedEventDistributed&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderIdle&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderStarting&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderEof&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderPartitionEof&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderPartitionDeleted&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderPartitionMeasured&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderNotAuthorized&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class EventReorderingReaderSubscription : ReaderSubscriptionBase, IReaderSubscription, IHandle&lt;ReaderSubscriptionMessage.CommittedEventDistributed&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderIdle&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderStarting&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderEof&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderPartitionEof&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderPartitionDeleted&gt;, IHandle&lt;ReaderSubscriptionMessage.EventReaderNotAuthorized&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -386,9 +382,6 @@
   <div>
       <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
   </div>
-  <div>
-      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
-  </div>
 </article>
           </div>
           
@@ -412,7 +405,7 @@
         <div class="grad-bottom"></div>
         <div class="footer site-footer">
           <div class="container inner-container">
-                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <p class="footer__copyright">&copy; 2020 Event Store Limited</p>
                       <ul class="footer__menu">
                           <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
                           <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>

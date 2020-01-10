@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class EventProcessingProjectionProcessingPhase
    | Event Store ">
-    <meta name="generator" content="docfx 2.48.0.0">
+    <meta name="generator" content="docfx 2.48.1.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -127,7 +127,6 @@
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.CommittedEventReceived.html">EventReaderSubscriptionMessage.CommittedEventReceived</a>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.PartitionEofReached.html">EventReaderSubscriptionMessage.PartitionEofReached</a>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.PartitionDeleted.html">EventReaderSubscriptionMessage.PartitionDeleted</a>&gt;</div>
-    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.PartitionMeasured.html">EventReaderSubscriptionMessage.PartitionMeasured</a>&gt;</div>
     <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.IEventProcessingProjectionPhase.html">IEventProcessingProjectionPhase</a></div>
     <div><a class="xref" href="EventStore.Projections.Core.Services.Processing.IProjectionPhaseStateManager.html">IProjectionPhaseStateManager</a></div>
   </div>
@@ -216,9 +215,6 @@
     </div>
     <div>
       <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_EnsureTickPending">EventSubscriptionBasedProjectionProcessingPhase.EnsureTickPending()</a>
-    </div>
-    <div>
-      <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_AssignSlaves_EventStore_Projections_Core_Messages_SlaveProjectionCommunicationChannels_">EventSubscriptionBasedProjectionProcessingPhase.AssignSlaves(SlaveProjectionCommunicationChannels)</a>
     </div>
     <div>
       <a class="xref" href="EventStore.Projections.Core.Services.Processing.EventSubscriptionBasedProjectionProcessingPhase.html#EventStore_Projections_Core_Services_Processing_EventSubscriptionBasedProjectionProcessingPhase_ProcessEvent">EventSubscriptionBasedProjectionProcessingPhase.ProcessEvent()</a>
@@ -333,7 +329,7 @@
   <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
   <h5 id="EventStore_Projections_Core_Services_Processing_EventProcessingProjectionProcessingPhase_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class EventProcessingProjectionProcessingPhase : EventSubscriptionBasedProjectionProcessingPhase, IProjectionPhaseCompleter, IProjectionPhaseCheckpointManager, IHandle&lt;EventReaderSubscriptionMessage.ProgressChanged&gt;, IHandle&lt;EventReaderSubscriptionMessage.SubscriptionStarted&gt;, IHandle&lt;EventReaderSubscriptionMessage.NotAuthorized&gt;, IHandle&lt;EventReaderSubscriptionMessage.EofReached&gt;, IHandle&lt;EventReaderSubscriptionMessage.CheckpointSuggested&gt;, IHandle&lt;EventReaderSubscriptionMessage.ReaderAssignedReader&gt;, IHandle&lt;EventReaderSubscriptionMessage.Failed&gt;, IProjectionProcessingPhase, IDisposable, IHandle&lt;CoreProjectionManagementMessage.GetState&gt;, IHandle&lt;CoreProjectionManagementMessage.GetResult&gt;, IHandle&lt;CoreProjectionProcessingMessage.PrerecordedEventsLoaded&gt;, IHandle&lt;EventReaderSubscriptionMessage.CommittedEventReceived&gt;, IHandle&lt;EventReaderSubscriptionMessage.PartitionEofReached&gt;, IHandle&lt;EventReaderSubscriptionMessage.PartitionDeleted&gt;, IHandle&lt;EventReaderSubscriptionMessage.PartitionMeasured&gt;, IEventProcessingProjectionPhase, IProjectionPhaseStateManager</code></pre>
+    <pre><code class="lang-csharp hljs">public class EventProcessingProjectionProcessingPhase : EventSubscriptionBasedProjectionProcessingPhase, IProjectionPhaseCompleter, IProjectionPhaseCheckpointManager, IHandle&lt;EventReaderSubscriptionMessage.ProgressChanged&gt;, IHandle&lt;EventReaderSubscriptionMessage.SubscriptionStarted&gt;, IHandle&lt;EventReaderSubscriptionMessage.NotAuthorized&gt;, IHandle&lt;EventReaderSubscriptionMessage.EofReached&gt;, IHandle&lt;EventReaderSubscriptionMessage.CheckpointSuggested&gt;, IHandle&lt;EventReaderSubscriptionMessage.ReaderAssignedReader&gt;, IHandle&lt;EventReaderSubscriptionMessage.Failed&gt;, IProjectionProcessingPhase, IDisposable, IHandle&lt;CoreProjectionManagementMessage.GetState&gt;, IHandle&lt;CoreProjectionManagementMessage.GetResult&gt;, IHandle&lt;CoreProjectionProcessingMessage.PrerecordedEventsLoaded&gt;, IHandle&lt;EventReaderSubscriptionMessage.CommittedEventReceived&gt;, IHandle&lt;EventReaderSubscriptionMessage.PartitionEofReached&gt;, IHandle&lt;EventReaderSubscriptionMessage.PartitionDeleted&gt;, IEventProcessingProjectionPhase, IProjectionPhaseStateManager</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -576,33 +572,6 @@
   </table>
   
   
-  <a id="EventStore_Projections_Core_Services_Processing_EventProcessingProjectionProcessingPhase_Handle_" data-uid="EventStore.Projections.Core.Services.Processing.EventProcessingProjectionProcessingPhase.Handle*"></a>
-  <h4 id="EventStore_Projections_Core_Services_Processing_EventProcessingProjectionProcessingPhase_Handle_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_PartitionMeasured_" data-uid="EventStore.Projections.Core.Services.Processing.EventProcessingProjectionProcessingPhase.Handle(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.PartitionMeasured)">Handle(EventReaderSubscriptionMessage.PartitionMeasured)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  
-  <h5 class="decalaration">Declaration</h5>
-  
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Handle(EventReaderSubscriptionMessage.PartitionMeasured message)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.PartitionMeasured.html">EventReaderSubscriptionMessage.PartitionMeasured</a></td>
-        <td><span class="parametername">message</span></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="EventStore_Projections_Core_Services_Processing_EventProcessingProjectionProcessingPhase_NewCheckpointStarted_" data-uid="EventStore.Projections.Core.Services.Processing.EventProcessingProjectionProcessingPhase.NewCheckpointStarted*"></a>
   <h4 id="EventStore_Projections_Core_Services_Processing_EventProcessingProjectionProcessingPhase_NewCheckpointStarted_EventStore_Projections_Core_Services_Processing_CheckpointTag_" data-uid="EventStore.Projections.Core.Services.Processing.EventProcessingProjectionProcessingPhase.NewCheckpointStarted(EventStore.Projections.Core.Services.Processing.CheckpointTag)">NewCheckpointStarted(CheckpointTag)</h4>
   <div class="markdown level1 summary"></div>
@@ -722,48 +691,6 @@
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="EventStore_Projections_Core_Services_Processing_EventProcessingProjectionProcessingPhase_TransformCatalogEvent_" data-uid="EventStore.Projections.Core.Services.Processing.EventProcessingProjectionProcessingPhase.TransformCatalogEvent*"></a>
-  <h4 id="EventStore_Projections_Core_Services_Processing_EventProcessingProjectionProcessingPhase_TransformCatalogEvent_EventStore_Projections_Core_Messages_EventReaderSubscriptionMessage_CommittedEventReceived_" data-uid="EventStore.Projections.Core.Services.Processing.EventProcessingProjectionProcessingPhase.TransformCatalogEvent(EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.CommittedEventReceived)">TransformCatalogEvent(EventReaderSubscriptionMessage.CommittedEventReceived)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  
-  <h5 class="decalaration">Declaration</h5>
-  
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string TransformCatalogEvent(EventReaderSubscriptionMessage.CommittedEventReceived message)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="EventStore.Projections.Core.Messages.EventReaderSubscriptionMessage.CommittedEventReceived.html">EventReaderSubscriptionMessage.CommittedEventReceived</a></td>
-        <td><span class="parametername">message</span></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="EventStore.Projections.Core.Services.Processing.IProjectionPhaseCompleter.html">IProjectionPhaseCompleter</a>
@@ -817,9 +744,6 @@
       <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
   </div>
   <div>
-      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
-  </div>
-  <div>
       <a class="xref" href="EventStore.Projections.Core.Services.Processing.IEventProcessingProjectionPhase.html">IEventProcessingProjectionPhase</a>
   </div>
   <div>
@@ -848,7 +772,7 @@
         <div class="grad-bottom"></div>
         <div class="footer site-footer">
           <div class="container inner-container">
-                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <p class="footer__copyright">&copy; 2020 Event Store Limited</p>
                       <ul class="footer__menu">
                           <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
                           <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
