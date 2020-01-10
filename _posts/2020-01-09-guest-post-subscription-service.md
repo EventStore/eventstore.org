@@ -5,9 +5,9 @@ seo-title: "Subscription service for Event Store"
 author: "Steven Blair"
 description: "VME Retail have released version 1.0.0 of their Subscription Service, which is intended to make life that little bit easier for delivering events from Event Store to clients. The Subscription Service has been used privately by VME Retail Ltd for a few years in various solutions, and they have decided to open the code up to the rest of the Event Store community."
 category: "Articles"
-tags: ["Event Store","Guest article"]
+tags: ["Event Store","Guest post"]
 ---
-> **This is a guest article** - Steven Blair is a Software Architect at VME Retail Ltd.
+> **This is a guest post** - Steven Blair is a Software Architect at VME Retail Ltd.
 
 ## Introduction
 
@@ -30,16 +30,16 @@ SubscriptionService subscriptionService = new SubscriptionService(subscriptions,
 await subscriptionService.Start(CancellationToken.None);
 ```
 
-The Subscription Service will connect (and create where applicable) the persistent subscription and deliver all the events on this stream to configured endpoint.
+The Subscription Service will connect (and create where applicable) the persistent subscription, and deliver all the events on this stream to the configured endpoint.
 
 ## Business case for the subscription service
 
-If an Event Store is central to your system, there is a good chance you have a requirement to deliver events from here to other systems.
+If Event Store is central to your system, there is a good chance you have a requirement to deliver events from here to other systems.
 
 Examples of this might be:
-1. Read Model
-2. Other Bounded Contexts (for eventual consistency)
-2. External systems out with your control
+1. Read model
+2. Other bounded contexts (for eventual consistency)
+2. External systems out of your control
 
 The Subscription Service sits in between your Event Store and endpoints, and manages the delivery of these events.
 
@@ -51,9 +51,9 @@ One scenario we use at VME Retail is having a Subscription Service configured to
 
 For anyone interested in the technical details of the Subscription Service, here is a quick overview:
 
-1. Service will create Persistent Subscription if it doesn’t already exist
+1. Service will create the persistent subscription if it doesn’t already exist
 2. Service will manage acking / naking of posted events.
-3. User can easily override default http settings to customise posting (for example, if you need to include an Authorisation Token in your POST)
+3. User can easily override default http settings to customise posting (for example, if you need to include an authorisation token in your POST)
 
 ## Additional information
 
