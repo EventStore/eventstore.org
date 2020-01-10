@@ -7,7 +7,7 @@ category: "Tutorials"
 tags: ["Event Store","Projections","Event sourcing"]
 ---
 
-In the [first post on projections](http://goodenoughsoftware.net/2013/02/12/projections-1-the-theory) we talked a bit about the theory behind projections. In this post we are going to try to create a very simple projection and talk about how it actually works.
+In the [first post on projections](https://eventstore.org/blog/projections-1-theory/) we talked a bit about the theory behind projections. In this post we are going to try to create a very simple projection and talk about how it actually works.
 
 To start with there is a very special stream inside of the event store. This stream represents statistics measurements that are happening internally. You can control how often they are taken via config. To find this stream in your system you can assuming you are bringing up a brand new node look at the “Streams” tab when going to whatever port you set for HTTP.
 
