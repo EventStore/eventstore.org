@@ -57,6 +57,6 @@ For anyone interested in the technical details of the Subscription Service, here
 
 ## Additional information
 
-The Subscription Service GitHub repository can be found [here](https://github.com/vmeretail/subscriptionservice "Subscription Service on Github")
+The source code for the subscription service can be found [on GitHub](https://github.com/vmeretail/subscriptionservice "Subscription Service on Github").
 
-Nuget package can be downloaded [here](https://www.nuget.org/packages/EventStore.SubscriptionService "Subscription Service on Nuget")
+The package can be found [on Nuget](https://www.nuget.org/packages/EventStore.SubscriptionService "Subscription Service on Nuget").
