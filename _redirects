@@ -7,3 +7,20 @@
 /docs/introduction/*    /docs/getting-started
 
 /blog/201*/:title /blog/:title/ 301!
+/blog/201*/:title/index.html /blog/:title/ 301!
+/blog/202*/:title /blog/:title/ 301!
+/blog/202*/:title/index.html /blog/:title/ 301!
+/blog/feed/ /blog/feed/index.xml 200
+
+# Deleted blog posts
+/blog/20120926/future-blogs https://eventstore.org/blog/ 410!
+/blog/20121005/special-offer https://eventstore.org/blog/ 410!
+/blog/20141112/video-of-ouros-2nd-birthday https://eventstore.org/blog/ 410!
+
+# Slugs changed blog posts
+/blog/20130530/suppot-for-single-node-open-source-available/ https://eventstore.org/blog/support-for-single-node-open-source-available/ 301!
+
+# Redirect blog posts
+/blog/20130220/getting-started-part-1-introduction https://eventstore.org/docs/getting-started/ 301!
+/blog/20130220/getting-started-part-2-implementing-the-commondomain-repository-interface https://eventstore.org/docs/getting-started/reading-subscribing-events/ 301!
+/blog/20130306/getting-started-part-3-subscriptions https://eventstore.org/docs/getting-started/reading-subscribing-events/ 301!

@@ -10,34 +10,35 @@
 {% else %}
 {% capture seo-title %}{{ page.title }}{% unless page.title contains "| Event Store" or contains "- Event Store" %} | {{ site.name }}{% endunless %}{% endcapture %}
 {% endif %}
-{% if page.description != null %}{% capture seo-description %}{{ page.description }}{% endcapture %}
-{% elsif page.layout == "blog-post" and page.description == null %}{% capture seo-description %}{{ page.content | strip_html | truncatewords:75 }}{% endcapture %}
+{% if page.description != null %}{% capture seo-description %}{% if paginator.page > 1 %}Page {{paginator.page}} of {{paginator.total_pages}} - {% endif %}{{ page.description }}{% endcapture %}
+{% elsif page.layout == "blog-post" and page.description == null %}{% capture seo-description %}{{ page.content | strip_html | truncate:155 }}{% endcapture %}
 {% elsif page.layout == "autopage_category" %}{% assign autopagename = page.autopages.display_name | downcase | slugify %}{% assign seo = site.data.seo[autopagename] %}{% capture seo-description %}{% if paginator.page > 1 %}Page {{paginator.page}} of {{paginator.total_pages}} - {% endif %}{{seo.description }}{% endcapture %}
 {% elsif page.layout == "autopage_tags" %}{% assign tagname = page.autopages.display_name | downcase | slugify %}{% capture seo-description %}{% if paginator.page > 1 %}Page {{paginator.page}} of {{paginator.total_pages}} - {% endif %}Posts tagged {{ page.autopages.display_name }} from the Event Store blog{% endcapture %}
 {% else %}{% capture seo-description %}{{ site.description }}{% endcapture %}
 {% endif %}
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta content="{{seo-description}}" name="description">
-    <link href="//fonts.googleapis.com" rel="preconnect">
-    <link href="//www.google-analytics.com" rel="preconnect">
-    <title>{{seo-title}}</title>
-    <meta content="#4CAF50" name="theme-color">
-    <link href="/manifest.json" rel="manifest">
-    <link href="/css/main13.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic|Source+Code+Pro:400,700" rel="stylesheet">
-    <link href="https://eventstore.org/blog/feed/index.xml" rel="alternate" title="Event Store" type="application/rss+xml">
-    <link rel="canonical" href="{{site.url}}{{page.url|remove: "index.html"}}" />
-    {% include tagmanager1.html %}
-    {% if page.layout == "blog-post" %}
-    {% include sharethis.html %}
-    {% include blog-schema.html %}
-    {% endif %}
-    {% if page.title == "Support" %}
-    <script src="/js/fontAwesomeAll.min.js"></script>
-    {% endif %}
-    <style>.blog-post {word-wrap: break-word;}</style>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="{{seo-description}}" name="description">
+  <link href="//fonts.googleapis.com" rel="preconnect">
+  <link href="//www.google-analytics.com" rel="preconnect">
+  <title>{{seo-title}}</title>
+  <meta content="#4CAF50" name="theme-color">
+  <link href="/manifest.json" rel="manifest">
+  <link href="/css/main13.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic|Source+Code+Pro:400,700" rel="stylesheet">
+  <link href="https://eventstore.org/blog/feed/index.xml" rel="alternate" title="Event Store" type="application/rss+xml">
+	<link rel="canonical" href="{{site.url}}{{page.url|remove: "index.html"}}" />
+  {% include tagmanager1.html %}
+  {% if page.layout == "blog-post" %}
+	{% include sharethis.html %}
+	{% include blog-schema.html %}
+  <meta content="{{page.author}}" name="author">
+	{% endif %}
+	{% if page.title == "Support" %}
+	<script src="/js/fontAwesomeAll.min.js"></script>
+	{% endif %}
+  <style>.blog-post {word-wrap: break-word;}</style>
 </head>
 
 <body>
@@ -51,13 +52,13 @@
             </h1>sss
             {{site.url}}
             <ul class="site-navigation" id="navigation">
-                <li class="site-navigation__item"><a href="/support">Support</a></li>
+                <li class="site-navigation__item"><a href="/support/">Support</a></li>
                 <li class="site-navigation__item"><a href="https://training.eventstore.com">Training</a></li>
-                <li class="site-navigation__item"><a href="{{ site.url }}/docs">Docs</a></li>
-                <li class="site-navigation__item"><a href="{{ site.url }}/downloads">Downloads</a></li>
-                <li class="site-navigation__item"><a href="/community">Community</a></li>
-                <li class="site-navigation__item"><a href="/blog">Blog</a></li>
-                <li class="site-navigation__item"><a href="{{ site.url }}/contact">Contact</a></li>
+                <li class="site-navigation__item"><a href="{{ site.url }}/docs/">Docs</a></li>
+                <li class="site-navigation__item"><a href="{{ site.url }}/downloads/">Downloads</a></li>
+                <li class="site-navigation__item"><a href="/community/">Community</a></li>
+                <li class="site-navigation__item"><a href="/blog/">Blog</a></li>
+                <li class="site-navigation__item"><a href="{{ site.url }}/contact/">Contact</a></li>
 
             </ul>
             <a href="#" onclick="toggleNavigation()" class="site-navigation-toggle">Menu</a>
