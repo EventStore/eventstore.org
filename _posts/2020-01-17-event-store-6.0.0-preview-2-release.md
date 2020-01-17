@@ -74,11 +74,11 @@ We have introduced a health check which can be queried via the `{server_address}
 
 We have included the retry count for persistent subscription’s HTTP based API.
 
-## HTTP API of $type
+## HTTP Request Neutrality
 
 We have addressed an issue whereby if Event Store receives a payload via the HTTP API in JSON, the serializer would interpret the $type properties on the payload and remove them upon deserializing.
 
-## Add exponential backoff and jitter to projection writes
+## Projection Write Improvements
 
 
 When experiencing commit timeouts, projections would attempt to write five times with a few seconds between each retry before they are marked as faulted. After this, manual intervention was required to re-enable the projections.
@@ -105,7 +105,7 @@ As only `fromStreamsMatching` was officially documented, it was the only one of 
 
 Usage of `fromStreamsMatching` can be replaced with `fromAll` with an appropriate `where` modifier.
 
-## Disable clone nodes by default
+## Deprecation of Clone Nodes
 
 Following the release of Read-Only Replicas, Clones have been disabled by default.
 
@@ -133,7 +133,7 @@ One of the pain points was that it was difficult to interpret the structured UUI
 
 > Note: if you are developing a gRPC client, please update your proto contracts.
 
-## Use event counters for performance statistics
+## Event Counters for statistics
 
 Windows-centric performance counters do not work with .NET Core, so many statistics are now collected using the `Microsoft.Diagnostics.NETCore.Client` package.
 
