@@ -11,7 +11,7 @@ With this release we want to show you where we are planning on taking Event Stor
 
 This release is not intended to be used in production and is still rough around the edges, but we welcome your feedback as we prepare a release candidate.
 
-If you encounter any issues, please don’t hesitate to open an issue on GitHub if there isn’t one already.
+If you encounter any issues, please don’t hesitate to open an issue on [GitHub](https://github.com/eventstore/eventstore) if there isn’t one already.
 
 You can download the packages from the downloads page under the Pre-Release section.
 If you are running on macOS, you need to run Event Store in Docker, since currently servers using .NET Core’s gRPC implementation require the platform to support server ALPN, which macOS did not until Catalina. As soon as this restriction is lifted by the .NET Core platform, Event Store will release packages for macOS.
@@ -20,13 +20,13 @@ If you are running on macOS, you need to run Event Store in Docker, since curren
 
 With the release of preview two of Event Store, we are also shipping a new [gRPC based operations client](https://www.nuget.org/packages/EventStore.Client.Operations.Grpc/6.0.0-preview2) which as it currently stands has support for scavenging.
 
-## Event Store gRPC client renamed
+## .NET gRPC Client Rename
 
-We have renamed the gRPC Client to **EventStore.Client.Grpc**. In preview one, it was named **EventStore.Grpc.Client**.
+We have renamed the .NET gRPC Client to **EventStore.Client.Grpc**. In preview one, it was named **EventStore.Grpc.Client**.
 
 > Note: The [nuget package](https://www.nuget.org/packages/EventStore.Grpc.Client/6.0.0-preview1) from preview one will not receive updates and will be removed
 
-## Exposed the read direction as a parameter in the Event Store gRPC Client
+## Simplification of .NET gRPC Client Methods
 
 To simplify the gRPC API, we have exposed the read direction in the gRPC Client as a parameter.
 
@@ -53,11 +53,11 @@ eventStoreClient.ReadStreamAsync(
     userCredentials: new EventStore.Client.UserCredentials("admin", "changeit"));
 ```
 
-> Note: This is a breaking change from the preview one.
+> Note: This is a breaking change from preview one.
 
-## Improvements to tracking commits across a cluster
+## Replication Improvements
 
-Commit tracking has been reworked to centralize the commit status and provide the ability in the future to specify which commit level is required before returning acknowledgements on write operations.
+Improvements have been made to centralise replication logic for each type of operation. This improves performance and correctness.
 
 The three different levels are as follows
 
@@ -70,7 +70,7 @@ MasterIndexed: indexed (aka readable) on master Node.
 ## Liveness health check
 
 We have introduced a health check which can be queried via the `{server_address}/health/live` endpoint. This endpoint will return a 204 status code once Event Store is ready, and is now configured as the default health check in the Docker container.
-Retry count has been added to persistent subscriptions (HTTP) (2185)
+## Persistent Subscription Statistics
 
 We have included the retry count for persistent subscription’s HTTP based API.
 
@@ -80,7 +80,6 @@ We have addressed an issue whereby if Event Store receives a payload via the HTT
 
 ## Add exponential backoff and jitter to projection writes
 
-Under heavy load, commit timeouts can become very common in Event Store.
 
 When experiencing commit timeouts, projections would attempt to write five times with a few seconds between each retry before they are marked as faulted. After this, manual intervention was required to re-enable the projections.
 
@@ -88,9 +87,8 @@ To alleviate this, exponential backoff and jitter has been added to projections 
 
 The retry count for projections has also been increased, as the previous number of five retries only corresponded with about 10 seconds.
 
-With these changes, the projections should have an average of 10 minutes to recover before faulting.
 
-## Changes to projections
+## Removal of undocumented projections selectors
 
 In our ongoing effort to improve projections we have made a number of changes.
 
@@ -105,21 +103,19 @@ These selectors were only usable in queries or transient projections. If you wer
 
 As only `fromStreamsMatching` was officially documented, it was the only one of these officially supported.
 
-If you were making use of `fromStreamsMatching`, you can replace it with `fromAll` and an appropriate where clause.
+Usage of `fromStreamsMatching` can be replaced with `fromAll` with an appropriate `where` modifier.
 
 ## Disable clone nodes by default
 
 Following the release of Read-Only Replicas, Clones have been disabled by default.
 
-The default behaviour now is for excess nodes to be terminated when they join the cluster.
+The new default behaviour is for nodes in excess of the configured cluster size to be terminated upon joining.
 
-If you still want to make use of Clones, you can re-enable them by setting the `--unsafe-allow-surplus-nodes` option on all nodes in the cluster.
+If you need to make use of Clones nodes while transitioning to using read replicas, the old behaviour can be restored by setting the `--unsafe-allow-surplus-nodes` option on all nodes in the cluster.
 
-## Fix race condition in TCP connections
 
-We addressed an issue whereby data could be dispatched even after the tcp connection has been closed.
 
-Improvements to Event Store gRPC protocol buffer design (2190)
+## Improvements to Event Store gRPC protocol buffer design
 
 > Note: this does not affect users of Event Store, only those implementing client SDKs.
 
@@ -127,7 +123,6 @@ We have addressed an issue whereby some code generators for languages (notably R
 
 > Note: if you are developing a gRPC-based client, please update your proto contracts.
 
-## Return structured vs string based UUIDs from gRPC reads
 
 > Note: this does not affect users of Event Store, only those implementing client SDKs.
 
@@ -135,12 +130,11 @@ We have received some great feedback from the community around gRPC, more notabl
 
 One of the pain points was that it was difficult to interpret the structured UUID (most and least significant bits) and that we should provide the ability to indicate what the format of the UUID should be returned as when performing reads.
 
-With the change, the client has the ability to specify whether or not they want a structured or string based version of the UUID.
 
 > Note: if you are developing a gRPC client, please update your proto contracts.
 
 ## Use event counters for performance statistics
 
-With our move to .NET Core, the performance counters that we use will only work on Windows and therefore we have made use of the `Microsoft.Diagnostics.NETCore.Client` package to leverage the new tracing capabilities in .NET Core to surface some of the statistics in our /stats endpoint.
+Windows-centric performance counters do not work with .NET Core, so many statistics are now collected using the `Microsoft.Diagnostics.NETCore.Client` package.
 
-Currently system-wide CPU and memory usage are not exposed via the statistics endpoint on Linux or macOS.
+> Note: Currently system-wide CPU and memory usage are not exposed via the statistics endpoint on Linux or macOS. This will be rectified in the release candidate.
