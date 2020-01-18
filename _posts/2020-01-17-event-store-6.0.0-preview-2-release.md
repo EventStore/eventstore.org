@@ -7,7 +7,7 @@ category: "Release Notes"
 
 We are excited to announce the second preview release of Event Store 6.0.0.
 
-With this release we want to show you where we are planning on taking Event Store in the future.
+This release addresses some of the feedback from the first preview.
 
 This release is not intended to be used in production and is still rough around the edges, but we welcome your feedback as we prepare a release candidate.
 
@@ -27,7 +27,7 @@ We have renamed the .NET gRPC Client to **EventStore.Client.Grpc**. In preview o
 
 The package is available from NuGet under it's new home [here](https://www.nuget.org/packages/EventStore.Client.Grpc/).
 
-> Note: The [NuGet package](https://www.nuget.org/packages/EventStore.Grpc.Client/6.0.0-preview1) from preview one will not receive updates and will be removed
+> Note: The [NuGet package](https://www.nuget.org/packages/EventStore.Grpc.Client/6.0.0-preview1) from preview one will not receive updates and will be removed.
 
 ## Simplification of .NET gRPC client methods
 
@@ -113,7 +113,7 @@ If you need to make use of Clones nodes while transitioning to using read replic
 
 We have received some great feedback from the community around gRPC, more notably community members who have started building gRPC clients for a variety of platforms, and have adjusted the protocol buffers API definitions in response to that:
 
-- Plural options are now in singular form, which addresses code generation failures in Scala and Rust
+- Plural options are now in singular form, which addresses code generation failures in Scala and Rust.
 - Clients can now request UUIDs to be serialized either as two 64-bit unsigned integers or as strings, improving compatibility with Node.js and Go UUID libraries.
 
 ## Event counters for statistics
