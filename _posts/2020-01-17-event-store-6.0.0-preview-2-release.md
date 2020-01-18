@@ -25,9 +25,7 @@ With the release of preview two of Event Store, we are also shipping a new [gRPC
 
 We have renamed the .NET gRPC Client to **EventStore.Client.Grpc**. In preview one, it was named **EventStore.Grpc.Client**.
 
-The package is available from NuGet under it's new home [here](https://www.nuget.org/packages/EventStore.Client.Grpc/).
-
-> Note: The [NuGet package](https://www.nuget.org/packages/EventStore.Grpc.Client/6.0.0-preview1) from preview one will not receive updates and will be removed.
+The package is available [on NuGet](https://www.nuget.org/packages/EventStore.Client.Grpc/). The [NuGet package](https://www.nuget.org/packages/EventStore.Grpc.Client/6.0.0-preview1) from preview one will not receive updates and is deprecated.
 
 ## Simplification of .NET gRPC client methods
 
