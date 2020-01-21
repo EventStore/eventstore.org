@@ -119,3 +119,10 @@ We have received some great feedback from the community around gRPC, more notabl
 Windows-centric performance counters do not work with .NET Core, so many statistics are now collected using the `Microsoft.Diagnostics.NETCore.Client` package.
 
 > Note: Currently system-wide CPU and memory usage are not exposed via the statistics endpoint on Linux or macOS. This will be rectified in the release candidate.
+
+## Important bug fixes
+* [#2214](https://github.com/EventStore/EventStore/pull/2214) - **(Subscriptions)** Fix TCP connection close/dispatch race condition. This fixes issues with hanging persistent subscriptions.
+* [#2193](https://github.com/EventStore/EventStore/pull/2193) - **(Client API)** Fix Position constructor in client operations
+* [#2230](https://github.com/EventStore/EventStore/pull/2230) - **(Projections)** Fix checkpoint tag overflow bug
+* [#2178](https://github.com/EventStore/EventStore/pull/2178) - **(Core Database)** Call socket.Close() without timeout due to macOS bug: https://github.com/dotnet/corefx/issues/42718
+
