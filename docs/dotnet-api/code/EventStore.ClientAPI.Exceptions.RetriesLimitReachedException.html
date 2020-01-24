@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RetriesLimitReachedException
    | Event Store ">
-    <meta name="generator" content="docfx 2.48.0.0">
+    <meta name="generator" content="docfx 2.48.1.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -110,14 +110,76 @@ To change the number of retries attempted for an operation, use the methods
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="EventStore.ClientAPI.Exceptions.EventStoreConnectionException.html">EventStoreConnectionException</a></div>
-    <div class="level2"><span class="xref">RetriesLimitReachedException</span></div>
+    <div class="level1"><span class="xref">System.Exception</span></div>
+    <div class="level2"><a class="xref" href="EventStore.ClientAPI.Exceptions.EventStoreConnectionException.html">EventStoreConnectionException</a></div>
+    <div class="level3"><span class="xref">RetriesLimitReachedException</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.Runtime.Serialization.ISerializable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Exception.GetBaseException()</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.Data</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.HelpLink</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.HResult</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.InnerException</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.Message</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.Source</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.StackTrace</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.TargetSite</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.SerializeObjectState</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.ClientAPI.Exceptions.html">EventStore.ClientAPI.Exceptions</a></h6>
   <h6><strong>Assembly</strong>: EventStore.ClientAPI.dll</h6>
   <h5 id="EventStore_ClientAPI_Exceptions_RetriesLimitReachedException_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class RetriesLimitReachedException : EventStoreConnectionException</code></pre>
+    <pre><code class="lang-csharp hljs">public class RetriesLimitReachedException : EventStoreConnectionException, ISerializable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -181,6 +243,10 @@ To change the number of retries attempted for an operation, use the methods
       </tr>
     </tbody>
   </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.Runtime.Serialization.ISerializable</span>
+  </div>
 </article>
           </div>
           
@@ -204,7 +270,7 @@ To change the number of retries attempted for an operation, use the methods
         <div class="grad-bottom"></div>
         <div class="footer site-footer">
           <div class="container inner-container">
-                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <p class="footer__copyright">&copy; 2020 Event Store Limited</p>
                       <ul class="footer__menu">
                           <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
                           <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>

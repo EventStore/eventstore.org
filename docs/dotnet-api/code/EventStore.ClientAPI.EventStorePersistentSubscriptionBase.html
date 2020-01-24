@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class EventStorePersistentSubscriptionBase
    | Event Store ">
-    <meta name="generator" content="docfx 2.48.0.0">
+    <meta name="generator" content="docfx 2.48.1.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
     <link rel="shortcut icon" href="../../assets/favicon.ico">
@@ -109,11 +109,35 @@
     <div class="level1"><span class="xref">EventStorePersistentSubscriptionBase</span></div>
       <div class="level2"><a class="xref" href="EventStore.ClientAPI.EventStorePersistentSubscription.html">EventStorePersistentSubscription</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.ClientAPI.html">EventStore.ClientAPI</a></h6>
   <h6><strong>Assembly</strong>: EventStore.ClientAPI.dll</h6>
   <h5 id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class EventStorePersistentSubscriptionBase : object</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class EventStorePersistentSubscriptionBase</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -127,7 +151,7 @@
   <h5 class="decalaration">Declaration</h5>
   
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int DefaultBufferSize = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const int DefaultBufferSize = 10</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,38 +202,7 @@
   
   
   <a id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Acknowledge_" data-uid="EventStore.ClientAPI.EventStorePersistentSubscriptionBase.Acknowledge*"></a>
-  <h4 id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Acknowledge_Guid_" data-uid="EventStore.ClientAPI.EventStorePersistentSubscriptionBase.Acknowledge(Guid)">Acknowledge(Guid)</h4>
-  <div class="markdown level1 summary"><p>Acknowledge a message by event id (this will tell the server it has been processed)</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  
-  <h5 class="decalaration">Declaration</h5>
-  
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Acknowledge(Guid eventId)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Guid</span></td>
-        <td><span class="parametername">eventId</span></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Acknowledge_Guid__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>There is no need to ack a message if you have Auto Ack enabled</p>
-</div>
-  
-  
-  <a id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Acknowledge_" data-uid="EventStore.ClientAPI.EventStorePersistentSubscriptionBase.Acknowledge*"></a>
-  <h4 id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Acknowledge_IEnumerable_EventStore_ClientAPI_ResolvedEvent__" data-uid="EventStore.ClientAPI.EventStorePersistentSubscriptionBase.Acknowledge(IEnumerable{EventStore.ClientAPI.ResolvedEvent})">Acknowledge(IEnumerable&lt;ResolvedEvent&gt;)</h4>
+  <h4 id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Acknowledge_System_Collections_Generic_IEnumerable_EventStore_ClientAPI_ResolvedEvent__" data-uid="EventStore.ClientAPI.EventStorePersistentSubscriptionBase.Acknowledge(System.Collections.Generic.IEnumerable{EventStore.ClientAPI.ResolvedEvent})">Acknowledge(IEnumerable&lt;ResolvedEvent&gt;)</h4>
   <div class="markdown level1 summary"><p>Acknowledge that a message have completed processing (this will tell the server it has been processed)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -229,18 +222,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="EventStore.ClientAPI.ResolvedEvent.html">ResolvedEvent</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="EventStore.ClientAPI.ResolvedEvent.html">ResolvedEvent</a>&gt;</td>
         <td><span class="parametername">events</span></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Acknowledge_IEnumerable_EventStore_ClientAPI_ResolvedEvent___remarks">Remarks</h5>
+  <h5 id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Acknowledge_System_Collections_Generic_IEnumerable_EventStore_ClientAPI_ResolvedEvent___remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>There is no need to ack a message if you have Auto Ack enabled</p>
 </div>
   
   
   <a id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Acknowledge_" data-uid="EventStore.ClientAPI.EventStorePersistentSubscriptionBase.Acknowledge*"></a>
-  <h4 id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Acknowledge_IEnumerable_Guid__" data-uid="EventStore.ClientAPI.EventStorePersistentSubscriptionBase.Acknowledge(IEnumerable{Guid})">Acknowledge(IEnumerable&lt;Guid&gt;)</h4>
+  <h4 id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Acknowledge_System_Collections_Generic_IEnumerable_System_Guid__" data-uid="EventStore.ClientAPI.EventStorePersistentSubscriptionBase.Acknowledge(System.Collections.Generic.IEnumerable{System.Guid})">Acknowledge(IEnumerable&lt;Guid&gt;)</h4>
   <div class="markdown level1 summary"><p>Acknowledge a group of messages by event id (this will tell the server it has been processed)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -260,12 +253,43 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Guid</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Guid</span>&gt;</td>
         <td><span class="parametername">events</span></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Acknowledge_IEnumerable_Guid___remarks">Remarks</h5>
+  <h5 id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Acknowledge_System_Collections_Generic_IEnumerable_System_Guid___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>There is no need to ack a message if you have Auto Ack enabled</p>
+</div>
+  
+  
+  <a id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Acknowledge_" data-uid="EventStore.ClientAPI.EventStorePersistentSubscriptionBase.Acknowledge*"></a>
+  <h4 id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Acknowledge_System_Guid_" data-uid="EventStore.ClientAPI.EventStorePersistentSubscriptionBase.Acknowledge(System.Guid)">Acknowledge(Guid)</h4>
+  <div class="markdown level1 summary"><p>Acknowledge a message by event id (this will tell the server it has been processed)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Acknowledge(Guid eventId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Guid</span></td>
+        <td><span class="parametername">eventId</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Acknowledge_System_Guid__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>There is no need to ack a message if you have Auto Ack enabled</p>
 </div>
   
@@ -307,7 +331,7 @@
   
   
   <a id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Fail_" data-uid="EventStore.ClientAPI.EventStorePersistentSubscriptionBase.Fail*"></a>
-  <h4 id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Fail_IEnumerable_EventStore_ClientAPI_ResolvedEvent__EventStore_ClientAPI_PersistentSubscriptionNakEventAction_System_String_" data-uid="EventStore.ClientAPI.EventStorePersistentSubscriptionBase.Fail(IEnumerable{EventStore.ClientAPI.ResolvedEvent},EventStore.ClientAPI.PersistentSubscriptionNakEventAction,System.String)">Fail(IEnumerable&lt;ResolvedEvent&gt;, PersistentSubscriptionNakEventAction, String)</h4>
+  <h4 id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Fail_System_Collections_Generic_IEnumerable_EventStore_ClientAPI_ResolvedEvent__EventStore_ClientAPI_PersistentSubscriptionNakEventAction_System_String_" data-uid="EventStore.ClientAPI.EventStorePersistentSubscriptionBase.Fail(System.Collections.Generic.IEnumerable{EventStore.ClientAPI.ResolvedEvent},EventStore.ClientAPI.PersistentSubscriptionNakEventAction,System.String)">Fail(IEnumerable&lt;ResolvedEvent&gt;, PersistentSubscriptionNakEventAction, String)</h4>
   <div class="markdown level1 summary"><p>Mark nmessages that have failed processing. The server will take action based upon the action parameter</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -327,7 +351,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="EventStore.ClientAPI.ResolvedEvent.html">ResolvedEvent</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="EventStore.ClientAPI.ResolvedEvent.html">ResolvedEvent</a>&gt;</td>
         <td><span class="parametername">events</span></td>
       </tr>
       <tr>
@@ -343,7 +367,7 @@
   
   
   <a id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Stop_" data-uid="EventStore.ClientAPI.EventStorePersistentSubscriptionBase.Stop*"></a>
-  <h4 id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Stop_TimeSpan_" data-uid="EventStore.ClientAPI.EventStorePersistentSubscriptionBase.Stop(TimeSpan)">Stop(TimeSpan)</h4>
+  <h4 id="EventStore_ClientAPI_EventStorePersistentSubscriptionBase_Stop_System_TimeSpan_" data-uid="EventStore.ClientAPI.EventStorePersistentSubscriptionBase.Stop(System.TimeSpan)">Stop(TimeSpan)</h4>
   <div class="markdown level1 summary"><p>Disconnects this client from the persistent subscriptions.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -363,8 +387,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="xref">System.TimeSpan</span></td>
         <td><span class="parametername">timeout</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.TimeoutException</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -391,7 +430,7 @@
         <div class="grad-bottom"></div>
         <div class="footer site-footer">
           <div class="container inner-container">
-                      <p class="footer__copyright">&copy; 2019 Event Store Limited</p>
+                      <p class="footer__copyright">&copy; 2020 Event Store Limited</p>
                       <ul class="footer__menu">
                           <li class="footer__menu__item"><a href="https://eventstore.org/">Home</a></li>
                           <li class="footer__menu__item"><a href="https://eventstore.org/about/">About Us</a></li>
