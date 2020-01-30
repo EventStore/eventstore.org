@@ -7,3 +7,5 @@
 /docs/introduction/*    /docs/getting-started
 
 /blog/201*/:title /blog/:title/ 301!
+
+https://eventstore.com/* https://eventstore.org/:splat 301!
