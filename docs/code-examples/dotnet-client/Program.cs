@@ -29,8 +29,7 @@ namespace DocsExample
 
         private static IEventStoreConnection CreateConnection()
         {
-            var conn = EventStoreConnection.Create(new Uri("tcp://admin:changeit@localhost:1113"),
-                "InputFromFileConsoleApp");
+            var conn = EventStoreConnection.Create(new Uri("tcp://admin:changeit@localhost:1113"));
             conn.ConnectAsync().Wait();
             return conn;
         }
@@ -73,9 +72,6 @@ namespace DocsExample
                         break;
                     case "step3options":
                         Step3ProjectionOptions();
-                        break;
-                    case "checkState":
-                        checkState();
                         break;
                 }
             }
@@ -251,15 +247,6 @@ namespace DocsExample
             projection.CreateContinuousAsync("shopping-cart-item-counter", itemCounterProjection, true, adminCredentials).Wait();
 
             var projectionState = projection.GetPartitionStateAsync("shopping-cart-item-counter", "shoppingCart-b989fe21-9469-4017-8d71-9820b8dd1164", adminCredentials);
-            Console.WriteLine(projectionState.Result);
-        }
-
-        static void checkState()
-        {
-            var conn = CreateConnection();
-            var projection = Globals.Projection;
-            var adminCredentials = Globals.AdminCredentials;
-            var projectionState = projection.GetStateAsync("%24by_correlation_id", Globals.AdminCredentials);
             Console.WriteLine(projectionState.Result);
         }
     }

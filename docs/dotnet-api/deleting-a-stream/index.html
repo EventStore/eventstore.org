@@ -9,12 +9,10 @@
     <link rel="preconnect" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//code.jquery.com">
     <link rel="preconnect" href="//www.googletagmanager.com">
-    <link rel="canonical" href="https://eventstore.com/docs/dotnet-api/code/EventStore.Projections.Core.ProjectionWorkerNode.html">
-    <title>Class ProjectionWorkerNode
-   | Event Store </title>
+    <link rel="canonical" href="https://eventstore.com/docs/dotnet-api/deleting-a-stream/index.html">
+    <title>Deleting a stream | Event Store </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ProjectionWorkerNode
-   | Event Store ">
+    <meta name="title" content="Deleting a stream | Event Store ">
     <meta name="generator" content="docfx 2.48.1.0">
   <meta http-equiv="Content-Type" content="text/html charset=UTF-8">
     
@@ -95,138 +93,19 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="EventStore.Projections.Core.ProjectionWorkerNode">
-  
-  
-  <h1 id="EventStore_Projections_Core_ProjectionWorkerNode" data-uid="EventStore.Projections.Core.ProjectionWorkerNode" class="text-break">Class ProjectionWorkerNode
-  </h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">ProjectionWorkerNode</span></div>
-  </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.html">EventStore.Projections.Core</a></h6>
-  <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
-  <h5 id="EventStore_Projections_Core_ProjectionWorkerNode_syntax">Syntax</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ProjectionWorkerNode : object</code></pre>
-  </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  
-  
-  <a id="EventStore_Projections_Core_ProjectionWorkerNode__ctor_" data-uid="EventStore.Projections.Core.ProjectionWorkerNode.#ctor*"></a>
-  <h4 id="EventStore_Projections_Core_ProjectionWorkerNode__ctor_Guid_EventStore_Core_TransactionLog_Chunks_TFChunkDb_EventStore_Core_Bus_IQueuedHandler_EventStore_Core_Services_TimerService_ITimeProvider_EventStore_Projections_Core_Services_ISingletonTimeoutScheduler_EventStore_Common_Options_ProjectionType_System_Boolean_EventStore_Core_Bus_IPublisher_" data-uid="EventStore.Projections.Core.ProjectionWorkerNode.#ctor(Guid,EventStore.Core.TransactionLog.Chunks.TFChunkDb,EventStore.Core.Bus.IQueuedHandler,EventStore.Core.Services.TimerService.ITimeProvider,EventStore.Projections.Core.Services.ISingletonTimeoutScheduler,EventStore.Common.Options.ProjectionType,System.Boolean,EventStore.Core.Bus.IPublisher)">ProjectionWorkerNode(Guid, TFChunkDb, IQueuedHandler, ITimeProvider, ISingletonTimeoutScheduler, ProjectionType, Boolean, IPublisher)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  
-  <h5 class="decalaration">Declaration</h5>
-  
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ProjectionWorkerNode(Guid workerId, TFChunkDb db, IQueuedHandler inputQueue, ITimeProvider timeProvider, ISingletonTimeoutScheduler timeoutScheduler, ProjectionType runProjections, bool faultOutOfOrderProjections, IPublisher masterOutputBus)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Guid</span></td>
-        <td><span class="parametername">workerId</span></td>
-      </tr>
-      <tr>
-        <td><span class="xref">EventStore.Core.TransactionLog.Chunks.TFChunkDb</span></td>
-        <td><span class="parametername">db</span></td>
-      </tr>
-      <tr>
-        <td><span class="xref">EventStore.Core.Bus.IQueuedHandler</span></td>
-        <td><span class="parametername">inputQueue</span></td>
-      </tr>
-      <tr>
-        <td><span class="xref">EventStore.Core.Services.TimerService.ITimeProvider</span></td>
-        <td><span class="parametername">timeProvider</span></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="EventStore.Projections.Core.Services.ISingletonTimeoutScheduler.html">ISingletonTimeoutScheduler</a></td>
-        <td><span class="parametername">timeoutScheduler</span></td>
-      </tr>
-      <tr>
-        <td><span class="xref">EventStore.Common.Options.ProjectionType</span></td>
-        <td><span class="parametername">runProjections</span></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">faultOutOfOrderProjections</span></td>
-      </tr>
-      <tr>
-        <td><span class="xref">EventStore.Core.Bus.IPublisher</span></td>
-        <td><span class="parametername">masterOutputBus</span></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  
-  
-  <a id="EventStore_Projections_Core_ProjectionWorkerNode_CoreOutput_" data-uid="EventStore.Projections.Core.ProjectionWorkerNode.CoreOutput*"></a>
-  <h4 id="EventStore_Projections_Core_ProjectionWorkerNode_CoreOutput" data-uid="EventStore.Projections.Core.ProjectionWorkerNode.CoreOutput">CoreOutput</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  
-  <h5 class="decalaration">Declaration</h5>
-  
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InMemoryBus CoreOutput { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">EventStore.Core.Bus.InMemoryBus</span></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  
-  
-  <a id="EventStore_Projections_Core_ProjectionWorkerNode_SetupMessaging_" data-uid="EventStore.Projections.Core.ProjectionWorkerNode.SetupMessaging*"></a>
-  <h4 id="EventStore_Projections_Core_ProjectionWorkerNode_SetupMessaging_EventStore_Core_Bus_IBus_" data-uid="EventStore.Projections.Core.ProjectionWorkerNode.SetupMessaging(EventStore.Core.Bus.IBus)">SetupMessaging(IBus)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  
-  <h5 class="decalaration">Declaration</h5>
-  
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetupMessaging(IBus coreInputBus)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">EventStore.Core.Bus.IBus</span></td>
-        <td><span class="parametername">coreInputBus</span></td>
-      </tr>
-    </tbody>
-  </table>
-</article>
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="deleting-a-stream">Deleting a stream</h1>
+
+<h2 id="soft-delete">Soft delete</h2>
+<pre><code class="lang-csharp">Task&lt;DeleteResult&gt; DeleteStreamAsync(string stream, long expectedVersion, UserCredentials userCredentials = null);
+</code></pre><!-- TODO: Need a better explanation -->
+<p>By default when you delete a stream, Event Store soft deletes it. You can recreate the stream by appending new events to it. If you try to read a soft deleted stream you receive an error response.</p>
+<h2 id="hard-delete">Hard Delete</h2>
+<p>You can hard delete a stream.</p>
+<div class="WARNING"><h5>Warning</h5><p>A hard delete is permanent and the stream is not removed during a scavenge. If you hard delete a stream, you cannot recreate the stream.</p>
+</div>
+<pre><code class="lang-csharp">Task&lt;DeleteResult&gt; DeleteStreamAsync(string stream, long expectedVersion, bool hardDelete, UserCredentials userCredentials = null);
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -235,6 +114,9 @@
             </div>
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/EventStore/documentation/blob/master/dotnet-api/deleting-a-stream.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

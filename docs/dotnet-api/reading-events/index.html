@@ -303,11 +303,11 @@
 <pre><code class="lang-csharp">var streamEvents = new List&lt;ResolvedEvent&gt;();
 
 StreamEventsSlice currentSlice;
-var nextSliceStart = StreamPosition.Start;
+long nextSliceStart = StreamPosition.Start;
 do
 {
     currentSlice =
-    _eventStoreConnection.ReadStreamEventsForward(&quot;myStream&quot;, nextSliceStart,
+    _eventStoreConnection.ReadStreamEventsForwardAsync(&quot;myStream&quot;, nextSliceStart,
                                                   200, false)
                                                   .Result;
 

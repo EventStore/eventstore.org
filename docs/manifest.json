@@ -1208,7 +1208,7 @@
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.ClientAPI.CatchUpSubscriptionFilteredSettings.html",
-          "hash": "hK0lKYcrJ7ZpxhZ3A9BtLw=="
+          "hash": "2soYoxaFUGFeNxAdId2qKA=="
         }
       },
       "is_incremental": false,
@@ -1556,7 +1556,7 @@
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.ClientAPI.EventStoreAllCatchUpSubscription.html",
-          "hash": "8fQs9RbA6d/IhgSqUjRJ9Q=="
+          "hash": "FEf3sFm6QWL68Kysnmk2pQ=="
         }
       },
       "is_incremental": false,
@@ -1568,7 +1568,7 @@
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.ClientAPI.EventStoreAllFilteredCatchUpSubscription.html",
-          "hash": "sgvWqieaTV95NrVSw4PITw=="
+          "hash": "fiG1JeNpxkWIc4SIV+52Zw=="
         }
       },
       "is_incremental": false,
@@ -1628,7 +1628,7 @@
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.ClientAPI.EventStoreStreamCatchUpSubscription.html",
-          "hash": "JMlasYryYcp6QWzQ6maFsw=="
+          "hash": "oDR4z1Uj1/41kGLsd7fbvw=="
         }
       },
       "is_incremental": false,
@@ -2456,7 +2456,7 @@
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.ClientAPI.Transport.Http.HttpAsyncClient.html",
-          "hash": "/ev5ccBC1nPKmFeDPtM+tg=="
+          "hash": "PTfR/483KvtmoyJr9blgMg=="
         }
       },
       "is_incremental": false,
@@ -2564,7 +2564,7 @@
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.ClientAPI.html",
-          "hash": "DgmCTKVWW21Q4PcpMSt2jQ=="
+          "hash": "5bPYy4yldu/Lkl/SdE8Fvw=="
         }
       },
       "is_incremental": false,
@@ -2872,18 +2872,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.CoreProjectionStatusMessage.ProjectionWorkerStarted.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.CoreProjectionStatusMessage.ProjectionWorkerStarted.html",
-          "hash": "Otjxt1W9SPhVjg1OeAp0Sg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.CoreProjectionStatusMessage.ResultReport.yml",
       "output": {
         ".html": {
@@ -2900,7 +2888,7 @@
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.CoreProjectionStatusMessage.Started.html",
-          "hash": "YxalzQ08/10Ba6HqnBATUw=="
+          "hash": "doBq1HC2G511oRuwOJYeFA=="
         }
       },
       "is_incremental": false,
@@ -3225,426 +3213,6 @@
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.IQuerySources.html",
           "hash": "PVSlLdDuYHCPTkBOSPyleA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.CreateAndPrepareCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.CreateAndPrepareCommand.html",
-          "hash": "oDEGlIJoHSD7tikR/ElfyQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.CreatePreparedCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.CreatePreparedCommand.html",
-          "hash": "Dx2WZHksumZ9SHdz5h72xg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.DisposeCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.DisposeCommand.html",
-          "hash": "YOkVfN/1Q1R/vG/kGOS76g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.GetResultCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.GetResultCommand.html",
-          "hash": "nQ0fNOKBrzUmYWU5whh2pA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.GetStateCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.GetStateCommand.html",
-          "hash": "z1WvzveYAjnjCn90nuk7XA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.KillCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.KillCommand.html",
-          "hash": "6Zor98DD285Vhnf/COnFQQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.LoadStoppedCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.LoadStoppedCommand.html",
-          "hash": "q4KmWy94C6lRveNyC5TXZQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.PersistedProjectionConfig.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.PersistedProjectionConfig.html",
-          "hash": "kMdBFSn1qEo9RRLINnjfag=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.PersistedProjectionVersion.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.PersistedProjectionVersion.html",
-          "hash": "trbQYYzVmT68Uxcml0Uc0g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.StartCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.StartCommand.html",
-          "hash": "Fgakcb+bWHSVyOc1JsXaVw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.StopCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.StopCommand.html",
-          "hash": "SPU+GNfng310V7W0bkGF2w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Commands.html",
-          "hash": "rBMozLtSmWUPk2otfH5eTw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.AbortCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.AbortCommand.html",
-          "hash": "zJB+uCFnC7VkVb00t+FAyQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.DeleteCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.DeleteCommand.html",
-          "hash": "5Heu/FKJYZq70PR/Kd85UQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.DisableCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.DisableCommand.html",
-          "hash": "tig4/b9w+o+bLmmllNxRKA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.EnableCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.EnableCommand.html",
-          "hash": "ILjX7cReCx9+qh/cwp8xNQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.Faulted.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.Faulted.html",
-          "hash": "cUotFgSfZ8YxuQjCeCE+eA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.GetQueryCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.GetQueryCommand.html",
-          "hash": "iowy+a3SpPHkywCzBvlRyw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.GetResultCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.GetResultCommand.html",
-          "hash": "hESxR+ZKBBMNYbIqJCO/wg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.GetStateCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.GetStateCommand.html",
-          "hash": "QtLxBTicsyQz2NUrdlLK4w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.GetStatisticsCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.GetStatisticsCommand.html",
-          "hash": "Uch6SUzzoUZf0ElCuFPb4g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.PostBatchCommand.ProjectionPost.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.PostBatchCommand.ProjectionPost.html",
-          "hash": "iNEMaXbWoqoNuDJ9iO5TUA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.PostBatchCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.PostBatchCommand.html",
-          "hash": "idTVBN8JosOprJjtKfxc3g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.PostCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.PostCommand.html",
-          "hash": "7GYIJxDWT2zVEZ/bsOJogw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.Prepared.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.Prepared.html",
-          "hash": "nuKrYw0pkl5qsqUt/VdtQQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.ProjectionWorkerStarted.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.ProjectionWorkerStarted.html",
-          "hash": "HM9KdSPvvmvyHvaqVdQHjQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.ResetCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.ResetCommand.html",
-          "hash": "G3o2SfVTIr4PaU3bxSPgoA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.ResultReport.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.ResultReport.html",
-          "hash": "T2xFuw+UkZXRWQPvB3OEKg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.SetRunAsCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.SetRunAsCommand.html",
-          "hash": "WtLXdfBvUGBEgdLM68PLzw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.Started.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.Started.html",
-          "hash": "/C5k8LzXSCVdZGDsdlGUOQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.StateReport.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.StateReport.html",
-          "hash": "T3IACsCxAuCb0kAP3cW2Lg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.StatisticsReport.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.StatisticsReport.html",
-          "hash": "MfaCldszSW49q2Zere02ew=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.Stopped.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.Stopped.html",
-          "hash": "tjcjnuf8mkMdWg/4m9t05Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.UpdateQueryCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.UpdateQueryCommand.html",
-          "hash": "28Ok5gEnZoVi82TM2C90ew=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.Persisted.Responses.html",
-          "hash": "tuaMiEvCs7HrET4eOuu1Sg=="
         }
       },
       "is_incremental": false,
@@ -4132,35 +3700,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.ProjectionManagementMessage.ReaderReady.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.ProjectionManagementMessage.ReaderReady.html",
-          "hash": "vp7blCBe6jYQrFDPn2OJMA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.ProjectionManagementMessage.RunAs.yml",
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.ProjectionManagementMessage.RunAs.html",
           "hash": "IwMZ/+lUlqmr1M81nxHU9w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.ProjectionManagementMessage.Starting.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.ProjectionManagementMessage.Starting.html",
-          "hash": "ASoYNLbWbruy+HNcnYQuNg=="
         }
       },
       "is_incremental": false,
@@ -4221,6 +3765,18 @@
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.ProjectionSubsystemMessage.ComponentStopped.html",
           "hash": "sntpxJFzEw2iwh46UAQk7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.ProjectionSubsystemMessage.IODispatcherDrained.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.ProjectionSubsystemMessage.IODispatcherDrained.html",
+          "hash": "Vdzv2pabfsd0B1UNhtPHzA=="
         }
       },
       "is_incremental": false,
@@ -4292,7 +3848,7 @@
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.ProjectionSubsystemMessage.html",
-          "hash": "vVT4cvkcQUBbs1/4pVyz4w=="
+          "hash": "5FdLSSKfhqAVEaft8f/ddA=="
         }
       },
       "is_incremental": false,
@@ -4568,7 +4124,7 @@
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.Projections.Core.Messages.html",
-          "hash": "+WIaWgkjkI59x1doJl1Eww=="
+          "hash": "HKgi5imQSnYVndliWSv0sg=="
         }
       },
       "is_incremental": false,
@@ -4640,7 +4196,7 @@
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.Projections.Core.ProjectionWorkerNode.html",
-          "hash": "lY2lFy8jaDtfC0dVjYyWxQ=="
+          "hash": "o/Lq4WF5otcOO7f/zCDlZw=="
         }
       },
       "is_incremental": false,
@@ -4664,7 +4220,7 @@
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.Projections.Core.ProjectionsSubsystem.html",
-          "hash": "W8HaaVRzbLas7quB2oPhEA=="
+          "hash": "VClvLq5zANyL04CbUR24Qw=="
         }
       },
       "is_incremental": false,
@@ -4816,30 +4372,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Management.IMultiStreamMessageWriter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Management.IMultiStreamMessageWriter.html",
-          "hash": "4mP5XE3KcYJ3el3KJMT17A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Management.IResponseWriter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Management.IResponseWriter.html",
-          "hash": "rLny/ddQ7je4v0icmjLaxA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Management.ManagedProjection.PersistedState.yml",
       "output": {
         ".html": {
@@ -4876,35 +4408,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Management.MultiStreamMessageWriter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Management.MultiStreamMessageWriter.html",
-          "hash": "QdOTyBZ96lDPV3J7loEfVQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.yml",
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Management.ProjectionCoreCoordinator.html",
           "hash": "YU0c56l3B9xOV8DVz75ZEQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Management.ProjectionCoreResponseWriter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Management.ProjectionCoreResponseWriter.html",
-          "hash": "1Hdq2+tgrpnJTWuZyA0iWg=="
         }
       },
       "is_incremental": false,
@@ -4940,19 +4448,7 @@
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Management.ProjectionManager.html",
-          "hash": "taYBotBrjP/raQwcp/XlXA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Management.ProjectionManagerCommandWriter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Management.ProjectionManagerCommandWriter.html",
-          "hash": "3Gq4FP06I5RF03PsqFPysg=="
+          "hash": "K1ZTQ5PsMbGo8zhkNUChxA=="
         }
       },
       "is_incremental": false,
@@ -4972,35 +4468,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Management.ProjectionManagerResponseReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Management.ProjectionManagerResponseReader.html",
-          "hash": "BcLNsbVtDr3nRqzCVgf1cw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Management.ProjectionStateHandlerFactory.yml",
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Management.ProjectionStateHandlerFactory.html",
           "hash": "ShEZ2ASy3XW0Qs7sgyU6FA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Management.ResponseWriter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Management.ResponseWriter.html",
-          "hash": "Apeg3x8+GG+is3oZZdF+uA=="
         }
       },
       "is_incremental": false,
@@ -5036,7 +4508,7 @@
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Management.html",
-          "hash": "t2PYpjKBx7cyv92CvxLlUA=="
+          "hash": "ollbmftmX1xdPKC6ehB8Jw=="
         }
       },
       "is_incremental": false,
@@ -5900,7 +5372,7 @@
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Processing.PositionTagger.html",
-          "hash": "lEWPRLqvCotAGDwCsHwP3Q=="
+          "hash": "QlWp1/1RG1E8HNGJVzmNWQ=="
         }
       },
       "is_incremental": false,
@@ -5913,18 +5385,6 @@
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Processing.PositionTracker.html",
           "hash": "YzsNo5knrQGZCvyGC1nNxg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Processing.PreTaggedPositionTagger.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Processing.PreTaggedPositionTagger.html",
-          "hash": "7JRxK76wSjsX4gyTaNv5ZA=="
         }
       },
       "is_incremental": false,
@@ -5980,18 +5440,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Processing.ProjectionCoreServiceCommandReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Processing.ProjectionCoreServiceCommandReader.html",
-          "hash": "p9BhwzVpUNNk2jGbINLHrg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Processing.ProjectionNamesBuilder.StandardProjections.yml",
       "output": {
         ".html": {
@@ -6008,7 +5456,7 @@
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Processing.ProjectionNamesBuilder.html",
-          "hash": "/K7dSWa630kDo1lul2JAWg=="
+          "hash": "VFAFYOK8zK1paZQ4GO5Obw=="
         }
       },
       "is_incremental": false,
@@ -6380,7 +5828,7 @@
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.Processing.html",
-          "hash": "mQpputLHge6g5OCkVng35g=="
+          "hash": "WRNgGYPLAKO+wDYfXGNrig=="
         }
       },
       "is_incremental": false,
@@ -6452,7 +5900,7 @@
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.Projections.Core.Services.PublishSubscribeDispatcher-4.html",
-          "hash": "STW6TKNulgLGLBrhhTxgPA=="
+          "hash": "HrJEAirsEa3REMTSKacVXg=="
         }
       },
       "is_incremental": false,
@@ -6652,23 +6100,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Standard.StubHandler.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Standard.StubHandler.html",
-          "hash": "DQNj4/foa6ucCchGFcsH2g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Standard.yml",
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.Projections.Core.Standard.html",
-          "hash": "+yLjIUtB0B//wY3vpG5q8w=="
+          "hash": "cfeMN+L4VITCSphWFc8jTw=="
         }
       },
       "is_incremental": false,
@@ -6692,19 +6128,7 @@
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.Projections.Core.Utils.EnumExtensions.html",
-          "hash": "te6e95lWR7YoqPPM0XthgQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "dotnet-api/code/EventStore.Projections.Core.Utils.Logging.yml",
-      "output": {
-        ".html": {
-          "relative_path": "dotnet-api/code/EventStore.Projections.Core.Utils.Logging.html",
-          "hash": "e4OS3Uc4/Twj32vscbM7Dg=="
+          "hash": "12BB0UpDWD5smhOEK1WgqA=="
         }
       },
       "is_incremental": false,
@@ -6716,7 +6140,7 @@
       "output": {
         ".html": {
           "relative_path": "dotnet-api/code/EventStore.Projections.Core.Utils.html",
-          "hash": "FI0Z5eybyO6vFUxpO06/0Q=="
+          "hash": "kZEe2WzKVZ2YvqmcMFZ1AA=="
         }
       },
       "is_incremental": false,
@@ -6968,7 +6392,7 @@
       "output": {
         ".html": {
           "relative_path": "dotnet-api/reading-events/index.html",
-          "hash": "eDKtxcnsnRAvsfpl+M2a1w=="
+          "hash": "rE53bs69rX0BFcoc/J1z6w=="
         }
       },
       "is_incremental": false,
@@ -6992,7 +6416,7 @@
       "output": {
         ".html": {
           "relative_path": "dotnet-api/streams/index.html",
-          "hash": "cSBexYTyBEt80UgdBLlLMQ=="
+          "hash": "+PBLSzG1MdhvZiAup2MkkA=="
         }
       },
       "is_incremental": false,
@@ -7100,7 +6524,7 @@
       "output": {
         ".html": {
           "relative_path": "getting-started/index.html",
-          "hash": "BML0gXovsqOamKl7FCB7IA=="
+          "hash": "EHP9Gxo/73cSt9XbGXFbgA=="
         }
       },
       "is_incremental": false,
@@ -7112,7 +6536,7 @@
       "output": {
         ".html": {
           "relative_path": "getting-started/projections/index.html",
-          "hash": "DOzjlWh9KF7kMRSfIBDvjA=="
+          "hash": "2CF9cpo6q7kGMR83UFn4Kw=="
         }
       },
       "is_incremental": false,
@@ -7124,7 +6548,7 @@
       "output": {
         ".html": {
           "relative_path": "getting-started/reading-subscribing-events/index.html",
-          "hash": "PoUDx8jVSUN+1bsWppoong=="
+          "hash": "zgIf22IpKIRf1CtSAzeUEQ=="
         }
       },
       "is_incremental": false,
@@ -8427,7 +7851,7 @@
       "output": {
         ".html": {
           "relative_path": "projections/projections-config/index.html",
-          "hash": "6onJKybZARflNVZ2dMNgOA=="
+          "hash": "6sk5Rl1Lw0PLk3JvzAaPfg=="
         }
       },
       "is_incremental": false,
@@ -8778,7 +8202,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "cB2ek+81emJxIAuQFfrYwg=="
+          "hash": "QfVa6FST+Z/4RSwxw//+Ow=="
         }
       },
       "is_incremental": false,
@@ -8803,6 +8227,18 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 427,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 73,
+          "skipped_file_count": 0
+        },
         "RestApiDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor RestApiDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -8815,18 +8251,6 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 73,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 475,
           "skipped_file_count": 0
         }
       }

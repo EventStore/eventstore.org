@@ -102,7 +102,9 @@
 <h3 id="appending-to-a-stream-in-a-single-write">Appending to a stream in a single write</h3>
 <pre><code class="lang-csharp">Task&lt;WriteResult&gt; AppendToStreamAsync(string stream, long expectedVersion, IEnumerable&lt;EventData&gt; events)
 </code></pre><pre><code class="lang-csharp">Task&lt;WriteResult&gt; AppendToStreamAsync(string stream, long expectedVersion, params EventData[] events)
-</code></pre><h3 id="using-a-transaction-to-append-to-a-stream-across-multiple-writes">Using a transaction to append to a stream across multiple writes</h3>
+</code></pre><div class="NOTE"><h5>Note</h5><p>An <code>EventData</code> array&#39;s length must not be greater than 4095.</p>
+</div>
+<h3 id="using-a-transaction-to-append-to-a-stream-across-multiple-writes">Using a transaction to append to a stream across multiple writes</h3>
 <h4 id="on-eventstoreconnection">On <code>EventStoreConnection</code></h4>
 <pre><code class="lang-csharp">Task&lt;EventStoreTransaction&gt; StartTransactionAsync(string stream, long expectedVersion)
 </code></pre><pre><code class="lang-csharp">EventStoreTransaction ContinueTransaction(long transactionId)
@@ -145,6 +147,8 @@
 </tr>
 </tbody>
 </table>
+<div class="NOTE"><h5>Note</h5><p>An event size (not only data and metadata) must not exceed 16,777,215 bytes (16MB-1B).</p>
+</div>
 <h2 id="append-to-a-stream-in-a-single-write">Append to a stream in a single write</h2>
 <p>The <code>AppendToStreamAsync</code> method writes events atomically to the end of a stream, working in an asynchronous manner.</p>
 <p>The parameters are:</p>
@@ -166,7 +170,7 @@
 </tr>
 <tr>
 <td><code>IEnumerable&lt;EventData&gt; events</code></td>
-<td>The events to append. There is also an overload of each method which takes the events as a <code>params</code> array.</td>
+<td>The events to append. There is also an overload of each method which takes the events as a <code>params</code> array. <code>events</code>&#39;s length must not be greater than 4095.</td>
 </tr>
 </tbody>
 </table>

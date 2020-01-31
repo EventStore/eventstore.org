@@ -113,15 +113,17 @@
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<span class="xref">EventStore.Core.Messages.SystemMessage.SystemCoreReady</span>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<span class="xref">EventStore.Core.Messages.SystemMessage.StateChangeMessage</span>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.CoreProjectionStatusMessage.Stopped.html">CoreProjectionStatusMessage.Stopped</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.CoreProjectionStatusMessage.Started.html">CoreProjectionStatusMessage.Started</a>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionSubsystemMessage.RestartSubsystem.html">ProjectionSubsystemMessage.RestartSubsystem</a>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionSubsystemMessage.ComponentStarted.html">ProjectionSubsystemMessage.ComponentStarted</a>&gt;</div>
     <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionSubsystemMessage.ComponentStopped.html">ProjectionSubsystemMessage.ComponentStopped</a>&gt;</div>
+    <div><span class="xref">EventStore.Core.Bus.IHandle</span>&lt;<a class="xref" href="EventStore.Projections.Core.Messages.ProjectionSubsystemMessage.IODispatcherDrained.html">ProjectionSubsystemMessage.IODispatcherDrained</a>&gt;</div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="EventStore.Projections.Core.html">EventStore.Projections.Core</a></h6>
   <h6><strong>Assembly</strong>: EventStore.Projections.Core.dll</h6>
   <h5 id="EventStore_Projections_Core_ProjectionsSubsystem_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ProjectionsSubsystem : object, ISubsystem, IHandle&lt;SystemMessage.SystemCoreReady&gt;, IHandle&lt;SystemMessage.StateChangeMessage&gt;, IHandle&lt;CoreProjectionStatusMessage.Stopped&gt;, IHandle&lt;ProjectionSubsystemMessage.RestartSubsystem&gt;, IHandle&lt;ProjectionSubsystemMessage.ComponentStarted&gt;, IHandle&lt;ProjectionSubsystemMessage.ComponentStopped&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ProjectionsSubsystem : object, ISubsystem, IHandle&lt;SystemMessage.SystemCoreReady&gt;, IHandle&lt;SystemMessage.StateChangeMessage&gt;, IHandle&lt;CoreProjectionStatusMessage.Stopped&gt;, IHandle&lt;CoreProjectionStatusMessage.Started&gt;, IHandle&lt;ProjectionSubsystemMessage.RestartSubsystem&gt;, IHandle&lt;ProjectionSubsystemMessage.ComponentStarted&gt;, IHandle&lt;ProjectionSubsystemMessage.ComponentStopped&gt;, IHandle&lt;ProjectionSubsystemMessage.IODispatcherDrained&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -355,6 +357,33 @@
   
   
   <a id="EventStore_Projections_Core_ProjectionsSubsystem_Handle_" data-uid="EventStore.Projections.Core.ProjectionsSubsystem.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_ProjectionsSubsystem_Handle_EventStore_Projections_Core_Messages_CoreProjectionStatusMessage_Started_" data-uid="EventStore.Projections.Core.ProjectionsSubsystem.Handle(EventStore.Projections.Core.Messages.CoreProjectionStatusMessage.Started)">Handle(CoreProjectionStatusMessage.Started)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(CoreProjectionStatusMessage.Started message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.CoreProjectionStatusMessage.Started.html">CoreProjectionStatusMessage.Started</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_ProjectionsSubsystem_Handle_" data-uid="EventStore.Projections.Core.ProjectionsSubsystem.Handle*"></a>
   <h4 id="EventStore_Projections_Core_ProjectionsSubsystem_Handle_EventStore_Projections_Core_Messages_CoreProjectionStatusMessage_Stopped_" data-uid="EventStore.Projections.Core.ProjectionsSubsystem.Handle(EventStore.Projections.Core.Messages.CoreProjectionStatusMessage.Stopped)">Handle(CoreProjectionStatusMessage.Stopped)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
@@ -429,6 +458,33 @@
     <tbody>
       <tr>
         <td><a class="xref" href="EventStore.Projections.Core.Messages.ProjectionSubsystemMessage.ComponentStopped.html">ProjectionSubsystemMessage.ComponentStopped</a></td>
+        <td><span class="parametername">message</span></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="EventStore_Projections_Core_ProjectionsSubsystem_Handle_" data-uid="EventStore.Projections.Core.ProjectionsSubsystem.Handle*"></a>
+  <h4 id="EventStore_Projections_Core_ProjectionsSubsystem_Handle_EventStore_Projections_Core_Messages_ProjectionSubsystemMessage_IODispatcherDrained_" data-uid="EventStore.Projections.Core.ProjectionsSubsystem.Handle(EventStore.Projections.Core.Messages.ProjectionSubsystemMessage.IODispatcherDrained)">Handle(ProjectionSubsystemMessage.IODispatcherDrained)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  
+  <h5 class="decalaration">Declaration</h5>
+  
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Handle(ProjectionSubsystemMessage.IODispatcherDrained message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="EventStore.Projections.Core.Messages.ProjectionSubsystemMessage.IODispatcherDrained.html">ProjectionSubsystemMessage.IODispatcherDrained</a></td>
         <td><span class="parametername">message</span></td>
       </tr>
     </tbody>
@@ -529,6 +585,12 @@
   <h3 id="implements">Implements</h3>
   <div>
       <span class="xref">EventStore.Core.ISubsystem</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>
   </div>
   <div>
       <span class="xref">EventStore.Core.Bus.IHandle&lt;T&gt;</span>

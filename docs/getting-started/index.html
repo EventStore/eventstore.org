@@ -225,8 +225,8 @@ Read <a href="../server/deploy-kubernetes-aks/index.html">this guide</a> for mor
 </ul>
 <section id="tabpanel_dfgfloIX5I-1_tabid-dotnet-client-connect" role="tabpanel" data-tab="tabid-dotnet-client-connect">
 <p>When using the .NET client, you also need to give the connection a name.</p>
-<pre><code class="lang-csharp" name="getting-started-connection">var conn = EventStoreConnection.Create(new Uri(&quot;tcp://admin:changeit@localhost:1113&quot;),
-    &quot;InputFromFileConsoleApp&quot;);
+<pre><code class="lang-csharp" name="getting-started-connection">var conn = EventStoreConnection.Create(new Uri(&quot;tcp://admin:changeit@localhost:1113&quot;));
+conn.ConnectAsync().Wait();
 </code></pre><div class="NEXT"><h5>Next Steps</h5><p>In this example we used the <a class="xref" href="../dotnet-api/code/EventStore.ClientAPI.EventStoreConnection.html#EventStore_ClientAPI_EventStoreConnection_Create_System_String_System_String_"><code>EventStoreConnection.Create()</code></a> overloaded method but <a class="xref" href="../dotnet-api/code/EventStore.ClientAPI.EventStoreConnection.html">others are available</a>.</p>
 </div>
 </section>
@@ -276,11 +276,11 @@ final ActorRef connection = system.actorOf(ConnectionActor.getProps());
 </section>
 <section id="tabpanel_dfgfloIX5I-2_tabid-5" role="tabpanel" data-tab="tabid-5" aria-hidden="true" hidden="hidden">
 <p>To use the .NET API, use the following method, passing the name of the stream, the version, and the events to write:</p>
-<pre><code class="lang-csharp" name="getting-started-write-event-request">var step1EventData = ProcessEvents(Globals.filePath);
-var eventData = step1EventData.ToArray();
+<pre><code class="lang-csharp" name="getting-started-write-event-request">    Console.WriteLine($&quot;Published {step1EventData.Count} events to &#39;{Globals.streamName}&#39;&quot;);
+}
 
-conn.AppendToStreamAsync(streamName, ExpectedVersion.Any, eventData).Wait();
-Console.WriteLine($&quot;Published {step1EventData.Count} events to &#39;{Globals.streamName}&#39;&quot;);
+static void Step2()
+{
 </code></pre><div class="NEXT"><h5>Next Steps</h5><p>Read <a href="../http-api/creating-writing-a-stream/index.html">this guide</a> for more information on how to write events with the .NET API. We don&#39;t cover version checking in this guide, but you can read more in <a href="../dotnet-api/optimistic-concurrency-and-idempotence/index.html">the optimistic concurrency guide</a>.</p>
 </div>
 </section>
