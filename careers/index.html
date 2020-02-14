@@ -1,0 +1,185 @@
+---
+title: "Careers"
+description: "We're always on the look out for talented individuals to come and work for Event Store. Take a look at our current vacancies or send us your CV."
+seo-title: "Careers | Work For Event Store"
+---
+{% include header.html %}
+<style>
+  ul#job-vacancies {
+    padding: 0;
+    margin: 0;
+  }
+  ul#job-vacancies li {
+    display:block;
+    padding: 1em;
+    border: 1px solid lightgrey;
+    margin: 20px 20px 20px 0px;
+  }
+  .hideLocation, .hideDepartment {
+    display:none !important;
+  }
+  h3.job-title {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+  ul#job-vacancies li p {
+    margin: 0;
+  }
+  h2 {
+    font-size: 2.4em;
+    line-height: 110%;
+  }
+  .vacancy-property {
+    text-decoration: underline;
+  }
+  .vacancy-divider {
+    display: block;
+    border-bottom: 1px solid lightgrey;
+    margin: 1em 0;
+    height: 0;
+  }
+  .showNoneMessage {
+    display: block !important;
+  }
+  .selectorDiv {
+    width: auto;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    border: 1px solid #bbb;
+    border-radius: 0.25rem;
+    background:#fff url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48cGF0aCBkPSJNNC4zMyA4LjVMMCAxTDguNjYgMXoiIGZpbGw9IiM2NjYiLz48L3N2Zz4=) right 13px center no-repeat;
+    margin-right: 14px;
+  }
+  .selector {
+    padding: 8px 40px 8px 8px;
+    color: #666;
+    width: auto;
+    border: none;
+    box-shadow: none;
+    background: 0 0;
+    background-image: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    -moz-appearance: none;
+    text-indent: .01px;
+    text-overflow: '';
+    font-size: 0.9em;
+  }
+  .job-spec {
+    font-weight:bold;
+    margin-top:1em;
+    display:inline-block;
+  }
+</style>
+    <div class="page-title">
+		<div class="inner-container">
+				<h1>{{ page.title }}</h1>
+		</div>
+    </div>
+    <div class="page-section--banner">
+        <div class="inner-container">
+            <div class="page-section__half">
+                <p class="lead">We're always on the look out for talented individuals to <strong>come and work for Event Store</strong>. Take a look at our current vacancies or send us your CV.</p>
+            </div>
+            <div class="page-section__half">
+                <span class="community-intro-placeholder" style="background-image:url(../images/join-our-team.svg);">&nbsp;</span>
+            </div>
+        </div>
+    </div>
+    <div class="inner-container">
+        <div class="page-section">
+            <div class="page-section__major">
+                <h2>Current vacancies</h2>
+                <form id="filter-job-vacancies">
+                  <div class="selectorDiv">
+                    <select class="selector" name="job-location">
+                      <option value="">Filter by location</option>
+                    </select>
+                  </div>
+                  <div class="selectorDiv">
+                    <select class="selector" name="job-department">
+                      <option value="">Filter by department</option>
+                    </select>
+                  </div>
+                </form>
+                <ul id="job-vacancies">
+                  {% for item in site.data.vacancies.jobs %}
+                      <!-- check the filter is in the title array -->
+                      <li>
+                        <h3 class="job-title">{{ item.name }}</h3>
+                        <p><span class="vacancy-property">Department</span>: <span class="job-department">{{ item.department }}</span></p>
+                        <p><span class="vacancy-property">Location</span>: <span class="job-location">{{ item.location }}</span></p>
+                        <span class="vacancy-divider">&nbsp;</span>
+                        <p>{{ item.description }}</p>
+                        <a class="job-spec" href="{{ item.link }}">Download job description</a>
+                      </li>
+                  {% endfor %}
+                </ul>
+                <p id="noneMessage" style="display:none;">Sorry, there are no vacancies to show.</p>
+                {% assign jobs_size = site.data.vacancies.jobs | size %}
+                {% if jobs_size == 0 %}
+                <style>#noneMessage {display:block !important;}</style>
+                {% endif %}
+                <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+                <script type="text/javascript">
+                  const list = document.querySelector('ul#job-vacancies');
+                  const locationFilter = document.forms['filter-job-vacancies'].querySelector('select[name="job-location"]');
+                  const departmentFilter = document.forms['filter-job-vacancies'].querySelector('select[name="job-department"]');
+                  const vacancies = list.getElementsByTagName('li');
+                  const locations = list.getElementsByClassName('job-location');
+                  const departments = list.getElementsByClassName('job-department');
+                  function checkForVacancies(){
+                    if($('#job-vacancies').children(':visible').length == 0) {
+                       $('#noneMessage').addClass('showNoneMessage');
+                    } else {
+                      $('#noneMessage').removeClass('showNoneMessage');
+                    }
+                  }
+                  locationFilter.addEventListener("change", function(e){
+                    const locationChoice = e.target.value;
+                    Array.from(vacancies).forEach(function(vacancy){
+                      const location = vacancy.querySelector('.job-location').textContent;
+                      if(location.indexOf(locationChoice) != -1){
+                        vacancy.classList.remove("hideLocation");
+                        checkForVacancies();
+                      } else {
+                        vacancy.classList.add("hideLocation");
+                        checkForVacancies();
+                      }
+                    });
+                  });
+                  departmentFilter.addEventListener("change", function(e){
+                    const departmentChoice = e.target.value;
+                    Array.from(vacancies).forEach(function(vacancy){
+                      const department = vacancy.querySelector('.job-department').textContent;
+                      if(department.indexOf(departmentChoice) != -1){
+                        vacancy.classList.remove("hideDepartment");
+                        checkForVacancies();
+                      } else {
+                        vacancy.classList.add("hideDepartment");
+                        checkForVacancies();
+                      }
+                    });
+                  });
+                  Array.from(new Set(locations)).forEach(function(location){
+                    const locationToAdd = location.textContent;
+                    locationFilter[locationFilter.length] = new Option(locationToAdd, locationToAdd);
+                  });
+                  Array.from(new Set(departments)).forEach(function(department){
+                    const departmentToAdd = department.textContent;
+                    departmentFilter[departmentFilter.length] = new Option(departmentToAdd, departmentToAdd);
+                  });
+                </script>
+            </div>
+            <div class="page-section__minor">
+                <h2>Apply for a role</h2>
+                <p><strong>Interested in applying</strong> for one of the vacancies listed? Or want to be considered for future vacancies at Event Store?</p><p><strong>Send your CV</strong> to <a href="mailto:team@eventstore.com">team@eventstore.com</a></p>
+            </div>
+        </div>
+    </div>
+
+{% include footer.html %}
